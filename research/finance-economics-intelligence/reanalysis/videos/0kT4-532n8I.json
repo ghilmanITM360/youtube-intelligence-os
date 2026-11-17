@@ -1,0 +1,584 @@
+{
+ "video_id": "0kT4-532n8I",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "83d50827ba1bdbb49cee5d3a386998ceab5eddfdd4993181f7458dcb2c77204e",
+ "original_packets": [
+  "BRIMM_001.json"
+ ],
+ "transcript_chars_read": 7488,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 28,
+    "text": "Spain is a country on the up"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The first ~600 characters are a positive country overview (democracy stabilised, high income, life expectancy 84, low unemployment) with no scroll-stop beat; the turn arrives at \"however Spain hides a secret\" (~590); an early counter-beat (\"true the average Spaniard spends that life in a low-quality flat... Soviet looking apartment block\", ~250-370) hints at the turn. A context lean with a late snap rather than a hook.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1739,
+    "end_char": 1828,
+    "text": "so how the hell did\nthey allow this to happen and is there a\nrealistic solution available"
+   },
+   "judgment": "MET",
+   "rationale": "The promise (why and what to do) is clear at ~1,740, after about 23% of the video; the \"empty Spain\" term arrives at ~840.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "A dark-red map of Spain with provincial borders and a red rounded label reading SPAIN on tan paper texture; two circles (ochre in the south-west, grey-brown in the south-east) partly occlude the map and do not overlap each other; dotted outlines form a partial halo on the west, north-west and south"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The map and label match the topic, but nothing in the thumbnail says empty, rural, depopulation or \"revive\"; the title carries the whole promise, and the filled-in red interior reads as the opposite of \"empty\".",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1198,
+    "end_char": 1282,
+    "text": "according to Spain's Ministry for\nterritorial policy 90% of the country's\npopulation"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The statistic block (90/10 population, 30/70 land, 14 per square km, 8 miles to services) is strong evidence for the problem, but the intro spends about 600 characters on national positives before it.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4473,
+    "end_char": 4525,
+    "text": "however the solution may not be\nall that complicated"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"The solution may not be all that complicated\" (~4,470, 60% through) is followed by grassroots groups, a political party and then immigration; the realistic-solution promise from ~1,800 is paid, but generically, with no mechanism, cost or example.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "How Spain Can Revive Its Empty Center"
+   },
+   "judgment": "MET",
+   "rationale": "The 37-character title carries country, problem and promise.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "How Spain Can Revive Its Empty Center"
+   },
+   "judgment": "MET",
+   "rationale": "The topic is the empty interior and the \"how\" is immigration; concept and content align.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "How Spain Can Revive Its Empty Center"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Can revive\" is a how-to promise, but the content argues an opportunity (Ukrainian refugees and immigrants) rather than a worked revival plan; the last ~1,500 characters are generic (\"incentives such as housing, employment opportunities\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1789,
+    "end_char": 1828,
+    "text": "is there a\nrealistic solution available"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The loop is explicit but paid thinly: the answer (immigration, support for settlers) is stated, not evidenced.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1528,
+    "end_char": 1602,
+    "text": "the\naverage rural citizen must now travel 8\nmiles to access basic services"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The audience pain is implicit (a viewer who cares about Spain or demographic decline); the video quantifies rural distance but does not name who is harmed or why a general viewer should care.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6542,
+    "end_char": 6635,
+    "text": "Spain has a unique opportunity to\nrevitalize its empty Villages and combat\nrural depopulation"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The promised transformation is a restated aspiration; no pilot, programme or number shows how many settlers would be needed.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 622,
+    "end_char": 655,
+    "text": "Spain hides a secret at its heart"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The counter-intuitive contrast (prosperous Spain, empty centre) is the contrarian angle; the policy conclusion (immigration) is the conventional demographic answer.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1454,
+    "end_char": 1527,
+    "text": "giving a\npopulation density of barely 14\ninhabitants per square kilometer"
+   },
+   "judgment": "MET",
+   "rationale": "The stated split is self-consistent: 42 million is 90%, so 10% is 4.67 million (the video says 4.6); 4.6 million over 70% of 505,990 km2 is 13.0 per square km (13.2 with 4.67 million), about 7% below the stated \"barely 14\"; the statement is therefore approximately consistent. Sources give 14-18 per square km for the same area; the 70/30 area split is the common version, while one 2026 outlet says 90% live on 2% of the land.",
+   "uncertainty": "Arithmetic recomputed; ministry statistic located only in news summaries."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2914,
+    "end_char": 2942,
+    "text": "after Franco's death in\n1979"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Franco died on 20 November 1975 and Juan Carlos I was proclaimed king on 22 November 1975 (search-result summaries of encyclopaedic sources); 1979 is wrong by four years.",
+   "uncertainty": "Date confirmed from secondary summaries of encyclopaedic sources; the transcript reads 1979 and an ASR slip cannot be excluded without audio."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6066,
+    "end_char": 6098,
+    "text": "133% of the nation's pension\npot"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The transcript reads 133%, which cannot be a share; if 13.3% is meant, foreign affiliates were 2.88 million at end 2024 of about 21.3 million, or 13.5%, so the figure is consistent as a share of contributors but not of the pension pot.",
+   "uncertainty": "Affiliate counts (2.88 million at end 2024) post-date a September 2024 upload; mid-2024 would be about 13%. The 133% may be a transcription slip and audio is unavailable."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5333,
+    "end_char": 5439,
+    "text": "immigrants accounted for\nless than 2% of the Spanish population\nbut as of 2020 that figure had reached\n15%"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The direction and order of magnitude are consistent with INE foreign-born shares (about 2% in 1998, about 15% in 2020); not re-fetched, and it mixes foreign nationals (1998) with foreign-born (2020) in common usage.",
+   "uncertainty": "Analyst recall of INE series."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4901,
+    "end_char": 4958,
+    "text": "the recent arrival\nin Spain of\n135,000 Ukrainian refugees"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Plausible for 2022 (temporary protection grants of that order); later numbers are higher. The 6.3% versus 2% employment-growth comparison and the Statista 86,000 net-migration figure were not located.",
+   "uncertainty": "Not re-verified; secondary summaries for foreign affiliates only."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1884,
+    "end_char": 1995,
+    "text": "without retelling the entire\npolitical landscape in Spain since the\n1940s let's focus on who General Franco\nwas"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A clear problem, cause (Franco-era urbanisation and tourism), amplifier (AVE rail) and solution (immigration) order; the intro is about 25% of the video, Franco and rail about 35%, and the solution passage (from ~4,470) about 40%, so the \"how\" is the longest section but the thinnest in evidence.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1739,
+    "end_char": 1784,
+    "text": "so how the hell did\nthey allow this to happen"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "One explicit loop (\"how did they allow this\") is paid by the Franco and rail history; the final third has only one pivot (\"however the benefits of positive immigration do not stop at...\", ~5,800) that moves to a tangent.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "SPAIN label on a red map"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers causes and a thin solution; the thumbnail promises neither.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4341,
+    "end_char": 4472,
+    "text": "however\nnot much thought appears to have been\ngiven to protecting rural communities\nfrom being cut off from the rest of the\ncountry"
+   },
+   "judgment": "MET",
+   "rationale": "A real BUT/THEREFORE link: high-speed rail serves provincial capitals but skips small towns, so rural areas are cut off; this is the best causal passage.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6753,
+    "end_char": 6850,
+    "text": "Spain can\nbreathe new life into regions that have\nlong been struggling with declining\npopulations"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "No subscribe, like or next-video ask in the stored text; the video ends on a generic summary and a music tag.",
+   "uncertainty": "Stored transcript only; audio and description not checked."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 614,
+    "end_char": 655,
+    "text": "however\nSpain hides a secret at its heart"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "One planted gap (the secret) paid at once; the central question (can immigration refill rural Spain) is never layered with sub-questions or counter-arguments.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4473,
+    "end_char": 4525,
+    "text": "however the solution may not be\nall that complicated"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "BUT turns exist (\"true the average Spaniard...\", \"however Spain hides a secret\", \"however not much thought\") but the last third is a flat sequence of positive consequences with no complication (cost, rural integration, language, housing).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4901,
+    "end_char": 4958,
+    "text": "the recent arrival\nin Spain of\n135,000 Ukrainian refugees"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The Ukrainian refugee arrival gives a timely hook, but the video was uploaded in September 2024 and the data is from 2022-2023.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6682,
+    "end_char": 6752,
+    "text": "by\nintegrating these newcomers Into the\nHeart of its rural communities"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The last ~950 characters (from ~6,540) restate the same idea in near-identical sentences (opportunity, newcomers, incentives, mutually beneficial), adding only generic housing and employment incentives.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7265,
+    "end_char": 7341,
+    "text": "Spain can transform its\nrural landscape creating vibrant diverse\ncommunities"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "One question holds the video (why is the interior empty and can immigration fix it) but the answer drifts from rural settlement to national pensions.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1739,
+    "end_char": 1828,
+    "text": "so how the hell did\nthey allow this to happen and is there a\nrealistic solution available"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"how did they allow this\" loop (~1,740) is answered by the \"rewind 60 years\" history and a second turn (\"however not much thought\", \"however the solution may not be all that complicated\") opens another loop; loops are sequential with a few overlaps.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3648,
+    "end_char": 3757,
+    "text": "if you\ncatch an a train from Madrid's aacha\nstation you'll be in downtown Barcelona\nin 2 hours and 30 minutes"
+   },
+   "judgment": "MET",
+   "rationale": "Plain and concrete; the rail comparison is the clearest passage (a 2h30 journey that used to be overnight). Transcription errors (\"Alta velocidad aspia\", \"aacha\") show an ASR rendering of Spanish names.",
+   "uncertainty": "Transcript is ASR text without punctuation; audio unavailable."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6542,
+    "end_char": 6605,
+    "text": "Spain has a unique opportunity to\nrevitalize its empty Villages"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The close returns to \"empty villages\" and revitalisation (the title) but not to the opening list of Spain's achievements.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 656,
+    "end_char": 716,
+    "text": "an\nempty quiet expanse that few tourists\never venture to see"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Empty Spain\" appears at ~840 characters, within about 30 seconds; \"revive\" never appears.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "How Spain Can Revive Its Empty Center",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. A niche explainer on a European demographic problem; the channel is Brimm. (mapping/explainer style).",
+  "2_differentiated_angle": "The \"empty Spain\" frame is established; the solution (Ukrainian and other immigrants) is the distinguishing claim but under-argued.",
+  "3_title": "How-to promise with a concise problem noun phrase.",
+  "4_thumbnail": "Local file in thumbnail-evidence (1280x720); a red map with a SPAIN label, two translucent circles and dotted outlines; the map is recognisable at 320 px but conveys no emptiness or solution.",
+  "5_opening": "Positive overview first, then the turn; weak as a hook.",
+  "6_loops": "One explicit loop paid by history.",
+  "7_spine": "Problem, cause (Franco, tourism, rail), solution (immigration).",
+  "8_repetition_clarity": "The conclusion repeats itself.",
+  "9_emotion_credibility": "Neutral encyclopaedic tone; the transcript reads Franco's death as 1979 and carries several unsourced statistics.",
+  "10_ending_cta": "No call to action.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered; the text includes a closing music tag."
+ },
+ "financial_checks": [
+  {
+   "claim": "90% of the population (about 42 million) lives in 1,500 towns and cities on 30% of the land; 10% (4.6 million) on 70%; density barely 14 per square km",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "42 / 0.9 = 46.7 million; 10% = 4.67 million; 4.6 million / (0.7 x 505,990 km2) = 13.0 per square km. Internally consistent; area split matches the usual statement; some outlets give 18 per square km."
+  },
+  {
+   "claim": "Franco died in 1979",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Wrong: 20 November 1975; Juan Carlos proclaimed king 22 November 1975."
+  },
+  {
+   "claim": "Foreign workers are 13.3% of the pension pot; Spain passed 21 million contributors",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Foreign affiliates 2,880,818 at end 2024 (news summaries of Ministry data); 2.88M / about 21.3M is about 13.5%. The transcript reads 133%, which is not a plausible share."
+  },
+  {
+   "claim": "Immigrants under 2% in 1998 and 15% in 2020; 135,000 Ukrainian refugees; employment growth 6.3% versus 2%; net migration of Ukrainians 86,000 in 2022",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not verified this session beyond order of magnitude."
+  },
+  {
+   "claim": "Life expectancy 84 now, projected highest in the world by 2040; median net income about 16,000 euros; unemployment lowest since 2008; AVE second-largest high-speed network after China; Madrid to Barcelona in 2h30",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Plausible and widely reported; not re-fetched."
+  },
+  {
+   "claim": "A special tunnel was built to avoid upsetting the foundations of the Sagrada Familia",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Contested: the rail tunnel near the cathedral drew protests about risk to the foundations; not verified here."
+  }
+ ],
+ "strengths": [
+  "Clear explanation of why the rail network left villages behind.",
+  "Statistic block that is internally consistent.",
+  "Compact (about 7,500 characters)."
+ ],
+ "weaknesses": [
+  "Weak hook: a positive overview before the problem.",
+  "The solution is thin and generic, and the final paragraphs repeat.",
+  "Franco date reads 1979 in the transcript (wrong by four years); \"133%\" transcription defect.",
+  "Thumbnail does not communicate emptiness or the promise.",
+  "No call to action."
+ ],
+ "contradictions": [
+  "Title promises a revival; the content describes an opportunity.",
+  "A national pension need for 200,000-250,000 migrants a year is used to argue rural resettlement, which does not follow.",
+  "A bright overview (\"a country on the up\") followed by \"hides a secret\"."
+ ],
+ "improvement_opportunities": [
+  "Open on the 14-per-square-km fact (\"the size of 70% of Spain has fewer people than Madrid's metro area\") instead of the country overview; a figure to check is needed before use.",
+  "Add one concrete case (a named village, a settlement programme and its cost) to pay the \"realistic solution\" promise.",
+  "Replace the thumbnail interior with an empty or hatched region and a population number so the map shows emptiness.",
+  "Correct Franco's death to 1975 and replace the \"133%\" with the audited share.",
+  "End with a question or a next video; there is no ask at present."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary INE, Ministry of Territorial Policy and Social Security statistics",
+  "Audio and visuals"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.23588",
+  "age_days": "724.2988",
+  "views_likes_comments_snapshot": {
+   "views": 1558,
+   "likes": 52,
+   "comments": 10,
+   "published_at": "2024-09-18T16:49:43.000Z"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.38576",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the late hook, the generic ending or the map thumbnail affected views, and this video is from a different channel and format than the Nick, Lucas and Carl records.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-INTRO-04 and FR-16C-07 changed from NOT_MET to PARTLY_MET (witness replaced)",
+    "section shares corrected (intro 25%, history 35%, solution 40%); the false \"solution is the shortest section\" claim removed",
+    "intro position corrected to 23%",
+    "thumbnail description corrected (circles occlude the map and do not overlap each other)",
+    "density rounding note and the end-2024 affiliate anachronism added",
+    "Franco date flagged as transcript-reading"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

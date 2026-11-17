@@ -1,3 +1,15 @@
+## Population extension — 2026-10-21
+
+The frozen 966-video audit remains unchanged at 429 complete and 537 remaining.
+The existing 197-video expansion also remains unchanged and 0 deep-complete.
+PR #38 contributes a separate 76-public-video MonkeyExplains1999 collection (61
+regular, 15 Shorts); individual title/description classification yields 63
+eligible unique Finance/Economics additions, 13 exclusions, and zero overlap
+with the prior 1,163 IDs. Combined population is 1,226. All 63 additions remain
+`METADATA_ONLY_NOT_DEEP_AUDITED`; see
+`expansion-monkey-explains-1999-2026-10-21/` for the source, crosswalk,
+provenance, checksums, and validation.
+
 ## Latest continuation — 2026-10-18: Nick14/363; 281 expanded
 
 Fourteen individually authored reviews added in NICK_001/002/003; 281/966 expanded (29.09%), 685 remaining, title/actual-image291 each. Full stored script/topic/virality281 each. Carl, Brimm, Primate, Crayon complete; Lucas95 handled including10partial. Next14gilFEp_Iw, no reading begun. Details and primary source receipts reside in the batch JSON and EVENT_SOURCES; read receipts certify contiguous stored-text coverage, not original audio.
@@ -94,3 +106,13 @@ Eleven population transcript gaps remain. Historical Google Trends acquisition w
 Rebuild with `build_audit_966.py`, validate with `validate_audit_966.py`. `VALIDATION_966.json` is the authoritative machine coverage report; the legacy `VALIDATION.json` describes only legacy tables. Research validation is explicit and separate from general repository CI.
 
 The missing-URL acquisition pass stopped on its first metadata HTTP 429 (`-UdMJ-EtLDI`); 158 remaining requests were not attempted. No retry/bypass or permanent unavailability inference. See LEGACY_THUMBNAIL_RECOVERY_001.json.
+# Repository-wide synchronized universe (2026-10-21)
+
+The authoritative combined index is now
+`reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv`: 1,612 unique
+Video IDs, comprising the immutable 966, the existing 197 and 63 expansions,
+180 committed landscape records, and 206 Casually Finance records pinned to
+commit `fb1e56d03e5ad53086c74247cd2972b262d09b78`. The 386 new records are
+metadata-only. After `NICK_154`, deep-audit completion is 430 complete and 1,182
+remaining. See the versioned directory README and validation JSON for exact
+provenance, channel coverage and blockers.

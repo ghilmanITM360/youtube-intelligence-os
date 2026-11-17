@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "ofJ8nZG87fA",
+ "nick": "NICK_275",
+ "claims": 8,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 20425,
+ "parent_commit": "0c5eb6e0",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_275",
+  "NICK_276"
+ ],
+ "changed_ledger_ids": [
+  "ofJ8nZG87fA"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 550,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "48_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.53622 TYPICAL (5-peer 0.57027 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 552,
+  "remaining": 1060,
+  "original_pending": 414,
+  "expansion_pending": 646,
+  "changed_cells": "63 (dashboard 7 + rows 547-548)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "43131ee1da16780e9176c5bf213612fe701738b897b600739b620ae8227a6def"
+ },
+ "semantic_acceptance": "All 20425 stored characters and six dimensions reviewed; 8 located claim groups; sources FREDCPI275, FDICSNIP. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "8fac43785a9dd421753fbe22a017ae17ee6b0a3653e161ac871cbb58600f43c5",
+  "NICK_275.json": "b3e06b1a0ee39b2d3717411181228b49f13a48baf31895c4770a5350046d7b69",
+  "NICK_275_READ_RECEIPTS.json": "70fd6f03191b44309f58a4457d07934d818ba4417b1d89a3b9f0e3f0be0edb7b",
+  "thumbnail": "accd2b71d82f3c4266af913925a40ebd2fa9719bf083de50b9957d44a45ce34f"
+ }
+}

@@ -1,0 +1,477 @@
+{
+ "video_id": "05T4iZ4MdIA",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "a00ca51549ada6ad22499498b77536d97b940ea7125da34ec9ea8c987859bfbb",
+ "original_packets": [
+  "NICK_002.json"
+ ],
+ "transcript_chars_read": 22813,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 113,
+    "text": "What if I told you that turning 30 in\nthe year 2030 might cost you more than\nbuying a house did for your parents?"
+   },
+   "judgment": "MET",
+   "rationale": "A concrete, generational what-if question with an immediate exaggeration (\"financial gymnastics ... Olympic athlete weep\") that works as a stop beat.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 892,
+    "end_char": 1033,
+    "text": "by 2030,\nthe average cost of simply being 30\nyears old in America will require an\nannual income that most people today\nwould consider wealthy"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Clear, emotional promise, but the host introduces himself and asks for a subscribe and thumbs-up before any data (about character 700), and the promised \"annual income\" figure is never computed.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Alarmed cartoon man pointing at a 2030 calendar and a rising orange bar chart on a stack of cash; bold BROKE BY DEFAULT"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title and thumbnail agree with each other and with the 2030 premise (a 2030 calendar and rising cost chart), but \"broke\" and \"default\" are never spoken in the script (\"break even\" is the only near word), so the thumbnail's \"by default\" framing is not carried by the opening.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The Future Cost of Being 30 by 2030 - Most Will Be Broke"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Most Will Be Broke\" is a rhetorical claim: the video never says what share will be broke and its categories do not total a required income.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22238,
+    "end_char": 22297,
+    "text": "Being 30 in 2030 will cost more than\nmost people make today"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The title and opening loop (the annual income needed to be 30 in 2030) is closed only by an assertion; the video never sums its own categories into a number.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "BROKE BY DEFAULT over a 2030 calendar and a rising cash chart"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script delivers a catalogue of rising costs, not the required-income figure the thumbnail and title imply.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1741,
+    "end_char": 1807,
+    "text": "Let's start\nwith the big kahuna that keeps everyone\nawake at night"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A category tour (housing, education, health, transport, food, technology, wages, retirement, social effects, childcare) with no escalation or ordering logic; the last third drifts into social consequences without new numbers.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15061,
+    "end_char": 15161,
+    "text": "But here's the\nthing that makes this entire situation\neven more challenging than it appears on\npaper"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Repeated escalation phrases (\"here's where it gets really interesting\", \"the really fun part\", \"here's the thing\") but no concealed question that is later paid.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5959,
+    "end_char": 6049,
+    "text": "Transportation costs are joining the\nparty with their own special brand of\nfinancial chaos"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Sections are joined by \"also / next / meanwhile\" (AND-THEN); each category adds a cost without a causal link to the previous one.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6976,
+    "end_char": 7050,
+    "text": "grocery and dining costs are\nexpected to rise by approximately 26%\nby 2030"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Stated alongside \"an average annual inflation rate of over 2%\", which compounds to about 10% over five years; 26% requires about 4.7% a year, so the figure and its stated basis disagree (the $250 to over $300 example matches the 26%, not the 2%).",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3822,
+    "end_char": 3904,
+    "text": "A four-year degree from a\npublic university could cost over\n$200,000\ntotal by 2030"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Four years at the stated $44,000 is $176,000, not over $200,000 (the total may include room and board, which the video does not say); and $44,000 a year is far above current in-state public tuition and fees (about $11,000-$12,000) and above typical in-state cost of attendance (about $29,000), though out-of-state costs approach $49,000; the video does not say which public college.",
+   "uncertainty": "Arithmetic verified; current College Board levels are analyst recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4355,
+    "end_char": 4463,
+    "text": "A student earning minimum wage would\nneed to work 40 hours per week just to\ncover tuition and room and board"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "At the federal minimum of $7.25 an hour, 40 hours a week for 52 weeks earns about $15,100, so it could not cover $44,000; the claim understates the problem and contradicts its own figure.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10255,
+    "end_char": 10350,
+    "text": "you'll need the equivalent of $162,000\nin 30 years just to maintain the same\nstandard of living"
+   },
+   "judgment": "MET",
+   "rationale": "$50,000 at 4% inflation for 30 years is $162,170, as stated; but 4% differs from the 3% called \"not too bad\" in the opening and the \"over 2%\" food rate, so the video uses three inflation assumptions.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1835,
+    "end_char": 1920,
+    "text": "the average\nsingle-family home in America is\nprojected to cost approximately\n$382,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The projected 2030 average is below the $408,000-$434,000 median home prices that other videos on this channel (and Carl Invests) state for 2026, and no source is named.",
+   "uncertainty": "Cross-video comparison of stated figures; none is verified here."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2802,
+    "end_char": 2910,
+    "text": "approaching $4,000 per\nmonth when you factor in mortgage\npayments, insurance, property taxes and\nmaintenance"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A $382,000 home with 5-10% down at 7% costs about $3,300-$3,600 a month all-in under common assumptions; \"approaching $4,000\" needs high-rate, low-down-payment assumptions that are not stated.",
+   "uncertainty": "Arithmetic verified; assumptions not given."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9688,
+    "end_char": 9734,
+    "text": "Real wages have already\nfallen 7.6%\nsince 2006"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "No source is given and the claim cannot be matched to a published real-earnings series from memory (my recollection is that such series rose modestly over that period); it is unverified.",
+   "uncertainty": "No source located; recall of BLS real-earnings series."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11453,
+    "end_char": 11563,
+    "text": "retiring in 2030 will need between\n$350,000\nto $400,000\nsaved just to cover healthcare costs\nduring retirement"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Fidelity's widely cited estimate is about $172,500 per person ($345,000 for a couple) for 2025; the range here is near a couple's estimate but is attributed to \"someone retiring\".",
+   "uncertainty": "Fidelity figures are analyst recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17653,
+    "end_char": 17715,
+    "text": "expect to pay between 25 and\n35,000 dollars annually per child"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Current national averages for full-time childcare are about $11,000-$13,000 a year (analyst recall), so $25,000-$35,000 by 2030 implies about 15-25% annual growth; no source or method is given.",
+   "uncertainty": "No source located."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1290,
+    "end_char": 1379,
+    "text": "Most people\nlook at inflation numbers and think,\n\"Oh, 3% per year doesn't sound too bad.\""
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against complacency about \"small\" inflation, reinforced with compounding examples.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9572,
+    "end_char": 9652,
+    "text": "like trying to fill a\nbathtub while someone else is drilling\nholes in the bottom"
+   },
+   "judgment": "MET",
+   "rationale": "Compounding inflation and wage stagnation are explained through plain analogies (bathtub, ice cubes in a furnace, moving bull's-eye).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 708,
+    "end_char": 778,
+    "text": "make\nsure to hit that subscribe button and\ngive this video a thumbs up"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The only ask is before any data (about character 700); the close gives general advice (\"start planning now\") with no concrete next step or next video.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 22431,
+    "end_char": 22478,
+    "text": "avocado toast really might become a\nluxury item"
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the opening avocado-toast joke and restates the 30-in-2030 premise.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12239,
+    "end_char": 12306,
+    "text": "The psychological\nimpact of these projections cannot be\nunderstated"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "At ~22,800 characters the second half repeats the same doom assertions (generational wealth gap, demographic cliff, gig survival) without new figures.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 892,
+    "end_char": 946,
+    "text": "by 2030,\nthe average cost of simply being 30\nyears old"
+   },
+   "judgment": "MET",
+   "rationale": "The title phrase (\"cost of being 30 by 2030\") is spoken by about character 900.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "The Future Cost of Being 30 by 2030 - Most Will Be Broke",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Generational affordability is a high-interest broad topic.",
+  "2_differentiated_angle": "A fixed future date (\"30 in 2030\") as a framing device over a general cost-of-living tour.",
+  "3_title": "Date-anchored, with a strong claim (\"Most Will Be Broke\").",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): bold BROKE BY DEFAULT, an alarmed cartoon man (resembling a well-known cartoon family character; rights not judged) pointing at a 2030 calendar and a rising orange bar chart on cash. Very legible at mobile size.",
+  "5_opening": "What-if hook plus comic exaggeration, then a subscribe ask.",
+  "6_loops": "The central loop (required income) is never paid.",
+  "7_spine": "Category list followed by a long consequences section.",
+  "8_repetition_clarity": "Doom assertions repeat in the second half.",
+  "9_emotion_credibility": "High-intensity tone; credibility reduced by internally inconsistent figures and absent sources.",
+  "10_ending_cta": "Generic \"start planning\" and no next step.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Grocery and dining costs rise 26% by 2030 with annual inflation \"over 2%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "2%/year for 5 years is 10.4%; 26% needs about 4.7%/year."
+  },
+  {
+   "claim": "Public college $44,000 a year; four years \"over $200,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "4 x $44,000 = $176,000."
+  },
+  {
+   "claim": "Minimum-wage student working 40 hours a week covers tuition and room and board",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$7.25 x 2,080 hours = $15,080 a year; cannot cover $44,000."
+  },
+  {
+   "claim": "$50,000 with 4% inflation for 30 years needs \"$162,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$162,170. Holds (assumption differs from the 3% and 2% used elsewhere in the video)."
+  },
+  {
+   "claim": "Healthcare +20% by 2030: $5,000 to $6,000; costs double \"approximately every nine years\" at 7-8%",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$6,000 is +20%; doubling at 7-8% takes 9-10 years. But the video's own \"7 to 8% annually\" is about +40-47% over five years, not +20%."
+  },
+  {
+   "claim": "Housing $382,000 average by 2030; ownership cost \"approaching $4,000 a month\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $3,300-$3,600 a month under common 5-10% down, 7% assumptions."
+  },
+  {
+   "claim": "Real wages down 7.6% since 2006; millennial average salary $71,000; 55% of Gen Z and millennials run side hustles earning $13,000-$18,000; Medicare +7.2% a year; car-ownership costs +43% since 2019; insurance +19% year over year; EV repair $6,600; childcare $25,000-$35,000 by 2030; retirement healthcare $350,000-$400,000",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not verified; none is sourced in the video. The childcare and real-wage figures appear inconsistent with national series as recalled; the healthcare estimate resembles Fidelity's couple figure."
+  }
+ ],
+ "strengths": [
+  "Strong hook and a clear date-anchored premise.",
+  "Several plain-language analogies.",
+  "Correct compounding where it is computed ($162,000, doubling time)."
+ ],
+ "weaknesses": [
+  "The headline promise (the income needed at 30 in 2030) is never computed.",
+  "Several figures contradict their own stated basis (26%, $200,000, minimum wage).",
+  "Almost every statistic is unsourced.",
+  "Subscribe ask before value and no actionable ending.",
+  "Hyperbole without support: \"houses cost more than their lifetime earnings\", \"moving costs more than most people earn annually\", \"childcare already exceeds college tuition in most states\" (not assessed here)."
+ ],
+ "contradictions": [
+  "2% inflation versus a 26% food-price rise by 2030.",
+  "$44,000 a year versus \"over $200,000\" for four years.",
+  "A $382,000 projected 2030 home price versus higher 2026 medians stated by the same channel.",
+  "Three inflation rates (2%, 3%, 4%) in one video.",
+  "Healthcare \"+20% by 2030\" (about 3.7% a year) versus \"7 to 8% annually\" (about +44% over five years)."
+ ],
+ "improvement_opportunities": [
+  "Add one on-screen table totalling the 2030 categories into a required annual income and say what share of earners clear it.",
+  "Align inflation assumptions (state one rate) and recompute the food, tuition and housing lines.",
+  "Name sources on screen for each projection and drop the unsourced ones.",
+  "Close with a three-step plan and a next-video pointer; move the subscribe ask after the first data section."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Sources for all 2030 projections"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "WEAK",
+  "lifetime_rate_ratio": "0.4549",
+  "age_days": "260.5927",
+  "views_likes_comments_snapshot": {
+   "views": 12192,
+   "likes": 410,
+   "comments": 139,
+   "published_at": "2025-12-24"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.42105",
+   "tier": "WEAK",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the unsourced projections or the alarm-style thumbnail affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-INTRO-02 downgraded to PARTLY_MET (\"broke\"/\"default\" never spoken)",
+    "subscribe-ask position corrected to ~700; SEO position corrected",
+    "Fidelity \"matches\" softened to \"near\"",
+    "real-wage claim reworded as unverified",
+    "college claim hedged (public unspecified; out-of-state ~$49K)",
+    "added healthcare self-contradiction and unsupported hyperbole"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

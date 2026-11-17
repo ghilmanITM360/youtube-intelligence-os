@@ -1,0 +1,250 @@
+{
+ "batch_id": "NICK_270_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "n4wBnOox0y4",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "2a6a0fec7a16902f9de7ce70ef7b3b21a6c650f7b965544bea8b3e983603db67",
+   "character_count": 19564,
+   "canonical_utf8_bytes": 19564,
+   "canonical_whitespace_word_count": 3171,
+   "coverage_token_count": 3193,
+   "read_character_ranges": [
+    [
+     0,
+     9800
+    ],
+    [
+     9800,
+     19564
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "What if I told you that despite working harder than any generation before them, millennials and Gen Z have somehow managed to become the poorest young adults in modern history.",
+   "last_text_witness": "they're trying to play a game where someone changed all the rules without telling them. Housing costs have exploded. Education has become a luxury item and basic transportation now requires a small loan. The American dream didn't die, it just became prohibitively expensive. If you found this eye openening, make sure to subscribe and let me know in the comments what generational financial myth you'd like me to tackle next.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 9800,
+     "first80": "What if I told you that despite working\nharder than any generation before them,\n",
+     "last80": "l for millions of\nyoung adults. When your housing costs\nare skyhigh, your studen"
+    },
+    {
+     "start": 9800,
+     "end": 19564,
+     "first80": "t loans are\ncrushing you, and your transportation\ncosts are through the roof, wh",
+     "last80": "w in the\ncomments what generational financial\nmyth you'd like me to tackle next."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "304_n4wBnOox0y4_The_Real_Reason_Millennials_Gen_Z_Are_Struggling_Financially.txt",
+   "archive_member_sha256": "001d44cfa53f463c85498cc80425ab83f10c0cacdf2b7a81035df177e5dd2a61",
+   "archive_member_bytes": 20944,
+   "archive_member_lines": 546,
+   "audio_verified": false,
+   "image_sha256": "03f31d899e9666a5f5b7b1384629a1fc64a4d7ea586d3498d48f84e0be3d6535",
+   "image_bytes": 111028,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/n4wBnOox0y4/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/n4wBnOox0y4/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-01"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDMSP",
+   "url": "https://fred.stlouisfed.org/series/MSPUS",
+   "source_date": "2026-10-01",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MSPUS (Census/HUD median sales price of houses sold), fredgraph.csv; SHA-256 a9f5886d44aeb6f0bbb14d823b1c2b397e8fb7775fb47b6dfd4c67073fdbea32",
+   "finding": "1988 Q1 $110,000; 2022 quarters $413,500/$437,700/$438,000/$442,600 (mean $432,950).",
+   "limitations": "New houses sold, not existing homes.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "FREDINC",
+   "url": "https://fred.stlouisfed.org/series/MEHOINUSA646N",
+   "source_date": "2026-10-01",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MEHOINUSA646N (Census nominal median household income), fredgraph.csv; SHA-256 2052185cf05506b963bfe3aaee5dbbc1783e1518b144b74ecd85058b43de4bfc",
+   "finding": "1988 $27,230; 2022 $74,580.",
+   "limitations": "Nominal; series revisions possible.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "FREDCPI",
+   "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+   "source_date": "2026-10-01",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPIAUCSL (BLS CPI-U SA), fredgraph.csv; SHA-256 8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549",
+   "finding": "1990 average 130.658; September 2025 324.245 (2.48x).",
+   "limitations": "Seasonally adjusted series; multiplier uses annual 1990 average.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-01"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 34225,
+    "age_days": 319.5744,
+    "views_per_day": 107.09556209758979,
+    "peer_median_10": 371.2772157873286,
+    "peer_median_5": 166.5868287608692,
+    "peer_ratio_10": 0.28845174856874395,
+    "peer_ratio_5": 0.6428813303801018,
+    "tier_10": "WEAK",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "-bzaU4X9xb0",
+     "KfTnH7mQG6U",
+     "7Bi41hjcB_4",
+     "XP-VPkD3N64",
+     "jVu2-t_RVII",
+     "7-pWsyPlSeg",
+     "37hwqt_CoDc",
+     "3V3uUy6zR0I",
+     "v-1VwbsUa94",
+     "xVeB_15xEfs"
+    ],
+    "peer_ids_5": [
+     "-bzaU4X9xb0",
+     "KfTnH7mQG6U",
+     "7Bi41hjcB_4",
+     "XP-VPkD3N64",
+     "jVu2-t_RVII"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "-bzaU4X9xb0",
+      "Title": "Do This EVERY Time You Get Paid (Payday Routine)",
+      "Views": "367543",
+      "Age_days": "318.5883",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "KfTnH7mQG6U",
+      "Title": "Your Money Habits Are Making Someone ELSE Rich (The System You're Trapped In)",
+      "Views": "14923",
+      "Age_days": "320.5724",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "7Bi41hjcB_4",
+      "Title": "The Smartest Order to Invest Your Money (Step-by-Step)",
+      "Views": "555484",
+      "Age_days": "321.5613",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "XP-VPkD3N64",
+      "Title": "19 Rules for Financial Freedom",
+      "Views": "53729",
+      "Age_days": "322.5285",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "jVu2-t_RVII",
+      "Title": "The Psychology of Money Nobody Talks About (Money Anxiety Explained)",
+      "Views": "15804",
+      "Age_days": "316.5608",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "7-pWsyPlSeg",
+      "Title": "10 Things That Are No Longer Worth Your Money",
+      "Views": "406126",
+      "Age_days": "323.5656",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "37hwqt_CoDc",
+      "Title": "Financial Literacy in 50 Minutes - What School Never Taught You About Money!",
+      "Views": "270204",
+      "Age_days": "315.5717",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "3V3uUy6zR0I",
+      "Title": "Buy, Lease, or Finance - The Truth They Don’t Tell You",
+      "Views": "97804",
+      "Age_days": "324.54",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "v-1VwbsUa94",
+      "Title": "The Chinese Rule That Builds Wealth",
+      "Views": "138800",
+      "Age_days": "314.6019",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "xVeB_15xEfs",
+      "Title": "The First Million Hurts — The Second Feels Effortless",
+      "Views": "74983",
+      "Age_days": "325.5754",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Ratios and CPI multiplier from FRED data; simple products",
+   "results": {
+    "purchasing_power_multiple": 7.14,
+    "ratio_1988_actual": 4.04,
+    "ratio_1988_video_income": 4.846,
+    "ratio_2022_actual": 5.805,
+    "ratio_2022_video_income": 6.186,
+    "mspus_2022_mean": 432950,
+    "cpi_mult_1990_sep2025": 2.4816,
+    "insurance_300_annual": 3600,
+    "car_700_72mo": 50400
+   },
+   "limitations": "Annual averages of quarterly or monthly data."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Three FRED series directly inspected; other claims analyst recall, labelled per claim. No paid purchases."
+}

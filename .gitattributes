@@ -12,3 +12,7 @@ data/raw/forensic-analysis/casually-finance/source-videos/*.mp4 filter=lfs diff=
 
 # Dated Casual Finance derived CSVs retain source CRLF and verbatim multiline text.
 data/extracted/forensic-analysis/casually-finance/2026-10-12/**/*.csv whitespace=-trailing-space
+
+# Dated Nick research CSVs retain checksum-registered CRLF and verbatim
+# multiline audit text, matching the evidence-preservation convention above.
+research/finance-economics-intelligence/channel-intelligence/nick-invests/2026-10-23/*.csv whitespace=-trailing-space

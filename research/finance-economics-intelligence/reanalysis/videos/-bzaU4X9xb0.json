@@ -1,0 +1,411 @@
+{
+ "video_id": "-bzaU4X9xb0",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "fda1e899df1eb373deeb288555d3031e7cc07fb18d876992be26a2cd3b250b56",
+ "original_packets": [
+  "NICK_001.json"
+ ],
+ "transcript_chars_read": 18904,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 49,
+    "end_char": 137,
+    "text": "you have exactly 15 seconds\nbefore your brain starts making terrible\nfinancial decisions"
+   },
+   "judgment": "MET",
+   "rationale": "Relatable moment (paycheck lands), a specific-sounding stop beat (15 seconds) and an immediate promise of a different outcome; the 15-second claim is unsupported but works as a hook.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 647,
+    "end_char": 711,
+    "text": "a simple\nroutine you could follow every single\ntime you get paid"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The promise is clear and emotional, but it stacks \"ahead of 90% of people financially\" (unsupported) and a like/subscribe ask before delivering anything.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Large text PAYCHECK ROUTINE; a cartoon man beside a pipe dripping dollar coins into three containers (a jar of coins, a green piggy bank, a small jar); arrow to the containers"
+   },
+   "judgment": "MET",
+   "rationale": "Title, thumbnail and opening all stage the same paycheck-routine promise.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16223,
+    "end_char": 16272,
+    "text": "You need to automate\neverything we just discussed"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Do This EVERY Time You Get Paid\" promises a per-payday action; most of the video is a one-off priority ladder (necessities, debt minimums, emergency fund, match, 10% retirement, debt payoff, Roth) and only the final automation step is per-payday.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18500,
+    "end_char": 18542,
+    "text": "This paycheck\nroutine isn't rocket science"
+   },
+   "judgment": "MET",
+   "rationale": "The title loop (what is the routine?) is answered by the stepwise ladder and the automation summary.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Pipe splitting a paycheck into three containers beside PAYCHECK ROUTINE"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The three-container graphic suggests a three-way split, while the script gives a seven-step priority ladder and no allocation percentages for a three-way split (it gives a 60% needs ceiling, a 10%-of-gross retirement target and a 3% match example).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10577,
+    "end_char": 10633,
+    "text": "you've officially graduated\nfrom financial survival mode"
+   },
+   "judgment": "MET",
+   "rationale": "Ordered ladder with a clear milestone (\"survival mode\" to \"wealth-building mode\") and a closing automation step that ties it together.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5779,
+    "end_char": 5815,
+    "text": "But here's\nwhere it gets interesting"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Retention devices are generic intensifiers (\"here's where it gets interesting\", \"here's something that might shock you\"); the hook's 15-second claim is never revisited and no explicit loop is closed.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8086,
+    "end_char": 8148,
+    "text": "Now that we've covered the foundation,\nit's time to talk about"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Steps are joined by \"now that... it's time\" (AND THEN); the real BUT turns (\"Most people approach their finances backwards\") sit inside steps, not between them.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12183,
+    "end_char": 12224,
+    "text": "starts investing $300 per month at age\n25"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$300/month at 8% for 40 years is about $1.05M (stated \"around $1 million\") and for 30 years about $447,000 (stated \"about $400,000\"); the stated $600,000 cost of delay equals the unrounded gap ($1.047M less $0.447M).",
+   "uncertainty": "Arithmetic verified in this session."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9265,
+    "end_char": 9332,
+    "text": "their\nemergency fund should be somewhere\nbetween $8,000 and $16,000"
+   },
+   "judgment": "MET",
+   "rationale": "3-6 months of the $2,700 necessities is $8,100-$16,200; $2,700 is 56.8% of $4,750; all consistent. The $2,700 example (rent, car, food) omits the utilities and healthcare the speaker lists as necessities, so the range illustrates the method on an incomplete total.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7530,
+    "end_char": 7603,
+    "text": "if you drop\nto 97% on time payments, your credit\nscore tanks dramatically"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The 99%/97% on-time thresholds are unsourced; no published on-time-percentage cutoff is known to me and late payments are reported once 30+ days past due, so the figures cannot be credited as specific facts.",
+   "uncertainty": "No source located; reading of credit reporting is analyst recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11623,
+    "end_char": 11664,
+    "text": "your employer will\nalso contribute $1,800"
+   },
+   "judgment": "MET",
+   "rationale": "A 3% match on $60,000 is $1,800, so $1,800 plus $1,800 doubles the contribution as stated.",
+   "uncertainty": "Arithmetic verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 737,
+    "end_char": 779,
+    "text": "put you ahead of 90% of\npeople financially"
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The headline \"ahead of 90%\" has no stated basis.",
+   "uncertainty": "No source or method given."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2653,
+    "end_char": 2698,
+    "text": "Most people approach\ntheir finances backwards"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame: pay yourself first rather than save what is left.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2852,
+    "end_char": 2907,
+    "text": "trying to fill a\nbucket with a giant hole in the bottom"
+   },
+   "judgment": "MET",
+   "rationale": "Plain analogies (leaky bucket, paycheck as installments of future freedom) and plain definitions of the avalanche and snowball methods.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18838,
+    "end_char": 18903,
+    "text": "everyone else is still\nwondering where their money disappeared\nto"
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the opening \"wondering where all your cash goes\" and promises the payoff of the system.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1050,
+    "end_char": 1113,
+    "text": "make sure to subscribe to\nthis channel and hit that like button"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The only call to action lands at about character 1,050, roughly 3,000 characters before step one; there is no closing ask or next-video pointer.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8259,
+    "end_char": 8333,
+    "text": "Emergency funds are about\nas exciting as watching paint dry in\nslow motion"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Repeated intensifiers and restatements (\"I know, I know\", \"Spoiler alert\" twice) lengthen a ~19,000-character script whose advice fits in a short ladder.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 47,
+    "text": "The moment your paycheck hits your bank\naccount"
+   },
+   "judgment": "MET",
+   "rationale": "\"Paycheck\" and \"paid\" are in the first sentence; the title keywords appear immediately.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "Do This EVERY Time You Get Paid (Payday Routine)",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Payday and budgeting routines are evergreen personal-finance topics.",
+  "2_differentiated_angle": "Weak: a standard priority ladder (necessities, emergency fund, match, debt, Roth) framed as a payday routine.",
+  "3_title": "Clear imperative with a parenthetical keyword; promises a repeatable action.",
+  "4_thumbnail": "Stored 480x360 copy (letterboxed): bold PAYCHECK ROUTINE, a cartoon man (resembling a well-known cartoon father; rights not judged) and a coin-dispensing pipe feeding three containers, arrow. Very legible at mobile size.",
+  "5_opening": "Relatable moment, stop beat, promise.",
+  "6_loops": "Few real loops; mostly intensifiers.",
+  "7_spine": "Ordered priority ladder; closing automation step.",
+  "8_repetition_clarity": "Repeated reassurance and restatement.",
+  "9_emotion_credibility": "Friendly and plain; credibility reduced by unsupported \"90%\" and credit-score thresholds.",
+  "10_ending_cta": "No closing CTA; the single ask is early.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$75,000 salary, about $4,750/month take-home; $1,800 + $400 + $500 = $2,700 is \"about 57%\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$2,700 / $4,750 = 56.8%. Holds."
+  },
+  {
+   "claim": "3-6 months of $2,700 = \"$8,000 and $16,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$8,100-$16,200. Holds."
+  },
+  {
+   "claim": "3% match on $60,000 = $1,800 from the employer",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Holds."
+  },
+  {
+   "claim": "$300/month from 25 at 8% = \"around $1 million\" at 65; from 35 = \"about $400,000\"; delay costs \"around $600,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,047,000 and $447,000; difference $600,000. The $400,000 figure is rounded down by $47,000."
+  },
+  {
+   "claim": "99% on-time payments is \"good\"; 97% makes you a \"high-risk borrower\"",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not verified; no published on-time-percentage cutoff exists that I know of; late payments are reported at 30+ days past due."
+  },
+  {
+   "claim": "Employer match is an \"instant 100% return\"; Roth gains are tax-free; capital-gains holding-period rule",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Broadly correct; Roth rules omit eligibility and income limits."
+  }
+ ],
+ "strengths": [
+  "Clear ordered ladder with correct arithmetic in the worked examples.",
+  "Plain analogies and an honest preference for the snowball method for behavioural reasons.",
+  "Automation step is the right per-payday action."
+ ],
+ "weaknesses": [
+  "Title promises a per-payday action but most content is a one-off plan.",
+  "Unsupported headline statistics (90%, credit thresholds).",
+  "Subscribe ask before any value; no closing CTA.",
+  "Thumbnail three-way split is not the script's structure."
+ ],
+ "contradictions": [
+  "\"A routine ... every single time you get paid\" versus a one-off priority ladder.",
+  "\"About $400,000\" at 35 versus the $447,000 its own inputs give."
+ ],
+ "improvement_opportunities": [
+  "Re-title around the ladder (\"The 7-Step Paycheck Order\") or build the video around the payday automation step so the title is true.",
+  "State the credit-score point as \"one 30-day late payment can drop a score\" with a source, and drop the 90% claim.",
+  "Show the three-container split with the script's actual percentages on the thumbnail.",
+  "Move the subscribe ask after step 2 and add a closing next-video pointer."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "STRONG",
+  "lifetime_rate_ratio": "4.33976",
+  "age_days": "318.5883",
+  "views_likes_comments_snapshot": {
+   "views": 367543,
+   "likes": 11000,
+   "comments": 568,
+   "published_at": "2025-10-27"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "10.77226",
+   "tier": "STRONG",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the early subscribe ask or the generic structure affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "CTA position corrected (~1,050; ~3,000 before step one)",
+    "\"no percentages\" narrowed to \"no allocation percentages\"",
+    "emergency-fund example flagged as built on an incomplete necessities total",
+    "credit-threshold statement softened"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

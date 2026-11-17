@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "ciWCTKap5ZM",
+ "nick": "NICK_216",
+ "claims": 11,
+ "sources": 3,
+ "calculations": 2,
+ "transcript_chars": 19346,
+ "parent_commit": "4fa498b182ca909a39e72a9b022340bd4a73aad1",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_215",
+  "NICK_216",
+  "NICK_217"
+ ],
+ "changed_ledger_ids": [
+  "ciWCTKap5ZM"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 490,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.96779 TYPICAL (5-peer 0.89621 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 493,
+  "remaining": 1119,
+  "original_pending": 473,
+  "expansion_pending": 646,
+  "changed_cells": "91 cells: dashboard 7 + target rows 486-488 in two sheets",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "ddf7208cd41058fada2861e3f0b030b470cf1bb6610deb3d8ad5d6dade28113c"
+ },
+ "semantic_acceptance": "All 19346 stored characters and six dimensions reviewed; 11 located claim groups; sources IRA2026, SPIVA2025B, ICIFEES. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "076a2ff0aed2ed45b142c3e6372933490da582c4fd4ee68829c08038e75304db",
+  "NICK_216.json": "2d16c35167c221d2e7db3fc600285b4cbfbd967fb5c228089aa7b86a9ecf13e7",
+  "NICK_216_READ_RECEIPTS.json": "07815f3201b31c59f857c7f6079bee4f403d629f66d7dad4b54cba0bfbf087bc",
+  "thumbnail": "fb6e4b225cbb27a964968bb26a30ae9a0b762d8b3b0085ba966060430f5dcc2e"
+ }
+}

@@ -1,0 +1,114 @@
+{
+  "batch_id": "NICK_132_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "N2HdBntwQGU",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "cb52c5fdc1b4ba3328e77deb5f67030a2b7980bcf759fd91b1d10ab32df13100",
+      "character_count": 18139,
+      "source_word_count": 3153,
+      "coverage_token_count": 3069,
+      "read_character_ranges": [
+        [
+          0,
+          11000
+        ],
+        [
+          11000,
+          18139
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUDIO_UNVERIFIED_NUMERICAL_ASR_CONFLICTS_PRESERVED",
+      "archive_member": "203_N2HdBntwQGU_Who_Can_Even_Afford_A_250k_House_In_2026.txt",
+      "archive_member_sha256": "e342caa2337144aa572c399ac69ce77ec2d2a6130a72e972e54af53254250add",
+      "archive_member_bytes": 19644,
+      "archive_member_lines": 555,
+      "audio_verified": false,
+      "image_sha256": "1d429048f8a28ada069e6f16419eaaf2ccf793debcffa9e3a2fb502dc5cab870",
+      "image_inspected_sizes": [
+        [
+          480,
+          360
+        ],
+        [
+          320,
+          240
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/N2HdBntwQGU/hqdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/N2HdBntwQGU/hqdefault.jpg",
+      "image_acquisition": "FRESH_REGISTERED_HQDEFAULT_FETCH; MAXRES_VARIANT_404; NO_HIGHER_RESOLUTION_CLAIM",
+      "unavailable_image_variant": "https://i.ytimg.com/vi/N2HdBntwQGU/maxresdefault.jpg",
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "FHAminimum",
+      "url": "https://www.hud.gov/buying/loans",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "Aslowas3.5%subjecteligibility;not3%FHAandnot8250on250K."
+    },
+    {
+      "claim": "PMIunits",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-private-mortgage-insurance-en-122/",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "ConventionalPMIprotectslenderbutenableslowdownpayment;notFHAinsurance."
+    },
+    {
+      "claim": "QMcapcounterexample",
+      "url": "https://www.consumerfinance.gov/rules-policy/final-rules/qualified-mortgage-definition-under-truth-lending-act-regulation-z-general-qm-loan-definition/",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "GeneralQM43%DTIcapreplacedwithpricebasedthresholds;programs/qualificationvary."
+    },
+    {
+      "claim": "Datedincome",
+      "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "2024householdmedian83730supportsrounded84K,notindividualsalary."
+    },
+    {
+      "claim": "Savingsdefinition",
+      "url": "https://www.federalreserve.gov/publications/october-2023-changes-in-us-family-finances-from-2019-to-2022.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "8Kconditionaltransactionaccountmedianin2022dollars,notsavingsonlycurrentdownpayment."
+    },
+    {
+      "claim": "Asbestosvisualclaim",
+      "url": "https://www.epa.gov/asbestos/protect-your-family-exposures-asbestos",
+      "accessed": "2026-10-19",
+      "access_scope": "LIVE_PRIMARY_PAGE_OR_SEARCH_EXCERPT;limitationsinfinding",
+      "finding": "Visualappearancecannotgenerallyestablishasbestos;appropriateprofessionalassessment/testingneeded."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Independentcostsum,gross/netratios,FHApercentage andanalyst30yearamortization;storednumbersnotnormalizedtoaudioclaim",
+      "results": {
+        "FHA3_5pct250K": 8750,
+        "listedmonthlysum": 2213,
+        "listedannualsum": 26556,
+        "annualstated25333_5_monthly": 2111.125,
+        "income28pct2213": 94842.85714285713,
+        "income43pct2213": 61758.139534883725,
+        "income28pct2113": 90557.14285714286,
+        "income43pct2113": 58967.441860465115,
+        "Smith_otherexpenses": 1570,
+        "Smithremaining": 717,
+        "Smithhousing_netshare": 0.4802272727272727,
+        "save50Kfromzero8400yr": 5.9523809523809526,
+        "save42Kgap8400yr": 5,
+        "225K30yrPI_0.06": 1348.9886815937032,
+        "225K30yrPI_0.07": 1496.9306141531601,
+        "peer_ratio_10": 0.3703096860695795,
+        "peer_ratio_5": 0.5442310853282333
+      }
+    }
+  ]
+}

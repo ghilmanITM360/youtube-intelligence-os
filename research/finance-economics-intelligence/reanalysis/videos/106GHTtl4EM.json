@@ -1,0 +1,620 @@
+{
+ "video_id": "106GHTtl4EM",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "cfd9e7cf773e1c7d37caa7ffa222d3c111bb4e3b6dae957e36c31542b4ac2877",
+ "original_packets": [
+  "NICK_003.json"
+ ],
+ "transcript_chars_read": 20158,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 146,
+    "text": "You have $8,000. 10 years from now, that\n$8,000 could be the beginning of a\nportfolio worth hundreds of thousands of\ndollars, or it could be gone."
+   },
+   "judgment": "MET",
+   "rationale": "A direct second-person stake, followed at once by the contrarian turn (\"no, I'm not talking about picking the wrong stock\") and \"the first $8,000 isn't an investment test, it's a behavior test\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 940,
+    "end_char": 1053,
+    "text": "we're going to\nfollow Rain, because she's about to get\nher first real taste of what having\nmoney actually changes"
+   },
+   "judgment": "MET",
+   "rationale": "The promise (\"five completely ordinary decisions\", ~220) is clear early, the character frame (\"we're going to follow Rain\", ~940) follows, and \"My name is Nick\" appears at ~757; a mild over-explanation of channel purpose.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Smiling cartoon man in a grey T-shirt, hands on hips, beside a pink piggy bank with cash and five coloured habit icons (dumbbell, open book, checklist, coin stacks, sprout) reached by curved arrows, under bold MAKE THESE HABITS!"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The theme (habits, saving) matches, but the title's \"$8,000\" is absent, and the five icons (exercise, reading, checklist, coins, growth) suggest generic self-improvement habits, while the script's five are all financial (protect, surplus, automate, slow lifestyle, stress-test).",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 507,
+    "end_char": 586,
+    "text": "Because the first $8,000 isn't\nreally an investment test, it's a\nbehavior test."
+   },
+   "judgment": "MET",
+   "rationale": "Defines the frame (protect, surplus, automate, resist lifestyle inflation, decide without perfection) in ~600 characters; the five habits are previewed almost as a list, which slightly front-loads the content.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1055,
+    "end_char": 1084,
+    "text": "And it's not\nwhat she thinks."
+   },
+   "judgment": "MET",
+   "rationale": "The teaser pays at ~2,400 when Rain discovers the money is protection before investment.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The $8,000 Rule: 5 Habits That Build Wealth"
+   },
+   "judgment": "MET",
+   "rationale": "The entire 43-character title, with a number and a count, is in the first 55 characters.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The $8,000 Rule: 5 Habits That Build Wealth"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"The $8,000 Rule\" is a coined device: the video first defines it as a stress test (\"what if another $8,000 disappeared?\") at ~12,400 (61% through), repeats it at ~14,500 and ~17,850 and then presents the five questions as the rule; it is not identical to the five habits in the title.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The $8,000 Rule: 5 Habits That Build Wealth"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Five habits are delivered, but \"habits that build wealth\" understates the advice: most are protective (emergency fund, avoid payments, automate, stress-test), and the hook's \"hundreds of thousands in ten years\" is not computed anywhere.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The $8,000 Rule: 5 Habits That Build Wealth"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"what is the $8,000 rule\" loop stays open from the title until ~12,400, but the rule is then defined three different ways (stress test, five questions, margin), so the payoff is diffuse.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1342,
+    "end_char": 1464,
+    "text": "if\nyou've spent the last few years watching\nyour bank balance disappear somewhere\nbetween payday and the 28th of the\nmonth"
+   },
+   "judgment": "MET",
+   "rationale": "A specific, shared pain point and the emotion of \"finally built a little wall\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18851,
+    "end_char": 18974,
+    "text": "Your first $8,000 doesn't make\nyou wealthy. It gives you enough room to\nstop making decisions like someone who\nhas no room."
+   },
+   "judgment": "MET",
+   "rationale": "The transformation (margin, optionality, resilience) is stated and the five-habit sequence is restated at the close.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 507,
+    "end_char": 586,
+    "text": "Because the first $8,000 isn't\nreally an investment test, it's a\nbehavior test."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The \"first $8,000 is a behaviour test, not an investment test\" framing is distinctive, but emergency fund first, automation and slow lifestyle inflation are conventional advice.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 9744,
+    "end_char": 9813,
+    "text": "that contribution alone would grow to\nroughly $610,000\nafter 30 years"
+   },
+   "judgment": "MET",
+   "rationale": "$500 a month at 7% for 30 years is $609,985.",
+   "uncertainty": "Arithmetic recomputed; hypothetical return stated by the video."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 36,
+    "end_char": 124,
+    "text": "that\n$8,000 could be the beginning of a\nportfolio worth hundreds of thousands of\ndollars"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$8,000 alone at 7% grows to $15,700 in ten years (at 10%, $20,700); \"hundreds of thousands\" is only reachable with regular contributions over a longer period, as the $500-a-month, 30-year example shows; the hook's ten-year horizon and the later doubling line ($16,000, $32,000, $100,000) do not match.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8756,
+    "end_char": 8833,
+    "text": "her raise is\n$10,000 a year before taxes and the\napartment wants $7,800\nof it"
+   },
+   "judgment": "MET",
+   "rationale": "$650 x 12 is $7,800, 78% of the pre-tax raise; for a single filer in the 22% bracket the federal tax is $2,200 so the raise nets $7,800, exactly the apartment's $7,800, and with 7.65% FICA it nets $7,035, so the apartment exceeds the whole after-tax raise.",
+   "uncertainty": "Arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4567,
+    "end_char": 4662,
+    "text": "the average annual cost of owning\nand operating a new vehicle at $11,577,\nor about $965 a month"
+   },
+   "judgment": "MET",
+   "rationale": "AAA's September 2025 \"Your Driving Costs\" gives $11,577 a year for a new vehicle (the first drop in six years, including depreciation, fuel, insurance and maintenance), and $11,577 / 12 is $964.75; a later update reported a higher figure after a methodology change.",
+   "uncertainty": "Figure confirmed from AAA-linked search results this session; later-year figure not compared."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7783,
+    "end_char": 7910,
+    "text": "participation was 94% among\nemployees in plans using automatic\nenrollment compared with 64% in plans\nusing voluntary enrollment"
+   },
+   "judgment": "MET",
+   "rationale": "Vanguard How America Saves 2026 (published June 2026) shows 94% for automatic enrollment and 64% for voluntary in 2025 on its participant-weighted tables; the small-plan edition has different numbers (82% and 54%).",
+   "uncertainty": "Search-result summaries of the Vanguard tables, not the report PDF."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2498,
+    "end_char": 2595,
+    "text": "55% of US\nadults said they had emergency savings\nsufficient to cover 3 months of expenses\nin 2025"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The Fed's 2025 SHED report was published 13 May 2026; the 55% three-month figure appears in secondary coverage (unchanged from 2024); the \"30% could not cover 3 months even by borrowing\" half was not located.",
+   "uncertainty": "Search-result summaries; the Fed report text was not read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6560,
+    "end_char": 6708,
+    "text": "US households spent an average of\n$78,535\nin 2024 with housing and transportation\ntogether accounting for more than half\nof total household spending"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "BLS Consumer Expenditure Survey 2024 average annual expenditures were $78,535; housing and transportation shares of roughly 33% and 17% sum to just over half (analyst recall of the shares). The same $78,500 is used by `0Ca3uV6lgos`. The BLS release itself was not re-fetched, so the judgment is capped.",
+   "uncertainty": "Analyst recall of the BLS release; not re-fetched."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1085,
+    "end_char": 1124,
+    "text": "Rain is 31 when she\nfinally gets there."
+   },
+   "judgment": "MET",
+   "rationale": "A single character (Rain, with foil Chris) carries five habits, each a scene (the mechanic, the dealership, the paycheck transfer, the raise, the stress test) with a stat, a rule and a lesson; layoffs act as a test of the earlier choices.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8284,
+    "end_char": 8362,
+    "text": "And now\nthe system is working, which is exactly\nwhen the next problem arrives."
+   },
+   "judgment": "MET",
+   "rationale": "Each habit ends by opening the next problem in the same sentence; \"Rain is about to discover the other side of the equation\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "MAKE THESE HABITS! over a piggy bank and five habit icons"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Five habits are delivered; the icons are generic and unrelated to the specific habits; \"$8,000\" is absent.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5571,
+    "end_char": 5617,
+    "text": "That's habit number\ntwo, protect your surplus."
+   },
+   "judgment": "MET",
+   "rationale": "Each habit follows from the previous event (car repair to protect cash; dealership to protect surplus; Chris to lifestyle inflation; raise to growth; layoff to margin).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20106,
+    "end_char": 20157,
+    "text": "no shortcut, just\nenough margin to stay in the game"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "There is no like, subscribe, comment or next-video ask in the stored text; the channel is named once at ~760 and the video ends on the thesis.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3489,
+    "end_char": 3550,
+    "text": "And\nRain is about to discover the other side\nof the equation."
+   },
+   "judgment": "MET",
+   "rationale": "Layered gaps: the title's unexplained rule, \"it's not what she thinks\", Chris's difference and the layoff; paid across the video.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10217,
+    "end_char": 10299,
+    "text": "Then, just when Rain thinks she's\nfigured this out, her company announces\nlayoffs."
+   },
+   "judgment": "MET",
+   "rationale": "Strong BUT/THEREFORE beats (Rain invests, BUT the car breaks; the payment fits, BUT the surplus disappears; the system works, THEREFORE the raise tests it).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2431,
+    "end_char": 2486,
+    "text": "The Federal Reserve's 2026 report on\nhousehold finances"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Dated statistics (Fed 2026, Vanguard 2026, AAA 2025) add currency, but the underlying advice is evergreen.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14509,
+    "end_char": 14542,
+    "text": "And notice what isn't on the list"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 20,150 characters, the longest of this batch; after the first recap (~14,000) the remaining ~6,100 characters (30%) restate the five habits two more times (\"it worked for her when...\", then \"Protect it... Automate...\") and \"margin\" recurs six times.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16666,
+    "end_char": 16761,
+    "text": "The real rule is build enough financial\nmargin that one bad month doesn't erase\nsix good years."
+   },
+   "judgment": "MET",
+   "rationale": "The throughline is \"protect margin\"; every vignette serves it.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8284,
+    "end_char": 8362,
+    "text": "And now\nthe system is working, which is exactly\nwhen the next problem arrives."
+   },
+   "judgment": "MET",
+   "rationale": "New problems open before the previous lesson closes; the layoffs scene opens a thread (can Rain survive) that resolves in two months.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3054,
+    "end_char": 3100,
+    "text": "It's just an emergency\nfund with a mood swing."
+   },
+   "judgment": "MET",
+   "rationale": "Plain language with memorable lines (\"automation removes Tuesday\", \"calculated optimism\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14042,
+    "end_char": 14080,
+    "text": "Now go back to Rain's\noriginal $8,312."
+   },
+   "judgment": "MET",
+   "rationale": "The close returns to the first $8,312 on a Friday morning and to the opening question of what to invest in.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 16,
+    "text": "You have $8,000."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"$8,000\" is in the first sentence and \"hundreds of thousands\" at ~92, but \"habits\" is first spoken at ~835, \"wealth\" at ~871 and \"rule\" only at ~12,400.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "The $8,000 Rule: 5 Habits That Build Wealth",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. First-pile-of-money and habit-list topics are evergreen.",
+  "2_differentiated_angle": "The first $8,000 as a behaviour test, and the stress-test question, are the distinguishing ideas.",
+  "3_title": "Number-led and rule-framed; \"The $8,000 Rule\" is a coined brand.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 152,126 bytes) and persisted in thumbnail-evidence: cartoon man, piggy bank with cash and five habit icons, bold MAKE THESE HABITS!; legible at 320 px; the icons are generic and the $8,000 is missing.",
+  "5_opening": "Direct stake, contrarian turn, behaviour-test frame; strong.",
+  "6_loops": "Each habit ends with the next problem; the \"rule\" is paid late.",
+  "7_spine": "Single character, five habits, layoff stress test, definitions, recap.",
+  "8_repetition_clarity": "The five habits are restated twice after the first recap; margin recurs six times.",
+  "9_emotion_credibility": "Calm, specific, and well-sourced (AAA, Vanguard, BLS, Fed); the hook figure is the weak point.",
+  "10_ending_cta": "No call to action.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "$500 a month at a hypothetical 7% grows to roughly $610,000 after 30 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$609,985. Holds."
+  },
+  {
+   "claim": "$8,000 could be \"the beginning of a portfolio worth hundreds of thousands\" in 10 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$8,000 at 7% for 10 years is $15,737 (10%: $20,750); only recurring contributions reach hundreds of thousands, and not in ten years."
+  },
+  {
+   "claim": "Raise of $10,000 a year; a $650 a month apartment takes $7,800 of it",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$7,800 = 78%. Holds."
+  },
+  {
+   "claim": "AAA: new-vehicle ownership $11,577 a year, about $965 a month; $43,000 car at $699 a month",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "AAA September 2025: $11,577 a year (reported as a $719 decline from 2024); 11,577 / 12 = $964.75. A later news report of $12,863 under a revised methodology was seen only in search summaries. For the $699 payment: $43,000 less the $8,000 she holds is $35,000, which at 60 months and 7-7.5% is $693-$701, so it is plausible."
+  },
+  {
+   "claim": "Vanguard 2026: 94% participation with automatic enrollment versus 64% voluntary",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Matches Vanguard's participant-weighted tables for 2025 (search summaries)."
+  },
+  {
+   "claim": "Fed 2026 report: 55% could cover three months; 30% could not even by borrowing or selling",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "55% appears in secondary coverage of the SHED 2025 report (13 May 2026), unchanged from 2024; the 30% half was not located; the Fed report was not read."
+  },
+  {
+   "claim": "BLS 2024: average household spending $78,535, housing and transportation more than half",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Recalled from the BLS Consumer Expenditure release; not re-fetched this session."
+  },
+  {
+   "claim": "Chris's upgrades: $500 plus $300 plus $200 more a month",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$1,000 a month, $12,000 a year, which the video leaves unstated."
+  },
+  {
+   "claim": "Hook: $8,000 \"could be the beginning of a portfolio worth hundreds of thousands\" in 10 years",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$8,000 alone at 7% is $15,737-$16,077 after ten years; adding the video's own $500 a month gives about $102,600; neither reaches hundreds of thousands in ten years."
+  }
+ ],
+ "strengths": [
+  "Clean five-habit structure delivered through one character, with a stat per habit.",
+  "Most figures match primary-style sources (AAA, Vanguard, BLS, Fed).",
+  "Strong contrarian opening (behaviour test, not an investment test)."
+ ],
+ "weaknesses": [
+  "No call to action.",
+  "The hook promise of \"hundreds of thousands in ten years\" is not delivered.",
+  "Thumbnail icons do not map to the habits and omit the $8,000.",
+  "The second half repeats the five habits twice."
+ ],
+ "contradictions": [
+  "Title's \"rule\" is the stress-test habit, but the closing presents five questions as the rule.",
+  "Hook horizon (10 years) versus the later 30-year computation.",
+  "\"MAKE THESE HABITS!\" with exercise and reading icons versus five financial habits.",
+  "After the $2,400 repair paid from $8,312, Rain \"keeps the $8,000\" at the dealership and later stress-tests $8,000 as intact."
+ ],
+ "improvement_opportunities": [
+  "Reword the hook to \"$8,000 in the right order can become $610,000\" and show the $500 a month, 30-year line on screen at ~1,000 characters.",
+  "Match the thumbnail icons to the five habits (emergency shield, car key, auto-transfer arrow, raise arrow, stress gauge) and add \"$8,000\".",
+  "Define the $8,000 rule once at the start in one sentence and use only that definition later.",
+  "Cut the second and third recaps (about 4,000 characters).",
+  "End with one ask tied to the content (set up the automatic transfer after your next payday) and a subscribe line."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary Fed SHED, BLS, Vanguard and AAA documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "INSUFFICIENT_DATA",
+  "lifetime_rate_ratio": "",
+  "age_days": "",
+  "views_likes_comments_snapshot": {
+   "views": 6202,
+   "likes": 152,
+   "comments": 20,
+   "published_at": "(date only)"
+  },
+  "five_peer_sensitivity": {
+   "status": "NOT_PRESENT_IN_PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the character spine, the coined rule or the habit-icon thumbnail affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-TITLE-04, FR-SEO-01 and FR-VC-04 changed to PARTLY_MET; BLS check capped at PARTLY_MET",
+    "positions corrected (intro, teaser payoff, rule definition at 61% through, recap length ~6,100)",
+    "raise arithmetic restated after tax and FICA",
+    "Fed label downgraded to recall; AAA and $699 notes added",
+    "hook-check with the video's own $500 a month added; $8,312 versus $8,000 contradiction added"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

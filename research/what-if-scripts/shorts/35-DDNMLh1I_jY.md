@@ -1,0 +1,39 @@
+# What if you used a microwave as a snowblower?
+
+| Field | Value |
+|---|---|
+| Video ID | `DDNMLh1I_jY` |
+| URL | https://www.youtube.com/shorts/DDNMLh1I_jY |
+| Format | shorts |
+| Published | 2026-06-30 |
+| Duration | 00:01:36 |
+| Views (at acquisition) | 1,005,312 |
+| Words | 387 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/DDNMLh1I_jY.txt` |
+| Source SHA-256 | `1ff9e2b020f355e6cf131c60374e0a8642a702f4ce229fdcae64b5ef6a5f21c0` |
+
+## Script
+
+This question comes from Matt, who asks: I've long thought about putting a flamethrower on the front of a car to melt snow and ice before you drive across it. Now I've realized that a flamethrower is impractical, but what about a high-powered microwave emitter?
+
+Your microwave idea certainly sounds like it should be more practical than a flamethrower because microwaves are clean and efficient.
+
+But there's a big problem: Microwaves heat liquid water very well, but they work very poorly on frozen water (which is one reason defrosting food evenly in your microwave can be tricky.)
+
+Fortunately, there are other ways to get energy into the snow. In addition to your flamethrower suggestion, you could, for example, use infrared heat lamps or lasers. But whatever you use, you'll run into an even bigger problem: It takes an awful lot of energy to melt snow.
+
+Melting a gram of snow takes about 335 joules of energy.
+
+A foot of snow contains roughly the same amount of water as an inch of rain, give or take. So let's assume you've had a decent snowstorm of about a foot –meaning an inch worth of water– and that you want to melt a 9-foot-wide swath while driving along at 55 mph.
+
+This happens to be one of those happy physics situations I love where we can just multiply together every number we're looking at in an online calculator that handles units for us, and the answer turns out to be the measurement we want: we need 574 megawatts of power.
+
+Unfortunately, that’s not the answer we'd like.
+
+The nuclear reactor on an aircraft carrier, for example, produces less than 200 megawatts. To melt snow in front of your car, you'd need three of those, which could lead to its own problems.
+
+What about your original flamethrower idea?
+
+No matter how big the tank on your flamethrower is, you'll run out of fuel constantly. Gas mileage in the US is often measured in "miles per gallon" of gasoline. With your flamethrower guzzling fuel, your mileage would be about 17 feet per gallon.
+
+You’d probably be better off dropping the melting idea entirely and taking a cue from rail agencies, who use jet-engine-powered snowblowers to clear train tracks. In the end, it's easier to just move the snow out of your way.

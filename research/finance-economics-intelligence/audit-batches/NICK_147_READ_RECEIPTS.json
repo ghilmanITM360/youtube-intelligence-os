@@ -1,0 +1,109 @@
+{
+  "batch_id": "NICK_147_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "Q2AieN0QhlA",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "7e381e404dfa7e9bbf7bfa8b8d9e55cef5bbf06e5728e6839e994ea5072be5c6",
+      "character_count": 22511,
+      "source_word_count": 3581,
+      "coverage_token_count": 3603,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          20000
+        ],
+        [
+          20000,
+          22511
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "363_Q2AieN0QhlA_How_100_a_Month_Could_Change_Your_Future.txt",
+      "archive_member_sha256": "782253cdfddbf11580a8df1c09fb67fdd819dc11c30419881c711ef7d28fd584",
+      "archive_member_bytes": 23911,
+      "archive_member_lines": 634,
+      "audio_verified": false,
+      "image_sha256": "876616c62ab6b8a72fa6a35d24bfc9f8212a571aae434c8f2a1f011b86896d78",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/Q2AieN0QhlA/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/Q2AieN0QhlA/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/Q2AieN0QhlA/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Majority of Americans cannot access $1,000 in an emergency",
+      "url": "https://www.bankrate.com/f/102997/x/1c82ee6b93/january-fsp-press-release-final.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_BANKRATE_PRESS_RELEASE; full PDF not opened",
+      "finding": "January 2025 Bankrate survey (before publication): 41% would pay a $1,000+ emergency from savings, down from 44%; measures payment method, not inability to access funds."
+    },
+    {
+      "claim": "Federal Reserve SHED emergency-expense benchmark",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20250528a.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_PRESS_RELEASE_AND_FACT_SHEET",
+      "finding": "2024 SHED released May 28 2025 (before publication): 63% would cover a $400 emergency with cash or equivalent; about 13% could not pay by any means (St. Louis Fed summary)."
+    },
+    {
+      "claim": "S&P 500 averaged over 10% annually",
+      "url": "https://www.fidelity.com/learning-center/trading-investing/sp-500-average-return",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_SOURCES_CITING_NYU_STERN; Damodaran dataset not opened",
+      "finding": "About 10% nominal compound total return long run (about 10.02% 1928-2025 per secondary citing NYU Stern; about 10.3% since 1957 per Motley Fool); real about 6.5-7%."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Independent python reproduction: $100 monthly deposits, monthly compounding at r/12, ordinary annuity (end-of-month) and annuity-due (start-of-month); annual-compounding variant; bisection for implied rates; inflation deflator (1.03^40); analyst conventions, narrator states only 8% and 'over 10%'",
+      "results": {
+        "fv10y_7pct": 17308.48,
+        "fv10y_8pct": 18294.6,
+        "fv10y_10pct": 20484.5,
+        "implied_rate_18000_10y": 0.07708,
+        "fv40y_7pct": 262481.34,
+        "fv40y_8pct_end": 349100.78,
+        "fv40y_8pct_start": 351428.12,
+        "fv40y_8pct_annual_comp": 310867.82,
+        "fv40y_10pct": 632407.96,
+        "implied_rate_350000_40y": 0.08009,
+        "growth_share_8pct": 0.8625,
+        "growth_share_10pct": 0.9241,
+        "fv40y_8pct_real_3pct_infl": 107019.23,
+        "fv40y_7_5pct_fee": 302382.22,
+        "fv40y_5pct_real": 152602.02,
+        "fv30y_8pct_start_age_35": 149035.94,
+        "fv40y_225_8pct": 785476.76,
+        "dinner100_10y": 215.89,
+        "dinner100_20y": 466.1,
+        "dinner100_40y": 2172.45,
+        "years_to_1M_8pct": 52.9,
+        "years_to_1M_10pct": 44.6,
+        "peer_ratio_10": 0.6228037265795189,
+        "peer_ratio_5": 0.256532224475691
+      }
+    }
+  ]
+}

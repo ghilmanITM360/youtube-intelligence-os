@@ -1,0 +1,31 @@
+# What if you tried to hit a baseball pitched at 90% the speed of light?
+
+| Field | Value |
+|---|---|
+| Video ID | `Uj10jGq2O8o` |
+| URL | https://www.youtube.com/shorts/Uj10jGq2O8o |
+| Format | shorts |
+| Published | 2025-10-28 |
+| Duration | 00:01:54 |
+| Views (at acquisition) | 2,671,498 |
+| Words | 445 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/Uj10jGq2O8o.txt` |
+| Source SHA-256 | `1e84a26389971bbb216a2fdb884261ecdcce62929916c5194fa63f4284acfde1` |
+
+## Script
+
+What would happen if you tried to hit a baseball pitched at 90% the speed of light? Let’s set aside the question of how we got the baseball moving that fast. We'll suppose that it's a normal pitch, except in the instant the pitcher releases the ball, it magically accelerates to 0.9c.
+
+From that point onward, everything proceeds according to normal physics.
+
+The ball is going so fast that everything else is practically stationary. Even the molecules in the air are stationary. Air molecules vibrate back and forth at a few hundred miles per hour, but the ball is moving through them at 600 million miles per hour. The ball smacks into them so hard that the atomic nuclei in the air molecules actually fuse with the atomic nuclei in the ball. Each collision releases a burst of gamma rays and scattered subatomic particles.
+
+These gamma rays and debris expand outward in a bubble centered around the pitcher’s mound.
+
+They start to tear apart the molecules in the air, ripping electrons from nuclei and turning the air in the stadium into an expanding bubble of incandescent plasma. The constant fusion at the front of the ball would start to eat away at the surface, blasting tiny particulate fragments of the ball in all directions. These fragments are going so fast that when *they* hit air molecules, they trigger two or three more rounds of fusion. After about 60 nanoseconds the shell of x-rays arrives at home plate, and a handful of nanoseconds later the ball hits. The batter hasn't even seen the pitcher let go of the ball, since the light carrying that information arrives at about the same time as the shock wave. Collisions with the air have eaten the ball away almost completely, and it is now a bullet-shaped cloud of expanding plasma. When it reaches the batter, the center of the cloud is still moving at an appreciable fraction of the speed of light.
+
+It hits the bat first, but then the batter, plate, and catcher are all scooped up and carried backward through the backstop as they disintegrate.
+
+Suppose you’re watching from a hilltop outside the city. The first thing you see is a blinding flash, far outshining the sun. This gradually fades over the course of a few seconds, and a growing fireball rises into a mushroom cloud. Then, with a great roar, the blast wave arrives, tearing up trees and shredding houses.
+
+Everything within roughly a mile of the park is leveled, and a firestorm engulfs the surrounding city. The baseball diamond is now a sizable crater, centered a few hundred feet behind the former location of the backstop.

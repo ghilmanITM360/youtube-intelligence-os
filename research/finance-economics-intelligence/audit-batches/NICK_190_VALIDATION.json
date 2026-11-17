@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "Y1OaaClH_eQ",
+ "nick": "NICK_190",
+ "claims": 17,
+ "sources": 5,
+ "calculations": 2,
+ "transcript_chars": 18573,
+ "parent_commit": "d820304d759bf2dc94cf9356a5b950e488e6551a",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_189",
+  "NICK_190"
+ ],
+ "changed_ledger_ids": [
+  "Y1OaaClH_eQ"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 464,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.12069 WEAK (5-peer 0.23410 WEAK); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 466,
+  "remaining": 1146,
+  "original_pending": 500,
+  "expansion_pending": 646,
+  "changed_cells": "63: Combined Dashboard C13,D13,G15,C17,D17,B25,B26; 2 target row(s) in All Finance Videos (9 cells each) and Detailed Research (19 cells each)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "dfb49fea06234821d17626b7ff7010be6609569a3791192ad4587343d02ea5ae"
+ },
+ "semantic_acceptance": "All 18573 stored characters and six dimensions reviewed; 17 located claim groups; sources BLSCPI0925, CPIFEB20, IBOND25, CB2025SAL, YBLTAR. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "498736e0ac04d42c194a580da4c41dc3df2e4d36d293027756d180fceb066149",
+  "NICK_190.json": "10bdbd81d832dab874c2fa148b4cdf36a6d780a324d51f5f43554fb9a5805dab",
+  "NICK_190_READ_RECEIPTS.json": "9c72077467a15e13e11d872c4b9a34ab18427475c4ecdc4fe27c8840dce21f60",
+  "thumbnail": "cdbbefa2190ffe20b113e015481153d60927cc715a8796b121ac479a3c6aa426"
+ }
+}

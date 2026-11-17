@@ -1,0 +1,87 @@
+{
+  "batch_id": "NICK_152_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "R1AcuUo916k",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "86dedc55cbaeb9a31458d88c5586ee0c283953da2d56c0f5b0eb3a11e9723705",
+      "character_count": 18792,
+      "canonical_utf8_bytes": 18792,
+      "canonical_whitespace_word_count": 3445,
+      "coverage_token_count": 3460,
+      "read_character_ranges": [[0, 6000], [6000, 12000], [12000, 18000], [18000, 18792]],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "019_R1AcuUo916k_Private_Credit_Panic_Why_Investors_Are_Rushing_For_the_Exits.txt",
+      "archive_member_sha256": "9e1596d5ad8e01854723b7b4fdefae3ed9ee6440779c6fa260a33b878b39445b",
+      "archive_member_bytes": 20384,
+      "archive_member_lines": 1,
+      "audio_verified": false,
+      "image_sha256": "d0301e533696ed3861ccd72e11992cdd63b441476af0690c170c1a2e4d69bd3d",
+      "image_inspected_sizes": [[1280, 720], [320, 180]],
+      "registered_image_url": "https://i.ytimg.com/vi/R1AcuUo916k/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/R1AcuUo916k/maxresdefault.jpg",
+      "image_acquisition": "SINGLE_FRESH_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; BYTES_HASHED_BEFORE_PERSISTENCE",
+      "image_fetch_attempts": [["https://i.ytimg.com/vi/R1AcuUo916k/maxresdefault.jpg", "FETCH_OK_1280x720_JPEG"]],
+      "acquired_date": "2026-10-20"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Alternative assets in defined-contribution plans",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/08/democratizing-access-to-alternative-assets-for-401k-investors/",
+      "accessed": "2026-10-20",
+      "access_scope": "EXECUTIVE ORDER 14330, 2025-08-07",
+      "finding": "Directed Labor to reconsider guidance and potentially create safe harbors for asset-allocation funds holding alternative assets, including private debt; did not automatically add private credit to any participant's plan."
+    },
+    {
+      "claim": "DOL safe-harbor proposal",
+      "url": "https://www.dol.gov/index.php/newsroom/releases/ebsa/ebsa20260330",
+      "accessed": "2026-10-20",
+      "access_scope": "DOL EBSA NEWS RELEASE AND LINKED PROPOSAL, 2026-03-30",
+      "finding": "Proposed process-based safe harbors and requires fiduciaries to assess performance, fees, liquidity, valuation, benchmarks and complexity."
+    },
+    {
+      "claim": "Blue Owl Technology Income Corp. tender pressure",
+      "url": "https://www.sec.gov/Archives/edgar/data/1869453/000119312526293510/d137346dex992.htm",
+      "accessed": "2026-10-20",
+      "access_scope": "SEC-FILED OTIC Q2 2026 TENDER FAQ",
+      "finding": "Reports estimated requests of 38.1% of shares and quarterly liquidity up to 5%; supports heavy requests and a binding cap while also stating ordinary repayments covered repurchases."
+    },
+    {
+      "claim": "Repurchase proration and resubmission",
+      "url": "https://www.sec.gov/Archives/edgar/data/2059436/000162828025011760/blueowlalternativecreditfu.htm",
+      "accessed": "2026-10-20",
+      "access_scope": "BLUE OWL ALTERNATIVE CREDIT FUND SEC FILING",
+      "finding": "States expected 5% offers, pro-rata treatment when oversubscribed, and that unfilled requests must be resubmitted without priority."
+    },
+    {
+      "claim": "Tricolor alleged fraud",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-77-sec-charges-former-executives-fraud-connection-19-billion-collapse-subprime-auto-lender-tricolor",
+      "accessed": "2026-10-20",
+      "access_scope": "SEC PRESS RELEASE 2026-77 AND COMPLAINT SUMMARY",
+      "finding": "SEC alleges more than $1.9 billion raised through ABS and double pledging of subprime auto loans; allegations are not a final adjudication."
+    },
+    {
+      "claim": "First Brands receivables allegations",
+      "url": "https://www.sec.gov/Archives/edgar/data/96223/000009622326000033/jef-20260831.htm",
+      "accessed": "2026-10-20",
+      "access_scope": "JEFFERIES AUGUST 2026 FORM 10-Q",
+      "finding": "Describes bankruptcy allegations of duplicate, inflated and fabricated receivables and values the related investment at zero; does not independently establish every numeric claim in the video."
+    },
+    {
+      "claim": "Bank lending to private-credit vehicles",
+      "url": "https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.htm",
+      "accessed": "2026-10-20",
+      "access_scope": "FEDERAL RESERVE FEDS NOTE AND ACCESSIBLE DATA, 2025-05-23",
+      "finding": "Documents rapid growth and potential financial-stability channels; the video's exact 13%-versus-4% share of all bank lending was not reproduced from the reviewed tables."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv; simple quarterly-cap arithmetic",
+      "assumptions": "Frozen views and age_days; first five listed peers for sensitivity. Five-year exit illustration assumes 20 quarterly payments each equal to 5% of the original position and ignores proration, NAV change, subscriptions and distributions.",
+      "results": {"peer_ratio_10": 1.1907149836394308, "peer_ratio_5": 1.18432325966213, "quarters_at_five_percent_of_original": 20, "illustrative_years": 5}
+    }
+  ]
+}

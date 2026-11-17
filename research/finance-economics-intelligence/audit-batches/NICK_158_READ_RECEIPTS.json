@@ -1,0 +1,105 @@
+{
+  "batch_id": "NICK_158_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "S0xwBH_fAn0",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "63fb4984aeaf2b7cc3f80a6747cbbf1f28b17f0a141f7ea68a6732c9c28907b4",
+      "character_count": 18564,
+      "canonical_utf8_bytes": 18564,
+      "canonical_whitespace_word_count": 3167,
+      "coverage_token_count": 3240,
+      "read_character_ranges": [[0, 6200], [6200, 12400], [12400, 18564]],
+      "first_text_witness": "Have you ever hit a major financial milestone and then felt absolutely nothing? Like you thought reaching six figures was going to be this transformative moment where you'd finally feel wealthy and instead you're still checking your bank account with the same anxiety you had when you were making half that.",
+      "last_text_witness": "The people who feel rich are the ones who consciously resist lifestyle inflation, who understand their geographic advantage or disadvantage, who've paid off their debts or are managing them strategically, who aren't comparing themselves to everyone on social media who understand what their money is doing and where it's going. that they feel rich because they're rich relative to their spending, not relative to their income. And that distinction changes everything about how they experience their financial life.",
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "290_S0xwBH_fAn0_Why_100K_Doesnt_Feel_Rich_Anymore.txt",
+      "archive_member_sha256": "d824166888e3ab60cd1790cd941f480b531009b9509747ced597624fb40e9141",
+      "archive_member_bytes": 19826,
+      "archive_member_lines": 520,
+      "audio_verified": false,
+      "image_sha256": "aad00d939912566de818d55878ed20e41d53259374ff8424c065def8aa37a285",
+      "image_bytes": 105915,
+      "image_media_type": "image/jpeg",
+      "image_inspected_sizes": [[1280, 720], [320, 180]],
+      "registered_image_url": "https://i.ytimg.com/vi/S0xwBH_fAn0/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/S0xwBH_fAn0/maxresdefault.jpg",
+      "image_acquisition": "SINGLE_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; HASHED_AND_PRESERVED; NO_PAGE_SCRAPING",
+      "acquired_date": "2026-10-21"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "$100,000 federal income and payroll tax",
+      "url": "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+      "accessed": "2026-10-21",
+      "source_date": "2025_TAX_YEAR_CURRENT_OFFICIAL_TABLE",
+      "access_scope": "PRIMARY_OFFICIAL_TAX_GUIDANCE",
+      "finding": "For a 2025 single filer using the $15,750 standard deduction, taxable income is $84,250 and federal income tax is $13,614.50 before credits. Adding $7,650 employee Social Security and Medicare tax produces $21,264.50, or 21.26% of gross wages. State and local taxes vary; the script's 40% government-take claim is not universal."
+    },
+    {
+      "claim": "Employee payroll-tax rate",
+      "url": "https://www.ssa.gov/news/en/cola/factsheets/2025.html",
+      "accessed": "2026-10-21",
+      "source_date": "2025_OFFICIAL_FACT_SHEET",
+      "access_scope": "PRIMARY_OFFICIAL_PROGRAM_GUIDANCE",
+      "finding": "SSA reports a 7.65% employee rate in 2025: 6.2% Social Security up to $176,100 and 1.45% Medicare on all earnings."
+    },
+    {
+      "claim": "Ten- and twenty-year purchasing-power equivalents",
+      "url": "https://www.bls.gov/news.release/archives/cpi_12182025.htm",
+      "accessed": "2026-10-21",
+      "source_date": "2025-12-18; POSTDATES_VIDEO_BY_37_DAYS",
+      "access_scope": "PRIMARY_OFFICIAL_STATISTICAL_RELEASE",
+      "finding": "November 2025 CPI-U was 324.122, versus 237.336 in November 2015 and 197.6 in November 2005. Same-basket arithmetic gives about $136,567 and $164,029, respectively, for $100,000 of earlier purchasing power. These do not reproduce the script's $132,000 and $175,000 and the 2025 endpoint postdates upload."
+    },
+    {
+      "claim": "First-time homebuyer age",
+      "url": "https://www.nar.realtor/press-releases/first-time-home-buyer-share-falls-to-historic-low-of-21-median-age-rises-to-40",
+      "accessed": "2026-10-21",
+      "source_date": "2025-11-04; PREDATES_VIDEO",
+      "access_scope": "PRIMARY_ASSOCIATION_SURVEY_RELEASE",
+      "finding": "NAR reports median first-time buyer age 40 among successful primary-residence buyers in transactions from July 2024 through June 2025. The mailed survey received 6,103 responses and had a 3.5% adjusted response rate; it is not the age of all aspiring buyers."
+    },
+    {
+      "claim": "Dental-school education debt",
+      "url": "https://www.adea.org/docs/default-source/adea-main/publications/adea-trends/adea_trends_2024_25.pdf",
+      "accessed": "2026-10-21",
+      "source_date": "2024-25_REPORT; PREDATES_VIDEO",
+      "access_scope": "PRIMARY_ASSOCIATION_REPORT",
+      "finding": "ADEA reports debt for indebted graduating dental students, a selected borrower population. The script's $313,000 dentist figure requires cohort and denominator labeling and cannot be generalized to every dentist or high earner."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv",
+      "assumptions": "Frozen views and age_days; exact listed same-channel long-form peers under build_baseline.compare; first five listed peers for sensitivity.",
+      "results": {
+        "target_views_per_day": 43.41736141033294,
+        "peer_median_views_per_day_10": 98.22558018634012,
+        "peer_ratio_10": 0.44201684864540847,
+        "peer_median_views_per_day_5": 145.41551558499464,
+        "peer_ratio_5": 0.29857447629070716,
+        "tier_10": "WEAK",
+        "tier_5": "WEAK",
+        "peer_ids_10": ["7IUt0e4esWs", "uk1hjZJIw4M", "mihh7ki_13g", "MMa7EWq0L6k", "Y1OaaClH_eQ", "OsYS0YdbtkM", "si24Q4xpT_Y", "gwm1Hr5iipU", "ze2522P-AWc", "uW_dNU7B8-c"],
+        "peer_ids_5": ["7IUt0e4esWs", "uk1hjZJIw4M", "mihh7ki_13g", "MMa7EWq0L6k", "Y1OaaClH_eQ"]
+      }
+    },
+    {
+      "method": "Independent tax and CPI arithmetic",
+      "assumptions": "2025 single filer under 65, wages only, standard deduction, no credits or other deductions; CPI-U national all-items unadjusted November indexes.",
+      "results": {
+        "taxable_income": 84250,
+        "federal_income_tax": 13614.5,
+        "employee_fica": 7650,
+        "federal_income_plus_employee_fica": 21264.5,
+        "share_of_gross_percent": 21.2645,
+        "november_2015_100k_in_november_2025_dollars": 136566.69459792503,
+        "november_2005_100k_in_november_2025_dollars": 164029.35222672066,
+        "disposition": "SCRIPT_TAX_AND_INFLATION_EXAMPLES_NOT_UNIVERSALLY_REPRODUCED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+ "batch_id": "NICK_193_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "YbvRMquX3Tc",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "4b163376d4fd3f3a8faad2cc7bd3b2e4ac7b9dbae849993b819eda7adb4a88af",
+   "character_count": 19813,
+   "canonical_utf8_bytes": 19813,
+   "canonical_whitespace_word_count": 3458,
+   "coverage_token_count": 3551,
+   "read_character_ranges": [
+    [
+     0,
+     19813
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Two women graduate the same year from the same state university. Same degree, same starting salary, $48,000 marketing coordinator, mid-size city, same rent, same monthly take home of about $3,100 after taxes. Their apartments are 3 miles apart. They get coffee at the same place on Sunday mornings. 10 years later, one of them opens her banking app on a Tuesday and checks her balance the way you'd check the weather, casually, no stakes. She has $47,000 in a brokerage account, a used 2021 Honda she owns outright, and a mortgage payment that fits inside her budget without touching the sides. The other one has three unread voicemails from a number she doesn't recognize. There's a drawer in her kitchen she hasn't opened since February because she knows what's in it. She makes $67,000 now, nearly $20,000 more than when she started, and she has less financial room than she did at 23.",
+   "last_text_witness": "and by 55 it was worth $820,000 the system is not going to tell you any of this that's why I'm telling you if this hit close to home drop a comment and tell me which level you're at right now and if you haven't subscribed yet now's the time because there's more math to run and it gets a lot less brutal once you can actually see it coming",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 19813,
+     "first80": "Two women graduate the same year from\nthe same state university. Same degree,\nsa",
+     "last80": "re math\nto run and it gets a lot less brutal\nonce you can actually see it coming"
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "155_YbvRMquX3Tc_POV_Your_Life_With_Every_Level_of_Debt_What_To_Do.txt",
+   "archive_member_sha256": "f2dd4e163a92c6906ae1123c167add0b465329e0a53afaedc02a68bba677b98c",
+   "archive_member_bytes": 21406,
+   "archive_member_lines": 589,
+   "audio_verified": false,
+   "image_sha256": "b5d940661148c37adffcf4daa3a5686977ca23e4a6a65cd38c0bd1abe6488ee0",
+   "image_bytes": 237878,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/YbvRMquX3Tc/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/YbvRMquX3Tc/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED;hqdefault_also_HTTP200_not_used",
+   "acquired_date": "2026-10-31"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "NYFEDHHD",
+   "url": "https://www.newyorkfed.org/microeconomics/hhdc",
+   "source_date": "2026-05",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "NY Fed Household Debt and Credit Report Q1 2026 (WTOP/Ground News coverage)",
+   "finding": "Credit card balances fell $25B (2.3%) to $1.25T in Q1 2026, up 5.9% year on year; implies about $1.275T in Q4 2025.",
+   "limitations": "Q4 2025 report not read directly; Q4 level is analyst arithmetic; published after the video (used only to infer the prior quarter).",
+   "publication_applicability": "AFTER_PUBLICATION_REFERENCE_TO_PRIOR_PERIOD",
+   "accessed": "2026-10-31"
+  },
+  {
+   "source_id": "EPIQ2025",
+   "url": "https://www.epiqglobal.com/en-us/resource-center/news/total-bankruptcy-filings-increase-11-in-calendar-year-2025",
+   "source_date": "2026-01-12",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Epiq AACER calendar-year 2025 bankruptcy release",
+   "finding": "565,759 total filings in 2025, up 11% from 508,953; consumer 533,949 (+12%); December 45,935 (+20%), consumer +21%; commercial 31,810.",
+   "limitations": "Release not read directly.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-10-31"
+  },
+  {
+   "source_id": "STEWART09",
+   "url": "https://wrap.warwick.ac.uk/id/eprint/2552",
+   "source_date": "2009",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "locator": "Stewart N. (2009) The Cost of Anchoring on Credit Card Minimum Payments, Psychological Science 20:39-41; Warwick press release; FCA OP42",
+   "finding": "Without minimum-payment information, hypothetical repayments averaged GBP 175 (40% of balance) vs about GBP 99 (23%), a ~70% increase (secondary calculation); replicated in later studies.",
+   "limitations": "Paper not read directly; hypothetical task; 70% figure from secondary coverage.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-10-31"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 11841,
+    "age_days": 166.0645,
+    "views_per_day": 71.30361997898406,
+    "peer_median_10": 118.7595427102746,
+    "peer_median_5": 60.263137046990494,
+    "peer_ratio_10": 0.6004032884577212,
+    "peer_ratio_5": 1.1832045836476235,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "CjOMCDm57hw",
+     "nYcSSd5V5_4",
+     "bv5qS6sR4Bs",
+     "vNu80_63AL4",
+     "hHJOdHSeeuU",
+     "BAK_C8cWfjw",
+     "PjkCETTb2ZA",
+     "pFs8QGikczo",
+     "MK1-ZC06EkU",
+     "f6HIYQUiMoU"
+    ],
+    "peer_ids_5": [
+     "CjOMCDm57hw",
+     "nYcSSd5V5_4",
+     "bv5qS6sR4Bs",
+     "vNu80_63AL4",
+     "hHJOdHSeeuU"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "CjOMCDm57hw",
+      "Title": "POV: You Paid Off Your House... Now What? (How to Handle the Extra Cash)",
+      "Views": "8779",
+      "Age_days": "165.3831",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "nYcSSd5V5_4",
+      "Title": "The Shocking Cost of Being 'Normal' in 2026",
+      "Views": "9621",
+      "Age_days": "167.0708",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "bv5qS6sR4Bs",
+      "Title": "Are You Ready For What's Coming?",
+      "Views": "74250",
+      "Age_days": "168.0259",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "vNu80_63AL4",
+      "Title": "Who Can Actually Afford a \"Normal\" Life in 2026 (The Math Is Brutal)",
+      "Views": "9889",
+      "Age_days": "164.097",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "hHJOdHSeeuU",
+      "Title": "30 Unsexy Habits That Make Serious Money ($100,000+)",
+      "Views": "19143",
+      "Age_days": "169.1565",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "BAK_C8cWfjw",
+      "Title": "Why Everything Changes After You Stop Trying to Look Rich",
+      "Views": "19184",
+      "Age_days": "162.1996",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "PjkCETTb2ZA",
+      "Title": "Why Everything Changes After $1M Net Worth",
+      "Views": "20283",
+      "Age_days": "170.0951",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "pFs8QGikczo",
+      "Title": "Last Big Wealth Opportunity For The Next 10 Years (or MUCH longer)",
+      "Views": "36387",
+      "Age_days": "161.2619",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "MK1-ZC06EkU",
+      "Title": "50 Shocking Money Stats Of The Average Person",
+      "Views": "40625",
+      "Age_days": "171.1364",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "f6HIYQUiMoU",
+      "Title": "WTF Just Happened To The Housing Market?!",
+      "Views": "361243",
+      "Age_days": "160.0764",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Loan amortisation, budget sums, credit-card payoff simulation, mortgage totals and annuity future values",
+   "results": {
+    "car_payment": 499.37,
+    "car_total_rounded": 29940,
+    "car_interest_rounded": 5940,
+    "true_car_cost": 879,
+    "budgets": [
+     1900,
+     1021,
+     635,
+     527
+    ],
+    "student_loan_payment": 386.06,
+    "store_card_markup_net": 12.33,
+    "card_monthly_interest_3200_24pct": 64.0,
+    "card_1pct_plus_int_years": 15.92,
+    "card_1pct_plus_int_interest": 5286.98,
+    "card_1pct_plus_int_total": 8486.98,
+    "card_plus50_total": 4663.58,
+    "mortgage_principal": 280250,
+    "mortgage_pi": 1845.73,
+    "mortgage_interest": 384211.67,
+    "mortgage_total_incl_down": 679211.67,
+    "housing_total": 2797,
+    "budget_at_29": -667,
+    "alt_maya_499_32y_7pct": 712777.1,
+    "alt_maya_499_32y_8pct": 885204.94,
+    "debt_service_1500_8pct_30y": 2235539.17
+   },
+   "limitations": "Card simulation assumes a 1%+interest minimum with $25 floor; figures taken as stated in the script."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification; sources via search summaries; several statistics not fetched. No paid purchases."
+}

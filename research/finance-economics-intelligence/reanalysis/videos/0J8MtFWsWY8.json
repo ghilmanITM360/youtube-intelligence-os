@@ -1,0 +1,660 @@
+{
+ "video_id": "0J8MtFWsWY8",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "b5c55d6d6308df7af613fde896109e8fd01f9d90e4cfbdf34de59f934a667696",
+ "original_packets": [
+  "NICK_003.json"
+ ],
+ "transcript_chars_read": 18483,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 93,
+    "text": "There is a piece of mail that can cut\nyour pay without anybody at your job\nsigning off on it."
+   },
+   "judgment": "MET",
+   "rationale": "A specific, ordinary object (a letter) with an alarming consequence, followed at once by a person (Marisol) whose raise vanished: context lean, stop beat and snapback inside ~1,000 characters.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1010,
+    "end_char": 1076,
+    "text": "we take the\nfinancial headlines apart and check the\nmath ourselves"
+   },
+   "judgment": "MET",
+   "rationale": "Clear channel promise and a two-date teaser (\"this fall and 2032\") that sets stakes; the like/subscribe ask comes at ~1,160 characters, before the first claim.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Worried cartoon man (sweat drop), bold NO MORE MIDDLE CLASS? above a damaged house (holes in the roof, broken windows) and a broken green piggy bank, both outlined in a red glow; black arrow"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The opening stages middle-class erosion by mail, which matches the theme, but the thumbnail shows a damaged house and a dead piggy bank (a wipe-out), and the video later states the middle class \"isn't being wiped out by a crash\".",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1258,
+    "end_char": 1331,
+    "text": "because wiped out should come\nwith a calendar attached or it's just\nnoise"
+   },
+   "judgment": "MET",
+   "rationale": "The intro promises two dated events and delivers them in sequence (fall, 2032); slight over-explanation in the Pew definition before the first personal stake.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2332,
+    "end_char": 2368,
+    "text": "Most of the people who left went\nup."
+   },
+   "judgment": "MET",
+   "rationale": "A deliberate early counterpoint (\"I'm saying it early because I'd rather you trust me later\") that prevents a doom anticlimax and sets up the final reframing.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The Middle Class Is About To Get Wiped Out"
+   },
+   "judgment": "MET",
+   "rationale": "41 characters, topic and stakes inside the first 55.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The Middle Class Is About To Get Wiped Out"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Concept matches, but the video argues \"the middle class isn't being wiped out by a crash\" and cites AEI data of no net downward movement.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "The Middle Class Is About To Get Wiped Out"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title overpromises a cliff; the script converts it into \"slow conversion of a wage into obligations\". Honest inside the video, but a title-only viewer sees \"about to get wiped out\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1537,
+    "end_char": 1559,
+    "text": "We're getting to both."
+   },
+   "judgment": "MET",
+   "rationale": "The two dated claims (student-loan garnishment this fall, Social Security 2032) are the loop and are both paid at ~15,500 and ~15,850 characters.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2517,
+    "end_char": 2556,
+    "text": "So\nwhy doesn't it feel that way to you?"
+   },
+   "judgment": "MET",
+   "rationale": "Names the reader's unease (income up, life harder) directly and answers it with risk transfer.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17151,
+    "end_char": 17206,
+    "text": "get onto\nthe ownership side of something, however\nsmall"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Two actions are given: price total housing cost with two escrow analyses and own something; neither is sized or sequenced, so the promised \"what actually works\" is thin against the 15,000 characters of problem.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2671,
+    "end_char": 2748,
+    "text": "The\nmiddle class was never really a class.\nIt was a risk pooling arrangement."
+   },
+   "judgment": "MET",
+   "rationale": "A strong reframing with four load-bearing walls (housing, health, retirement, education).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4526,
+    "end_char": 4602,
+    "text": "The average family\nhealth premium in this country runs\nabout $26,993\na year."
+   },
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "The arithmetic reproduces (26,993 - 6,850 = 20,143, \"around $20,000\"), but the KFF figures themselves were not re-fetched this session; the 95%-of-zip-codes, +27% property-tax, +22% deductible, $770 car payment, 6-of-46-million renters and one-in-four all-cash figures were also not checked.",
+   "uncertainty": "Analyst recall of the KFF figures; arithmetic recomputed."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14230,
+    "end_char": 14303,
+    "text": "Only\nabout 45% of American workers have\naccess to a workplace plan at all"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "BLS (March 2026) reports 72% of private-industry workers have access to retirement benefits (52% participate; 92% access for state and local government); about 45% is closer to part-time access (44%) than to workers overall.",
+   "uncertainty": "BLS release summarised in search results, not the release itself."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 14519,
+    "end_char": 14559,
+    "text": "3% on 96,000\nis about $2,900 before tax."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "$2,880 a year is $240 a month before tax; the escrow rise of $84 a month ($1,008 a year) takes about 35% of it ($1,872 pre-tax remains), so to be \"poorer by March\" the premium, deductible and grocery pass-through must exceed that remainder after tax; the video gives the grocery range ($800-$1,500) but not the premium or deductible figures.",
+   "uncertainty": "Arithmetic recomputed; the unquantified items are not evaluable."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6500,
+    "end_char": 6641,
+    "text": "Which means one\nmonth in every 11, you're working purely\nto pay a company whose core competency\nis finding a reason your claim doesn't\napply."
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The 9% is homeowners insurance as a share of the monthly mortgage payment (principal, interest, taxes, insurance), not of pay; one month in 11 of the housing payment is not one month in 11 of work.",
+   "uncertainty": "Arithmetic and definition from the video's own wording."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10034,
+    "end_char": 10089,
+    "text": "The jobs report showed payrolls fell by\n23,000 in July."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "FRED (current vintage): PAYEMS July 2026 158,882 vs June 158,892, a fall of 10,000; unemployment 4.2% (June) to 4.1% (July) and participation 61.4% in July match; the -23,000 is plausible as the first release, since later revision is not shown.",
+   "uncertainty": "FRED series fetched this session; first-release value not located."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2144,
+    "end_char": 2222,
+    "text": "61% of American\nadults lived in a middle-class household\nin 1971.\nBy 2023, 51."
+   },
+   "judgment": "MET",
+   "rationale": "Pew's 2024 report: 61% (1971) to 51% (2023); upper-income 11% to 19% and lower-income 27% to 30%, so \"nearly doubled\" and \"barely moved\" are fair rounding.",
+   "uncertainty": "Pew figures from search-result summaries, not the report."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15978,
+    "end_char": 16033,
+    "text": "but revenue only covers about\n78% of scheduled benefits"
+   },
+   "judgment": "MET",
+   "rationale": "The 2026 Trustees Report (9 June 2026): OASI reserves depleted in Q4 2032 with 78% payable; the 22% cut matches; \"about $500 a month\" is about 22% of a roughly $2,000-$2,300 average benefit (analyst recall of average benefit).",
+   "uncertainty": "Trustees figures from search-result summaries; the benefit average is recall."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12869,
+    "end_char": 12912,
+    "text": "You got a 52% raise and\nan invoice for 300."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "It mixes a real (inflation-adjusted) income gain with child care +200%, prescriptions +175% and higher education +400% without saying whether the price changes are real or nominal or over which window; against consumer prices rising about 4.3x (+332%) from 1979 to 2024, +400% would exceed general inflation while +200% and +175% would be below it, so the comparison cannot be read until the basis is stated; \"an invoice for 300\" is not a percentage of anything.",
+   "uncertainty": "Arithmetic from CPI-U annual averages (analyst recall); basis for the three price figures not stated."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 8089,
+    "end_char": 8192,
+    "text": "More Americans are seriously behind on\ncar loans right now than were behind\nafter the housing collapse."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "NY Fed Q1 2026 serious-delinquency share for auto balances is reported by a third-party table as 5.60% (5.21% in Q4 2025); a 5.3% 2008 record and \"more people behind than after the housing collapse\" (a share versus a headcount) were not checked.",
+   "uncertainty": "Third-party tabulation in search results; not the NY Fed series."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2619,
+    "end_char": 2670,
+    "text": "Here's the frame to\ncarry through the rest of this."
+   },
+   "judgment": "MET",
+   "rationale": "Character-led narrative (Marisol, Grady, Juny) wrapped around a clear argument: definition, risk pooling, envelopes, steelman, dates, two actions, thesis, and a return to the mail.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3678,
+    "end_char": 3753,
+    "text": "I won't walk you through all 11. Here\nare the four that do the most damage."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The count is honoured: four numbered envelopes are walked (one health, three housing, seven jobs, nine student loans), with debt, retirement and the AEI steelman as unnumbered sections; the numbering skips (2, 4-6, 8) without explanation and no ranking supports \"the four that do the most damage\".",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "NO MORE MIDDLE CLASS? with a damaged house and a broken piggy bank"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The script supplies reasons the middle class feels poorer (housing, health, debt, jobs) but argues against its disappearance; it delivers the explanation, not the wipe-out.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 13347,
+    "end_char": 13465,
+    "text": "You didn't\nget poorer, you got less insured, two\ndifferent injuries, and only one of them\nshows up in the income data."
+   },
+   "judgment": "MET",
+   "rationale": "The steelman (AEI, 52%) and the resolution (risk moved, not income lost) are linked by BUT/THEREFORE logic; the New York Fed \"both are right\" passage handles a source conflict explicitly.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1142,
+    "end_char": 1184,
+    "text": "If this one lands, hit like and\nsubscribe."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Like/subscribe at ~1,160 characters (before value), a school-community pitch at ~16,500 (after the last claim), a disclaimer, then a closing return to the mail; the early ask is what the retention-first rule warns against.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1220,
+    "end_char": 1256,
+    "text": "And before we go anywhere, two\ndates"
+   },
+   "judgment": "MET",
+   "rationale": "The two dates are planted at ~1,300 and paid late; the \"envelope\" count and the cliffhanger \"got a call back last month\" extend the layering.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6642,
+    "end_char": 6700,
+    "text": "You bought a fixed rate loan and\ngot a variable rate life."
+   },
+   "judgment": "MET",
+   "rationale": "The argument runs on BUTs (the rate is fixed, BUT the cost is not; income rose, BUT insurance moved).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1333,
+    "end_char": 1351,
+    "text": "this fall and 2032"
+   },
+   "judgment": "MET",
+   "rationale": "Two dated deadlines make the topic urgent.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16444,
+    "end_char": 16494,
+    "text": "Quick thing before we\nget to what you actually do."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 18,500 characters; the school-community interruption sits just before the action section, and the problem section is about 15 times the length of the action section.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17652,
+    "end_char": 17702,
+    "text": "The\nmiddle class isn't being wiped out by a\ncrash."
+   },
+   "judgment": "MET",
+   "rationale": "One thesis: the middle class is losing its risk pooling, not its income.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7415,
+    "end_char": 7465,
+    "text": "Now, notice something about every\nenvelope so far."
+   },
+   "judgment": "MET",
+   "rationale": "New questions open as old ones resolve: \"what has absorbed the difference\" (debt) follows the envelopes, then \"so is AI taking the jobs\".",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2015,
+    "end_char": 2081,
+    "text": "That's not a category. That's a\nshrug with a spreadsheet attached."
+   },
+   "judgment": "MET",
+   "rationale": "Technical definitions (escrow, Pew bands, average versus median) are given in plain language with a single concrete image each.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18337,
+    "end_char": 18386,
+    "text": "So,\ngo look at what came in your mail this\nmonth."
+   },
+   "judgment": "MET",
+   "rationale": "The ending returns to the mail from the first sentence and to Marisol, Grady and Juny.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 170,
+    "end_char": 225,
+    "text": "Marisol got a raise\nin January and was poorer by March."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"Middle class\" first appears at ~1,700 characters, past the first 30 seconds; the opening speaks of pay and mail, not the title keywords.",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "The Middle Class Is About To Get Wiped Out",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Recurring \"is the middle class dying\" theme; two dated stakes add timeliness.",
+  "2_differentiated_angle": "Risk-pooling reframe and the \"envelope\" device; unusually, the script presents the best counter-argument (AEI) before agreeing with the thesis in a narrower form.",
+  "3_title": "Doom-framed; the body argues a softer thesis.",
+  "4_thumbnail": "Fetched this session from the registered maxresdefault URL (1280x720, 157,650 bytes) and persisted in thumbnail-evidence: worried cartoon man, bold NO MORE MIDDLE CLASS?, a ruined house and a broken piggy bank; legible at 320 px; the house-and-pig reads as \"savings destroyed\", not as a mail or insurance story.",
+  "5_opening": "Object-led hook (a letter) and a person; strong.",
+  "6_loops": "Two dates, an envelope count, and a Juny job-search thread.",
+  "7_spine": "Definition, frame, envelopes, steelman, dates, actions, thesis.",
+  "8_repetition_clarity": "Average-versus-median is demonstrated twice (401(k) and household debt).",
+  "9_emotion_credibility": "Specific, human and mostly well-calibrated; undermined by a 45% access claim that conflicts with BLS and the \"one month in 11\" rescaling.",
+  "10_ending_cta": "Like/subscribe up front, community pitch late, an action that echoes the opening.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Average family health premium $26,993, worker share about $6,850, employer remainder about $20,000",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "26,993 - 6,850 = 20,143. Figures recalled from KFF 2025; not re-fetched."
+  },
+  {
+   "claim": "Marisol: 3% on $96,000 is about $2,900; mortgage servicer wants $84 more a month",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$2,880 a year ($240 a month); $84 x 12 = $1,008, about 35% of the raise."
+  },
+  {
+   "claim": "Homeowners insurance is about 9% of the monthly mortgage payment, so \"one month in every 11 you're working purely to pay\" an insurer",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "9% = 1/11 of the housing payment; it is not 1/11 of pay."
+  },
+  {
+   "claim": "Payrolls -23,000 in July; unemployment 4.2% to 4.1%; participation 61.4%",
+   "kind": "PRIMARY_DATA_FETCHED_THIS_SESSION",
+   "result": "FRED: PAYEMS Jul 158,882 vs Jun 158,892 (-10K, revised); UNRATE Jun 4.2, Jul 4.1; CIVPART Jul 61.4 (lowest in the 2026 series fetched; since early 2021 not tested). Not reproduced or tested: the -23,000 first print, \"lowest since early 2021\" and \"down more than 830,000 this year\"."
+  },
+  {
+   "claim": "Pew: middle class 61% (1971) to 51% (2023); floor $54,700 and ceiling $163,200 for a household of three",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Shares confirmed (upper 11% to 19%, lower 27% to 30%); the floor/ceiling ratio 163,200 / 54,700 = 2.98 matches the two-thirds-to-double definition (3.0). Dollar values not located."
+  },
+  {
+   "claim": "About 45% of American workers have access to a workplace retirement plan",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "BLS March 2026: private-industry access 72%, participation 52%; state and local 92%; part-time 44%. The claim is not supported."
+  },
+  {
+   "claim": "Social Security trust fund dry in 2032; revenue covers about 78%; 22% cut, about $500 a month",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "2026 Trustees Report: OASI Q4 2032, 78% payable. The $500 is plausible for an average benefit near $2,200 (recall)."
+  },
+  {
+   "claim": "Income +52% (1979-2024); child care +200%, prescriptions +175%, higher education +400%",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "AEI 52% and the three price figures not re-verified; basis (real or nominal) is not stated, and \"an invoice for 300\" is not a percentage."
+  },
+  {
+   "claim": "Auto balances 90+ days past due 5.6%, above the 5.3% 2008 record; household debt $18.8T; card balances up almost 6%, delinquency highest in 16 years",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "$18.8T and card balances up near 6% are confirmed for Q1 2026 (search summaries); 5.60% for auto appears in a third-party table; the 2008 comparison is untested."
+  },
+  {
+   "claim": "Vanguard average 401(k) $167,970, median $44,115; 55-64 average about $305,000, median $107,269; AEI, Brookings, SignalFire 7%, Fed distribution, student-loan default counts",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified; the Vanguard pair also appears in `0Ca3uV6lgos`."
+  }
+ ],
+ "strengths": [
+  "Strong cold open, a clear risk-transfer thesis, and a rare fair presentation of the counter-argument.",
+  "Source-conflict handling (New York Fed vs advocacy group) and average-versus-median demonstrations.",
+  "Echo ending that returns to the mail."
+ ],
+ "weaknesses": [
+  "Action section is thin relative to the problem.",
+  "Title and thumbnail promise a wipe-out the script rejects.",
+  "A 45% access claim conflicts with BLS; the \"one month in 11\" scaling is wrong.",
+  "Envelope numbers skip without explanation and the \"most damage\" ranking is not shown."
+ ],
+ "contradictions": [
+  "\"About to get wiped out\" versus \"isn't being wiped out by a crash\".",
+  "\"Like and subscribe\" at ~1,160 characters versus the rule-of-value-first.",
+  "45% access versus BLS 72%.",
+  "Juny \"who had just graduated\" in the opening versus \"graduated this spring\" later."
+ ],
+ "improvement_opportunities": [
+  "Retitle toward the thesis: \"Why Your Raise Disappears: The Risk Transfer Nobody Priced In\".",
+  "Put the actual letter (an escrow analysis) in the thumbnail instead of the broken piggy bank, to match the opening.",
+  "Replace \"45% have access\" with the BLS 72% private and 44% part-time split.",
+  "Show Marisol's raise as a table: +$240 a month, -$84 escrow, premium, deductible, groceries, so the \"poorer by March\" claim is audited on screen.",
+  "Move the like/subscribe ask after the first envelope payoff and expand the two actions with a worked example for Juny."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Primary KFF, Vanguard, AEI, Brookings, Harvard JCHS documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "TYPICAL",
+  "lifetime_rate_ratio": "0.73614",
+  "age_days": "33.0719",
+  "views_likes_comments_snapshot": {
+   "views": 4009,
+   "likes": 201,
+   "comments": 23,
+   "published_at": "2026-08-08"
+  },
+  "five_peer_sensitivity": {
+   "ratio": "0.73459",
+   "tier": "TYPICAL",
+   "agrees_with_ten_peer_tier": true,
+   "source": "PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the doom title, the envelope device or the early subscribe ask affected views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "FR-SCR-02 changed to PARTLY_MET: the four-envelope count is honoured, the false \"four versus six\" contradiction removed",
+    "price-versus-CPI statement corrected (higher education exceeds general inflation if nominal; child care and prescriptions do not)",
+    "Marisol pre-tax remainder ($1,872) stated",
+    "KFF premium comparison changed to NOT_EVALUABLE (external figures unverified)",
+    "payroll evidence caveat added",
+    "thumbnail described as a damaged house with a red glow around house and pig",
+    "Juny timeline contradiction added"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

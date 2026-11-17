@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "kyg5Xdi52TQ",
+ "nick": "NICK_255",
+ "claims": 21,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 18840,
+ "parent_commit": "26fe1f1fa12829eb8adf844e0838a0de713ceca6",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_254",
+  "NICK_255"
+ ],
+ "changed_ledger_ids": [
+  "kyg5Xdi52TQ"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 529,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 4.14102 STRONG (5-peer 3.77641 STRONG); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 531,
+  "remaining": 1081,
+  "original_pending": 435,
+  "expansion_pending": 646,
+  "changed_cells": "63 changed cells: dashboard 7 + All Finance Videos/Detailed Research rows 525-526; 0 style, 0 formula",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "98f5afddb809dd9de604872211c4a98cfe7ebade1beb99c05e515a4dd984dbaa"
+ },
+ "semantic_acceptance": "All 18840 stored characters and six dimensions reviewed; 21 located claim groups; sources MOR1, SHED1. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "e5b9c3ac430b7fc8dbee31488f75d78cf7e80591298247797eab2e786b74eaa8",
+  "NICK_255.json": "fa09b6b0cc98bb2955ccef9b83107012be84d1f6690558c1b1dae71e33056f53",
+  "NICK_255_READ_RECEIPTS.json": "82164b20e538bde2ece382ac383bc8f7da4d1d6bcfa9c2ff7151f66d32616059",
+  "thumbnail": "a7ca1526c0deb86db1bcfd7df78f6d16a99c1a21e572ed406532c9f531b27076"
+ }
+}

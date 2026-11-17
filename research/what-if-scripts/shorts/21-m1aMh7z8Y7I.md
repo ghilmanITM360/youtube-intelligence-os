@@ -1,0 +1,33 @@
+# What if you teleported to the Sun?
+
+| Field | Value |
+|---|---|
+| Video ID | `m1aMh7z8Y7I` |
+| URL | https://www.youtube.com/shorts/m1aMh7z8Y7I |
+| Format | shorts |
+| Published | 2026-02-03 |
+| Duration | 00:01:42 |
+| Views (at acquisition) | 978,122 |
+| Words | 381 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/m1aMh7z8Y7I.txt` |
+| Source SHA-256 | `d861c1d83966c4fcf28de1f2b7454bb6c8415015d8ef9665be214b9b05fa6bf3` |
+
+## Script
+
+This question comes from AJ, who wrote: “When I was about 8 years old, shoveling snow on a freezing day in Colorado, I wished that I could be instantly transported to the surface of the Sun, just for a nanosecond, and then instantly transported back. What would actually happen?”
+
+Believe it or not, this wouldn't even warm you. The temperature of the surface of the Sun is about 5,800 K, give or take. If you stayed there for a while, you'd be cooked to a cinder, but a nanosecond is not very long –it's enough time for light to travel about a foot.
+
+The energy absorbed by your skin would be minor –about 10-5 joules per cm2 of exposed skin. For comparison, according to the IEEE P1584 standard, holding your finger in the blue flame of a butane lighter for one second delivers about 5 joules per cm2 to the skin, which is roughly the threshold for receiving a second-degree burn. The heat during your Sun visit would be five orders of magnitude weaker than that. So, other than the dim flash in your eyes, you might not even notice.
+
+But what if you got the coordinates wrong?
+
+The Sun's surface is relatively cool. It's hotter than, like, Phoenix, but compared to the interior of the sun it's downright chilly. The surface is a few thousand degrees, but the interior is a few million degrees.
+
+What if you spent a nanosecond there?
+
+The Stefan-Boltzmann law lets us calculate how much heat you'd absorb while inside the Sun. It's not good. You would exceed the IEEE P1584B standard for second-degree burns after one femtosecond in the Sun. A nanosecond –the time you're spending there– is 1,000,000 femtoseconds. This does not end well for you.
+
+There's some good news: Deep in the Sun, the photons carrying energy around have very short wavelengths –they’re not visible light, they're mostly a mix of what we'd consider hard and soft X-rays. This means they penetrate into your body to various depths, heating your internal organs and also ionizing your DNA, causing irreversible damage before they even start burning you.
+
+Looking back, I realize I started that by saying "there's some good news." I don't know why I did that. Don’t spend a nanosecond inside the sun.

@@ -1,0 +1,53 @@
+{
+ "status": "PASS",
+ "video_id": "mErWx9GiVUc",
+ "nick": "NICK_260",
+ "claims": 57,
+ "sources": 13,
+ "calculations": 2,
+ "transcript_chars": 42635,
+ "parent_commit": "fff72c1252a3d498f0719b66c97d24d336400e60",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_260"
+ ],
+ "changed_ledger_ids": [
+  "mErWx9GiVUc"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 535,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "47_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.77667 TYPICAL (5-peer 1.11507 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 536,
+  "remaining": 1076,
+  "original_pending": 430,
+  "expansion_pending": 646,
+  "changed_cells": "35 (dashboard 7 + row 531 target cells)",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "172c9d6d81922fe3d63fa8a109acffdefd93ea46dfdd3b3e72d9c6dae4692db6"
+ },
+ "semantic_acceptance": "All 42635 stored characters and six dimensions reviewed; 57 located claim groups; sources CEN24, YBL, NYF26, NYF4Q, ED4Q, SFF, NAHB, CGC, KLA, GSR, MSWR, NARX, IRS26. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "ae25697ff7a8c663084907a53d51633e986f1f7e85ae289e888528e051e2d363",
+  "NICK_260.json": "46c6a074c7d7cfa420880c19ccb5d57eb9398194f0bc234085406f504dfcda54",
+  "NICK_260_READ_RECEIPTS.json": "ae1a3499224d3dca05ed68a7b86cb6ee3d9443174e121129589b86bbb0e6519a",
+  "thumbnail": "56342ad22e213b3429611051e723e13011299cc1ab7112b77ca370acd0811a2b"
+ }
+}

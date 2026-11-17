@@ -79,6 +79,11 @@ KNOWN_HISTORICAL_SNAPSHOTS = {
     ("DS-000028", "DS-000028-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
     ("DS-000030", "DS-000030-F017"): "57491326ec76c7763c9da7b0affcc473a962b7e7",
     ("DS-000030", "DS-000030-F018"): "c740f89212dd7a1c59c273fce07e2613f24a68c4",
+    # .gitattributes is shared mutable repo configuration; the ledgers captured
+    # the 627-byte blob introduced at 59cf2185 (2026-09-22). Later commits
+    # (71bb5946, c5c3d60e, b28f0484) legitimately extended it.
+    ("DS-000028", "DS-000028-F020"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
+    ("DS-000030", "DS-000030-F019"): "59cf21851b5f6e57975ab51944b7572a3edf7471",
 }
 
 

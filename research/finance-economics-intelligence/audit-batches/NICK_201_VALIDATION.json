@@ -1,0 +1,54 @@
+{
+ "status": "PASS",
+ "video_id": "Zp6BytPl4u0",
+ "nick": "NICK_201",
+ "claims": 15,
+ "sources": 2,
+ "calculations": 2,
+ "transcript_chars": 19986,
+ "parent_commit": "1adb73577fdbe462481a7c331eeff55687d44b63",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_201",
+  "NICK_202"
+ ],
+ "changed_ledger_ids": [
+  "Zp6BytPl4u0"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 476,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 1.77977 TYPICAL (5-peer 1.46374 TYPICAL); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 478,
+  "remaining": 1134,
+  "original_pending": 488,
+  "expansion_pending": 646,
+  "changed_cells": "63 cells (dashboard 7 + rows 470-471); styles 0; formulas 0",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "af4f21e9baaaca708dcfd9e26bbad6fd180681fef4c524dca44b97fc11f07bac"
+ },
+ "semantic_acceptance": "All 19986 stored characters and six dimensions reviewed; 15 located claim groups; sources IRS401K26, SCF22. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "05902556c34c403dc61e0eb80aa2c7d644e412a61fa2df0f0e2eeff970a96ae8",
+  "NICK_201.json": "2908f9021eddb08cb9b8a7675afdc836cc014bb0de5fc80373cc5d0313954118",
+  "NICK_201_READ_RECEIPTS.json": "af35f8d5c723247e0e3f73e5aed7dda002ed671acee017e6d57559ab51fbc83b",
+  "thumbnail": "81841666bb68bb37cf54a7d251fa491bc7796073e72b0c4849c20820fa0b4d4e"
+ }
+}

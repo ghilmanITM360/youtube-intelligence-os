@@ -1,0 +1,266 @@
+{
+ "batch_id": "NICK_273_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "o4t8lSSAsMk",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "66ac2fa8387b34eccab22cf754cb1df3ba577499a90d5c7b1c3d4cdeaf6c1580",
+   "character_count": 18398,
+   "canonical_utf8_bytes": 18398,
+   "canonical_whitespace_word_count": 3291,
+   "coverage_token_count": 3326,
+   "read_character_ranges": [
+    [
+     0,
+     9200
+    ],
+    [
+     9200,
+     18398
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Gasoline costs about 30% more than it did a year ago. Diesel, the fuel that moves everything you own, is near its all-time record.",
+   "last_text_witness": "loses, the crowded trade that already won, and the price you're paying while everybody argues about the other two. Tell me where you land. Does this rhyme with 1973, or is the comparison nonsense? I'd rather be argued with than agreed with. And if this was useful, send it to somebody who's been quietly worried about money and hasn't said so out loud. I'll see you in the next one.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 9200,
+     "first80": "Gasoline costs about 30% more than it\ndid a year ago. Diesel, the fuel that\nmove",
+     "last80": " Then\nthere's the Fed. Powell wasn't\nreappointed, Kevin Warsh took over as\nchair"
+    },
+    {
+     "start": 9200,
+     "end": 18398,
+     "first80": " in May and in July that committee\nvoted 9-3 to hold rates with the three\ndissen",
+     "last80": "y worried\nabout money and hasn't said so out loud.\nI'll see you in the next one."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "014_o4t8lSSAsMk_This_Setup_Only_Happens_Once_Every_50_Years_Its_Happening_Again.txt",
+   "archive_member_sha256": "7411752ae8eecd888280143de2a4318a090f73362b6b3fca7c2d034db6a2236e",
+   "archive_member_bytes": 19996,
+   "archive_member_lines": 558,
+   "audio_verified": false,
+   "image_sha256": "421e4bbd1cb075d43fd3158b86c7dcdc5d1b988843421ac3587998b0b938986f",
+   "image_bytes": 142958,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/o4t8lSSAsMk/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/o4t8lSSAsMk/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDCPI",
+   "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+   "source_date": "2026-10-01",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPIAUCSL fredgraph.csv; SHA-256 8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549 (NICK_270 copy)",
+   "finding": "YoY Dec 1974 12.1%, Mar 1980 14.6% (SA); 1981/1971 averages +124.6%; Dec 1969-Dec 1979 +104%; 1982/1966 2.97x; YoY Jun 2026 3.46%, Jul 2026 3.30%.",
+   "limitations": "Seasonally adjusted (headline NSA figures differ by ~0.2 pt); CPIAUCNSL fetch returned 404.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDMORT",
+   "url": "https://fred.stlouisfed.org/series/MORTGAGE30US",
+   "source_date": "2026-10-29",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED MORTGAGE30US fredgraph.csv; SHA-256 580c7d824e6dce4a3d4fa92ed9954df512c6da63992b073c1fafccc88886fa8d",
+   "finding": "Series maximum 18.63% on 1981-10-09.",
+   "limitations": "Weekly PMMS average.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FRED5Y5Y",
+   "url": "https://fred.stlouisfed.org/series/T5YIFR",
+   "source_date": "2026-10-30",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED T5YIFR fredgraph.csv; SHA-256 c7689c930c472861f371008d8617b68a35e2fedf0a0cfdde0a67d4608812ee03",
+   "finding": "2025-08-29 2.35; 2026-08-27 2.35; 2026-08-28 2.32.",
+   "limitations": "Daily market-implied measure.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDDEBT",
+   "url": "https://fred.stlouisfed.org/series/GFDEBTN",
+   "source_date": "2026-10-01",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED GFDEBTN fredgraph.csv; SHA-256 8f5f0b4259d5208e51ec47eb50e66b528cf9ee48c558875030d2044449d9281c",
+   "finding": "2025Q4 $39.07T; 2026Q2 $39.46T (millions of dollars, quarterly).",
+   "limitations": "Quarterly; Debt to the Penny daily data not opened.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 7603,
+    "age_days": 15.1382,
+    "views_per_day": 502.2393679565602,
+    "peer_median_10": 446.57250637026704,
+    "peer_median_5": 335.651413807793,
+    "peer_ratio_10": 1.1246535798604183,
+    "peer_ratio_5": 1.4963123862906234,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "ytzQqJoRo8I",
+     "4vUg_DFIwes",
+     "dJqAfhcX5lw",
+     "KrvtiC-Jaz0",
+     "Q-pBBlwNDMU",
+     "ozcH8vngH08",
+     "czaMRc6fZQI",
+     "wAcw8UN0-YU",
+     "R1AcuUo916k",
+     "7Ekl3EkbEss"
+    ],
+    "peer_ids_5": [
+     "ytzQqJoRo8I",
+     "4vUg_DFIwes",
+     "dJqAfhcX5lw",
+     "KrvtiC-Jaz0",
+     "Q-pBBlwNDMU"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "ytzQqJoRo8I",
+      "Title": "6 Things You Must Do This 2026 (Financially)",
+      "Views": "4616",
+      "Age_days": "16.131",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "4vUg_DFIwes",
+      "Title": "The 75/15/10 Money System That Builds Wealth On Any Income",
+      "Views": "15981",
+      "Age_days": "14.1382",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "dJqAfhcX5lw",
+      "Title": "What Changes at $1M, $2M, and $5M Retirement?",
+      "Views": "3203",
+      "Age_days": "17.1031",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "KrvtiC-Jaz0",
+      "Title": "Let's Watch What Happens to People AFTER They Hit $100,000",
+      "Views": "30597",
+      "Age_days": "13.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "Q-pBBlwNDMU",
+      "Title": "If You Have $100,000 Invested, Do THIS to Reach $1 Million",
+      "Views": "6067",
+      "Age_days": "18.0753",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "ozcH8vngH08",
+      "Title": "How To Build Wealth If You're Already Behind",
+      "Views": "6728",
+      "Age_days": "12.0683",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "czaMRc6fZQI",
+      "Title": "If I Started Investing in August 2026, This is What I'd Buy",
+      "Views": "3845",
+      "Age_days": "19.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "wAcw8UN0-YU",
+      "Title": "5 Silent Wealth Killers Costing You $6,000+ Per Year",
+      "Views": "12793",
+      "Age_days": "11.138",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "R1AcuUo916k",
+      "Title": "Private Credit Panic - Why Investors Are Rushing For the Exits",
+      "Views": "4790",
+      "Age_days": "20.1309",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "7Ekl3EkbEss",
+      "Title": "How To Win Financially Based On Your Income ($50K, $100K, $150K, $300K)",
+      "Views": "9370",
+      "Age_days": "10.1171",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "CPI ratios, mortgage amortisation, growth multiples",
+   "results": {
+    "cpi_1971_1981": 1.2462,
+    "pp_1981": 0.445,
+    "pp_1991": 0.297,
+    "cpi_1970s": 1.0398,
+    "cpi_1966_1982_x": 2.973,
+    "riley_pmt": 140.96,
+    "daughter_pmt": 859.09,
+    "gold_x": 24.29,
+    "gold_cagr": 0.4606,
+    "gold_drawdown": -0.7024,
+    "riley_multiple_83_99": 17.55,
+    "riley_cagr_83_99": 0.1836,
+    "dow_66_82": 0.0517
+   },
+   "limitations": "SA CPI used; annual averages unless stated."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Four FRED series directly inspected; 2026 events unverified; other claims recall, labelled per claim. No paid purchases."
+}

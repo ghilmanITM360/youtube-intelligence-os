@@ -1,0 +1,35 @@
+{
+  "source_branch": "research/youtube-12-channel-metadata",
+  "source_commit": "967ea707a0d7198754d132a978962baa96073f49",
+  "source_pr": 39,
+  "acquisition_repeated": false,
+  "raw_evidence_mutated": false,
+  "inputs": [
+    {
+      "path": "ALL_PUBLIC_VIDEOS.csv",
+      "sha256": "c5bd0a5913c2c088ac418cdaa499b56530ce8691522c40bfa04a0b7a6838f95c"
+    },
+    {
+      "path": "CHANNEL_STATUS_REGISTER.csv",
+      "sha256": "4dd881ef41682e0360d86f3e1c7c7f9d3c88c72fbfcfafdaa804f8395959e9b6"
+    },
+    {
+      "path": "AGGREGATE_MANIFEST.json",
+      "sha256": "ac001f91a45569e2086e6439a355474156a4ce933012b57c2d080c4acf489960"
+    },
+    {
+      "path": "AGGREGATE_VALIDATION.json",
+      "sha256": "c44d9f9f3288ba832b1ec9d44541bb0891cf8e5896d16eec8f8e91f910b7ac7d"
+    },
+    {
+      "path": "SOURCE_RECONCILIATION_REPORT.md",
+      "sha256": "919525d6c79f3abcbeedafc1ade0b2358bcc466c380a6ecc715ebefe6e76ca73"
+    }
+  ],
+  "limitations": [
+    "Metadata acquisition is not a deep content audit.",
+    "No transcript or thumbnail file was imported by this derived expansion build.",
+    "No private YouTube analytics are available.",
+    "MEDIUM decisions should be revisited when full transcripts are registered."
+  ]
+}

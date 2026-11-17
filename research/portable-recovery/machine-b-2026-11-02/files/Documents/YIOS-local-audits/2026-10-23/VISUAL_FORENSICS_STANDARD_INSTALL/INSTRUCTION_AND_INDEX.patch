@@ -1,0 +1,22 @@
+--- a/AGENTS.md	2026-10-23 18:18:59
++++ b/AGENTS.md	2026-10-23 18:18:59
+@@ -27,6 +27,10 @@
+ - Do not run Graphify over `data/raw/` without explicit user authorization and a provenance-safe plan.
+ - An explicit `/graphify` request may use the installed skill, subject to the core rules above.
+ 
++## Visual forensics
++
++For any video visual forensics, CT scan, deep/deeper visual analysis, frame-by-frame or scene-by-scene review, motion/animation reconstruction or channel visual DNA, use the project skill `.claude/skills/visual-ct-scan/` (index: `research/visual-forensics/README.md`) and its mode and coverage gates. A 1 fps contact sheet is an overview, not a frame-accurate event audit; visual, script, audio and full audiovisual completion are separate statuses. The per-Video-ID visual ledger and its receipts decide status; the skill never promotes partial or historical work. Source MP4s, derived frames and canonical Finance JSONL/workbooks stay untouched, and no visual-forensics work is committed while another task owns the branch.
++
+ ## External tool boundaries
+ 
+ - Ponytail is a coding-quality assistant; it does not override this repository's core rules.
+--- a/research/README.md	2026-10-23 18:18:59
++++ b/research/README.md	2026-10-23 18:18:59
+@@ -2,5 +2,6 @@
+ 
+ - [Finance/Economics research, authoritative audit continuation and weekend writer handoff](finance-economics-intelligence/README.md)
+ - [Nick Invests reusable channel intelligence — 2026-10-23](finance-economics-intelligence/channel-intelligence/nick-invests/2026-10-23/README.md)
++- [Visual forensics intelligence standard (`visual-ct-scan` skill, original master prompts, invocation examples)](visual-forensics/README.md)
+ 
+ Channel strategy synthesis is supplementary. Follow the relevant audit ledger and writer ownership before changing canonical research. Other existing research directories retain their scope and source authority.

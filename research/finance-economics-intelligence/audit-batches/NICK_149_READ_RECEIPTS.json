@@ -1,0 +1,132 @@
+{
+  "batch_id": "NICK_149_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "QogQUuyFUx8",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "04708941f7a1ec66521dd40bc2d28ce34052263e8d4c949247584295c09cd03c",
+      "character_count": 20932,
+      "source_word_count": 3396,
+      "coverage_token_count": 3432,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          20000
+        ],
+        [
+          20000,
+          20932
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "359_QogQUuyFUx8_Live_Off_500000_In_The_Bank_And_Do_Nothing_Else.txt",
+      "archive_member_sha256": "67edb9821b58979782c60c1a68d899fc63b5d5d880c812e7b2a9f41df98b9394",
+      "archive_member_bytes": 22278,
+      "archive_member_lines": 579,
+      "audio_verified": false,
+      "image_sha256": "47f2a683fdf1ca1a9b1243db302ffdf61c1e96dd713e22cb9ab1bf3cf0f5ee65",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/QogQUuyFUx8/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/QogQUuyFUx8/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/QogQUuyFUx8/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Short-term Treasury yield near publication",
+      "url": "https://www.macrotrends.net/3089/3-month-treasury-yield",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_REPUBLICATION_OF_FED_H15; Treasury/H.15 page not opened; exact 2025-08-20 value not retrieved",
+      "finding": "3-month Treasury yield 4.32% on 2025-08-06 (Fed H.15 via Macrotrends); below the narrator's 'about 5%' conservative fixed-income assumption."
+    },
+    {
+      "claim": "Average Social Security benefit",
+      "url": "https://www.ssa.gov/policy/docs/quickfacts/stat_snapshot/2025-08.html",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_SSA_SNAPSHOT",
+      "finding": "August 2025: all beneficiaries average $1,864.87; retired workers $2,008.31; spouses of retired workers $954.93. No couple average in snapshot; ~$3,089 aged-couple figure only from secondary source (UNVERIFIED)."
+    },
+    {
+      "claim": "Survey: Americans' retirement magic number",
+      "url": "https://news.northwesternmutual.com/2025-04-14-Americans-Believe-They-Will-Need-1-26-Million-to-Retire-Comfortably-According-to-Northwestern-Mutual-2025-Planning-Progress-Study",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_COMPANY_PRESS_RELEASE",
+      "finding": "2025 magic number $1.26M (2024: $1.46M), >4,600 adults, Jan 2025; available before publication; contradicts 'at least $2 million'."
+    },
+    {
+      "claim": "Annual cost of new-vehicle ownership",
+      "url": "https://newsroom.aaa.com/2025/09/aaa-new-vehicle-costs-drop-to-11577/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_AAA_RELEASE",
+      "finding": "2025 $11,577/yr (released 2025-09-16, after publication); 2024 $12,297/yr available before. 40 years = ~$463K-$492K nominal, below 'easily $600,000'."
+    },
+    {
+      "claim": "Safe withdrawal rate",
+      "url": "https://www.morningstar.com/lp/the-state-of-retirement-income",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_MORNINGSTAR_REPORT_PAGE_AND_TRADE_PRESS",
+      "finding": "Dec 2024: 3.7% highest safe starting withdrawal rate, 30-year horizon, 90% success; available before publication; contradicts 6-7% 'never touch principal' claim."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Python: simple interest/return products; (1+R)(1-w)-1 nominal growth under percent-of-value spending; deterministic depletion with inflation-adjusted withdrawals at 3% inflation; monthly-compounded end-of-month annuity for $2,000/mo; annual annuity for $3,000/yr; 2025 single-filer federal tax with $15,750 standard deduction",
+      "results": {
+        "income_5pct": 25000,
+        "monthly_5pct": 2083.33,
+        "income_8_5pct": 42500,
+        "monthly_8_5pct": 3541.67,
+        "monthly_8pct": 3333.33,
+        "surplus_8pct_vs_2500": 833.33,
+        "income_at_4_32pct": 21600,
+        "income_at_3_7pct_SWR": 18500,
+        "growth_8_7": 0.0044,
+        "growth_8_5_6_5": 0.0145,
+        "growth_9_6": 0.0246,
+        "deplete_years_6_5w_8_5R_3inf": 36,
+        "deplete_years_7w_8R_3inf": 27,
+        "real_500K_20y": 276838,
+        "real_500K_30y": 205993,
+        "real_25K_20y": 13842,
+        "save2000_months_contrib_only": 250,
+        "save2000_years_7pct": 12.89,
+        "save2000_years_8pct": 12.3,
+        "rate_implied_18y": 0.0159,
+        "fv_2000mo_18y_8pct": 960172,
+        "car_600K_per_year": 15000,
+        "AAA2024_40y": 491880,
+        "AAA2025_40y": 463080,
+        "3000yr_30y_8pct_end": 339850,
+        "3000yr_30y_8pct_begin": 367038,
+        "rate_needed_800K": 0.1251,
+        "tax_25000_interest": 925,
+        "tax_42500_ordinary": 2971.5,
+        "like_rate_pct": 2.567,
+        "comment_rate_pct": 0.62,
+        "peer_ratio_10": 4.938518304303016,
+        "peer_ratio_5": 1.6061589565948349
+      }
+    }
+  ]
+}

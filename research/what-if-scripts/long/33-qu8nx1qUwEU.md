@@ -1,0 +1,37 @@
+# What if ALL the sun’s power was focused in one place?
+
+| Field | Value |
+|---|---|
+| Video ID | `qu8nx1qUwEU` |
+| URL | https://www.youtube.com/watch?v=qu8nx1qUwEU |
+| Format | long |
+| Published | 2025-11-11 |
+| Duration | 00:02:50 |
+| Views (at acquisition) | 1,482,762 |
+| Words | 648 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/qu8nx1qUwEU.txt` |
+| Source SHA-256 | `b39e4292ecbca370e9f719409c47d0ea1ffcb3ddfa6cb5ad5439199f8ec2d3f9` |
+
+## Script
+
+This question comes from Max, who asks, "What if all the sun's output of visible light were bundled up into a laser-like beam that had a diameter of around 1 meter once it reached the Earth?" You know, I usually assume the best of people, but I'll be honest, I suspect Max might not have Earth's best interests in mind.
+
+Here is the situation Max is describing.
+
+If you were standing in the path of the beam, you would obviously die pretty quickly. You wouldn't really die of anything in the traditional sense. You would just stop being biology and start being physics. The Earth receives about 0.004% as much energy from the sun in an entire day as the sun emits every second. If Max's beam were only focused down narrowly enough to cover the entire Earth, it would still deliver almost 2 billion times the normal amount of solar power to each point on the Earth's surface. And Max wants to concentrate all of that into a single square meter.
+
+When the beam of light hit the atmosphere, it would heat the air to millions of degrees in a fraction of a second, turning into a plasma, which would start dumping its heat as a flood of X-rays. Those X-rays would heat up the air around them, which would turn to plasma itself, albeit a cooler plasma, and start emitting infrared light. The radiation would vaporize everything in sight and start stripping away the Earth's surface, like a hydrogen bomb, only much more violent. But the Earth is big enough to protect people on the other side, at least for a bit, from the direct effects of the sunbeam. They're still not going to make it. But what exactly would they die from? Turns out, twilight, or moonlight, it depends on the details. Twilight is light from the out of sight sun that reaches you by scattering off the atmosphere. When Max's sunbeam hit the Earth, everything from infrared radiation to X-rays would flood into the atmosphere, turning into plasma. Plasma is relatively transparent to X-rays, so those would pass through and dump their energy into the non-plasma air around it, heating it enough to give off its own substantial thermal radiation. In general, a lot of this radiation would escape into space where we don't need to worry about it unless it gets reflected back to Earth.
+
+Unfortunately, a portion of the radiation would stay within the atmosphere. A bubble of heat and light would wrap around the Earth, a twilight inferno, rapidly heating the atmosphere and surface as it went. What's more, much of the matter around the sunbeam's contact point would be blasted into space, where it would reflect infrared light back down beyond the horizon.
+
+[music] Exactly how quickly the devastation would make it around the Earth depends on many details of atmospheric scattering. But if the moon happened to be half full at the time, it might not even matter. When Max's device kicked in, the moon would go dark since the sunlight illuminating it would be funneled into the beam that's destroying the atmosphere. The intense light from the destruction would itself, however, illuminate the moon. And this reflected moonlight alone could be enough to burn you to death, just in time for the incendiary twilight to wrap around the planet, bringing on one final sunrise.
+
+But Earth might not be entirely doomed.
+
+Can Max's mechanism actually swivel to track a target? If not, the Earth can only spend a maximum of about 7 minutes in the path of the beam before our orbit carries us [music] out of the way.
+
+Everyone on the surface would still be cooked, of course, and much of the atmosphere and exterior would be lost, but the bulk of the Earth would probably remain as a testament to humanity's horrible ideas.
+
+>> [music]
+
+*[music]*

@@ -1,0 +1,116 @@
+{
+  "batch_id": "NICK_144_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "PbZvqv9Ztmc",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "02fd4d6293600931923748b7799f17e0e0ea72be9704f086697bc0620fd13bcf",
+      "character_count": 16359,
+      "source_word_count": 2863,
+      "coverage_token_count": 2915,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          16359
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "128_PbZvqv9Ztmc_Why_Everything_Changes_After_You_Lose_Your_Job_In_2026.txt",
+      "archive_member_sha256": "8277ab1c0630b58aa69c006a6be3a2e1629eac39dc6b326943f0bdb945f69c37",
+      "archive_member_bytes": 17944,
+      "archive_member_lines": 480,
+      "audio_verified": false,
+      "image_sha256": "303c6c22ca713d88403c3a983b3939a4308c84de4b75cdff4baeff9933779123",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/PbZvqv9Ztmc/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/PbZvqv9Ztmc/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/PbZvqv9Ztmc/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Texas maximum weekly UI benefit",
+      "url": "https://theunemployment.org/texas/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_PAGES_CITING_TWC_BENEFIT_TABLE; twc.texas.gov not opened",
+      "finding": "Maximum $605 per week effective 2025-10-05 (in force at 2026-04-25 publication); $619 from 2026-10-04. Narrator's $560 understated."
+    },
+    {
+      "claim": "ACA enhanced subsidy expiry premium payments",
+      "url": "https://www.kff.org/affordable-care-act/issue-brief/aca-marketplace-premium-payments-would-more-than-double-on-average-next-year-if-enhanced-premium-tax-credits-expire/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_KFF_ISSUE_BRIEF",
+      "finding": "KFF projected average net premium payments for subsidized enrollees rising 114% from $888 (2025) to $1,904 (2026); estimate, published 2025, before the video."
+    },
+    {
+      "claim": "Employer family premium basis of COBRA figure",
+      "url": "https://www.kff.org/health-costs/2025-employer-health-benefits-survey/",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_KFF_EHBS_2025",
+      "finding": "Average family premium $26,993 in 2025; x1.02 = $27,532.86 matches narrator's $27,533 'for 2026'."
+    },
+    {
+      "claim": "JOLTS hires rate and openings",
+      "url": "https://www.bls.gov/news.release/archives/jolts_05052026.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE_AND_SECONDARY_SUMMARIES",
+      "finding": "February 2026 hires rate 3.1%; March 2026 (released 2026-05-05, after publication) hires 3.5%, openings 6.866 million. 'Tied with April 2020 lowest on record' not verified."
+    },
+    {
+      "claim": "401(k) hardship withdrawals 6% in 2025",
+      "url": "https://workplace.vanguard.com/content/dam/inst/iig-transformation/insights/pdf/2026/how-america-withstands-financial-hardships.pdf",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_VANGUARD_BRIEF; PDF not opened",
+      "finding": "6% of participants permitted to take hardship withdrawals initiated one in 2025 (5% in 2024); HAS 2026 released about June 2026; pre-publication availability not confirmed."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Python arithmetic on narrator figures; federal 22% supplemental, FICA 7.65%, 10% early-withdrawal penalty, no Texas income tax; 7% annual compounding",
+      "results": {
+        "weekly_pay_140K": 2692.31,
+        "severance_8wk_gross": 21538.46,
+        "severance_net_22pct_fica": 15125.25,
+        "ui_560_replacement": 0.2074,
+        "ui_560_monthly_4_33wk": 2426.67,
+        "cobra_kff_26993_x1_02": 27532.86,
+        "cobra_monthly": 2294.41,
+        "cobra_2294x12": 27528,
+        "aca_increase": 1.1441,
+        "benchmark_2180x12": 26160,
+        "k401_net_22pct": 17000,
+        "k401_net_24pct": 16500,
+        "fv_25K_7pct_25yr": 135685.82,
+        "runway_severance_months": 3.5,
+        "runway_savings_months": 2.25,
+        "savings_months_of_burn": 1.15,
+        "wa_ms_ratio": 4.9,
+        "gap_22K_x25_uncompounded": 550000,
+        "gap_10pct_contrib_7pct_25yr": 139147.88,
+        "peer_ratio_10": 0.40293804362319413,
+        "peer_ratio_5": 0.34282658847194664
+      }
+    }
+  ]
+}

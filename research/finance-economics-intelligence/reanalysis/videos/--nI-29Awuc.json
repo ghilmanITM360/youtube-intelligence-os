@@ -1,0 +1,456 @@
+{
+ "video_id": "--nI-29Awuc",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "3e91ffc02bffdfe4194e58831a6edb50a0abbaf10d2c31855b8aba248a35d947",
+ "original_packets": [
+  "LUCAS_001.json"
+ ],
+ "transcript_chars_read": 21191,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 176,
+    "end_char": 207,
+    "text": "You say you're\nnot going to one"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Opens in a concrete second-person scene (lunch table, friend's acceptance video) and the stop beat lands fast (\"The table goes quiet\"), but the contrarian snap-back is only implied until \"Tuition bill versus apprentice paycheck\" about 700 characters in, and no sentence states what the viewer will get.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 697,
+    "end_char": 736,
+    "text": "Tuition bill versus apprentice\npaycheck"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Emotion and setup are strong (social pressure, quiet money anxiety) but the first ~30 seconds never state the promise or the structure; clarity depends on the title carrying it. Over-describes sensory detail before the comparison arrives.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "POV: You Choose a Trade Over College — Here’s What Happens"
+   },
+   "judgment": "MET",
+   "rationale": "Title, thumbnail (graduates holding a STUDENT LOAN BILL versus a smiling tradesperson with PAYMENT RECEIVED) and the opening scene all stage the same trade-versus-college contrast.",
+   "uncertainty": "Expectation match is inferred from content; whether viewers felt it matched is not evaluable."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19829,
+    "end_char": 19890,
+    "text": "Most\nelectricians don't end up at $740,000 by\ntheir early 30s"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title says \"what happens\" if you choose a trade, but the story is a best-case path (apprenticeship, LLC side business, deliberately frugal vehicle and spending choices) ending at an unreconstructable $740K; the video itself concedes this is not typical, which is honest but sits at ~95% of the runtime.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18666,
+    "end_char": 18683,
+    "text": "north of\n$740,000"
+   },
+   "judgment": "MET",
+   "rationale": "The title loop (what happens) is paid by the wedding reveal of the combined figure, then immediately qualified.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Sad graduates holding STUDENT LOAN BILL versus smiling tradesperson holding phone reading PAYMENT RECEIVED beside a tool van and a TODAY'S SCHEDULE clipboard"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Delivers the contrast the thumbnail sells, but the thumbnail shows a self-employed van-and-schedule trades life while most of the story is a salaried apprentice with a used F-150; the van never appears in the script. No number appears on the thumbnail.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 17030,
+    "end_char": 17061,
+    "text": "Two balance\nsheets, one wedding"
+   },
+   "judgment": "MET",
+   "rationale": "Clear four-act spine with spoken chapter cards (\"Apprentice wages, zero debt years\", \"The truck payments opportunity cost\", \"Owning the business, owing the IRS\", \"Two balance sheets, one wedding\") and a recurring foil, Haley.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 16917,
+    "end_char": 16961,
+    "text": "a wedding\ninvitation sitting on your counter"
+   },
+   "judgment": "MET",
+   "rationale": "Act-to-act bridges plant the next scene (\"One you haven't opened yet from someone you haven't seen in years\"; \"It follows you straight into the next decision\") and the total is withheld until the wedding.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 10128,
+    "end_char": 10189,
+    "text": "something underneath it has already\nstarted moving on its own"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A mid-video teaser plants that something is compounding \"on its own\"; the final total is withheld until the wedding scene, but its size is never hinted at beforehand, so the gap is generic (\"what happens\") rather than layered.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 20727,
+    "end_char": 20768,
+    "text": "It\nwas $40, then 200, then a Saturday job"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The Haley contrast supplies BUT-style turns, but between milestones the links are time jumps (\"2 weeks later\", \"Somewhere around month four\"); the causal chain from $200/month to $740K is asserted, not shown.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11744,
+    "end_char": 11804,
+    "text": "Not guaranteed. Never\nguaranteed. But that's the shape of it"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Real BUT turns exist (truck decision, tax shock) but the connective grammar is mostly \"then/so\" scene sequencing.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 19178,
+    "end_char": 19239,
+    "text": "how\nmuch you let leave before you decided\nanything on purpose"
+   },
+   "judgment": "MET",
+   "rationale": "One throughline: wealth is determined by what leaves your account on autopilot versus on purpose; every act tests it.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21120,
+    "end_char": 21190,
+    "text": "You just know you're the kind of person\nwho's already paying attention"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Ends on the thesis and the protagonist's calm, but does not return to the opening lunch-table scene; the echo is thematic, not structural.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 11693,
+    "end_char": 11742,
+    "text": "looking at something close to $150,000\nin 6 years"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "Specific but wrong by its own inputs: $773/month for 72 months is $55,656 contributed and about $75,840 at 10% nominal, not ~$150,000. A headline comparison (truck payment versus index fund) rests on this figure. Specificity earns no credit.",
+   "uncertainty": "Calculation verified in this session; the 10% rate is the video's own nominal assumption."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5312,
+    "end_char": 5361,
+    "text": "close to half of what a licensed\njourneyman makes"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Unreconciled ratio: $18-$20 is 60-67% of the $30 median-electrician rate the video quotes, not \"close to half\". The $30 is the national median for licensed electricians, not Rey's own pay (never stated), so this is an unreconciled ratio rather than a proven contradiction. \"Almost double\" for $18 to $30 is 1.67x.",
+   "uncertainty": "Arithmetic verified; real apprenticeship ratios vary by program and are not evidenced here."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 18666,
+    "end_char": 18683,
+    "text": "north of\n$740,000"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The headline outcome has no derivation. Stated flows (a $200/month Roth from 22 for about nine years is about $34,800 at 10%) cannot reach $740K; the gap is unspecified LLC income and unspecified savings. The video does disclose luck and non-typicality.",
+   "uncertainty": "Cannot be reconstructed from stored text; not asserted false."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 12303,
+    "end_char": 12382,
+    "text": "the version\nof success that mattered was the one you\ncould see from the outside"
+   },
+   "judgment": "MET",
+   "rationale": "Clear contrarian frame against visible-status spending (lease, rooftop bar, resort), carried by Haley as a foil.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 15348,
+    "end_char": 15373,
+    "text": "you're paying both\nhalves"
+   },
+   "judgment": "MET",
+   "rationale": "Self-employment tax (15.3%, \"paying both halves\") and Roth versus savings are explained in one plain sentence each.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3327,
+    "end_char": 3384,
+    "text": "the neighbor's kid practicing free\nthrows in the driveway"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Long atmospheric passages (driveway basketball, truck-cab details, wedding chicken) delay the numbers; at ~21K characters it is among the longest narration in the batch.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 21160,
+    "end_char": 21190,
+    "text": "who's already paying attention"
+   },
+   "judgment": "NOT_MET",
+   "rationale": "The stored transcript contains no like, subscribe, community or next-video call to action anywhere, including the close.",
+   "uncertainty": "Description, end screens, pinned comment and video-side overlays are not in the data."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 305,
+    "end_char": 334,
+    "text": "the\nname of the trade program"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "Title leads with \"POV\" and \"Trade Over College\"; the first spoken seconds say \"trade program\" and later \"electrical apprenticeship\" and \"electrician\", but \"college\" is only implied in the opening scene. No search-volume data is stored.",
+   "uncertainty": "No search or trends data."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  }
+ ],
+ "title": "POV: You Choose a Trade Over College — Here’s What Happens",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. Teen/young-adult college-versus-trade pain point is plausible but unmeasured.",
+  "2_differentiated_angle": "Second-person POV narrative with a recurring peer foil (Haley) is distinct from list or lecture formats; the comparison format itself is common.",
+  "3_title": "\"POV\" framing plus a promise of outcome; no number; the loop (\"what happens\") is paid.",
+  "4_thumbnail": "Cartoon comparison: three graduates (one holding a wallet, one crying) and a STUDENT LOAN BILL versus a calm tradesperson with a glowing PAYMENT RECEIVED phone, a tool-lined van and a TODAY'S SCHEDULE clipboard. Large shapes readable at 320 px; PAYMENT RECEIVED and TODAY'S SCHEDULE become tiny at mobile size. Fetched this session from the registered maxresdefault URL (1280x720, SHA-256 prefix a18595a5e749b43a); not stored in the repository. Asset appears AI-generated; not rights-judged.",
+  "5_opening": "Scene-first; strong tension, slow promise.",
+  "6_loops": "Act-level teases and one withheld total; no sustained micro-loops.",
+  "7_spine": "Four-act life-path structure with explicit chapter titles.",
+  "8_repetition_clarity": "The \"$40 then $200 then a Saturday\" refrain returns; some numbers repeat to anchor.",
+  "9_emotion_credibility": "High emotion and relatability; credibility weakened by an arithmetically wrong headline figure and an unreconstructable outcome, softened by an explicit non-typical disclaimer.",
+  "10_ending_cta": "Reflective close; no CTA in transcript.",
+  "11_metadata_seo": "Only title and spoken opening judged; description not assessed.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: no video or audio forensics registered."
+ },
+ "financial_checks": [
+  {
+   "claim": "Tuition $12,000 + room and board $14,000 = \"just under $26,000 a year\"; four years is \"$103,000\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$26,000 x 4 = $104,000; $103,000 matches \"just under\". Immaterial."
+  },
+  {
+   "claim": "$18/hour x 40 hours x 52 weeks is \"closer to $37,000 a year\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "$37,440. Holds."
+  },
+  {
+   "claim": "First check: $18/hour, 80 hours, $1,140 after taxes",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Gross $1,440; $1,140 net implies 20.8% withheld. Plausible; withholding is not sourced."
+  },
+  {
+   "claim": "$773/month into an index fund at ~10% grows to \"close to $150,000 in 6 years\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "CONTRADICTED: $55,656 contributed; about $75,840 at 10%/year compounded monthly."
+  },
+  {
+   "claim": "$200/month Roth from 22 to ~31 at 10% (supports $740K total?)",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "About $34,800. Cannot account for $740K; remainder is unspecified."
+  },
+  {
+   "claim": "$40 \"out of every paycheck\" versus the Roth comparison of \"$40 a week\"",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "Illustrative cadence differs from the protagonist's $40 per paycheck: the banker's hypothetical is $40 a week for 10 years. $40/week for nine years at 10% is about $30,200."
+  },
+  {
+   "claim": "Apprentice $18-$20 is \"close to half\" of journeyman pay; $30 is \"almost double\" first-year pay",
+   "kind": "INDEPENDENT_CALCULATION_VERIFIED",
+   "result": "60-67% and 1.67x respectively against the quoted $30 national median; Rey's own rate is never stated."
+  },
+  {
+   "claim": "2026 Roth/IRA limit \"up to $7500 a year\"",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "IRS IR-2025-111 / Notice 2025-67: $7,500 for 2026. Holds."
+  },
+  {
+   "claim": "Median licensed electrician about $30/hour, \"a little over $62,000\"",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "BLS Occupational Outlook Handbook: median $62,350 (May 2024), $29.98/hour. Holds."
+  },
+  {
+   "claim": "Electrician jobs \"growing faster than almost any other occupation\"",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "BLS projects 9% growth 2024-34 (\"much faster than average\"); \"faster than almost any other\" is not supported by that source and overstates a 9% rate (comparison with other occupations is recall)."
+  },
+  {
+   "claim": "Self-employment tax 15.3% (both halves); estimated payments four times a year",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Matches statutory 12.4% + 2.9%; not re-verified against a source this session."
+  },
+  {
+   "claim": "Average student borrower ~$38,000 at a little over 6%; new-vehicle payment ~$773 near national average; 8,000 hours before the journeyman exam; $50 LLC fee",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Not re-verified. Apprenticeship hours, LLC fees and contractor-licensing rules vary by state; a journeyman taking independent paid jobs may need a contractor licence, which the video does not mention (state-specific; not verified)."
+  }
+ ],
+ "strengths": [
+  "Concrete, emotionally credible scene-first writing with a consistent foil that makes the contrast personal.",
+  "Honest closing disclaimer that $740K is not typical and luck contributed.",
+  "Plain-language tax and Roth explanations inside the story."
+ ],
+ "weaknesses": [
+  "Headline truck-versus-index-fund figure ($150K) is about double the correct value.",
+  "$740K outcome cannot be derived from stated inputs.",
+  "Apprentice-to-journeyman ratio contradicts the video's own $30 rate.",
+  "No call to action; promise only implied in the first 30 seconds.",
+  "Thumbnail (self-employed van life, schedule clipboard) differs from the salaried-apprentice story for most of the runtime."
+ ],
+ "contradictions": [
+  "Illustrative \"$40 a week\" (banker's 10-year hypothetical) versus the protagonist's \"$40 out of every paycheck\"; the $30,200 figure assumes 9 years where the banker said 10.",
+  "Apprentice $18-$20 versus the $30 median: 60-67%, not \"close to half\" (Rey's own rate is never given).",
+  "\"Faster than almost any other occupation\" versus BLS \"much faster than average\" (9%)."
+ ],
+ "improvement_opportunities": [
+  "Replace the $150K claim with the computed ~$75,800 (or state the rate that would produce $150K) and show it on screen as a two-line comparison: $55,656 in, ~$75,800 out.",
+  "Add a one-screen ledger for the $740K total (retirement, business equity, savings) so the reveal is derivable or label it explicitly as an illustrative composite.",
+  "State the promise in the first 30 seconds as a number (\"$103,000 of tuition versus $37,440 of apprentice pay\") to turn the scene into a question the viewer is waiting to see answered.",
+  "Add a state-licensing caveat before the side-job act, and one end-of-video next step."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description and end-screen content",
+  "Original thumbnail file in repository (fetched copy only)"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "INSUFFICIENT_DATA",
+  "lifetime_rate_ratio": "",
+  "age_days": "0.4846",
+  "views_likes_comments_snapshot": {
+   "views": 4282,
+   "likes": 52,
+   "comments": 12,
+   "published_at": "2026-09-10"
+  },
+  "five_peer_sensitivity": "NOT_COMPUTED: video has no peer-sensitivity row (age under 12 hours at snapshot; tier INSUFFICIENT_DATA)",
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome. This video was under 12 hours old at the stored snapshot (scrape date 2026-09-11), so its lifetime-rate ratio is an early-life reading and is not comparable to videos that have had months to accumulate views.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "journeyman ratio reworded: median, not Rey's pay",
+    "$40/week versus $40/paycheck reworded as illustrative, not a contradiction",
+    "hook position corrected to ~700 characters",
+    "\"near-zero lifestyle spending\" replaced (he owns a house)",
+    "chapter-card wording corrected to \"Apprentice wages, zero debt years\"",
+    "$740K note: paid-for house is an unquantified component",
+    "FR-SCR-06 rationale aligned to its mid-video witness"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

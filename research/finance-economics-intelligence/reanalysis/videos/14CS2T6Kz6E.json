@@ -1,0 +1,578 @@
+{
+ "video_id": "14CS2T6Kz6E",
+ "framework_version": "v1",
+ "rule_index_version": "v1",
+ "assessment_mode": "HISTORICAL_REANALYSIS_CONTENT_FIRST",
+ "original_audit_row_sha256": "8d3105ccf4b0ebb222cf2e8beee8f62e96ad3ec6296eed9af5e3b54fd67a6e35",
+ "original_packets": [
+  "PRIMATE_001.json"
+ ],
+ "transcript_chars_read": 8130,
+ "read_scope": "full stored transcript read; title/metadata snapshot from registry; thumbnail inspected natively and at mobile size",
+ "comparisons": [
+  {
+   "rule_id": "FR-HOOK-01",
+   "source_member": "Hook guide.pdf",
+   "source_locator": "p.1 \"3-Step Hook Formula\"; p.2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 0,
+    "end_char": 29,
+    "text": "Monkey has banana. Life good."
+   },
+   "judgment": "MET",
+   "rationale": "A six-short-sentence fable (supply disrupted, life not good) that establishes the allegory instantly; the \"This is the global oil supply. What is oil?\" line at ~170 characters resolves the metaphor and starts the explainer, a clean context-lean, stop-beat and snap.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-01",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 138,
+    "end_char": 181,
+    "text": "This is the global oil supply.\nWhat is oil?"
+   },
+   "judgment": "MET",
+   "rationale": "Clear concept (oil as bananas), tone (comic, simple), and a two-part question that frames the video; no host introduction needed.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-02",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.7 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Crude hand-drawn brown gorilla with a plain face on a white background and an ochre sack with a banana symbol above its open hand; no text"
+   },
+   "judgment": "MET",
+   "rationale": "The gorilla and banana sack match the title (\"with Bananas\") and the opening fable; the style (flat, childlike) matches the tone. There is no text, so \"oil\" is carried only by the title.",
+   "uncertainty": "Expectation match is inferred; viewer perception is not evaluable."
+  },
+  {
+   "rule_id": "FR-INTRO-03",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.2 s.6 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 138,
+    "end_char": 181,
+    "text": "This is the global oil supply.\nWhat is oil?"
+   },
+   "judgment": "MET",
+   "rationale": "The intro is brief: about 170 characters to the first definition (\"This is the global oil supply. What is oil?\"), then the explainer moves immediately.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-INTRO-04",
+   "source_member": "Intro Analyzer Prompts.docx (1).pdf",
+   "source_locator": "p.1 s.3 Gemini",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 273,
+    "end_char": 306,
+    "text": "Banana very important to monkeys."
+   },
+   "judgment": "MET",
+   "rationale": "The allegory is explained in two sentences; there is no anticlimax; the scene-by-scene reveal (refinery, tankers, chokepoint) keeps paying.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-TITLE-01",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.3 s.1 ChatGPT",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Oil Explained with Bananas"
+   },
+   "judgment": "MET",
+   "rationale": "The 26-character title carries topic (oil), format (explained) and gimmick (bananas).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-02",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.4 s.3 Gemini",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Oil Explained with Bananas"
+   },
+   "judgment": "MET",
+   "rationale": "The video explains oil supply, refining, shipping, price and the 2026 Iran war entirely with banana language.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-03",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.6 Google AI Studio",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Oil Explained with Bananas"
+   },
+   "judgment": "MET",
+   "rationale": "No overpromise: the explanation is delivered, though with simplifications (price feedback, reserves).",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-TITLE-04",
+   "source_member": "YouTube Title Analyzer — Natural Language Prompts (2).pdf",
+   "source_locator": "p.5 s.7 Claude",
+   "witness": {
+    "kind": "TITLE",
+    "text": "Oil Explained with Bananas"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The loop is \"can bananas explain oil\", answered in the first minute; later loops (what happens if supply stops, what next) are the video's own.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-01",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 1",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6325,
+    "end_char": 6383,
+    "text": "I can't afford these\nbanana prices. What's a monkey to do?"
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The pain is cost-of-living after the Iran war, voiced only at ~6,300 characters; the opening is curiosity, not pain.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-VC-02",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 2",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7878,
+    "end_char": 7937,
+    "text": "monkeys now understand global\nsupply of oil, I mean bananas"
+   },
+   "judgment": "MET",
+   "rationale": "The transformation is understanding; it is stated plainly and delivered.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-04",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 4",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2673,
+    "end_char": 2717,
+    "text": "Banana price is simply supply versus\ndemand."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The contrarian angle is a comic allegory for a heavy topic rather than a challenge to conventional wisdom.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2455,
+    "end_char": 2522,
+    "text": "About one in five of all\nbanana exports pass through this one\npath."
+   },
+   "judgment": "MET",
+   "rationale": "The Strait of Hormuz carries about 20% of global oil trade and LNG flows according to search-result summaries (the EIA share figure itself was not fetched); the \"one in five\" matches.",
+   "uncertainty": "Secondary summaries only; the EIA figure was not read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1936,
+    "end_char": 2002,
+    "text": "In fact, about 30% of all the world's\nbananas come from this area."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "\"This area\" is ambiguous: if it means the Middle East alone, about 30% matches; if it means the United States, Russia and the Middle East together (as the preceding sentence lists), about 30% understates, because the three largest producers alone exceed 35% by analyst recall.",
+   "uncertainty": "Analyst recall of production shares; not re-verified."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5171,
+    "end_char": 5238,
+    "text": "On February\n28th, 2026, the United States and Israel\nattacked Iran."
+   },
+   "judgment": "MET",
+   "rationale": "The 28 February 2026 date and the strait closure are reported by multiple news summaries; the spoken intent (\"to take out Iran's leader\") was not verified here, and \"one in five\" is reported as about 20% of oil and LNG shipments without specifying consumption or seaborne trade.",
+   "uncertainty": "Search-result summaries only; no primary government or wire document read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5993,
+    "end_char": 6049,
+    "text": "UP TO 80% OF BANANA TANKERS have stopped\nusing waterway."
+   },
+   "judgment": "MET",
+   "rationale": "News summaries report that traffic through the strait fell by more than 80% (one source: 70% within 24 hours, then near zero), consistent with \"up to 80%\".",
+   "uncertainty": "Search-result summaries; tanker-count data not read."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7755,
+    "end_char": 7818,
+    "text": "Monkeys\nconsume more than 100 million barrels of\nbananas a day."
+   },
+   "judgment": "MET",
+   "rationale": "World oil consumption is a little over 100 million barrels a day (EIA/IEA estimates, analyst recall).",
+   "uncertainty": "Analyst recall; not re-fetched."
+  },
+  {
+   "rule_id": "FR-VC-05",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6196,
+    "end_char": 6304,
+    "text": "Monkey ship captains don't want to lose\ntheir ships and monkey insurance\ncompanies won't cover them anymore."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The P&I clubs withdrew existing war-risk cover for the zone on 5 March 2026 but cover remained available at much higher premiums (2.5-8% of hull value versus 0.15-0.25% before), so \"won't cover them anymore\" overstates.",
+   "uncertainty": "Search-result summaries only."
+  },
+  {
+   "rule_id": "FR-SCR-01",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6459,
+    "end_char": 6485,
+    "text": "Scenario\none, things good."
+   },
+   "judgment": "MET",
+   "rationale": "A clean spine: allegory, what is oil, where it comes from, refining, shipping, price, chokepoint, sponsor, supply shock, the Iran war, three scenarios, alternatives.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-02",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1744,
+    "end_char": 1792,
+    "text": "BUT, WAIT. Where does the world's oil\ncome from?"
+   },
+   "judgment": "MET",
+   "rationale": "Short interjections and gags (\"Gerald, get back to work\", \"the bendy bit of Hormuz\") act as mini-hooks every ~800 characters; shouted BUT/WAIT beats.",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-SCR-03",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1 ChatGPT; s.6 Google AI Studio",
+   "witness": {
+    "kind": "THUMBNAIL_OBSERVATION",
+    "text": "Gorilla with a banana sack"
+   },
+   "judgment": "MET",
+   "rationale": "The script delivers the oil-as-bananas explainer the thumbnail suggests.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-04",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.4 DeepSeek",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2523,
+    "end_char": 2603,
+    "text": "If this gets blocked,\nbanana supply go down, banana prices go\nup,\nmonkeys panic."
+   },
+   "judgment": "MET",
+   "rationale": "Clear chains: chokepoint blocked, supply falls, price rises; the Iran war follows from a geography fact set up earlier (\"remember this bit?\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-05",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.1 s.1; p.1 s.7 Claude",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 4256,
+    "end_char": 4293,
+    "text": "Use Gusto, run business, eat bananas."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "A disclosed sponsor segment sits at ~3,300-4,400 characters (about 41% through the video) before the central supply-shock and war sections, interrupting momentum; the end card (\"check out these videos\") is a soft next-video ask with no subscribe.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SCR-06",
+   "source_member": "Script Analyzer.pdf",
+   "source_locator": "p.2 s.5 Perplexity",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5089,
+    "end_char": 5133,
+    "text": "Stop, stop, please, for\nthe love of Harambe."
+   },
+   "judgment": "MET",
+   "rationale": "Gags and interruptions plant and pay small questions (\"Remember this bit?\" returns after ~3,000 characters).",
+   "uncertainty": "Inferred from text and title/thumbnail only; no retention, click or viewer data exists, so this is a design judgment, not measured behaviour."
+  },
+  {
+   "rule_id": "FR-BT-01",
+   "source_member": "The Magic of ‘BUT’ and ‘THEREFORE’ in Storytelling.docx (1).pdf",
+   "source_locator": "p.1 rows 4 and 7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 1744,
+    "end_char": 1792,
+    "text": "BUT, WAIT. Where does the world's oil\ncome from?"
+   },
+   "judgment": "MET",
+   "rationale": "BUT/catch turns recur (\"BUT, WAIT. Where does the world's oil come from?\" at ~1,744, \"But, there's a catch\" at ~2,195) with THEREFORE steps to the Hormuz and war sections.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-06",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.1 item 6",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 5134,
+    "end_char": 5170,
+    "text": "The Iran war\nexplained with bananas."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The title, thumbnail and opening carry no timeliness; the first reference to the war is at ~5,130 (63% through, after the sponsor), so the video is topical only in its second half; no date is cited.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-VC-09",
+   "source_member": "Viral Checklist.pdf",
+   "source_locator": "p.2 item 9",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 3125,
+    "end_char": 3147,
+    "text": "Meh, looks fine to me."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "About 8,100 characters, efficient, though the sponsor segment is about 15% of the text and several gags (coconut conspiracy) do not advance understanding.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-03",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #3",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-BT-01.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-04",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #4",
+   "witness": {},
+   "judgment": "NOT_APPLICABLE",
+   "rationale": "Superseded duplicate rule; assessed under its successor. Assessed under FR-SCR-03.",
+   "uncertainty": "Not an independent test."
+  },
+  {
+   "rule_id": "FR-16C-05",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #5",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7869,
+    "end_char": 7938,
+    "text": "Anyways, monkeys now understand global\nsupply of oil, I mean bananas."
+   },
+   "judgment": "MET",
+   "rationale": "One question holds the video: how does oil supply work and what does the Hormuz disruption mean.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-06",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #6",
+   "witness": {},
+   "judgment": "NOT_EVALUABLE",
+   "rationale": "Reset cadence of 20-30 seconds cannot be judged from untimed text; the many voices, sound cues and gags suggest frequent resets but nothing here measures them.",
+   "uncertainty": "Not evaluable: no timestamps or video."
+  },
+  {
+   "rule_id": "FR-16C-07",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.4 #7",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 6308,
+    "end_char": 6360,
+    "text": "So, what's next? I can't afford these\nbanana prices."
+   },
+   "judgment": "MET",
+   "rationale": "Questions open as answers land (\"so how do we get oil?\", \"so can we just use raw oil?\", \"so what happens when oil supply stops?\").",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-13",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #13",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 2673,
+    "end_char": 2758,
+    "text": "Banana price is simply supply versus\ndemand. Basically, if many banana,\nbanana cheap."
+   },
+   "judgment": "MET",
+   "rationale": "The allegory carries refining, shipping, supply-demand and chokepoints in toddler-level language.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-16C-16",
+   "source_member": "📜 Seven Engine Storytelling Analysis Prompts (16 Commandments Integrated).pdf",
+   "source_locator": "p.5 #16",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 7939,
+    "end_char": 7957,
+    "text": "Monkeys\nbig brain."
+   },
+   "judgment": "PARTLY_MET",
+   "rationale": "The ending returns to the \"monkeys understand\" tone, and \"Life good\" (opening) recurs in scenario one (~6,500), but the close does not return to the opening fable of the missing boat.",
+   "uncertainty": "Observation of content; it does not show what drove the measured outcome."
+  },
+  {
+   "rule_id": "FR-SEO-01",
+   "source_member": "🎯 YouTube Video SEO – COMPLETE CHECKLIST DOCUMENT (1).pdf",
+   "source_locator": "p.5 s.7 Title Checklist; p.3 script optimization",
+   "witness": {
+    "kind": "TRANSCRIPT_RANGE",
+    "start_char": 138,
+    "end_char": 168,
+    "text": "This is the global oil supply."
+   },
+   "judgment": "MET",
+   "rationale": "\"Oil\" is first spoken at ~157 characters, inside the first 30 seconds; \"explained\" appears only at ~5,140 (\"The Iran war explained with bananas\").",
+   "uncertainty": "No search or trends data."
+  }
+ ],
+ "title": "Oil Explained with Bananas",
+ "dimension_notes": {
+  "1_audience_topic_demand": "EVIDENCE_UNAVAILABLE: no demand series stored. An evergreen explainer topic with a topical 2026 hook.",
+  "2_differentiated_angle": "Banana allegory in monkey-speak with multi-voice sketches; different from the numerical finance channels in this campaign.",
+  "3_title": "Short, curiosity-led gimmick.",
+  "4_thumbnail": "Local file in thumbnail-evidence (1280x720): a crude hand-drawn gorilla and a banana sack, no text; recognisable at 320 px; reads as a joke.",
+  "5_opening": "Allegory fable then a straight definition.",
+  "6_loops": "Scenario structure and recurring gags.",
+  "7_spine": "Allegory, definition, source, refining, shipping, price, chokepoint, sponsor, war, scenarios.",
+  "8_repetition_clarity": "Allegory vocabulary is consistent.",
+  "9_emotion_credibility": "Comic; the factual claims are generally sound for an explainer, simplified on insurance and production share.",
+  "10_ending_cta": "A mid-video sponsor and an end-card pointer to other videos; no subscribe ask in the stored text.",
+  "11_metadata_seo": "Only title and spoken opening judged.",
+  "12_editing_audiovisual": "EVIDENCE_UNAVAILABLE: audio and video were not inspected; the text shows several voices, music cues and sound-effect tags."
+ },
+ "financial_checks": [
+  {
+   "claim": "About one in five of all oil exports pass through the Strait of Hormuz",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Reported as about 20% of global crude and LNG shipments in news summaries; the EIA figure was not fetched."
+  },
+  {
+   "claim": "On 28 February 2026 the US and Israel attacked Iran; up to 80% of tankers stopped using the strait",
+   "kind": "SECONDARY_SOURCE_VERIFIED_THIS_SESSION",
+   "result": "Multiple news summaries: strikes began 28 February 2026; traffic fell over 80%; P&I clubs cancelled existing war-risk cover on 5 March with replacement cover at 2.5-8% of hull value."
+  },
+  {
+   "claim": "\"About 30% of all the world's bananas come from\" the US, Russian and Middle Eastern jungles",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "The US, Russia and Saudi Arabia are each roughly 12-16% of world crude; together they exceed 35%."
+  },
+  {
+   "claim": "World consumption \"more than 100 million barrels\" a day; Strait of Hormuz affects about 20% of supply in the worst scenario",
+   "kind": "ANALYST_RECALL_NOT_REVERIFIED",
+   "result": "Consistent with EIA/IEA order of magnitude; not re-fetched."
+  }
+ ],
+ "strengths": [
+  "The allegory is consistently held and makes a technical subject accessible.",
+  "Efficient (8,100 characters) with frequent comic interruptions.",
+  "Topical hook on a real 2026 event with mostly accurate supply facts."
+ ],
+ "weaknesses": [
+  "A mid-video sponsor segment (about 41% in) before the key sections.",
+  "Production-share and insurance claims are simplified.",
+  "No subscribe ask in the stored text."
+ ],
+ "contradictions": [
+  "\"Insurance won't cover them\" in the video versus war-risk cover that remained available at higher premiums (video versus external source)."
+ ],
+ "improvement_opportunities": [
+  "Move the Gusto segment to the end or to the transition after the war section.",
+  "Replace \"about 30%\" with a named, sourced production share (for example the three largest producers).",
+  "Add a one-line subscribe ask and a specific end card (\"our video on the dollar\") tied to the content.",
+  "Put \"OIL\" in the thumbnail text so a viewer scrolling sees the topic as well as the joke.",
+  "Source the 80% tanker drop and the 20% supply share on screen."
+ ],
+ "unavailable": [
+  "CTR, impressions, retention, audio",
+  "Search-demand data",
+  "Description content",
+  "Audio, animation and voice acting",
+  "Primary EIA, IEA and shipping-data documents"
+ ],
+ "measured_public_performance": {
+  "k01_tier_revealed_after_assessment": "INSUFFICIENT_DATA",
+  "lifetime_rate_ratio": "",
+  "age_days": "108.9191",
+  "views_likes_comments_snapshot": {
+   "views": 145552,
+   "likes": 8700,
+   "comments": 673,
+   "published_at": "2026-05-26T01:56:31.000Z"
+  },
+  "five_peer_sensitivity": {
+   "status": "NOT_PRESENT_IN_PERFORMANCE_SENSITIVITY.csv"
+  },
+  "timing": "SINGLE_SNAPSHOT: breakout date and acceleration UNAVAILABLE"
+ },
+ "performance_association_note": "Content observations are not causes of the measured outcome; one video cannot show that the allegory format or the mid-video sponsor segment affected views, and this channel and format differ from the others in the campaign.",
+ "timing": "SINGLE_SNAPSHOT: upload date plus lifetime views is not a growth curve; breakout date, velocity and time-to-viral cannot be reconstructed.",
+ "limits": "Heuristics are lenses, not platform facts; conformity is not causation; no CTR, retention, impressions or audio evidence.",
+ "review_annex": [
+  {
+   "review_id": "R1",
+   "reviewed_utc": "2026-11-02",
+   "reviewer": "fresh-context subagent, same model family (Sonnet 5.5); not a human and not a different model",
+   "scope": "full transcript and thumbnail re-read without performance fields; arithmetic recomputed; no external-source checks by the reviewer",
+   "status": "SECOND_PASS_COMPLETED_SAME_MODEL_FAMILY",
+   "campaign_status_effect": "NONE: remains SEMANTIC_REVIEW_PENDING until a human or independent reviewer signs off",
+   "corrections_applied": [
+    "sponsor length corrected to ~15% of the text",
+    "FR-VC-06 changed to PARTLY_MET (war first mentioned at 63% through)",
+    "the 30% claim treated as ambiguous in referent",
+    "false contradiction (reserves) removed and the insurance item re-labelled as video versus external source",
+    "\"oil\" first spoken at ~157; witness for FR-INTRO-03 moved; \"BUT, WAIT\" overstatement removed; Life-good echo added"
+   ],
+   "witness_ranges_checked": "all TRANSCRIPT_RANGE witnesses matched stored text",
+   "original_version": "this session before correction (not separately committed)"
+  }
+ ]
+}

@@ -1,0 +1,233 @@
+{
+ "batch_id": "NICK_275_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "ofJ8nZG87fA",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "cf6fa31abfb7148b0874c81795712a75a217a74b4a73d350f8142b3b1c3ef417",
+   "character_count": 20425,
+   "canonical_utf8_bytes": 20425,
+   "canonical_whitespace_word_count": 3265,
+   "coverage_token_count": 3270,
+   "read_character_ranges": [
+    [
+     0,
+     10200
+    ],
+    [
+     10200,
+     20425
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Have you ever noticed how some people seem to effortlessly glide through life while the rest of us are grinding away just to keep our heads above water?",
+   "last_text_witness": "along, maybe even take some notes, and then go right back to thinking exactly the same way you did before clicking on this video. That's not me being pessimistic. That's just human nature. Um, but for those of you who actually implement even half of these concepts, your financial future just changed dramatically. The choice is yours. And frankly, your bank account will reflect whatever you decide to do next.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 10200,
+     "first80": "Have you ever noticed how some people\nseem to effortlessly glide through life\nwh",
+     "last80": "hink. They're not\ntrying to evade taxes or hide money in\noffshore accounts. They"
+    },
+    {
+     "start": 10200,
+     "end": 20425,
+     "first80": "'re laser focused\non understanding tax law and using every\nlegal strategy availa",
+     "last80": "urs. And frankly, your bank account\nwill reflect whatever you decide to do\nnext."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "319_ofJ8nZG87fA_Stop_Thinking_Poor_The_Mindset_of_the_1.txt",
+   "archive_member_sha256": "f7341b9b8aa356ce146cec78a1598c4be78451574e908f0c302ad052dc581289",
+   "archive_member_bytes": 21846,
+   "archive_member_lines": 565,
+   "audio_verified": false,
+   "image_sha256": "accd2b71d82f3c4266af913925a40ebd2fa9719bf083de50b9957d44a45ce34f",
+   "image_bytes": 103263,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/ofJ8nZG87fA/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/ofJ8nZG87fA/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDCPI275",
+   "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPIAUCSL (BLS CPI-U SA), fredgraph.csv; SHA-256 8556b710094027fa4724641d48be620cc37c04abfa15a0c496378cf1146c1549",
+   "finding": "2024-09 314.732; 2025-08 323.291; 2025-09 324.245 (+3.02% y/y).",
+   "limitations": "Current vintage, seasonally adjusted; the September 2025 print was released after the upload (August 2025 +2.9% was the latest at upload).",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FDICSNIP",
+   "url": "https://www.fdic.gov/national-rates-and-rate-caps",
+   "source_date": "2025-10-07",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "source_confidence": "SEARCH_RESULT_SNIPPET_ONLY",
+   "locator": "Secondary rate articles (e.g. Fortune, Yahoo Finance, October 2025) citing the FDIC national rate",
+   "finding": "National average savings rate ~0.40% (October 2025).",
+   "limitations": "FDIC page not opened; snippet only.",
+   "publication_applicability": "AROUND_PUBLICATION",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 37732,
+    "age_days": 334.5724,
+    "views_per_day": 112.77678613059534,
+    "peer_median_10": 210.3181438523144,
+    "peer_median_5": 197.76016621208146,
+    "peer_ratio_10": 0.5362199573698564,
+    "peer_ratio_5": 0.5702704861688452,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "3DzkwbNxfCE",
+     "6KPXYyki9so",
+     "eEw52CPOrbE",
+     "9zLgeax5sQc",
+     "e06r3ZWyBVc",
+     "A1Ix8wUhrRo",
+     "pu7UaN3FemE",
+     "C1CqdnB321o",
+     "XkhWSzOB7fI",
+     "35IbvMTwdJE"
+    ],
+    "peer_ids_5": [
+     "3DzkwbNxfCE",
+     "6KPXYyki9so",
+     "eEw52CPOrbE",
+     "9zLgeax5sQc",
+     "e06r3ZWyBVc"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "3DzkwbNxfCE",
+      "Title": "Why You'll NEVER Save Your First $10,000 (Most People Quit Here)",
+      "Views": "35155",
+      "Age_days": "335.5142",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "6KPXYyki9so",
+      "Title": "The Money Formula the Rich Actually Use",
+      "Views": "158707",
+      "Age_days": "333.5753",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "eEw52CPOrbE",
+      "Title": "What changes After You Hit $100,000 In Savings",
+      "Views": "66553",
+      "Age_days": "336.5339",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "9zLgeax5sQc",
+      "Title": "Major MONEY Milestones To Accomplish in Your 40s!",
+      "Views": "143662",
+      "Age_days": "332.5735",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "e06r3ZWyBVc",
+      "Title": "Top 5 Wealth Killers You Have to Avoid",
+      "Views": "58543",
+      "Age_days": "337.5719",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "A1Ix8wUhrRo",
+      "Title": "How to Build Wealth on a $40K Salary",
+      "Views": "34946",
+      "Age_days": "331.5653",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "pu7UaN3FemE",
+      "Title": "The 3 Net Worth Milestones That Change Everything",
+      "Views": "351373",
+      "Age_days": "330.5688",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "C1CqdnB321o",
+      "Title": "Shocking MONEY Stats of the Average 30 Year Old (The Harsh Truth)",
+      "Views": "106043",
+      "Age_days": "338.5986",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "XkhWSzOB7fI",
+      "Title": "Why $25K Is Closer to $100K Than You Think",
+      "Views": "75682",
+      "Age_days": "339.5698",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "35IbvMTwdJE",
+      "Title": "7 Signs Someone is Wealthy (But Hides It)",
+      "Views": "46333",
+      "Age_days": "329.5416",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "After-tax income comparison; CPI year-on-year change",
+   "results": {
+    "keep_200k_at_40pct": 120000,
+    "keep_150k_at_20pct": 120000,
+    "cpi_yoy_sep2025": 0.0302,
+    "cpi_yoy_aug2025": 0.029
+   },
+   "limitations": "Effective rates as stated in the script."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. FRED CPI directly inspected; Damodaran page unreachable (DNS); FDIC rate snippet-only; other claims recall, labelled per claim. No paid purchases."
+}

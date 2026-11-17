@@ -1,0 +1,108 @@
+{
+  "batch_id": "NICK_135_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "NXpQOUVife4",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "732dc7cc71df7cc68f1a73937e15a1c1badcd2818816ebb5fe34a9dfe488cd9b",
+      "character_count": 18239,
+      "source_word_count": 3107,
+      "coverage_token_count": 3109,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          18239
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "206_NXpQOUVife4_How_to_Finally_Stop_Stressing_About_Money_Step_by_Step.txt",
+      "archive_member_sha256": "ff3cf08aeccc8d2e1ad90f9e72fcaea5be0704e9a00305736dc0ad32c3e9a65e",
+      "archive_member_bytes": 19870,
+      "archive_member_lines": 516,
+      "audio_verified": false,
+      "image_sha256": "bc9db4aef4ff8f9f1934ffa75aefb82cd2c013df3dcb39e50a772e384c5034be",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/NXpQOUVife4/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/NXpQOUVife4/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/NXpQOUVife4/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Credit card interest about 22%",
+      "url": "https://fred.stlouisfed.org/series/TERMCBCCINTNS",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_FED_G19_SERIES_VIA_FRED",
+      "finding": "Commercial bank rate on credit card plans, accounts assessed interest: 22.83% Aug 2025, 22.30% Nov 2025 (both before 2026-02-04 publication); 21.52% Feb 2026."
+    },
+    {
+      "claim": "Emergency cash coverage context",
+      "url": "https://www.federalreserve.gov/publications/2025-economic-well-being-of-us-households-in-2024-executive-summary.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE",
+      "finding": "63% of adults would cover a $400 emergency expense with cash or equivalent in 2024 (unchanged from 2022-2023, down from 68% in 2021); report published May 2025, before publication."
+    },
+    {
+      "claim": "Forgotten subscriptions $400/month",
+      "url": "https://www.cnbc.com/2022/09/06/consumers-underestimate-monthly-subscription-costs-by-at-least-100.html",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_C+R_RESEARCH_2022_SURVEY; original report not opened",
+      "finding": "1,000 US adults: itemized average $219/month total subscriptions versus $86 quick guess; 42% forgot a paid subscription. Published 2022, before publication."
+    },
+    {
+      "claim": "Three months of expenses benchmark",
+      "url": "https://www.bls.gov/news.release/archives/cesan_09252024.htm",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE (reused from NICK_133 receipt)",
+      "finding": "2023 average annual expenditures $77,280 per consumer unit (Sept 2024 release), before publication."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Credit card at 22% APR compounded monthly; minimum payment assumed greater of floor or 1% of balance plus interest (illustrative issuer convention); BLS CEX 2023 mean for expense months; peer ratios reproduced from ev json",
+      "results": {
+        "card200_months_to_400_no_payment": 38.15,
+        "card200_months_to_500_no_payment": 50.44,
+        "card200_minpay25_months": 9,
+        "card200_minpay25_total_paid": 218.3,
+        "card200_minpay25_interest": 18.3,
+        "card200_minpay35_months": 7,
+        "card200_minpay35_interest": 13.23,
+        "CEX2023_monthly": 6440,
+        "CEX2023_3mo": 19320,
+        "save_per_month_3mo_in_1yr": 1610,
+        "save_per_month_3mo_in_2yr": 805,
+        "subs400_annual": 4800,
+        "CR_itemized_219_annual": 2628,
+        "subs400_vs_CR_219_multiple": 1.83,
+        "extra200_annual": 2400,
+        "card5000_22pct_annual_interest_simple": 1100,
+        "likes_per_view": 0.0734,
+        "comments_per_view": 0.00537,
+        "peer_ratio_10": 1.1183897767752244,
+        "peer_ratio_5": 0.8371787029163745
+      }
+    }
+  ]
+}

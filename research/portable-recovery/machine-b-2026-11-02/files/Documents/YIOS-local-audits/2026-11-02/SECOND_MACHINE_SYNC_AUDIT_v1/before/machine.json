@@ -1,0 +1,76 @@
+{
+  "host": "Users-MacBook-Pro.local",
+  "user": "ghilmanislam360",
+  "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+  "platform": "Darwin-25.2.0-arm64-arm-64bit-Mach-O",
+  "time_utc": "2026-11-02T03:42:25.118744+00:00",
+  "commands": [
+    {
+      "argv": [
+        "sw_vers"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.157673+00:00",
+      "code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.2\nBuildVersion:\t\t25C56\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "uname",
+        "-a"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.188618+00:00",
+      "code": 0,
+      "stdout": "Darwin Users-MacBook-Pro.local 25.2.0 Darwin Kernel Version 25.2.0: Tue Nov 18 21:09:40 PST 2025; root:xnu-12377.61.12~1/RELEASE_ARM64_T6000 arm64\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "df",
+        "-k",
+        "/Users/ghilmanislam360/Documents/youtube-intelligence-os"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.221810+00:00",
+      "code": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity  iused     ifree %iused  Mounted on\n/dev/disk3s5   971350180 893658564  53278984    95% 11600357 532789840    2%   /System/Volumes/Data\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "memory_pressure"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.254808+00:00",
+      "code": 0,
+      "stdout": "The system has 34359738368 (2097152 pages with a page size of 16384).\n\nStats: \nPages free: 3741 \nPages purgeable: 671 \nPages purged: 124936 \n\nSwap I/O:\nSwapins: 0 \nSwapouts: 0 \n\nPage Q counts:\nPages active: 538416 \nPages inactive: 488017 \nPages speculative: 49635 \nPages throttled: 0 \nPages wired down: 165627 \n\nCompressor Stats:\nPages used by compressor: 799167 \nPages decompressed: 867851 \nPages compressed: 2521582 \n\nFile I/O:\nPageins: 1899444 \nPageouts: 28307 \n\nSystem-wide memory free percentage: 52%\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "sysctl",
+        "hw.memsize",
+        "hw.physicalcpu",
+        "hw.logicalcpu"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.293588+00:00",
+      "code": 0,
+      "stdout": "hw.memsize: 34359738368\nhw.physicalcpu: 10\nhw.logicalcpu: 10\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "sysctl",
+        "vm.swapusage"
+      ],
+      "cwd": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+      "at": "2026-11-02T03:42:25.323963+00:00",
+      "code": 0,
+      "stdout": "vm.swapusage: total = 0.00M  used = 0.00M  free = 0.00M  (encrypted)\n",
+      "stderr": ""
+    }
+  ]
+}

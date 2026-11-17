@@ -1,6 +1,1370 @@
-# Resume the full 966-video Finance and Economics audit
+**Portable sync (2026-11-02):** see `research/portable-recovery/machine-b-2026-11-02/README.md` and `PORTABLE_SYNC_MANIFEST.json` for what is in Git, what is Machine-B-only (`STORAGE_DESTINATION_REQUIRED`), and the CT006 `UNAVAILABLE_ON_THIS_MACHINE` record.
+
+# Historical reanalysis campaign checkpoint 3 (2026-11-02)
+
+**Counts:** 558 accepted videos in the frozen population (hash `73489502a6a6…`); **26 reassessed** (all `SEMANTIC_REVIEW_PENDING`: structurally validated and second-pass reviewed by fresh-context same-model-family subagents, not human-reviewed); 532 `PENDING`; 0 `EVIDENCE_BLOCKED`; 0 semantically reviewed. This checkpoint adds `08z1JYUQQnM`, `0Ca3uV6lgos`, `0J8MtFWsWY8` (batch A, commit `583a3c15`), `0bnMucPlugA`, `0kT4-532n8I`, `106GHTtl4EM` (batch B, same commit) and `11oeh1Xi_Gs`, `12kPA19t_Jw`, `14CS2T6Kz6E`, `14gilFEp_Iw` (batch C). Cohort comparison: `reanalysis/COHORT_COMPARISONS.md` (26 videos; the earlier descriptive pattern weakens and no cross-tier finding is supported).
+
+**Evidence store:** thumbnails fetched for reanalysis are persisted in `thumbnail-evidence/` and listed with SHA-256, URL and fetch date in `reanalysis/REANALYSIS_THUMBNAIL_REGISTER.csv`. Do NOT append to `THUMBNAIL_FETCH_REGISTER.csv`: `validate_research.py` asserts it covers exactly the 27 original visual-audit videos. Three older records (`-DIT32sBkAk`, `-FsJqwfNvt4`, `-ZcdgylpeJg`) were inspected at 480x360 only (lower-resolution source); `11oeh1Xi_Gs` has both its older 360x202 file and a 1280x720 `_maxres` copy.
+
+**Resume:** first PENDING ledger rows in order (read the live ledger). Same workflow as checkpoint 2 below; after finalizing a batch copy the K01 five-peer sensitivity from `PERFORMANCE_SENSITIVITY.csv` into each record's `measured_public_performance`, rebuild the KB (`build_reference_kb.py <new.db> --fresh`, then copy over `data/knowledge/reference_knowledge.db`), run `reanalysis/delta_tasks.py`, `reference_comparison.py check-all`, `validate_audit_966.py`, `validate_research.py` and the test suite (`git checkout` `FINANCE_CONTINUATION_QUEUE.csv` afterwards). Not done: any human or independent-model semantic review; rule extraction beyond the 30 rules; primary-source reading for most external figures (search-result summaries or FRED/Treasury fetches only).
+
+# Historical reanalysis campaign checkpoint 2 (2026-11-02)
+
+**Counts:** 558 accepted videos in the frozen population (hash `73489502a6a6…`, baseline `78871b87`); **16 reassessed** (all `SEMANTIC_REVIEW_PENDING`: structurally validated, second-pass-reviewed by a same-model-family subagent, not human-reviewed); 542 `PENDING`; 0 `EVIDENCE_BLOCKED`; 0 semantically reviewed. Reassessed: `-CbNGP9H4xw`, `--nI-29Awuc`, `-DIT32sBkAk`, `-FsJqwfNvt4` (first publish `0df91c58` + this batch), `-HeOz5CF9ys`, `-IpucSOwKgQ`, `-ZcdgylpeJg`, `-bzaU4X9xb0`, `-j4OlDr1rcc`, `-fuCWtCi4Mc`, `-nTyzYhIoBc`, `-y7_DWddSK8`, `-w_MYe_EjbA`, `-yKTjoV37qc`, `05T4iZ4MdIA`, `06PIGRNWJJY` (each batch of three had a second-pass review and corrections before publication). Next pending: the first `PENDING` row of the ledger (read it; do not assume an ID). Ordinary NICK_283 `pu7UaN3FemE` stays paused.
+
+**This checkpoint also:** corrected `-CbNGP9H4xw` after an independent second pass (`review_annex` in its file); rebuilt the knowledge DB (63 constituents; 33 rule records = 30 analytical + 3 not-applicable); resolved the 62/63 constituent count and extraction gaps (`reference-framework/REFERENCE_DISCREPANCY_RESOLUTION_v1.md`, `REFERENCE_OCR_CROSSCHECK_v1.csv`); wired the framework gate into `validate_audit_966.py` and `scripts/run_youtube_intelligence.py --framework-plan`; added `reanalysis/delta_tasks.py` (framework-version delta list) and `reanalysis/COHORT_COMPARISONS.md` (descriptive only; no cross-tier finding supported).
+
+**Resume:** `python reanalysis/build_population.py`, read the first PENDING ledger rows, read full transcripts, inspect thumbnails (registered URL fetch to scratch if not local), write specs like `/reanalysis/videos/*.json`, call `reanalysis_tools.finalize(spec)`, rebuild the KB (`build_reference_kb.py <new.db> --fresh`, then copy over `data/knowledge/reference_knowledge.db`), `reference_comparison.py check-all`, validators and tests, commit, normal push. Never force-push; PR #36 stays unmerged. Resource gates at this checkpoint: five-hour usage 0% after reset (was 49%), weekly 11%, disk 13 GiB free (reserve 5 GiB), no paid or reset credits used.
+
+# Historical reanalysis campaign checkpoint (2026-11-02)
+
+Priority is now the reanalysis of the 558 accepted audits, not new videos (next new video stays NICK_283 `pu7UaN3FemE`). Population frozen: `reanalysis/REANALYSIS_POPULATION_v1.json` (558 unique IDs, baseline `78871b87`). Ledger `reanalysis/REANALYSIS_CAMPAIGN_LEDGER.csv`: 1 SEMANTIC_REVIEW_PENDING (`-CbNGP9H4xw`), 557 PENDING, 0 blocked. Resume with the next PENDING row in ledger order; helper `reanalysis/reanalysis_tools.py finalize(spec)` (see `reanalysis/videos/-CbNGP9H4xw.json` as the template); reload the DB with `build_reference_kb.py data/knowledge/reference_knowledge.db`. Knowledge DB and coverage honesty: `reference-framework/KNOWLEDGE_BASE_README.md`. Not done: rule extraction for most of the corpus, glyph/OCR repair, 557 reanalyses, semantic review.
+
+# Owner-directed takeover checkpoint — NICK_282 (2026-11-02)
+
+**Parent `ed6b76d7`.** 558/1,612 complete; next `NICK_283 pu7UaN3FemE` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, reference-comparison validator OK, workbook rebuilt (558 deep-audited, 1,054 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_282 `pqJLxRMlZkc` — Shocking Finance Stats Of The Average Person.** 1.39970× TYPICAL (5-peer 1.371×, stable; about 60 days old); 16 claims; reference-comparison annex `NICK_282_REFERENCE_COMPARISON.json`. FRED inspected: card rate 22.15% (May 2026) matches 'around 22%'. Contradicted: the opening example ('average income just under $1.5 million' is $1,045,000 from its own inputs; leaving drops it $995,000, not $1.5 million); '$770 a month for 40 years at 8% = $2.4 million' matches annual deposits ($2.39M), monthly deposits give $2.69M; median home price $427,000 does not match FRED MSPUS ($408,500 Q1, $413,500 Q2 2026, new homes); 77% payable after 2032 is 78% in 2026 Trustees secondary reports. Verified: minimum-payment split, 4% of $44,115 = $147/month, 5.1 price-to-income, 5.51 mean/median net-worth ratio. Recall or secondary only: Vanguard $44,000/$167,000, SHED 37%, NY Fed $18.8T, student-loan 90+ day flow, SCF net worth, 401k default rates, wealth shares. Persona stories (Desmond, Renata, Gerald) are not data. Thumbnail inspected natively and at 320x180; calculator '0.0674' has no script counterpart.
+
+# Owner-directed takeover checkpoint — NICK_281 (2026-11-02)
+
+**Parent `c708df8e`** (reference-framework commit on canonical). 557/1,612 complete; next `NICK_282 pqJLxRMlZkc` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, reference-comparison validator OK, workbook rebuilt (557 deep-audited, 1,055 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_281 `poD3PDHgAiE` — What Warren Buffett Would Do With $10,000 Today.** 0.44562× WEAK on 10 peers but 0.831× TYPICAL on 5 peers (UNSTABLE tier; about 96 days old); 17 claims. First audit with a reference-comparison annex (`reference-framework/comparisons/NICK_281_REFERENCE_COMPARISON.json`, rules v1). Berkshire letters inspected directly: the 2013 trustee 10%/90% instruction is verified exactly; the 2017 bet table confirms index +125.8% (8.5%/yr) and Fund D 2.8%, but 'hedge funds averaged 2.2% per year' is not in the table (average annual 2.0/3.6/6.5/0.3/2.4) and the '$220,000 vs 854 dollars' illustration is contradicted (index gain about $1,258,000 vs about $363,000 for the funds-of-funds mean). FRED: 'first time in almost two decades cash beats inflation' contradicted (CPI +3.2-3.4% in 2023 vs top savings over 5%; April 2026 CPI +3.81% vs 1-year Treasury 3.83-3.90%). Verified: 10% compounding ladder, 50% ladder, 24% APR payoff logic; the $18,000 fee gap holds only near 7% gross ($40,395 at the script's 10%). Recall or secondary only: DALBAR 25% vs 16.5%, J.P. Morgan $71,750/$32,871 and 7-of-10 days, 1999/2020/2024 quotes, partnership 1957-69, Shiller PE 40.7 (multpl 40.0-41.0), Berkshire cash. Thumbnail inspected natively and at 320x180.
+
+# Owner-directed takeover checkpoint — NICK_280 (2026-11-02)
+
+**Parent `7594fc40`.** 556/1,612 complete; next `NICK_281 poD3PDHgAiE` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, workbook rebuilt (556 deep-audited, 1,056 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_280 `pmfPNdWGzdo` — Why High-Yield Savings Accounts Are Making a Comeback in 2026.** 0.77044× TYPICAL (5-peer 0.756×, stable; ~48 days old at snapshot); 15 claims. FRED inspected: CPI June 2026 +3.53% and core +2.57% (match the video); six Fed cuts Sep 2024-Dec 2025 confirmed (video quotes lower-bound 5.25 to 3.50; upper 5.50 to 3.75); 1-year Treasury 4.15% on 2026-07-23. Recomputed and correct: $330 on $8,000, $1,320/hour, $32,395 and $46,589 compounding, $45 for 15 bp. Contradicted: 'first time in 15 years savings beats inflation' (video's own 5% in 2023 vs CPI about 3.2%); $4,000 forgone over two years not reproducible (about $2,475 on $30,000); California T-bill advantage is 15% at the 4.15% bill (2.61 vs 2.28), not 27%. Recall or unavailable: FDIC 0.375%, SCF $62,410/$8,000, Raisin $396B, Synapse figures, 9-of-19 FOMC dots, Vanguard forecast. Yvette and Curtis are personas. Thumbnail inspected natively and at 320x180.
+
+# Owner-directed takeover checkpoint — NICK_279 (2026-11-02)
+
+**Parent `7ce92a90`** (takeover entry on canonical; integrated Machine A `9c6f42fb` + repair `cd2160f9`). 555/1,612 complete; next `NICK_280 pmfPNdWGzdo` (read the live queue first). Validation: `validate_audit_966` errors [], `validate_research` rc 0, workbook rebuilt (555 deep-audited, 1,057 pending; changed cells not measured). Usage UNKNOWN.
+
+- **NICK_279 `pTyMmSZ2EVs` — You Can't Afford a House. Good.** 1.96499× TYPICAL on 10 peers but 5-peer 2.284× STRONG, so the tier is unstable; 15 claims. FRED inspected: MORTGAGE30US 6.06-6.16% in Jan 2026 (video assumes 7%); median household income 2024 $83,160 ($180K = 2.16x); price-to-income 3.8x (1995) to 5.1x (2024). Recomputed: payment $2,328.56 and 30-year interest $488,281 correct; $2,000/month at 7% = $2.44M; $50K at 10% = $872K; $500/month at 10% = $1.13M. Wrong or unsupported: Johnsons 5-year interest is $119,174 not $80,000 (equity $70.5K flat, $134K with 3% appreciation, so "negative return" is false); month-1 principal $287 not $330; $150K maintenance matches neither flat ($120K) nor appreciating ($190K); renting saving $500/month contradicts the earlier $2,000; "2x vs 6x income" and "80%" unsupported; foreclosure timing is recall. Thumbnail inspected natively and at 320x180.
+
+# Machine A owner-directed checkpoint — NICK_277–278 (2026-11-02)
+
+**Parent `175b79ca`.** PR #36 / canonical branch still `223f4498`, untouched. 554/1,612 complete; next `NICK_279 pTyMmSZ2EVs`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 549–550), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN.
+
+- **NICK_277 `ozcH8vngH08` — How To Build Wealth If You're Already Behind.** 0.56705× TYPICAL but 5-peer 0.493× WEAK, so the tier is unstable (~13 days old at snapshot); 7 claims. BLS CE 2024 inspected: eating out $3,945 per household (script says per person). $3,500/yr at 10% for 30 y = $575,729 year-end ($633K start-of-year, $659K monthly), so "north of $600,000" depends on convention. Mostly sound sequencing advice; caller anecdote unlocated.
+- **NICK_278 `pFs8QGikczo` — Last Big Wealth Opportunity For The Next 10 Years.** 3.30266× STRONG but 5-peer 1.908× TYPICAL, so the tier is unstable; 14 claims. FRED inspected: Brent $71.32 pre-war, $118.42 on 2026-03-20 (month-end $126.69); S&P Q1 2026 −4.63% verified; dollar +2.7% in March; 1975 unemployment 9.0%. Wrong/overstated: VIX "mid-teens to over 35" (closes ~18–21 to 31.05); "inflation 2.7% / unemployment 4.2%" (latest at upload 2.4% / 4.4%); 1974 "toward 14.5%" (1980 peak); "$450, not $676" impossible; guy one's $18,000 irreproducible; "no manager has beaten the S&P" false. Goldman target, diplomatic signals, productivity SOURCE_UNAVAILABLE.
+
+# Machine A owner-directed checkpoint — NICK_275–276 (2026-11-02)
+
+**Parent `0c5eb6e0`.** PR #36 / canonical branch still `223f4498`, untouched. 552/1,612 complete; next `NICK_277 ozcH8vngH08`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 547–548), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. NICK_271–274 thumbnails re-opened this session: recorded descriptions match the images.
+
+- **NICK_275 `ofJ8nZG87fA` — Stop Thinking Poor: The Mindset of the 1%.** 0.53622× TYPICAL (5-peer 0.570×, stable); 8 claims. FRED CPI directly inspected: ~3% inflation at upload (Aug 2025 +2.9%, Sep +3.0%). Wrong: "$200K at 40% keeps less than $150K at 20%" (both keep $120,000). FDIC 0.40% savings rate snippet-only; 10% market average recall (Damodaran unreachable, DNS); "80% behaviour" unsupported.
+- **NICK_276 `ohQxPH0-adw` — Path From $100K To $1 Million.** 0.74675× TYPICAL (5-peer 0.862×, stable); 10 claims. $500/mo at 8% recomputed: $100K at 10.6 y (not 12; split $84K/$16K wrong), $200K at 16.3 y ("20 years in" wrong; 20 y = $294,510), 35 y $1.147M from $210K verified, year 40 $1.75M (not "over $2M"; $140K/yr not $160K). 8% called both conservative and inflation-adjusted (real history ~7%). Food >$700/mo true (BLS 2023 $832). Car "over $800" vs Edmunds Q3 2025 ~$754 (snippet; edmunds.com 403).
+
+# Machine A owner-directed checkpoint — NICK_273–274 (2026-11-02)
+
+**Parent `ca099ca3`.** PR #36 / canonical branch still `223f4498`, untouched. 550/1,612 complete; next `NICK_275 ofJ8nZG87fA`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 545–546), 0 styles/formulas, 16 hashtag text cells, zip OK. Usage UNKNOWN. New: `HISTORICAL_QUALITY_UPGRADE_BACKLOG.md`.
+
+- **NICK_273 `o4t8lSSAsMk` — This Setup Only Happens Once Every 50 Years — It's Happening Again.** 1.12465× TYPICAL (5-peer 1.496×, stable; ~15 days old at snapshot); 11 claims. FRED directly inspected: 1970s CPI peaks (SA 12.1%/14.6%; official NSA 12.3%/14.8%), 1971–81 +124.6%, 45¢/30¢, 1970s +104%, 1966–82 ×2.97; mortgage record 18.63% (1981-10-09); payments $141 and $859 reproduce; 5y5y 2.32% on 2026-08-28; debt $39.46T (2026Q2). Overstated: debt growth "$91,549/second". 2026 Iran/Hormuz/Warsh/gold/silver figures SOURCE_UNAVAILABLE. Thumbnail "BUY NOW!" + crash arrow + "1929" contradicts the script.
+- **NICK_274 `oPbLgCFB4gU` — The Subscription Trap That's Keeping You Poor.** 0.24252× WEAK (5-peer 0.107×, stable); 11 claims. C+R Research inspected directly: $86 estimate vs $219 actual, so the video's "$273" is unsupported. Reproduces: $67,200 car, $3,600 Adobe, $1.34M at 7%. Doubtful/stale: "$3,200 more than average savings", Netflix $150B / Adobe $240B, Fair/Canvas examples; Photoshop $1,200 mixes products.
+
+# Machine A owner-directed checkpoint — NICK_271–272 (2026-11-02)
+
+**Parent `a8e2458c`.** PR #36 / canonical branch still `223f4498`, untouched. 548/1,612 complete; next `NICK_273 o4t8lSSAsMk`. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 543–544), 0 styles/formulas, 16 hashtag text cells (not errors), zip OK. Usage UNKNOWN. Source-confidence labels as in NICK_265.
+
+- **NICK_271 `nWkjUETbkkk` — Your Life at Every Level of Compound Interest.** 2.03193× STRONG (5-peer 1.828× TYPICAL, so the tier is unstable); 12 claims. Every balance reproduces exactly under monthly compounding at 10%/12 ($6,283 … $3,162,040; daily growth $10/$28/$104/$866). Overstated: year-15 growth $19,331 (not ~$22,000), year-25 $62,571 (not ~$70,000). Inconsistent: Jake's $48,000 at 63 vs ~$180,000 from $300/month for 18 years. Fidelity 50s $212,000/$77,000 not located (snippets ~$200,000 / ~$60–65K). Dalbar, Buffett-after-50 and S&P-since-1926 are recall.
+- **NICK_272 `nYcSSd5V5_4` — The Shocking Cost of Being 'Normal' in 2026.** 0.4849× WEAK (5-peer 0.808× TYPICAL, so the tier is unstable); 13 claims. Directly inspected: BLS Consumer Expenditures 2024 (pre-upload Wayback capture) $78,535 / housing $26,266 / transportation $13,318 / food $10,169 (stated $10,164); FRED CPI +88% since 2000. Contradicted by the same survey: "more on food away than groceries" ($3,945 vs $6,224). Internally inconsistent: Garcias fixed costs $4,713 not $5,093 ($1,287 left, not $907) and the unexplained "$275". Saving rate 3.6% not matched by current-vintage PSAVERT (5.0–5.6%). Opportunity-cost ($1.75M on $772) and card-interest ($18,815) arithmetic reproduce. Goldman "40% at $500K" likely misattributed (recall).
+
+# Machine A owner-directed correction — NICK_260 C17/C20 (2026-11-02)
+
+**Parent `c70a81ac`.** 546/1,612 (unchanged); next `NICK_271 nWkjUETbkkk`. Correction layer `corrections/NICK_260/` (receipt `NICK_260_CORRECTION_2026-11-01.json` + byte-exact copies of the original packet and receipts from `c70a81ac`). NY Fed HHDC 2025Q4 data workbook (released 2026-02-10, before the 2026-04-07 upload) re-opened and re-hashed: **C17 VERIFIED** (card balances 90+ days delinquent 12.70% in 25:Q4; the 7.13% was the separate annualised flow). **C20 PARTIAL**: 14.3% = 25:Q3 student-loan flow (14.26%), historically accurate but not latest at upload (25:Q4 16.19%); $1.696T vs NY Fed $1.66T. Only those two claims, the script analysis line and two added source receipts changed. Validation: `validate_audit_966` errors [], `validate_research` rc 0, 48 pytest (new `test_nick260_correction.py`), 2 node, workbook 5 cells (row 531 J/K/S + dashboard metadata), 0 styles/formulas, zip ok.
+
+# Machine A owner-directed checkpoint — NICK_268–270 (2026-11-01)
+
+**Parent `701d2361`.** PR #36 / canonical branch still `223f4498`, untouched. 546/1,612 complete; next `NICK_271 nWkjUETbkkk`. Validation: `validate_audit_966` PASS (0 errors), `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 539–541), 0 styles/formulas, 16 hashtag text cells (not errors), zip OK. Usage UNKNOWN. Source-confidence labels as in NICK_265–267.
+**Quality addendum:** `NICK_260_264_QUALITY_ADDENDUM_2026-11-01.md`. The NY Fed 2025Q4 data workbook, inspected directly, shows card balances 90+ days delinquent at 12.70%, so NICK_260 C17's "unsupported" verdict is reversed to VERIFIED (it had confused the stock share with the 7.1% flow). C20's 14.3% matches 2025Q3 but was stale (Q4 16.19%). Packets are unchanged pending a narrow correction commit.
+
+- **NICK_268 `mlJsPniO5lQ` — Average 401K Balance By Age - 2026 Edition!** 0.86272× TYPICAL; 22 claims. Directly inspected: IRS 2026 limits ($24,500 / $8,000 / $11,250 "instead of" $8,000, so the replace-not-stack correction is right), BLS EBS 72% access (March 2026 release, published after upload, consistent). Snippet-only: Vanguard HAS 2026 $167,970 / $44,115 (3.81×). Wrong framing: trust-fund "2032 … not a prediction" (it is a projection; the 2025 Trustees said 2033 / ~23%; SSA 2026 page 403). Reproduces: $29–30K income vs $61K spend, 8.5% of $1.26M, +13.4% average growth.
+- **NICK_269 `mwOrTHZeqQc` — 13 Signs Your Neighbor Is Secretly Broke.** 1.30728× TYPICAL; 15 claims. No primary source opened (Edmunds/KBB snippet-only). Wrong: two $66K trucks over 72 mo ≈ $2,250 at 7%, not $1,900; boat "$85/day" (actually $1,065 per day used, $41 per calendar day); subscription gap 2.5×, not 3×; Stanley "30% of $300K homes earn ≤$60K" not located. Ramsey "75% index" paraphrase loose.
+- **NICK_270 `n4wBnOox0y4` — The Real Reason Millennials & Gen Z Are Struggling Financially.** 0.28845× WEAK (5-peer 0.643× TYPICAL, so the tier is unstable); 10 claims. FRED directly inspected: 1988 $110,000 and 2022 ~$433,000 home prices verified; incomes wrong ($27,230 / $74,580), so 1988 is 4.0 (right) and 2022 is 5.8 (not over 6). CPI 1990→Sep 2025 is 2.48×, not 2.31×. Unsupported: "86% less purchasing power"; "healthcare tripled in a decade".
+
+# Machine A owner-directed checkpoint — NICK_265–267 (2026-11-01)
+
+**Parent `d2541e25`.** PR #36 / canonical branch still `223f4498`, untouched. 543/1,612 complete; next `NICK_268 mlJsPniO5lQ`. Validation: `validate_audit_966` PASS (0 errors, 26 source hashes), `validate_research` PASS_BOUNDED, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 536–538), 0 styles/formulas, zip OK; the 16 "errors" counted by `wbdiff.py` are NOT Excel errors: openpyxl shows all 16 as shared-string (`s`) cells beginning with YouTube hashtags (`#finance …`) in All Finance Videos E/AG rows 620–638 and 1221–1226 and Detailed Research C620/C628/C633; the workbook has 0 error-type (`e`) cells. `wbdiff.py` counts any string starting with `#`; no workbook change is needed. Usage UNKNOWN.
+New this batch: each SOURCES entry carries a supplemental `source_confidence` label (PRIMARY_SOURCE_DIRECTLY_INSPECTED / SECONDARY_SOURCE_DIRECTLY_INSPECTED / SEARCH_RESULT_SNIPPET_ONLY / ANALYST_RECALL_NOT_REVERIFIED / SOURCE_UNAVAILABLE / INDEPENDENT_CALCULATION_VERIFIED), and each claim assessment is prefixed with the label its verdict rests on. It is additive; validator contracts are unchanged. Earlier packets are NOT retro-labelled.
+
+- **NICK_265 `mhb_Nd-0VjQ` — The 3 ETFs That Created More Millionaires Than Any Stock.** 0.70659× TYPICAL; 21 claims. Directly inspected: Bessembinder abstract (4 of 7 below T-bills, top 4% = all net gain), Barber-Odean 2000 (11.4% vs 17.9%), Berkshire 2017 letter (index +125.8%; funds-of-funds 2.0–6.5%/yr, mean 2.96%, so "roughly 2%" understates), Fidelity Q1 2026 average $141,000. Unverified: 645,000 millionaires, $32,800 median. Netflix 2011 drawdown took ~4 months, not 7. Bogle $11.3M/$150M = 7.5% (recall; Vanguard host DNS failure). Thumbnail "BUY THIS ETF NOW!" vs title "3 ETFs" and patience thesis.
+- **NICK_266 `mihh7ki_13g` — When You Get Rich, Tell NO ONE!** 9.08991× STRONG; 7 claims, almost no numbers. Opinion essay on stealth wealth; hedonic adaptation real (recall); Instagram-debt and price-discrimination assertions unsourced.
+- **NICK_267 `mkcfkfPhW1U` — The "Pavement Princess" Trap.** 3.94533× STRONG; 14 claims. Census 2024 median household income $83,730 (directly inspected). Wrong: interest on $90K @7.2%/84 mo is $24,841 not $14,748; truck payment is 17.6% DTI on $85K not 26% (script later says 18%); $73,836 then "$83,000"; totals "$80–120K" and "$40,000" inconsistent. Reproduces: fuel $2,000/yr, $1,729 total, $879 × 84 = $73,836, $879 @8% 7 y = $98,548 (~"$95,000"). Pickup ATP ~$66K snippet-only.
+
+# Machine A owner-directed checkpoint — NICK_263–264 (2026-11-01)
+
+**Parent `342fcace`.** PR #36 / canonical branch still `223f4498`, untouched. 540/1,612 complete; next `NICK_265 mhb_Nd-0VjQ`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 534–535), 0 styles/formulas, zip OK. Usage UNKNOWN; session stopped here as a conservative checkpoint.
+
+- **NICK_263 `mWhpJZrTyNU` — Why Your First Million Feels Impossible (And The Next Comes Fast).** 2.07599× STRONG (5-peer 0.529× TYPICAL — tier unstable across windows); 11 claims. Reproduces: $1M→$2M 9.0 y at 8%, 3→4M 3.7 y, 4→5M 2.9 y; 8% vs 10% on $1M = $434,817 over 10 y; $300@25 $1.05M vs $1,000@45 $589K. Errors: opening "second million in about three years" contradicts its own 9-year math; 2→3M is 5.3 y not 6; hedge funds/PE "lower fees" wrong; "inflation becomes less relevant" misleading. Thumbnail "THE FIRST $1,000,000 IS ALSO A B*$£€".
+- **NICK_264 `maClOD9240k` — Why Everything Changes After You Start Looking Poor.** 1.36662× TYPICAL (5-peer 1.355×); 16 claims. Reproduces: $700/mo × 30 y = $853,980 (7%) / $1.04M (8%); 30-vs-35 gap $321K ($400/mo, 8%). Accurate references (recall): Millionaire Next Door $399/$235, Philadelphia Fed lottery-neighbour bankruptcies (PHLLOT), ~391% payday APR, Credit Karma 43%. Caveats: Toyota stat is from Stop Acting Rich (2009); Experian luxury stats dated; Edmunds values one quarter behind (ED4Q); rent-to-own "$1,000 for $200 TV" exceeds the stated 2–3×. Includes paid-community plug.
+
+# Machine A owner-directed checkpoint — NICK_261–262 (2026-11-01)
+
+**Parent `377308c2`.** PR #36 / canonical branch still `223f4498`, untouched. 538/1,612 complete; next `NICK_263 mWhpJZrTyNU`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 66 cells (dashboard 7 + rows 532–533), 0 styles/formulas, zip OK. Usage UNKNOWN.
+
+- **NICK_261 `mKVSk76bOJI` — The One Mindset Shift That Fixes Your Finances.** 0.999× TYPICAL (5-peer 1.163× TYPICAL); 12 claims, few numbers. Identity-habit thesis is opinion; willpower-as-muscle (ego depletion) contested by registered replications (PSYR, recall); "lottery winners go broke" overgeneralised; "$10,000 rewrites brain chemistry" unsupported (scarcity/cortisol evidence exists but not the threshold). Stored text ends on a dangling "Financial".
+- **NICK_262 `mQH1MPWBsy4` — Why The Middle Class Is Being Taxed Into Poverty.** 0.5756× TYPICAL (5-peer 0.949×); 37 claims. Reproduces: FICA $8,415, withholding $8,814/refund $3,871, $39,886 and $62,086 totals, SS-cap 2.18%, FICA +59% since 1970. Errors: paycheck deductions ≠ net pay (Mike $637/$528/$463; Sarah $748 vs $621); "$48 left" is really −$952 (expenses sum $2,845); card balance $3,840 vs narrative ~$1,920; 2020 ITEP zero-tax figures wrong ($40.5B/$8.5B/$3.5B per ITEP20, not $79B/$16.4B/$4.3B); "75% of shareholders top 1%" wrong; $2,000 child credit stale (2025: $2,200); federal total uses pre-credit tax; German benefits overstated. Title contradicted by the script's own "not taxed more overall". Thumbnail hqdefault only (maxres 404).
+
+# Machine A owner-directed checkpoint — NICK_260 (2026-11-01)
+
+**Parent `fff72c12`.** PR #36 / canonical branch still `223f4498`, untouched. 536/1,612 complete; next `NICK_261 mKVSk76bOJI`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 531), 0 styles/formulas, zip OK. Single long-form video (2,984 s, 7,292 words, full stored text read); usage UNKNOWN.
+
+- **NICK_260 `mErWx9GiVUc` — You're Not Ready For What's Coming.** 0.77667× TYPICAL (5-peer 1.115× TYPICAL); 57 claim groups, 13 search-summary sources. Verified: Census $83,260→$83,730 (+$470); Yale $3,800→$1,700; NY Fed 94% (Jan–Aug 2025 only; 86% by Nov); NY Fed $1.28T cards; SF Fed $2.1T excess savings gone Mar 2024; NAHB 74.9%/100.6M; Challenger 54,836 AI cuts; DOL $64K fee example; retirement $830K→$342K real→$12,654→$36,354 reproduces. Wrong: 2026 401(k)/HSA limits ($24,000/$31,500/$4,450/$8,950 vs $24,500/$32,500/$4,400/$8,750); 22.5%/1909 credited to Tax Foundation (Yale's); "911K = 10% smaller" (≈0.6%); 2009 home-sales comparison (lowest since 1995); Goldman/JPM "65%" (45%/60%); Klarna "replaced 700". Stale: Morningstar 3.7% (3.9% for 2026). Unsupported: 30.9% panic sellers, 12.7% 90+ stock, version-two $28K/$9K/$31K outcomes. Edmunds values near but not Q4 2025 ($772, 29.3%, $7,214, 20.8%). $2,990 mortgage needs unstated PMI ($2,694 P&I). Thumbnail headline misspelled "IT'S HAPENING!".
+
+# Machine A owner-directed checkpoint — NICK_259 (2026-11-01)
+
+**Parent `fa5a7e42`.** PR #36 / canonical branch still `223f4498`, untouched. 535/1,612 complete; next `NICK_260 mErWx9GiVUc` (about 50 minutes; run it alone or with one short video). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 35 cells (dashboard 7 + row 530), 0 styles/formulas, zip OK. Single-video batch because usage is UNKNOWN.
+
+- **NICK_259 `m28yF-EXg58` — Buying vs Leasing a Car: The "New" Reality in 2026.** 0.94553× TYPICAL (5-peer 0.940×); 14 claims. Reproduces: $629/$37,711/$5,511/$43,511 loan; $389 lease and 0.0025×2,400 = 6%; Odette $60,696/$68,996, gap $25,480 → $31,980 after car value and repairs; $32K → $123,830 at 7%/20y; $4,500 mileage. Edmunds Q1 2026 30.9%/$7,183 verified (ED1) but Q2 (29.6%/$6,884) was out before publication. Hook's "$130 lower for nine years, 108 times" contradicts the 60-month loan. EV shares, EV depreciation and tariff 10.4% unverified.
+
+# Machine A owner-directed checkpoint — NICK_256–258 (2026-11-01)
+
+**Parent `669a9d7a`.** PR #36 / canonical branch still `223f4498`, untouched. 534/1,612 complete; next `NICK_259 m28yF-EXg58`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 527–529), 0 styles/formulas, zip OK. Usage UNKNOWN; disk ~27 GiB free.
+
+- **NICK_256 `l1NjZktMqj8` — The Crypto Trap That Keeps The Middle Class Poor.** 0.61297× TYPICAL (5-peer 0.291× WEAK); 17 claims. Verified: BIS Bulletin 69 majority-lost finding (BIS1; 73–81%/$431 by recall, $431 is a median), EPI 80.9%/29.4% (EPI1), Do Kwon 15 years (KWON1). Errors: "S&P 500 returned 45%" Nov 2021–Dec 2022 (it fell ~16%); $8,000→$11,200 vs $6,153→$11,400 inconsistent (≈$8,614); 3–7.5%/trade × 24 trades ≠ $200–$1,500; IRS plan "3% monthly"; $331 BTC figure fits the Oct 2021 Matt Damon ad, not Super Bowl 2022. $87,656 reproduces (annual, start-of-year); $318,637 vs 315,012 same convention.
+- **NICK_257 `liK92Jhpn14` — The $20,000 Rule: When Money Finally Feels Safe.** 0.3864× WEAK (5-peer 0.561× TYPICAL); 9 claims. Vanguard 21% (≥$2,000 vs none) verified (VAN1), but "plateau / $5,000 more anxious than $2,000" unsupported and Vanguard reports a further 13% at 3–6 months. $20,000 threshold, amygdala claims and "first $20K harder than $100K" unsupported. 18% card / 2% savings stale. Third hack unfinished.
+- **NICK_258 `lwOIt8woWwA` — Why Everything Changes After You Hit $250,000 Invested.** 5.30984× STRONG (5-peer 7.559×); 9 claims. Compounding reproduces: $20K/$21.6K/$291.6K; $10K/yr at 8% reaches $250K in 13.6–14.3 y and $1M another 14.3 y; $250K→$500K 6.6 y; $1 → $4.66 in 20 y (script says $4). Lifetime earnings ~$2.3M avg / ~$1.7M median (LIFE1). Promised "three rules" never delivered.
+
+# Machine A owner-directed checkpoint — NICK_254–255 (2026-11-01)
+
+**Parent `26fe1f1f`.** PR #36 / canonical branch still `223f4498`, untouched. 531/1,612 complete; next `NICK_256 l1NjZktMqj8`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 63 cells (dashboard 7 + rows 525–526), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 2 target rows. Batch shortened to 2 because usage is UNKNOWN and NICK_254 is a 50-minute video. `SCHEDULED_TASK_PROMPT.md` now checks usage and free disk (<10 GiB = exit) before taking the lock. Scheduler still SETUP_REQUIRED (owner registers it in Claude Desktop).
+
+- **NICK_254 `ko97I4JNci4` — 1000s Are About to Get Rich Off SpaceX. Could You?** 6.73434× STRONG; 18 claims. Published 4 Jun 2026, a week before pricing; $135/SPCX/~$75B/~$1.77T confirmed afterwards (IPO1); Morningstar $780B (MS1); ~$5B GAAP loss (SPDJ1). Inconsistent multiples: Founders Fund $19.5B/$20M = 975× (not 62,000%); Alphabet $100B/$0.9B = 111× (not 64×); $1.75T/$18.7B = 93.6× revenue (not "well over 100×"). Unverified: 30% retail allocation, Starlink metrics, Musk 85% votes, "$4M median" employee outcome. Thumbnail chart implies a public price history.
+- **NICK_255 `kyg5Xdi52TQ` — Are You On Track to Becoming a Multi-Millionaire? (2026 Edition).** 4.14102× STRONG; 21 claims. Reproduces: Wanda $1.46M/$3.43M/$732K, delay cost $730K (2.6× deposits), monthly targets 610/1,110/2,469/6,310, Otis $725K/$1.18M, 3.9% × $2M = $78K; SCF percentiles and age medians consistent. Errors: Alton's $300/month for 24y = $223K, not $437K (needs ~$42K unstated savings); "half of private workers have no plan available" overstates (BLS ~70% access). SHED $400 framed correctly.
+
+# Machine A owner-directed checkpoint — NICK_251–253 (2026-11-01)
+
+**Parent `e76d7fc5`.** PR #36 / canonical branch still `223f4498`, untouched. 529/1,612 complete; next `NICK_254 ko97I4JNci4`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 522–524), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN; disk ~29 GiB free.
+
+- **NICK_251 `jxeB_FcQrc0` — How Much Car Your Salary Actually Buys You.** 3.9618× STRONG; 15 claims. Reproduces: $50K tier ($8.1K/$6.3K), depreciation 23%/60%, Mike $393 and $68,368, $200×30y = $243,994, $39 add-ons. Errors: higher-tier price ranges understate the script's own payments ($350 → ~$19K, $700 → ~$38K); $150K recap $40K vs $30–35K; Sarah's $900 is 14.4% of gross (17.6% of take-home), and she owes ~$23.7K not $28K after 3 years; $20K loan totals 22,108/23,191/23,745, not 21.66K/22,645/23,712; Buffett did not keep one car for decades.
+- **NICK_252 `kVpJ1Elw680` — Retire on $1,000,000? The Shocking Reality.** 0.15245× WEAK; 11 claims. Reproduces: 3/4/5% incomes, $41,200, $61,600/$83,200, 70–80% replacement. Stale: $1,800 Social Security average vs ~$2,008 (SSA Aug 2025). Summary "$40–60K with Social Security" contradicts the body's $61.6K. Two transcript passages scrambled. "Shocking" overstates a reassuring conclusion.
+- **NICK_253 `kZW4JQj_igg` — The Invisible Prison.** 0.4915× WEAK (5-peer TYPICAL); 11 claims. Transcript TRUNCATED mid-sentence; $2M-lifetime passage duplicated. $300×60 = $18,000, not $30,000; card APR 19% vs Fed G.19 22.30% (Nov 2025); $1,000 fees, $100K ignorance tax and gym-quit claims unsourced. Apartment/cable arithmetic reproduces (cable uses an implicit ~5%).
+
+# Machine A owner-directed checkpoint — NICK_248–250 (2026-11-01)
+
+**Parent `01336bd7`.** PR #36 / canonical branch still `223f4498`, untouched. 526/1,612 complete; next `NICK_251 jxeB_FcQrc0`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 519–521), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows (queue also back-fills the NICK_245–247 commit SHA). Usage UNKNOWN; disk ~29 GiB free; swap ~18 of 19 GB used.
+
+- **NICK_248 `jVu2-t_RVII` — The Psychology of Money Nobody Talks About.** 0.17718× WEAK; 9 claims. Verified: Experian Oct 2023 68% self-reported financial trauma. Misstated: "23%/36% qualify for a PTSD diagnosis" is Payoff's 2016 symptom-overlap survey, not a diagnosis. Partly verified: Northwestern Mutual 2024 45% disciplined planners; the 2020 65% figure not found. Thumbnail "MONEY TRAUMA IS REAL" matches.
+- **NICK_249 `jZBATMmSBAg` — The Reasons Why Most Americans Are Broke.** 0.63933× TYPICAL; 8 claims. SHED: 37% would not cover $400 with cash, but only ~12–13% could not pay at all, so "simply cannot cover it" overstates; "not because they don't earn enough" is unsupported. Cigarette $250/$3,000/$30,000 reproduces. Thumbnail promises "SHOCKING STATISTICS"; the script has one. Master topic tag "geopolitics" is a heuristic error.
+- **NICK_250 `jpD1YXj0JRM` — Why Everything Changes After You Hit $500,000 Invested.** 1.54694× TYPICAL; 22 claims. Reproduces: 8% yields, doubling 9.0y, fee drag $5.03M vs $3.81M, Coast FIRE $2.7M/$4.1M/$1.2M, FI $1.25M→$1.875M. Verified: Morningstar 2025 1.2-pt gap (FAJ critique noted), Dalbar 2025 16.54% vs 25.02%. Errors: milestone timeline (7.3/7.8/6.8/7) does not reproduce (≈6.4/5.9/6.2/7.2); Alan's path needs $1,190 then $3,010/month; 2029/2034 crashes are invented future events narrated as past; 22% "effective" tax is a marginal bracket; "4 years faster" unsourced.
+
+# Machine A owner-directed checkpoint — NICK_245–247 (2026-11-01)
+
+**Parent `47c30456`.** PR #36 / canonical branch still `223f4498`, untouched. 523/1,612 complete; next `NICK_248 jVu2-t_RVII`. Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 516–518), 0 styles/formulas, zip OK (package parts differ only by exporter relationship IDs); each CSV/JSONL changed only the 3 target rows. Five-hour limit was hit at ~14:00 and reset at 16:40 PKT; usage after reset UNKNOWN. Disk ~27 GiB free (swap pressure eased).
+
+- **NICK_245 `ib9B7I8YsRo` — How Two Incomes Made the Middle Class POORER.** 0.72474× TYPICAL; 22 claims. Verified: Fisher–Johnson CES-WP-19-19 exists (two-earner couples more likely to file); BofA ~24% paycheck to paycheck. Errors: Tom/Susan restated to today's dollars ($78,400; $36,400 left) but Justin/Kimberly left in early-2000s dollars ($67,800), so "75% more", "mortgage up 76%" and "$800 less" contradict the narrated numbers (actual narrated gap $19,355); "33% federal bracket" is the book's average total tax rate; Hazel's chain $54K − $13K = $41K, not $28K; $12K/2,080 h = $5.77, not $8. Reproduces: J&K fixed costs ≈ $50,672; Redfin $100K; Lily ~$552,658. Fisher–Johnson "10%" effect size not confirmed. Thumbnail "MORE MONEY... POORER?!" matches.
+- **NICK_246 `ikyXIWuAkLM` — Track These 4 Numbers To Retire Decades Early.** 0.7834× TYPICAL; 17 claims. Reproduces: savings-rate table (10% → 51.4y, 20% → 36.7y, 50% → 16.6y; 5→6% saves 3.8y; 65→66% saves 4.3 months); $300 capital per $1/month; car $749 → $224,700; 1% fee ≈ 24.5% over 30y; 3.5% SWR → 28.6×; crossover ≈ 11.9y at 6%, independent of contribution. Correct by recall: ACA enhanced subsidies expired end-2025, Bengen/Morningstar, CAPE, 72(t)/rule of 55/Roth ladder, EBRI 65 vs 62. Unverified: "under 3%" saving rate, KFF premium example, Grace's $6K/$85K/$300K gaps. Thumbnail "RETIRE EARLY WITH THESE!" with four numbered cans. Community promotion.
+- **NICK_247 `jFH7Cl6Uc_M` — Why Is the World In So Much Debt.** 1.18539× TYPICAL; 21 claims; stored transcript truncated at the end; maxres 404 (hqdefault inspected). Verified: IIF end-2025 $348.3T (gov $106.7T, corp $100.6T, households $64.6T), debt/GDP down five years; FY2025 net interest $970.4B (~19% of revenue, > defence); NY Fed $18.8T. Reproduces: $320K at 7.00% vs 3.00% → $2,129 vs $1,349, interest $446,440 vs $165,640; $43K per person; $116K per American; $7,348 per household. Minor: $2.8B/day is $2.66B; "default unavailable" overstated; "gone in seven" ambiguous. Unsourced: growth-alone 73% counterfactual. Thumbnail "NO WAY OUT" with a chained globe contradicts the script's no-collapse, five-exits conclusion.
+
+# Machine A owner-directed checkpoint — NICK_242–244 (2026-11-01)
+
+**Parent `421dc0ca`.** PR #36 / canonical branch still `223f4498`, untouched. 520/1,612 complete; next `NICK_245 ib9B7I8YsRo` (How Two Incomes Made the Middle Class POORER). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 513–515), 0 styles/formulas, zip OK (package parts differ only by exporter relationship IDs); each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN; disk ~6.9 GiB.
+
+- **NICK_242 `i7eR3JUrefg` — 29 Minutes of People Living Above Their Means and Going BROKE.** 1.23717× TYPICAL; 13 claims. Reaction compilation of ~20 third-party social clips. Verified: NY Fed Q4 2025 credit-card balances record $1.28T. Reproduces: post-bankruptcy $92,589 (implies garbled car loan $21,444); 22-year-old $101,336; 100,000 rand ≈ $5,400–5,600. Not reproducible: truck "$57,000 to own" (cash outlay ~$67,875; implied APR ~15%). Jeep $978 + $154 = $1,132, not "$1,200". Thumbnail uses two real-person photos ("INSANE!", "IM' BROKE!" typo); presence in the video unverified.
+- **NICK_243 `iAgCkciSMDs` — How Much Money You Actually Need To Be 'Rich' in 2025.** 3.35391× STRONG; 9 claims. Verified/consistent: Census 2024 median income $83,730; SCF 2022 median NW $192,700, under-35 $39,000, 90th ~$1.9M, 95th ~$3.8M, 99th ~$11.6–13.7M (2022 data in a "2025" title). Reproduces: top10→top1 gap $9.7M; $100K career saving 15% vs 1.5% at 7% for 40y = $2.99M vs $299K. Unsourced: income percentile thresholds; individual top-1% "$450,000" questionable. Thumbnail "ARE YOU RICH?".
+- **NICK_244 `iUANZCNnJQI` — The SpaceX IPO Is About To Flip Your 401k.** 0.55159× TYPICAL (just above WEAK); 17 claims; 52 min. Verified: IPO priced 11 Jun 2026 at $135, ~555M shares, ~$75B, ~$1.77T, +19% day one; S&P kept seasoning/profitability rules on 4 Jun 2026; SpaceX 2025 net loss ~$4.94B; Nasdaq-100 15-day fast entry; Morningstar $780B; Aug 2025 private-assets 401(k) executive order. Reproduces: fee drag $761K vs $432K (43%); DOL 1% → 28%; 2,500× Founders Fund; 12.9× private run. Errors: ticker is SPCX not "SPACE"; size bar cleared by ~7,700%, not 70,000%; "62,000%" private run inconsistent; Tesla 2020 run-up ~60–70%, not ~40%. Thumbnail "ARE YOU READY?!" with SpaceX lifting a 401K line contradicts the cautionary script. Community promotion.
+
+# Machine A owner-directed checkpoint — NICK_239–241 (2026-11-01)
+
+**Parent `daebcba4`.** PR #36 / canonical branch still `223f4498`, untouched. 517/1,612 complete; next `NICK_242 i7eR3JUrefg` (29 Minutes of People Living Above Their Means and Going BROKE). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 510–512), 0 styles/formulas, zip OK (package parts differ only by exporter relationship IDs); each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN. Disk ~7.1 GiB free: the earlier 11→6.7 GiB drop was traced to macOS swap growth (`/System/Volumes/VM` swapfile11–14 created 11:45–13:28 today under memory pressure), not to Finance or Visual Forensics writes; nothing in YIOS was deleted.
+
+- **NICK_239 `hHJOdHSeeuU` — 30 Unsexy Habits That Make Serious Money ($100,000+).** 1.37686× TYPICAL; 26 claims; 52-min list essay, stored text ends without a sign-off. Verified: Ramsey 79% no inheritance / 75% consistent investing. Reproduces: nearly every compounding figure (car $230/mo → $342,783 monthly; $583/mo housing → $711,650; room 38.9%, $384,401; geography $1.47M; DALBAR $2.08M vs $789K; HSA ~$822K; match $54,770; phone $149,726; raise $819,910; insurance $56,642; taxes $59,891). Errors/out of date: IRS Direct File was not offered in the 2026 season (video March 2026); 2025 HSA limits quoted in 2026; "only about 5%" invest HSAs (Devenir YE2025 ~10%); employer match is not "legally obligated"; 43–50% is a total-DTI limit; $15K/yr leak = $2.99M, not "over $3M"; minimum-payment "22 years / $18K" not reproducible under one formula; 37% boat depreciation contradicts 10–15%. DALBAR 10.65%/7.13% pair not confirmed. Thumbnail "BORING = RICH" matches.
+- **NICK_240 `hvcr7gVbcr0` — $100,000 Means You're 1/3 Of The Way To $1,000,000.** 2.85698× STRONG (5-peer 2.01); 13 claims. $100/week at 8% reproduces 11.7 / 17.6 / 35.0 / 43.3 years to $100K/$200K/$1M/$2M; contributions $62,400/$93,600/$187,200. "One-third" and "halfway" are time ratios, not money (title reads as money). "8% is inflation-adjusted and conservative" is inconsistent (real ≈ 6.5–7%). Experian new-car payment $735–749 supports "over $700" for new loans only. Thumbnail "ALMOST AT $1,000,000" with a clock.
+- **NICK_241 `hzQsUoXqLQc` — The High Income Poverty Trap.** 1.01652× TYPICAL; 14 claims. Reproduces: 5% vs 20% of $200K for 30 years at 7% = $944,608 vs $3,778,431 (gap $2.83M); single $200K 2026 federal + FICA ≈ $51,073 (25.5%), so 35% in a high-tax state is plausible, 40% high. BofA Institute (~24% overall, <20% of higher earners paycheck to paycheck) roughly consistent. SCF mean/median, UAWs, Luttmer correct by recall; several survey shares unsourced. Community promotion twice. Thumbnail "THEY'RE BROKE!?" with a chained dollar.
+
+# Machine A owner-directed checkpoint — NICK_236–238 (2026-11-01)
+
+**Parent `5d7f78ee`.** PR #36 / canonical branch still `223f4498`, untouched. 514/1,612 complete; next `NICK_239 hHJOdHSeeuU` (30 Unsexy Habits That Make Serious Money ($100,000+)). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest + 2 node tests, workbook 91 cells (dashboard 7 + rows 507–509), 0 styles/formulas, zip OK (package parts differ only by exporter relationship IDs, now also visible in `xl/workbook.xml`); each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
+
+- **NICK_236 `gt8KAc7h9O8` — What No One Tells You About Being a Millionaire.** 4.29824× STRONG (all ten peers TYPICAL); 13 claims. Verified: Fidelity 2025 $172,500 per retiree (~$345,000 couple). Reproduces: $1M 2026 ≈ $514–522K (2000) / $246–250K (1980) CPI; RMD $37,736. Errors: $1M net worth "top 10–15%" (SCF 2022 90th pct ~$1.9M); pre-tax $1M "≈ $700,000 spendable" overstates tax at $40–47K draws; John (50s) faces RMDs at 75 under SECURE 2.0, not 73; Ramsey average is 28 years, not 26. Faceless-YouTube community promotion. Thumbnail "$1M... NOT RICH?!" matches the thesis.
+- **NICK_237 `gwm1Hr5iipU` — The 50 Year Mortgage Trap That'll Keep You in Debt Forever.** 0.32481× WEAK; 13 claims. Verified: Trump/Pulte 50-year idea (8–9 Nov 2025, no rule; QM caps 30 years), NAR first-time age 40. Reproduces: $400K at 6% — $2,398 vs $2,106, $463K vs $863K interest, $292.58/month, +$400K; 10-year paydown 16.3% vs 4.3% ("less than 4%" slightly low). Unsupported: Japan "introduced 50-year mortgages in the 1990s… 36 years to recover"; prices rise "exactly" by the payment cut; banks "enthusiastically supporting" (reaction was tepid); $9,000 average card debt.
+- **NICK_238 `hDoFNuIDTiI` — The 3 Income Levels Where Life Starts Feeling Different.** 0.5361× TYPICAL (just above WEAK); 17 claims. Verified: Fed SHED 2025 (13 May 2026) 63% cash for $400, 73% doing okay. Correct by recall: Kahneman–Deaton/Killingsworth 2023, Bengen/Trinity, KFF premiums, Whillans 2017. Error: $100K in Texas takes home ~$79K single / ~$85K joint, not $74K. Unsourced: 13% "by any means", 62%/44% paycheck-to-paycheck, income percentiles, 11 vs 39 affordable markets. Thumbnail $50K/$250K/$1M with a Ferrari doesn't match the script's levels or message.
+
+# Machine A owner-directed checkpoint — NICK_233–235 (2026-11-01)
+
+**Parent `05616ade`.** PR #36 / canonical branch still `223f4498`, untouched. 511/1,612 complete; next `NICK_236 gt8KAc7h9O8` (What No One Tells You About Being a Millionaire). Validation: `validate_audit_966` rc=0, `validate_research` rc=0, 47 pytest (38 + 9 expansion) + 2 node tests, workbook 91 cells (dashboard 7 + rows 504–506), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN. Note: NICK_230–232 `_VALIDATION.json` companions say `38_PASS` although 47 tests ran; `vr.py`/`post.py` now record 47 (accepted files left unchanged).
+
+- **NICK_233 `f6HIYQUiMoU` — WTF Just Happened To The Housing Market?!** 33.03× STRONG (channel outlier, 361,243 views); 21 claims. Verified: Freddie Mac 6.46% (2 Apr 2026), NAR 2025 Profile 21% first-time / age 40, Feb 2026 3.8 months' supply. Reproduces: $1,289/$2,023/$2,301 payments, $363,240 life-of-loan gap, Maya $3,010 / 64.7%. Errors: median "$418,000" (NAR Feb 2026 $398,000); $272K→$418K is +53.7% not 46%; FHFA lock-in 1.33M sales not 1.7M; "100 million more people than 1995" (~76M); below-4% share 51% then 48%; $730 gap moved from a $320K to a $400K loan and called "interest". Thumbnail "IT'S OVER..." crash graphic contradicts "Is this 2008? No."
+- **NICK_234 `fDdT5xPDdD0` — Shocking Money Stats Of The Average Person (Part 2).** 0.85163× TYPICAL; 17 claims. Verified: Edmunds >1 in 4 trade-ins underwater (~$6,700–7,000), Vanguard 28% rollover IRAs in cash. Reproduces: $20 vs $175 interest, savings race 9.58 vs 11.53 years. Stale/understated: first-time buyer age 38 (NAR Nov 2025: 40); top 10% net worth "just over $1M" (SCF 2022 ~$1.9M). Most statistics unsourced.
+- **NICK_235 `g2nNpY3rHaU` — 8 Things That Are a Complete WASTE of Your Money.** 2.06834× STRONG (21 days old, at boundary; all ten peers TYPICAL); 20 claims. Verified: Edmunds Q4 2025 29.3% / $7,214; JFE 2026 sports-betting paper (per-dollar effect differs by version). Regulatory rollbacks (overdraft CRA, click-to-cancel vacated, late-fee cap) correct. Errors: fee drag $663K is the 20-year gap (30-year $1.87M); tally sums to $8,215 as spoken (fee item "250" should be $2,070 → $10,035); $7,900 × 22% = $1,738 not $1,760; minimum-payment 19 yrs/$21,600 not reproducible; stored ending truncated. Thumbnail items (coffee, iPhone, sneakers, Bitcoin) are none of the eight.
+
+# Machine A owner-directed checkpoint — NICK_230–232 (2026-11-01)
+
+**Parent `c4498939`.** PR #36 / canonical branch still `223f4498`, untouched. 508/1,612 complete; next `NICK_233 f6HIYQUiMoU`. Validation: `validate_audit_966` rc=0 (0 errors), `validate_research` rc=0, 47 pytest (38 + 9 expansion) + 2 node tests, workbook 91 cells (dashboard 7 + rows 501–503), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN. Checkpoint fix: NICK_227–229 containing commit recorded as `c5bbd034` (expansion commits `be429c60`, `c4498939` sit between).
+
+- **NICK_230 `eU2JB3BP4x0` — What Would ACTUALLY Happen If You Stopped Paying Your Bills.** 0.25786× WEAK (5 of 10 peers STRONG); 16 claims. Verified: IRS passport threshold >$66,000 (2026). Reproduces: penalty APR +$479/yr, 4¢ debt sale, $7,000 deficiency. Misleading: student-loan garnishment "scaling up every month" — ED paused AWG/Treasury offset ~16 Jan 2026 after ~1,000 notices. Thumbnail "THEY TAKE EVERYTHING" contradicts the calming thesis.
+- **NICK_231 `epARf5FqE_I` — How People Treat You Once You Hit $1,000,000 Invested.** 1.26861× TYPICAL; 12 claims. Stale: Fidelity "595,000" 401(k) millionaires (Q1 2026: 645,000). Reproduces: $1M 1990 ≈ $2.52M; first $100K 7.84 yrs, last $400K 6.37 yrs. Correctly debunks the "70% of lottery winners go bankrupt" myth. Thumbnail red-carpet treatment contradicts the script's answer; faceless-YouTube promotion.
+- **NICK_232 `epr30mUtEMw` — 2026 Average Net Worth By Age (Are You Behind?).** 1.08159× TYPICAL; 14 claims. Verified: SCF 2022 mean $1,063,700 / median $192,700, age medians. Errors: 55–64 median stated as $320,700 then $364,500; $7,500 from 35 → $849,624 not $875,000; Derek's salary shifts ($115K/$75K/$82K); thumbnail numbers ($0.02/$950K/$300) absent from script.
+
+# Machine A owner-directed checkpoint — NICK_227–229 (2026-11-01)
+
+**Parent `36cb78c6`.** PR #36 / canonical branch still `223f4498`, untouched. 505/1,612 complete; next `NICK_230 eU2JB3BP4x0`. Validation: `validate_audit_966` rc=0 (0 errors), `validate_research` rc=0, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 498–500), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
+
+- **NICK_227 `eAzo0uvSnus` — The One Financial Trap Every Generation Fall (stored title incomplete).** 0.72657× TYPICAL; 17 claims. Verified: Goldman Sachs Retirement Survey 2025, 41% of $300K–$500K earners self-report paycheck to paycheck (2026 report ~34%). Reproduces: $400/month from 25 vs 35 → $1,396,403 vs $596,144; $700 rent → $2,443,705; $136 → $202,689/$474,777; $312.50 raise → $465,737. Overstated: card debt "$82B in 1980" (G.19 revolving ~$53.7B). BNPL, HELOC 765% and subscription $273/435% figures unsourced.
+- **NICK_228 `eEw52CPOrbE` — What changes After You Hit $100,000 In Savings.** 0.99803× TYPICAL; 7 claims (few concrete claims). "100,000 rule" and "researchers call" labels unsupported; the 8% return is a market assumption applied to "savings" (FDIC national savings 0.40% → ~$400/year, not $8,000). Two closing summaries, repeated sections, heavy ASR filler.
+- **NICK_229 `eU0bOs2J1_E` — How Banks Treat You at Every Level of Wealth.** 0.90647× TYPICAL; 12 claims. Verified: CFPB 9% of accounts pay 79% of overdraft/NSF fees; $5 cap final rule repealed by CRA (S.J.Res. 18, signed 9 May 2025); ProPublica $401B / $13.6B / 3.4%, Bezos 0.98%. Errors: fee walk $15+$35+$35 = $85 not $120 as narrated; Bezos "$1.09 per $100" contradicts 0.98%; Indigo $175 fee (Indigo is $0–99); SBLOC 5.5–7% understates SOFR+4.4%; JPM $10M minimum "recently" is 2021.
+
+# Machine A owner-directed checkpoint — NICK_224–226 (2026-11-01)
+
+**Parent `d5cd987c`.** PR #36 / canonical branch still `223f4498`, untouched. 502/1,612 complete; next `NICK_227 eAzo0uvSnus`. Validation: `validate_audit_966` rc=0 (502 analyzed, 0 errors), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 495–497), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN.
+
+- **NICK_224 `dwbvvyeRonE` — The Biggest Wealth Killers in Your 20s and 30s.** 0.65453× TYPICAL (~51 days old); 15 claims. Verified: Edmunds Q1/Q2 2026 negative equity 30.9%/29.6%, $932/$944 payments, ~$777 new payment. Reproduces: $830/month raise → $1.01M (30y), $470 difference → $700,469, $500 from 25 vs 35 → $1.31M vs $610K. Stale: "saving rate about 4%" (BEA April 2.6%, May 3.0%). BNPL, $1,000-emergency and 13× figures unsourced; stored ending truncated. Thumbnail "PLEASE NOT BUY" is ungrammatical.
+- **NICK_225 `dxLjgAe3Q0M` — The 3 "Silent" Fees Destroying Your Wealth (Not Taxes).** 0.37404× WEAK; 14 claims. Reproduces: 40-year $763K vs $3.16M, $673K vs $321K, 24-year inflation halving. Overstated: fee gap $300K/25% (≈$261K/23%); HYSA "4–5%" in Jan 2026; S&P new high "four months" after March 2020 (record close 18 Aug 2020, ~5 months); late-starter "+$200,000". The behaviour-gap section and the action plan each appear twice with conflicting numbers (concatenated drafts).
+- **NICK_226 `e06r3ZWyBVc` — Top 5 Wealth Killers You Have to Avoid.** 0.82458× TYPICAL; 14 claims. Verified: Fidelity 1980–2022 $1,082,309 / −38% (5 best days) / −55% (10 best). Stale: AAA "over $12,000" (2025 study $11,577). Overstated: lunch $8→$12–13 in four years; Buffett "same car for decades". Minimum-payment "30 years, $32,000" not reproducible ($27,266 over 24.9 years at 1%+interest); "ahead of 90%" later "80%".
+
+Expansion: the 30 candidates' 104 locators still resolve to the recorded blobs. Branch-local registration was assessed under the owner's new authorization and **not performed**: none of the 30 IDs exist in the registry `videos` table (the transcript FK needs a new dataset/channel/video registration), the registry is a 141 MB LFS binary, the queue reads expansion acceptance only from the 966 ledger, and there is no K01 baseline for expansion rows. Blockers and next steps are recorded in `EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json` → `registration_readiness` (INTEGRATION_READY_NOT_REGISTERED).
+
+# Machine A owner-directed checkpoint — NICK_221–223 (2026-11-01)
+
+**Parent `aad11396`.** PR #36 / canonical branch still `223f4498`, untouched. 499/1,612 complete; next `NICK_224 dwbvvyeRonE`. Validation: `validate_audit_966` rc=0 (499 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 492–494), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_221 `dlnPr167zII` — You'll Stop Working BEFORE 50 Once You Understand This.** 1.02296× TYPICAL; 15 claims. Savings-rate table (51/32/17/10.5/7 years) and the 10%→20% gain of ~14 years reproduce (5% real, 4% rule). Verified: 2026 ACA cliff returned (enhanced credits expired 31 Dec 2025). Errors: 72(t) described as "at least 5 years" (actually the longer of 5 years or age 59½); 3.5% paired with 30× (3.5% is 28.6×). Roth-ladder conversions raise MAGI, which cuts against the ACA-subsidy tactic; not flagged.
+- **NICK_222 `doUSOwmdaw0` — How Banks Actually Make Money Off You (10 Things Most People Miss).** 0.4881× WEAK; 17 claims. Verified: FDIC national savings 0.39–0.40%. Reproduces: $300 first-month principal, ~88% owed after 8 years. Errors: FDIC "$250,000 per account" (per depositor, per bank, per ownership category); $300K at 6% total ~$648K not ~$600K; reserve-requirement cut was announced, not "quiet"; SBLOC "4%" below SOFR+spread; incoherent FX example. Leaked "Here's the continuation of the script." line; stored ending truncated.
+- **NICK_223 `duTU1_Fdav0` — Do This Once You Have $50,000 Saved.** 0.64531× TYPICAL; 23 claims. Verified: Santander 69% (definition: no HYSA/MMA/CD), 2026 limits, DALBAR 848 bp. Reproduces: $37,205 real, $130,871 Roth, $600 vs $1.50. Errors: Buffett bet hedge funds "22%" (five funds of funds averaged 36.3%); VXUS 0.07% (0.05% since Feb 2025); $5K/yr 7% 30y "over half a million" ($472K); $134K fee drag (≈$125K at 10%); Jaime's "doubling" counts new 401(k) contributions; thumbnail "50K TO 100K" rests on it.
+
+# Machine A owner-directed checkpoint — NICK_218–220 (2026-11-01)
+
+**Parent `7b235f9e`.** PR #36 / canonical branch still `223f4498`, untouched. 496/1,612 complete; next `NICK_221 dlnPr167zII`. Validation: `validate_audit_966` rc=0 (496 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 489–491), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_218 `dF-_DaVgir0` — The Biggest Financial Traps Men Fall In Their 40's.** 0.84888× TYPICAL; 15 claims. Verified: Vanguard 45–54 median $67,796 (2025 ed.), AGA $13.71B bettor losses. Truck, sports, whole-life, boat and betting opportunity costs reproduce. Errors: catch-up $1.27M at 7% *real* then deflated again to ~$700K (double count); AGA handle $149.90B not $147.91B; Barber–Odean return gaps garbled; household median applied to "working men"; thumbnail "BAD DIVORCE" panel never covered.
+- **NICK_219 `dJqAfhcX5lw` — What Changes at $1M, $2M, and $5M Retirement?** 0.50009× TYPICAL (at WEAK boundary, ~17 days old); 17 claims. Verified: EBRI spend-down (11.8% vs ~25%, one-third grew assets), Fidelity YE2025 $146,100/$34,400 (one quarter stale). RMDs ($81,300/$203,252), Social Security shares, $5.38M 15% threshold, 8/12-year jumps reproduce. "1% eats 30%" is 24.5% at 7%.
+- **NICK_220 `d_oOo5wDMOg` — Who Can Afford Rent In 2026?** 1.06668× TYPICAL; 21 claims. Verified: Zillow March 2026 $1,910 / +1.8%, JCHS 22.6M / 12.1M cost-burdened, DOJ–RealPage settlement with no penalty. Kevin budget, 45% burden, eviction every 6.05 min, year-one interest 84% reproduce. Problems: thumbnail "$3,000 RENT" absent from script; Denver −$938 not reproducible; FTC junk-fee rule scope overstated; down-payment "five years ago essentially zero".
+
+Checkpoint fix: NICK_215–217 containing commit recorded as `930155e6` (the expansion-only commit `7b235f9e` sits between batches).
+
+# Machine A expansion-source preparation (2026-11-01)
+
+The 30 Casually Finance expansion transcript candidates (16 forensic-research `TRANSCRIPT.csv`, 14 editing-forensics `auto/asr_words.csv`, read from origin blobs only) are verified in `EXPANSION_TRANSCRIPT_CANDIDATES_VERIFIED.json`: ID match, identical copies, 0.98–1.00 duration coverage, no duplicates, content consistent with titles. They are **branch-local verified candidates, not registered and not canonically accepted**. Registration is the registry writer's job (Machine B). Note: the forensic-research `word_index` restarts per sentence, so order words by `start_sec`.
+
+# Machine A owner-directed checkpoint — NICK_215–217 (2026-11-01)
+
+**Parent `4fa498b1`.** PR #36 / canonical branch still `223f4498`, untouched. 493/1,612 complete; next `NICK_218 dF-_DaVgir0`. Validation: `validate_audit_966` rc=0 (493 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 486–488), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_215 `ccNuYRhrA0U` — POV: You Stopped Following Normal Money Advice.** 1.00027× TYPICAL; 18 claims. Verified: Census $83,730 median, CE $77K spending, SPIVA ~95% 20-year, Vanguard 55–64 median $95,642. Rent-vs-buy 57%/118%/131% is a March 2025 study (stale). Reproduces: 1% fee on $500K = $934K; $700/month = $1.58M only at an unstated 10%. Problems: Nina/Ian ages and horizons inconsistent; $3.16M not reproducible from 35% of $60K at 8%; "$72K after tax" vs "$60K"; 20% day-one depreciation; MIT 12–18%; "physical pain" neuroscience.
+- **NICK_216 `ciWCTKap5ZM` — How to Invest Your First $1,000 in 2026.** 0.96779× TYPICAL; 11 claims. Verified 2026 IRA $7,500/$8,600. Wrong: $1,000 → $50,000 in 30 years (needs 13.9%; $17,449 at 10%); active funds "2–3%" (ICI ~0.64% active, 0.40% all equity); FXAIX labelled total market.
+- **NICK_217 `czaMRc6fZQI` — If I Started Investing in August 2026, This is What I'd Buy.** 0.76669× TYPICAL (~19 days old); 16 claims. Verified: S&P ~7,700–7,800, 30-year Treasury 5.31% 19-year high (17 Aug), July CPI 3.4%, 2026 IRA/401(k) limits, best-days pattern. Reproduces blended 0.034% fee and $566K/$89K fee example (annual convention). Problems: "VT or VOO" for the US slice; 51% saving at target conflated with missing the match; best-days period label uncertain. Correctly flags the Fidelity "dead accounts" story as folklore.
+
+# Machine A owner-directed checkpoint — NICK_212–214 (2026-11-01)
+
+**Parent `3d498714`.** PR #36 / canonical branch still `223f4498`, untouched. 490/1,612 complete; next `NICK_215 ccNuYRhrA0U`. Validation: `validate_audit_966` rc=0 (490 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 483–485), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows. Usage UNKNOWN (not readable from session).
+
+- **NICK_212 `bv5qS6sR4Bs` — Are You Ready For What's Coming?** 4.79096× STRONG (5-peer 6.20×); 17 claims. Published 26 Mar 2026 during the Iran war / Hormuz oil shock. Verified: IEA "largest supply disruption" and record 400M-barrel release, Brent ~$120 peak, late-March gas $3.96 (EIA) / diesel $5.37, FOMC hold 3.50–3.75%, NY Fed $1.28T card debt, DALBAR 848 bp / 15 years, urea ~+50% and Hormuz third of urea trade. Wrong/unsupported: February mortgage 5.87% (Freddie low 5.98%), NOLA "32% in one week", Spirit 124%, "15,000% vs 91%", "1973 and 1979 combined". DALBAR research presented as "our research". Maya grocery example (+12–21%) overstates the cited 4.4% CPI.
+- **NICK_213 `cCgJ_itCb-0` — Your Friends Are Secretly Making You Poor (The Friendship Tax).** 0.43928× WEAK; 10 claims. Illustrative sums reproduce; guest spending per wedding ($461–610) within the stated $300–700. Unsourced $4,000/year social spending; 50% marriage survival overstated; 90/10 split invented.
+- **NICK_214 `cGVuTIDDqtc` — The First $100k is the Hardest (Why 75% Fail).** 0.72251× TYPICAL; 12 claims. Car loan, $100K compounding and milestone ages reproduce approximately. Overstated: $5K/yr 40y "over $1.4M" ($1.30–1.40M), 30y "~$650K" ($566–612K), delayed balance $310K (~$270K), 3/2/1.5-year increments. Stale: $75K household income (2024 median $83,730). Both "75%" figures unsourced.
+
+# Machine A owner-directed checkpoint — NICK_209–211 (2026-10-31)
+
+**Parent `dd4df016`.** PR #36 / canonical branch still `223f4498`, untouched. 487/1,612 complete; next `NICK_212 bv5qS6sR4Bs`. Validation: `validate_audit_966` rc=0 (487 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 479, 481, 482; row 480 is a non-target row), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
+
+- **NICK_209 `b-Wl948s8Iw` — Why $300,000 Net Worth Feels Like Nothing in 2026.** 0.51233× TYPICAL (just above WEAK); 16 claims. Verified Schwab 2025 $2.3M / $839K. Many sums and compounding figures reproduce. Errors: 2022 loss at the stated 20.5% is $61,500, not $76,200; Musk $250B since 2020 vs "$800B in a year"; retirement gap ignores the second spouse's Social Security; compounding applied to the full $300K after excluding home equity; premiums rose ~54%, not 49%.
+- **NICK_210 `bHZObxKdzxA` — The Easiest (& Laziest) Way to Get Rich.** 0.79334× TYPICAL (~51 days old); 14 claims. SPIVA 2024 summary confirms no category majority outperforming over 15 years (exact ~90% and "zero" persistence not confirmed). Bogle/Dalbar/JPM best-days arithmetic reproduces. $987K implies ~9.4%; waiting 10 years costs ~two-thirds, not half; thumbnail "$50 → $2M" is unsupported; Magellan "investors lost money" unverified.
+- **NICK_211 `bYmB2S2h_B4` — Why "Not-So-Smart" People Get Rich Faster Than You Think.** 1.73944× TYPICAL; 7 claims. Swedish ability-plateau study (ESR 2023, 59,000 men, top 1% slightly lower) verified, but the script overstates it as top earners being "dumber". EQ "85–90% of success" is a popular misquote; the Ivy sticker-price comparison ignores aid.
+
+Known cosmetic defect: NICK_206's title analysis contains literal backslashes before the quotes (`\"Bulk & Cut\"`). Accepted text is left unchanged; correct it in a dedicated fix if desired.
+
+# Machine A owner-directed checkpoint — NICK_206–208 (2026-10-31)
+
+**Parent `43b46e2c`.** PR #36 / canonical branch still `223f4498`, untouched. 484/1,612 complete; next `NICK_209 b-Wl948s8Iw`. Validation: `validate_audit_966` rc=0 (484 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 475–477), 0 styles/formulas, zip OK; each CSV/JSONL changed only the 3 target rows.
+
+- **NICK_206 `_uFxmNBZYzE` — The Financial "Bulk & Cut" Strategy - Which Phase Are You In?** 0.42788× WEAK (5-peer 0.75888 TYPICAL); 10 claims. Opinion framework; arithmetic reproduces (233% ROI, $412K with monthly contributions, $435K/$93K at 8%, $375/hour). Atlanta Fed: stayers out-earned switchers Feb–Jul 2025, so the job-hop premium was weak near publication; "$650 payment = generational wealth" (~$48K) is hyperbole.
+- **NICK_207 `a6O3gNMpTZ8` — The $10K Savings Formula (That Works on Normal Incomes).** 0.5275× TYPICAL; 11 claims. Save More Tomorrow 3.5%→13.6% (3.9×) matches "3.8×" but tested pre-committed raises, not a payday split. "3.3× = 330% more" is 230%; 90% abandonment / 92% 30-day figures unsourced; compounding at 10% reproduces.
+- **NICK_208 `aHunm6XYO8k` — Why $100,000 is the Minimum Viable Net Worth to Survive WW3.** 0.43848× WEAK; 17 claims. Verified Doomsday Clock 85s (closest ever) and New START expiry. Errors: Eisenmenger was Viennese, not a German teacher; remaining capital $62–78K (not $64–83K); allocation bands sum to $80–130K; gold "breaking $3,000" stale (>$4,000 since Oct 2025); Blackstone "80,000 distressed homes" overstated.
+
+# Machine A owner-directed checkpoint — NICK_203–205 (2026-10-31)
+
+**Parent `707dc687`.** PR #36 / canonical branch still `223f4498`, untouched. Initial worktree was clean (CLEAN_NO_ACTION_REQUIRED). 481/1,612 complete; next `NICK_206 _uFxmNBZYzE`. Validation: `validate_audit_966` PASS (481 analyzed), `validate_research` PASS_BOUNDED, 38 + 2 tests, workbook 91 cells (dashboard 7 + rows 472–474), 0 styles/formulas, zip OK, package differs only by exporter relationship IDs. Workbook rebuild took ~17s and `validate_audit_966` ~45s this run.
+
+- **NICK_203 `_6Zvfj0ThsQ` — Why Stable Jobs Are Financially Riskier Than Ever In 2026.** 1.0174× TYPICAL; 23 claims. Verified BLS tenure 3.9y (lowest since 2002), KFF 2025 family premium $26,993 / $6,850, Meta $0.50 dividend. Errors: Meta "$3.9M per cut employee" (~$243K from ~$5.1B dividend); mortgage share labelled take-home is gross (25%/29.4%); month-3/month-5 savings do not reconcile with the $2,930 burn; $885 side income "three weeks runway" does not reproduce; UI $4,200/month above most state caps.
+- **NICK_204 `_ArhEBNhT_8` — Why Everything Changes After $100,000 Per Year.** 0.60981× TYPICAL; 17 claims. Verified 2026 401(k) $24,500 / IRA $7,500 / DCFSA $7,500 (OBBBA); federal tax $13,614 and 28%-rule $360K reproduce. Errors: $100K today ≈ $25.7K in 1980 (not $36K); Parkers costs sum to $10,000 (not $12,400); two kids $34,540 (not $30K); DCFSA covers 43% (not 29%) of national daycare; $100K ≈ 1.9× (not 4×) median income.
+- **NICK_205 `_pBTzgF-0C0` — 2026 Money Statistics Of The Average American (How Do You Compare?).** 1.94799× TYPICAL on 10 peers but 3.59958× STRONG on 5 peers (cohort-sensitive); 15 claims. Verified Northwestern Mutual 2025 $1.26M. Errors: $7,000 card at 22% with $140/month takes ~137 months / ~$12,150 interest (not 94 / $6,160); wages "maybe 10%" vs ~28–30% nominal since 2020; median household income $75K stale; savings-rate and renter passages repeated.
+
+# Machine A owner-directed checkpoint — NICK_201–202 (2026-10-31)
+
+**Parent `1adb7357`.** PR #36 / canonical branch still `223f4498`, untouched. 478/1,612 complete; next `NICK_203 _6Zvfj0ThsQ`. Same validation as NICK_197–200: both validators (26 fingerprints, 0 errors), 38 + 2 tests, workbook 63 cells (dashboard + rows 470–471), 0 styles/formulas, each CSV/JSONL only 2 target rows, witnesses/refs/SHA true, `TFtBWn9CWOU` IN_PROGRESS.
+
+- **NICK_201 `Zp6BytPl4u0` — Major MONEY Milestones To Accomplish In Your 40s.** 1.77977× TYPICAL; 15 claims. Reproduces Fidelity 3×/6× gaps and $1,234 vs $381/month. Errors: SCF 35–44 median $60K (≈$45K); $1,400/month at 8% for 30y "$1.09M" (≈$2.09M); $100K at 8% "$1.74M" (≈$1.01M; 10% used) and an apples-to-oranges mortgage comparison; catch-up "$730K" (≈$188K); 2025 limits stale for a Feb 2026 video (2026: $24,500 / $8,000).
+- **NICK_202 `Zw038izB1tg` — Why So Many Homeowners Are Going Broke in 2025.** 2.19528× STRONG on the frozen 10-peer rule but 0.28982× WEAK on 5 peers (cohort includes 632K/264K/193K outliers) — tier is cohort-sensitive. 13 claims. 28% rule reproduces; income growth "20–30%" understated (+56% nominal 2014–24); refinance 0.5% saves ≈$100/month, not "hundreds"; cost-uplift range inconsistent.
+
+# Machine A owner-directed checkpoint — NICK_197–200 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed`; parent `728465cc`.** PR #36 and `research/finance-economics-intelligence` were still at `223f4498` and were not touched. Start from `machine_a_tools/RUNBOOK.md` gates and the queue head, not from this note. 476/1,612 complete; next `NICK_201 Zp6BytPl4u0`.
+
+All four: six dimensions COMPLETE_LIMITED_EVIDENCE; full stored text read; authentic maxresdefault thumbnails inspected at 1280x720 and 320x180; audio unverified.
+
+- **NICK_197 `ZCJcr5K0U6A` — Stop Grinding: How to Build Wealth Without Sacrificing Your Life.** 1.63485× TYPICAL; 11 claims. Vanguard $2,000/21% well-being verified (associational). Errors: one-year savings $2,400 (reproduces $10,400), leftover "$100–400" (reproduces $1,400), IRA limit $7,000 stale (2026 $7,500), $5,000 card at 22% "nearly $2,800" understated ($3,286–$4,151), 401(k) called tax-free. Compounding examples reproduce.
+- **NICK_198 `ZO5VUGD1a84` — The "Shadow Portfolio": How To Get Rich At Work.** 2.97359× STRONG; 13 claims. "Benefits ≈30% of base salary" uses the wrong denominator (BLS ECEC: ~29.9% of total compensation ≈ 43% of wages, incl. mandatory benefits). $9,800 tally and ~$926K at 7% reproduce but count non-cash education/wellness as investable (~$548K investable). Match capture "one third" unverified (varies by income). 10-year roadmap is illustrative and aggressive.
+- **NICK_199 `Zn5jEbthAHU` — The Biggest Myths in Personal Finance.** 0.76378× TYPICAL (only ~42 days old); 19 claims. Best-sourced script so far: BLS CE 2024 shares, G.19 22.15%, Vanguard lump sum 68%, SPIVA 79%, Trustees 2033/77% all verify. Error: 1% fee on $500K/30y → $2.87M and $902K gap, not $2.99M/$820K.
+- **NICK_200 `ZnI6pKMnpf4` — Why Your 40s Beat Your 20s for Building Wealth.** 1.68072× TYPICAL; 13 claims. FV figures reproduce ($1.31M, $1.22M, $2.03M) but the late starter contributes 1.9–3.1× as much, so the arithmetic supports starting early. Biographies (Walton 44, Child 36/49/50, Wang ~40, Buffett 56) consistent; Hartshorne & Germine 2015 partially supports cognitive-peak claim.
+
+Validation: `validate_audit_966` rc=0 (26 source hashes, 0 errors); `validate_research` PASS_BOUNDED; 38 + 2 tests pass; workbook 119 cells changed (dashboard 7 + rows 466–469), 0 styles, 0 formulas, zip OK; each CSV/JSONL changed only the 4 target rows; witnesses, source refs and text SHA true; `TFtBWn9CWOU` still IN_PROGRESS. Native Excel recalculation NOT_TESTED. Profiling: workbook build ~100s and `validate_audit_966` ~62s dominate; pytest/node ~1s each.
+
+**Source readiness (read-only, `build_source_readiness.py` → `FINANCE_SOURCE_READINESS_QUEUE.csv`).** 657 blocked rows, deduplicated: 10 Lucas Grant originals are members-only with captions unavailable (registered archive header); 1 Matty Invests original has no captions in its registered archive; 30 Casually Finance expansion videos have transcript/caption files on `origin/codex/casually-finance-forensic-research` or `origin/research/casually-finance-editing-forensics` (candidates only — not fetched, fingerprinted or registered; registry writes belong to the authorised writer); 616 expansion rows have no local source. The 200 peer-baseline deferrals: 156 have no dated view snapshot at all (mostly Matty Invests 92 / Mr. Finance 64), 44 have a snapshot but too few eligible peers. No benchmark rule was changed.
+
+# Machine A owner-directed checkpoint — NICK_195–196 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `dcd7a4c0`, which added a recomputable queue (`build_continuation_queue.py`, `FINANCE_CONTINUATION_QUEUE.csv`), a writer lock and `machine_a_tools/RUNBOOK.md`. A fresh session starts from the RUNBOOK gates and the queue head, not from this note. The canonical branch and PR #36 were still at `223f4498`.
+
+**NICK_195 `YqpHONUEewY` — Your Life With Every Level of Paycheck.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,157 characters read in full; the ending is complete. 18 claim groups.
+- Thumbnail: "$2K/MO · $5K/MO · $20K/MO" triptych. The script's take-home tiers ($2,375–$14,207) never reach $20K/month.
+- Verified: Census 2024 median household income $83,730; SmartAsset Manhattan $30,362; Goldman 2025 16% ($200–300K) and 41% ($300–500K).
+- Supported: Philadelphia Fed lottery-neighbour bankruptcies (Canadian data); Killingsworth–Kahneman–Mellers 2023; Chetty 2016 14.6-year gap.
+- Errors:
+  - "Same rate as under $50K" is wrong (57%, not 40%).
+  - At $65K the 3-month fund takes 34 months, not 17.
+  - At $100K, "under a year" is wrong (17–36 months).
+  - At $150K, "under 5 months" is wrong (11).
+  - The $65K item list is $190 short of its $3,610 total.
+  - The 401(k) limit of $23,500 is stale (2026 is $24,500).
+  - The $2.2M projection implies a return below 5%.
+- Reproduces: the deficit at each tier, the $1,906 raise and $8.58M at 8%.
+- Performance: 1.48312× TYPICAL.
+
+**NICK_196 `ZC6cqLrZahw` — Why $50k Feels Broke.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,206 characters read. The stored text ends mid-sentence, so the closing may be missing from the caption. 10 claim groups.
+- Thumbnail: "THE PAYCHECK MIRAGE", paycheck in hand, empty pockets, a calculator bleeding red.
+- Mostly a psychological essay.
+- Reproduces: $38K / $3,167 take-home; rent 47%; 15% = $7,500.
+- Supported: rent ~$1,500 (Zumper ~$1,519).
+- Overstated as typical: a $3,000 deductible (KFF 2025 average is $1,886).
+- Internally loose: the implied ~$300 for insurance and utilities; credit limits of $10–15K vs $5K.
+- Performance: 0.53158× TYPICAL.
+
+**472/1,612 complete; 1,140 remaining = 494 original + 646 expansion.**
+- Queue: 267 eligible originals; 200 deferred (insufficient peer baseline); 16 partial preserved (including TFtBWn9CWOU); 11 originals blocked on missing transcripts. All 646 expansion videos are blocked on missing transcripts.
+- Checks: both validators pass (26 source hashes); 38 Finance and 2 formatting tests pass. The workbook changed 63 cells and no styles or formulas.
+- Usage meters: UNKNOWN.
+
+**Next untouched: NICK_197 `ZCJcr5K0U6A`.**
+
+---
+
+# Machine A owner-directed checkpoint — NICK_193–194 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `b1a30425` (NICK_191–192). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_193 `YbvRMquX3Tc` — POV: Your Life With Every Level of Debt (& What To Do).** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,813 characters read in full; the ending is complete (final third is unpunctuated ASR). 16 claim groups.
+- Thumbnail: maxresdefault 1280×720 triptych "$5K / $50K / $200K DEBT"; the story never uses those tiers.
+- Reproduces: car loan $499 (9.1%, 60 mo), $879 true car cost, budget chain $1,021/$635/$527, student loan $386, housing $2,797 and the −$667 deficit, $1,500 at 8% for 30y = $2.24M.
+- Verified: 565,759 bankruptcy filings in 2025 (+11%; Epiq). Supported: ~$1.28T card debt (implied from NY Fed Q1 2026); Stewart (2009) minimum-payment anchoring (70% is a secondary calculation).
+- Errors: $3,200 at 24% with a 2% minimum is interest-only ($64), so the $54/$10 split is impossible; "+$50" total $3,700 is understated (~$4,660). Mortgage figures slightly high ($1,846 vs $1,853).
+- Unverified/contested: two-thirds medical bankruptcy; 1990–2025 cost increases; $1T interest.
+- Performance: 0.60040× TYPICAL.
+
+**NICK_194 `Ygv_u2j90OA` — Shocking Money Stats of the Average American.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,157 characters read in full; the ending is complete; several ASR number garbles. 19 claim groups.
+- Thumbnail: maxresdefault 1280×720 ("HOW DO YOU COMPARE?", shocked character, debt anchor).
+- Verified: Northwestern Mutual 2024 $1.46M / $88,400 (stale for a Sep 2025 upload); BLS CE average income ~$101,805 (2023).
+- Wrong or stale: first-time buyer age 36 (NAR record was 38); $1,200/month at 8% for 30y is ~$1.79M, not $2.7M; Social Security $1,550 (≈$2,000 in 2025); retirement medians match 2019 SCF; spending $6,270/month does not match CE 2023.
+- Internal inconsistencies: debt $15,000 vs $100,000; 40% called "nearly half". Simple multiplications reproduce.
+- Performance: 0.30959× WEAK.
+
+**470/1,612 complete; 1,142 remaining = 496 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass; TFtBWn9CWOU partial preserved. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles, 0 formulas. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_195 `YqpHONUEewY` — Your Life With Every Level of Paycheck.**
+
+---
+
+# Machine A owner-directed checkpoint — NICK_191–192 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `1655822a` (NICK_189–190). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_191 `YDI8nD9lgA4` — How Everything Changes After Your Investments Beat Your Salary.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 20,929 characters read in full; the stored ending is complete, with one ASR omission ("you need million" — 25× $80K = $2M). 19 claim groups.
+- Thumbnail: maxresdefault 1280×720 ("TELL NO ONE", INVESTMENTS bar taller than SALARY); the secrecy hook is not in the script.
+- Reproduces: 25× targets; $1,000/month at 7% gives $520,927 (20y) and $1.22M (30y); the $3,911 budget; teacher $687,500 vs surgeon $9M; $500/month from 25 vs 35 (~$702K gap); median 401(k) yield $2,672.
+- Slightly off: final-decade growth is $699K, not $680K; crossover at $390/month is 41.1 years, not 43.
+- Overstated: federal tax on $100K MFJ wages in 2026 is about $7,640, not $11,500, and the marginal rate is 12%, not 22%. Stale: the 0% LTCG threshold of $94,000 is 2024; 2026 is $98,900 (IRS Rev. Proc. 2025-32, via search summaries).
+- Supported: Ramsey National Study of Millionaires figures (79% no inheritance; 1 in 3 never earned $100K). Unverified: T. Rowe 57%, 74% control, 40% emergency, 4.9% savings rate.
+- Performance: 1.22037× TYPICAL.
+
+**NICK_192 `YDQFf-NtUuw` — Why Saving Money Feels Useless Before $10,000.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 20,237 characters read in full; the ending is complete. 8 claim groups (mostly behavioural interpretation, few factual claims).
+- Thumbnail: maxresdefault 1280×720 ("THE $10K SWITCH", coin pile vs full safe); legible at 320×180.
+- Arithmetic reproduces: $50/month → 16.7 years; $1,000/month → 10 months; $1,200 − $800 = $400.
+- Unevidenced: an "exact $10,000" psychological threshold and "almost never go back". CFPB 2017 (search summary) supports liquid savings as the strongest correlate of financial well-being, but shows no threshold. Compound interest at $10K (~$400–500/year) is overstated as a driver.
+- Performance: 0.85297× TYPICAL.
+
+**468/1,612 complete; 1,144 remaining = 498 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass; TFtBWn9CWOU partial preserved. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles, 0 formulas. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_193 `YbvRMquX3Tc`.**
+
+---
+
+# Machine A owner-directed checkpoint — NICK_189–190 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `d820304d` (NICK_187–188). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_189 `Xtri19wLdJw` — Pawn Shops are Seeing Something the Stock Market Isn't.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 16,993 characters read in full; the stored ending is complete. 19 claim groups.
+- Thumbnail: the registered hqdefault (480×360, gold bars, "THEY KNOW?!"); the maxresdefault 404 placeholder was discarded.
+- Verified from the FirstCash Q1 2026 8-K (read directly): $1.05B revenue (+26%) and record $851M pawn receivables.
+- Supported (via search summaries): EZCORP +46% revenue, a third of it acquisition-driven; Fitch record subprime delinquency of 6.90%, above 2008; record Vanguard hardship withdrawals; Dollar General >$100K trade-in; 3.6% saving rate (as originally published).
+- Overstated: CAPE "near 43" (sources say 40–41.6); branches "73,000" (FDIC June 2025 shows >76,000); EZCORP scrap "+64%" (sources show +288%, and FirstCash +161%, so the gold confound is understated).
+- The pawn-vs-card arithmetic reproduces (~243% vs ~24% APR).
+- Performance: 0.76567× TYPICAL.
+
+**NICK_190 `Y1OaaClH_eQ` — How Inflation Quietly Stole Your Raise.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 18,573 characters read in full; the ending is complete, with one garbled ASR splice in the real-estate passage. 17 claim groups.
+- Verified: BLS Sep 2025 CPI +3.0% and gasoline +4.1% (largest monthly factor); I-bond 1.10%/2.86%/3.98%.
+- The CPI-U ratio 324.800/258.678 = +25.6%, not 23%, so the real shortfall in the $50K example is about $4,800, not $3,500.
+- Stale or mixed-date figures: Conference Board 3.9% was the 2024 projection (actual 2025 was 3.4%); $5,577/month is 2021 CE data; February 2025 food figures sit alongside September 2025 data.
+- The budget total is off by $500–800. Transport is given as $500 and also as $900.
+- Performance: 0.12069× WEAK.
+
+**466/1,612 complete; 1,146 remaining = 500 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass, and the 26 source hashes are checked. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles changed. Usage meters: UNKNOWN (not readable from the session).
+
+**Next untouched: NICK_191 `YDI8nD9lgA4` — How Everything Changes After Your Investments Beat Your Salary.**
+
+---
+
+# Machine A owner-directed checkpoint — NICK_187–188 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Parent `14962d3b` (NICK_186). The canonical branch and PR #36 were still at `223f4498` at the last check; there is no overlap.
+
+**NICK_187 `XP-VPkD3N64` — 19 Rules for Financial Freedom.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 23,529 characters read in full; the stored ending is clipped. 14 claim groups.
+- Sources: FEDG19 card rate about 21–22%; IRS Topic 451 (traditional IRA deductible, Roth not).
+- Overstated: the card-debt totals depend on an unstated minimum-payment rule, and the $22K "real cost" double-counts. The car example needs about 13.8% returns. A 20% savings rate means about 37 years to independence, not retirement in your 40s.
+- Performance: 0.62665× TYPICAL.
+
+**NICK_188 `XkhWSzOB7fI` — Why $25K Is Closer to $100K Than You Think.** All six dimensions are COMPLETE_LIMITED_EVIDENCE.
+- 19,887 characters read in full; the stored ending is clipped. 12 claim groups.
+- The "mathematically halfway" claim is unsupported: even the video's own timeline puts $25K at about 33% of the time.
+- Reproduced at 8%: 44/33/28/23 months, and contributions of $64K (not $56K) at $100K.
+- Coffee $4→$40 implies 25.9% a year. The $110 "tax" is 22% of a contribution. The employer-match arithmetic reproduces.
+- Performance: 1.20089× TYPICAL.
+
+**464/1,612 complete; 1,148 remaining = 502 original + 646 expansion.** Both validators, 38 Finance tests and 2 formatting tests pass. Workbook: 63 cells changed (dashboard plus 2 target rows), 0 styles changed.
+
+**Next untouched: NICK_189 `Xtri19wLdJw` — Pawn Shops are Seeing Something the Stock Market Isn't.**
+
+---
+
+# Machine A owner-directed checkpoint — NICK_186 (2026-10-31)
+
+**Branch `codex/finance-machine-a-owner-directed` (Machine A, owner-directed; pending reconciliation with PR #36).** Baseline: canonical `research/finance-economics-intelligence` = PR #36 head `223f44981ee174988574e86d5e23ae83ee60ee5d`. No Machine B release exists; Machine B's unpublished state is unknown. PR #36 is not updated by this branch.
+
+**NICK_186 `XP-26tqGFXc` — How Your Coworkers Afford Their Lifestyle (The Ugly Truth).** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 17,461 canonical characters were read in three ranges. SQLite hash and archive containment reconcile. The registered maxresdefault thumbnail (HTTP 200, 1280×720, "FAKE LIFE?") was inspected at native size and at 320×180. Audio is unverified.
+- 19 claim groups, 4 primary receipts (NY Fed Q4 2025 press release; Cerulli Dec 2024; BLS table A-16; Han/Nunes/Drèze 2010 abstract) and 2 calculation receipts.
+- Verified: $18.8T household debt and $1.28T card balances; $124T transfer through 2048 with $62T from 2% of households.
+- Not reproduced: BLS November 2025 9.3M/5.7% (the fetched table shows Sep 2025 8.79M/5.4%).
+- Overstated: $772/month over 40 years is $4.88M at 10%, not "over $6M" (that needs about 10.67%). The generational parental-transfer averages are inconsistent with the overall $1,474 average.
+- Performance: 2.49527× ten-peer / 3.09872× five-peer, STRONG, the cohort high.
+- **462/1,612 complete; 1,150 remaining = 504 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS.
+- Checks: both validators, 38 Finance tests and 2 formatting tests pass. Workbook rebuilt with the unmodified `build_workbook_1612.mjs`: 35 target and dashboard cells, 0 styles changed, rels differ only by exporter IDs.
+
+**Next untouched: NICK_187 `XP-VPkD3N64` — 19 Rules for Financial Freedom.** Evidence: `audit-batches/NICK_186.json`, `NICK_186_READ_RECEIPTS.json`, `NICK_186_VALIDATION.json`, `NICK_XP-26tqGFXc.jpg`.
+
+---
+
+# NICK_180 publication recheck and builder preservation — 2026-10-30
+
+The supplied IN_PROGRESS snapshot was stale. NICK_180 was already accepted/published as `f49382f543f2ef0bb4676738a3a4e100bd47428a`; the existing worktree and live Finance branch/OPEN-DRAFT-unmerged PR #36 were at `c325f9cb656242f1f713dd51252fdd929d14c6f0` after NICK_181–185. No new video was started in this closeout. The main checkout remains at `61f26b5c`; continue in the existing Finance worktree, not the stale main checkout.
+
+Machine B remains the authorized sole Finance writer on Users-MacBook-Pro.local / ghilmanislam360. The existing Claude worktree session ended its assistant turn at 05:10:08Z, followed only by local compaction at 05:21:53Z; process/session and app inspection found no competing active Finance turn. Other research and raw evidence were untouched.
+
+Independent historical comparison proves exactly one new complete video for the NICK_180 commit: **455 → 456/1,612; 1,156 remaining = 510 original + 646 expansion.** Current canonical ledger independently recomputes **461/1,612 complete; 1,151 remaining = 505 original + 646 expansion**. Next untouched is **NICK_186 `XP-26tqGFXc`**. Existing partial records, including `TFtBWn9CWOU`, remain unchanged.
+
+NICK_180 workbook: four original sheets and 1,612 identities preserved; only its research row 449 and seven dashboard cells changed. All worksheet structure, styles, formulas, tables, filters, row/column dimensions, panes and other package parts compare equal after removing cell values and normalizing exporter-generated relationship IDs; relationship targets are identical. All 26 immutable fingerprints match. All seven CSVs changed only NICK_180 and all existing-header fields reconcile to JSONL. Native Excel recalculation **NOT_TESTED**.
+
+Fresh checks: **38 Python Finance tests (34 existing + 4 focused regressions), 2 formatting tests and both canonical validators PASS**. All 39 claim witnesses and source references reconcile; four calculation receipts independently reproduce. The scratchpad helpers were reviewed and remain uncommitted. Full detail, packet hashes and qualifications: `audit-batches/NICK_180_CLOSEOUT_VALIDATION.json`.
+
+The original one-line receipt fix was committed with NICK_180 but silently ignored any JSON lacking `reviews`. This closeout narrows exclusion to validation companions; legitimate audit packets are loaded, malformed packets fail, and duplicate IDs remain rejected. Disposable rebuilds exposed three CSVs being rewritten despite unchanged JSONL. The builder now preserves existing headers and unchanged raw records; two complete disposable rebuilds produced byte-identical JSONL and all seven CSVs. Additional JSONL fields remain JSONL-only unless a CSV schema change is separately authorized. Rebuilds are still not multi-file transactions; validate before atomic Git publication.
+
+Evidence limits remain: Buffett final-result comparison requires the disclosed fund-period qualification; the narrative's interim-period attribution is not independently sourced. Sarah's illustrative projection does not match either stated rate. DOJ/BIS claims remain unverified after failed retrievals. No fresh research, audio/video verification or hosted CI rerun was performed. Current Codex usage reading: 18% five-hour / 19% weekly, paid balance zero; reset credit untouched; context percentage unavailable; 46 GiB disk free at preflight. Recheck live before any future task. Publish this focused closeout normally, then independently verify its containing commit against upstream/live remote/PR #36.
+
+---
+
+# Session closeout — Machine B, 2026-10-30 (NICK_180–185)
+
+**Six videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`, NICK_183 `X6_FpDN3XD8`, NICK_184 `XFEndHZQ66Q`, NICK_185 `XJ4ls6r2MCE`.** 461/1,612 complete; 1,151 remaining = 505 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, `58a2cb2a`, `e6000baa`, and the NICK_185 commit containing this note (verify live on PR #36). Hosted CI is billing-blocked (0 steps) and was not rerun.
+
+NICK_185 "Why Everything Changes After The First $5,000 Month": all six dimensions COMPLETE_LIMITED_EVIDENCE; 18,845 characters read in full; 16 claim groups.
+- Verified: Mani et al. 2013 supports the bandwidth effect at abstract level (the 13-IQ and $3,000 details are unverified). IRS confirms 15.3% SE tax, but the creator ignores the 92.35% base ($706, not $765).
+- Internal contradictions: $60K below the stated $63K median yet "top half"; lifestyle increases $800, not $600; the 60-hour weeks don't follow from $75/hour.
+- The thumbnail is the registered hqdefault (480×360); the maxresdefault 404 placeholder was discarded. The "$5000 RULE" wealth display conflicts with the anti-lifestyle-inflation script.
+- Performance: 1.07792× TYPICAL.
+
+**Stopped near the Pro weekly gate (93% at the last reading before this unit; gate 95%).** Next untouched: **NICK_186 `XP-26tqGFXc` — How Your Coworkers Afford Their Lifestyle (The Ugly Truth).** Machine B remains sole writer.
+- Tooling: `build_audit_966.py` skips companion JSON without `reviews`.
+- CSVs use header-stable target-row replacement (`peer_titles` and `weak_performance_counterexamples` live in the JSONL only). Promoting those columns into the CSV headers is a separate owner decision.
+- The local main checkout at `/Users/ghilmanislam360/Documents/youtube-intelligence-os` was left at `61f26b5c`. Fast-forward it (`git merge --ff-only`) before writing from there.
+
+---
+
+# Latest checkpoint — NICK_184 (Machine B, 2026-10-30)
+
+**Five videos accepted and published this session: NICK_180–184** (`W-j0_v9cXuQ`, `WAbZSrUMdk0`, `WyHZdWkS85U`, `X6_FpDN3XD8`, `XFEndHZQ66Q`). 460/1,612 complete; 1,152 remaining = 506 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, `58a2cb2a`, and the NICK_184 commit containing this note (verify live).
+
+NICK_184 "Nick Reacts To 20 People Being Financially Illiterate": all six dimensions COMPLETE_LIMITED_EVIDENCE; 25,329 characters read in full (clip audio and host commentary mixed); 19 claim groups.
+- Arithmetic: 4× overspend reproduces; the 17% car-loan totals reproduce. $143/month on $6K implies about 28.6% APR, above Fed G.19's 21–22% average, so it is not "standard".
+- Verified: BoE 2014 confirms banks create most money by lending; IRS FMV rule for goods prizes (Prizes and awards section not reached).
+- The thumbnail uses real third-party faces; rights and identity were not assessed.
+- Performance: 1.76004× TYPICAL; the whole cohort is TYPICAL.
+
+**Next untouched: NICK_185 `XJ4ls6r2MCE` — Why Everything Changes After The First $5,000 Month.** Read live usage before resuming (Pro weekly gate 95%).
+
+---
+
+# Latest checkpoint — NICK_183 (Machine B, 2026-10-30)
+
+**Four videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`, NICK_183 `X6_FpDN3XD8`.** 459/1,612 complete; 1,153 remaining = 507 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Commits: `f49382f5`, `2e8dd26f`, `394d5329`, and the NICK_183 commit containing this note (verify live on PR #36).
+
+NICK_183 "The Smartest Order to Invest Your Money if WW3 Starts Tomorrow": all six dimensions COMPLETE_LIMITED_EVIDENCE; 18,774 characters read in full; 21 claim groups.
+- Verified: TreasuryDirect confirms the I bond $10K limit and 12-month lock, but the creator omits the 5-year interest penalty. EIA puts Hormuz flow at 20M b/d, not the stated 13M.
+- Concentration: the tactical sleeves sum to 45–70% while index funds are called "untouchable".
+- Unsourced or non-reproducible: war-return, ETF and defence statistics; Mark/Sarah outcomes.
+- Performance: 1.61477× ten-peer TYPICAL, 3.24558× five-peer STRONG (cohort-sensitive).
+- Workbook diff: only row 452 plus dashboard counters changed; 0 styles changed; 0 formula errors.
+
+**Next untouched: NICK_184 `XFEndHZQ66Q` — Nick Reacts To 20 People Being Financially Illiterate.** Stopped here to stay below the 95% weekly gate (Pro plan); read live usage before resuming.
+
+---
+
+# Session checkpoint — Machine B, 2026-10-30
+
+**Three videos accepted and published this session: NICK_180 `W-j0_v9cXuQ`, NICK_181 `WAbZSrUMdk0`, NICK_182 `WyHZdWkS85U`.** 458/1,612 complete; 1,154 remaining = 508 original + 646 expansion. Legacy `TFtBWn9CWOU` stays IN_PROGRESS. Research commits: `f49382f5` (NICK_180) and `2e8dd26f` (NICK_181); the NICK_182 commit contains this note, so verify its SHA live on PR #36. Hosted CI for `f49382f5` did not start (billing block, 0 steps); it was not rerun.
+
+NICK_182 summary: all six dimensions are COMPLETE_LIMITED_EVIDENCE; 18,767 characters read in full; 23 claim groups; Census P60-286 confirms the $83,730 median income; the CFPB page states DTI limits vary (no single 43% cap); NAR 21%/age-40 read at link-title level.
+- Reproduced: the $3,508 cost stack, the $150K/$98K income thresholds, and $250 of debt per $41K of loan capacity.
+- Errors: P&I $2,179, not $2,150; the $3,191 scenario contradicts its own itemisation ($3,383 before PMI); the $120K DTI is 9.32%, not over 11%; car payment $748 versus $532.
+- Performance: STRONG at 7.75752× ten-peer and 10.04386× five-peer, the cohort high.
+- Workbook diff: only row 451 plus dashboard counters changed; 0 styles changed; 0 formula errors.
+
+**Checkpoint at a live reading of 92% weekly / 38% five-hour (Pro plan; stop gate 95% weekly).** Next untouched: **NICK_183 `X6_FpDN3XD8` — The Smartest Order to Invest Your Money if WW3 Starts Tomorrow.** Machine B remains sole writer. Tooling: `build_audit_966.py` skips companion JSON without `reviews`. CSVs use header-stable target-row replacement (`peer_titles` and `weak_performance_counterexamples` live in the JSONL only).
+
+---
+
+# Latest validated checkpoint — NICK_181 (2026-10-30, Machine B)
+
+Parent `f49382f543f2ef0bb4676738a3a4e100bd47428a` (NICK_180) was verified equal on local, live remote and OPEN-DRAFT PR #36 before this unit.
+
+**NICK_181 `WAbZSrUMdk0` — The Psychology of Why You Can't Save.** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 20,001 canonical characters were read in four ranges. Hashes and archive containment reconcile. The registered thumbnail (HTTP 200, 1280×720, "WIRED TO SPEND") was inspected at native size and at 320×180. Audio is unverified.
+- 18 located claim groups, 3 primary peer-reviewed abstracts (McClure 2004 Science; Ersner-Hershfield 2009 SCAN; Hagger 2016 multilab replication) and 3 calculation receipts.
+- Key corrections:
+  - Ego depletion is presented as settled, but the 23-lab, 2,141-participant replication found d = 0.04 (95% CI includes zero).
+  - The future-self study is distorted: participants rated their selves during fMRI and were not shown scans.
+  - "Completely outside your control" contradicts the video's own automation advice.
+  - Choosing $20 now over $25 in two weeks implies a 651.8% simple annualised return forgone.
+- Frozen performance reproduced: 0.39625× ten-peer / 0.37569× five-peer, both WEAK. Duration matches the peers (1.01×). The STRONG contrast peer is a concrete contrarian money move.
+- **457/1,612 complete; 1,155 remaining = 509 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS.
+- Both validators, 34 Finance tests and 2 formatting tests pass. The CSVs are target-row only. Workbook diff: only row 450 plus dashboard counters changed; 0 styles changed; 0 formula errors. Native Excel recalculation is NOT_TESTED. Workbook SHA-256 `4df8096d8f6909d2f10cd070298f71901f523c2b30f5aca1fa3aa5ebd5c17367`.
+
+**Next untouched: NICK_182 `WyHZdWkS85U` — How Much House Your Salary Actually Buys You.** Evidence: `audit-batches/NICK_181.json`, `NICK_181_READ_RECEIPTS.json`, `NICK_181_VALIDATION.json`, `NICK_WAbZSrUMdk0.jpg`.
+
+---
+
+# Latest validated checkpoint — NICK_180 (2026-10-30, Machine B)
+
+Machine B resumed as sole Finance writer from published parent `61f26b5ca9a7bd39c0aa2b63780bb33c18d29cff`, verified equal on local, upstream, live remote and OPEN-DRAFT PR #36. Clean tree, no competing Finance writer. Work was done in Claude worktree branch `claude/finance-audits-machine-b-0044ae`, reset to the remote Finance head and pushed normally to `research/finance-economics-intelligence`. The main checkout itself was left untouched.
+
+**NICK_180 `W-j0_v9cXuQ` — FINANCIAL SYSTEM Explained in 50 Mins.** All six dimensions are `COMPLETE_LIMITED_EVIDENCE`.
+- All 45,453 canonical characters were read in seven 6,500-character ranges. SQLite and archive hashes reconcile. The authentic registered thumbnail (HTTP 200, 1280×720) was inspected at native size and at 320×180. Audio, timed delivery and editing are unverified.
+- 39 located claim groups, 9 official-source receipts (Fed reserve requirements, FOMC Jul 2023, BLS CPI, FDIC, Fed SVB review, SEC accredited investor, Berkshire 2017 letter, FSB NBFI 2025, BoE 28 Sep 2022) and 4 calculation receipts. The DOJ 1MDB and BIS derivatives fetches failed; those claims stay unverified.
+- Key corrections:
+  - Buffett-bet figures (7.1%/2.2%) are interim; the final 2008–2017 index-fund result was 8.5% a year.
+  - The NBFI half-share is a 2024 statistic (51.0%), not a mid-2000s one.
+  - The CPI peak was 9.1%, not 8%.
+  - The BoE operation was 28 September 2022.
+  - Benchmark/Uber is 855.6×, not the stated 750×.
+  - The $1.1M "Sarah" projection implies about 8.65%, matching neither stated return.
+  - The 10% reserve example mislabels total deposits as lending.
+  - The Toys R Us interest figure is missing its unit.
+- Frozen performance reproduced: 0.77455× ten-peer / 0.55674× five-peer, both TYPICAL. Duration is 2.40× the peer median. No private analytics or causal claims.
+- **456/1,612 complete; 1,156 remaining = 510 original + 646 expansion.** Legacy `TFtBWn9CWOU` stays IN_PROGRESS; all 455 prior completions and 26 fingerprints are preserved.
+- Tooling note: `build_audit_966.py` crashed on `*_VALIDATION.json` companions (no `reviews` key). It now skips them, matching the validator. The seven CSV projections are updated by header-stable target-row replacement: the full regenerated CSVs would add columns (`peer_titles`, `weak_performance_counterexamples`) that HEAD headers never had, so those fields stay in the JSONL only, as in prior batches. Changing the header is a separate decision.
+- Both validators, 34 Finance tests and 2 formatting tests pass. Workbook diff: only row 449 plus dashboard counters changed; 0 styles changed; formulas, tables and panes preserved; 0 formula errors; zip intact. Native Excel recalculation is NOT_TESTED. Workbook SHA-256 `cc317f983e22720c2dd14f2620f6b1e09a835bbe993f38805facbc0f287f837a`.
+
+**Next untouched: NICK_181 `WAbZSrUMdk0` — The Psychology of Why You Can't Save.** The binding resource is the Pro weekly quota (88% → 90% for this unit). Stop new audits at 95% weekly.
+
+Evidence: `audit-batches/NICK_180.json`, `NICK_180_READ_RECEIPTS.json`, `NICK_180_VALIDATION.json`, `NICK_W-j0_v9cXuQ.jpg`.
+
+---
+
+# Published session closeout — 2026-10-26
+
+**Five accepted videos, NICK_175–179, published in verified 2 + 2 + 1 checkpoints.** Latest research commit `df80644a2394b89973952f98a60986c44af5b38d` matches local/upstream/live Finance/PR #36. **455 complete / 1,157 remaining** (511 original + 646 expansion pending). JSONL, all seven CSVs, the four-sheet workbook, individual packets and continuation records are synchronized. Durable machine-readable publication evidence: [FINANCE_PROGRESS_CHECKPOINT.json](FINANCE_PROGRESS_CHECKPOINT.json).
+
+All three research commits passed local validation; each hosted job executed zero steps and has an explicit billing annotation. No purchases, CI reruns, bypasses or merges. Native Excel recalculation remains NOT_TESTED. Latest resource reading: 46% five-hour / 7% weekly; 16 GiB free; 372,441 observed input tokens / 475,000 context window; no compactions. Stop new audits at the conservative context/execution-reserve checkpoint documented below, not an account-quota threshold.
+
+**Resume NICK_180: `W-j0_v9cXuQ` — FINANCIAL SYSTEM Explained in 50 Mins.** Readiness only checked; all research statuses remain untouched. Existing continuous-batching authorization and Machine B sole ownership remain effective. This documentation closeout changes no research record or workbook byte.
+
+---
+
+# Latest validated checkpoint — NICK_179 (2026-10-26)
+
+Machine B completed **`VWS7OpILfYI` — Minimalist Money Rules You MUST Follow to Always be Financially Stable**, following published parent `733c7f717f5e47c0969b50cd4f00934030a0c219`. This session has accepted five videos in adaptive batches of 2 + 2 + 1: NICK_175 through NICK_179. Publication remains conditional on the normal push and independent remote/PR check recorded in the closeout checkpoint.
+
+- All 39,752 canonical transcript characters read, including the middle omitted by the initial truncated shell display and subsequently retrieved in bounded line ranges. Canonical/archive hashes and containment reconcile. The stored ending is clipped; complete narration, audio, timed delivery and editing remain unverified. Authentic registered thumbnail bytes were inspected at 1280×720 and 320×180.
+- All six dimensions `COMPLETE_LIMITED_EVIDENCE`. 29 located claim groups, ten primary-source receipts and four calculation receipts. The 7% nominal/monthly opportunity-cost examples reproduce, with effective-rate, tax, inflation and alternative-spending limits. $1,500 over 3,650 nights is about **41.10 cents per night**, not two cents. The $219/$86 comparison is 154.65% above the initial estimate, or a 60.73% shortfall relative to actual estimated cost. Three to five $15 monthly subscriptions imply $540–$900 annually, not a $180 lower bound.
+- Named household profiles remain unverified creator assertions. Vanguard's $2,000 emergency-savings result is an observational client regression, not a guaranteed causal wellbeing improvement. SMarT supports future-raise commitment, not the exact 75% rule. Historical survey dates, default-cohort differences and partially verified source tables are explicit. A hypothetical zero-start $1.2M in 19 years at 7% effective annual growth requires about $32,103.62 end-year contributions; the unstated salary/tax path does not establish it.
+- Frozen performance reproduced: **3.23835× ten-peer / 6.10423× five-peer, both STRONG**. No private analytics or causal packaging claim. Absolute title/thumbnail financial-stability promises exceed verified evidence.
+- **455/1,612 complete; 1,157 remaining = 511 original + 646 expansion pending.** Only NICK_179's ledger record and exact row per seven CSVs changed in this batch. All 454 prior completions, legacy `TFtBWn9CWOU` IN_PROGRESS, 26 immutable fingerprints and expansion records preserved.
+- Both canonical validators, 34 Finance tests, two formatting tests and independent target/source/claim/calculation/workbook checks PASS. Four workbook sheets, 1,612 identities, 8,694 detailed JSON projections and all styles/formulas/tables/filters/panes/objects preserved. Native Excel recalculation `NOT_TESTED`. Workbook SHA-256 `7bce8e3450ae356d7d2c882446a344b787134c441d14392d830e208151f5f03b`.
+
+**Next untouched: NICK_180, `W-j0_v9cXuQ` — FINANCIAL SYSTEM Explained in 50 Mins.** Readiness only checked: duration 3,159 seconds, canonical transcript 45,453 characters, registered thumbnail `PRESENT_NOT_FETCHED`; no analysis or acquisition started and no status changed. No queue deferral or new source blocker.
+
+Stop new audits at the conservative **context/execution-reserve checkpoint**, then finish normal publication. Latest measured usage 41% five-hour / 6% weekly; paid balance 0; disk 16 GiB. Account quota and disk thresholds were not reached. Session log showed 361,354 input tokens against a 475,000 context window, no compactions. NICK_179 alone added about 55k context tokens from the prior checkpoint. A size-scaled estimate for the next source is about 63k, with a conservative 1.5 complexity allowance for broad financial-system fact-checking and a 25k publication reserve, approximately 120k versus 114k then remaining. This is an uncertainty-aware planning estimate, not measured next-video cost or a claim that the context window is full. Resume with refreshed context at the exact next ID; do not promise unattended continuation after this session.
+
+Ownership remains `MACHINE_B_SOLE_WRITER_ACCEPTED`. Current owner directive authorizes ordinary later batches without another authorization question; this checkpoint does not transfer ownership. Read-only Claude discovery, Machine A backups, protected Visual Forensics and PR #44 remain separate. PR #36 stays draft/unmerged. Both earlier exact-head hosted jobs had zero steps and explicit billing annotations; no billing/rerun/bypass actions taken.
+
+Evidence: `audit-batches/NICK_179.json`, `NICK_179_READ_RECEIPTS.json`, `NICK_179_VALIDATION.json`, authentic thumbnail, and `/private/tmp/yios-b-batch179/` verification logs. A durable publication closeout records the actual accepted commit and remote verification after push.
+
+---
+
+# Latest validated micro-batch — NICK_177–178 (2026-10-26)
+
+- Machine B sole writer; accepted published parent `703fc67530fdec4213f9308472c40a932e24d40e` (NICK_175–176), independently verified local/upstream/live/PR36. Prior publication confirmed `CI_BLOCKED_BILLING`: run40315190338 had no steps; annotation says job not started due account payments/spending limit. No rerun or billing action.
+- NICK_177 **`VAHjO-Vyovg` — Don't Pay Cash for Your Next Car - Here's Why!**: all16,745canonicalcharacters read; native/mobile authentic thumbnail inspected;21locatedclaim groups,eightprimaryreceipts,threecalculationreceipts. Same-account payment model at4%APY/0%loan leaves$3,978.42gross after60months and$26,323.52after18,not untouched$35K. Stock/loan funding switches and unfinanced closing assets flagged. Credit-mix10%does not prove25points/25bpmortgagecausation. Actual promotional/historical lending rates and dealer-profit/Cash-price statistics remain unverified.
+- NICK_178 **`VREo0Hj_tyQ` — Why Most People Quit Right Before Income Snowballs**: all18,967characters read; native/mobile thumbnail inspected;21locatedclaim groups,threeprimaryreceipts,twocalculationreceipts. Marcus is illustrative;90%quit,87%final-stretchgrowth andfourrestarts have no authenticated primarysource. Early13/28amounts are stored inconsistencies,audio unverified. Year8$4–5Kreturn on$25–26Krequiresrough15–20%year;at8%,$3Kannualgainrequires$37,500openingcapital. Balancegrowth is not guaranteedincome.
+- Both six-dimensional statuses `COMPLETE_LIMITED_EVIDENCE`; all audio,timed delivery,editing and complete narration unverified. Peer10/5ratios:1771.11853×/1.61201×;1781.14397×/1.11581×;allTYPICAL. Weak-peer authentic artwork checked read-only;sharedcartoon/headline/arrowtreatments do not suffice for strong performance.
+- **454/1,612complete;1,158remaining=512original+646expansionpending.** Exactlytwo targetledgerrecords/rows per sevenCSVprojections changed;452historic completions,legacyTFtBWn9CWOUand26fingerprints preserved. Four workbook sheets,1612identities,8694detailedJSONprojections,styles/formulas/tables/filters/panes/objects all preserved. NativeExcel `NOT_TESTED`.
+- Bothcanonicalvalidators,34Finance tests,2formattingtests,independentclaim/target/calculation/workbookchecksPASS. WorkbookSHA256 `2e0c460fe0493cdb5b9b4dcbf79acab0e11eb9f9ed9220f4b6c5934fc1b23779`. Receiptpackages `audit-batches/NICK_177*.json`, `NICK_178*.json`;authentic originalthumbnailbytes preserved. Bulk-helper sidecar limitation unchanged;existing-schema targetedprojectionvalidated.
+- Next untouched **`VWS7OpILfYI` — Minimalist Money Rules You MUST Follow to Always be Financially Stable** (NICK_179);no deferrals/expansion work. Current owner directive permits automaticcontinuation after normalpublication andfreshresource/ownership gates.
+- Latestusage26%five-hour/4%weekly,paidbalance0;exactcontextpercentageunavailable,no compaction inthischat. Disk15GiBfree,recheckbeforebatch. Onecheckout,no branchswitch/reset/stash/evidencecleanup;MachineAbackup/VisualForensicsandread-onlyClaude separate. Publicationreceipt `/private/tmp/yios-b-batch177/publication.json` records final resultingcommit after independentverification.
+
+---
+
+# Latest validated micro-batch — NICK_175–176 (2026-10-26)
+
+- Machine B sole Finance writer; accepted parent `5959c13d0ba88e8a1863b5492cde60589c0471eb`. Current owner directive authorizes repeated eligible micro-batches and supersedes earlier one-video stop instructions. No new checkout or branch switch.
+- NICK_175: `UwIxpBwUpUo` — **13 Signs Someone Is Secretly Wealthy**. All 20,127 canonical characters read; authentic 1280×720 and 320×180 image inspected. 24 located claim groups, 11 primary-source receipts, two calculation receipts. DALBAR 2023 gap is 550 bp, not over 800. Survey scope and reverse-inference limits retained. Bankruptcy identity is suspected conflation and remains unverified; no claim Fuld personally went bankrupt is accepted as fact.
+- NICK_176: `V5n4jp-p2NI` — **Money Matters More Than We’re Willing to Admit**. All 20,139 canonical characters read; authentic native/mobile thumbnail inspected. 25 located claim groups, seven primary-source receipts, three calculation receipts. Stored $9,000/$90,000 inconsistency is not certified spoken error. $24M × 4% = $960K; $90K at 4% requires $2.25M. Zero-start $22,500 end-year contributions for 25 years require about 10.11% nominal effective annual growth to reach $2.25M, not a guarantee. Historical happiness/stress findings and school requirements are qualified by date and population.
+- Both six-dimensional statuses `COMPLETE_LIMITED_EVIDENCE`; full stored-text review does not verify audio, timed delivery, editing or narration completeness. Exact performance cohorts reproduced: NICK_175 5.60724×/4.53696× STRONG/STRONG; NICK_176 1.65998×/1.98515× TYPICAL/TYPICAL. No private metrics or causal packaging inference.
+- **452/1,612 complete; 1,160 remaining = 514 original + 646 expansion pending.** Exactly two intended ledger records and rows per seven CSV projections changed. All 450 prior completions, legacy `TFtBWn9CWOU` IN_PROGRESS and 26 immutable fingerprints preserved.
+- Four-sheet workbook synchronized; 1,612 unique IDs, 8,694 detailed JSON projections, all styles/formulas/tables/filters/panes/objects preserved. Regenerated XML relationship IDs resolve to identical targets. Native Excel recalculation `NOT_TESTED`.
+- Both canonical validators, independent target-only/calculation checks, 34 Finance tests and two formatting tests PASS. Checkpoint assertion updated 450→452. Existing bulk-helper validation-sidecar limitation unchanged; targeted existing-schema projection used and independently reconciled.
+- Evidence: `audit-batches/NICK_175*.json`, `NICK_176*.json` and original fetched thumbnails. Workbook SHA-256 `af9605b08b46b85a33bd2d4c1e40b9db7bf02eb83816731ab025f688e0bbb9b7`.
+- Next untouched original **`VAHjO-Vyovg` — Don't Pay Cash for Your Next Car - Here's Why!** (NICK_177). No frozen-order deferral; expansion not started.
+- Preflight usage 1% five-hour/0% weekly; latest measured 13%/2%, ordinary usage allowed, paid balance 0. Exact context percentage unavailable; no compaction in this chat. Disk declined 21→16 GiB; recheck before next batch. Other Claude discovery session remains explicitly read-only with outside-repository outputs. Machine A backup and protected Visual Forensics ownership untouched.
+- Publication requires normal push and independent remote/PR36 verification; external machine-readable receipt `/private/tmp/yios-b-batch175/publication.json` records resulting commit after publication. Hosted CI remains independently `CI_BLOCKED_BILLING` unless exact-head evidence establishes otherwise; no rerun, payment or bypass. Continue automatically after publication only if gates pass.
+
+---
+
+# Latest research unit — NICK_174 (2026-10-26)
+
+- Accepted published parent `d987510b966eaabba6cc2990290b52d2ecf3fe8e` (NICK_173). Machine B remains the sole Finance writer. Local HEAD/upstream/live remote/OPEN-DRAFT PR #36 heads matched before research and publication guard. Existing checkout reused, unrelated stash preserved, no reset/pull/rebase/worktree/paid operations.
+- Completed `UmKdQCMCc98` — **The $0 Strategy Lets You Retire 10 Years Early. Why Do Banks Hide It?**, Nick Invests, archive publication 2026-06-07T21:33:35Z, 20:47 LONG_FORM. All six reviews `COMPLETE_LIMITED_EVIDENCE`.
+- All 17,537 canonical transcript characters read in contiguous [0,6500), [6500,13000), [13000,17537) ranges. SHA-256 c6a978f54394274d349eebd0077615de07cb8907057f838193fbe817022a4aee matches read-only SQLite; normalized archive member containment verified. Archive/whitespace words 3,149 versus coverage tokens 3,196. Auto-generated untimed text; audio, timed delivery and editing unverified; complete narration unknown.
+- Authentic registered hqdefault JPEG preserved (480×360), SHA-256 0be4695147912e27210a0d900f8b3a345fd542404e69d648247c958d15353775. Native and proportional 320×240 plus fitted 320×180 views inspected. Headline THEY WANT YOU BROKE and $0 paper contrast with the transcript’s explicit nobody-is-hiding-it retraction. Upload-era artwork unknown.
+- 39 contiguous claim groups, 25 source receipts (13 relevant-section reads; 12 explicitly producer search extracts), 13 independently reproduced calculation receipts. Source publication dates and retrospective/mutable scope retained. Exact historical three-bank/4% competitor rates, full 2015 match/income tables, $144T source, universal fee-to-working-year rule and 4.7% primary withdrawal research remain unverified.
+- The $0 mechanism means no explicit product fee: better cash APY, employer matching, fund/adviser fees and HSA investing, then Roth/72(t)/55 access. It is not zero capital or zero extra contributions. Parkers employee deposits rise $24,226.20 before tax benefits. Listed employee+match total $31,761.90 equals 48.86% of stated take-home, not 32%. Cited zero-start 5% real/4% withdrawal model yields 53.55 years at 9%, not 33; 32% yields 26.57. The stated ages imply 6–7 years saved, not ten. A five-year taxable bridge is asserted but not funded in the example.
+- IRS 72(t) duration is the later of five years and age 59½, not merely five years; Roth principal/earnings and separate clocks matter. DOL vacatur did not erase SEC adviser fiduciary duties or broker Reg BI. HSA 2026 limits and conditional $826,531.88 accumulation reproduce; eligibility, qualified expenses, payroll conditions, inflation, fees and withdrawal risks remain. Stored $8,240,000 fee gap is an ASR discrepancy, not a verified spoken error.
+- Performance object preserved: frozen 2026-09-11, 8,091 views/95.1017 days =85.07734352 views/day. Ten-peer 0.70008×, five-peer 0.95081×, both TYPICAL. Exact cohorts, denominators and thresholds reproduced. No CTR, retention, RPM, revenue or causal packaging claim invented.
+- **450/1,612 complete; 1,162 remaining =516 original +646 expansion pending.** Only this JSONL record and one row per seven canonical CSVs newly changed; all 449 previous completions, expansion records and legacy `TFtBWn9CWOU` IN_PROGRESS preserved. 26/26 immutable fingerprints match. Four workbook sheets, all identities, tables/styles/panes/formulas and all 8,694 detailed JSON projections (966×9) preserved. Native Excel recalculation NOT_TESTED.
+- 34 Finance tests, 2 formatting tests, both canonical validators and independent calculations/target-only/workbook checks PASS. No formula/object/ZIP errors. Detailed script JSON cell 31,157 characters. Existing bulk audit helper rejects historical validation-sidecar JSONs without reviews; unchanged helper/contracts, targeted existing-schema projection independently checked.
+- Evidence: `audit-batches/NICK_174.json`, `NICK_174_READ_RECEIPTS.json`, `NICK_174_VALIDATION.json`, `NICK_UmKdQCMCc98.jpg`. JSONL SHA-256 `7f1b271d8acf03e3e5fed002ae5e196130cc5bccacecb195b1ea2159d5fb1fc8`; workbook `3caea2de9643f6a033d89ab9e9982a16315b8d774e726176426c6af6482df2e2`.
+- Next untouched **`UwIxpBwUpUo` — 13 Signs Someone Is Secretly Wealthy**. Selected only, NOT_STARTED; do not start NICK_175 automatically.
+- Resources: initial 56% five-hour/9% weekly; latest 70%/11%; 21 GiB free; paid credits 0, ordinary usage allowed. Exact context percentage unavailable; prior-unit compacted summary inherited. Parallel Claude discovery session is explicitly read-only with outputs outside the repository, not a Finance writer; not modified/interrupted. Machine A backup and protected Visual Forensics separate.
+- Normal push and independent remote/PR retrieval are required for publication; final chat records resulting SHA and exact-head CI. Prior billing block is separate from local PASS; no CI rerun/payment/bypass. PR36 stays draft/unmerged; PR44 untouched.
+
+---
+
+# Latest research unit — NICK_173 (2026-10-26)
+
+- Accepted parent `3aa43bfd31d07598fefb8f92fc5cf16e1487d7e6` (published NICK_172). Machine B sole Finance writer freshly reaffirmed after local/upstream/live/OPEN-DRAFT PR36 equality and session/process checks. Machine A backup and protected Visual Forensics remain separate. One existing checkout, stash preserved.
+- Completed `UfqNzF7sQzo` — **Why Everything Changes After $3,000 Month Passive Income**, Nick Invests, archive upload2026-03-02T19:41:30Z,22:25LONG_FORM. All six reviews `COMPLETE_LIMITED_EVIDENCE`; authentic1280×720thumbnail inspected natively and320×180. All19942stored canonical transcript characters read in three contiguous witnessed ranges;3330archive/whitespace words versus3389coverage tokens retained. Auto-generated untimed text; audio, timed delivery and editing unverified; complete narration unknown.
+-42located claim groups,13primary-source receipts,12calculations. Claim-group ranges locate full passages; exact shorter witnesses preserve Excel native cell text limits. Sources distinguish dated material, current retrospective guidance and producer search extracts. Unavailable exact sources are explicitly unverified: national ALICE2332–2820range/majority,20%passive/350median,Pew31%,USClongevity,Namibia301%,exact historicSCHDyield/dividend-growth and market-tripling endpoint, quotation attributions.
+- Main arithmetic:950monthly for7years totals79800contributions. At illustrative10%nominal annual rate compounded monthly/end-month deposits, zero-start balance114902.90;290000requires37.2043%effective annual rate or unstated assets/contributions (87203.22initial at10%). No historical backtest claimed. Yield-only36000gross requires1058823.53at3.4% or900000at4%. Hybrid rounded3222sums, exact yields give3225;470000mixes portfolio balances with rental down payments; closing460000differs10000. Course sales are not net profit, rental cash excludes unspecified reserves/management/tax, distributions vary and may be quarterly. Future growth and reinvesting money also needed for spending are not guaranteed.
+- Fed37%complement is WOULD-pay method, not universal inability/must-borrow;APA82%belongs18–34, not all under43. Stockton2.4×refers12ppversus5ppemployment changes, not twice endpoint employment. Narrative Alex/Marcus outcomes and biological/workplace diagnoses lack independent verification.
+- Frozen performance object preserved:24347views/192.1795days=126.68885079views/day; ten-peer1.67450× andfive-peer1.97379×, bothTYPICAL. Exact eligible peer IDs and sensitivity receipts preserved. No CTR,retention,RPM,traffic,revenue or causal packaging claims invented.
+- **449/1,612complete;1,163remaining =517original +646expansionpending.** Only targetJSONLrecord and one row each of sevenCSVprojections newly changed.448prior completions,all1612identities,expansionledger and `TFtBWn9CWOU` IN_PROGRESS preserved.26/26immutable hashes match.
+- Four-sheet workbook updated; all8694detailedJSONprojections match, original formatting/tables/panes/formulas preserved, no formula/object/ZIP errors. NativeMicrosoftExcelrecalculation NOT_TESTED.34Finance tests,twoformattingtests,bothcanonicalvalidators and independent target-only/workbook/claim/calculation checks PASS. Existing bulk `build_audit_966.py` helper rejects prior validation-sidecarJSONs without reviews; no unrelated helper/source-contract changes made. Target update and existing-schema projections independently validated.
+- Evidence: `audit-batches/NICK_173.json`, `NICK_173_READ_RECEIPTS.json`, `NICK_173_VALIDATION.json`, `NICK_UfqNzF7sQzo.jpg`. JSONL SHA256 `27cd175ec9910d71c1df90e5094e155a4dcee720f57270fcda631399f1787184`; workbook `15e557735f127bb8dbe3701440d7a3e23b69c9645557f07cbb98389a5c1df2f2`.
+- Next untouched **`UmKdQCMCc98` — The $0 Strategy Lets You Retire 10 Years Early. Why Do Banks Hide It?** Selected only; stop after this unit. Legacy first unresolved remainsTFtBWn9CWOU.
+- Resources: initial28%/4%; latest42%five-hour/7%weekly;19GiBfree;0paid credits, ordinary usage allowed; exactcontext percentage unavailable. Normal push and independent final head retrieval required; final chat records resulting SHA/CI. Prior hostedCIbilling blockage is separate from localPASS. PR36/44 remainOPEN/DRAFT/unmerged.
+
+---
+
+# Latest research unit — NICK_172 (2026-10-26)
+
+- Accepted parent: `72f03deb26f7021fd6c4ae6755a7b43fc85a4ecd` (published NICK_171). Existing `MACHINE_B_SOLE_WRITER_ACCEPTED` was freshly reaffirmed after local/origin/live/OPEN-DRAFT PR #36 equality, one-checkout/session inspection and preservation checks. Machine A backup remains independent. No pull, merge, rebase, reset, force-push, new clone or worktree was used.
+- Completed `UeJyYDm756U` — **I'm Nick, Here's How I Make Money**, Nick Invests, archive publication `2026-05-05T20:57:28Z`, duration 10:46. All six dimensions are `COMPLETE_LIMITED_EVIDENCE`. The full 10,587-character canonical auto-generated untimed transcript was read in two witnessed contiguous ranges; audio, timed delivery, editing and narration completeness remain unverified.
+- The authentic registered 1280×720 thumbnail was preserved and inspected at native size and 320×180. Its monthly amount is deliberately pixelated and unreadable; no digit or earnings amount was inferred. Historical upload-era artwork and packaging causation remain unknown.
+- Research contains 31 located claim groups, seven primary-source receipts and two calculations. The transcript promotes faceless YouTube plus an inexpensive but unspecified community. Public views, creator self-description and the clipped Skool description link do not establish YPP enrollment, revenue, sponsorships, affiliates, community sales, expenses or profit. The defined March 2023→March 2026 national food-at-home CPI comparison is 5.57668%, so it does not support the universal 40% grocery claim; personal baskets may differ. Current mutable YouTube help is separated from dated pre-publication material and future 2027 terms are excluded.
+- Frozen performance is 6,471 views / 128.1268 days = 50.50466 views/day. Ten-peer ratio 0.68148 and five-peer ratio 0.77540 are both `TYPICAL`; neither public reach nor packaging proves business income or community conversion.
+- **448/1,612 complete; 1,164 remaining = 518 original + 646 expansion pending.** Registry 966+646 and the 197-record expansion ledger remain unchanged. Exactly one JSONL record and one row in each of seven CSV projections changed. All 447 prior completions and legacy `TFtBWn9CWOU` `IN_PROGRESS` are preserved. All 26 immutable source fingerprints match.
+- The sole four-sheet workbook was rebuilt: all 966×9 detailed JSON projections match the ledger, styles/tables/panes are preserved, dashboard counts recalculate to 448/1,164, and no formula/object/ZIP errors were found. Native Microsoft Excel recalculation remains `NOT_TESTED`.
+- Fresh checks: 34 Finance tests, two workbook-formatting tests, both canonical validators and the independent target-only/workbook preservation verifier pass. The focused count test advanced 447→448. Hosted CI must be checked separately after normal publication; prior billing blockage is not an application-test failure.
+- Evidence: `audit-batches/NICK_172.json`, `NICK_172_READ_RECEIPTS.json`, `NICK_172_VALIDATION.json`, and `NICK_UeJyYDm756U.jpg`. Ledger SHA-256 `f1ecca9053284f2db3ee64094fe37de927fe3bddf34581ef155f25ac572cefa3`; workbook SHA-256 `954596f93233e6ef086597e311add8e157306634c56393cf2723a14ed9eae81d`; packet SHA-256 `e62f58bb0fec06d213ff589811525885055ebaaec4198a672458429c9a39e1dd`; receipts SHA-256 `71e24647e1890f2076bc60ddb3534fffbb26ce87f03016fd57a9975b25d46d91`.
+- Next genuinely untouched original: **`UfqNzF7sQzo` — “Why Everything Changes After $3,000 Month Passive Income”**. Selected only; do not start automatically. Validator first unresolved remains `TFtBWn9CWOU`, which is preserved.
+- Resources after local validation: 21% five-hour, 3% weekly, ordinary usage allowed, no paid credits used, and 19 GiB free on `/`. One audit only. Publication becomes effective only after normal push and independent local/origin/live/PR equality.
+
+---
+
+# Latest published research unit — NICK_171 (2026-10-26)
+
+- Accepted parent: `f9c19fc28d11cd6ba1b9ffc41a54a1c7e68c92d8`; historical research checkpoint `1adb8129f689207552f0838414e5823e4255bde1`. Existing published `MACHINE_B_SOLE_WRITER_ACCEPTED` reaffirmed after live/local/origin/OPEN-DRAFT PR #36 equality. Machine A backup is independent; no competing local Finance writer found. One existing checkout, no new clone/worktree, no pull/merge/rebase/reset, unrelated stash preserved.
+- Completed `UdfpP8R1zuI` — **The S&P 500 Explained Simply — And Why Most Investors Use It**, Nick Invests, archive publication `2025-12-08T10:34:58Z`, duration20:27. All six dimensions `COMPLETE_LIMITED_EVIDENCE`; full19,720-character canonical transcript read in three witnessed contiguous ranges. Authentic registered1280×720 thumbnail and320×180 view inspected. Auto-generated untimed text; audio, timed delivery and editing unverified; actual narration completeness unknown. This is not independent frame Visual Forensics.
+- Research:29 located claim groups,11 primary-source receipts,7 calculation receipts.15-year SPIVA claim is supported for the specified2024 endpoint; exact90-year return, investor-majority/plan-menu/adviser-population assertions remain unverified. Current2026 index methodology/concentration receipts are explicitly retrospective. Matched fee balances correct the $3-at-$500K implication. Stated Roth7–8K/year for35years implies245–280K contributed, not227K; at10% end-year deposits imply1.897–2.168M, not1.4M. Caption inconsistencies are not certified spoken errors.
+- Frozen performance:27,839views /276.5591days; ten-peer ratio0.89446 and five-peer0.81236, both TYPICAL. Public lifetime rates do not identify demand or packaging causes.
+- **447/1,612 complete;1,165 remaining =519 original +646 expansion pending.** Registry966+646 unchanged; expansion ledger197records unchanged. Exactly one JSONL record and one row in each of seven CSV projections changed. All446 prior completions and `TFtBWn9CWOU` IN_PROGRESS preserved.26/26 immutable fingerprints match. Sole four-sheet workbook updated; all966×9 detailed JSON projections match, styles/tables/panes preserved and no formula/object errors found. Native Excel recalculation NOT_TESTED.
+- Fresh checks:34 Finance tests,2 workbook-formatting tests, audit/research validators and independent unit/workbook preservation checks PASS. Focused count test updated446→447 after independent reconciliation. Full repository regression not run; the previously documented DS-000028-F020 issue is not repaired or certified here. Hosted CI requires exact-head verification after normal push.
+- Next genuinely untouched original: **`UeJyYDm756U` — “I'm Nick, Here's How I Make Money”**. Selected only, not started. Legacy first unresolved `TFtBWn9CWOU` remains preserved.
+- Evidence: `audit-batches/NICK_171.json`, `NICK_171_READ_RECEIPTS.json`, `NICK_171_VALIDATION.json`. Transcript SHA256 `bb4afca8045815f3ce457f6e9151dd1c2e69de3f240bc6e7f493016849d865db`; canonical ledger SHA256 `afd0f708ca1a44e88c416011f538509533feccc7ebbd913e78eabe64ccf6b222`; workbook SHA256 `522bc02169efc596e061565f58d09caaa710e94ee84480dca142dbb805ca5115`. Temporary source-tool extracts and validation logs: `/private/tmp/yios-b-nick171/` (ephemeral supporting material, not sole evidence).
+- Resources: initial61% five-hour/36% weekly; latest75%/38%;28GiB disk available. Exact context percentage unavailable; no compaction warning. No paid/reset credits used. One audit only in this resumption. Publication is effective only after normal push and independent local/origin/live/PR equality; the chat final result supplies the resulting SHA. PR #36 and #44 stay OPEN/DRAFT and unmerged.
+
+---
+
+# Latest published research unit — NICK_170 (2026-10-25)
+
+- Parent checkpoint: `8fa0fe28f0870b2717d08a4099e1c4425a66429c`. Machine B is now the sole Finance writer (owner-directed transfer, see FINANCE_WRITER_OWNERSHIP.md); Machine A released. PR #36 stays OPEN/DRAFT.
+- Completed `ULkTn-jHBBc`, **6 Ways People Become Rich With Debt**, published `2026-07-07T20:47:41Z` (archive UTC). All 19,179 canonical characters read in three witnessed contiguous ranges. Native and 320×180 authentic thumbnail inspected.
+- All six dimensions `COMPLETE_LIMITED_EVIDENCE`. 39 exact claim groups, 20 source receipts, 15 numerical receipts. The sixth method is an OPM synthesis, not an independent sixth wealth engine.
+- Key distinctions: borrowing creates an equal liability; 25% rental appreciation/equity is gross; the rounded 340K/166K/180K example has a 6K reconciliation gap, not proof of a false real-world outcome. Closing stored 150K down conflicts with earlier 50K (audio unverified). Qualified new-vehicle interest already had a 2025–28 tax exception. Full-sale one-time tax and interest on a smaller recurring loan are not directly comparable. Fed 12%/60%, eight-times relative wealth and a universal nursing income uplift remain unverified.
+- Frozen performance: 0.81094 ten-peer / 0.75960 five-peer, both TYPICAL. Public metadata cannot identify demand or packaging causation.
+- Derived counts: **446/1,612 complete; 1,166 remaining = 520 original + 646 expansion pending**. Exactly one target JSONL row and one row in each seven projections changed; previous audits and all 966/646 identities preserved; 26/26 fingerprints checked. Workbook has its original four sheets.
+- Fresh checks: 34 Finance tests and two workbook-formatting tests PASS. Full regression and exact-head hosted CI are recorded in the external final report; the known DS-000028-F020 `.gitattributes` checksum failure is unchanged from the accepted parent and is not silently repaired. Native Excel recalculation NOT_TESTED.
+- Validator next unresolved master ID remains legacy `TFtBWn9CWOU` (IN_PROGRESS, preserved). Next genuinely untouched original: `UdfpP8R1zuI` — **The S&P 500 Explained Simply — And Why Most Investors Use It**. Do not start automatically.
+- External evidence and final publication result: `/Users/ghilmankhan/YIOS-local-audits/2026-10-25-NICK_170/`. Canonical packet and strict receipts: `audit-batches/NICK_170.json`, `audit-batches/NICK_170_READ_RECEIPTS.json`.
+
+---
+
+# Resume the full 1,612-video Finance and Economics audit
+
+## Latest continuation — 2026-10-25 (`NICK_169` complete)
+
+- Accepted parent `2bbc0a74c1f149c21168657c6e2209bd9e681101`; Machine A sole Finance writer, Machine B released. Intended new AI account identity was owner-confirmed and matched live usage; fresh starting usage 1% five-hour / 0% weekly. No credits/reset used.
+- `Tg_n8zGC7qw` — “At What Age Most People Hit $100K, $500K & $1M (Not What You Think)”, Nick Invests, uploaded `2025-11-28T10:22:00Z`, 1,235 seconds. All six dimensions `COMPLETE_LIMITED_EVIDENCE`. Entire 19,509-character canonical transcript read in contiguous [0,8000), [8000,16000), [16000,19509) ranges. SHA-256 `71d9102e3ee02ff6f7835709b0ca1d28b46b4e8423caf8dd32d1fb482322415b`; archive/member hashes and exact witnesses in NICK_169_READ_RECEIPTS.json. Auto-generated untimed text; audio, editing and actual narration completeness unverified.
+- Authentic registered 1280×720 thumbnail saved as `audit-batches/NICK_Tg_n8zGC7qw.jpg`, native and 320×180 inspected. Large $100K→$1M, cartoon man, cash jar, stopwatch, arrow and stacked bills. Current authentic image does not prove upload-era artwork or causal performance.
+- Frozen ten-peer ratio **3.61009× STRONG**, five-peer **3.14512× STRONG**. Exact nearest-age same-channel/format/snapshot cohorts independently reproduced with four-decimal stored ages. No source refresh or private-metric inference.
+- Research: 40 located claim groups, 13 source receipts, nine calculation receipts. Age29.29/95th39 traces to a May2016 forum summary of110 self-selected responses; age49 to a millionaire-only sponsor survey. Neither establishes all-Americans attainment ages. Other national milestone ages and17%eventual500K lack identified representative longitudinal evidence. SCF age-band family medians are not individual first-crossing histories, and were not converted into replacement ages. Use original2023 report in2022 dollars;2026release/rebasing is retrospective only.
+- Confirmed arithmetic:25/130=19.23077%,not12%;adult millionaire numerator also cannot be divided by households. Generational top10%earners substitutes income rank for wealth percentile. Original cohort text says over30%lower median while its48.0K/63.1K pair implies23.93%;source inconsistency disclosed,not silently repaired. Stored rent174 differs from source1174;audio needed before asserting spoken error. Housing20%scenario85,960 rounds86K but is not a universal minimum or all-home median.
+- One-year assumed8%growth gives16K/40K/80K/160K on200K/500K/1M/2M;these are not guaranteed cash income or safe withdrawals. At effective8%,doubling takes9.006years without contributions;200K at35 reaches587,438.72by49,or requires1,370.25/month to reach1M then. All contribution/inflation sensitivities are labelled analyst examples. No4%rule is present.
+- Integrity PASS: exactly one intended JSONL record and one target row in each of seven CSV projections;966originals,646expansions,26fingerprints and all prior444completed records preserved. **445/1,612 complete;1,167 remaining=521original+646expansionpending.** Sole four-sheet workbook rebuilt;966detailrows×eightsections match JSONL. Zero formula/object errors;all unrelated cell values/styles,tables and freeze panes preserved. Native Excel recalculation NOT_TESTED.
+- Fresh audit/research validators PASS;34Finance tests and2formatting tests PASS. Full regression **460passed/1failed/5warnings**;only existing DS-000028-F020 .gitattributes size/hash failure,unchanged from accepted parent. No new test failure or unrelated repair. Billing-blockedActions not rerun;verify exact-head hosted state after publication.
+- External detailed report/source/calculation/verification records: `/Users/ghilmankhan/YIOS-local-audits/2026-10-25-NICK_169/`. Previous handoff and its checksums preserved. VisualForensicsvideo003 and three unrelated untracked roots remain separate. Stash preserved.
+- Next genuinely untouched original **`ULkTn-jHBBc` — “6 Ways People Become Rich With Debt”**; not started. Validator's legacy first unresolved `TFtBWn9CWOU` remains IN_PROGRESS and unchanged. NICK_170 does not run automatically.
+- Sole workbook SHA-256 `e5026d17cf81d296ac0d8a1b3e9a5130c0cd3b91e6f448d8df4252e4ec434308`; JSONL SHA-256 `ee15c907ccb582c541a56420b5aff0068e4d71eae54c223928dd72379a44a169`. This atomic checkpoint records the accepted parent; independently verify the resulting commit across local/origin/live Finance/PR36.
+
+## Latest continuation — 2026-10-24 (`NICK_168` complete)
+
+- Accepted parent `7e7c14016141977cd77fda48bcc6650aa6c3f517`; Machine A remains sole Finance writer and Machine B released. Previous audits and unrelated Visual Forensics evidence are preserved.
+- `TdNH3QP3qao` — “Who Can Actually Afford a $50K Truck in 2026?”, Nick Invests, uploaded `2026-05-24T22:16:00Z`, duration 1,295 seconds /21:35. All six dimensions completed as `COMPLETE_LIMITED_EVIDENCE`. Entire 19,078-character transcript read in contiguous [0,8000), [8000,16000), [16000,19078) ranges; SHA-256 `c2ce0df9a0888146734fb73fba18017e9242b57830607ecf896852e9b0b680b3`. Original archive/member hashes and exact witnesses are in `NICK_168_READ_RECEIPTS.json`. Auto-generated untimed text; audio and editing unverified.
+- Authentic registered 1280×720 thumbnail saved as `audit-batches/NICK_TdNH3QP3qao.jpg`; native and aspect-preserved 320×180 inspected. Cartoon man, $50,000 tag, chained pickup and $50K...WHO? support a financial-captivity interpretation. Historical artwork and private metrics are unavailable.
+- Frozen performance: ten-peer ratio **7.42186× STRONG**, five-peer ratio **9.79154× STRONG**. Exact cohorts, ages, views/day and medians are independently reproduced in receipts. No causal packaging inference or snapshot refresh.
+- Financial research: 39 located claim groups, 16 original-institution source receipts and nine numerical receipts. A $50K/7%/84-month loan gives $754.63 monthly and $13,389.26 interest. Year-one balance is $44,262.64; assumed $40K resale implies $4,262.64 negative equity, not $5,700. Quoted cash items sum to $1,395, reasonably rounded to $1,400; the fictional Garcia budget sums to $5,600 with zero residual. The stated total-transportation 20/4/10 inputs require about $192K gross income, not $150K. Census 2024 puts 26.1% of households at $150K+, not 15%. The 20.3% statistic covers financed new purchases. Exact historical trim configurations/prices, resale and Strategic Vision usage tables remain unverified. $700 monthly for 30 years at 8%/12 gives $1,043,251.61 nominal; saving for only seven years then growing to year 30 gives $491,139.83 in an analyst sensitivity. No guaranteed retirement date or 4% rule; principal and depreciation must not be counted twice.
+- Integrity PASS: one intended JSONL record and one row in each of seven CSV projections changed; 966 original IDs, 646 expansion identities and 26/26 fingerprints preserved. **444/1,612 complete; 1,168 remaining = 522 original + 646 expansion pending.** Four-sheet workbook rebuilt; all detail rows, statuses and eight research sections match JSONL. Zero formula/object errors; cell styles, tables and freeze panes preserved. Native Excel recalculation not tested.
+- Fresh audit/research validators PASS; 34 Finance tests and two formatting tests PASS. Full regression: **460 passed, 1 failed, 5 warnings**. Only the known DS-000028-F020 `.gitattributes` ledger mismatch remains; bytes match the accepted parent. No new failure or unrelated repair. Secret scan zero; whitespace PASS. Inspect hosted CI at the published head separately; the prior head had billing-blocked jobs.
+- Validator next remains legacy partial `TFtBWn9CWOU`, preserved. Next genuinely untouched original: **`Tg_n8zGC7qw` — “At What Age Most People Hit $100K, $500K & $1M (Not What You Think)”**, expected NICK_169 only upon fresh owner authorization; not started.
+- Durable report/evidence: `/Users/ghilmankhan/YIOS-local-audits/2026-10-24-NICK_168/`. Last documented resource checkpoint: 73% five-hour /33% weekly consumed. Final usage and publication proof are recorded externally. No reset credits used; exact context percentage unavailable.
+
+## Latest continuation — 2026-10-24 (`NICK_167` complete)
+
+- `TIrIi752GSc` — “The Bond Market Is Breaking - Here's What It Does to YOUR Mortgage!” (Nick Invests, June 24, 2026; 49:45) completed all six dimensions as `COMPLETE_LIMITED_EVIDENCE`. Full 46,747-character canonical auto-caption text read in six contiguous 8K ranges (last ends 46,747); SHA-256 `4a7ebec07b69b601e44d4c7b057e0e4d7b1031b78f5cab069de25f4c5d000dbd`. Archive member 48,344 bytes/1,287 lines, SHA-256 `2bbf7745af2ce8ce913d338a0dcc35fca6b8c62a90c683974bcd36dd233f3595`; archive SHA remains `acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac`.
+- Authentic registered 480x360 `hqdefault` thumbnail saved as `audit-batches/NICK_TIrIi752GSc.jpg`, 20,478 bytes, SHA-256 `8ff0c11969a44338056be26a74ffcc3a16d072529c9078de1aeaf7da9a4535f9`. Native and derived 320x180 inspected; non-native-aspect mobile stress test disclosed. `LOSING IT?!`, worried man, rope, house and red percent/magnet-like symbol support personal threat framing. Upload-era design and private metrics unknown.
+- Frozen performance: target 62.76874 views/day, ten-peer median 101.98526, **0.61547x TYPICAL**; five-peer median 108.07344, **0.58080x TYPICAL**. Exact ordered peers: `HR6wU9Hb6xk`, `ztNMEqJUgUk`, `maClOD9240k`, `-ZcdgylpeJg`, `xrzV3G-Iorg`, `dlnPr167zII`, `-CbNGP9H4xw`, `Kgdvr1tkPNQ`, `vS_FN5rpfis`, `ED3pUaLp5g8`. First five are sensitivity cohort. No causal packaging attribution.
+- Financial review: 42 exact located claim groups, 31 primary-source receipts and nine numerical receipts. $400K/30-year P&I examples reproduce: 6% $2,398.20; 7% $2,661.21; 8% $2,935.06. The 3%-to-6.5% gap is $841.86/month, reasonably rounded to $850; 6%-to-8% full-term extra nominal interest is $193,268.23. Explicit $400K borrowing must not silently become a $400K house with 20% down (that sensitivity gap is $673.48). Same-balance/term 2.9%-to-6.5% payment rises 51.86%, not double. Refinancing is qualification/cost-dependent; fixed P&I does not freeze taxes/insurance; volatility does not guarantee rate direction. Coupon/yield, term premium/credit risk and gross/net interest definitions differ. HELOC record-high claim depends on measure: Q1 balances $446bn were below the 2009 peak. FHFA August 2024 model supports 1.72m forgone sales; earlier 1.33m abstract uses an earlier window. Later revised NMDB and current historical FRED/TIC data are explicitly distinguished from pre-upload publications. Unnamed anecdotes, weak-auction dates, precise China15-year low and scenario probabilities remain unverified.
+- Integrity PASS: exactly one JSONL record and one target row in each of seven CSV projections changed; all other 965 records, all 966 original IDs, 646 expansion identities and 26 immutable fingerprints preserved. **443/1,612 complete**, **1,169 remaining** = 523 pending originals + 646 pending expansions. Four-sheet combined workbook regenerated; 966 detail rows x eight stored research sections/statuses match JSONL. No formula errors or object placeholders. Native Excel recalculation not tested.
+- Fresh validators PASS; 34 focused Finance tests and two workbook-formatting tests PASS. Full repository pytest: **460 passed, 1 failed, 5 warnings**. The sole failure remains pre-existing `DS-000028-F020` `.gitattributes` ledger drift: accepted-parent and current bytes identical (895 bytes, SHA-256 `93d4461c54929f06d8977a3741b20dbf788bcfffbb4d2f2234027e914a230222`); ledger expects 627 bytes / `1970079d0da551fe6400b93d55c5f8cf9be2beeb628089457be11a6d0a79f43d`. No repair or relaxed assertion. An initial test overlapped workbook export; the completed-file rerun passed, with both logs preserved.
+- JSONL SHA-256 `ab5394ebffc5fb53dd4348c3a447e7fc0bc95ac1e49eab78962c582e477c6d69`; workbook SHA-256 `96c64d37a8c6b8539fd158ea2c62428529ee45506b371da247e059eaac5868c6`; individual audit SHA-256 `46a72eb7d50da78c3dda81315faafb17ceaca344f51fb253da50011fca225572`; read-receipt SHA-256 `d80503144b9bc18029f91d7e1932e0e3a95158d2dcb8e9a941b874049694dfd4`. The publication commit introduces this continuation; verify its full local/origin/live/PR SHA after push. Exact-head hosted CI is separate.
+- Queue preserved: validator first `TFtBWn9CWOU` remains the legacy partial. Next genuinely untouched original is `TdNH3QP3qao` — “Who Can Actually Afford a $50K Truck in 2026?”, expected NICK_168 only after a new owner task/reverification. Not started. NICK_165/166 findings and separate backlog untouched.
+- External source copies, full report, calculation scripts, logs and publication evidence: `/Users/ghilmankhan/YIOS-local-audits/2026-10-24-NICK_167/`. Machine A sole Finance ownership remains accepted; Machine B released. Three unrelated untracked roots, stash, visual-forensics packages and Visual003 external partial preserved. Usage last checked 49% five-hour/29% weekly; no visible compaction warning; exact context percentage unavailable; no credit/reset use.
+
+## Latest continuation — 2026-10-24 (`NICK_166` complete)
+
+- Current ownership: published `MACHINE_A_SOLE_WRITER_ACCEPTED` remains in force; Machine B remains released. Accepted parent for this atomic audit: `ad28c731bc059b11be66ebb00b1cec79f4518462`, matching local/origin/live Finance/OPEN-DRAFT PR #36 at preflight. The transfer section below is historical. No branch switch, fetch, worktree, clone, agent delegation or ownership transfer occurred.
+- `T3HINW7Nv14` — “The REAL Cost of Being Average in America”, Nick Invests, uploaded `2026-01-27 11:09:45`, duration 1,307 seconds. The entire 19,441-character canonical auto-caption text was read in four contiguous ranges; canonical SHA-256 `7e753ab1db2e3ac0415702b1cc5b05b9f0b7d1fae035c829298dbad58a852c83`. Archive member `214_T3HINW7Nv14_The_REAL_Cost_of_Being_Average_in_America.txt`: 21,159 bytes, 557 lines, SHA-256 `d938d41df56696052dd7661f63de7abdea8c8f675eaae70a6219a284de02c03e`. Untimed text ends at “most”; original audio completeness is unverified.
+- The authentic registered thumbnail was fetched once, preserved as `audit-batches/NICK_T3HINW7Nv14.jpg`, 120,039 bytes, 1280×720, SHA-256 `ea28a4bf7b92864890907a6eeb3533bd336a24ebacca4190312817482f8be693`. Native and 320×180 views inspected: THE MIDDLE CLASS LIE, cartoon man, house, sedan, school bus and chains. Historical artwork, CTR and experiments remain unknown.
+- Frozen performance: 34,297 views / 226.5349 days = 151.39831 views/day; ten-peer median 222.12668, **0.68159× TYPICAL**; first-five median 291.33136, **0.51968× TYPICAL**, near the 0.5 weak boundary. Exact cohort IDs, ages, views, snapshot and formulas are in `NICK_166_READ_RECEIPTS.json`; no frozen source or benchmark was refreshed.
+- Financial research: 35 location-bound claims, 20 original-source receipts and 9 calculation receipts. Census 2024 household median $83,730 supports rounded $84K, but does not describe a single salary or measured 2026 income. The $130K household is below the 2024 household 70th percentile, not top quartile. Emergency-fund questions distinguish would-use-savings from ability to pay by any means. New-vehicle financing averages are not all-owner payments; health premiums distinguish employer totals from employee contributions. USDA December 2025 report was issued in January 2026 but its exact issue day is unresolved, so upload-era availability is not certified.
+- Arithmetic: first chosen budget leaves $460; Parkers' stated deductions leave $6,853.33 rather than $7,053; housing sums to $3,430 rather than $3,530; fully reconciled stated inputs leave −$1,176.67 rather than −$77. Separate assumed 2026 MFJ tax/child-credit sensitivities can materially change that result; they are not the family's verified return. $400K at 6.5% over an assumed 30 years gives $2,528.27 principal/interest. $500 monthly at nominal 7% compounded monthly for ten years gives $86,542.40, while $6,000 at each year-end gives $82,898.69. $536×60=$32,160 is avoided gross payments, not guaranteed net wealth. No 4% withdrawal rule or Social Security benefit appears in this transcript.
+- All six dimensions are `COMPLETE_LIMITED_EVIDENCE`. Audio, editing, on-screen evidence, timed delivery, private analytics and upload-era thumbnail history remain unavailable. National inevitability, unspecified historical price percentages, universal spending thresholds and systemic-intent claims are not established by the selected budgets. No NICK_165 corrections were applied; that backlog remains separate.
+- Population: **442/966 original deep-complete; 442/1,612 combined**, **1,170 remaining** = 524 pending originals + 646 pending expansions; 42 registered channels. Exactly one JSONL record and one row in each of seven derived CSVs changed. All 26 immutable fingerprints, 966 original identities, 646 expansion identities and unaffected prior audits passed preservation checks.
+- Validation: individual/full-population Finance validators PASS; 34 focused Python tests and 2 workbook-formatting tests PASS. Full repository pytest: **460 passed, 1 failed**. The failure is pre-existing `DS-000028-F020` `.gitattributes` ledger size/hash drift: accepted-parent and current bytes both 895 bytes / SHA-256 `93d4461c54929f06d8977a3741b20dbf788bcfffbb4d2f2234027e914a230222`, while the unrelated ledger expects 627 bytes / `1970079d0da551fe6400b93d55c5f8cf9be2beeb628089457be11a6d0a79f43d`. No fix or relaxed test was included.
+- Sole combined workbook regenerated through the existing builder: 4 sheets, 1,612 unique rows, 966 original detail rows. Every stored research section/status matched JSONL; formula-error/object-placeholder scan returned zero; 4 opening views and target identity/status view inspected. Native Microsoft Excel recalculation remains untested. Builder checkpoint date and existing completed-count test expectation advanced only for this audit.
+- JSONL SHA-256 `d8c80f86b084c1751018ff199a1f70e127001e270c783daea42c8ec5e3737022`; workbook SHA-256 `e8a8c696f3e3805fcbedacb8f2133294f9cfff672ce7e89e94a0aaa625027fab`; individual audit SHA-256 `40e5e09659b97898c7be841f675daaa4ff6c74042c43b4420b95ef27788eb0ff`; read-receipt SHA-256 `1db1c69e289597020f24c3f07868a3bdacd51f2411dc99785f53c1d97a9edd7c`. The publication commit is the commit introducing this continuation; resolve its full SHA through Git rather than embedding a self-reference. Verify local/origin/live/PR equality after push; hosted CI is separate.
+- Queue distinction: validator next master-order record `TFtBWn9CWOU` is a pre-existing legacy `IN_PROGRESS` opening/ending excerpt, **not untouched**. Next genuinely untouched original is `TIrIi752GSc` — “The Bond Market Is Breaking - Here's What It Does to YOUR Mortgage!”; expected next untouched batch NICK_167. Neither was executed. A future task must reverify current queue/ownership before choosing its target.
+- External evidence, raw source copies, calculations, test logs and publication result: `/Users/ghilmankhan/YIOS-local-audits/2026-10-24-NICK_166/`. Usage at final research gate: five-hour 16%, weekly 24%; no visible context warning, exact context percentage unavailable; no credit/reset consumption. Three unrelated untracked paths, stash, refs and visual-forensics packages preserved; Visual 003 external partial evidence untouched.
+
+## Weekend writer transfer — 2026-10-23
+
+Before any Finance write, read [writer ownership](FINANCE_WRITER_OWNERSHIP.md), [Friday handoff](FINANCE_WEEKEND_HANDOFF_2026-10-23.md) and [Machine A Saturday start](MACHINE_A_SATURDAY_START.md). Machine B releases only on verified publication; Machine A acceptance is still required. Research counts/last/next below are unchanged. Supplementary [Nick channel intelligence](channel-intelligence/nick-invests/2026-10-23/README.md) does not alter audit completion.
+
+## Latest continuation — 2026-10-22 (`NICK_165` complete)
+
+- `SsHQ-TtXhRQ` — “Why a $70,000 Truck Costs $1M in Retirement” is complete with limited evidence. The full 18,252-character canonical auto-caption text was read in four contiguous ranges and hash-verified at SHA-256 `697d0545e42e6b2a060a1dda252f3c0a75c7d4aefb3d933f3c324b085c8f1bdd`. Archive member `200_SsHQ-TtXhRQ_Why_a_70000_Truck_Costs_1M_in_Retirement.txt` is 19,761 bytes/554 lines, SHA-256 `e7d4ed8cca8b3d1b4afcc22a0d1170749c622cd79958d9c0c20fb2a89e354715`.
+- The registered 480x360 `hqdefault` thumbnail was fetched once and preserved as `audit-batches/NICK_SsHQ-TtXhRQ.jpg` (36,203 bytes; SHA-256 `95542916c8342519cd1fa8bb4c15fff9d4761abe901ffc9a7e2f7e1d071e7081`). `THE MATH IS BRUTAL`, the `$70,000` tag, truck and worried figure remain legible at 240x180. Historical art, impressions, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **1.19216x TYPICAL** against ten peers and **1.06640x TYPICAL** against five. Exact ten-peer cohort: `BHVt3egRECo`, `XJ4ls6r2MCE`, `Fzdn89C2YXo`, `J_sTOWazmho`, `N2HdBntwQGU`, `mQH1MPWBsy4`, `zJrEAcz7BPE`, `ZCJcr5K0U6A`, `Hb4Dhhp8YnM`, `1CJTuLaenq8`; the first five are the sensitivity cohort. Two are STRONG, five TYPICAL and three WEAK.
+- Credibility: the `$63,000`, 7%, 72-month loan independently gives `$1,074.09` monthly, `$77,334.29` payments, `$14,334.29` interest and `$84,334.29` including the down payment. The `$55,000` 7% lump-sum path reproduces through 40 years, but it is nominal unless 7% is explicitly real and is not comparable to a financed purchase without a cash-flow bridge. A non-overlapping financed-truck versus `$15,000` cash-car scenario, including the script's `$31,000` truck resale and illustrative `$5,000-$10,000` alternative resale at year six, produces roughly `$618,136-$671,788` nominal at age 65 before operating-cost differences. A separate six-year `$1,076` monthly-investment path can exceed `$1M`; it must not be added to the `$55,000` lump sum. The 30-year one-time trim/used/Maverick values and `$2,400` annual fuel value are materially overstated; the `$14,900` and `$11,800` annual-annuity examples substantially reproduce. Returns, resale values and operating costs are not guaranteed. Dated CFPB, IRS, SEC, AAA, Ford and Federal Reserve receipts are preserved in `NICK_165_READ_RECEIPTS.json`.
+- Original deep completion is **441/966**; combined completion is **441/1,612**, leaving **1,171** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints checked and next frozen-order ID `T3HINW7Nv14` — “The REAL Cost of Being Average in America”. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `6ba11e4f3e4262443ee7c61967934c5a0e9a1ebcca109985d991757910576aa0`; combined-workbook SHA-256 is `b40bcaee090de8467239ab1fcf3fc9fb67077e91fb104e1bcaef1216d10138a0`. The workbook contains 1,612 unique videos, 966 original detailed rows, 646 expansion rows, 42 channels and 441 deep-complete records. Artifact-tool recalculation, formula-error/object-placeholder scan and all four rendered opening views passed. Native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-22 (`NICK_164` complete)
+
+- `SlyosXgW__4` — “What Changes When You Hit $50,000 in Savings” is complete with limited evidence. The full 20,173-character canonical auto-caption text was read in four contiguous ranges and hash-verified at SHA-256 `98aa9bf49366767e676eb48e88e9538f90f05fbdf92c596a4ef09f7852f88bf6`. Archive member `332_SlyosXgW__4_What_Changes_When_You_Hit_50000_in_Savings.txt` is 21,752 bytes/563 lines, SHA-256 `88a63fd308398dcfae40601c65100f7ee8568ddf39ee6878a1a7d2a2a66ed7da`.
+- The registered 1280x720 thumbnail was fetched once and preserved as `audit-batches/NICK_SlyosXgW__4.jpg` (92,487 bytes; SHA-256 `b542fa481c6db79734c61ec6117cbd94242cdd66a1a4f8f78bde31775a870bb7`). `THE $50,000 RULE`, the safe, figure and arrow remain legible at 320x180. Historical art, impressions, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **1.81246x TYPICAL** against ten peers and **2.03509x STRONG** against five. The tier changes at the 2.0x boundary. Exact ten-peer cohort: `30EYlADmKpE`, `4D90YRoT2yo`, `4KiTtL0OrPs`, `uU64zaQKd30`, `zutCmVPrQcU`, `RmJKnJkUgxA`, `BZAU-4_MSsA`, `SU-3ZcgmCJ4`, `N3vR3PIIyQI`, `w5hm8ZXtCgw`; the first five are the sensitivity cohort. Two are STRONG, seven TYPICAL and one WEAK.
+- Primary sources support expense-denominated emergency resilience and the arithmetic that an unchanged `$50,000` balance at 5% APY earns `$2,500` over an assumed 365-day term. Material corrections: no located research establishes a universal `$50,000` brain-rewiring, locus-of-control, cortisol, sleep, career, social or temporal-flexibility threshold; runway ranges from 25 to 5 months at `$2,000` to `$10,000` monthly essential expenses; deposit insurance depends on product, bank and ownership category; interest is generally federally taxable; 5% was an unsourced product assumption; a 21.39% publication-era all-account credit-card rate materially exceeded it; and emergency liquidity is not automatically long-horizon investment capital. The script conflates bank savings, emergency cash and volatile investments.
+- Original deep completion is **440/966**; combined completion is **440/1,612**, leaving **1,172** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints checked and next frozen-order ID `SsHQ-TtXhRQ` — “Why a $70,000 Truck Costs $1M in Retirement”. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `206ec0414ed34abfe6501cccd508bdb1050bd6d2af2f6b62175390406b167eae`; combined-workbook SHA-256 is `d7643aa66bb161cfc54510873d7f72e30f43f7fe70917ce144e90cca7b56ab81`. The workbook contains 1,612 unique videos, 966 original detailed rows, 646 expansion rows, 42 channels and 440 deep-complete records. Artifact-tool recalculation and formula-error scan passed; all four opening views were inspected. Native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-22 (`NICK_163` complete)
+
+- `Sb0HUHNxF2I` — “What It's Like When You Reach $1M Invested (Not What You Think)” is complete with limited evidence. The full 17,090-character canonical auto-caption text was read in four contiguous ranges and hash-verified at SHA-256 `2fd31d3a9d0f590c6a88634092ac1238b6f34218f4d55fd64e2630ba296ac173`. Archive member `111_Sb0HUHNxF2I_What_Its_Like_When_You_Reach_1M_Invested_Not_What_You_Think.txt` is 18,684 bytes/483 lines, SHA-256 `7ef18976beff7ea9daecd6e5ab60fc15011a2de25339677da1d2e19e80772ebf`.
+- The registered 1280x720 thumbnail was fetched once and preserved as `audit-batches/NICK_Sb0HUHNxF2I.jpg` (139,363 bytes; SHA-256 `62860027df48c5e351bcc6e1fe6c3a0fdc6493f19f86d6ddfff3bd4af003ba66`). `THE “FREEDOM” PHASE`, the reclining figure, cash and arrow remain legible at 320x180. Historical art, impressions, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **1.87646x TYPICAL** against ten peers and **1.90976x TYPICAL** against five. Both cohorts agree, but the five-peer ratio is close to the 2.0x STRONG boundary. The exact ten-peer cohort contains two STRONG, seven TYPICAL and one WEAK record; the earlier same-channel `$1M invested` sibling `ze2522P-AWc` is a 10.16424x STRONG counterexample.
+- Primary/original sources support the rounded 1960/1990 inflation comparisons, UBS millionaire counts, the 3.9% Morningstar base case under its stated model, the Northwestern 64% self-perception result and national Schwab/Empower perception averages. Material corrections: UBS measures net wealth per adult rather than `$1M invested`; the invented five-of-eighteen 401(k) split conflicts with Ramsey's eight-in-ten result; SSA's January 2026 estimate is `$2,071`, not `$2,081`; the contiguous-U.S. four-person poverty guideline is `$33,000`, not `$39,000`; a flat 25% tax haircut is not universal; qualified-plan distributions are excluded from NIIT net investment income; the happiness paper does not prove income raises happiness forever; and 8% real compounding is an aggressive assumption relative to the SEC's cited 6%-7% historical real range. The composite Leo anecdotes, exact May dividend yield, Bengen 4.7% revision and exact regional survey values remain limited or unreproduced.
+- Original deep completion is **439/966**; combined completion is **439/1,612**, leaving **1,173** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints unchanged and next frozen-order ID `SlyosXgW__4`. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `2a8782c65d6634bc69fc2e62bf4febf4441762616905ba15a5263f0fcd95a82f`; combined-workbook SHA-256 is `b9e9d14dd26b08b0be8aef6d6235107593dbe17cf64ebf8f26755fca36a29cf1`. The workbook contains 1,612 unique videos, 966 original detailed rows, 646 expansion rows, 42 channels and 439 deep-complete records. Artifact-tool recalculation and formula-error scan passed; all four opening views were inspected. Native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-22 (`NICK_162` complete)
+
+- `S_8SLGjLrBM` — “Who Can Actually Afford a $750K House in 2026? (SHOCKING Math)” is complete with limited evidence. The full 18,839-character canonical auto-caption text was read in four contiguous ranges and hash-verified at SHA-256 `b4d5f9bc88b796b0372425d31dc946eb6048c886b2d83aebac1adddf9417d611`. Archive member `123_S_8SLGjLrBM_Who_Can_Actually_Afford_a_750K_House_in_2026_SHOCKING_Math.txt` is 20,397 bytes/550 lines, SHA-256 `92f3e1176fb43ceb13bc89edb9bb66a2814256e5620cdebfaa57c66dac950053`.
+- The registered 1280x720 thumbnail was fetched once and preserved as `audit-batches/NICK_S_8SLGjLrBM.jpg` (146,287 bytes; SHA-256 `39d1cb0dc3c15776258d28b5c2e359c17555ab4dab7422d3d32f382c2727722d`). `$750K... WHO?`, the worried figure, arrow and chained house remain legible at 320x180. Historical art, impressions, CTR and tests are unavailable.
+- Frozen performance reproduces at **0.56895x TYPICAL** against ten peers and **0.49967x WEAK** against five. The exact ten-peer cohort contains three STRONG, six TYPICAL and one WEAK record. The threshold-changing sensitivity and strong $500K counterexample prevent a causal packaging conclusion.
+- Primary/original sources support the 6.30% publication-era mortgage rate, $8,000 2022 transaction-account median, age-40/21% first-time-buyer findings, and Q1 2026 foreclosure changes. Focused Census correction: the 2024 ACS 1-year S1901 national household estimate is 13.7% at $200,000 or more; 15.6% is the separate $50,000-$74,999 bin. The video's 12%-13% range is directionally close rather than contradicted, although its upper bound is 0.7 percentage point below the 2024 point estimate and it gives no source vintage. Other material corrections remain unchanged: 36% is a total-debt ratio rather than a housing-only comfort rule; Goldman Sachs reported roughly 40% of working Americans paycheck-to-paycheck, not specifically $300K-$500K earners; the national mortgage-delinquency rate was not 11.5%; and the $2.6M/$4.5M investing comparison requires undisclosed 10% returns and monthly contributions. Core mortgage arithmetic reproduces; universal eligibility does not.
+- Original deep completion is **438/966**; combined completion is **438/1,612**, leaving **1,174** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints unchanged and next frozen-order ID `Sb0HUHNxF2I`. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. After the focused Census correction, JSONL SHA-256 is `0b84b745fd7665452a0cce6124c9efde70e92938cf0c6a6accd15935d6181c15`; combined-workbook SHA-256 is `3c6d24d6a518bfe329d084a04eae043ad3eabf6d1d37b29feda5a25f1a17ccbf`. The workbook contains 1,612 unique videos, 966 original detailed rows, 42 channels and 438 deep-complete records. Formula-error scan returned zero matches; native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-21 (`NICK_161` complete)
+
+- `SU-3ZcgmCJ4` — “Are You In The Top 50 Of Americans Financially (Surprising Data)” is complete with limited evidence. The full 18,153-character canonical auto-caption text was read in contiguous ranges and hash-verified at SHA-256 `85c30461e0fcd9521662c764747fd6e9b812834c1545e8537b7a2a026a389b95`. Archive member `336_SU-3ZcgmCJ4_Are_You_In_The_Top_50_Of_Americans_Financially_Surprising_Data.txt` is 19,669 bytes/522 lines, SHA-256 `8d86a870bdc71176ba866595a07770d05979b38385bddd0d2b12e55c5eb9cb94`.
+- The registered 1280x720 thumbnail was fetched once and preserved as `audit-batches/NICK_SU-3ZcgmCJ4.jpg` (101,689 bytes; SHA-256 `5504e0427e7eb9b65e3171ef296be0217a9f3ed7db5a5ba3ceb906fdca5a4493`). `TOP 50% OR NOT?`, the skeptical figure, green assets and broken piggy bank remain legible at 320x180. The binary image overstates a multidimensional analysis; historical art, impressions, CTR and tests are unavailable.
+- Frozen performance reproduces at **0.32349x WEAK** against ten peers and **0.27962x WEAK** against five. The ten-peer cohort contains one STRONG, eight TYPICAL and one WEAK record. The stable weak tier is descriptive only; no title or thumbnail causality is claimed.
+- Primary sources support the $83,730 2024 income median and the 55/15/30 emergency-resource split. Material corrections include: the Fed SCF is 2022 family net worth and its age medians differ sharply; $18.388 trillion does not imply $15,056 per household; renter housing-burden rates were generalized to all Americans; state-income captions are corrupted; Vanguard balances apply to its plan participants; SSA's January 2025 retired-worker average was $1,976, not $1,550; and BEA's saving rate is an aggregate ratio, not an individual's percentile. The single top-50 status is not defined across unlike populations and dates.
+- Original deep completion is **437/966**; combined completion is **437/1,612**, leaving **1,175** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints unchanged and next frozen-order ID `S_8SLGjLrBM`. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `12756918952665c0dbe29c373d5b3dec70a226840c84145c81baff5c152af0cf`; combined-workbook SHA-256 is `b87869124ec31a59b8d9e640ed370f72f303cd2902f1f0ef63b47998296002a9`. The workbook contains 1,612 unique videos, 966 original detailed rows, 42 channels and 437 deep-complete records. Formula-error scan returned zero matches; native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-21 (`NICK_160` complete)
+
+- `SLFcypMv6I0` — “SpaceX IPO Just went public, Don't Buy Until You See This!” is complete with limited evidence. The full 18,072-character canonical auto-caption text was read in contiguous ranges and hash-verified at SHA-256 `04838759d4a9f8d4ad130cdbda71ec1ac6874edf6f6199cd8ac12c6416dbc1c1`. Archive member `083_SLFcypMv6I0_SpaceX_IPO_Just_went_public_Dont_Buy_Until_You_See_This.txt` is 19,660 bytes/506 lines, SHA-256 `add8fe9d8e42a73507e08f8967a59ef149528c536aa2c5400a9d877a82f6ec20`.
+- The registered 480x360 `hqdefault` thumbnail was fetched once and preserved as `audit-batches/NICK_SLFcypMv6I0.jpg` (20,728 bytes; SHA-256 `570462b09fe4e27f09352c6d4dc2c33fefb21061097426de05173bfe6c5c7e36`). `A TRAP?!`, the skeptical figure and rise-then-crash chart remain legible at 240x180. It predicts downside more strongly than the conditional script. Historical art, CTR and tests are unavailable.
+- Frozen performance reproduces at **1.03859x TYPICAL** against ten peers and **1.47811x TYPICAL** against five. The exact ten-peer cohort contains nine TYPICAL and one WEAK record. The stable tier but materially different ratios show cohort sensitivity; no causal packaging claim is made.
+- SEC and Nasdaq evidence supports the record offering, roughly 94.79x 2025 sales valuation, small float, Starlink scale and dual-class control, but reveals material errors and timing limits: the transcript says `SPCE` instead of `SPCX`; Nasdaq reports a $150 open rather than the vignette's implied $170-$200 opening; $85.675 billion is net proceeds after full over-allotment rather than gross; and Nasdaq-100 inclusion was announced June 26, after the June 17 video. The $17 billion underpricing estimate reproduces at about $16.58 billion using the first-day close, but is issuer value transferred to allocated buyers, not simply an insider-versus-retail spread. Historical IPO underperformance is a base rate, not a SpaceX price forecast.
+- Original deep completion is **436/966**; combined completion is **436/1,612**, leaving **1,176** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints unchanged and next frozen-order ID `SU-3ZcgmCJ4`. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `6444609b7eac5ebcf0b812bd0e6f87c98d16756c3509f8b19186a525ea2cca1f`; combined-workbook SHA-256 is `82ff4f008f421313ccd64321e20ad56189ebec160d85417c95f79d659c5c3fb1`. The workbook contains 1,612 unique videos, 966 original detailed rows, 42 channels and 436 deep-complete records. Formula-error scan returned zero matches; native Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-21 (`NICK_159` complete)
+
+- `SJLyXAGbBLk` — “A Simple Japanese Money Trick to Become 35% Richer” is complete with limited evidence. The complete 20,684-character canonical auto-caption text was read and hash-verified at SHA-256 `9eb919f3b238af3e18a3736c98d1f8f12343b15088da9c86d06e1551b18601c9`. The archive member is 22,197 bytes/583 lines, SHA-256 `22dc318432abda641134356e3a31b16e91e9081d4beef6de4680843dd93d59f8`.
+- The registered 1280x720 thumbnail was fetched once and preserved as `audit-batches/NICK_SJLyXAGbBLk.jpg` (228,605 bytes; SHA-256 `79a6c97f4ae2b10ea4da8ff19cd49a524f5cc3937963e0d4b23ecdb5886f08e5`). `YOU NEED TO KNOW THIS`, the presenter, arrow and central banknote remain legible at 320x180, but the package does not name Kakeibo or show the title's Japanese/35% specifics. Historical art, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **0.29151x WEAK** against ten peers and **0.27840x WEAK** against five. The ten-peer cohort contains two STRONG, five TYPICAL and three WEAK records. This is descriptive counterevidence to a universal cultural-novelty/numeric-promise formula, not a causal packaging finding.
+- The script correctly says its headline's 35% figure is marketing, not research. National Diet Library evidence supports Hani as Japan's first woman journalist and the 1903 magazine context, but the transcript's 1904 journalist date is imprecise and exact original-ledger details remain incompletely sourced. The 2024 EEG experiment, generation-effect meta-analysis and goal study do not directly test Kakeibo savings; the goal comparison also confounds writing with weekly accountability. Direct replication evidence weakens the categorical longhand-learning claim. App-retention data cover broad finance apps, while unnamed annual-abandonment, paycheck-to-paycheck and no-savings statistics remain unreproduced. Aggregate debt cannot establish app failure.
+- Original deep completion is **435/966**; combined completion is **435/1,612**, leaving **1,177** combined records. `VALIDATION_966.json` is PASS with zero errors, all 26 immutable source fingerprints unchanged and next frozen-order ID `SLFcypMv6I0`. Expansion records remain metadata-only.
+- Only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` was rebuilt. JSONL SHA-256 is `89129787c06c7d121d5b327940f60f44746399bfcde8e7769cf9d55d1fe25834`; combined-workbook SHA-256 is `6edfd069d9dbe3e609188368f15b78983953ed59c3734ac8f142d4bb562ad836`. The workbook contains 1,612 unique videos, 966 original detailed rows and 435 deep-complete records. Native Microsoft Excel recalculation remains untested.
+
+## Current workbook and methodology contract — 2026-10-21
+
+- `VIDEO_AUDIT_METHODOLOGY_REVIEW.md` traces the implemented workflow and independently checks NICK_156–158. Canonical transcript, archive-member and thumbnail hashes reproduce. The transcripts are auto-generated and untimed; audio, MP4 frames, editing and private analytics remain unverified.
+- `validate_audit_966.py` applies the strict current receipt contract to NICK_156 onward: complete contiguous text ranges, normalized first/last witnesses, archive and image checks, native/mobile inspection sizes, source and calculation receipts, exact performance cohorts, audiovisual limitations and the non-causal boundary. NICK_157 and NICK_158 archive line receipts were corrected; findings and statuses did not change.
+- `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` is the only current Excel deliverable. It contains all 1,612 IDs, the 42-channel directory and all 966 original detailed records, including the former original-workbook reading fields plus full research JSON. The original-only workbook and builder are retired from active tracked outputs. Frozen data, audit JSONL, receipts and source fingerprints remain authoritative.
+- Current checkpoint is 435/1,612 complete, 1,177 remaining, with `SLFcypMv6I0` next. Rebuild only the combined workbook after each validated audit.
+- Combined workbook SHA-256 after NICK_159: `6edfd069d9dbe3e609188368f15b78983953ed59c3734ac8f142d4bb562ad836`. It has 1,612 unique all-video IDs, 966 unique detailed-research IDs, 17 dashboard formulas and zero scanned formula-error strings. Native Microsoft Excel recalculation remains untested.
+- Local validation after consolidation: 33 Python research tests, two workbook-formatting tests, both research validators, 595 source-date reconciliations, all 26 immutable source fingerprints, field-level detail parity and the one-workbook regression pass. On recovery, live usage was 87% five-hour and 28% weekly, close to the 90% stop threshold, so `SJLyXAGbBLk` was not started. Paid-credit balance is zero; reset credits were not spent.
+
+## Latest continuation — 2026-10-21 (`NICK_158` complete)
+
+- `S0xwBH_fAn0` — “Why $100K Doesn’t Feel Rich Anymore” is complete with
+  limited evidence. The complete auto-caption text was read and hash-verified:
+  18,564 canonical bytes, SHA-256
+  `63fb4984aeaf2b7cc3f80a6747cbbf1f28b17f0a141f7ea68a6732c9c28907b4`.
+  The archive member is 19,826 bytes/520 lines, SHA-256
+  `d824166888e3ab60cd1790cd941f480b531009b9509747ced597624fb40e9141`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_S0xwBH_fAn0.jpg` (105,915 bytes; SHA-256
+  `aad00d939912566de818d55878ed20e41d53259374ff8424c065def8aa37a285`).
+  `$100K POOR`, the worried presenter, cash and arrow remain legible at 320x180;
+  the categorical `POOR` claim is stronger than the script's relative-spending
+  conclusion. Historical art, impressions, CTR and A/B tests are unavailable.
+- Frozen performance reproduces at **0.44202x WEAK** against ten peers and
+  **0.29857x WEAK** against five. The exact ten-peer cohort contains three
+  STRONG, four TYPICAL and three WEAK records. This is descriptive only.
+- The universal 40% tax claim does not reproduce: a 2025 single filer with
+  wages only and the standard deduction owes about 21.26% in federal income
+  tax plus employee FICA before state/local tax. November CPI-U arithmetic
+  maps November 2015 `$100,000` to about `$136,567` in November 2025 dollars
+  and November 2005 `$100,000` to about `$164,029`, not `$132,000` and
+  `$175,000`; the 2025 endpoint postdates upload. NAR supports age 40 only for
+  successful first-time primary-residence buyers in its defined survey.
+  Unnamed paycheck-to-paycheck, debt and `$520,000` perception figures remain
+  limited or unreproduced and are not universal financial rules.
+- Original completion is **434/966**; combined completion is **434/1,612**,
+  leaving **1,178** combined records. `VALIDATION_966.json` is PASS with zero
+  errors, all 26 immutable source fingerprints unchanged and next frozen-order
+  ID `SJLyXAGbBLk`. Expansion records remain metadata-only.
+- At this historical checkpoint both workbooks were rebuilt. JSONL SHA-256 is
+  `85890022e675fe9884ce04bfd0284900a501f6f39afd21652646785bc5264a43`;
+  original workbook SHA-256 is
+  `017d908a8f62e4ea256b134f8588da520256ee76af448d0578f752d87c6b4eeb`;
+  combined workbook SHA-256 is
+  `994afc106fb159fda9dcbac106cb614467efbb0917309a33a9166901d42f5fc8`.
+  Coverage is 450/450/440/440/954/434. Contract tests and workbook-format tests
+  pass; 595 source dates reconcile. The original-only workbook has since been
+  retired. Native Microsoft Excel recalculation
+  remains untested.
+- The combined-workbook thumbnail-receipt overlay added with `NICK_157`
+  remains covered by contract tests and now also maps `S0xwBH_fAn0` to its
+  exact registered local image path.
+
+## Latest continuation — 2026-10-21 (`NICK_157` complete)
+
+- `RmJKnJkUgxA` — “How Much Emergency Cash You Actually Need Saved” is
+  complete with limited evidence. The entire registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `64c45c42a1d8468a96646ca6660e658e4d1874dc704afbf31cc120d29b7dac38`.
+  Archive member: 21,014 bytes, 547 lines, SHA-256
+  `d607cf66c8e72ac29c33c6cb124aa9ee1849056eed29f763867dfd2d7dbb1a98`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_RmJKnJkUgxA.jpg` (100,315 bytes; SHA-256
+  `61f01b99b22e4755e5162d300491004de33c22bcdbf342e1e30db5790f2a8876`).
+  `THE REAL NUMBER`, the presenter, piggy bank and arrow remain legible at
+  320x180. The singular certainty is stronger than the script's conditional
+  household-specific framework. Historical art, CTR and A/B tests are
+  unavailable.
+- Frozen performance reproduces at **0.57110x TYPICAL** against ten peers and
+  **0.42432x WEAK** against five. The exact ten-peer pool contains eight
+  TYPICAL, one STRONG and one WEAK record. The tier sensitivity and unavailable
+  private analytics preclude causal packaging claims.
+- Primary-source review supports household-specific emergency-fund sizing, a
+  starter buffer, the purchasing-power effect of inflation and the distinction
+  between spending shocks and income shocks. The `$2,000` versus `$1 million`
+  comparison is a regression association, not economic or causal equivalence.
+  The 44% `$1,000` figure is a dated private survey; the 42% no-fund and `$500`
+  median figures remain unreproduced. Credit cards do not guarantee 30
+  interest-free days; insurance and unemployment benefits leave material gaps;
+  bank money-market deposit accounts must not be conflated with uninsured
+  money-market mutual funds. The three-to-nine-month and debt-allocation
+  recommendations are heuristics, not universal rules.
+- Original deep completion is **433/966**; combined completion is **433/1,612**,
+  leaving **1,179** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors, all 26 immutable source fingerprints unchanged and next
+  frozen-order ID `S0xwBH_fAn0`.
+- Both workbooks were rebuilt. JSONL SHA-256 is
+  `d87336f8298dfbd0653c26629eb6dcee8d5cb48271a3c55048924e20fd850cec`;
+  original workbook SHA-256 is
+  `0ef637326aa4a02ea39787cb12b1b5a97a31fdc96df6a7dfccac40170a364161`;
+  combined workbook SHA-256 is
+  `25c32a5dd26b30e1bfd19e6dcce6525ec89c2172ce1b8eff27c4cc4715d65d1e`.
+  Coverage is 449/449/439/439/954/433. Both workbooks preserve their exact
+  unique-ID populations and formula-error scans return zero matches. Rendered
+  views are legible; native Microsoft Excel recalculation remains untested.
+- The combined-workbook thumbnail issue was real: its frozen universe snapshot
+  could retain `URL_OR_NOT_AVAILABLE` after a later individual audit registered
+  a local receipt. The focused projection now overlays the authoritative audit
+  image receipt at build time. A contract test and independent exported-workbook
+  check confirm `RmJKnJkUgxA` displays `AVAILABLE` and the exact local evidence
+  path; no source universe or raw evidence was rewritten.
+
+## Latest continuation — 2026-10-21 (`NICK_156` complete)
+
+- `RgaTGzeFcPQ` — “Is Bitcoin going to 0? (What They Won't Tell You)” is
+  complete with limited evidence. The entire registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `531fd437e4ceebef6787d4325aa0a4084a7aa89c818930a46d35de1fc937d57a`.
+  Archive member: 20,172 bytes, 521 lines, SHA-256
+  `ace939c657afd441ed55b7f71b13783486e3108f464e04ead76f526e480ffbac`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_RgaTGzeFcPQ.jpg` (128,018 bytes; SHA-256
+  `751b4a780d8560eb78149759178bf16d2ca33a8ce2db317893731cc54beef1cf`).
+  `IT'S OVER...`, the falling line, Bitcoin coin and arrows remain legible at
+  320x180. The image implies finality more strongly than the script, which says
+  literal zero is unlikely. Historical art, CTR and A/B tests remain unavailable.
+- Frozen performance reproduces at 1.17070x TYPICAL against ten peers and
+  1.27390x TYPICAL against five. All ten exact peers are also TYPICAL. The
+  extreme zero/finality package therefore is not a frozen-snapshot breakout and
+  no causal packaging claim is made.
+- Primary-source checks support the approximate 2025 peak, Q2 2026 ETF-outflow
+  context, liquidity-driven miner selling, Strategy's $1.25 billion authorized
+  monetization capacity, the Federal Reserve's 10% prior-year crypto-use measure
+  and the subsidy-halving schedule. Exact aggregate flow, miner, wallet-loss,
+  holder-supply and attack-cost figures remain unreproduced from named primary
+  data. Strategy authorization was not a completed sale at the cited date.
+  BIP-360 and BIP-361 were draft proposals, not activated Bitcoin Core code or
+  an adopted confiscation decision. Price and quantum outcomes remain
+  speculation; no probability was invented.
+- Original deep completion is **432/966**; combined completion is **432/1,612**,
+  leaving **1,180** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors and reports next frozen-order ID `RmJKnJkUgxA`.
+- Both workbooks were rebuilt from the latest audit. JSONL SHA-256 is
+  `207d4fe91189abd991000ec9244e4aa4817fce412d6b5b51536ea80faef9ed23`;
+  original workbook SHA-256 is
+  `005c4237bb64f2a1a88c8ba3dffda5d3d1c8204f0eb2b4c2a6f9a2f45db4ddfb`;
+  combined workbook SHA-256 is
+  `cc091c37f5e68447ca33db26006f7d8b3c2023edf842534cbf9400ac7fac20ee`.
+  Coverage is 448/448/438/438/954/432. Formula-error scans returned zero
+  matches; rendered Coverage and Combined Dashboard views are legible. Native
+  Microsoft Excel recalculation remains untested.
+
+## Combined workbook — 2026-10-21
+
+- `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx` is the reproducible and sole current Excel view of
+  the 1,612-video Finance universe. It is generated by
+  `build_workbook_1612.mjs` from the authoritative universe, the original audit
+  JSONL and the approved expansion ledgers. The original-only 966 workbook and
+  builder are retired; historical Git commits preserve them.
+- The four sheets are `Combined Dashboard`, `All Finance Videos` (1,612 rows),
+  `Channel Directory` (42 rows) and `Detailed Research` (966 original records).
+  Expansion records remain metadata-only and are never marked deep-complete.
+- Current checkpoint: 434 deep-audited, 1,178 pending. Next untouched original
+  record is `SJLyXAGbBLk`.
+
+## Latest continuation — 2026-10-21 (`NICK_155` complete)
+
+- `Rd40d0XZLpQ` — “Shocking Money Stats of the Average Person” is complete
+  with limited evidence. The entire registered auto-caption text was read;
+  canonical text SHA-256 remains
+  `ecb82f628146589bdc52cff62d7eaa13a4680ac4a74f2ed8f0eeca42000797be`.
+  Archive member: 22,718 bytes, 589 lines, SHA-256
+  `77ec88293c3118cca54b1c6168dfa7197e44ad8fb852483085a4a961d5d0db8f`.
+- The registered 1280x720 thumbnail was fetched once and preserved as
+  `audit-batches/NICK_Rd40d0XZLpQ.jpg` (94,504 bytes; SHA-256
+  `8b774057afde97381040b2e7d8ced78df362ddcaf8d1e7426980f88cdccb0789`).
+  `WHAT PEOPLE REALLY HAVE`, the arrow and the `9,000` card remain legible at
+  320x180. Historical art, CTR and A/B tests remain unavailable.
+- Frozen performance reproduces at 19.76486x STRONG against ten peers and
+  9.52068x STRONG against five. This is an extreme descriptive outlier, not a
+  causal packaging result. The exact peer pool includes TYPICAL and WEAK
+  social-comparison counterexamples.
+- Financial fact-checking found that much of the spending block exactly uses
+  BLS 2021 means, while the income, Social Security, net-worth and saving-rate
+  figures are stale or use mismatched populations relative to official data
+  available by publication. The 4%-withdrawal, card-interest and annualization
+  arithmetic reproduces, but arithmetic accuracy does not repair source-vintage
+  or denominator problems. Receipts preserve official source dates and limits.
+- Original deep completion is **431/966**; combined completion is **431/1,612**,
+  leaving **1,181** combined records. `VALIDATION_966.json` is PASS with zero
+  structural errors and reports next frozen-order ID `RgaTGzeFcPQ`.
+- Both workbooks were rebuilt from the latest audit. JSONL SHA-256 is
+  `49e24dfce26f79e59b793f1e27e692b75f0047274b3ac5d29c09642f459d16dd`;
+  original workbook SHA-256 is
+  `7242fb53cdafc934179b2d48f639723ae8cf7a0eb91ca554589aa92934e2754d`;
+  combined workbook SHA-256 is
+  `f1117fb1caafc57c470a5579d44db6123e0cf3b62e20ce05ea600168ff2e92e7`.
+  Coverage is 447/447/437/437/954/431. Formula-error scans returned zero
+  matches; rendered Coverage and Combined Dashboard views are legible. Native
+  Microsoft Excel recalculation remains untested.
+
+## Latest continuation — 2026-10-21 (`NICK_154` complete)
+
+- `R_E6OOnF9e4` — “15 Low Effort Boring Tasks That Make More Than Your Job” is
+  complete with limited evidence. The full registered auto-caption text was
+  read; canonical text SHA-256 remains
+  `70704b6d9146317a7029506a54fb72d8efdfad277b4a2529c3d4c6754441afe5`.
+  Archive member: 21,598 bytes, 580 lines, SHA-256
+  `6466d1e2a194f45285ebdffd3bb4ee43890869ae80bc96f843210fab75c78e5b`.
+- The registered 1280x720 thumbnail was inspected at native and mobile size and
+  preserved as `audit-batches/NICK_R_E6OOnF9e4.jpg` (164,521 bytes; SHA-256
+  `c531626b9f2e9e4bf707717a5359c356944928974ec8ddb381a642a40f8da0d2`).
+  Four of six pictured examples are absent from the transcript.
+- Frozen performance reproduces at 0.59678x TYPICAL (ten peers) and 0.66659x
+  TYPICAL (five peers). Primary-source checks support the dated FDIC savings
+  rate, I-bond issue-period rate and REIT distribution rule, while the universal
+  tax claim and most platform/business earnings remain misleading or
+  unverified. Mary's disclosed amounts reproduce to about $638/month before an
+  unstated Groundfloor amount, not the claimed $1,300.
+- Original deep completion is **430/966**, leaving 536 original records. Combined
+  universe workload is **1,182**. Validator PASS reports next frozen-order ID
+  `Rd40d0XZLpQ`.
+- Derived JSONL/CSVs and workbook were rebuilt. JSONL SHA-256 is
+  `051b85500cc9ad1017def5e191675e5c27bb6ba2e32d51ee618551b2e7342d8a`;
+  workbook SHA-256 is
+  `cd6c6567285d8c89c9308bb97e03d050236ed795e5b7224e30d9d0ccb535ff57`.
+  Workbook population is 966 with 462 readings and coverage
+  446/446/436/436/954/430. Formula-error scan returned zero matches; the
+  Coverage render is legible. Native Microsoft Excel recalculation remains
+  untested.
+
+## Repository-wide reconciliation — 2026-10-21
+
+- `reconciliation-all-repository-2026-10-21/FINANCE_UNIVERSE.csv` now provides
+  one provenance-preserving index for every eligible Video ID already
+  enumerated in repository evidence: **1,612 unique IDs**.
+- The prior 1,226 remains unchanged. The new layer adds **386** disjoint
+  metadata-only records: 180 from six committed landscape snapshots and 206
+  from the pinned Casually Finance branch artifact at
+  `fb1e56d03e5ad53086c74247cd2972b262d09b78`. No new acquisition occurred.
+- Channel directory: **42** unique identities; **27** have included video
+  datasets, five supplied channels have video datasets but zero eligible rows,
+  and ten are `IDENTITY_ONLY_NEEDS_DATA`.
+- `NICK_154` completes `R_E6OOnF9e4`; deep completion is now **430**. Remaining
+  individual deep-audit workload is **1,182**. The 10 MEDIUM-confidence MonkeyExplains inclusions were reviewed
+  from actual title/description and retained at MEDIUM because no transcript is
+  registered.
+- Continue frozen original order at `Rd40d0XZLpQ`. Do not mark any
+  reconciliation addition complete without its own evidence-based audit.
+
+## Latest population expansion — 2026-10-21 (MonkeyExplains1999 metadata classified)
+
+- PR #38 commit `f176aa2861cd93913b977e6159a4e00f4eabeacc` is the
+  immutable metadata authority. Its 76 public videos reconcile to 61 regular
+  videos and 15 Shorts. The 45 restricted records are not in the public-video
+  collection and are not counted as available videos.
+- Every public Video ID was classified from its actual title and description in
+  `expansion-monkey-explains-1999-2026-10-21/FINANCE_INCLUSION_CROSSWALK.csv`:
+  **63 Finance/Economics eligible, 13 excluded, 0 duplicates** against either
+  the frozen 966 or the existing 197 additions. The 13 unrelated records remain
+  available in the separate 76-row full-channel source collection.
+- The versioned layer adds 63 unique IDs, making the combined population
+  **1,226** (966 + 197 + 63). Original progress remains **429/966**, with 537
+  original records remaining. Existing expansion deep completion remains 0/197;
+  Monkey expansion deep completion is 0/63. Therefore 797 combined records are
+  not yet deep-audited or remain unfinished.
+- All new records are explicitly `METADATA_ONLY_NOT_DEEP_AUDITED`. No transcript,
+  thumbnail binary, private analytics, scraping, paid run, or restricted media
+  was added. The exact next untouched original remains `R_E6OOnF9e4`
+  (`NICK_154`).
+- Reproducible builder: `build_monkey_expansion.py`; contract tests:
+  `test_monkey_expansion.py`; machine result: the new layer's
+  `EXPANSION_VALIDATION.json`.
+
+## Latest preservation checkpoint — 2026-10-20 (durable local source found; audit counts unchanged)
+
+- Machine B's permanent private media root is
+  `/Users/ghilmanislam360/Documents/YIOS-Media-Library/`. Its 456 files and
+  4,363,111,708 bytes were checked individually against the tracked media
+  inventory with SHA-256: 456 matches, zero missing or mismatched. The original
+  Downloads source remains untouched; no media bytes were uploaded to GitHub or
+  Git LFS.
+- Expansion video `HjlVexL2Lxk` is present as
+  `PrimateEconomics-MP4/Options Trading Explained with Bananas (No AI)
+  [HjlVexL2Lxk].mp4`: 24,763,075 bytes, 1920x1080 H.264/AAC, 615.003719
+  seconds, SHA-256
+  `c01050ad557d2e478b6a928e017382bedc7e6f13dc16d8f0f6ae194ea99d520d`.
+  This proves local media availability only. It is not an official-caption
+  source, no ASR was generated in this checkpoint, and the existing
+  `BLOCKED_PARTIAL_EVIDENCE` state remains unchanged.
+- Original progress remains 429/966; expansion remains 0/197 deep-complete,
+  one blocked partial and 196 metadata-only. Exact next original remains
+  `R_E6OOnF9e4` (`NICK_154`). Live usage after the preservation unit was 79%
+  five-hour and 25% weekly, paid balance $0, with two reset credits unused.
+  A complete NICK_154 research+rebuild+QA unit was not started because its
+  projected cost would leave inadequate reserve before the 90% stop gate.
+
+## Latest continuation checkpoint — 2026-10-20 (NICK_153 complete; first expansion candidate blocked)
+
+- Starting aligned HEAD was `8d3144ac171f0218c6f3f20f86362c12686fd6aa`; local branch, `origin/research/finance-economics-intelligence` and draft PR #36 matched. The working tree was clean and no other process owned this Finance checkout. Draft PR #39 remained unmerged at `967ea707a0d7198754d132a978962baa96073f49`; no acquisition was repeated.
+- `NICK_153` completes `RUVOjfrIemY` — “Why Your Credit Score Drops Even When You Pay On Time.” Full canonical stored captions were read in four contiguous ranges: 18,406 UTF-8 characters/bytes, 3,178 whitespace words and 3,214 coverage tokens, SHA256 `eb73f3f2a20f0e438d170cb582eedd85056d14f268c2bd7778f3fcc3da176d5a`. Archive member `144_RUVOjfrIemY_Why_Your_Credit_Score_Drops_Even_When_You_Pay_On_Time.txt`: 19,955 bytes, 524 lines, SHA256 `85680e7846f82bc58274b69ce3a87ea0995e0e0f16cb7c484e0b2c8e8b385144`. Auto-generated captions only; audio, timing and editing remain unverified.
+- Registered maxres thumbnail fetched once and persisted as `audit-batches/NICK_RUVOjfrIemY.jpg`: 1280x720 JPEG, 114,932 bytes, SHA256 `9f1aaeba346d164b2780eec6b5e92212a28bd3104d11a2f8d07fb241b5c48250`, inspected native and 320x180. `STILL DROPS?!`, the worried character, phone `CREDIT SCORE` label and red down arrow remain mobile-legible. Historical art, CTR and A/B tests are unavailable.
+- Performance independently reproduces at 5,344 frozen views, 276 likes and 45 comments at 155.1184 days: 0.49764546x WEAK against ten peers and 0.47286753x WEAK against five. Both tiers are WEAK; exact peer IDs are in the receipt. No causal performance claim.
+- Core finding: CFPB and FICO support the main mechanism—on-time payment is positive, but the reported balance/file snapshot, utilization, inquiries, limits, closure, credit mix and model can still change the score. The script overstates universal utilization cliffs, exact point losses, authorized-user removal effects, the FTC one-in-four result as a current 40-million material-error count, and a causal “profitable confusion” business model. Its stated $380,000, 30-year, 7.1%-versus-6.7% mortgage example reproduces to about $36,599 in principal-and-interest difference, not $31,200, before fees/taxes/insurance/prepayment. The paper-dispute “legal standing” claim is unsupported and is not legal advice.
+- Publication-date handling: 2024 CFPB utilization guidance, 2013 FTC accuracy results, January 2025 CFPB actions and the 2022 FHFA model approval predate the 2026-04-08 video. The CFPB report-retention page reviewed 2026-09-02 and later 2026 mortgage-model implementation are labeled retrospective. Current undated FICO pages do not independently prove their exact publication-state content.
+- Original progress is now 429/966 expanded-complete, 537 not expanded. Coverage: TITLE 445, THUMBNAIL 445, SCRIPT 435, TOPIC 435, PERFORMANCE 954, VIRALITY 429. `VALIDATION_966.json` PASS reports next exact frozen-order ID `R_E6OOnF9e4` — “15 Low Effort Boring Tasks That Make More Than Your Job.”
+- Rebuilt authoritative JSONL, seven derived CSVs and workbook. JSONL SHA256 `c2516a037cb01f33a2102ff2b75ac7529beb2f4524bee65558f82cd98c72c665`; workbook SHA256 `5453c0cb16c6ef5ab1d39b561498ceacfc34d71e7b75844bb3dbb2a391866fef`. Workbook contains 966 population rows and 461 readings, formula coverage 445/445/435/435/954/429, zero formula-error matches, and legible Coverage/Videos/Readings renders. Native Microsoft Excel recalculation remains UNTESTED.
+- QA: 18 Python contract tests PASS; two workbook-format tests PASS; `validate_research.py` PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION; `validate_audit_966.py` PASS with 966 unique IDs, 26 immutable hashes and zero errors; 595 source rows/date fields verified; all seven CSVs and XLSX IDs reconcile. Comparison to starting HEAD changes only `RUVOjfrIemY`; the other 965 JSONL objects are unchanged. Baseline/raw paths show no diff; targeted secret scan and whitespace check pass.
+- Expansion remains isolated from the 966 outputs: 445 acquired, 225 eligible, 28 exact baseline overlaps, 197 unique additions and 1,163 combined unique IDs. `EXPANSION_001` registers `HjlVexL2Lxk` as `BLOCKED_PARTIAL_EVIDENCE`, not deep-audited: the actual 1280x720 thumbnail was inspected and hashed (`eb5fa82778c7010e85bb7ef47f2a38d270dfef8f1e5c4ad32a11d4f6fd2a92e0`), but PR #39 and local archive searches provide no captions. TITLE/THUMBNAIL are limited-evidence complete; SCRIPT/TOPIC are blocked missing source; PERFORMANCE/VIRALITY are insufficient-data. Expansion totals are 0 deep-audited, 1 blocked partial and 196 metadata-only. Two Chronofold inclusions remain MEDIUM uncertainty pending full transcript scrutiny.
+- Expansion audit artifacts are independently reproducible with `build_expansion_audits.py`: 197-row `EXPANSION_AUDIT_LEDGER.jsonl`, validation, checksums, batch, receipt and evidence. Ledger SHA256 is `9e19befdcb2da5109289d7df0ed43fb7991063c3c8bdb46f1ed07383d40ef506`; validation PASS reconciles 197 disjoint expansion IDs and 1,163 combined IDs without modifying original outputs.
+- Resource gate before research was five-hour 40% used, weekly 6% used, paid balance $0 and two unused reset credits; the pre-workbook recheck was 45%/7%, and the pre-persistence check after both units was 83%/13%. Context remains UNKNOWN with no serious warning exposed. Apify CLI/token access was absent; no Apify call or spending occurred.
+- Next original task: `R_E6OOnF9e4` after live limit verification. Next expansion task: obtain a legitimate caption source for `HjlVexL2Lxk` without paid acquisition or repeat scraping; if unavailable, retain the blocker and select the next frozen-ledger record whose evidence supports a real deep audit.
+
+## Latest continuation checkpoint — 2026-10-20 (12-channel expansion classified; NICK_152 complete)
+
+- Starting aligned HEAD was `a58747db236022a90733ff01c87b51aeaa1bb07f`; local branch, remote branch and draft PR #36 matched. Draft PR #39 matched commit `967ea707a0d7198754d132a978962baa96073f49` and was read from its existing worktree without merging or repeating acquisition. Both exact-head Actions checks reported `FAILURE`; inspect annotations after the final push and do not call billing-blocked zero-step CI successful.
+- The PR #39 snapshot contains 445 unique public-video metadata rows across 12 channels. A new independently identified derived layer lives in `expansion-12-channel-2026-10-20/`. It has a 445-row inclusion crosswalk, 28-row duplicate report, 197-row unique expansion master, 12-channel summary, source hashes, validation and checksums. Builder: `build_finance_expansion.py`; contract tests: `test_finance_expansion.py`.
+- Classification result: 225 acquisition rows are Finance-eligible. Exact overlap with the frozen baseline is 28 Primate Economics IDs, all with the same canonical `Channel_ID`; the sole Primate new ID is `HjlVexL2Lxk`. Unique expansion = 197; combined unique population = 1,163. Expansion deep-audit completion remains 0/197: all additions are explicitly `METADATA_ONLY_NOT_DEEP_AUDITED`.
+- Channel results (captured / eligible / unique): Chronofold 2/2/2; Logical Money 20/20/20; Mark Invests 81/81/81; Primate Economics 29/29/1 plus 28 duplicates; Primitive Education 45/13/13; Serious History 64/0/0; Timepiece History 7/0/0; Uncle Frank Retirement 27/27/27; Uncle John Financial 53/53/53; Unknown Frequencies 23/0/0; What if 4k 30/0/0; monke 64/0/0. Chronofold is MEDIUM uncertainty pending full text. General/military/history videos were not included merely because they mention wealth, pay, corruption, work, or crypto incidentally.
+- `NICK_152` completes `R1AcuUo916k` — “Private Credit Panic - Why Investors Are Rushing For the Exits.” Full canonical stored captions read in four contiguous ranges: 18,792 UTF-8 characters/bytes, 3,445 whitespace words and 3,460 coverage tokens, SHA256 `86dedc55cbaeb9a31458d88c5586ee0c283953da2d56c0f5b0eb3a11e9723705`. Archive member SHA256 `9e1596d5ad8e01854723b7b4fdefae3ed9ee6440779c6fa260a33b878b39445b`. Auto-generated text only; audio/timing/editing unverified.
+- Registered maxres thumbnail fetched once and persisted as `audit-batches/NICK_R1AcuUo916k.jpg`: 1280x720 JPEG, SHA256 `d0301e533696ed3861ccd72e11992cdd63b441476af0690c170c1a2e4d69bd3d`, inspected native and 320x180. Large `ITS COMING...`, EXIT scene, running figures and red PRIVATE CREDIT loss arrow remain legible; the package implies broader collapse risk than the script's eventual liquidity/valuation-gap conclusion. CTR/history/A-B tests unavailable.
+- Performance: 4,790 frozen views, 136 likes and 19 comments at 20.1309 days; independently reproduced 1.19071x TYPICAL against ten peers and 1.18432x TYPICAL against five. Tier is stable. No causal performance claim.
+- Primary evidence: White House Executive Order 14330 and DOL's 2026-03-30 proposal support expanded consideration and process safe harbors for alternatives, not automatic plan inclusion. SEC-filed Blue Owl materials support 5% quarterly tenders, heavy requests, proration and no priority for resubmitted requests. SEC's Tricolor case and Jefferies' First Brands filing support allegations, not final adjudication. Federal Reserve research supports rapid bank exposure growth but not the exact 13%-versus-4% script phrasing. Composite characters and several aggregate statistics remain unverified.
+- Original progress is now 428/966 expanded-complete, 538 not expanded. Coverage: TITLE 444, THUMBNAIL 444, SCRIPT 434, TOPIC 434, PERFORMANCE 954, VIRALITY 428. `VALIDATION_966.json` PASS reports next exact frozen-order ID `RUVOjfrIemY` — “Why Your Credit Score Drops Even When You Pay On Time.”
+- Authoritative JSONL, seven derived CSVs and workbook rebuilt. Workbook has 966 population rows and 460 individual readings; coverage formulas are 444/444/434/434/954/428; formula-error scan found zero matches. JSONL SHA256 `908e5ff20a8cadc6a461b618a23e2a7769c5a82968609037813950e3bbb361d3`; workbook SHA256 `963d1f91640e6400a18a9233aa3a4b36843f39f92cf3a891f0e5a301ce2e3f89`. Three rendered views were inspected and legible. Native Microsoft Excel recalculation remains UNTESTED.
+- QA: 18 Python contract tests PASS; two workbook-format tests PASS; `validate_research.py` PASS_BOUNDED; `validate_audit_966.py` PASS with 966 unique IDs, 26 immutable source fingerprints, zero errors and next ID `RUVOjfrIemY`; 595 source dates verified; baseline files show no diff; whitespace check PASS. Expansion validation PASS: 445 unique source IDs, 12 channels, 28 owner-matched duplicates, 197 unique additions, no duplicate expansion IDs, combined 1,163.
+- One initial root-level unittest command and two date-validator commands used the wrong working directory/runtime and failed import/path discovery. They were rerun from their documented directory and bundled runtime and passed without product-code changes.
+- Next original task: `NICK_153` for `RUVOjfrIemY`, after verifying live resource limits. Next expansion task: register available evidence and deep-audit `HjlVexL2Lxk`; do not count metadata as audit completion. Revisit the two MEDIUM Chronofold inclusion decisions after full transcripts are registered.
 
 **Status: FULL_POPULATION_RESEARCH_IN_PROGRESS.** Existing branch `research/finance-economics-intelligence`, draft [PR #36](https://github.com/ghilmanITM360/youtube-intelligence-os/pull/36). No new branch/worktree/PR or merge. Owner expanded scope to ALL 966, superseding the historical sample plan. Do not restart recovery or completed reviews.
+
+## Latest continuation checkpoint — 2026-10-20 (NICK_151 complete; Codex local session)
+
+- **Validated research commit: `50154a55668ae95987b2e2db4f8781085f04851d`.** Starting aligned HEAD was `4212c2982d190ffd28df8e59a9c8746f597a2064`. One consecutive frozen-order record completed: `QtlJUTJ58ZU` — “Do the Opposite: The Wealth Trick Rich People Use (Inversion Thinking)” as `NICK_151`. JSONL comparison against starting HEAD changes exactly this object; the other 965 remain identical.
+- **427/966 expanded-complete; 539 not expanded.** Coverage is **TITLE 443, THUMBNAIL 443, SCRIPT 433, TOPIC 433, PERFORMANCE 954, VIRALITY 427**. Existing source blockers remain 17 videos overall. `VALIDATION_966.json` PASS reports `next_master_order_id=R1AcuUo916k`.
+- Full canonical stored captions read contiguously: 21,036 UTF-8 characters/bytes, 3,384 whitespace-delimited words and 3,398 coverage tokens, SHA256 `8ac56cea13feaf07276bc5beb6ca0edffe7172b251d7d0d6ab9f3e9784087800`. Archive member `260_QtlJUTJ58ZU_Do_the_Opposite_The_Wealth_Trick_Rich_People_Use_Inversion_Thinking.txt`: 22,652 bytes / 596 lines, SHA256 `46501eb2824f933331fced17388d9faf99d799cb0def7a84138ce600e9b44a40`. Auto-generated captions only; original audio, timing and editing remain unverified.
+- Registered maxres thumbnail persisted as `audit-batches/NICK_QtlJUTJ58ZU.jpg`: 1280x720 JPEG, SHA256 `5789e078928edc0afefcba185ce52a1e2b224cf1f91d62d88b281c2f83f71416`, inspected at native and 320x180. `WIN BY AVOIDING LOSS` remains mobile-legible; the three smaller labels are borderline-to-difficult. Historical design continuity and CTR are unknown.
+- **Performance:** 19,992 frozen views at 272.5708 days, 616 likes and 66 comments at the source snapshot; **0.69140x TYPICAL** against ten peers and **0.72501x TYPICAL** against five, independently reproduced. Both tiers are stable and below cohort medians. Exact peers have one STRONG tax-strategy result (5.76468x) and no WEAK result; wider same-channel avoidance titles include TYPICAL and WEAK counterexamples. No private analytics or causal recommendation claim.
+- **Core findings:** Munger's published 2007 USC transcript supports turning a problem around and asking what causes failure, but not the script's wealth-inevitability or prevalence claims. Berkshire's 2024 letter verifies exceptional 1965-2024 performance, not mistake avoidance as the sole cause. Federal Reserve data support approximately 20% credit-card interest for revolving balances; payment-method research is context-dependent and does not prove the script's universal dopamine/loss-aversion mechanism. `$500/month for 30 years > $600K` reproduces around 7% nominal return; the age-25 ten-year saver beats the age-35 thirty-year saver only above about 6.11% under the stated monthly model. Both script examples omit the rate and other assumptions. IRS guidance supports possible income tax/additional early-withdrawal tax with material exceptions. Lottery-winner prevalence, income irrelevance and five-friends predictive accuracy remain unverified or misleading.
+- Authoritative JSONL, seven CSVs and workbook rebuilt. Workbook: 966 population rows, 459 readings, formula coverage 443/443/433/433/954/427, zero formula-error matches and zero `[object Object]`; JSONL SHA256 `d272e12839bb52fea4fb82c83c547bbb8fc59b59b36286a316d0dc2c48d223fb`; workbook SHA256 `b51f77ac720a85fefae950c699fddfe37143c397b6f176ba60615163e72baa4b`. Three rendered QA views inspected and legible. Native Microsoft Excel recalculation remains **UNTESTED**.
+- QA: 10/10 audit-contract tests, 6/6 baseline tests and 2/2 workbook-format tests PASS; `validate_research.py` PASS_BOUNDED; `validate_audit_966.py` PASS with 966 unique IDs, 26 immutable source hashes and zero errors; 595 source metadata/date rows verified; all seven CSVs and XLSX Video IDs reconcile to JSONL; frozen baseline/manifests unchanged; whitespace and targeted secret checks PASS. Two initial invocations from the wrong working directory failed module/path discovery; both were rerun from their documented directories and passed without code changes.
+- Exact-head GitHub Actions must be inspected after push. Prior exact-head runs were billing/spending-limit blocked with zero steps; do not call such a run passing CI and do not rerun without funds/authorization.
+- Live resource check after the research commit: five-hour **84% used**, weekly **13% used**, paid balance zero, two unused reset credits. Context percentage unavailable (**UNKNOWN**) with no serious warning exposed. Finish only persistence/handoff work; do not start NICK_152 in this session.
+- **Next exact untouched ID: `R1AcuUo916k` — “Private Credit Panic - Why Investors Are Rushing For the Exits”.** Read its actual ledger/source state before authoring; do not infer completion from scratchpads.
+
+## Latest continuation checkpoint — 2026-10-20 (NICK_150 complete; Codex local session)
+
+- **Validated research commit: `29fbed68d8b12f18ea048b385d0b5e5026b5108b`.** Starting aligned HEAD was `aea737320ad127e9783ab02912694c38c87b7c49`. One consecutive frozen-order record completed: `QtXhRiEJ9zo` — “Once You Hit $100K The Math Does The Rest” as `NICK_150`. JSONL comparison against starting HEAD changes exactly this one object; the other 965 records remain identical.
+- **426/966 expanded-complete; 540 not expanded.** Coverage is **TITLE 442, THUMBNAIL 442, SCRIPT 432, TOPIC 432, PERFORMANCE 954, VIRALITY 426**. Existing source blockers remain 17 videos overall; PERFORMANCE has 12 blocked, VIRALITY 16, SCRIPT 11 and TOPIC 10. `VALIDATION_966.json` PASS reports `next_master_order_id=QtlJUTJ58ZU`.
+- Full canonical stored captions read contiguously: 17,218 characters / 3,101 source words, SHA256 `6f15d49f002e5e7d96f780075ca83e74bc80f131699a89d077c9be6884014ed5`. Archive member `090_QtXhRiEJ9zo_Once_You_Hit_100K_The_Math_Does_The_Rest.txt`: 18,789 bytes / 492 lines, SHA256 `974a33986082d6cfab4053163c0f4e6ebcccbd2aec9d2c8daca98ff466e4773d`. Captions are auto-generated; original audio, timing and editing remain unverified.
+- Registered thumbnail evidence persisted as `audit-batches/NICK_QtXhRiEJ9zo.jpg`: 480x360 JPEG, SHA256 `0dbd11e392cb8ed654cf41732b259c5ed433e45da54dda2d404ebc3af2078fb4`, inspected at native and 240x180. `THE $100K RULE`, the `$100K` hill marker, confused character and rolling money-ball remain mobile-legible. Registered source is hqdefault with letterboxing; no higher-resolution or historical-design claim.
+- **Performance:** 7,837 frozen views at 93.0878 days; independently reproduced **0.81903x TYPICAL** against 10 peers and **0.98956x TYPICAL** against five. Tier is stable and near the five-peer median. Exact cohort has STRONG bonds/investing/SpaceX results and WEAK Buffett/$10K and unpaid-bills results; the wider channel `$100K` title family also spans STRONG, TYPICAL and WEAK. No CTR, impressions, retention, RPM, traffic-source or causal recommendation claim.
+- **Core finding:** the script's own crossover formula is annual contribution divided by assumed return. At $12,000/year this is about $171,000 at 7% or $120,000 at 10%, so exactly $100,000 does not yet make expected market gains exceed contributions. The milestone ladder otherwise reproduces closely under end-of-month deposits and monthly compounding: first $100K about 6.67 years at 7%, later $900K-to-$1M about 1.25 years; at 10%, about 6.17 years and 1.0 year. Lump-sum age examples also reproduce conditionally, but all are nominal, pre-tax, pre-fee deterministic illustrations rather than guarantees.
+- **Credibility:** Fed SCF 2022 retirement-account ownership was 54.3% of families; the 45.7% complement is not proof of zero retirement-directed assets. Fed SHED separately found 28% of non-retired adults had no retirement savings and 47% had savings outside formal accounts. Vanguard 2024 participant balances match the rounded $148K average / $38K median, but apply to Vanguard DC participants and are only a partial preparedness measure. Census supports about $84K median household income; BEA's latest release before upload reported a 2.6% April 2026 personal saving rate, not 3.5%. The 19-year path to $100K requires an unstated roughly 6% nominal return. Damodaran's 1928-2025 data support 26 negative years out of 98 and an 11.85% arithmetic average; the video's exact five-years-in-8%-to-12% count remains unverified. The fee warning is conditionally plausible; Buffett age-65 percentages and the exact mid-1990s CPI conversion remain insufficiently sourced.
+- Authoritative JSONL, seven CSVs and workbook rebuilt. Workbook: 966 population rows, 458 readings, formula coverage 442/442/432/432/954/426, zero formula-error matches and zero `[object Object]`; JSONL SHA256 `33af3ca792c1cb66579a7f43fce62eeb4ee8e7ebfc46424ea4ffe854286b2697`; workbook SHA256 `4d43ee882c86acfb4b369542a08db9e5ec98c35e2f7b0f667d0a1947e5f766ec`. Three rendered QA views inspected and legible. Native Microsoft Excel recalculation remains **UNTESTED**.
+- QA: 10/10 audit-contract tests, 6/6 baseline tests and 2/2 workbook-format tests PASS; `validate_research.py` PASS_BOUNDED; `validate_audit_966.py` PASS with 966 unique IDs, 26 immutable source hashes and zero errors; 595 source metadata/date rows verified; all seven CSVs and XLSX Video IDs exactly reconcile to JSONL; frozen baseline/manifests unchanged; staged whitespace check PASS; targeted secret scan found no credential patterns. Structural validation does not independently certify every research inference.
+- Exact-head GitHub Actions must be inspected after push. The prior `aea73732` run was billing/spending-limit blocked with zero steps; do not call that passing CI and do not rerun it without funds/authorization.
+- Live resource check after validation: five-hour **43% used**, weekly **7% used**, paid balance zero, two unused reset credits. Context percentage unavailable (**UNKNOWN**) with no serious context warning exposed. No stop threshold reached and no reset used.
+- **Next exact untouched ID: `QtlJUTJ58ZU` — “Do the Opposite: The Wealth Trick Rich People Use (Inversion Thinking)”**. It has 3,398 stored caption words and remains NOT_STARTED for the five semantic components. Do not count the historical wave-3 scratchpad note as a completed review.
+
+
+
+
+
+
+
+
+## Latest continuation checkpoint — 2026-10-20 (NICK_142–149 complete; Claude Code session)
+
+- Starting HEAD `f82e9c24` (checkpoint NICK_133–141). **425/966 expanded-complete; 541 remaining. Nick Invests 158/363**, plus `PW6pPd9rTiM` as a sixth Nick missing-date authored partial (VIRALITY/PERFORMANCE `BLOCKED_MISSING_SOURCE`, following the NICK_116-117 convention). Eight consecutive master-order records: `PW6pPd9rTiM` (NICK_142, partial), `PWUPOYdwBc8` (143), `PbZvqv9Ztmc` (144), `PjkCETTb2ZA` (145), `Q-pBBlwNDMU` (146), `Q2AieN0QhlA` (147), `QlPqXGV491Q` (148), `QogQUuyFUx8` (149). JSONL comparison against HEAD shows exactly these eight objects changed.
+- Same subagent-draft / coordinator-gate process as the NICK_133–141 section; per-batch `review_process` records the coordinator spot-checks. All eight thumbnails were compared against the drafted descriptions on mobile contact sheets, and the key quoted claims were re-matched verbatim.
+- **Image-format finding:** the registered PW6p URL is a signed `hq720` variant (360x202) that serves AVIF bytes even when `Accept: image/jpeg` is sent. It is stored with the honest extension `NICK_PW6pPd9rTiM.avif` (SHA256 `16cde74c…`), following the `NICK_3Qla9h0Trg0.avif` precedent. An unregistered maxres 1280x720 (SHA256 `08e55555…`) shows the identical `$100K HABITS` design and is recorded in receipts only. All other fetched images are verified JPEGs. QlPq has a registered hqdefault 480x360 with letterboxing; maxres returned 404.
+- **Headline findings:** PWUP's thumbnail (`JUST $100?!` and a SpaceX rocket) promises content the script never mentions. Its hook "$400/month for 30 years → over a million" needs about 10.47%; at 7% it is about $488K. PbZv applies "Texas state tax" to severance and a 401(k) withdrawal (Texas has no income tax) and uses a stale $560 UI maximum. Pjk repeats an unsourced "CFA Institute 44% end in poverty" claim. Q-pB: Desmond's $1M → $1.6M reset adds about 5.9 years, not 4. Q2Ai: $350K holds only with start-of-month deposits. Qog: "$3,000/yr at 8% for 30 years → over $800K" is actually $340K–$367K, and 8% of $500K is $3,333/month, not "over $3,500". QlPq's `STOCKS DEAD?!` ticker-loss image contradicts a script that says stocks are near highs.
+- Tier sensitivity: Q2Ai 0.62280x TYPICAL / 0.25653x WEAK, QlPq 1.20385x TYPICAL / 0.29776x WEAK and Qog 4.93852x STRONG / 1.60616x TYPICAL are peer-sensitive.
+- Workbook: 966 rows, 457 readings, coverage **441/441/431/431/954/425** (PERFORMANCE 955 → 954 because PW6p is now explicitly blocked rather than auto-complete), zero lag. JSONL SHA256 `034e62e99bc53801b8af49381e220c5ff2cde162711814fbee3413bedcede02f` embedded; zero `[object Object]`; workbook SHA256 `8b3c20cbe029cc0c1032d6ac8f0e0bfc2106c64529448af2f8804307b203b14a`. Native Excel recalculation UNTESTED.
+- Local validation: 16 tests OK; `validate_research.py` PASS_BOUNDED; `validate_audit_966.py` PASS with 0 errors and 26 hashes; 2/2 workbook tests; 595 dates verified.
+- **Resource event:** launching 10 parallel drafting subagents exhausted the five-hour session limit (HTTP 429, "session limit, resets 4am Asia/Karachi"). This session cannot read usage percentages directly. **Lesson for continuation:** run at most about 4–5 concurrent drafters and checkpoint after every wave.
+- **Next exact master-order ID: `QtXhRiEJ9zo` — Once You Hit $100K The Math Does The Rest** (registered hqdefault 480x360). Evidence prepared in the session scratchpad only for QtXh, QtlJUTJ58ZU, R1AcuUo916k, RUVOjfrIemY, R_E6OOnF9e4, Rd40d0XZLpQ (19.76x STRONG stats outlier), RgaTGzeFcPQ, RmJKnJkUgxA, S0xwBH_fAn0 and SJLyXAGbBLk. Their freshly fetched JPEGs sit untracked in `audit-batches/`. No wave-3 review is merged.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_133–141 complete; Claude Code session)
+
+- **Takeover:** Claude Code (Opus 5.5) continued from Codex at HEAD `2416f5db`, local = remote = PR #36 head, zero divergence. Unrelated untracked dirs (`finance-short-02-visual-calibration/`, `productions/`, `research/casually-finance-script-intelligence/`) and stash preserved untouched.
+- **418/966 expanded-complete; 548 remaining. Nick Invests 151/363.** Nine consecutive master-order reviews: `N3vR3PIIyQI` (NICK_133), `NAg-Xx_xy8U` (134), `NXpQOUVife4` (135), `NjTXVrszIQ4` (136), `NoDH9GW0S38` (137), `O5fuwQGKf_c` (138), `OJ-AlXuGIPk` (139), `OsYS0YdbtkM` (140), `P9HyBrS2qjs` (141). Cumulative JSONL comparison against the starting file: exactly these nine objects changed; the other 957 are byte-identical.
+- **Review process (new, recorded per batch in `review_process`):** NICK_133 was authored entirely by the coordinator. NICK_134–141 were drafted by read-only subagents (scratchpad only) that read the full stored text in contiguous ≤10,000-character chunks and inspected the actual images. Before merging, the coordinator ran a gate (identity, image SHA256/dimensions/URL, verbatim opening/ending words, contiguous read and beat ranges, all ten age peers listed, reproduced ratios cited, statuses, no compressed prose), viewed every thumbnail on a mobile contact sheet, re-matched the key quoted claims in the transcript, and independently recomputed the headline arithmetic. Receipts are generated from hash-verified evidence, not from the drafts.
+- **Evidence:** every transcript SHA256 equals `TRANSCRIPT_COVERAGE.csv`; archive members hashed in receipts. All nine registered maxresdefault images were fetched fresh at 1280x720 and inspected at 320x180. Ten-peer and five-peer ratios reproduced exactly from `build_baseline.compare` rules. Audio, editing, retention and historical thumbnail continuity remain unverified.
+- **Headline findings:** N3vR3 ($20K sequel to the 8.31x $10K video) is 15.61107x/22.90627x STRONG, the highest ratio in the 25-title Nick "after $X" family, which otherwise spans 0.27802x WEAK to 10.16x. So the template is not a formula. Claim errors include: $30K car → "over $200K in 20 years" needs ~9.95%, not the 8% used elsewhere (N3vR3); "$700 car payment × 60 = $42,000 plus interest" double-counts interest (NAg); overdraft "700% on a $2 mistake" is 1,750% and the "50,000% APR" understates the narrator's own 425,833% (P9H); $500/month for 40 years is $1.31M at 7%, not "nearly a million" (OsY); $7,000 − $4,500 is $2,500, not $1,500 (NjT, possible ASR); the $200 card does not "cost $400–500" on minimum payments (9 months, about $18 interest at 22%) (NXp).
+- Workbook rebuilt with the tracked builder + bundled Codex node runtime: 966 population rows, 449 readings, coverage **433/433/423/423/955/418**, zero lag; JSONL SHA256 `a5d4f218fb1023c2497fae89dd325a6b24e1add5780ca104386e5c5d57199500` embedded in the workbook; zero `[object Object]`; workbook SHA256 `247ef1b4fc4a00cbc149d63404e6d21c2d3b275a8258825685116cfb4bcce5dd`. Native Excel recalculation UNTESTED.
+- Local validation: 16 focused tests PASS; `validate_research.py` PASS_BOUNDED; `validate_audit_966.py` PASS with 0 errors and 26 immutable source hashes; 2/2 workbook formatting tests PASS; `verify_workbook_dates.py` 595 verified. Structural checks do not certify semantic entailment.
+- **Live usage:** this Claude Code session cannot read the five-hour/weekly percentages; context was well within capacity at this checkpoint. No resource stop threshold claimed.
+- **Next exact master-order ID: `PW6pPd9rTiM` — 20 Unsexy Habits That Save Your First $100,000** (publication date literally "(date only)": follow the NICK_116-117 convention, with VIRALITY/PERFORMANCE `BLOCKED_MISSING_SOURCE`). Registered image is a signed hq720 at 360x202; a supplementary maxres 1280x720 exists (SHA256 `08e55555…0aa4`, not registered). Wave-2 drafts for PW6p, PWUPOYdwBc8, PbZvqv9Ztmc, PjkCETTb2ZA, Q-pBBlwNDMU, Q2AieN0QhlA, QlPqXGV491Q and QogQUuyFUx8 were in progress in the session scratchpad; none is merged into this checkpoint. Their freshly fetched images sit untracked in `audit-batches/`.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_131–132 complete)
+
+- **Final persistence/resource handoff:** research/workbook commit `068f01d082fc119bf369b80a8dc0e5fd933e6be0` pushed normally; local, remote branch and OPEN/DRAFT PR #36 matched exactly. Its exact-head Actions run39294974758 failed before any steps, with explicit failed-payments/spending-limit annotation: **CI_BLOCKED_BILLING**, not a local test failure. All intended tracked research changes are committed; unrelated untracked directories preserved. This documentation-only follow-up leaves validated JSONL/CSVs/workbook unchanged.
+- **Continuation added ten reviews, 399 → 409; Nick132 → 142.** Completed IDs: `M2Len_nTpzQ`, `MBtwn6xwamg`, `MK1-ZC06EkU`, `MKRDKnPvCUA`, `MKSPz6cWlwc`, `MLPeWnrpI8Y`, `MMa7EWq0L6k`, `MV3oBl8OPfM`, `MX4hkD4rFv0`, `N2HdBntwQGU`. Cumulative comparison against starting4db shows exactly these ten objects changed; all956others, including every previously completed audit, preserved. No new partial record; source limitations explicitly retained within completed limited-evidence reviews.
+- **Resource guard:** live five-hour84%, weekly47%. Recent full reviews used4–9percentagepoints, so no new expensive audit starts with only6points to the near90%boundary plus validation/persistence overhead. This is a conservative projected-cost stop, NOT a claim90%was reached. No serious context warning exposed; contextpercentage unavailable; no reset used. Exact next `N3vR3PIIyQI` remains untouched. Start by checking fresh resources, local/remote/PR state and this latest section; do not repeat completed research.
+- Final independent workbook check: exact966IDset and all966x6statuscells matchJSONL; all966publicationvalues reconcile with corrected offset handling, no object placeholders, fingerprint matches, zero coverage lag. Focused16tests, both researchvalidators,2workbookregressions,26immutablehashes, tracked/stagedsecret0 and whitespacePASS verified for the research unit; fresh final-checkpoint16tests, bothvalidators,2workbookregressions and26immutablehashes also PASS with zero errors; staged documentation secret/whitespace checks follow. Native Excel application recalculation remains UNTESTED.
+
+- **409/966 expanded-complete; 557 remaining. Nick Invests 142/363**, plus five missing-date authored partials. Completed consecutive `MX4hkD4rFv0` — Why You’ll Never Actually Spend Your Retirement Savings, and `N2HdBntwQGU` — Who Can Even Afford A $250k House In 2026. Exact next immutable master-order ID **`N3vR3PIIyQI` — Why Everything Changes EVEN MORE After $20,000**. No next-video source work started at this checkpoint.
+- Prior commit `6b2163922f8f80e731dee077a6f2bd1cc0391029` pushed and local/remote/OPEN-DRAFT PR #36 aligned. Its exact-head run39293859392 is FAILURE with no steps and explicit billing/spending-limit annotation: **CI_BLOCKED_BILLING**. Prior260 run39292982048 explicitly CI_BLOCKED_BILLING/no steps. Local checks remain separate; no Actions reruns.
+- Full stored transcripts read contiguously/canonical/archive hashes verified: MX17,648characters/3,179sourcewords SHA256 `75d6d9250f816512756165561a0f09f1f17a19ec8a64480d5f0b952cd4dccd6c`; N2 18,139characters/3,153words SHA256 `cb52c5fdc1b4ba3328e77deb5f67030a2b7980bcf759fd91b1d10ab32df13100`. Archive details in receipts. MXactual1280x720/320x180 image SHA256 `f5f87ea7a823f3e00c531833d310614b0e12b358e703fd000485c8b5792c215a`; N2registeredhqdefault480x360/320x240 image SHA256 `1d429048f8a28ada069e6f16419eaaf2ccf793debcffa9e3a2fb502dc5cab870`. MaxresN2variant404; no higher-resolution review claimed. SAVED1M/SPENTTHIS and COULDITBEYOU/$250K remain legible. Audio/editing/historical image continuity unverified.
+- Virality independently reproduced: MX **.84579x/.86855x TYPICAL**,4,187views; N2 **.37031x WEAK/.54423x TYPICAL**,8,643views, so its categoricalfailure is peer-sensitive. AllMXexactpeersTYPICAL; widerage-eligiblekyg5Xdi52TQ4.14102xSTRONG is contextual. N2 exactFzd3.67806xSTRONG versusBNPL.42132xWEAK; broader500Khouse23.00921xSTRONG disproves universalprice-anchorformula. No private analytics/causality inferred.
+- MX credibility: EBRI netassetdecline is not grossconsumption or deathbalance; pensiongroups startedwithdifferentassets, contrary same-moneyclaim.5%-3.5%of600K=9K, not18K;3.3%-5.5%span13.2K, not20K. RMDdistributionisnotconsumption;Roth/birthcohort/account rules matter. SSA2032OASIprojection supported butongoingincome78%payable,notbenefitszero. SSAclaiming,Medicareexceptions,latestcarecosts,conversion/giftconditions limitedwithprimaryreferences; someLTCsources403/exactprobabilityunverified.
+- N2 credibility: storedtotals1813/2813/2130/2113/2613 conflict; listedcomponents sum2213monthly/26556annual. PotentialASRerrorspreservedwithoutaudiocertification. FHA3.5%of250K=8750, not8250;conventionalPMI differsfromFHAinsurance. Smithsexpensesleave717, not778, underits2113model.43%isnotuniversalapprovalcap;mediantransactionaccountsarenotcurrentdownpayments. Asbestos cannotbeconfirmedvisually. Actualregional/insurance/historical claims explicitlylimited.
+- Previous964JSONL objects preserved; only these two changed. SevenCSVs/966IDs reconcile. Workbook zero lag:966population,440legacy-inclusive readings,418fulltexts; coverage **424/424/414/414/955/409**, expanded409/remaining557. Correctedtimestamps/structuredbeats preserved;native Excel recalculation UNTESTED. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and966publication values PASS; no object placeholders. Workbook SHA256 `fc7fca2f816a52150cb402b400e516529e5b99e81bf9b718a04a1043b5de723a`.
+- Fresh16focusedtests and2workbookregressions PASS. Both validators and26immutable-source hashes PASS with zero errors; staged checks follow beforecommit;structural checks do not certify semantic entailment. No repository-wide suite rerun.
+- Live usage five-hour80%, weekly46%;contextpercentage unavailable/no serious warning exposed. Finishthisatomicunitbefore resource-gatednextwork;no90%gateyetclaimed. Full966mission incomplete.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_129–130 complete)
+
+- **407/966 expanded-complete; 559 remaining. Nick Invests 140/363**, plus five missing-date authored partials. Completed consecutive `MMa7EWq0L6k` — 10 More Things That Are No Longer Worth Your Money, and `MV3oBl8OPfM` — Eat the Frog: The Wealth Rule Nobody Follows on Payday. Exact next immutable master-order ID **`MX4hkD4rFv0` — Why You’ll Never Actually Spend Your Retirement Savings**. No next-video research started at this checkpoint.
+- Prior commit `260cf5edb8144ad0a8b1a5d818556d657dba4e6c` pushed and local/remote/OPEN-DRAFT PR #36 aligned. Exact-head run39292982048 is FAILURE with no steps and an explicit billing/spending-limit annotation: **CI_BLOCKED_BILLING**. Prior9f run39290081267 explicitly CI_BLOCKED_BILLING/no steps. Local passes remain distinct; no Actions reruns.
+- Full stored transcripts read contiguously and canonical/archive hashes verified: MMa23,859characters/3,839sourcewords, SHA256 `74eae070cb431647f384fa5017bd38d60f6b71a1450abffa89f03b8028020a00`; MV19,326characters/3,320words, SHA256 `528eb736200fe71c6da8787b7d4e39d72c6da0b15afd3a0d75e0b8a732ec15e6`. Archive locators/byte/line/hash metadata in receipts. Both actual registered images inspected1280x720 and320x180: MMa SHA256 `5107f0093dc307a4a89e171e0fd1680d751b8b066916f542b5e91783ff12d789`; MV SHA256 `5639703a20b3ad8fbeedebbd33b3631a78b888abaac016ca758f3a3a2f9c80fb`. NOT WORTH IT (TOO)/burning purchases and PAYDAY RULE/frog/jar remain legible. Original audio/editing and historical image continuity unverified.
+- Virality independently reproduced: MMa **3.09363x/2.92293x STRONG**,87,024views; MV **1.0592x/1.78226x TYPICAL**,40,027views, with material ratio sensitivity despite stable tier. MMa sequel dependence cannot establish independent replication; exact secrecy9.08991xSTRONG versus investing-earlier.3243xWEAK supplies counterexamples. MV exact500Khouse23.00921xSTRONG versus subscription.24252xWEAK shows rule/urgency alone insufficient. No private analytics/causality invented.
+- MMa credibility: Airbnb April21,2025 global fee-inclusive display and FTC May12,2025 rule predate Novembervideo, contradicting hidden-fees-only-at-checkout framing; no universal compliance claim. Warranty frequency cannot imply12%premium payout; profit differs from premium less repair cost. Degree40Kdebt/35Kstartingpay is not lifetime ROI. Other insurance/food/gift prevalence claims explicitly unverified;10daily365=3650 and20%of400=80 reproduce conditionally.
+- MV credibility: listed4Kbudget expenses3030leave970; save800first leaves170withunchangedbills, not new resources.60%netnecessity ceiling and10%grossretirement mix denominators; lowincome constraints cannot all be called lifestyle.50%matchfirst6%of50K requires250monthlyemployee, not300.1.5Kannualmatch30years at7%gives142Kannual/152Kmonthly; near300K needs higherreturn and is not nearlyhalfamillion.100monthly7%/40years262Kreproduces,30years122Kversus130K. Universal investing-first sequence conflicts with costlydebt priority and omits vesting/access/risk conditions. Primary sources and independent calculations preserved.
+- Previous964JSONL objects preserved; only these two changed. All966IDs/sevenCSVs reconcile. Workbook zero lag:966population,438legacy-inclusive readings,416fulltexts; coverage **422/422/412/412/955/407**, expanded407/remaining559. Source publication/structured beats preserved; native Excel recalculation UNTESTED. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and966publication values PASS; no object placeholders. Workbook SHA256 `75ad2d5ee71498928d486f94e23be715b101f0ad19fe817cbefdcab4cbff597d`.
+- Fresh16focusedtests and2workbookregressions PASS. Both validators and26immutable-source hashes PASS with zero errors; staged secret/whitespace follow beforecommit. Structural checks do not certify semantic entailment. No repository-wide suite rerun.
+- Live usage five-hour67%, weekly45%; no serious context warning exposed, percentage unavailable. No stopgate reached. Full966mission remains incomplete; continue after validated push.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_127–128 complete)
+
+- **405/966 expanded-complete; 561 remaining. Nick Invests 138/363**, plus five missing-date authored partials. Completed consecutive `MKSPz6cWlwc` — Growing Up Poor: The Hidden Psychological Cost, and `MLPeWnrpI8Y` — When Should The Average American Buy A House? (And When Not To). Exact next immutable master-order ID **`MMa7EWq0L6k` — 10 More Things That Are No Longer Worth Your Money**. No next-video research started at this checkpoint.
+- Previous unit commit `9f6737f4c24f581ce66772a599848013c1734cbf` pushed; local/remote/OPEN-DRAFT PR #36 aligned. Its exact-head run39290081267 is FAILURE with no steps and explicit billing/spending-limit annotation: **CI_BLOCKED_BILLING**. Prior94c run39289575940 explicitly CI_BLOCKED_BILLING/no executed steps. Local validation is separate; no Actions reruns.
+- Both full canonical transcripts read in contiguous bounded chunks with hashes matched: MKS21,338characters/3,344sourcewords, SHA256 `09b6958bbcd6628b2825c66100620b6d74d31b6267d29e907bcbcbff63920689`; ML17,729characters/3,208words, SHA256 `e5fbba1be097a02ad62c7e844cd78e68910bdb962d7314da35be0445b232c71f`. ZIP members verified, metadata/hashes in receipts. Actual registered images inspected at1280x720 and320x180: MKS SHA256 `726dac410c523d8849a728f2baafd5736e5b1959e5e654f97d5915996b23778d`, ML SHA256 `4bbd292cc1973f23137e2b0f635f3c612772364e08405644ac8c07fa0b4b57e4`. POVERTY BRAIN and BUY/WAIT copy legible. Original audio/editing/historical images unverified.
+- Virality: MKS **.62535x/.65574x TYPICAL**, ML **.70636x/.62034x TYPICAL**, ten/five peers independently reproduced. MKS exact tax peer5.76468xSTRONG versus wider nearby money-anxiety.39625xWEAK; ML exact age-benchmark6.34409xSTRONG versus housing.56895x/.80526xTYPICAL and jobloss.40294xWEAK. These descriptive counterexamples do not identify creative causation/private analytics.
+- Credibility: MKS turns research associations into individual permanent-brain explanations without citations, labels opposite behaviors with one unfalsified cause, assumes current safety and treats12-month buffers as irrational. Primary imaging abstracts and CFPB emergency guidance limit those claims. ML mislabels NAHB combined operating5% as maintenance, potentially double-counting tax/insurance/utilities;3Kmonthly/28%requires128.6Kincome, gap42.4Kversusstated86.2K, not27K. CFPB43%QMlimit was replaced, not a universal approval ceiling. SanJose1.4M/800Kendpoints lack a complete ledger; fixedP&I does not freeze all costs. NAR408800/Freddie6.30near-publication context verified; many other survey/premium/local claims explicitly unverified.
+- Previous964JSONL objects preserved; only these two changed. All966IDs/sevenCSVs reconcile. Workbook zero lag:966population,436legacy-inclusive readings,414fulltexts; coverage **420/420/410/410/955/405**, expanded405/remaining561. Source dates/structured beat formatting preserved. Native Excel recalculation UNTESTED. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and966publication values PASS; no object placeholders. Workbook SHA256 `c427a70f46e086df8481fc479ee0c3c4f9a8a0a078f952b23e39d592b97e6c79`.
+- Fresh16focusedtests and2workbookregressions PASS. Both validators and26immutable-source hashes PASS with zero errors; staged checks follow beforecommit; structural checks do not certify semantic entailment. No repository-wide suite rerun.
+- Live usage five-hour58%, weekly43%; contextpercentage unavailable/no serious warning exposed. No resource stopgate reached. Full966mission remains incomplete; continue after validated push.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_126 / MKR complete)
+
+- **403/966 expanded-complete; 563 remaining. Nick Invests 136/363**, plus five separate missing-date authored partials. Completed `MKRDKnPvCUA` — 7 Sacrifices You MUST Do to Build Wealth. Exact next immutable master-order ID **`MKSPz6cWlwc` — Growing Up Poor: The Hidden Psychological Cost**. No next-video research started at this checkpoint.
+- Previous unit commit `94c5dbe6d03b26e7bd7d25d730bea05a7a60583c` pushed and local/remote/OPEN-DRAFT PR #36 aligned. Its exact-head run39289575940 is FAILURE with no steps and explicit billing/spending annotation: **CI_BLOCKED_BILLING**. Prior033 run39288578163 independently confirmed CI_BLOCKED_BILLING/no steps. Do not confuse CI and local test results.
+- Full19,363-character/3,253-source-word canonical transcript read in two contiguous chunks; SHA256 `f7b5e5ac1d62be1d5907c265f56b101c0e3be594d6d47c939e547119ed8d17f6`. ZIP20,872bytes/544lines SHA256 `9802a5106b1c89dbb61723cdf8d3c8b6a44bd1ee7d8151d6e6b6cd7c386f58f5`. Actual1280x720 and320x180 image inspected, SHA256 `a87908b5ecfb25033cb509af68786c95cf70367580af1714d7a66c649e73f149`. MOST PEOPLE WONT/red luxury versus green bank challenge legible. Audio/editing and historical image continuity unverified.
+- Virality independently reproduced **2.03687x STRONG / five-peer2.13389x STRONG**,78,003 frozenviews, close to2x. Exactpeer seven-smart-purchases5.35726x STRONG versus saving-share.97092x TYPICAL and car-poor.4104x WEAK. Broader habit lists and opposite stop-grinding package also vary, so no universal abstinence/list formula; private analytics unavailable.
+- Credibility: three-to-four35dollar deliveries weekly total455-607monthly; fee/tip increment is195-260, not over500justconvenience. MUST/money-before-time/never-shop-around/strangers-probably-indebted claims lack support. Primary buying-time research and CFPB comparison guidance supply counterexamples without claiming every convenience expense is good.500monthly30years has180Kprincipal; analyst-only return/inflation sensitivity is explicitly distinguished from source narration and guarantees. Index risk, fees, taxes, liquidity and personal spending targets are omitted. Provenance, counterexamples and calculations persisted in NICK_126 receipts.
+- Prior965JSONL records preserved; onlyMKRchanged. All966IDs/sevenCSVs reconcile. Workbook zero lag:966population,434legacy-inclusive readings,412fulltexts; coverage **418/418/408/408/955/403**, expanded403/remaining563. Corrected source dates/structured beat formatting preserved. Native Excel recalculation UNTESTED. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and966publication values PASS; no object placeholders. Workbook SHA256 `6c474b8798348cf9b7e9e19965fdb1464344db4f5cc065fd6e57d9c418cd2ded`.
+- Fresh16focusedtests and2workbookregressions PASS. Both research validators and26immutable-source hashes PASS with zero errors; structural checks do not certify semantic entailment. Final staged secret/whitespace and postpush identity checks required. No repository-wide suite rerun.
+- Live usage five-hour47%, weekly41%; contextpercentage unavailable/no serious warning exposed. No resource stopgate reached. Full966mission remains incomplete; continue after validated push.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_125 / MK1 complete)
+
+- **402/966 expanded-complete; 564 remaining. Nick Invests 135/363**, plus five missing-date authored partials. Completed `MK1-ZC06EkU` — 50 Shocking Money Stats Of The Average Person. Exact next immutable master-order ID **`MKRDKnPvCUA` — 7 Sacrifices You MUST Do to Build Wealth**. No next-video research started at this checkpoint.
+- Previous unit commit `033b3e8421b846b91d5806787cd49300ade40d95` pushed; local/remote/OPEN-DRAFT PR #36 matched. Its exact-head run39288578163 is FAILURE with no executed steps and an explicit failed-payment/spending-limit annotation: **CI_BLOCKED_BILLING**. Starting4db billing failure is independently verified; local checks are separate.
+- Full43,323-character/7,538-source-word canonical transcript read in four contiguous bounded chunks; SHA256 `6b464afb4185ef2f8dd0196565d604e76a27f259728fbb07ec34c932abe0bfe8`. ZIP44,901bytes/1,245lines SHA256 `02cd63e4659823ac899264c9d9ff5cbb83f4939a7218ea969b8e185d909dc77e`. Actual native1280x720 and320x180 thumbnail inspected, SHA256 `86ad873dc82d2ae0c5ab8ab0cdc7566a094e87e62b756b5b6d08c5fd991f23d5`. PEOPLE HAVE NOTHING!/shocked face/hollow cracked piggy bank remain legible but overstate positive medians. Audio, original editing and historical image continuity unverified.
+- Virality independently reproduced **2.04278x STRONG / five-peer2.09763x STRONG**,40,625views at171.1364days, close to2x boundary. Strong exact peers4.79096x/4.22814x versus normal-cost.4849x and career-ladder.12427x WEAK defeat universal shock/list/ladder rules. Public reach coexists with credibility defects; no evidence errors caused reach. Private analytics unavailable.
+- Credibility: fifty numbered labels contain duplicates and illustrative scenes, not fifty independent observations. Fed would/could, transaction/emergency account types and borrower/balance denominators are conflated. Vanguard mean/median mix years; retirement ownership is misrepresented. Truck52K/6.9%/72months needs884.05monthly, not724. 724monthly8%/7years gives81,170, not73K. Finale500totalmonthly card payment leaves4,734after19months;600monthly23years at10% gives639K, and a19-month delay gives536K, not680K. Household dream costs versus individual lifetime earnings, individual Social Security versus couple and unsupported4%-for-life framing mislead. Source limits, arithmetic and all50label dispositions preserved; unverified survey claims are not silently declared false.
+- Prior965JSONL records preserved; onlyMK1changed. SevenCSVs/966IDs reconcile. Workbook zero lag:966population,433legacy-inclusive readings,411fulltexts; coverage **417/417/407/407/955/402**, expanded402/remaining564. Corrected timestamps/structured beats preserved. Fingerprint, artifact recalculation/mutation restore, zero formula errors, Coverage preview and all966date values PASS; no object placeholders. Workbook SHA256 `798a366e52022747bfc07daac8c8145c4321b91b22606180f662b85061554069`. Native Excel recalculation UNTESTED.
+- Fresh16focused tests and2workbook regressions PASS. Both validators and26immutable-source hashes PASS with zero errors; staged checks and postpush identity follow before persistence claim. Structural validation does not certify semantic entailment. No repository-wide suite rerun.
+- Live usage five-hour41%, weekly40%; no serious context warning exposed, percentage unavailable. No stop threshold reached. Mission remains incomplete; continue after validated push.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_124 / MB complete)
+
+- **401/966 expanded-complete;565 remaining. Nick Invests134/363**, plus five missing-date authored partials. Completed `MBtwn6xwamg` — Why $250K is Halfway to $1 Million (The Actual Math). Exact next immutable master-order ID **`MK1-ZC06EkU` — 50 Shocking Money Stats Of The Average Person**. No next-video research started at this checkpoint.
+- Prior research commit `47a963896b4b83fae96ee45601c46ce79b3f4595` pushed and local/remote/OPEN-DRAFT PR #36 HEAD aligned. Exact-head run39286843983 was QUEUED at inspection, not a pass. Starting-head4db run39284494722 has explicit billing annotation and no steps: CI_BLOCKED_BILLING. Keep billing, queued CI and local results distinct.
+- Full18,889-character/3,533-source-word canonical transcript read in contiguous chunks; SHA256 `fcbc2b55162a4bb413ee8c3efba4a8dc96be8b18f44325b0cdbf3ba6f7f247ca`. ZIP member20,471bytes/541lines SHA256 `33a96aa97028d4c8ebf8035920d541b409bf02ffc56019300290df46455d8ba3`. Registered thumbnail native1280x720 and320x180 inspected; SHA256 `1eb0b00e6911b10c3738f725316527b4506758e652be76032e3a14b1941ac45d`. Thinking character/THIS MATH IS REAL!?/$250K=50%=$1M remain legible but omit TIME unit. Audio and historical design unverified.
+- Independently reproduced **1.00091xTYPICAL / five-peer1.01282xTYPICAL**,4,400frozenviews at22.138days. Nine exactpeers TYPICAL, g2nNpY3rHaU2.06834xSTRONG; wider weak ladder BvL3P2wSWPM.47268x is contextual, not a replacementpeer. No private analytics or causal result.
+- Credibility: main500/2000monthly annuity times reproduce; equal-time c/q=$125K identity valid under stated fixed positive periodic-rate assumptions. Nominal7%/12 versus effectiveannual7% changes monthly cutoff729.17 to706.77; script mixes conventions for coasting. Coasting/rate/fee outcomes remain conditional, not guaranteed income or retirement adequacy. Vanguard2026PDF confirms167970mean/44115median and6%hardship within covered plans, while its dated outlook says4%-5%, not4%-6%. Goldman3% is a2024forecast, not contemporary consensus. Unverified quitting/audience/percentile/CAPE claims and survivor-cohort causal overreach explicitly limited. Direct PDF targeted-page extraction and hashes persisted in receipts.
+- OnlyMB JSONL object changed from47a; previous965preserved. All966IDs/sevenCSVs reconcile. Workbook zero lag:966population,432legacy-inclusive readings,410fulltexts; coverage **416/416/406/406/955/401**, expanded401/remaining565. Fingerprint, artifact recalculation/mutation restore, zero formula errors and Coverage preview pass; all966publicationvalues and structured beat formatting preserved, no object placeholders. Native Excel recalculation UNTESTED. Workbook SHA256 `899ef61ee6e05ba68489844d5c40e7723032a9bbb922d0cdc5003e71a5b8dd56`.
+- Fresh focused16tests and2workbookregressions PASS; both research validators and26immutable-source hashes PASS with zero errors. Structural checks do not certify semantic entailment. Staged secrets/whitespace and postpush identity must pass. No repository-wide suite rerun.
+- Live usage five-hour29%, weekly39%; contextpercentage unavailable/no serious warning exposed. No stopgate reached. Full966mission remains incomplete; continue immutable order after validated push.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_123 / M2 complete)
+
+- **400/966 expanded-complete; 566 remaining. Nick Invests 133/363**, plus five separate missing-date authored partials. Completed `M2Len_nTpzQ` — Your Life at Every Level of Savings ($0 to $3M). Exact next immutable master-order ID **`MBtwn6xwamg` — Why $250K is Halfway to $1 Million (The Actual Math)**. No next-video research started at this checkpoint.
+- Verified starting local/remote/OPEN-DRAFT PR #36 HEAD `4db42faab4d8e0c1d3c5d14a87835df416d4109c`; existing canonical checkout `/Users/ghilmankhan/workprojects/youtube-intelligence-os`, same branch, unrelated untracked directories preserved. Exact starting-head run39284494722 is now completed FAILURE with no executed steps and explicit failed-payments/spending-limit annotation: **CI_BLOCKED_BILLING**, distinct from local passes. No rerun requested.
+- Full19,008-character /3,472-source-word canonical transcript read in contiguous bounded chunks; SHA256 `9fc8ba860da38a474effc7d601b46c2aed1c93f0983e6635bc864d9534be84bb`. ZIP member20,587bytes/545lines SHA256 `719ae972a8960bfdcb694c4128dbf65d05c78ea62254924533eb5b3df7bad0ff`. Actual registered image inspected1280x720 and320x180, SHA256 `15cc51f0027201dee7b5b364246e1e287b53245f20a003e7abd48783c273d167`. Four-panel $0/$10K/$500K/$3M+ emotional ladder is legible; audio/editing and historical packaging remain unverified.
+- Independently reproduced **1.78353x TYPICAL / five-peer1.90415x TYPICAL**,27,224 frozenviews. Exactpeer compound-interest ladder2.03193x STRONG, $500K-invested1.54694x TYPICAL, job-loss.40294x WEAK. Wider same-channel ladder counterexamples range .47268x WEAK to4.22814x STRONG, defeating a universal level-format claim. Private analytics and causal attribution unavailable.
+- Credibility: savings, net worth and investments are conflated; 37% not choosing cash is not inability. $250K at7%real for24years gives$1.268M conditionally, not guaranteed Coast FIRE eligibility. $3M at4% gives$120K initial gross annual withdrawal, not inflation-adjusted forever. $100K return/contribution crossover actually depends on deposits/rate ($171,429 at$12K/7%). Wealth-rank/lifetime/identical-cortisol claims lack matched evidence. Early-retirement tax/access and risk omitted. Schwab original2025PDF supports$2.3M despite conflicting article version; Fidelity$146,400 is a covered-account mean. Source limitations, counterexamples and calculations preserved in NICK_123 receipts.
+- Previous965 JSONL records preserved; onlyM2 changed. Seven CSVs reconcile966uniqueIDs. Workbook zero lag:966population,431legacy-inclusive readings,409full-stored-text; coverage title/thumbnail/script/topic/performance/virality **415/415/405/405/955/400**, expanded400/remaining566. Fingerprint matches JSONL. Artifact recalculation, mutation/restore, zero formula errors and changed Coverage preview pass. All966publication values reconcile within1.1ms Excel serial tolerance; structured beats readable, no object placeholders; tables A4:U970/A4:L435. WorkbookSHA256 `a88b97a4b2159aeef49dac25b71076070b606d6761681f64fab26e7b11f10686`. Native Excel recalculation UNTESTED.
+- Fresh16focusedtests, both research validators,2workbookregressions and26immutable-source checks PASS; errors0. Structural validation is not semantic entailment certification. Staged secret/whitespace checks and post-push HEAD alignment to be verified before claiming persistence. No repository-wide suite rerun for research-only unit.
+- Latest live usage five-hour26%, weekly38%; no serious context warning exposed, percentage unavailable. No stop threshold reached. Continue after validated commit/push in immutable order; full mission incomplete.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_122 / LYP complete)
+
+- **Persistence verification:** research/workbook commit `6dab349976e80c81fdbe7c5473bcf6e3f27195db` pushed normally; local HEAD, remote branch and OPEN/DRAFT PR #36 all matched this exact SHA after push. Staged secrets 0, tracked secrets 0, staged whitespace PASS. Working tree has no tracked changes; the three unrelated untracked directories are preserved. Latest live usage after push: **five-hour 18% used, weekly 37% used**; context percentage unavailable, no serious context warning exposed and no usage stop gate reached. Exact new-head Actions had not yet appeared in the returned branch list immediately after push; this is NOT a CI pass. This documentation-only follow-up records persistence; source JSONL/CSVs/workbook and validated audit content are unchanged.
+
+- **399/966 expanded-complete; 567 remaining. Nick Invests 132/363 expanded-complete**, plus five missing-date authored partials. Completed `LYPzhzZlsvg` — “The Biggest Money Mistakes People Make After Reaching $100K Net Worth.” Exact next immutable master-order ID: **`M2Len_nTpzQ` — Your Life at Every Level of Savings ($0 to $3M)**. No source review or image acquisition started for that next ID. Full 966 mission remains incomplete; no resource stop threshold is claimed.
+- Full canonical stored transcript read without truncation: 18,234 characters / 3,323 source words; SHA256 `628db611f09ee81ab4a387a570f77e46fb218850b1f5364e8ebae8c1bcb99714`. Archive member verified: 19,833 bytes / 532 lines, SHA256 `c78bf0acf7216c72a4fac687b65d166d812400a0de8a961718701669e7dadf0c`. Registered actual thumbnail freshly fetched and inspected at 1280x720 and 320x180, SHA256 `bd2cd1a9d2649bc380cc78c625878fa5191264cfdf51f33f6c529e9736ffcb88`. AVOID THIS BIG MISTAKE!, anxious cartoon, $100K bags and deliberate burning remain legible. Historical image continuity and original audio/editing remain unverified.
+- Virality **.89509x TYPICAL / five-peer .85228x TYPICAL**, 4,706 frozen views at 28.1378 days. Three-person chronological story, week-six offer mystery and folder/envelope callbacks are narrative observations; their effect on reach is hypothetical. Nine exact peers TYPICAL and kyg5Xdi52TQ 4.14102x STRONG limit claims of a universal milestone/fear effect. Private CTR/impressions/retention/satisfaction unavailable.
+- Credibility: mean/median ratio is 5.51, not 3.5; 38th-percentile framing conflicts with wealthier-than-60% wording and lacks a recovered weighted percentile. Main fee-only scenario reproduces at rate/12 monthly compounding ($2.0316M vs $1.6068M). Combined Wes scenario yields **$1.0181M**, not $1.046M, and the gap is **$1.0136M**, not $986K. Fee-last attribution is ~$279.6K, but other effects are ~$733.9K, not $705K; allocation is order-dependent. Tax-drag scalar example reproduces only conditionally. After-tax 401(k) is not automatically Roth; plan conversion/rollover and tax conditions matter. HSA limits are supported but benefits/eligibility are conditional. Exact marketing-at-$100K sequence is illustrative, not observed causation; several survey/vehicle/timing figures remain unverified. Primary references and independent calculations persisted in `audit-batches/NICK_122_READ_RECEIPTS.json`.
+- Previous 965 JSONL records preserved against starting HEAD `79a20fe710ed8f1d4b4c3061dec0d0f4a34c4572`; only LYP changed. All seven CSVs reconcile to 966 unique IDs. Workbook zero lag: **966 population rows, 430 legacy-inclusive readings, 408 full-stored-text readings; coverage 414/414/404/404/955/399; expanded 399/remaining 567**. Source fingerprint matches JSONL. Artifact recalculation, title-status mutation/restore, zero formula-error matches and previews pass. All 966 source publication values reconcile (<=1.1ms Excel serial conversion tolerance); no `[object Object]`; tables A4:U970 / A4:L434. Workbook SHA256 `e09adbba89192a19b5174d6ae62f52eb21c5d312269ac5564efbda775e678bc4`. Native Excel recalculation UNTESTED. Corrected publication-time and beat-map formatting preserved.
+- Fresh **16 focused tests PASS, 2 workbook regressions PASS, both research validators PASS, 26 immutable-source hashes PASS, zero errors**. Structural validation is not independent semantic entailment certification. Repository-wide suite not rerun for this research-only unit. Final staged secret/whitespace checks and exact post-push head verification must precede the persistence claim.
+- This continuation added NICK_120, NICK_121 and NICK_122 in immutable master order; 396 → 399, Nick 129 → 132. Prior NICK_121 commit **`79a20fe710ed8f1d4b4c3061dec0d0f4a34c4572`** pushed and local/remote/PR identity verified, with staged secret findings 0 and whitespace PASS. PR #36 remains OPEN/DRAFT/unmerged. Exact-head Actions runs for NICK_120 (`39283164938`) and NICK_121 (`39283885648`) were QUEUED at inspection, not passes. Prior starting-head run `39254398135` verified **CI_BLOCKED_BILLING** with no steps and explicit failed-payments/spending-limit annotation. Keep historical billing blockage, current queued CI and passing local checks distinct. Do not rerun blocked Actions.
+- Latest live resources **five-hour 16% used, weekly 36% used**. Context percentage unavailable; no serious context warning exposed. No reset used. Requested alternate-host path is absent; this work uses `/Users/ghilmankhan/workprojects/youtube-intelligence-os`, fast-forwarded to the verified starting remote SHA before research; unrelated untracked directories preserved.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_121 / LUr complete)
+
+- **398/966 expanded-complete; 568 remaining. Nick Invests 131/363 expanded-complete**, plus five missing-date authored partials. Completed `LUrsFkFfSe0` — “10 Unsexy Habits That Make Serious Money ($100,000).” Exact next immutable master-order ID: **`LYPzhzZlsvg` — The Biggest Money Mistakes People Make After Reaching $100K Net Worth**. No next-video source work started at this checkpoint.
+- Full canonical transcript read without truncation: 18,274 characters / 3,219 source words, SHA256 `c284e1e63df01521e6d53be56500041f235383d0baa6530a10103b1ddf6a4bc1`. Archive member verified: 19,858 bytes / 536 lines, SHA256 `fd48c0a7d1edf6674604a5e286ae2ea3ad3ec9fbbe3ffcc02bf207159f803000`. Actual registered image freshly fetched and inspected at 1280x720 and 320x180, SHA256 `db26cf144b7a2e75fd80b0dc0dab10a4bd09652ee31995afadc14337ac5d6de8`. BORING BUT RICH, relaxed cartoon and open cash safes remain legible; original audio/editing and historical image continuity remain unverified.
+- Virality: 52,677 frozen views, **3.61262x STRONG / five-peer 3.52904x STRONG**. Marcus/Derek object-rich opening, callbacks and ten numbered payoffs provide a plausible narrative differentiator. Counterexamples include a nearby nine-item spending list at .58497x TYPICAL and a paid-off-house explainer at 18.82947x STRONG. No private CTR/impressions/retention/satisfaction or causal attribution.
+- Credibility: Vanguard rates combine employee and employer contributions and are observational; 4.5% of $60K is $2,700, not $2,640. $748/month at assumed nominal 10% monthly compounding reproduces ~$1.69M, but returns are not assured. Housing/raise examples need deposit timing; the raise example approximately uses beginning-year payments. Fed 51% spending-less implies 49%, not more than half, breaking even/worse; 37% not choosing cash is not inability. FTC 70-disclosure review does not establish 99% net losses. Index evidence has a specified historical window; DALBAR exact source and several survey/biography details remain unverified. $340K at 10% for 19 years exceeds $2M before new deposits, so the $1.2M-$1.5M character forecast needs different assumptions. Illustrative people and selected millionaire anecdotes are not causal evidence.
+- Only `LUrsFkFfSe0` changed against starting HEAD `fdc44bc6a8d47245a8bd9ebc2c2bd25458afde4e`; previous 965 records preserved. Seven CSVs reconcile to 966 unique IDs. Workbook zero lag: 966 population, 429 legacy-inclusive readings, 407 full stored-text readings, coverage **413/413/403/403/955/398**, expanded 398/remaining 568. Source fingerprint matches JSONL. Artifact recalculation and mutation/restore, zero formula errors and previews pass. All 966 source publication values reconcile within <=1.1ms Excel serial conversion tolerance; no `[object Object]`; tables A4:U970 / A4:L433. Workbook SHA256 `f24c5e79712d211c02531bfd37d4d58573613164bca7a6ae9328b79032ea4d68`. Native Excel recalculation UNTESTED.
+- Fresh 16 focused tests and 2 workbook regressions PASS; bounded/full research validators PASS with 26 immutable hashes and zero structural errors. Staged checks and post-push identity must be freshly verified before reporting persistence. No repository-wide suite rerun; no semantic entailment certification claimed.
+- Previous NICK_120 research/workbook commit **`fdc44bc6a8d47245a8bd9ebc2c2bd25458afde4e`** pushed and local/remote/PR identity verified. Tracked and staged secret findings 0; staged whitespace PASS. Exact-head run `39283164938` was QUEUED with no steps at inspection, not a CI pass. Prior head `f5de1717` run `39254398135` failed; historical billing blockage **CI_BLOCKED_BILLING** stays distinct from local passes and current queued status. PR #36 OPEN/DRAFT/unmerged.
+- Latest live resources: **five-hour 11% used, weekly 36% used**. Context percentage unavailable; no serious context warning exposed. No usage stop threshold reached.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_120 / LJM complete)
+
+- **397/966 expanded-complete; 569 remaining. Nick Invests 130/363 expanded-complete**, plus five missing-date authored partials. Completed `LJM5qILr3SE` — “What $1,000,000 Really Pays in Dividends.” Next immutable master-order ID: **`LUrsFkFfSe0` — 10 Unsexy Habits That Make Serious Money ($100,000)**. No next-video source review started at this checkpoint.
+- Requested `/Users/ghilmanislam360/Documents/youtube-intelligence-os` does not exist on this host. Available canonical checkout `/Users/ghilmankhan/workprojects/youtube-intelligence-os` was 18 commits behind; fast-forwarded normally from `40c01d806466192f884ae898466aaf18bc73539b` to verified remote/draft-PR head **`f5de17173935960c84a6b857c03d02a4fceb425d`**. Unrelated untracked directories preserved. No branch/worktree/PR created.
+- Full 21,176-character canonical stored transcript read without truncation; source words 3,271; SHA256 `7ffb28cda1ba37596dc2fb715438dbb113ff157fa8a0df93bcc16638875278d7`. ZIP member independently verified (22,419 bytes, 588 lines, SHA256 `d6e9b1002973b748dd54aea6a58982234c6bba6929a9fdf04be6ac0d4b935623`). Original audio/editing unverified. Registered actual thumbnail freshly fetched and inspected at 1280x720 and 320x180, SHA256 `5d4f2cd71b34f5cd595e69143662c1ae3bd85809c9acc818e82b9b7d4d721171`. $1,000,000 / DIVIDEND TRUTH and investigative/cartoon coin imagery remain mobile-legible; historical design unknown.
+- Virality: 43,985 frozen views; **0.55686x TYPICAL**, five-peer **0.50577x TYPICAL**, close to WEAK boundary. Eligible age peers include 19.76486x and 8.30841x STRONG versus 0.13346x and 0.14549x WEAK counterexamples. Wealth anchors and truth framing do not isolate reach; private CTR/impressions/retention/satisfaction remain unavailable.
+- Credibility: annual yield arithmetic works conditionally, but monthly equivalents are not monthly distributions or guarantees. Exact 2025 broad-market/SCHD yields remain unverified. Altria's near-publication issuer release reports 6.3%, not nearly 10%; debt-funding allegation lacks a cash-flow bridge. A generic 25% bracket does not establish qualified-dividend tax. BLS average expenditures are not basic-needs minima. Yield on original cost is not current yield/total return. Hybrid appreciation is unrealized, borrowing incurs debt/interest/call risk, and non-purpose SBLOC proceeds cannot buy securities. $50K nominal/$38K real exceeds the $34K starting income, contradicting the claimed deterioration. Ten-year $1.8M/$55K and SCHD $1.6M/$54K paths lack sufficient assumptions. Recession-proof/automatic/consistent-return language overstates principal and dividend safety. Primary references and independent calculations are persisted in `audit-batches/NICK_120_READ_RECEIPTS.json`.
+- Only this JSONL record changed; previous 965 preserved. Seven CSVs reconcile to 966 unique IDs. Workbook has zero lag: 966 population, 428 legacy-inclusive readings, 406 full-text reads; coverage **412/412/402/402/955/397**. Source fingerprint matches JSONL. Artifact recalculation, status mutation/restore, zero formula errors and three previews pass. All 966 publication values reconcile (Excel serial conversion tolerance <=1.1ms); no `[object Object]`. Tables A4:U970 and A4:L432. Workbook SHA256 `23aa65c458dc81720efc77c0a347d338970f3aa81da959c6853cb2b5ffac5ee4`. Native Excel recalculation UNTESTED.
+- Fresh **16 focused tests PASS**, **2 workbook formatting regressions PASS**, both research validators PASS, **26 immutable source hashes PASS**, zero structural errors. Structural validation does not independently certify semantic entailment. Repository-wide suite not rerun for this research-only unit. Final staged secrets/whitespace checks and exact post-push head verification are required below before reporting persistence.
+- Live resource check after workbook refresh: **five-hour 6% used, weekly 35% used**. Context percentage unavailable; no serious context warning exposed. No stop threshold reached. CI remains separately **CI_BLOCKED_BILLING**, pending exact-head inspection after push; PR #36 must remain open/draft/unmerged.
+
+## Latest continuation checkpoint — 2026-10-19 (NICK_119 / LI complete; awaiting coordinating commit)
+
+- **395 → 396/966 expanded-complete; 570 remaining. Nick Invests 129/363 expanded-complete**, plus five separate missing-date authored partials. Completed `LI_PDfxunOk` — “Stock Market Explained for Beginners.” Coverage is title/actual-thumbnail **411 each**, script/topic **401 each**, virality **396**, performance **955**. Existing blockers remain 11 transcript gaps, 10 members-only partials, five missing-date authored partials and 11 performance blockers.
+- The full canonical stored transcript was read in four contiguous bounded ranges: **20,050 characters / 3,286 source words**, registered SHA256 **`8400364edb73b7371c76859c9abdfe04e2b224d1481e853dbce5f14c70d015a2`**. The archive member is 21,732 bytes / 558 lines, SHA256 **`7e9e9fd258b736493c0d5179e7fd761f2153d98b5da7bd85c8446f7b7889496a`**. Original audio/editing remain unverified. The registered 1280x720 thumbnail was freshly fetched and inspected at native and 320x180; SHA256 **`e1e07390efaab7245254a9ee8fb90b2ec5ec6bba4629284b7b0cec0f6f60d49e`**. “IT’S THIS SIMPLE,” the beginner, books, rising laptop chart, piggy bank and arrow remain mobile-legible. The image aligns with beginner accessibility but understates the script's many concepts and risks; historical-thumbnail continuity is unknown.
+- Performance is peer-sensitive: **0.75094x TYPICAL** against 10 peers but **0.46148x WEAK** against five. Exact peers span `zEOTb-p7tyg` 5.73439x STRONG and `05T4iZ4MdIA` 0.4549x WEAK, with the remaining eight TYPICAL. A direct search title, easy-learning image and progressive definitions are Appeal/Engagement hypotheses only. CTR, impressions, retention and satisfaction are unavailable; reach causation is not claimed.
+- Credibility findings: $300/month for 40 years at 8% is about $1.047M before fees, tax and inflation, so “over $800K” is conservative under the stated scenario but not a forecast. The 2026 $7,500 IRA limit is $625/month, not less than $600; Roth eligibility and qualified-distribution conditions are omitted. “Every major crash,” “any 20-year period” and “closest thing to a guarantee” need a specified nominal total-return series and cannot establish future safety. The S&P 500 is not simply the 500 largest companies or complete diversification. Dollar-cost averaging does not guarantee a reasonable cost or beat an already-available lump sum. Amazon's $3,000/share illustration is materially stale after its 20-for-1 split. Commission-free is not cost-free, and the 90% commitment claim is unsupported.
+- JSONL and all seven derived CSVs reconcile to 966 unique IDs; only the `LI_PDfxunOk` object changed against starting HEAD `63be47757a379b8724d9bd711a6564a23a39a6ac`. JSONL SHA256 **`c106c59b179b11faea82b0bd1ec0b8dd5401b05b63d0bf9e15681ed8e1e1df1b`**. Excel refreshed with zero lag: 966 population rows, 427 legacy-inclusive readings, coverage 411/411/401/401/955/396, expanded 396/remaining 570 and 405 full-stored-text readings. Source fingerprint matched the JSONL; artifact recalculation, title-status mutation/restore, zero formula-error matches and all three rendered previews passed. Workbook SHA256 **`aae6c9a9fa817315ef5dae063e77d09ea8dfcdf24ea071f34676f4a02d4a3065`**. Native Excel application recalculation **UNTESTED**.
+- Workbook display defects corrected at the existing builder boundary. Explicit-offset publication instants now export once in documented UTC, while timezone-unknown/date-only source values remain unchanged text; every one of the 966 displayed values reconciles to its authoritative source, including a date-boundary regression. Structured beat maps and structured claim audits retain their JSON source shapes but render as ordered labelled summaries; the entire workbook contains zero `[object Object]` strings. New Node regressions cover offset/date-boundary, scalar, object, array, empty and null cases.
+- Fresh 16 focused tests plus two workbook-formatting regressions PASS; bounded research validator PASS; full-population validator PASS with 26 immutable source hashes, 966 registered IDs, 396 expanded, 570 remaining and zero errors. Final staged secret and whitespace checks passed. Structural validation is not independent semantic entailment certification. Repository-wide tests were not rerun for this one-record research-plus-display-fix unit.
+- Validated research/workbook commit **`fc492d9ddcff82b6e4eda6cf53121a4e84c1fc25`** was pushed normally; local HEAD, `origin/research/finance-economics-intelligence` and draft PR #36 all matched that SHA before this handoff-only follow-up. Exact-head Actions run `39253966481` is **CI_BLOCKED_BILLING**: GitHub created no steps or runner and reported that account payments failed or the spending limit must be increased. This is not a CI pass and does not contradict the separate local passes. PR #36 remains OPEN, DRAFT and unmerged.
+- Final staged checks for the validated commit: tracked-secret findings **0** and `git diff --cached --check` PASS. Live resources at final handoff: five-hour **23% used**, weekly **19% used**, context percentage unavailable with no serious context-capacity warning exposed. No reset used.
+- Exact next immutable master-order ID: **`LJM5qILr3SE` — What $1,000,000 Really Pays in Dividends**. No transcript reading or image acquisition started for it.
+- This unit is intentionally **not committed or pushed** by the delegated researcher. The coordinating agent must stage only the expected files, rerun final staged secret/whitespace checks, commit/push atomically, verify local/remote/PR identity and inspect exact-head CI without rerunning billing-blocked Actions.
+- Coordinating-session live usage before delegation was five-hour **67% used**. Weekly/context readings were not exposed to this delegated unit; do not substitute historical values. No additional video was started.
 
 ## Latest continuation checkpoint — 2026-10-19 (NICK_118 / LDN complete)
 
@@ -487,7 +1851,7 @@ Lucas Grant channel findings so far (public metadata only; labeled hypotheses): 
 
 After Lucas Grant, continue the remaining channels in frozen master order in batches of about 20 to 40, until all 966 individual reviews are handled. Remaining public thumbnail retrieval includes 159 missing canonical URL fields; never edit registry to fill research-derived fallbacks. Eleven transcript source gaps remain visibly blocked while other dimensions proceed.
 
-The filterable XLSX (`FINANCE_966_VIDEO_INTELLIGENCE.xlsx`) was refreshed at LUCAS_007: 966 population rows, 138 individual/legacy reading rows, expanded dimension counts 118/118/112/112/964/112. The existing builder recalculated counts, mutation-tested one title status, scanned formula errors (zero matches), rendered all three sheets and exported successfully. Native Excel application recalculation was not tested. Subsequent research batches can advance CSV/JSONL before the next consolidated workbook refresh.
+Historical note: the original-only workbook was refreshed at LUCAS_007. It is no longer an active output. Its useful population and reading fields are preserved in the combined workbook; historical Git commits preserve the retired file.
 
 ## Validation and rebuilding
 
@@ -505,7 +1869,7 @@ git diff --check
 
 Legacy VALIDATION.json reports only legacy tables; VALIDATION_966.json covers new full-population views. Research checks run explicitly; general repository CI does not automatically validate research. No CI workflow changed in this checkpoint because regenerated registry DB bytes in CI can differ from the frozen local binary hash despite equivalent source data.
 
-Workbook builder: copy tracked build_workbook_966.mjs into a temporary directory beside a node_modules symlink to bundled dependencies, run bundled Node with absolute research directory argument. Read Spreadsheets skill for runtime paths and authoring protocol. Builder recalculates six coverage counts, mutation-tests one status, renders all three sheets, exports one XLSX. `audit-batches/workbook-*.png` are previews, not competitor evidence.
+Workbook builder: copy tracked `build_workbook_1612.mjs` and `workbook_formatting.mjs` into a temporary directory beside a node_modules symlink to bundled dependencies, then run bundled Node with the absolute research directory argument. Read the Spreadsheets skill for runtime paths and authoring protocol. The builder recalculates dashboard and dimension counts, verifies 1,612 unique IDs, preserves 966 original detailed records, rejects expansion deep-completion and exports only `FINANCE_1612_COMBINED_INTELLIGENCE.xlsx`. Native Microsoft Excel recalculation remains untested.
 
 Local verification: 16 research unit tests pass; 461 repository tests pass (five pre-existing fixture/Pillow warnings). Knowledge validator checks 2,732 local hashes but exits nonzero on its historical scope guard: seven existing `reports/project-status/2026-10-16/*` files lie outside its old allowlist relative to `08e7192`. These files already existed at starting HEAD. Do not delete unrelated status reports or claim this validator passed.
 

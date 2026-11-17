@@ -1,0 +1,33 @@
+# What if the moon turned into a black hole?
+
+| Field | Value |
+|---|---|
+| Video ID | `UQgw50GQu1A` |
+| URL | https://www.youtube.com/watch?v=UQgw50GQu1A |
+| Format | long |
+| Published | 2025-07-08 |
+| Duration | 00:03:41 |
+| Views (at acquisition) | 1,514,229 |
+| Words | 852 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/UQgw50GQu1A.txt` |
+| Source SHA-256 | `9e624e5d6b0783714f6c1f237e909e956fd1a69dd0e6e6092ca824841a05dc7e` |
+
+## Script
+
+*[Music]*
+
+This question comes from Matt who asks, "What would happen if the moon were replaced with an equivalently masked black hole? And what would a lunar or polar eclipse look like?" I won't spoil the answer, but later on we will have to resort to the unit of mill Fahrenheit if that tells you how little a black hole moon would affect the Earth.
+
+A black hole, the mass of the moon would have an event horizon about the size of a sand grain. Specifically, according to one of my favorite charts, a black hole moon would be a grain of fine to medium fine sand and could pass through a civ of size ASM number 70 or larger. I mean, I guess a black hole with the mass of the moon would pass right through any civ, destroying it in the process. But that's neither here nor there.
+
+Literally, once you're inside a black hole, its singularity isn't a point in space at all. For you, it's now a point in time. It's neither here nor there.
+
+Since the moon's mass and position wouldn't change, the Earth's motion and tides wouldn't change either. When you're floating outside a spherical mass, its pull on you is the same regardless of whether the mass is concentrated at the center of the sphere or spread out throughout it. If the sun were replaced by a black hole of the same mass, the Earth's orbit wouldn't change, although life on Earth might.
+
+With the moon gathered into a point, there'd be no moonlight, which would affect the life cycles of all kinds of nocturnal animals. But compared to a lot of the other things we humans have already done to mess with animals on Earth, this would be fairly minor. Our black hole moon would be pretty low profile. If it were much smaller, it would evaporate through Hawking radiation. But a black hole, the mass of the moon actually absorbs more energy from the cosmic background radiation than it emits through the hawking mechanism. Our black hole would really be black. At least if it didn't eat anything. If the black hole devoured any objects, it would let off a tremendous blast of radiation. Black hole accretion discs are one of the most efficient ways to convert mass into energy in the universe. Fortunately, there's not a lot out there for the black hole moon to eat, so it wouldn't glow very brightly for now. It would spend most of its time drastically altering the orbits of nearby dust particles. One sand grain pushing the other sand grains around.
+
+But there would be one interesting effect. In addition to getting darker, Earth would get colder because moonlight warms the Earth. Measurements show that global temperature varies with a 28day cycle. All else being equal, the Earth is hottest during the full moon. It's a tiny difference, small fractions of a degree, but it's there. Except most of this effect is not due to moonlight. The largest contributor is the fact that the Earth is slightly closer to the sun during a full moon than a new moon, which would still happen with a black hole moon. Calculating the small amount of energy actually radiated by the moon is deceptively tricky. The phases of the moon mean that it's not always reflecting the same amount of sunlight on us. Plus, you might think that when the moon's half illuminated, it would be half as bright as when it's full, but it's actually much less bright. And once you account for that, there are even trickier effects to deal with because science is the worst. On top of all the weird visible light effects, the moon also heats up under the sun and then it radiates that heat as infrared light. It turns out that the moon's infrared radiation affects Earth's temperature about 10 times more than the visible moonlight, but still about 10 times less than the Earth moving closer to the sun during a full moon. Specifically, infrared moonlight warms the planet by about 1.2 mill degrees Fahrenheit. If you don't like Fahrenheit, that's the same as warming the Earth by 1.2 milligrees ranken or 0.35 mill ror or 0.53 mg ray or 2/3 of a mill. So without moonlight, the planet would cool down slightly. But given the rate at which we're adding CO2 to the atmosphere, which also changes the Earth's energy balance, we would make up the difference in a couple of weeks. All in all, the conversion of the moon to a black hole might not be that big of a deal. Unless, of course, it happened on a certain day in 1969, in which case the famous quote might read a little bit differently.
+
+P.S., you might now be wondering what would happen if the moon were replaced by a black hole of the same size, not the same mass. Well, a moonsized black hole would have around 600 times the mass of the sun, so we would definitely fall into it. A total final lunar eclipse.
+
+*[Music]*

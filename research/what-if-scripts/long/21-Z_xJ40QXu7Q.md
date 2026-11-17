@@ -1,0 +1,91 @@
+# What if you built a billion-story building?
+
+| Field | Value |
+|---|---|
+| Video ID | `Z_xJ40QXu7Q` |
+| URL | https://www.youtube.com/watch?v=Z_xJ40QXu7Q |
+| Format | long |
+| Published | 2025-02-11 |
+| Duration | 00:03:56 |
+| Views (at acquisition) | 2,342,330 |
+| Words | 825 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/Z_xJ40QXu7Q.txt` |
+| Source SHA-256 | `527bb8f40e9dac9a02f756ee422336826d184f8df23def866c2b87cf1b283fb5` |
+
+## Script
+
+This question came from Keira, who at age four and a half wanted to build a billion-story building.
+
+Actually, it came from Keira’s dad, who wanted to help Keira appreciate how big and difficult such a project would be.
+
+Keira, if you make a building too tall, the top part is heavy and it squishes the bottom part.
+
+Until you make it really really tall, and then the top part will tear itself off and go into orbit near the moon.
+
+But we’re getting ahead of ourselves.
+
+Have you ever tried to make a tower out of jello? It's easy to make a little tiny wobbly jello castle – in fact, some people like to serve fancy jello that way.
+
+But if you try to build a really big jello castle, the whole thing smushes down on itself.
+
+The same thing happens with buildings – eventually.
+
+The buildings we make are strong: the tallest are almost 1 kilometer tall, and we could probably make buildings 2 or even 3 kilometers tall if we wanted, and they would still be able to stand up under their own weight.
+
+But too much higher and we’d run into the jello problem: the top part would squish the bottom part.
+
+There are other problems with a tall building, too.
+
+One is wind.
+
+The wind up high is very strong, and buildings have to be very strong to stand up against the wind.
+
+Another problem is, surprisingly, elevators.
+
+Tall buildings need elevators, since no one wants to climb hundreds of flights of stairs. If your building has lots of floors, you need lots of different elevators to get all the people where they’re trying to go at once: some of our existing tall buildings have floors purely dedicated to letting people change from one elevator to another.
+
+If you make a building too tall, the whole thing gets taken up by elevators and there's no space for regular rooms.
+
+Another big problem is money: a building several miles tall would cost many billions of dollars, and most people don't think giant towers a few miles tall are important enough to spend billions of dollars on.
+
+Even if you found a lot of money, you'd still have problems making a tower a billion stories tall.
+
+A billion stories is just too many.
+
+A big skyscraper might have about 100 floors, which means it's as tall as 100 little houses.
+
+If you stacked 100 skyscrapers on each other to make a mega-skyscraper, it would reach halfway to space.
+
+This skyscraper would still only have ten thousand floors, which is way less than your billion floors!
+
+So let’s stack 100 mega-skyscrapers to make a mega-mega-skyscraper.
+
+The mega-mega-skyscraper would stick out so far from the Earth that spacecraft would crash into it.
+
+Some like the international space station could steer around it, but space is full of broken satellites and pieces of junk, all flying around at random, some of which will eventually smash into your mega-mega-skyscraper at very high speeds.
+
+And anyway, a mega-mega-skyscraper is only a million floors high. That's still a lot smaller than the billion that you want!
+
+So let’s stack up 100 mega-mega-skyscrapers to make a mega-mega-MEGA-skyscraper.
+
+The mega-mega-MEGA-skyscraper would be so tall that the top would just barely brush against the Moon.
+
+And it would introduce a new problem – centrifugal forces! Just like how a swing carousel throws you outwards, anything spinning in sync with the earth’s equator is thrown outwards.
+
+On the surface, objects literally weigh about half a percent less at the earth’s equator than at the poles.
+
+The farther out you go, the weaker earth’s gravity gets and the stronger the centrifugal force is.
+
+The effects are equal just over a 10th of the way out to the moon - if you built a skyscraper this tall, you could launch a geostationary satellite just by letting go of it out the window.
+
+But our mega-mega-MEGA skyscraper is so much taller than geostationary orbit that most of its mass is where the outwards-pulling centrifugal force is much, much, stronger than gravity.
+
+The engineering challenge of this skyscraper isn’t that it will collapse down on itself like jello, but that it’ll tear itself up by the roots and go into orbit near the moon.
+
+And it still wouldn’t be a billion stories! To get there, we’d have to stack 10 mega-mega-MEGA-skyscrapers on top of each other to make one Keira-skyscraper.
+
+At the top, the Keira skyscraper would be going faster than the speed with which the solar system orbits the milky way.
+
+And if you timed things right, you could launch a satellite with almost enough velocity to leave our galaxy just by letting go of it out your window.
+
+Suffice it to say, the Keira-skyscraper would be pretty close to impossible to build, and any loose pieces would fly off and get strewn throughout the galaxy. But the view from the roof would be incredible.

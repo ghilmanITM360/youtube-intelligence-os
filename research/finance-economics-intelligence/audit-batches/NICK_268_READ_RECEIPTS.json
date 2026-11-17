@@ -1,0 +1,252 @@
+{
+ "batch_id": "NICK_268_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "mlJsPniO5lQ",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "d8565f6e88c10a5c95abbda36bf55f8934e35edf70ede408854b61988257fbc7",
+   "character_count": 17596,
+   "canonical_utf8_bytes": 17597,
+   "canonical_whitespace_word_count": 3151,
+   "coverage_token_count": 3206,
+   "read_character_ranges": [
+    [
+     0,
+     8800
+    ],
+    [
+     8800,
+     17596
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "It's 11:40 on a Tuesday night and Jem is standing at her kitchen counter in a hospital badge she forgot to take off eating cereal out of a coffee mug",
+   "last_text_witness": "entire system that will actually move when you touch it. Go look at it today. If it's still whatever your employer picked for you in week one, you never made a decision. Somebody made one for you and let you spend a decade assuming it was yours. And if you want to run your own numbers alongside people doing the same thing, our school community is waiting in the description.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 8800,
+     "first80": "It's 11:40 on a Tuesday night and Jem is\nstanding at her kitchen counter in a\nho",
+     "last80": "daughter asking whether you and dad are\nset and hearing yourself say, \"We're\nfin"
+    },
+    {
+     "start": 8800,
+     "end": 17596,
+     "first80": "e, honey.\" in a tone you have clearly\npracticed. It feels like turning the\ntherm",
+     "last80": "people doing the same thing,\nour school community is waiting in the\ndescription."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "052_mlJsPniO5lQ_Average_401K_Balance_By_Age_2026_Edition.txt",
+   "archive_member_sha256": "d7a18ff415e79fa62e1ee0767bb797543240da7f1469c4a1e05ef72c227e7a61",
+   "archive_member_bytes": 19170,
+   "archive_member_lines": 499,
+   "audio_verified": false,
+   "image_sha256": "6050ef8fc0f7b1a9202a1df56b3cc14b38392f4afa4fd009599d02e3c3553e44",
+   "image_bytes": 179633,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/mlJsPniO5lQ/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/mlJsPniO5lQ/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-01"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "IRS2026",
+   "url": "https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500",
+   "source_date": "2025-11-13",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_PAGE",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "IRS newsroom release on 2026 retirement plan limits",
+   "finding": "Deferral limit $24,500 (from $23,500); catch-up $8,000 (from $7,500); ages 60-63 catch-up \"remains $11,250 instead of the $8,000\".",
+   "limitations": "Roth catch-up wage threshold not on the page (see Notice 2025-67). Release date per analyst recall.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "BLSEBS",
+   "url": "https://www.bls.gov/news.release/ebs2.nr0.htm",
+   "source_date": "2026-09-25",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_PAGE",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "BLS Employee Benefits in the United States, March 2026 news release",
+   "finding": "\"Retirement benefits were available to 72 percent of private industry workers in March 2026\"; 52% participated.",
+   "limitations": "Published after the upload; the prior-year release (likely the video's source) was not opened. Size-class and industry rows not in the summary.",
+   "publication_applicability": "AFTER_PUBLICATION_CONSISTENT_CHECK",
+   "accessed": "2026-11-01"
+  },
+  {
+   "source_id": "VHAS2026",
+   "url": "https://247wallst.com/personal-finance/2026/08/31/vanguard-says-the-average-401k-is-now-167970-heres-why-most-people-have-far-less/",
+   "source_date": "2026-06-01",
+   "access_scope": "SEARCH_SUMMARY_OF_PRIMARY_OR_REPORTED_SOURCE",
+   "source_confidence": "SEARCH_RESULT_SNIPPET_ONLY",
+   "locator": "Vanguard How America Saves 2026 (year-end 2025 data) as reported by 401k Specialist, InvestmentNews, 24/7 Wall St.",
+   "finding": "Average $167,970; median $44,115 (+16%); 4.6 million accounts; 2024 average $148,153 and median $38,176.",
+   "limitations": "Vanguard report not opened; release date approximate.",
+   "publication_applicability": "BEFORE_PUBLICATION",
+   "accessed": "2026-11-01"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 5463,
+    "age_days": 54.1172,
+    "views_per_day": 100.94757304516864,
+    "peer_median_10": 117.01072209288427,
+    "peer_median_5": 115.78931216890625,
+    "peer_ratio_10": 0.8627207083213747,
+    "peer_ratio_5": 0.871821165134072,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "7z56bYxEQu4",
+     "pv4-6zgdPfM",
+     "hzQsUoXqLQc",
+     "sZEOSY3MODg",
+     "dwbvvyeRonE",
+     "9PHPEV9MKOg",
+     "bHZObxKdzxA",
+     "2Q_h21K6MAo",
+     "RgaTGzeFcPQ",
+     "i7eR3JUrefg"
+    ],
+    "peer_ids_5": [
+     "7z56bYxEQu4",
+     "pv4-6zgdPfM",
+     "hzQsUoXqLQc",
+     "sZEOSY3MODg",
+     "dwbvvyeRonE"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "7z56bYxEQu4",
+      "Title": "Why Looking Poor is SO Important",
+      "Views": "9730",
+      "Age_days": "53.138",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "pv4-6zgdPfM",
+      "Title": "Day Trading vs Index Funds - Which One Will Make You More?",
+      "Views": "3057",
+      "Age_days": "55.1171",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "WEAK"
+     },
+     {
+      "Video_ID": "hzQsUoXqLQc",
+      "Title": "The High Income Poverty Trap | Rich on Paper, Broke in Reality",
+      "Views": "6037",
+      "Age_days": "52.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "sZEOSY3MODg",
+      "Title": "Once Your Portfolio Hits This Number, Saving More Barely Matters",
+      "Views": "7935",
+      "Age_days": "56.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "dwbvvyeRonE",
+      "Title": "The Biggest Wealth Killers in Your 20s and 30s (AVOID At All Costs)",
+      "Views": "4061",
+      "Age_days": "51.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "9PHPEV9MKOg",
+      "Title": "Why Most People Never Become Millionaires - And Why SOME Do",
+      "Views": "14335",
+      "Age_days": "57.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "STRONG"
+     },
+     {
+      "Video_ID": "bHZObxKdzxA",
+      "Title": "The Easiest (& Laziest) Way to Get Rich",
+      "Views": "4826",
+      "Age_days": "50.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "2Q_h21K6MAo",
+      "Title": "Over 30? How To Retire in 10 Years Starting With $50K",
+      "Views": "5025",
+      "Age_days": "58.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "RgaTGzeFcPQ",
+      "Title": "Is Bitcoin going to 0? (What They Won't Tell You)",
+      "Views": "6234",
+      "Age_days": "49.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "i7eR3JUrefg",
+      "Title": "29 Minutes of People Living Above Their Means and Going BROKE",
+      "Views": "6992",
+      "Age_days": "59.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Lifetime public exposure-confounded snapshot,not current velocity; no private metrics,causal packaging or sales inference."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Ratios, sums and payout-rate checks",
+   "results": {
+    "mean_median_ratio": 3.808,
+    "annuity_payout_rate": 0.075,
+    "four_pct_of_median_55_64": 4290.76,
+    "income_low": 29300,
+    "income_high": 30000,
+    "gap": 32000,
+    "share_covered": 0.475,
+    "median_vs_magic_number": 0.0851,
+    "avg_growth_2025": 0.1338,
+    "forgotten_avg": 65831,
+    "millionaire_share": 0.0238
+   },
+   "limitations": "Figures as stated; annuity rate not quoted from a live source."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Two primary pages directly inspected; Vanguard figures snippet-only; the rest analyst recall, labelled per claim. No paid purchases."
+}

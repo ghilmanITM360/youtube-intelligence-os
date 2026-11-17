@@ -1,0 +1,55 @@
+{
+ "status": "PASS",
+ "video_id": "doUSOwmdaw0",
+ "nick": "NICK_222",
+ "claims": 17,
+ "sources": 1,
+ "calculations": 2,
+ "transcript_chars": 23746,
+ "parent_commit": "aad1139676b29713b9c51ecdc238330545de8ec4",
+ "writer_context": "MACHINE_A_OWNER_DIRECTED_FINANCE_EXECUTION_AUTHORIZED;branch codex/finance-machine-a-owner-directed;pending reconciliation with PR #36",
+ "micro_batch": [
+  "NICK_221",
+  "NICK_222",
+  "NICK_223"
+ ],
+ "changed_ledger_ids": [
+  "doUSOwmdaw0"
+ ],
+ "csv_projections": 7,
+ "source_fingerprints": 26,
+ "prior_completed_preserved": 496,
+ "legacy_in_progress_preserved": true,
+ "canonical_validators": "PASS_BOTH(validate_audit_966 strict receipts; validate_research PASS_BOUNDED_RESEARCH_NOT_PHASE_COMPLETION)",
+ "finance_tests": "38_PASS",
+ "formatting_tests": "2_PASS",
+ "calculation_verification": "K01 reproduces master 0.48810 WEAK (5-peer 0.33301 WEAK); K02 analyst arithmetic",
+ "claim_witness_check": "All claim stored_text_witness values equal text[start_char:end_char]; all claim source_ids resolve to primary_source_receipts; Text_SHA256 matches",
+ "csv_projection_method": "Header-stable target-row replacement by build_audit_966.py; one changed line per CSV per target, Video_ID verified",
+ "build_script_fix": "NONE",
+ "workbook": {
+  "status": "PASS",
+  "builder": "build_workbook_1612.mjs (established, unmodified) via @oai/artifact-tool runtime",
+  "unique_identities": 1612,
+  "completed": 499,
+  "remaining": 1113,
+  "original_pending": 467,
+  "expansion_pending": 646,
+  "changed_cells": "91 cells: dashboard 7 + target rows 492-494 in two sheets",
+  "styles_changed": 0,
+  "formula_cells_changed": 0,
+  "formula_errors": 0,
+  "preexisting_hash_prefixed_text_cells": 16,
+  "zip_integrity": "PASS",
+  "package_parts": "Identical except exporter relationship IDs; relationship targets identical",
+  "native_excel_recalculation": "NOT_TESTED",
+  "workbook_sha256": "067fd8c973a8d0210e76f4edd258018c9cb1ee0d1128b53f6d20185c0cdc4c48"
+ },
+ "semantic_acceptance": "All 23746 stored characters and six dimensions reviewed; 17 located claim groups; sources FDICNR. Audio unverified.",
+ "hashes": {
+  "VIDEO_AUDIT_966.jsonl": "ea396d77c42a3a2c32c9c770b74f6153ddb1e0a745943edc989a718faa5bbce8",
+  "NICK_222.json": "64cb42753fc620e4423b8f1d22bb12c33314d95b341846837b89c06bfa1604d3",
+  "NICK_222_READ_RECEIPTS.json": "f9fc490581051290d06379efa9efafacefe6d30c0673837b3892988a5273fff7",
+  "thumbnail": "1723c4f4f3cfd41ef643dd39d4fbbf9de9c32b61a2ef6f1b5cc0558df202ffed"
+ }
+}

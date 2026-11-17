@@ -1,0 +1,102 @@
+{
+  "batch_id": "NICK_138_READ_RECEIPTS",
+  "reviews": [],
+  "receipts": [
+    {
+      "Video_ID": "O5fuwQGKf_c",
+      "scope": "FULL_STORED_TEXT",
+      "Text_SHA256": "aadb431aaf2b54e56364b6f12a2fac67292f751c5757543e761ff0e7d938e488",
+      "character_count": 18092,
+      "source_word_count": 3019,
+      "coverage_token_count": 3069,
+      "read_character_ranges": [
+        [
+          0,
+          10000
+        ],
+        [
+          10000,
+          18092
+        ]
+      ],
+      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+      "archive_member": "173_O5fuwQGKf_c_Why_You_Cant_Afford_a_New_Car_in_2026_The_Math_is_Cruel.txt",
+      "archive_member_sha256": "d22bd3c3aaf854baf4752fb0d4de98b16d2fdb2beb52cfd7edb838f67cb7fd5a",
+      "archive_member_bytes": 19581,
+      "archive_member_lines": 523,
+      "audio_verified": false,
+      "image_sha256": "c9c4a607290bc00467faf449d78ac2eaabf17f4fec1a29bc9a19794f4e4cfa03",
+      "image_inspected_sizes": [
+        [
+          1280,
+          720
+        ],
+        [
+          320,
+          180
+        ]
+      ],
+      "registered_image_url": "https://i.ytimg.com/vi/O5fuwQGKf_c/maxresdefault.jpg",
+      "fetched_image_url": "https://i.ytimg.com/vi/O5fuwQGKf_c/maxresdefault.jpg",
+      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+      "image_fetch_attempts": [
+        [
+          "https://i.ytimg.com/vi/O5fuwQGKf_c/maxresdefault.jpg",
+          "OK"
+        ]
+      ],
+      "acquired_date": "2026-10-19"
+    }
+  ],
+  "primary_source_receipts": [
+    {
+      "claim": "Median household income roughly $75,000 / $74,000",
+      "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE",
+      "finding": "2024 median household income $83,730 (2023: $82,690), Income in the United States: 2024, released September 2025, before publication."
+    },
+    {
+      "claim": "Average new car price around $48,000",
+      "url": "https://mediaroom.kbb.com/2026-02-10-Kelley-Blue-Book-Report-New-Vehicle-Prices-Climb-Higher-in-January-Automakers-Cut-Incentives-to-Help-Protect-Margins?asPDF=1",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_OF_INDUSTRY_PRIMARY_RELEASE",
+      "finding": "January 2026 ATP $49,191; December 2025 revised $50,318; released 2026-02-10, before publication."
+    },
+    {
+      "claim": "8% rate, 6-year average term, $789 payment context",
+      "url": "https://www.autoremarketing.com/subprime/edmunds-more-than-26-of-q4-used-new-car-deliveries-backed-by-monthly-payments-topping-1000",
+      "accessed": "2026-10-19",
+      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_EDMUNDS; Edmunds original not opened",
+      "finding": "Q4 2025 average new amount financed $43,759, average payment $772; Q1 2025 term 69.5 months, APR 7.1%; Q4 2025 average term not confirmed (UNVERIFIED)."
+    }
+  ],
+  "calculation_receipts": [
+    {
+      "method": "Standard amortization payment P*i/(1-(1+i)^-n), i=APR/12; simple sums and ratios using the narrator's stated inputs",
+      "results": {
+        "pmt_45000_8pct_72": 788.996,
+        "pmt_45000_7pct_72": 767.205,
+        "pmt_45000_9pct_72": 811.149,
+        "total_interest_45000_8pct_72": 11807.7,
+        "monthly_total": 1214,
+        "gross_75000_monthly": 6250,
+        "budget_20pct": 1250,
+        "income_needed_1214_at_20pct": 72840,
+        "gas_annual": 1516.67,
+        "gas_monthly": 126.39,
+        "cc_interest_6000_22pct_monthly": 110.0,
+        "martinez_left_after_car": 4586,
+        "martinez_other_expenses": 5400,
+        "martinez_net": -814,
+        "transport_housing_share_with_second_car": 0.5972,
+        "transport_housing_share_without_second_car": 0.5197,
+        "car48k_months_of_75k_income": 7.68,
+        "income_implied_by_18_months_48k": 32000,
+        "car_cost_share_of_census_median_monthly": 0.174,
+        "peer_ratio_10": 0.7420547931981283,
+        "peer_ratio_5": 0.7248865978721651
+      }
+    }
+  ]
+}

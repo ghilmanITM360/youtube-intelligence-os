@@ -1,0 +1,83 @@
+# What would a magnitude 15 earthquake be like?
+
+| Field | Value |
+|---|---|
+| Video ID | `e3uk7jU3RHo` |
+| URL | https://www.youtube.com/watch?v=e3uk7jU3RHo |
+| Format | long |
+| Published | 2023-12-05 |
+| Duration | 00:03:05 |
+| Views (at acquisition) | 7,933,044 |
+| Words | 663 |
+| Source | `data/raw/competitors/DS-000017/apify/mzl5dCHF81LbcBamS/transcripts/e3uk7jU3RHo.txt` |
+| Source SHA-256 | `7a5213c8fd02794a50d73038f652ab815aae26f98d24f1af97934e77b00a7e87` |
+
+## Script
+
+This is a question from Alex, who asks: What if a Richter magnitude 15 earthquake were to hit America at, let's say, New York City?
+
+What about a Richter 0? or 25?
+
+Well, given that a magnitude 25 quake would destroy the sun if one happened there, it would certainly destroy New York City.
+
+But we’re getting ahead of ourselves.
+
+The Richter scale, which has technically been replaced by the "moment magnitude" scale, measures the strength of an earthquake.
+
+Since we usually hear about earthquakes with ratings somewhere between 3 and 9, a lot of people probably think of 10 as the top of the scale and 0 as the bottom.
+
+In fact, there is no top or bottom to the scale!
+
+But even if 10 isn't the top of the scale, it might as well be.
+
+A magnitude 9 earthquake already measurably alters the rotation of the Earth; the two magnitude 9-plus earthquakes this century both altered the length of the day by a tiny but measurable fraction of a second.
+
+In order to get to magnitude 10, you’d need a ruptured fault line three and a half thousand kilometers long... and a magnitude 11 quake would require a fault that went half way around the world!
+
+A magnitude 15 earthquake would be a million times more powerful than that, and involve the release of enough energy to evaporate all the water on earth (though if that happened, we can rest easy knowing the earthquake couldn’t cause any tsunamis!).
+
+Going a few steps further, a magnitude 18 earthquake would release nearly ten to the thirty-two Joules of energy, which is roughly the gravitational binding energy of the Earth.
+
+To put it another way, the Death Star caused a magnitude 18 earthquake on Alderaan.
+
+You could in theory talk about a "more powerful" earthquake on Earth, but in practice all it would mean is that the expanding cloud of space debris would be faster and hotter.
+
+The Sun, with its higher gravitational binding energy, could have up to a magnitude 24 quake.
+
+This is about the energy release you would get if you packed the entire volume of Jupiter with hydrogen bombs and detonated them all at once.
+
+The most powerful quakes in the known universe, which occur in superheavy neutron stars, are about this magnitude.
+
+A magnitude 25 quake would explode the sun.
+
+Hold on – we’re spending a lot of time talking about things that are large and violent.
+
+What about the bottom end of the scale?
+
+Is there such a thing as a magnitude 0 earthquake?
+
+Yes!
+
+In fact, the scale goes all the way down past zero.
+
+Let's take a look at some low-magnitude "earthquakes," with a description of what they would be like if they hit your house.
+
+A magnitude 1 quake releases the same energy as dropping a partially loaded cement truck from 10 meters onto the street in front of your house.
+
+A magnitude 0 earthquake is equivalent to the Dallas Cowboys American football team running at full tilt into the side of your neighbor's garage A magnitude negative one quake is like a single American football player running into a tree in your yard.
+
+A cat falling off a dresser would have a magnitude of negative two.
+
+A cat knocking your cell phone off your nightstand would have magnitude negative three.
+
+Magnitude negative four is like a penny falling off of a dog Magnitude negative five is a key press on an IBM model M mechanical keyboard.
+
+Negative six is a key press on a lightweight keyboard.
+
+Negative seven is a single feather fluttering to the ground.
+
+A fine grain of sand falling onto the pile at the bottom of a tiny hourglass would be a magnitude negative eight quake.
+
+... and let's jump all the way down to magnitude negative fifteen: a drifting mote of dust coming to rest gently on a table.
+
+Sometimes it's nice not to destroy the world for a change.

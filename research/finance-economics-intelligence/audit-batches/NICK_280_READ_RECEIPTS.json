@@ -1,0 +1,275 @@
+{
+ "batch_id": "NICK_280_READ_RECEIPTS",
+ "reviews": [],
+ "receipts": [
+  {
+   "Video_ID": "pmfPNdWGzdo",
+   "scope": "FULL_STORED_TEXT",
+   "Text_SHA256": "88840656a525dd0f14c1ed2006a5f862f7ff2a8057054ba8c95052f74644150d",
+   "character_count": 17518,
+   "canonical_utf8_bytes": 17518,
+   "canonical_whitespace_word_count": 3066,
+   "coverage_token_count": 3117,
+   "read_character_ranges": [
+    [
+     0,
+     9500
+    ],
+    [
+     9500,
+     17518
+    ]
+   ],
+   "read_provenance": "Sequential full text read in bounded character ranges;read-only SQLite hash and normalized archive containment verified",
+   "first_text_witness": "Right now, somewhere in your banking app, there is a number quietly insulting yo",
+   "last_text_witness": " congratulations. You've just found the highest paying 15 minutes available to you this year. And unlike everything else in personal finance, this one doesn't require you to be right about the future.",
+   "range_boundary_witnesses": [
+    {
+     "start": 0,
+     "end": 9500,
+     "first80": "Right now, somewhere in your banking\napp, there is a number quietly insulting\nyo",
+     "last80": "do. He searched for the biggest\nnumber and the biggest number is almost\nnever th"
+    },
+    {
+     "start": 9500,
+     "end": 17518,
+     "first80": "e right one.\nSome advertised rates are promotional\nand quietly reset after three",
+     "last80": " in personal\nfinance, this one doesn't require you to\nbe right about the future."
+    }
+   ],
+   "archive": "data/extracted/channel-data/DS-000022/packages/nick-invests/NickInvests_Transcripts_363_Videos.zip",
+   "archive_sha256": "acad128c091728d00b3c0f4129167caa96ac96a107b72b02fd06a43099f2c8ac",
+   "archive_member": "046_pmfPNdWGzdo_Why_High_Yield_Savings_Accounts_Are_Making_a_Comeback_in_2026.txt",
+   "archive_member_sha256": "044083f521d87c2fc35c377d54c881d521363f59bd88a7fb362efc7618e0bc5d",
+   "archive_member_bytes": 19109,
+   "archive_member_lines": 519,
+   "audio_verified": false,
+   "image_sha256": "0bd568eb5e9d1efe114bea397991f1931d56a93204b0bdec20dccb742b6cb9fc",
+   "image_bytes": 160893,
+   "image_media_type": "image/jpeg",
+   "image_inspected_sizes": [
+    [
+     1280,
+     720
+    ],
+    [
+     320,
+     180
+    ]
+   ],
+   "registered_image_url": "https://i.ytimg.com/vi/pmfPNdWGzdo/maxresdefault.jpg",
+   "fetched_image_url": "https://i.ytimg.com/vi/pmfPNdWGzdo/maxresdefault.jpg",
+   "image_acquisition": "REGISTERED_MAXRESDEFAULT_URL_HTTP200_GET;ORIGINAL_BYTES_PRESERVED;NATIVE_AND_320x180_MOBILE_INSPECTED",
+   "acquired_date": "2026-11-02"
+  }
+ ],
+ "primary_source_receipts": [
+  {
+   "source_id": "FREDFF",
+   "url": "https://fred.stlouisfed.org/series/DFEDTARU",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED DFEDTARU, fredgraph.csv; SHA-256 20e6d0fa422555249047ecc2ba6226044b91708bdb6cd31f30e3fbc3c0a6576a",
+   "finding": "Upper target: six cuts 2024-09-19 to 2025-12-11 (5.00 to 3.75); hikes 2022-03-17 (0.50) to 2023-07-27 (5.50); unchanged to 2026-07-24.",
+   "limitations": "Upper bound; the video quotes lower bounds; later 2026-09-17 change post-dates the video.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDCPI",
+   "url": "https://fred.stlouisfed.org/series/CPIAUCNS",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPIAUCNS, fredgraph.csv; SHA-256 cfab9b9be4a5d4f06253c4dcc3f7e0b28b1d58837e710dd7cb1fd54a49e7ad7c",
+   "finding": "June 2026 333.952 vs June 2025 322.561 (+3.53%); Jul 2023 +3.2%; Dec 2023 +3.4%; Jun 2024 +3.0%.",
+   "limitations": "NSA CPI-U all items; current vintage.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FRECORE",
+   "url": "https://fred.stlouisfed.org/series/CPILFESL",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED CPILFESL, fredgraph.csv; SHA-256 182058ceeb094cb2af1dfe7474553c50d779e3907c9472302d30c0d64ea147d0",
+   "finding": "Core CPI SA June 2026 vs June 2025 +2.57%.",
+   "limitations": "SA index, current vintage.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  },
+  {
+   "source_id": "FREDT1",
+   "url": "https://fred.stlouisfed.org/series/DGS1",
+   "source_date": "2026-11-02",
+   "access_scope": "DIRECT_FETCH_OF_PRIMARY_DATA",
+   "source_confidence": "PRIMARY_SOURCE_DIRECTLY_INSPECTED",
+   "locator": "FRED DGS1, fredgraph.csv; SHA-256 387b8bf92c1255f20a66a7d525d5eaafb0150cb6fdafaae6eacf36d55fddd3a7",
+   "finding": "1-year constant-maturity Treasury 4.15% on 2026-07-23, 4.14% on 07-24.",
+   "limitations": "CMT yield, not a purchase price.",
+   "publication_applicability": "BEFORE_PUBLICATION_DATA_CURRENT_VINTAGE",
+   "accessed": "2026-11-02"
+  }
+ ],
+ "calculation_receipts": [
+  {
+   "calculation_id": "K01",
+   "method": "Frozen lifetime-view-rate: views / four-decimal age; nearest eligible same-channel/format/snapshot peers,0.5–2age; median10andfirst5;2.0strong/0.5weak",
+   "results": {
+    "views": 4792,
+    "age_days": 48.1172,
+    "views_per_day": 99.59016734140806,
+    "peer_median_10": 129.26357703752194,
+    "peer_median_5": 131.65970552718167,
+    "peer_ratio_10": 0.770442607452365,
+    "peer_ratio_5": 0.7564210093182023,
+    "tier_10": "TYPICAL",
+    "tier_5": "TYPICAL",
+    "peer_ids_10": [
+     "9bJvzv5GknU",
+     "RgaTGzeFcPQ",
+     "jFH7Cl6Uc_M",
+     "bHZObxKdzxA",
+     "GQ7oro2pthQ",
+     "dwbvvyeRonE",
+     "0Ca3uV6lgos",
+     "hzQsUoXqLQc",
+     "XFEndHZQ66Q",
+     "7z56bYxEQu4"
+    ],
+    "peer_ids_5": [
+     "9bJvzv5GknU",
+     "RgaTGzeFcPQ",
+     "jFH7Cl6Uc_M",
+     "bHZObxKdzxA",
+     "GQ7oro2pthQ"
+    ],
+    "peer_rows": [
+     {
+      "Video_ID": "9bJvzv5GknU",
+      "Title": "Never Finance a Car This Way (2026)",
+      "Views": "7566",
+      "Age_days": "47.138",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "RgaTGzeFcPQ",
+      "Title": "Is Bitcoin going to 0? (What They Won't Tell You)",
+      "Views": "6234",
+      "Age_days": "49.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "jFH7Cl6Uc_M",
+      "Title": "Why Is the World In So Much Debt",
+      "Views": "6129",
+      "Age_days": "46.1242",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "bHZObxKdzxA",
+      "Title": "The Easiest (& Laziest) Way to Get Rich",
+      "Views": "4826",
+      "Age_days": "50.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "GQ7oro2pthQ",
+      "Title": "Use Your Paycheck To Do These 5 Things And Never Work Again",
+      "Views": "5942",
+      "Age_days": "45.1315",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "dwbvvyeRonE",
+      "Title": "The Biggest Wealth Killers in Your 20s and 30s (AVOID At All Costs)",
+      "Views": "4061",
+      "Age_days": "51.1379",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "0Ca3uV6lgos",
+      "Title": "EVERY Strategy to Retire Early Explained",
+      "Views": "4022",
+      "Age_days": "44.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "hzQsUoXqLQc",
+      "Title": "The High Income Poverty Trap | Rich on Paper, Broke in Reality",
+      "Views": "6037",
+      "Age_days": "52.1378",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "XFEndHZQ66Q",
+      "Title": "Nick Reacts To 20 People Being Financially Illiterate",
+      "Views": "9674",
+      "Age_days": "43.1381",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     },
+     {
+      "Video_ID": "7z56bYxEQu4",
+      "Title": "Why Looking Poor is SO Important",
+      "Views": "9730",
+      "Age_days": "53.138",
+      "Format": "LONG_FORM",
+      "Metric_snapshot_date": "2026-09-11",
+      "Performance_tier": "TYPICAL"
+     }
+    ]
+   },
+   "limitations": "Same-channel peers only; exposure-confounded; no impressions, traffic sources or CTR."
+  },
+  {
+   "calculation_id": "K02",
+   "method": "Simple and compound interest, after-tax and unit-rate arithmetic; FRED inflation and rate changes",
+   "results": {
+    "yvette_interest_year": 3.1,
+    "curtis_30k_at_4_5": 1350,
+    "ratio": 450,
+    "gap_8000": 330,
+    "per_hour_15min": 1320,
+    "gap_20000": 825,
+    "gap_50000": 2062.5,
+    "inflation_loss_31000": 1085,
+    "cpi_yoy_2026_06": 0.0353,
+    "core_yoy_2026_06": 0.0257,
+    "cuts_2024_25": 6,
+    "two_year_forgone_30k": 2475,
+    "after_tax_savings_ca": 2.28,
+    "after_tax_tbill_4_5": 2.84,
+    "after_tax_tbill_4_15": 2.61,
+    "year1_competitive_31000": 32395,
+    "ten_year_30k_0_375": 31144,
+    "ten_year_30k_4_5": 46589,
+    "ten_year_diff": 15445,
+    "stocks_20y_annual": 0.099,
+    "cash_20y_annual": 0.03,
+    "fifteen_bp_30k": 45
+   },
+   "limitations": "Constant rates; pre-tax unless stated; assumed 37% federal and 13.3% California."
+  }
+ ],
+ "limits": "No audio, video, private analytics or native Excel verification. Four FRED series directly inspected; FDIC averages, SCF balances, Raisin, Synapse, deposit-beta literature, Vanguard and stock-return figures are analyst recall; FOMC dot count SOURCE_UNAVAILABLE. Persona stories are not data. No paid purchases."
+}

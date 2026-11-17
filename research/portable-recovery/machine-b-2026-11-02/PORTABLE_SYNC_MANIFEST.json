@@ -1,0 +1,139 @@
+{
+ "manifest": "PORTABLE_SYNC_MANIFEST",
+ "schema": 1,
+ "last_verified_utc": "2026-11-02T12:48:39Z",
+ "machine": {
+  "id": "Machine B",
+  "host": "Users-MacBook-Pro.local",
+  "user": "ghilmanislam360",
+  "canonical_repo_root": "/Users/ghilmanislam360/Documents/youtube-intelligence-os",
+  "this_worktree": "/Users/ghilmanislam360/Documents/youtube-intelligence-os/.claude/worktrees/second-machine-audit-repair-ef17c5",
+  "machine_a_paths_for_reference": {
+   "user": "ghilmankhan",
+   "repo": "/Users/ghilmankhan/workprojects/youtube-intelligence-os",
+   "evidence": "/Users/ghilmankhan/YIOS-local-audits/"
+  }
+ },
+ "other_machine_state": "NOT_INSPECTED (Machine A state is known only from published records; ALL_MACHINES_SYNCED is not claimed)",
+ "remote": "https://github.com/ghilmanITM360/youtube-intelligence-os.git (no credentials recorded)",
+ "branches_verified_remote_sha_at_verification": {
+  "research/finance-economics-intelligence": "9db558e0d00c2c9f1b7c362f67dbcd2d0aa35b3d (base for this sync commit; the sync commit that adds this manifest becomes the new head: confirm with git ls-remote)",
+  "codex/finance-machine-a-owner-directed": "9c6f42fb33e493314cced538d5c5fa599a29e6c5",
+  "research/casually-finance-editing-forensics": "f067ad227933ec488ab0db2e0cc333323dc12d78",
+  "codex/yios-dual-machine-coordination": "205fc7ebadcbde6b5104e9cb2be53de8951511a8",
+  "codex/casually-finance-forensic-research": "043b85bf58f84fb6a1c8981d54e3b233faa6a928",
+  "main": "08e719264e31ecd82de24f8eeb8f065c08359fe5"
+ },
+ "pr_36": {
+  "state": "OPEN",
+  "draft": true,
+  "merged": false
+ },
+ "git_state_at_verification": {
+  "all_four_local_worktrees_clean": true,
+  "local_branches_with_commits_not_on_any_remote": 0,
+  "stash": "stash@{0} ac51465b33be2d25d1a18749b1301cda778e33e5 (Senior Health, unrelated; diff preserved in recovery package, stash kept)"
+ },
+ "finance_state": {
+  "original_accepted_audits": 558,
+  "reanalysis_published": 26,
+  "reanalysis_pending": 532,
+  "population_hash": "73489502a6a6",
+  "next_pending": [
+   "15Gr4BAJi00",
+   "1CJTuLaenq8",
+   "1D9nBNa6jNE",
+   "1GowFTjbUnk",
+   "1JynDORGRis"
+  ]
+ },
+ "knowledge_db": {
+  "path": "data/knowledge/reference_knowledge.db",
+  "git_blob": "b518b889263b7c55799600f7f86512337df179ad",
+  "sha256": "a161871add6a7e1e4b6b0443decbdfb8758dd83f557978499102ee7590bfd2d1",
+  "bytes": 5062656,
+  "integrity_check": "ok",
+  "verification": "rebuilt from versioned sources with build_reference_kb.py --fresh into scratch: all 38 data tables row-for-row identical (ref_video_assessment 722 rows/26 videos); only schema_meta.applied_at timestamps differ; clean restore from origin ref also opens, integrity ok, FTS query works",
+  "rebuild": "python research/finance-economics-intelligence/reference-framework/build_reference_kb.py <new.db> --fresh (target must not exist)"
+ },
+ "thumbnails": {
+  "reanalysis_register": "research/finance-economics-intelligence/reanalysis/REANALYSIS_THUMBNAIL_REGISTER.csv",
+  "reanalysis_rows_hash_match_after_clean_restore": "12/12",
+  "original_register": "THUMBNAIL_FETCH_REGISTER.csv: 25/30 hash-match after clean restore; 5 rows have no file (HTTPError x3, MISSING_REGISTRY_URL x2, recorded since 2026-10-16, never fetched)",
+  "thumbnail_evidence_files_tracked": 302,
+  "note": "three older thumbnails are 480x360 lower-resolution sources"
+ },
+ "git_published": {
+  "research_tree": "all tracked research/, data/knowledge/, reanalysis/ files are identical between local HEAD and origin (HEAD == origin ref, tree clean)",
+  "recovery_package": {
+   "path": "research/portable-recovery/machine-b-2026-11-02",
+   "files_published": 370,
+   "bytes_published": 45659719,
+   "inventory": "research/portable-recovery/machine-b-2026-11-02/LOCAL_EVIDENCE_INVENTORY.csv",
+   "inventory_sha256": "4c8674de87ab150919c60ab823865e308c9d419ca46eb87e634be1725f4fbaa7",
+   "status": "RECOVERY_PRESERVATION_NOT_COMPLETED_RESEARCH",
+   "log_files_note": "16 *.log files are packed in logs_packed_gitignore_blocks_log_files.tar.gz because .gitignore excludes *.log",
+   "files_in_git_expected": 360
+  }
+ },
+ "inventory_counts": {
+  "PUBLISH_IN_RECOVERY_PACKAGE": {
+   "files": 370,
+   "bytes": 45659719
+  },
+  "LOCAL_ONLY_NOT_UPLOADED": {
+   "files": 2026,
+   "bytes": 907411808
+  },
+  "REMOTE_VERIFIED_IDENTICAL_BLOB": {
+   "files": 682,
+   "bytes": 98801223
+  },
+  "LOCAL_ONLY_NOT_UPLOADED_STORAGE_DESTINATION_REQUIRED": {
+   "files": 108,
+   "bytes": 787177010
+  },
+  "REFERENCED_BUT_UNAVAILABLE_ON_MACHINE_B": {
+   "files": 1009,
+   "bytes": 116707233
+  },
+  "PRIVATE_CONFIG_NOT_INVENTORIED_HASH": {
+   "files": 1,
+   "bytes": 0
+  },
+  "REPRODUCIBLE_DISPOSABLE": {
+   "files": 3,
+   "bytes": 0
+  },
+  "ZERO_BYTE_DISPOSABLE": {
+   "files": 2,
+   "bytes": 0
+  }
+ },
+ "source_media": {
+  "unique_files": 53,
+  "unique_bytes": 389588506,
+  "status": "LOCAL_ONLY_NOT_UPLOADED_STORAGE_DESTINATION_REQUIRED",
+  "reason": "no configured evidence destination other than GitHub; repo policy forbids raw video in ordinary Git; no new storage created"
+ },
+ "storage_destination": "STORAGE_DESTINATION_REQUIRED for: 53 unique Casual Finance source MP4s (~390 MB), 748 MB legacy thumbnail-forensics preservation (incl. 395 MB Archive.zip), 65 MB local_branches.bundle and bulk reproducible audit listings. Git LFS on the same GitHub repo exists for the registry DB only; not used for these without owner authorization (quota/size).",
+ "local_only_not_uploaded": {
+  "dir_prior_audit_bulk": "~/Documents/YIOS-local-audits/2026-11-02 branches/, bundle, large CSV listings (hash-listed in inventory)",
+  "dir_oct12_preservation": "~/Documents/yios-local-preservation-2026-10-12 (PR22 recovery, hash-listed)",
+  "note": "nothing deleted; originals remain on Machine B"
+ },
+ "visual_forensics": {
+  "git_published": "research/visual-forensics (230 files identical to origin): reports, manifests, ledgers for o3FQcd91MIs and Uumnx2Fo6cE",
+  "external_evidence": "1009 manifest entries (1006 unique hashes, ~116.7 MB) REFERENCED_BUT_UNAVAILABLE_ON_MACHINE_B; zero hash matches found anywhere on this machine; held on Machine A (unverified)",
+  "other_stream": "research/casually-finance-editing-forensics @ f067ad22 (Video 004/005 checkpoints) is a separate active stream owned by another session; not modified"
+ },
+ "ct006": "UNAVAILABLE_ON_THIS_MACHINE (see CT006_MISSING_DATA_MANIFEST.json)",
+ "ignored_raw_files": "data/raw/channel-data/DS-000030/... and data/raw/inbox/apify/xkcd_whatif/... are byte-identical to blobs reachable from origin refs under data/raw/competitors/...; REMOTE_VERIFIED_IDENTICAL_BLOB",
+ "not_synced_by_design": [
+  "~/.env and API keys (private)",
+  ".venv, caches (disposable)",
+  "two zero-byte ignored catalog DBs (disposable)"
+ ],
+ "verification_scope": "Git: HEAD==origin SHA, clean trees, clean restore via git archive from the origin ref with sha256 re-hash. Remote-identical claim for out-of-repo files = Git blob OID equality with objects reachable from fetched origin refs (SHA-1 object id, not an independent remote readback of bytes). Recovery package: re-hashed after push from the remote ref (see report).",
+ "machine_path_mapping": "Inventory paths use ~ for the Machine B home. Machine A equivalent home is /Users/ghilmankhan; its evidence root is /Users/ghilmankhan/YIOS-local-audits/ (see EXTERNAL_EVIDENCE_MANIFEST.json files)."
+}
