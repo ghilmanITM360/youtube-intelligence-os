@@ -55,6 +55,7 @@ img.pv{max-width:100%;border-radius:6px;border:1px solid var(--line)}
 .pbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:120px}.pbar i{display:block;height:100%;background:var(--ok)}
 .tabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:6px 0 18px}.tabs a{padding:9px 14px;color:var(--mut);border-bottom:2px solid transparent;margin-bottom:-1px}.tabs a.on{color:var(--ink);border-bottom-color:var(--acc);font-weight:600}.tabs a:hover{text-decoration:none;color:var(--ink)}
 details.tx{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin:0 0 8px;padding:9px 12px}details.tx>summary{cursor:pointer}details.tx[open]>summary{margin-bottom:8px}.snip{color:var(--mut);font-size:13.5px;margin-top:3px}mark{background:#ffd54a;color:#111;border-radius:2px;padding:0 1px}
+.pdf{width:100%;height:80vh;border:1px solid var(--line);border-radius:6px;background:#fff}
 .seg{display:inline-flex;gap:0}.seg button{border-radius:0}.seg button.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc)}
 @media (max-width:640px){main{padding:14px 12px 50px}.hide-s{display:none}}
 </style>
@@ -185,6 +186,8 @@ function csvParse(t, max) {
   if (f || row.length) { row.push(f); rows.push(row); } return { rows, more: false };
 }
 // sortable, filterable grid (shows at most 500 matching rows)
+// one table cell: DOM nodes as given, long text cut to 220 characters (full text on hover)
+const cell = v => { if (v == null) return h("td", {}); if (v.nodeType) return h("td", {}, v); const t = typeof v === "object" ? JSON.stringify(v) : String(v); return h("td", { title: t.length > 220 ? t.slice(0, 3000) : null }, t.length > 220 ? t.slice(0, 220) + "…" : t); };
 function grid(head, data, note, wide) {
   let sort = null, dir = 1, qf = ""; const wrap = h("div", {}), body = h("div", { class: "tbl" + (wide ? " w" : "") }), cnt = h("span", { class: "mut" });
   const draw = () => {
@@ -192,7 +195,7 @@ function grid(head, data, note, wide) {
     if (sort != null) r = [...r].sort((a, b) => { const x = T(a[sort]), y = T(b[sort]), nx = parseFloat(x), ny = parseFloat(y); return (isNaN(nx) || isNaN(ny) ? String(x ?? "").localeCompare(String(y ?? "")) : nx - ny) * dir; });
     cnt.textContent = num(r.length) + " of " + num(data.length) + " rows" + (r.length > 1000 ? " (first 1,000 shown)" : "") + (note ? " · " + note : "");
     const t = h("table", {}, h("thead", {}, h("tr", {}, head.map((c, i) => h("th", { class: "s", onclick: () => { dir = sort === i ? -dir : 1; sort = i; draw(); } }, c + (sort === i ? (dir > 0 ? " ▲" : " ▼") : ""))))),
-      h("tbody", {}, r.slice(0, 1000).map(x => h("tr", {}, head.map((_, i) => h("td", {}, x[i] == null ? "" : x[i].nodeType ? x[i] : typeof x[i] === "object" ? JSON.stringify(x[i]).slice(0, 160) : String(x[i])))))));
+      h("tbody", {}, r.slice(0, 1000).map(x => h("tr", {}, head.map((_, i) => cell(x[i]))))));
     body.replaceChildren(t);
   };
   wrap.append(h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter rows", oninput: e => { qf = e.target.value.toLowerCase(); draw(); } }), cnt), body); draw(); return wrap;
@@ -225,12 +228,26 @@ function renderFile(a, text) {
 
 // ---- pages ----
 // file preview box: images/video/audio, or text rendered by its format (md, csv, json...); lazy, returns an element
+// structured preview (/api/peek): xlsx sheets, docx text, sqlite tables, zip listing
+function peekView(d) {
+  const tabs = (items, mk, label) => { let cur = 0; const box = h("div", {}), body = h("div", {});
+    const show = () => { box.replaceChildren(...[items.length > 1 ? h("div", { class: "seg bar-f" }, items.map((x, i) => h("button", { class: i === cur ? "on" : "", onclick: () => { cur = i; show(); } }, label(x)))) : null, mk(items[cur])].filter(Boolean)); }; show(); return box; };
+  const pad = (rows, w) => rows.map(r => Array.from({ length: w }, (_, i) => r[i] ?? ""));
+  if (d.kind === "sheets") return d.sheets.length ? tabs(d.sheets, sh => { if (!sh.rows.length) return h("div", { class: "empty" }, "Empty sheet."); const w = Math.max(...sh.rows.map(r => r.length)), head = Array.from({ length: w }, (_, i) => sh.rows[0][i] || "col " + (i + 1));
+      return grid(head, pad(sh.rows.slice(1), w), sh.total_rows > sh.rows.length ? "first " + num(sh.rows.length) + " of " + num(sh.total_rows) + " rows" : ""); }, sh => sh.name + " (" + num(sh.total_rows) + ")") : h("div", { class: "empty" }, "No sheets.");
+  if (d.kind === "text") return h("div", { class: "md" }, d.paragraphs.map(x => h("p", {}, x)));
+  if (d.kind === "db") return d.tables.length ? tabs(d.tables, t => grid(t.cols, t.rows, "first " + num(t.rows.length) + " of " + num(t.total_rows) + " rows"), t => t.name + " (" + num(t.total_rows) + ")") : h("div", { class: "empty" }, "No tables.");
+  if (d.kind === "zip") return table([{ h: "File inside", f: r => r[0] }, { h: "Size (bytes)", r: 1, f: r => num(r[1]) }], d.entries);
+  return h("div", { class: "empty" }, "No preview.");
+}
 function fileBox(a) {
-  const ext = a.path.replace(/\.gz$/, "").split(".").pop().toLowerCase(), view = h("div", { class: "panel empty" }, "Loading…"), url = "/raw" + qs({ path: a.path });
-  const textual = ["json", "jsonl", "markdown", "text", "table", "transcript", "html", "code", "config", "json+gz", "jsonl+gz", "table+gz"].includes(a.format) || ["md", "txt", "csv", "tsv", "json", "jsonl", "svg"].includes(ext);
-  if (a.format === "image") view.replaceChildren(h("img", { class: "pv", src: url, alt: a.path }));
+  const base = a.path.replace(/\.gz$/, "").split("/").pop(), ext = base.includes(".") ? base.split(".").pop().toLowerCase() : "", view = h("div", { class: "panel empty" }, "Loading…"), url = "/raw" + qs({ path: a.path });
+  const textual = ["json", "jsonl", "markdown", "text", "table", "transcript", "html", "code", "config", "json+gz", "jsonl+gz", "table+gz"].includes(a.format) || ["md", "txt", "csv", "tsv", "json", "jsonl", "svg"].includes(ext) || (a.format === "other" && !["npz", "zip", "avif", "bin", "m4a"].includes(ext) && (a.bytes == null || a.bytes < 2e6));
+  if (["xlsx", "docx", "db", "zip"].includes(ext)) fetch("/api/peek" + qs({ path: a.path })).then(async r => { const j = await r.json(); if (!r.ok) throw new Error(j.error); view.className = ""; view.replaceChildren(h("div", { class: "panel" }, peekView(j))); }).catch(e => view.replaceChildren(h("span", {}, "No preview: " + e.message)));
+  else if (ext === "pdf") { view.className = ""; view.replaceChildren(h("iframe", { class: "pdf", src: url, title: a.path })); }
+  else if (a.format === "image") view.replaceChildren(h("img", { class: "pv", src: url, alt: a.path }));
   else if (a.format === "video") view.replaceChildren(h("video", { src: url, controls: true, style: "max-width:100%" }));
-  else if (a.format === "audio") view.replaceChildren(h("audio", { src: url, controls: true }));
+  else if (a.format === "audio" || ext === "m4a") view.replaceChildren(h("audio", { src: url, controls: true }));
   else if (textual) fetch(url).then(async r => { if (!r.ok) throw new Error((await r.json()).error); const t = await r.text();
       const rawEl = h("pre", {}, t.length > 400000 ? t.slice(0, 400000) + "\n… (truncated, " + num(t.length) + " chars)" : t); let rich = null; try { rich = renderFile(a, t); } catch (e) { rich = null; }
       if (!rich) return view.replaceChildren(rawEl);
@@ -257,15 +274,15 @@ async function pOverview() {
       h("p", { class: "mut" }, "A link means a file contains the video id. It does not mean the file analyses it; read the file to judge.")),
     h("h2", {}, "Source databases"), h("div", { class: "panel" }, table([{ h: "Source", f: r => r.source_id }, { h: "Video rows", r: 1, f: r => num(r.video_rows) }, { h: "Channel rows", r: 1, f: r => num(r.channel_rows) }, { h: "SHA256", cls: "hide-s", f: r => h("code", {}, r.sha256.slice(0, 16)) }], s.sources))];
 }
-let CH = null, chSort = ["videos", -1], chQ = "";
+let CH = null, chSort = ["videos", -1], chQ = "", chF = "";
 async function pChannels() {
   CH = CH || await api("/api/channels");
   const out = h("div", {}); const body = h("div", { class: "panel" }), yrs = CH.flatMap(c => Object.keys(c.spark).map(Number)), Y0 = Math.min(...yrs, 2100), Y1 = Math.max(...yrs, 0);
   const draw = () => {
-    const rowsF = CH.filter(c => !chQ || ((c.name || "") + (c.handle || "") + c.channel_id).toLowerCase().includes(chQ.toLowerCase())).sort((a, b) => ((a[chSort[0]] ?? -1) > (b[chSort[0]] ?? -1) ? 1 : -1) * chSort[1]);
+    const rowsF = CH.filter(c => (!chF || (chF === "none") === !c.videos) && (!chQ || ((c.name || "") + (c.handle || "") + c.channel_id).toLowerCase().includes(chQ.toLowerCase()))).sort((a, b) => ((a[chSort[0]] ?? -1) > (b[chSort[0]] ?? -1) ? 1 : -1) * chSort[1]);
     const th = (t, k, r) => ({ h: t, r, k });
     const cols = [{ h: "Channel", k: "name", f: c => A("#/channel/" + c.channel_id, c.name || c.channel_id) }, { h: "Handle", k: "handle", cls: "hide-s", f: c => c.handle || "–" },
-      { h: "Subs", k: "subscribers", r: 1, f: c => num(c.subscribers) }, { h: "Videos", k: "videos", r: 1, f: c => num(c.videos) }, { h: "Views", k: "views", r: 1, f: c => num(c.views) }, { h: "Median", k: "median", r: 1, cls: "hide-s", f: c => num(c.median) }, { h: "Best", k: "best", r: 1, cls: "hide-s", f: c => num(c.best) }, { h: "Uploads/year", k: "videos", cls: "hide-s", f: c => spark(c.spark, Y0, Y1) },
+      { h: "Subs", k: "subscribers", r: 1, f: c => num(c.subscribers) }, { h: "Videos", k: "videos", r: 1, f: c => num(c.videos) }, { h: "Collected", k: "videos", cls: "hide-s", f: c => !c.videos ? tag("none yet", "warn") : c.total ? tag(Math.min(100, Math.round(c.videos / c.total * 100)) + "% of " + num(c.total), c.videos / c.total >= .95 ? "ok" : "grey") : tag("total unknown", "grey") }, { h: "Views", k: "views", r: 1, f: c => num(c.views) }, { h: "Median", k: "median", r: 1, cls: "hide-s", f: c => num(c.median) }, { h: "Best", k: "best", r: 1, cls: "hide-s", f: c => num(c.best) }, { h: "Uploads/year", k: "videos", cls: "hide-s", f: c => spark(c.spark, Y0, Y1) },
       { h: "Transcripts", k: "transcripts", r: 1, cls: "hide-s", f: c => num(c.transcripts) }, { h: "Latest", k: "last_date", cls: "hide-s", f: c => c.last_date || "–" }];
     const t = table(cols, rowsF, "No channel matches."); if (t.tagName === "TABLE") t.querySelectorAll("th").forEach((el, i) => { el.className += " s"; el.onclick = () => { chSort = [cols[i].k, chSort[0] === cols[i].k ? -chSort[1] : -1]; draw(); }; });
     body.replaceChildren(t); cnt.textContent = rowsF.length + " of " + CH.length + " channels";
@@ -273,7 +290,8 @@ async function pChannels() {
   const cnt = h("span", { class: "mut" });
   out.append(h("h1", {}, "Channels"), h("p", { class: "sub" }, "Keyed by the YouTube channel id (UC…). Click a column to sort."),
     h("h2", {}, "Every channel: how many videos vs the typical video's views"), panel(plot(CH.map(c => ({ x: c.videos, y: c.median, t: `${c.name}: ${num(c.videos)} videos, median ${num(c.median)} views`, href: "#/channel/" + c.channel_id })), { xlog: 1, ylog: 1, xt: logTicks(1, 1000), yt: logTicks(10, 1e7), name: "channels" }), h("p", { class: "mut" }, "Each dot is a channel (click to open). Right = more videos, higher = a typical video gets more views. Both axes are logarithmic.")),
-    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter by name, handle or id", value: chQ, oninput: e => { chQ = e.target.value; draw(); } }), cnt), body);
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter by name, handle or id", value: chQ, oninput: e => { chQ = e.target.value; draw(); } }),
+      h("select", { onchange: e => { chF = e.target.value; draw(); } }, [["", "All channels"], ["with", "With videos collected"], ["none", "No videos collected yet"]].map(([v, l]) => h("option", { value: v, selected: chF === v }, l))), cnt), body);
   draw(); return out;
 }
 const med = a => { a = a.filter(x => x != null).sort((x, y) => x - y); const n = a.length; return n ? (n % 2 ? a[(n - 1) / 2] : (a[n / 2 - 1] + a[n / 2]) / 2) : null; };
@@ -288,12 +306,15 @@ async function pChannel(id, q) {
   const c = await api("/api/channel/" + id), st = c.stats, tab = TABS.some(t => t[0] === q.tab) ? q.tab : "overview", list = CH || (CH = await api("/api/channels"));
   const sec = { overview: () => chOverview(c, st, id), videos: () => chVideos(st), titles: () => chTitles(st, id), transcripts: () => chTranscripts(id, q.tq || ""), files: () => chFiles(id), quality: () => chQuality(c, st, id) };
   const sw = h("select", { "aria-label": "Jump to another channel", onchange: e => { location.hash = "#/channel/" + e.target.value + qs({ tab }); } }, [...list].sort((a, b) => (a.name || "").localeCompare(b.name || "")).map(x => h("option", { value: x.channel_id, selected: x.channel_id === id }, x.name || x.channel_id)));
-  return [h("div", { class: "crumbs" }, A("#/channels", "Channels"), " / ", c.name || id), h("h1", {}, c.name || id), h("p", { class: "sub" }, (c.handle || "") + " · " + (st.first || "?") + " → " + (st.last || "?") + " · " + num(st.n) + " videos"),
+  return [h("div", { class: "crumbs" }, A("#/channels", "Channels"), " / ", c.name || id), h("h1", {}, c.name || id), h("p", { class: "sub" }, [c.handle, st.first && st.first + " → " + st.last, num(st.n) + " videos"].filter(Boolean).join(" · ")),
     h("div", { class: "bar-f" }, sw), h("nav", { class: "tabs" }, TABS.map(([k, l]) => h("a", { href: "#/channel/" + id + qs({ tab: k === "overview" ? "" : k }), class: k === tab ? "on" : "" }, l))), await sec[tab]()];
 }
 function chOverview(c, st, id) {
+  if (!st.n) return [h("div", { class: "panel" }, h("p", {}, h("b", {}, "No videos have been collected for this channel yet.")), h("p", { class: "mut" }, "The catalogue knows the channel itself (from " + c.source_count + " source database" + (c.source_count === 1 ? "" : "s") + ") but none of its videos, so there is nothing to chart. Charts, titles and transcripts appear once its videos are added."),
+      h("p", {}, A("#/channel/" + id + "?tab=files", "Files about this channel →"), "  ·  ", A("#/channel/" + id + "?tab=quality", "Where this channel record came from →"))),
+    h("div", { class: "cards" }, kcard(num(c.subscribers), "subscribers (reported)"), kcard(num(c.channel_total_videos), "videos on YouTube (reported)"), kcard(num(c.channel_total_views), "views on YouTube (reported)"), kcard(c.source_count, "source databases"))];
   const D = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], years = st.by_year, months = st.by_month, topV = [...st.all].filter(v => v[5] != null).sort((a, b) => b[5] - a[5]);
-  return [h("div", { class: "cards" }, kcard(num(st.n), "videos in catalogue"), kcard(short(st.views_total), "total views"), kcard(short(st.views_median), "median views / video"), kcard(short(st.views_max), "best video"), kcard(st.avg_minutes + " min", "average length"),
+  return [h("div", { class: "cards" }, kcard(num(st.n), "videos in catalogue"), c.channel_total_videos ? kcard(Math.round(st.n / c.channel_total_videos * 100) + "%", "of the " + num(c.channel_total_videos) + " videos YouTube reports") : null, kcard(short(st.views_total), "total views"), kcard(short(st.views_median), "median views / video"), kcard(short(st.views_max), "best video"), kcard(st.avg_minutes + " min", "average length"),
       kcard(num((st.caption_kinds.reduce((x, y) => x + y.v, 0))), "transcripts"), kcard(num(st.videos_with_specific_file), "videos with a specific file"),
       kcard(st.engagement == null ? "–" : st.engagement + "%", "likes per view"), kcard(num(st.comments_total), "comments in total"), kcard(st.gap_days_median == null ? "–" : st.gap_days_median + " d", "median gap between uploads"), kcard(num(st.span_days), "days from first to last upload")),
     h("p", {}, c.types.map(t => tag(t.video_type + " " + t.n, "grey"))),
@@ -316,6 +337,7 @@ function chOverview(c, st, id) {
     h("h2", {}, "Latest 10 uploads"), panel(table(VCOLS, [...st.all].filter(v => v[2]).sort((a, b) => a[2] < b[2] ? 1 : -1).slice(0, 10).map(vrow)))];
 }
 function chVideos(st) {
+  if (!st.n) return h("div", { class: "empty" }, "No videos have been collected for this channel yet.");
   return [h("h2", {}, "All " + num(st.n) + " videos (click a column to sort, type to filter)"), panel(grid(["Title", "Published", "Length", "Type", "Views", "× median", "Likes", "Comments", "Transcript"],
     st.all.map(v => [A("#/video/" + v[0], v[1] || v[0]), v[2] || "", v[3] == null ? "" : dur(v[3]), v[4], v[5] ?? "", v[5] != null && st.views_median ? +(v[5] / st.views_median).toFixed(2) : "", v[6] ?? "", v[7] ?? "", v[8] ? "yes" : ""]), "", 1))];
 }

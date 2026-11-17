@@ -1,4 +1,4 @@
-import importlib.util, json, sqlite3, threading, urllib.error, urllib.request
+import importlib.util, json, sqlite3, threading, urllib.error, urllib.parse, urllib.request
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 
@@ -47,6 +47,10 @@ def test_every_endpoint_answers_and_raw_is_whitelisted(tmp_path, monkeypatch):
         with urllib.request.urlopen(req) as r: assert r.headers["Content-Encoding"] == "gzip"  # big JSON is compressed
         for sec in ("transcripts", "files", "quality", "transcripts?q=the"): assert get(base, f"/api/channel/{cid}/{sec}")[0] == 200, sec  # per-channel tabs
         assert json.loads(get(base, f"/api/channel/{cid}/transcripts")[1])["count"] >= 1
+        for ext in ("xlsx", "docx", "zip"):  # structured previews, when such a file is inventoried and present in this checkout
+            r = c.execute("select path from artifacts where path like ? limit 1", ("%." + ext,)).fetchone()
+            if r and (ROOT / r[0]).exists(): assert get(base, "/api/peek?path=" + urllib.parse.quote(r[0]))[0] == 200, ext
+        assert get(base, "/api/peek?path=../../etc/passwd")[0] == 404  # not inventoried -> never opened
         assert get(base, "/api/video/nope000000x")[0] == 404
         assert get(base, "/raw?path=../../../../etc/passwd")[0] == 404  # not in the inventory -> never read
         assert get(base, "/api/videos?sort=views%3Bdrop%20table%20videos")[0] == 200  # unknown sort falls back, never reaches SQL

@@ -5,7 +5,7 @@
 
 Build the DB first: scripts/build_yios_canonical_db.py build && scripts/build_yios_artifact_inventory.py
 The DB is opened read-only; /raw serves only files that the artifact inventory lists (no path traversal)."""
-import argparse, collections, datetime, gzip, html, json, mimetypes, os, re, sqlite3, subprocess, sys, threading
+import argparse, collections, datetime, gzip, html, json, mimetypes, os, re, sqlite3, subprocess, sys, threading, zipfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
@@ -94,7 +94,7 @@ def summary(c, q):
 
 
 def channels(c, q):
-    out = rows(c, "select c.channel_id, c.name, c.handle, c.subscribers, count(v.video_id) videos, sum(v.views) views, max(v.views) best, sum(v.likes) likes, "
+    out = rows(c, "select c.channel_id, c.name, c.handle, c.subscribers, c.channel_total_videos total, count(v.video_id) videos, sum(v.views) views, max(v.views) best, sum(v.likes) likes, "
                   "sum(v.has_transcript) transcripts, min(v.published_date) first_date, max(v.published_date) last_date, c.source_count "
                   "from channels c left join videos v using(channel_id) group by c.channel_id order by videos desc")
     vw, spark = {}, {}
@@ -286,7 +286,84 @@ def quality(c, q):
             "sha_mismatch": c.execute("select count(*) from transcript_candidates where sha_matches_source=0").fetchone()[0]}
 
 
-ROUTES = {"/api/summary": summary, "/api/channels": channels, "/api/videos": videos, "/api/artifacts": artifacts,
+PFX = r"(?:\w+:)?"  # some writers prefix every OOXML tag (<x:row>), most do not
+
+
+def col(ref):
+    n = 0
+    for ch in re.match(r"[A-Z]+", ref).group(): n = n * 26 + ord(ch) - 64
+    return n - 1
+
+
+def attr(tag, name):
+    m = re.search(r'(?:^|[\s<])' + re.escape(name) + r'="([^"]*)"', tag)
+    return html.unescape(m.group(1)) if m else None
+
+
+def texts(xml, tag="t"):
+    """Concatenated text of every <t>/<w:t> element (OOXML text is plain XML; regex keeps this free of the XML parser, which some Pythons lack)."""
+    return html.unescape("".join(re.findall(r"<" + PFX + tag + r"\b[^>]*>(.*?)</" + PFX + tag + ">", xml, re.S)))
+
+
+def read_xlsx(f, maxrows=2000):
+    """Sheets of an .xlsx as plain rows (stdlib only: an xlsx is a zip of XML). Values are the stored cell values, formulas are not evaluated."""
+    z = zipfile.ZipFile(f)
+    if any(i.file_size > 80_000_000 for i in z.infolist()): raise ValueError("workbook too large to preview")
+    rd = lambda n: z.read(n).decode("utf-8", "replace")
+    ss = [texts(re.sub(r"<" + PFX + r"rPh\b.*?</" + PFX + "rPh>", "", si, flags=re.S)) for si in re.findall(r"<" + PFX + r"si\b[^>]*>(.*?)</" + PFX + "si>", rd("xl/sharedStrings.xml"), re.S)] if "xl/sharedStrings.xml" in z.namelist() else []
+    rels = {attr(t, "Id"): attr(t, "Target") for t in re.findall(r"<Relationship\b[^>]*>", rd("xl/_rels/workbook.xml.rels"))}
+    out = []
+    for t in re.findall(r"<" + PFX + r"sheet\b[^>]*>", rd("xl/workbook.xml")):
+        rid = re.search(r'\b\w+:id="([^"]*)"', t); tgt = rels.get(rid.group(1) if rid else None, ""); tgt = tgt.lstrip("/") if tgt.startswith("/") else "xl/" + tgt
+        rws, total = [], 0
+        for rm in re.finditer(r"<" + PFX + r"row\b[^>]*?(?:/>|>(.*?)</" + PFX + "row>)", rd(tgt), re.S):
+            total += 1
+            if len(rws) >= maxrows: continue
+            row = []
+            for cm in re.finditer(r"<" + PFX + r"c\b([^>]*?)(?:/>|>(.*?)</" + PFX + "c>)", rm.group(1) or "", re.S):
+                a, body = cm.group(1), cm.group(2) or ""; i = col(attr(a, "r")); row += [""] * (i + 1 - len(row)); v = re.search(r"<" + PFX + "v>(.*?)</" + PFX + "v>", body, re.S); ty = attr(a, "t")
+                row[i] = ss[int(v.group(1))] if ty == "s" and v else texts(body) if ty == "inlineStr" else html.unescape(v.group(1)) if v else ""
+            rws.append(row)
+        out.append({"name": attr(t, "name"), "rows": rws, "total_rows": total})
+    return {"kind": "sheets", "sheets": out}
+
+
+def read_docx(f):
+    xml = zipfile.ZipFile(f).read("word/document.xml").decode("utf-8", "replace")
+    paras = [texts(re.sub(r"<w:(?:tab|br)\b[^>]*/>", "<w:t> </w:t>", p), "w:t") for p in re.findall(r"<w:p\b[^>]*>(.*?)</w:p>", xml, re.S)]
+    return {"kind": "text", "paragraphs": [x for x in paras if x.strip()][:5000]}
+
+
+def read_db(f):
+    d = sqlite3.connect(f"file:{f}?mode=ro", uri=True); out = []
+    try:
+        for (name,) in d.execute("select name from sqlite_master where type='table' and name not like 'sqlite_%' order by name"):
+            cur = d.execute(f'select * from "{name}" limit 50')
+            out.append({"name": name, "cols": [x[0] for x in cur.description], "rows": [[v if isinstance(v, (int, float, str, type(None))) else f"<{len(v)} bytes>" for v in r] for r in cur],
+                        "total_rows": d.execute(f'select count(*) from "{name}"').fetchone()[0]})
+    finally: d.close()
+    return {"kind": "db", "tables": out}
+
+
+def read_zip(f):
+    return {"kind": "zip", "entries": [[i.filename, i.file_size] for i in zipfile.ZipFile(f).infolist()][:2000]}
+
+
+PEEK = {"xlsx": read_xlsx, "docx": read_docx, "db": read_db, "zip": read_zip}
+
+
+def peek(c, q):
+    p = q.get("path", [""])[0]
+    if not c.execute("select 1 from artifacts where path=?", (p,)).fetchone(): return None  # whitelist: inventoried files only
+    f, ext = os.path.join(R, p), p.rsplit(".", 1)[-1].lower()
+    if ext not in PEEK: raise ValueError("no structured preview for ." + ext)
+    if not os.path.isfile(f): raise ValueError("file not present in this checkout (LFS or other branch)")
+    if ext != "db" and os.path.getsize(f) > MAX_RAW: raise ValueError("file too large to preview")
+    try: return PEEK[ext](f)
+    except (zipfile.BadZipFile, KeyError, AttributeError, TypeError, sqlite3.Error) as e: raise ValueError("could not read this file: " + str(e)[:100])
+
+
+ROUTES = {"/api/peek": peek, "/api/summary": summary, "/api/channels": channels, "/api/videos": videos, "/api/artifacts": artifacts,
           "/api/artifact": artifact, "/api/quality": quality}
 
 
@@ -346,7 +423,8 @@ class H(BaseHTTPRequestHandler):
         ct = mimetypes.guess_type(name)[0] or "text/plain"
         if ct.startswith("text/") or ct in ("application/json", "application/javascript"): ct += "; charset=utf-8"
         # sandbox: an inventoried .svg/.html opened directly can never run scripts on this origin
-        self.send(200, data, ct, (("Content-Security-Policy", "sandbox"), ("X-Content-Type-Options", "nosniff")))
+        pdf = ct == "application/pdf"  # a PDF cannot run page scripts, and the browser's viewer needs an un-sandboxed frame to show it inline
+        self.send(200, data, ct, (("X-Content-Type-Options", "nosniff"),) if pdf else (("Content-Security-Policy", "sandbox"), ("X-Content-Type-Options", "nosniff")))
 
     def log_message(self, *a): pass
 

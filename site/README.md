@@ -20,3 +20,7 @@ python3 site/server.py            # first run builds data/catalog/yios_canonical
 - **Channel report** (six tabs, with a dropdown to jump between channels): *Overview* (numbers, views-over-time chart, heat map, thumbnails), *Videos* (every video, sortable), *Titles* (which words and title features go with more views, long-form only), *Transcripts* (what the channel talks about, search and read inside the page), *Analyses & files* (every report, table, JSON and image about the channel, opened inline), *Data & sources* (completeness, source names, disagreements).
 - **Videos**: filters (channel, type, year, transcript, specific file), title search and full-text search inside transcripts.
 - Results are cached in memory per DB version and sent gzip-compressed, so every page after the first load answers in about a millisecond.
+
+## File viewers
+Markdown, CSV/TSV, JSON/JSONL, Excel (.xlsx, every sheet), Word (.docx text), SQLite (.db, first rows of every table), ZIP (file list), PDF (inline), images, audio and video open in the page. `.npz` and other binary formats have no preview (use Open raw / Download). Excel and Word are read with the Python standard library only; formulas are shown as their stored values.
+Channels with no collected videos (about a third of the 263) show an explanation instead of empty charts; the Channels page can filter to them.
