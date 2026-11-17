@@ -9,6 +9,9 @@ import argparse, collections, datetime, gzip, html, json, mimetypes, os, re, sql
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs, urlparse
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import assistant  # noqa: E402  (evidence tools + model loop, site/assistant.py)
+
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DB = os.environ.get("YIOS_CANONICAL_DB", f"{R}/data/catalog/yios_canonical.db")
 INDEX = os.path.join(os.path.dirname(__file__), "index.html")
@@ -215,6 +218,27 @@ def ch_quality(c, q, cid):
 CH_SECTIONS = {"transcripts": ch_transcripts, "files": ch_files, "quality": ch_quality}
 
 
+def research(c, q):
+    """Research page: collections, role list and a ranked search over research documents and transcripts."""
+    g = lambda k: q.get(k, [""])[0]
+    out = {"collections": assistant.collections(), "roles": list(assistant.RESEARCH_ROLES) + ["transcript", "thumbnail", "raw evidence"]}
+    if g("q"):
+        page = max(int(g("page") or 1), 1); d = assistant.search(g("q"), g("kind") or "doc", g("role"), g("channel"), g("collection"), 20, (page - 1) * 20)
+        names = {r["channel_id"]: r["name"] for r in c.execute("select channel_id, name from channels")}
+        for it in d["items"]:
+            for t in it["channels"]: t["name"] = html.unescape(names.get(t["channel_id"]) or t["channel_id"])
+        out["search"] = {**d, "page": page, "size": 20}
+    return out
+
+
+def ch_research(c, q, cid):
+    """Research documents tied to one channel (ids first, then name mentions), with a short preview of each."""
+    return {"docs": assistant.channel_docs(cid), "provider": assistant.provider()[0]}
+
+
+CH_SECTIONS["research"] = ch_research
+
+
 def videos(c, q):
     g = lambda k: q.get(k, [""])[0]
     where, args = [], []
@@ -363,11 +387,44 @@ def peek(c, q):
     except (zipfile.BadZipFile, KeyError, AttributeError, TypeError, sqlite3.Error) as e: raise ValueError("could not read this file: " + str(e)[:100])
 
 
-ROUTES = {"/api/peek": peek, "/api/summary": summary, "/api/channels": channels, "/api/videos": videos, "/api/artifacts": artifacts,
+ROUTES = {"/api/research": research, "/api/chat/status": lambda c, q: {"provider": assistant.provider()[0], "model": assistant.provider()[1], "search_index": os.path.exists(assistant.SEARCH_DB)},
+          "/api/peek": peek, "/api/summary": summary, "/api/channels": channels, "/api/videos": videos, "/api/artifacts": artifacts,
           "/api/artifact": artifact, "/api/quality": quality}
 
 
+assistant.bind(conn=conn, channel=channel, videos=videos, video=video)
+LOCAL_HOSTS = ("127.0.0.1", "localhost", "[::1]")
+
+
 class H(BaseHTTPRequestHandler):
+    def host_ok(self):
+        """Only answer requests addressed to this machine (blocks DNS-rebinding pages) and, when a browser names an Origin, only our own."""
+        host = self.headers.get("Host", "").rsplit(":", 1)[0] if not self.headers.get("Host", "").startswith("[") else self.headers.get("Host", "").split("]")[0] + "]"
+        o = self.headers.get("Origin")
+        return host in LOCAL_HOSTS and (not o or urlparse(o).netloc == self.headers.get("Host"))
+
+    def do_POST(self):
+        if urlparse(self.path).path != "/api/chat" or not self.host_ok() or self.headers.get("X-YIOS") != "1":
+            return self.js({"error": "forbidden"}, 403)  # the custom header makes a cross-site page need a CORS preflight, which is never granted
+        try:
+            n = int(self.headers.get("Content-Length") or 0)
+            if n > 300_000: return self.js({"error": "request too large"}, 413)
+            body = json.loads(self.rfile.read(n) or b"{}"); hist = [m for m in body.get("messages", []) if isinstance(m, dict) and isinstance(m.get("content"), str)]
+            if not hist or hist[-1].get("role") != "user": return self.js({"error": "send the user's message last"}, 400)
+        except (ValueError, TypeError): return self.js({"error": "bad request"}, 400)
+        self.send_response(200); self.send_header("Content-Type", "text/event-stream; charset=utf-8"); self.send_header("Cache-Control", "no-store"); self.end_headers()
+
+        def emit(e):
+            self.wfile.write(b"data: " + json.dumps(e, ensure_ascii=False).encode() + b"\n\n"); self.wfile.flush()
+        try:
+            cid = body.get("channel_id") if isinstance(body.get("channel_id"), str) else None
+            if assistant.provider()[0]: assistant.chat(hist, emit, cid)
+            else: assistant.retrieval_only(hist[-1]["content"], cid, emit)
+        except (BrokenPipeError, ConnectionResetError): pass
+        except Exception as e:  # a failed model call is shown to the user; the server keeps running
+            try: emit({"type": "error", "error": f"{type(e).__name__}: {e}"[:500]}); emit({"type": "done", "usage": {}})
+            except OSError: pass
+
     def send(self, code, body, ctype, extra=(), gz=None):
         if gz is not None and "gzip" in self.headers.get("Accept-Encoding", ""): body, extra = gz, (*extra, ("Content-Encoding", "gzip"), ("Vary", "Accept-Encoding"))
         self.send_response(code)
@@ -380,6 +437,7 @@ class H(BaseHTTPRequestHandler):
 
     def do_GET(self):
         u = urlparse(self.path); q = parse_qs(u.query); p = u.path
+        if not self.host_ok(): return self.js({"error": "forbidden host"}, 403)
         try:
             if p in ("/", "/index.html"):
                 return self.send(200, open(INDEX, "rb").read(), "text/html; charset=utf-8")
@@ -433,8 +491,10 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(); ap.add_argument("--port", type=int, default=8020); a = ap.parse_args()
     if not os.path.exists(DB) and DB == f"{R}/data/catalog/yios_canonical.db":  # fresh checkout (e.g. 2nd Mac): build from the tracked source DBs
         print("canonical DB missing, building it from the tracked source databases (~1 min)...")
-        for sc in (["build_yios_canonical_db.py", "build"], ["build_yios_artifact_inventory.py"]):
+        for sc in (["build_yios_canonical_db.py", "build"], ["build_yios_artifact_inventory.py"], ["build_yios_search_index.py"]):
             subprocess.run([sys.executable, f"{R}/scripts/{sc[0]}", *sc[1:]], cwd=R, check=False)
+    if os.path.exists(DB) and not os.path.exists(assistant.SEARCH_DB):
+        print("building the research search index (one-off, about 30 s)..."); subprocess.run([sys.executable, f"{R}/scripts/build_yios_search_index.py"], cwd=R, check=False)
     if not os.path.exists(DB): sys.exit(f"missing {DB}: run scripts/build_yios_canonical_db.py build, then scripts/build_yios_artifact_inventory.py")
     print(f"YIOS site on http://127.0.0.1:{a.port}  (db {DB}, read-only)")
     threading.Thread(target=lambda: spec_index(conn()), daemon=True).start()  # warm the one slow aggregate so the first page load is instant

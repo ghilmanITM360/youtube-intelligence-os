@@ -55,6 +55,8 @@ img.pv{max-width:100%;border-radius:6px;border:1px solid var(--line)}
 .pbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:120px}.pbar i{display:block;height:100%;background:var(--ok)}
 .tabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:6px 0 18px}.tabs a{padding:9px 14px;color:var(--mut);border-bottom:2px solid transparent;margin-bottom:-1px}.tabs a.on{color:var(--ink);border-bottom-color:var(--acc);font-weight:600}.tabs a:hover{text-decoration:none;color:var(--ink)}
 details.tx{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin:0 0 8px;padding:9px 12px}details.tx>summary{cursor:pointer}details.tx[open]>summary{margin-bottom:8px}.snip{color:var(--mut);font-size:13.5px;margin-top:3px}mark{background:#ffd54a;color:#111;border-radius:2px;padding:0 1px}
+.chat{display:flex;flex-direction:column;gap:12px;margin:10px 0 14px}.msg{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}.msg.user{background:var(--acc-bg);border-color:transparent;align-self:flex-end;max-width:85%}.msg .who{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}.msg .steps{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px}.msg .md p:first-child{margin-top:0}
+.composer{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:0;background:var(--bg);padding:8px 0}.composer textarea{flex:1;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);resize:vertical}
 .pdf{width:100%;height:80vh;border:1px solid var(--line);border-radius:6px;background:#fff}
 .seg{display:inline-flex;gap:0}.seg button{border-radius:0}.seg button.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc)}
 @media (max-width:640px){main{padding:14px 12px 50px}.hide-s{display:none}}
@@ -65,7 +67,7 @@ details.tx{background:var(--panel);border:1px solid var(--line);border-radius:8p
 <main id="app"></main>
 <script>
 const $ = s => document.querySelector(s);
-const NAV = [["#/", "Overview"], ["#/channels", "Channels"], ["#/videos", "Videos"], ["#/artifacts", "Analyses & files"], ["#/quality", "Data quality"]];
+const NAV = [["#/", "Overview"], ["#/channels", "Channels"], ["#/videos", "Videos"], ["#/research", "Research"], ["#/ask", "Ask AI"], ["#/artifacts", "Analyses & files"], ["#/quality", "Data quality"]];
 const num = n => n == null ? "–" : Number(n).toLocaleString();
 const dur = s => { if (s == null) return "–"; const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); };
 // h() builds DOM nodes; text is always set as text, never as HTML (descriptions and transcripts are untrusted).
@@ -151,7 +153,7 @@ function inline(s) {
   const out = [], re = /(`[^`]+`)|(\*\*[^*]+\*\*)|(\*[^*\n]+\*)|(\[[^\]]+\]\([^)\s]+\))/g; let i = 0, m;
   while ((m = re.exec(s))) { if (m.index > i) out.push(s.slice(i, m.index)); const t = m[0];
     if (m[1]) out.push(h("code", {}, t.slice(1, -1))); else if (m[2]) out.push(h("b", {}, inline(t.slice(2, -2)))); else if (m[3]) out.push(h("i", {}, inline(t.slice(1, -1))));
-    else { const [, l, u] = t.match(/\[([^\]]+)\]\(([^)\s]+)\)/); out.push(/^https?:\/\//.test(u) ? h("a", { href: u, target: "_blank", rel: "noopener noreferrer" }, l) : l); }
+    else { const [, l, u] = t.match(/\[([^\]]+)\]\(([^)\s]+)\)/); out.push(/^https?:\/\//.test(u) ? h("a", { href: u, target: "_blank", rel: "noopener noreferrer" }, l) : /^#\//.test(u) ? h("a", { href: u }, l) : l); }
     i = re.lastIndex; }
   if (i < s.length) out.push(s.slice(i)); return out;
 }
@@ -256,6 +258,78 @@ function fileBox(a) {
   else view.replaceChildren(h("span", {}, "No preview for ." + ext + " files."));
   return view;
 }
+// ---- research + assistant ----
+const snip = s => String(s || "").split(/[«»]/).map((x, i) => i % 2 ? h("mark", {}, x) : x);  // server marks hits with « »
+const roleTag = r => tag(r, ["research", "intelligence report", "playbook", "what-if study", "reanalysis", "report"].includes(r) ? "ok" : "grey");
+const askLink = (text, o) => A("#/ask" + qs({ channel: o && o.channel, ask: text }), "Ask AI about this →");
+function chanChips(ties) { return ties.slice(0, 5).map(t => h("a", { href: "#/channel/" + t.channel_id + "?tab=research", class: "tag " + (t.via === "id" ? "" : "grey"), title: t.via === "id" ? "the file contains this channel's or its videos' ids" : "only the channel's name appears in the text (a lead, not proof)" }, (t.name || t.channel_id) + (t.via === "id" ? "" : " · name"))); }
+function docItem(d, extra) {  // expandable research document: summary + inline viewer loaded on open
+  const dt = h("details", { class: "tx" }), body = h("div", {}); const f = { path: d.ref, format: d.format || (d.ref.split(".").pop() === "md" ? "markdown" : "text"), bytes: d.bytes };
+  dt.append(h("summary", {}, h("b", {}, d.title || d.ref.split("/").pop()), " ", roleTag(d.role), " ", h("span", { class: "mut" }, d.ref), d.snippet ? h("div", { class: "snip" }, snip(d.snippet)) : d.preview ? h("div", { class: "snip" }, d.preview) : null, extra ? h("div", {}, extra) : null), body);
+  dt.addEventListener("toggle", () => { if (dt.open && !body.childNodes.length) body.append(h("p", {}, A("#/artifact" + qs({ path: d.ref }), "Open as its own page →"), "  ·  ", askLink("Summarise and critique the document " + d.ref)), fileBox(f)); });
+  return dt;
+}
+async function pResearch(q) {
+  const d = await api("/api/research" + qs({ q: q.q, kind: q.kind || "doc", role: q.role, collection: q.collection, channel: q.channel, page: q.page })), s = d.search;
+  const go = o => { location.hash = "#/research" + qs({ ...q, page: "", ...o }); };
+  const sel = (k, opts, ph) => h("select", { onchange: e => go({ [k]: e.target.value }) }, h("option", { value: "" }, ph), opts.map(([v, l]) => h("option", { value: v, selected: q[k] === v }, l)));
+  const last = s ? Math.max(1, Math.ceil(s.total / s.size)) : 1;
+  return [h("h1", {}, "Research"), h("p", { class: "sub" }, "Search every research document, report, audit and analysis in the repository, and every transcript. Open any result right here. Hits are ranked by relevance; a name mention is not an analysis."),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search research (press Enter), e.g. hook retention, blood pressure, thumbnail text", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }),
+      sel("kind", [["doc", "Research documents"], ["transcript", "Transcripts"], ["any", "Both"]], "Research documents"), sel("role", d.roles.map(r => [r, r]), "Any kind of document"), sel("collection", d.collections.map(c => [c.collection, c.collection + " (" + num(c.docs) + ")"]), "Any collection")),
+    s ? [h("p", { class: "mut" }, num(s.total) + " hits" + (s.mode === "or" ? " (no exact match for all words; showing documents with any of them)" : "") + (q.channel ? " in one channel" : "")),
+      s.items.length ? s.items.map(it => it.kind === "transcript" ? h("div", { class: "panel", style: "margin:0 0 8px" }, h("b", {}, A("#/video/" + it.ref, it.title || it.ref)), " ", tag("transcript", "grey"), " ", chanChips(it.channels), h("div", { class: "snip" }, snip(it.snippet))) : docItem(it, h("span", {}, chanChips(it.channels)))) : h("div", { class: "empty" }, "No match."),
+      h("div", { class: "pg" }, h("button", { disabled: s.page <= 1, onclick: () => go({ page: s.page - 1 }) }, "← Prev"), "Page " + s.page + " of " + last, h("button", { disabled: s.page >= last, onclick: () => go({ page: s.page + 1 }) }, "Next →"))]
+    : [h("h2", {}, "Collections"), h("p", { class: "mut" }, "Folders of the repository that hold research documents. Click one to search inside it."),
+      h("div", { class: "cards" }, d.collections.slice(0, 24).map(c => h("a", { class: "card", href: "#/research" + qs({ collection: c.collection, q: "the" }), style: "color:inherit" }, h("div", { class: "n" }, num(c.docs)), h("div", { class: "l" }, c.collection), h("div", { class: "l" }, Object.entries(c.roles).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([r, n]) => r + " " + n).join(" · "))))),
+      h("p", {}, askLink("What research exists in this repository, and which channels does it cover best?"))]];
+}
+async function chResearch(id) {
+  const d = await api("/api/channel/" + id + "/research"), broad = d.docs.filter(x => x.nch > 8), own = d.docs.filter(x => x.nch <= 8), strong = own.filter(x => x.via === "id"), weak = own.filter(x => x.via !== "id");
+  const find = h("input", { type: "search", placeholder: "Search inside this channel's research and transcripts (press Enter)", onkeydown: e => { if (e.key === "Enter" && e.target.value.trim()) location.hash = "#/research" + qs({ q: e.target.value.trim(), channel: id, kind: "any" }); } });
+  return [h("div", { class: "bar-f" }, find, askLink("Give me a research briefing on this channel: what is known, what the evidence is, and what is missing.", { channel: id })),
+    !own.length ? h("div", { class: "empty" }, "No research document is specifically about this channel yet. Transcripts and video data are on the other tabs; the assistant can still search them.") : null,
+    strong.length ? [h("h2", {}, "Research that contains this channel's ids (" + strong.length + ")"), h("p", { class: "mut" }, "Documents whose text includes the channel id or one of its video ids."), strong.map(x => docItem(x))] : null,
+    broad.length ? h("details", { class: "tx" }, h("summary", {}, h("b", {}, num(broad.length) + " broad documents that cover many channels"), h("span", { class: "mut" }, " (inventories, registries, cross-channel studies): open to list")), broad.map(x => docItem(x))) : null,
+    weak.length ? [h("h2", {}, "Documents that only mention the name (" + weak.length + ")"), h("p", { class: "mut" }, "A name match is a lead: read the document before treating it as research about this channel."), weak.map(x => docItem(x))] : null];
+}
+
+// ---- Ask AI ----
+const store = { get: k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } } };
+const cite = t => t.replace(/\[(file|video|channel):\s*([^\]]+?)\]/g, (_, k, v) => { v = v.trim(); return k === "file" ? "[" + v.split("/").pop() + "](#/artifact?path=" + encodeURIComponent(v).replace(/\(/g, "%28").replace(/\)/g, "%29") + ")" : k === "video" ? "[video " + v + "](#/video/" + v + ")" : "[channel " + v + "](#/channel/" + v + ")"; });
+const TOOLNAME = { find_channels: "looked for channels", channel_overview: "read a channel overview", list_videos: "listed videos", get_video: "read a video", search_research: "searched research", read_document: "read a document", sql_query: "ran a query" };
+async function pAsk(q) {
+  const st = await api("/api/chat/status"), list = CH || (CH = await api("/api/channels")); let chan = q.channel || "", msgs = store.get("yios.chat") || [], busy = false;
+  const log = h("div", { class: "chat" }), input = h("textarea", { rows: 3, placeholder: "Ask about any channel or any research… (Enter to send, Shift+Enter for a new line)" }), send = h("button", { class: "on" }, "Send");
+  if (q.ask) input.value = q.ask;
+  const bubble = (m, steps) => h("div", { class: "msg " + m.role }, h("div", { class: "who" }, m.role === "user" ? "You" : "Assistant"), steps || null, m.role === "user" ? h("div", {}, m.content) : md(cite(m.content)));
+  const draw = () => { log.replaceChildren(...msgs.map(m => bubble(m)), ...(msgs.length ? [] : [h("div", { class: "empty" }, "Ask anything about the channels, their videos, transcripts and research. Every answer cites the files and videos it used.")])); window.scrollTo(0, document.body.scrollHeight); };
+  const exportMd = () => { const t = msgs.map(m => (m.role === "user" ? "## You\n" : "## Assistant\n") + m.content).join("\n\n"), a = h("a", { href: URL.createObjectURL(new Blob([t], { type: "text/markdown" })), download: "yios-research-chat.md" }); a.click(); };
+  async function ask(text) {
+    if (busy || !text.trim()) return; busy = true; send.disabled = true; msgs.push({ role: "user", content: text.trim() }); input.value = ""; draw();
+    const m = { role: "assistant", content: "" }, steps = h("div", { class: "steps" }), live = h("div", { class: "msg assistant" }, h("div", { class: "who" }, "Assistant"), steps, h("div", { class: "empty" }, "Working…")); log.append(live);
+    try {
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json", "X-YIOS": "1" }, body: JSON.stringify({ messages: msgs.map(x => ({ role: x.role, content: x.content })), channel_id: chan || undefined }) });
+      if (!r.ok || !r.body) throw new Error((await r.json().catch(() => ({}))).error || r.status);
+      const rd = r.body.getReader(), dec = new TextDecoder(); let buf = "";
+      for (;;) { const { done, value } = await rd.read(); if (done) break; buf += dec.decode(value, { stream: true }); let i;
+        while ((i = buf.indexOf("\n\n")) >= 0) { const line = buf.slice(0, i).replace(/^data: /, ""); buf = buf.slice(i + 2); let e; try { e = JSON.parse(line); } catch (x) { continue; }
+          if (e.type === "tool") steps.append(h("span", { class: "tag grey", title: JSON.stringify(e.input) }, TOOLNAME[e.name] || e.name, e.input && (e.input.query || e.input.channel_id || e.input.path || e.input.video_id) ? ": " + String(e.input.query || e.input.channel_id || e.input.path || e.input.video_id).slice(0, 40) : ""));
+          else if (e.type === "text") { m.content += e.text; live.replaceChildren(h("div", { class: "who" }, "Assistant"), steps, md(cite(m.content))); }
+          else if (e.type === "error") m.content += "\n\n**Error:** " + e.error;
+          else if (e.type === "done" && e.usage && e.usage.output_tokens) steps.append(h("span", { class: "mut" }, " " + num(e.usage.input_tokens) + " in / " + num(e.usage.output_tokens) + " out tokens")); } }
+    } catch (e) { m.content += "\n\n**Error:** " + e.message; }
+    msgs.push(m.content ? m : { role: "assistant", content: "(no answer)" }); store.set("yios.chat", msgs.slice(-40)); busy = false; send.disabled = false; draw();
+  }
+  send.onclick = () => ask(input.value); input.onkeydown = e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(input.value); } };
+  const ex = ["Which channels have the most research written about them?", "Compare the top two channels by median views and say what the evidence can and cannot show.", "What do the research documents say about hooks and retention?", "Find videos about blood pressure and summarise how they open."];
+  draw();
+  return [h("h1", {}, "Ask AI"), h("p", { class: "sub" }, st.provider ? "Model: " + st.model + " (" + st.provider + "). Your question and the excerpts the tools fetch are sent to that provider; nothing is changed in the repository." : "No AI model is configured: you get ranked search results only. To enable written answers, set ANTHROPIC_API_KEY (or YIOS_LLM_BASE_URL for Ollama / any OpenAI-compatible server) and restart the site."),
+    st.search_index ? null : h("div", { class: "panel" }, "The search index is missing. Run scripts/build_yios_search_index.py and reload."),
+    h("div", { class: "bar-f" }, h("select", { "aria-label": "Focus on a channel", onchange: e => { chan = e.target.value; } }, h("option", { value: "" }, "All channels"), [...list].sort((a, b) => (a.name || "").localeCompare(b.name || "")).map(c => h("option", { value: c.channel_id, selected: c.channel_id === chan }, c.name || c.channel_id))),
+      h("button", { onclick: () => { msgs = []; store.set("yios.chat", []); draw(); } }, "New chat"), h("button", { onclick: exportMd }, "Export as Markdown")),
+    h("div", { class: "bar-f" }, ex.map(t => h("button", { onclick: () => { input.value = t; input.focus(); } }, t))), log, h("div", { class: "composer" }, input, send)];
+}
 async function pOverview() {
   const s = await api("/api/summary");
   const card = (n, l) => h("div", { class: "card" }, h("div", { class: "n" }, num(n)), h("div", { class: "l" }, l));
@@ -298,13 +372,13 @@ const med = a => { a = a.filter(x => x != null).sort((x, y) => x - y); const n =
 const STOPW = new Set("the and for that this with you your are was were have has not but from they what when how why who will can about into out than then just like more most some any all one our its his her get got make does did too only here where after before again now new".split(" "));
 function mark(text, term) { if (!term) return [text]; const out = [], lo = text.toLowerCase(), t = term.toLowerCase(); let i = 0, j; while ((j = lo.indexOf(t, i)) >= 0) { out.push(text.slice(i, j), h("mark", {}, text.slice(j, j + t.length))); i = j + t.length; } out.push(text.slice(i)); return out; }
 const tidy = t => t.replace(/^\[(\d+)\.\d+\]/gm, (_, x) => Math.floor(x / 60) + ":" + String(x % 60).padStart(2, "0"));  // [00123.440] -> 2:03
-const TABS = [["overview", "Overview"], ["videos", "Videos"], ["titles", "Titles"], ["transcripts", "Transcripts"], ["files", "Analyses & files"], ["quality", "Data & sources"]];
+const TABS = [["overview", "Overview"], ["videos", "Videos"], ["titles", "Titles"], ["transcripts", "Transcripts"], ["research", "Research"], ["files", "Analyses & files"], ["quality", "Data & sources"]];
 const vrow = v => ({ video_id: v[0], title: v[1], published_date: v[2], d: v[3], video_type: v[4], views: v[5], likes: v[6] });
 const VCOLS = [{ h: "Title", f: v => A("#/video/" + v.video_id, v.title || v.video_id) }, { h: "Published", f: v => v.published_date || "–" }, { h: "Length", r: 1, f: v => dur(v.d) }, { h: "Type", f: v => tag(v.video_type, "grey") }, { h: "Views", r: 1, f: v => num(v.views) }, { h: "Likes", r: 1, cls: "hide-s", f: v => num(v.likes) }];
 
 async function pChannel(id, q) {
   const c = await api("/api/channel/" + id), st = c.stats, tab = TABS.some(t => t[0] === q.tab) ? q.tab : "overview", list = CH || (CH = await api("/api/channels"));
-  const sec = { overview: () => chOverview(c, st, id), videos: () => chVideos(st), titles: () => chTitles(st, id), transcripts: () => chTranscripts(id, q.tq || ""), files: () => chFiles(id), quality: () => chQuality(c, st, id) };
+  const sec = { overview: () => chOverview(c, st, id), videos: () => chVideos(st), titles: () => chTitles(st, id), transcripts: () => chTranscripts(id, q.tq || ""), research: () => chResearch(id), files: () => chFiles(id), quality: () => chQuality(c, st, id) };
   const sw = h("select", { "aria-label": "Jump to another channel", onchange: e => { location.hash = "#/channel/" + e.target.value + qs({ tab }); } }, [...list].sort((a, b) => (a.name || "").localeCompare(b.name || "")).map(x => h("option", { value: x.channel_id, selected: x.channel_id === id }, x.name || x.channel_id)));
   return [h("div", { class: "crumbs" }, A("#/channels", "Channels"), " / ", c.name || id), h("h1", {}, c.name || id), h("p", { class: "sub" }, [c.handle, st.first && st.first + " → " + st.last, num(st.n) + " videos"].filter(Boolean).join(" · ")),
     h("div", { class: "bar-f" }, sw), h("nav", { class: "tabs" }, TABS.map(([k, l]) => h("a", { href: "#/channel/" + id + qs({ tab: k === "overview" ? "" : k }), class: k === tab ? "on" : "" }, l))), await sec[tab]()];
@@ -476,7 +550,7 @@ async function render() {
   try {
     const [a, b] = parts; let out;
     if (!a) out = await pOverview(); else if (a === "channels") out = await pChannels(); else if (a === "channel") out = await pChannel(b, q);
-    else if (a === "videos") out = await pVideos(q); else if (a === "video") out = await pVideo(b); else if (a === "artifacts") out = await pArtifacts(q);
+    else if (a === "videos") out = await pVideos(q); else if (a === "video") out = await pVideo(b); else if (a === "research") out = await pResearch(q); else if (a === "ask") out = await pAsk(q); else if (a === "artifacts") out = await pArtifacts(q);
     else if (a === "artifact") out = await pArtifact(q); else if (a === "quality") out = await pQuality(); else out = h("div", { class: "empty" }, "Page not found.");
     app.replaceChildren(...[out].flat(Infinity).filter(Boolean)); document.title = (app.querySelector("h1")?.textContent || "Data browser") + " · YIOS"; window.scrollTo(0, 0);
   } catch (e) { app.replaceChildren(h("div", { class: "empty" }, "Error: " + e.message)); }

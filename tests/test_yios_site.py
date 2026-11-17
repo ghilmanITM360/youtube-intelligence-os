@@ -56,3 +56,45 @@ def test_every_endpoint_answers_and_raw_is_whitelisted(tmp_path, monkeypatch):
         assert get(base, "/api/videos?sort=views%3Bdrop%20table%20videos")[0] == 200  # unknown sort falls back, never reaches SQL
     finally:
         srv.shutdown()
+
+
+def test_assistant_tools_and_model_loop(tmp_path, monkeypatch):
+    """The model loop is exercised with a scripted fake model: it must call real tools, get real data back, and finish. No network, no key."""
+    canon, inv, srch, site = (load("canon", "scripts/build_yios_canonical_db.py"), load("inv", "scripts/build_yios_artifact_inventory.py"),
+                              load("srch", "scripts/build_yios_search_index.py"), load("site2", "site/server.py"))
+    db, sdb = str(tmp_path / "c.db"), str(tmp_path / "s.db")
+    monkeypatch.setattr(canon, "OUT", db); monkeypatch.setattr(canon, "MANIFEST", str(tmp_path / "m.json")); canon.build()
+    monkeypatch.setattr(inv, "DB", db); inv.main()
+    monkeypatch.setattr(srch, "CAN", db); monkeypatch.setattr(srch, "OUT", sdb); srch.main()
+    monkeypatch.setattr(site, "DB", db); a = site.assistant; monkeypatch.setattr(a, "SEARCH_DB", sdb)
+    c = sqlite3.connect(db); cid, vid = c.execute("select channel_id, video_id from videos where has_transcript=1 limit 1").fetchone()
+    word = c.execute("select title from videos where video_id=?", (vid,)).fetchone()[0].split()[0]
+    for name, args in [("find_channels", {"query": "a"}), ("channel_overview", {"channel_id": cid}), ("list_videos", {"channel_id": cid, "sort": "views"}), ("get_video", {"video_id": vid}),
+                       ("search_research", {"query": word}), ("sql_query", {"sql": "select count(*) n from videos"})]:
+        out = json.loads(a.run_tool(name, args)); assert "error" not in out, (name, out)
+    assert "error" in json.loads(a.run_tool("sql_query", {"sql": "delete from videos"}))  # read-only: only SELECT
+    assert "error" in json.loads(a.run_tool("sql_query", {"sql": "select 1; select 2"}))
+    assert "error" in json.loads(a.run_tool("read_document", {"path": "../../etc/passwd"}))  # only inventoried files
+    assert a.fts_query('aa" OR "bb') == '"aa" "or" "bb"'  # operators in a question cannot alter the FTS query
+    script = iter([([{"type": "text", "text": "Looking."}, {"type": "tool_use", "id": "t1", "name": "channel_overview", "input": {"channel_id": cid}}], {"input_tokens": 5, "output_tokens": 3}),
+                   ([{"type": "text", "text": f"Done [channel: {cid}]"}], {"input_tokens": 9, "output_tokens": 4})])
+    seen = []; a.chat([{"role": "user", "content": "tell me about it"}], seen.append, cid, model_fn=lambda m, s: next(script))
+    kinds = [e["type"] for e in seen]
+    assert kinds == ["text", "tool", "tool_result", "text", "done"] and seen[-1]["usage"]["output_tokens"] == 7, kinds
+    # HTTP: chat needs the custom header, and a bad Host is refused
+    srv = ThreadingHTTPServer(("127.0.0.1", 0), site.H); threading.Thread(target=srv.serve_forever, daemon=True).start()
+    base = f"http://127.0.0.1:{srv.server_address[1]}"
+    try:
+        for k in ("ANTHROPIC_API_KEY", "YIOS_LLM_BASE_URL"): monkeypatch.delenv(k, raising=False)
+        req = urllib.request.Request(base + "/api/chat", json.dumps({"messages": [{"role": "user", "content": word}]}).encode(), {"Content-Type": "application/json"})
+        try: urllib.request.urlopen(req); assert False, "chat without X-YIOS must be refused"
+        except urllib.error.HTTPError as e: assert e.code == 403
+        req.add_header("X-YIOS", "1")
+        with urllib.request.urlopen(req) as r: body = r.read().decode()
+        assert '"type": "done"' in body and "search only" in body  # no model configured -> evidence only
+        req2 = urllib.request.Request(base + "/api/summary", headers={"Host": "evil.example"})
+        try: urllib.request.urlopen(req2); assert False
+        except urllib.error.HTTPError as e: assert e.code == 403
+        assert get(base, "/api/research")[0] == 200 and get(base, f"/api/channel/{cid}/research")[0] == 200 and get(base, f"/api/research?q={word}")[0] == 200
+    finally:
+        srv.shutdown()
