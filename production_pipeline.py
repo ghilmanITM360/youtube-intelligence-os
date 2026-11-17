@@ -151,6 +151,9 @@ def validate(out):
     editorial_warnings=[]
     transcript=(out/'transcript'/'transcript.txt').read_text().lower()
     if 'stand up on the chair' in transcript: editorial_warnings.append('Voiceover says stand up on the chair; confirm intended wording before publication. Visuals must not depict standing on the chair.')
+    sys.path.insert(0,str(Path(__file__).resolve().parent/'scripts'));from check_slop_risk import run as slop_gate  # AGENTS.md pre-delivery gate
+    slop=slop_gate(out/'source'/'script.txt',project=out.name,images=[out/'assets']);checks['slop_risk_gate']=slop['verdict']!='FAIL'
+    editorial_warnings+=[f"AI-slop gate {slop['verdict']} {f['rule']}: {f['detail']}" for f in slop['findings']]
     ready=all(checks.values()) and not missing;report={'editorial_warnings':editorial_warnings,'checks':checks,'missing_assets':missing,'ready_for_capcut':ready,'counts':{'words':sum(1 for _ in csv.DictReader((out/'transcript'/'words.csv').open())),'beats':len(json.loads((out/'transcript'/'semantic_beats.json').read_text())),'shots':len(t['shots']),'assets':len(assets),'actions':len(actions)}};write_json(out/'qc'/'validation.json',report)
     (out/'qc'/'QC_REPORT.md').write_text('# QC report\n\n'+''.join(f"- {'PASS' if v else 'FAIL'} {k}\n" for k,v in checks.items())+f"\nWARNING: {len(missing)} image assets pending generation.\n"+''.join(f'WARNING: {w}\n' for w in editorial_warnings)+f"\nREADY_FOR_CAPCUT: {str(ready).lower()}\n")
     manifest=json.loads((out/'capcut'/'MEDIA_IMPORT_MANIFEST.json').read_text());manifest['expected_missing_assets']=missing;manifest['images']=[a['path'] for a in assets if a['asset_id'] not in missing];manifest['ready_for_capcut']=ready;write_json(out/'capcut'/'MEDIA_IMPORT_MANIFEST.json',manifest)
