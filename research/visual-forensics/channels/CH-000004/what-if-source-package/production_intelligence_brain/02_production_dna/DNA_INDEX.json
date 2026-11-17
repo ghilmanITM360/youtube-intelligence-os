@@ -1,0 +1,137 @@
+{
+  "schema_version": "2.0",
+  "release_version": "1.0.0",
+  "generated_from": "01_master_data/*.csv (canonical, on-disk, computed by validator/validate_brain.py)",
+  "generated_at": "2026-09-17T00:00:00Z",
+
+  "source_video_count": 14,
+  "word_count": 7864,
+  "meaningful_sentence_count": 604,
+  "shot_count": 200,
+  "state_count": 581,
+  "motion_count": 438,
+  "asset_count": 448,
+  "audio_event_count": 29,
+  "av_sync_total": 1421,
+  "state_change_count": 581,
+  "motion_start_count": 438,
+  "motion_end_count": 402,
+
+  "dna_documents": [
+    "VISUAL_DNA.md",
+    "MOTION_DNA.md",
+    "EDITING_DNA.md",
+    "AUDIO_DNA.md",
+    "AUDIO_VISUAL_SYNC_DNA.md",
+    "ASSET_DNA.md",
+    "PACING_DNA.md"
+  ],
+
+  "word_timing": {
+    "count": 7864,
+    "mean_duration_ms": 223.5,
+    "median_duration_ms": 200.0,
+    "min_duration_ms": 10.0,
+    "max_duration_ms": 1400.0,
+    "stdev_duration_ms": 116.9
+  },
+  "word_patterns": {
+    "total_unique_words": 2299,
+    "most_common_words": {
+      "the": 539,
+      "a": 271,
+      "of": 240,
+      "to": 194,
+      "would": 173,
+      "and": 170,
+      "in": 104,
+      "is": 95,
+      "it": 77,
+      "be": 74,
+      "you": 73,
+      "that": 58,
+      "but": 56,
+      "for": 49,
+      "if": 49,
+      "as": 49,
+      "on": 46,
+      "by": 44,
+      "this": 40,
+      "from": 40
+    },
+    "average_word_length": 4.66
+  },
+  "sentence_pacing": {
+    "total_sentences": 604,
+    "mean_sentence_duration_ms": 3042.8,
+    "median_sentence_duration_ms": 2790.0,
+    "mean_words_per_sentence": 13.02,
+    "min_sentence_duration_ms": 140.0,
+    "max_sentence_duration_ms": 11620.0
+  },
+  "audio_events": {
+    "total_events": 29,
+    "event_types": {
+      "NARRATION": 14,
+      "SILENCE": 8,
+      "PAUSE": 7
+    },
+    "type_statistics": {
+      "NARRATION": {
+        "count": 14,
+        "mean_duration_sec": 146.56,
+        "total_duration_sec": 2051.86
+      },
+      "SILENCE": {
+        "count": 8,
+        "mean_duration_sec": 1.41,
+        "total_duration_sec": 11.29
+      },
+      "PAUSE": {
+        "count": 7,
+        "mean_duration_sec": 0.73,
+        "total_duration_sec": 5.1
+      }
+    }
+  },
+  "sync_relationships": {
+    "total_syncs": 1421,
+    "sync_relations": {
+      "DURING_WORD": 721,
+      "BETWEEN_WORDS": 306,
+      "NO_SPEECH": 193,
+      "ON_WORD_START": 126,
+      "ON_WORD_END": 60,
+      "AFTER_WORD": 8,
+      "DURING_SILENCE": 6,
+      "DURING_PAUSE": 1
+    },
+    "visual_event_types": {
+      "STATE_CHANGE": 581,
+      "MOTION_START": 438,
+      "MOTION_END": 402
+    },
+    "offset_statistics": {
+      "mean_offset_ms": 30.5,
+      "median_offset_ms": 40.0,
+      "min_offset_ms": -8640.0,
+      "max_offset_ms": 3340.0
+    }
+  },
+  "per_video_statistics": {
+    "Could you power your computer by typing?": { "words": 407, "events": 2, "syncs": 215 },
+    "could_you_survive_nanosecond_sun": { "words": 793, "events": 3, "syncs": 102 },
+    "drained_oceans": { "words": 430, "events": 1, "syncs": 88 },
+    "earthquake-magnitude-shorts-wBLVmEZV2Oc": { "words": 265, "events": 1, "syncs": 73 },
+    "how_long_could_you_drive_towards_the_sunset": { "words": 510, "events": 2, "syncs": 116 },
+    "if_all_humans_died": { "words": 1115, "events": 3, "syncs": 90 },
+    "if_toaster_in_freezer": { "words": 607, "events": 2, "syncs": 127 },
+    "weird_and_worrying_questions": { "words": 156, "events": 1, "syncs": 77 },
+    "what-if-earth-grew-1cm-every-second": { "words": 1094, "events": 3, "syncs": 123 },
+    "what_if_all_visible_light_was_a_single_beam": { "words": 523, "events": 2, "syncs": 69 },
+    "what_if_earths_water_suddenly_disappear": { "words": 677, "events": 2, "syncs": 105 },
+    "what_if_the_moon_were_made_of_protons": { "words": 333, "events": 2, "syncs": 80 },
+    "what_would_a_magnitude_15_earthquake_be": { "words": 664, "events": 4, "syncs": 113 },
+    "worlds-largest-cities-what-if": { "words": 290, "events": 1, "syncs": 43 }
+  }
+}

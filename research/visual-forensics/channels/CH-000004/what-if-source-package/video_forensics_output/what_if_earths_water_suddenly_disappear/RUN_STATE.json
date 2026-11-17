@@ -1,0 +1,52 @@
+{
+  "video_slug": "what_if_earths_water_suddenly_disappear",
+  "reference_video": "/Users/ghilmanislam360/Downloads/YTDown.com_YouTube_What-if-Earth-s-Water-Suddenly-Disappear_Media_4ZVtHknKuvg_001_1080p.mp4",
+  "audio_present": true,
+  "audio_verified": true,
+  "current_stage": "COMPLETE_WITH_DOCUMENTED_LIMITATIONS",
+  "last_completed_shot": "S18",
+  "last_completed_state": "F18.0",
+  "last_completed_motion": "A29",
+  "last_completed_image": "IMG24",
+  "last_completed_capcut_shot": "S18",
+  "last_completed_i2v_shot": "S18",
+  "completed_files": [
+    "00_source/SOURCE_MANIFEST.md",
+    "00_source/audio/audio_original.aac",
+    "00_source/audio/audio.wav",
+    "00_source/verify.py",
+    "01_evidence/CONTACT_SHEET_1.jpg (through CONTACT_SHEET_4.jpg)",
+    "01_evidence/frames/ (92 overview PNGs, 1 per 2s)",
+    "01_evidence/cuts/ (34 native-resolution before/after cut frames)",
+    "01_evidence/zoom_*.jpg (5 targeted native-resolution inspection tiles)",
+    "02_analysis/TIMELINE.csv",
+    "02_analysis/ASSET_MANIFEST.csv",
+    "02_analysis/MOTION_EVENTS.csv",
+    "02_analysis/VISUAL_DNA.md",
+    "03_capcut/CAPCUT_REBUILD.md",
+    "04_image_to_video/IMAGE_PROMPTS.md",
+    "04_image_to_video/ANIMATION_PROMPTS.md",
+    "04_image_to_video/I2V_REBUILD.md",
+    "05_audio/AUDIO_MAP.md",
+    "MASTER_REPORT.md",
+    "CONTINUATION_HANDOFF.md"
+  ],
+  "partial_files": [],
+  "known_issues": [
+    "No transcript available: local whisper/mlx-whisper install failed (broken system pip / truststore macOS-version-parsing bug, same as every other video in this project). Unlike weird_and_worrying_questions, on-screen text here does NOT substitute for full narration, so significant spoken content is genuinely UNKNOWN in TIMELINE.csv.",
+    "17 of 18 shot boundaries are OBSERVED via measured ffmpeg scdet score spikes (8.291667, 10.291667, 17.375, 26.791667, 39.625, 58.75, 64.375, 69.208333, 78.333333, 107.458333, 114.333333, 136.791667, 143.583333, 155.208333, 166.75, 170.791667, 173.791667); the 18th (S18 start) is simply the natural continuation from S17's cut. All internal state boundaries within shots are LIKELY (2-second-interval visual sampling).",
+    "The seaplane/jar-diagram interleave in S10 (frames ~1968-2159, t82-90s) could not be pinned to an exact cut: no scdet score spike was detected in the 29-second span between 78.333s and 107.458s. Sub-boundaries within S10 are flagged APPROXIMATE."
+  ],
+  "counts": {
+    "shots": 18,
+    "visual_states": 47,
+    "unique_assets": 41,
+    "motion_events": 29,
+    "unique_images": 24,
+    "audio_assets": 1
+  },
+  "next_required_action": "None. Project complete. If a working speech-to-text tool becomes available later, transcribe 00_source/audio/audio.wav and patch SCRIPT_OR_AUDIO_CUE in TIMELINE.csv (this video's narration is NOT fully covered by on-screen text, unlike weird_and_worrying_questions); re-run 00_source/verify.py afterward. No other stage needs revisiting unless the source video itself changes (check SHA-256 in SOURCE_MANIFEST.md).",
+  "verification_command": "python3 00_source/verify.py",
+  "completed_at_utc": "2026-09-16T16:15:00Z",
+  "updated_at": "2026-09-16T16:15:00Z"
+}

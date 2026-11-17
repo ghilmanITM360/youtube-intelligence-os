@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "release_manifest.schema.json",
+  "title": "RELEASE_MANIFEST.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "release_version", "generated_at", "excludes_self", "files"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "release_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generated_at": { "type": "string" },
+    "excludes_self": {
+      "type": "boolean",
+      "const": true,
+      "description": "RELEASE_MANIFEST.json never lists or hashes itself; avoids a recursive hash dependency."
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["relative_path", "size_bytes", "sha256", "category", "canonical"],
+        "properties": {
+          "relative_path": { "type": "string" },
+          "size_bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "source_index", "master_data", "dna", "reconstruction", "pattern",
+              "blueprint", "validator", "schema", "report", "manifest", "testing_protocol"
+            ]
+          },
+          "canonical": { "type": "boolean", "const": true }
+        }
+      }
+    }
+  }
+}

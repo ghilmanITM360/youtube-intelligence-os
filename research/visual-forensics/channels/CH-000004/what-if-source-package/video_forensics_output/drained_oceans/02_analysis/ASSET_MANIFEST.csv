@@ -1,0 +1,31 @@
+ASSET_ID,TYPE,DESCRIPTION,MEDIA_FORMAT_NEEDED,TRANSPARENT_BG,FIRST_APPEARANCE,OTHER_APPEARANCES,REUSE_STATUS,SOURCE_OR_RECREATION_METHOD,NOTES
+C01,character,Black-outline standing stick presenter holding angled paper,PNG,YES,F01.0,F01.1|F01.2,Recurring,Recreate as transparent vector/raster cutout,Separate paper optional
+C02,character,Black-outline stick presenter with raised arms,PNG,YES,F01.3,F02.0|F02.1|F02.2,Recurring,Recreate as transparent pose cutout,Observed pose swap not fluid limb animation
+C03,character,White-outline stick presenter for black lower panel,PNG,YES,F07.0,F07.1|F07.2|F09.0|F09.1|F11.0|F11.1|F12.0|F13.0|F14.0|F14.1|F14.2,Recurring,Recreate two poses as transparent cutouts,Black background is separate
+C04,character,Tiny simple black stick person / thinker,PNG,YES,F03.1,F08.0|F10.0|F17.0,Recurring,Recreate pose variants,Scale varies
+C05,character,Hand-drawn reporter holding microphone inside TV,PNG,YES,F16.0,None,Unique,Recreate transparent line art,Use within fixed TV graphic
+O01,object,Loose white paper with black outline,PNG,YES,F01.0,F01.1|F01.2|F01.3|F02.0|F02.1|F02.2,Recurring,Recreate separate prop,Static after drop
+E01,environment,Thin black rectangular display frame with white interior,SVG,YES,F01.0,F01.1|F01.2|F01.3|F02.0|F02.1|F02.2|F17.0,Recurring,Native shape or vector,Same upper-panel language
+E02,environment,Black and grey canyon/trench cross-section inside display,SVG,NO,F01.0,F01.1|F01.2|F01.3,Unique,Recreate flat line-art plate,Locked
+E03,environment,Flat black Mars ridge inside display,SVG,NO,F02.0,F02.1|F02.2,Unique,Recreate flat line-art plate,Locked
+E04,environment,Dense vertical grey water curtain,PNG,NO,F02.2,None,Unique,Recreate texture/line plate,No observed droplet animation
+E05,environment,Grey Asia-Pacific globe with black coast outlines,SVG,NO,F03.0,F03.1,Unique,Recreate fixed illustrated plate,Locked
+E06,environment,Radial grey dive tunnel with central black tapered silhouette,VIDEO,NO,F05.0,None,Unique,Recreate short locked-camera animation or plate sequence,Motion blur/streaks observed
+E07,environment,Black ocean-floor depth profile with grey water/void and narrow trench,SVG,NO,F06.0,F06.1,Unique,Recreate fixed illustrated plate,Locked
+E08,environment,Flat grey world map with white continents on black dashboard,SVG,NO,F07.0,F07.1|F07.2|F09.0|F09.1|F11.0|F11.1|F12.0|F13.0,Recurring,Recreate fixed illustrated plate,Upper layer only
+E09,environment,Black island/cave silhouette framing grey water band,SVG,NO,F08.0,F10.0,Recurring,Recreate fixed illustrated plate,Text is separate
+E10,environment,Detailed exposed seafloor world map,SVG,NO,F14.0,F14.1|F14.2,Unique,Recreate fixed illustrated plate,More detailed than E08
+E11,environment,Black valley silhouettes framing low grey water pool,SVG,NO,F15.0,None,Unique,Recreate fixed illustrated plate,Locked
+E12,environment,Island slope and flat water inside display,SVG,NO,F17.0,None,Unique,Recreate fixed illustrated plate,Locked
+G01,graphic,Portal locator dots/arrows and globe pointer,SVG,YES,F01.1,F01.2|F01.3|F03.0|F03.1,Recurring,Native text and line/shape overlays,Red dot on globe
+G02,graphic,Red horizontal Mars waterline,SHAPE,YES,F02.1,F02.2,Recurring,Native CapCut line,Locked after reveal
+G03,graphic,20m red circle/field diagram,SVG,NO,F04.0,None,Unique,Recreate fixed vector diagram,Small symbols remain unreadable
+G04,graphic,White radial descent streak field,VIDEO,NO,F05.0,None,Unique,Recreate short overlay animation,Fast converging motion only
+G05,graphic,Ocean-depth labels and -1cm/DAY marker,TEXT,YES,F06.0,F06.1,Recurring,Exact readable text overlay,Use line arrows
+G06,graphic,Outlined TO DO checklist,TEXT,YES,F06.1,None,Unique,Native text + rectangle,Text readable in source
+G07,graphic,Map depth counter and DRAIN label/dot,TEXT,YES,F07.0,F07.1|F07.2|F09.0|F09.1|F11.0|F11.1|F12.0|F13.0|F14.0,Recurring,Native text + dot,Counter values change by state
+G08,graphic,Red regional circles/arrows/labels,TEXT,YES,F07.2,F09.1|F11.1|F12.0|F13.0|F14.2,Recurring,Native text and vector overlays,Use per-state set not single accumulated layer
+G09,graphic,DRAINED title,TEXT,YES,F14.1,F14.2,Recurring,Native text overlay,All caps white
+G10,graphic,News TV frame/headlines/lower-third,TEXT,NO,F16.0,None,Unique,Recreate as one graphic plus C05,Small text only copy if readable
+T01,text_system,Hand-drawn uppercase black/white typography,TEXT,YES,F01.1,All readable labels,Recurring,Use closest hand-drawn uppercase font or manual lettering,Exact original font unknown
+AU01,audio,Source mixed narration and possible bed/SFX,AUDIO,NO,F01.0,Entire video,Recurring,Use extracted source audio or recreate only verified relationship,No stems identified

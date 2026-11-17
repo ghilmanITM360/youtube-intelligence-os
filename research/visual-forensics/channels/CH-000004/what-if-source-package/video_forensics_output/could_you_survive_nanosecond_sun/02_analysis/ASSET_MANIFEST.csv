@@ -1,0 +1,34 @@
+ASSET_ID,TYPE,DESCRIPTION,MEDIA_FORMAT_NEEDED,TRANSPARENT_BG,FIRST_APPEARANCE,OTHER_APPEARANCES,REUSE_STATUS,SOURCE_OR_RECREATION_METHOD,NOTES
+C01,character,Standing lecturer holding paper or pointer,PNG,YES,S01,S07;S11,REUSE,Recreate black line stick figure,Use pose variants only where state changes
+C02,character,Cave explorer with helmet and hand-held gear,PNG,YES,S01,S03;S04;S10;S13,REUSE,Recreate black line figure,Separate arm/gear if animated
+C03,character,White outlined exposed figure on dark Sun-edge field,PNG,YES,S03,S05;S08;S13,REUSE,Recreate white line figure,Keep fixed except listed states
+C04,character,Small walking figure on snow field,PNG,YES,S04,S13,REUSE,Recreate black line figure,Static anchor after appearance
+C05,character,Seated student with raised hand,PNG,YES,S11,none,UNIQUE,Recreate black line figure,Right-bottom board edge
+C06,character,Falling/heat-exposed figure,PNG,YES,S12,none,UNIQUE,Recreate black line figure,Separate from rays for drop event
+E01,environment,Whiteboard with tray on white field,JPG,NO,S01,S07;S11,REUSE,Recreate clean line plate,Use layers for board contents
+E02,environment,Snowy cave exterior with ice roof and ground,JPG,NO,S03,S10;S13,REUSE,Recreate clean line plate,Keep door opening as separate overlay
+E03,environment,Dark field with curved bright gray-white Sun edge,JPG,NO,S03,S05;S08;S13,REUSE,Recreate gradient clean plate,No camera movement
+E04,environment,Black space field with white diagram elements,JPG,NO,S06,none,UNIQUE,Recreate black clean plate,Used as comparison insert
+E05,environment,White timeline/chart field,JPG,NO,S07,none,UNIQUE,Recreate white clean plate,Graph layers separate
+E06,environment,Open snow field with sun icon,JPG,NO,S04,S12,REUSE,Recreate clean plate,Ground line and sun separate if needed
+E07,environment,Solid red branded card,JPG,NO,S02,S14,REUSE,Recreate red plate,Graphics/text overlays separate
+O01,object,Paper held by lecturer,PNG,YES,S01,S07;S11,REUSE,Recreate line art,Part of C01 or separate
+O02,object,Telescope on tripod,PNG,YES,S01,none,UNIQUE,Recreate line art,Board illustration
+O03,object,Shovel and snow mound,PNG,YES,S04,S12;S13,REUSE,Recreate line art,Left foreground
+O04,object,Small prone animal/figure on snow,PNG,YES,S04,none,UNIQUE,Recreate line art,Right foreground
+O05,object,Three-panel cave doorway/portal,PNG,YES,S03,S10;S13,REUSE,Recreate panel overlay,Contains separate labels/text
+O06,object,Eye/retina-like circular diagram,PNG,YES,S06,none,UNIQUE,Recreate line art,Black/white split sequences
+O07,object,Monitor/profile comparison diagram,PNG,YES,S06,none,UNIQUE,Recreate line art,Black field
+O08,object,Logarithmic time graph and branch curves,SVG,YES,S07,none,UNIQUE,Recreate vector-like line artwork,Build labels as text
+O09,object,Teleporter smartphone advertisement,PNG,YES,S09,none,UNIQUE,Recreate black/white phone artwork,Text overlays editable
+O10,object,Stefan-Boltzmann whiteboard equations,SVG,YES,S11,none,UNIQUE,Recreate board text/lines,Editable text safest
+O11,object,X-ray wave lines,SVG,YES,S11,none,UNIQUE,Recreate black wavy lines,Board overlay
+O12,object,Anatomical X-ray-style body and double helix,PNG,YES,S11,none,UNIQUE,Recreate line art with red accents,Right side board
+O13,object,Travel advice warning placard,PNG,YES,S11,none,UNIQUE,Recreate sign,Text overlay editable
+O14,object,Vertical time/heat scale with arrows and labels,SVG,YES,S12,none,UNIQUE,Recreate line artwork,Left side
+O15,object,Sun icon,PNG,YES,S01,S04;S12,REUSE,Recreate line art,Top/right where visible
+G01,graphic,Question banner at top of opening,SHAPE,NO,S01,none,UNIQUE,Use CapCut shape plus text,Exact small wording not verified
+G02,graphic,Red xkcd what if identity mark,PNG,YES,S02,S14,REUSE,Recreate or use approved brand asset,Do not claim source asset
+T01,text_system,Hand-lettered black all-caps text,TEXT,YES,S01,S14,REUSE,Use editable text with closest hand-drawn font,Font unknown
+T02,text_system,Red handwritten annotation text/arrows,TEXT,YES,S03,S12,REUSE,Use editable text/line overlays,Use red only for emphasis
+AU01,audio,Source audio mix,AUDIO,NO,S01,S14,REUSE,Extract from supplied video,Timing master; names/transcript unverified

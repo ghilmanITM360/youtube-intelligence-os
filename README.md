@@ -1,5 +1,7 @@
 # YouTube Intelligence OS
 
+Start with the [permanent mission and architecture](docs/YIOS_MASTER_PLAN.md) and [dated cross-chat session context](docs/AI_SESSION_CONTEXT.md). These entry points link to the underlying research and evidence authorities.
+
 An evidence-based intelligence system for multiple YouTube channels. **YouTube Intelligence OS V1 is complete**: Topic, Packaging, Hook and Script intelligence feed a unified production-plan orchestrator. Editing/Visual intelligence is available where registered forensic evidence exists; unavailable evidence is explicit. Channel Strategy is GENERALIZED_WORKING with limited cross-niche evidence coverage. V2 does not begin automatically.
 
 **What If integration (2026-10-09):** source contract, read-only adapter, durable normalized staging, promotion and source-backed Editing/Visual production guidance are implemented. Ten existing videos supply 8,327 observations. Two independently verified external IDs remain unregistered with transcript evidence pending; two ID-less sources remain unresolved. Identity and transcript availability are separate; the explicit pending registration path is canonical after PR #17. The validated ten-video Genius History packaging packet is canonical after PR #19. Canonical What If count remains 83. See [live remaining-work audit](docs/audits/REMAINING-WORK-MATRIX-2026-10-11.md), [current project status](PROJECT_STATUS.md) and [integration workflow](docs/WHAT_IF_INTEGRATION_WORKFLOW.md) for exact counts, commands and external blockers.

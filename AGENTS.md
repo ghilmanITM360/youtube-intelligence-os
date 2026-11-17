@@ -59,6 +59,10 @@ The project-scoped Graphify Codex skill is installed, but no knowledge graph has
 
 ## External tool boundaries
 
+For source-backed visual research and original storyboard work, start at
+[`docs/intelligence/START_HERE.md`](docs/intelligence/START_HERE.md). It links to
+channel-specific authorities without loading the full forensic corpus.
+
 - Ponytail is a coding-quality assistant; it does not override this repository's core rules.
 - Claude-Mem is auxiliary session memory only. It is never evidence, canonical project knowledge, or a replacement for repository documentation.
 - External tool databases, graphs, embeddings, MCP adapters, hooks, or services do not determine the YouTube Intelligence OS production architecture.

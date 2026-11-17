@@ -1,0 +1,27 @@
+ASSET_ID,TYPE,DESCRIPTION,MEDIA_FORMAT_NEEDED,TRANSPARENT_BG,FIRST_APPEARANCE,OTHER_APPEARANCES,REUSE_STATUS,SOURCE_OR_RECREATION_METHOD,NOTES
+C01,character,Minimal round-headed lecturer at left of board,PNG,YES,S01/F01.0,S01,REUSE,Recreate black-line cutout,Pose remains static in observed hold
+C02,character,Generic round-headed observer beside freezer,PNG,YES,S01/F01.2,S02,REUSE,Recreate black-line cutout,Static in close freezer view
+C03,character,Generic people group with hair/beard/glasses variants,PNG,YES,S07/F07.0; S11/F11.0,S07; S11,VARIATION,Recreate separate cutouts or a single flattened plate,Individual identity continuity only needed inside each shot
+C04,character,Wrapped-head outdoor figure,PNG,YES,S10/F10.0,S10,REUSE,Recreate black-line cutout with pose variants,Use separate pose states for handling toaster and huddling
+E01,environment,Classroom whiteboard and lecturer plate,JPG,NO,S01/F01.0,S01,UNIQUE,Recreate clean 16:9 line-art plate,Board supports overlay drawings
+E02,environment,Open refrigerator interior with side observer and hanging lamp,JPG,NO,S02/F02.0,S02,UNIQUE,Recreate clean 16:9 line-art plate,Includes lower freezer door and wall outlet
+E03,environment,Flat red xkcd what if video-series bumper,JPG,NO,S03/F03.0,S03,UNIQUE,Recreate graphic plate,Brand artwork/text must be recreated only if rights/clear reference permit
+E04,environment,Counter with open freezer at left and toaster at right,JPG,NO,S04/F04.0,S04,UNIQUE,Recreate clean 16:9 line-art plate,Leave upper text zone clear
+E05,environment,White temperature scale diagram,JPG,NO,S05/F05.0,S05,UNIQUE,Recreate vector-like 16:9 plate,Use native text/vector overlays for labels
+E06,environment,Stick figure holding overheated toaster,JPG,NO,S06/F06.0,S06,UNIQUE,Recreate line-art plate,Smoke/fire scribbles are separate overlay G03
+E07,environment,Group around refrigerator,JPG,NO,S07/F07.0,S07,UNIQUE,Recreate clean 16:9 plate,Freezer door and red frost/glow need separate states
+E08,environment,Front refrigerator cutaway/energy-flow diagram,JPG,NO,S08/F08.0,S08,UNIQUE,Recreate clean 16:9 plate,Leave room for arrows and equations
+E09,environment,Ice-cream freezer-shop vignette,JPG,NO,S09/F09.0,S09,UNIQUE,Recreate line-art plate,Visible upper text is native overlay
+E10,environment,Outdoor Winnipeg winter scene,JPG,NO,S10/F10.0,S10,UNIQUE,Recreate clean 16:9 line-art plate,Use dark neutral overlay for night state
+E11,environment,Panel/table/microphone conclusion scene,JPG,NO,S11/F11.0,S11,UNIQUE,Recreate line-art plate,Text appears above table
+E12,environment,Red book-promotion end card,JPG,NO,S12/F12.0,S12,UNIQUE,Recreate graphic plate,Small book/credit text may require source plate rather than regeneration
+O01,object,Two-slot toaster with optional red/orange glow,PNG,YES,S01/F01.3,S01;S02;S04;S06;S08;S09;S10,REUSE,Recreate as black-line master plus red-glow variant,Use separate bread state O02
+O02,object,Bread/toast slice,PNG,YES,S02/F02.3,S02;S10,REUSE,Recreate black-line cutout,Pop uses position/opacity or state swap
+O03,object,Refrigerator/freezer appliance,PNG,YES,S01/F01.2,S01;S02;S04;S07;S08,REUSE,Recreate scene-specific flattened form,Door/cutaway variations prevent one literal reusable asset
+O04,object,Wall plug and cable,PNG,YES,S02/F02.0,S02;S07;S08,REUSE,Recreate black-line cutout,Static except state-replacement shots
+O05,object,Small stool,PNG,YES,S10/F10.3,S10,UNIQUE,Recreate black-line cutout,Static after reveal
+G01,graphic,Question banner and explanatory captions,TEXT/SHAPE,YES,S01/F01.1,S01;S06;S11,REUSE,CapCut native text plus light-grey rounded rectangle,Exact wording only where readable
+G02,graphic,Scientific labels/arrows/equations/heat rays,TEXT/SVG,YES,S04/F04.2,S04;S05;S08;S09,REUSE,Vector or native text and shape overlays,Red arrows/heat rays match line-art accent
+G03,graphic,Frost specks; red heat strokes/glow; electrical arcs; smoke/fire scribbles,PNG/SVG,YES,S02/F02.1,S02;S04;S06;S07;S08;S09;S10,REUSE,Separate overlays with opacity/state swaps,Do not animate unless event map says so
+T01,text_system,Hand-drawn uppercase/handwritten visual text,TEXT,YES,S01/F01.1,ALL,REUSE,Use closest licensed hand-drawn font or trace visible text,Exact font UNKNOWN
+AU01,audio,Embedded source audio track,AUDIO,NO,S01/F01.0,ALL,REUSE,Extract from supplied MP4 for timing reference,Contents not machine-transcribed in this run

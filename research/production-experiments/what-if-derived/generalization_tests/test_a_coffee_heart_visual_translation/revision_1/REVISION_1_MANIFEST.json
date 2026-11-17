@@ -1,0 +1,97 @@
+{
+  "test": "CAVEMAN MODE TEST A - Revision 1",
+  "phase": "HUMAN_REVIEW_AND_REVISION",
+  "status": "REVISION_1_COMPLETE - AWAITING_HUMAN_REVIEW",
+  "created_utc": "2026-09-17T08:09:16Z",
+  "brain": {
+    "version": "1.0.0",
+    "role": "PRODUCTION_GRAMMAR_AUTHORITY",
+    "modified_by_this_revision": false,
+    "validator_result_after_revision": "PASS (all gates report zero failures)",
+    "zip_sha256": "05e3277199efc1a8e780db87b9e25f9e294496091be45d2d0f36afe760539270",
+    "metadata_issue": "release_status=PREPARING and release_frozen_at=null; treated as frozen-by-hash; see RELEASE_METADATA_ISSUE.md; NOT fixed in place"
+  },
+  "first_pass": {
+    "location": "../",
+    "files_locked": 18,
+    "hash_verification": "ALL 18 MATCH FIRST_PASS_LOCK.md",
+    "verified_before_review": true,
+    "verified_after_review": true,
+    "modified": false
+  },
+  "script": {
+    "words": 130,
+    "changed": false,
+    "sha256": "28893099c3e4cc997580c7fc78dc7f029abadadd3aa68dce9eeb2eee5289fe2b"
+  },
+  "training_overlap": "NONE",
+  "output_format": {
+    "aspect": "9:16",
+    "width": 2160,
+    "height": 3840
+  },
+  "counts": {
+    "shots": 5,
+    "base_images": 5,
+    "visual_states": 20,
+    "motions": 15,
+    "assets": 25,
+    "text_overlays": 6,
+    "static_states": 5,
+    "capcut_motions": 15,
+    "i2v_motions": 0,
+    "camera_motions": 0,
+    "fades": 0,
+    "anchor_words": 19,
+    "est_duration_sec": 33.09,
+    "curved_path_draws": 0,
+    "operations_without_deterministic_build": 0
+  },
+  "first_pass_counts": {
+    "visual_states": 22,
+    "motions": 17,
+    "assets": 26,
+    "anchor_words": 21,
+    "curved_path_draws": 2,
+    "operations_without_deterministic_build": 2
+  },
+  "audit_decisions": {
+    "states": {
+      "KEEP": 16,
+      "MODIFY": 3,
+      "MERGE": 2,
+      "REMOVE": 1
+    },
+    "motions": {
+      "KEEP": 10,
+      "MODIFY": 4,
+      "MERGE": 2,
+      "REMOVE": 1
+    }
+  },
+  "density_vs_portrait_baseline": {
+    "states_per_sec": 0.604,
+    "motions_per_sec": 0.453,
+    "portrait_median_states_per_sec": 0.38,
+    "portrait_p90_states_per_sec": 0.67,
+    "portrait_median_motions_per_sec": 0.27,
+    "portrait_p90_motions_per_sec": 0.45,
+    "note": "Both inside the portrait per-shot distribution. SH01 (1.16) and SH05 (0.82) individually exceed p90, driven by the script's own word density."
+  },
+  "referential_integrity": "FK/ORPHAN ERRORS = 0",
+  "estimates": {
+    "basis": "3.93 words/sec, measured portrait subcorpus",
+    "all_timings_marked": "ESTIMATED",
+    "absolute_timestamps_used": false,
+    "estimates_mixed_with_measured": false
+  },
+  "web_research_this_revision": "NONE",
+  "contamination": "No xkcd / what-if videos, screenshots, thumbnails or style references were consulted",
+  "self_audit": {
+    "PASS": 38,
+    "CONCERN": 6,
+    "FAIL": 0,
+    "rows": 44
+  },
+  "conclusion_withheld": "This revision does not claim the brain generalises. That is the human reviewer's call."
+}
