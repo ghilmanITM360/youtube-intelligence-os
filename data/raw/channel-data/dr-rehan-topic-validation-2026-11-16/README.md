@@ -1,0 +1,14 @@
+# Dr Rehan public topic-validation snapshots
+
+Collected on November 16, 2026 in the ChatGPT in-app Browser. Each record stores its public URL or watch video ID and its observation timestamp in UTC. The JSON files preserve extracted visible page fields, chart table rows and messages. An incomplete or error result records the state seen at that time. `SHA256SUMS.txt` covers this README and all saved JSON observations.
+
+- `youtube-month-*`, `youtube-week-today-*`, `youtube-search-retries.json` — logged-out YouTube search in the visible `PK` region. Each record gives topic, query, filter, time, URL and visible search results. Each card array starts with video ID, title and channel, followed by displayed metadata tokens and duration if present. Search thumbnails, subscriber counts and Shorts shelf cards are not systematically exposed in these records. The search rows retain unrelated, out-of-window and duplicate results for review.
+- `youtube-autocomplete.json` — last fully typed query and up to five visible suggestions per topic. Empty means that no suggestions were visible for the fully typed term.
+- `youtube-t0-*` — selected IDs by topic and baseline watch observations. Successful arrays give UTC time, title, expanded description count/date, fallback count/date and channel subscriber label. Formatted K/M values are rounded. Per-video follow-up is due on November 17 at the corresponding UTC time, within one hour. A matching T1 and exact comparable counts are required for a 24-hour delta.
+- `youtube-competitors-*` — follow-up readings for competitor IDs supplied in the brief. Access failures and rounded counts are recorded as seen.
+- `trends-*` — time series from Google Trends Explore's on-page accessible chart table and related-query text observed where rendered. Each record contains label, terms, time range, geography, property, capture time, URL and visible fields. US 30-day anchored batches use `blood pressure` as the first term. The request batch exposed some blank-loading states, 429 responses and a traffic challenge. Individual value zeros and Google's insufficient-data message are different observations.
+- `google-news-*` — visible US English Google News results at each requested window. Card arrays contain headline, accessibility label, publisher timestamp if visible, relative date text and Google News link.
+- `fda-*-enforcement-event.json` — visible FDA event records containing the relevant product, classification and codes.
+- `clinical-public-page-index.json` — limited public page observations for STREAM, OPTIMAL-DIABETES, valve mortality and FluView. The report links the additional clinical references.
+
+The companion analysis records derived metrics, scoring assumptions and gaps. The original planning inputs and pre-existing evidence stay in their original locations.
