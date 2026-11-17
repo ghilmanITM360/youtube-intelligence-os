@@ -32,3 +32,25 @@ The project-scoped Graphify Codex skill is installed, but no knowledge graph has
 - Ponytail is a coding-quality assistant; it does not override this repository's core rules.
 - Claude-Mem is auxiliary session memory only. It is never evidence, canonical project knowledge, or a replacement for repository documentation.
 - External tool databases, graphs, embeddings, MCP adapters, hooks, or services do not determine the YouTube Intelligence OS production architecture.
+
+## Pre-delivery AI-slop risk gate (mandatory for every new script or video)
+
+Rules: `docs/policies/AI-SLOP-RISK-RULES.md`. Every new script, voiceover script or video package made through this project passes `scripts/check_slop_risk.py` before it is delivered to the user. Put production scripts at `productions/<project>/**/*SCRIPT*.md|txt`, starting with a header block:
+
+```text
+---
+title: <planned video title>
+channel: <CH-id>
+images: <thumbnail/frames file or dir, relative to repo root>
+---
+```
+
+The gate runs automatically:
+
+- **Claude Code:** a `.claude/settings.json` PostToolUse hook runs it each time a production script is written or edited. FAIL blocks; fix it before delivering.
+- **Git pre-commit:** `.githooks/pre-commit` checks staged production scripts. Install it once per clone with `ln -sf ../../.githooks/pre-commit .git/hooks/pre-commit`. Do not use `core.hooksPath`, because it would disable the Git LFS hooks.
+- **CI:** `.github/workflows/validate.yml` checks every changed production script on PRs and on pushes to main.
+- **Pipeline:** `production_pipeline.py validate` runs it; `ready_for_capcut` stays false on FAIL.
+- **Manual run:** `uv run python scripts/check_slop_risk.py <script> [--title ... --channel ... --images ...]`.
+
+On FAIL, fix the content with original work: never paraphrase or add noise to get under a threshold. The only alternative is a reasoned `--exception RULE="reason"` that the user sees. Every delivery shows the user the verdict, each finding and the manual checklist (C1–C5). The gate is a proxy: never tell the user that a PASS means content "won't be detected".
