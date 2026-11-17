@@ -1,0 +1,177 @@
+--- local
+
++++ remote
+
+@@ -3,134 +3,40 @@
+
+   "reviews": [],
+-  "receipts": [
+-    {
+-      "Video_ID": "R_E6OOnF9e4",
+-      "scope": "FULL_STORED_TEXT",
+-      "Text_SHA256": "70704b6d9146317a7029506a54fb72d8efdfad277b4a2529c3d4c6754441afe5",
+-      "character_count": 20047,
+-      "source_word_count": 3368,
+-      "coverage_token_count": 3430,
+-      "read_character_ranges": [
+-        [
+-          0,
+-          10000
+-        ],
+-        [
+-          10000,
+-          20000
+-        ],
+-        [
+-          20000,
+-          20047
+-        ]
+-      ],
+-      "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+-      "archive_member": "140_R_E6OOnF9e4_15_Low_Effort_Boring_Tasks_That_Make_More_Than_Your_Job.txt",
+-      "archive_member_sha256": "6466d1e2a194f45285ebdffd3bb4ee43890869ae80bc96f843210fab75c78e5b",
+-      "archive_member_bytes": 21598,
+-      "archive_member_lines": 581,
+-      "audio_verified": false,
+-      "image_sha256": "c531626b9f2e9e4bf707717a5359c356944928974ec8ddb381a642a40f8da0d2",
+-      "image_inspected_sizes": [
+-        [
+-          1280,
+-          720
+-        ],
+-        [
+-          320,
+-          180
+-        ]
+-      ],
+-      "registered_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
+-      "fetched_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
+-      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+-      "image_fetch_attempts": [
+-        [
+-          "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
+-          "OK"
+-        ]
+-      ],
+-      "acquired_date": "2026-10-19"
+-    }
++  "receipts": [{
++    "Video_ID": "R_E6OOnF9e4",
++    "scope": "FULL_STORED_TEXT",
++    "Text_SHA256": "70704b6d9146317a7029506a54fb72d8efdfad277b4a2529c3d4c6754441afe5",
++    "coverage_token_count": 3430,
++    "read_character_ranges": [[0, 7200], [7200, 14400], [14400, 21598]],
++    "first_text_witness": "Jude and Mary grew up in the same neighborhood, went to the same state school, graduated the same year.",
++    "last_text_witness": "If this was useful, subscribe and I'll keep making these. See you in the next one.",
++    "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_FROM_REGISTERED_EXTRACT_VERIFIED_BY_VALIDATOR; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
++    "archive_member": "140_R_E6OOnF9e4_15_Low_Effort_Boring_Tasks_That_Make_More_Than_Your_Job.txt",
++    "archive_member_sha256": "6466d1e2a194f45285ebdffd3bb4ee43890869ae80bc96f843210fab75c78e5b",
++    "archive_member_bytes": 21598,
++    "archive_member_lines": 580,
++    "audio_verified": false,
++    "image_sha256": "c531626b9f2e9e4bf707717a5359c356944928974ec8ddb381a642a40f8da0d2",
++    "image_bytes": 164521,
++    "image_media_type": "image/jpeg",
++    "image_inspected_sizes": [[1280, 720], [320, 180]],
++    "registered_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
++    "fetched_image_url": "https://i.ytimg.com/vi/R_E6OOnF9e4/maxresdefault.jpg",
++    "image_acquisition": "SINGLE_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; HASHED_AND_PRESERVED",
++    "acquired_date": "2026-10-21"
++  }],
++  "primary_source_receipts": [
++    {"claim": "Capital-gain rates and exceptions", "url": "https://www.irs.gov/taxtopics/tc409", "accessed": "2026-10-21", "source_date": "2025 TAX-YEAR GUIDANCE; RETROSPECTIVE", "access_scope": "PRIMARY_OFFICIAL_PAGE", "finding": "Long-term net-capital-gain rates depend on taxable income; 0%, 15% and 20% are not universal, and exceptions can exceed 20%. Short-term gains use ordinary rates."},
++    {"claim": "April 2026 national savings rate", "url": "https://www.fdic.gov/national-rates-and-rate-caps", "accessed": "2026-10-21", "source_date": "2026-04; CONTEMPORANEOUS", "access_scope": "PRIMARY_OFFICIAL_TABLE", "finding": "FDIC reports 0.38% national savings rate for April 2026, near but not exactly the script's 0.39%."},
++    {"claim": "I-bond composite rate", "url": "https://www.treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/", "accessed": "2026-10-21", "source_date": "CURRENT TABLE WITH HISTORICAL ISSUE PERIODS", "access_scope": "PRIMARY_OFFICIAL_TABLE", "finding": "TreasuryDirect records 4.03% for bonds issued November 2025-April 2026; the May-October 2026 earning-period table shows 4.26%."},
++    {"claim": "REIT distribution requirement and risks", "url": "https://www.sec.gov/file/reitspdf", "accessed": "2026-10-21", "source_date": "OFFICIAL INVESTOR BULLETIN", "access_scope": "PRIMARY_OFFICIAL_PDF", "finding": "A qualifying REIT must distribute at least 90% of taxable income; the bulletin also describes property, management, leverage and market risks."}
+   ],
+-  "primary_source_receipts": [
+-    {
+-      "claim": "Forbes 400 average effective tax rate 8.2%",
+-      "url": "https://bidenwhitehouse.archives.gov/cea/written-materials/2021/09/23/what-is-the-average-federal-individual-income-tax-rate-on-the-wealthiest-americans/",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_ARCHIVED_CEA_PAGE",
+-      "finding": "CEA/OMB 2021: 8.2% average federal individual income tax rate for the 400 wealthiest families, 2010-2018, sensitivity range 6-12%; income measure includes unrealized gains on unsold assets. Available before 2026-04-12 publication."
+-    },
+-    {
+-      "claim": "IRS data shows millionaires average seven income streams",
+-      "url": "https://moneyguy.com/article/do-millionaires-really-have-7-streams-of-income/",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_SECONDARY_COMMENTARY; no primary IRS document found",
+-      "finding": "Only secondary commentary repeats the figure; sources describe it as a myth with unclear origin. UNVERIFIED, likely misattributed."
+-    },
+-    {
+-      "claim": "I bond composite rate 4.03%",
+-      "url": "https://treasurydirect.gov/savings-bonds/i-bonds/i-bonds-interest-rates/",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_PAGE_PLUS_SECONDARY_COVERAGE (mymoneyblog)",
+-      "finding": "November 2025-April 2026 I bonds: 0.90% fixed, 4.03% composite; current at publication. May 2026 rate 4.26% announced after publication."
+-    },
+-    {
+-      "claim": "FTC context on earnings claims and typical-results disclosure",
+-      "url": "https://www.ftc.gov/system/files/ftc_gov/pdf/LurnandSingal-order.pdf",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_FTC_CONSENT_ORDERS (Lurn/Singal, Cohen, Publishing.com); FTC business guidance page not opened",
+-      "finding": "Orders require clear and conspicuous disclosure of typical customer results with written substantiation when citing specific earnings; hypothetical and lifestyle earnings references treated as earnings claims. Context only; video sells no product in stored text."
+-    }
+-  ],
+-  "calculation_receipts": [
+-    {
+-      "method": "Analyst calculations in python from narrator figures; 2026 single-filer federal parameters (std deduction 16,100; 10%/12% brackets) and Roth limits from analyst knowledge; SBA loan rate 10% and 10-year term assumed",
+-      "results": {
+-        "fed_tax_58K_2026": 4780,
+-        "fica_58K": 4437,
+-        "net_before_state": 48783,
+-        "takehome_3400x12": 40800,
+-        "vending_10_machines_low": 3000,
+-        "vending_10_machines_high": 6000,
+-        "pod_100_designs_at_1": 100,
+-        "pod_implied_per_design_500": [
+-          6,
+-          10
+-        ],
+-        "atm_gross": 900,
+-        "carwash_net_annual": [
+-          7300,
+-          14600
+-        ],
+-        "carwash_net_monthly": [
+-          608.33,
+-          1216.67
+-        ],
+-        "hysa_10K_at_0.39pct": 39,
+-        "hysa_10K_monthly_at_4.2pct": 35,
+-        "mary_hysa_apy": 0.042,
+-        "mary_schd_implied_principal": 40000,
+-        "mary_known_monthly": 638.33,
+-        "mary_groundfloor_needed_monthly": 661.67,
+-        "mary_groundfloor_implied_principal": 81020,
+-        "mary_total_implied_capital": 161020,
+-        "mary_annual": 15600,
+-        "schd_next_year_10pct_plus_reinvest": 386.72,
+-        "schd_10y_10pct_no_reinvest": 881.87,
+-        "schd_10y_9pct_no_reinvest": 804.9,
+-        "schd_10y_10pct_with_reinvest": 1232.0,
+-        "laundromat_purchase_implied": 320000,
+-        "sba_288K_10pct_10y_monthly": 3805.94,
+-        "sba_annual_debt_service": 45671.29,
+-        "laundromat_after_debt_service": 34328.71,
+-        "neighbor_hourly_160_per_30min": 320,
+-        "focus_group_hours_3x60to90": [
+-          3,
+-          4.5
+-        ],
+-        "peer_ratio_10": 0.5967776364571833,
+-        "peer_ratio_5": 0.6665948600999668
+-      }
+-    }
+-  ]
++  "calculation_receipts": [{
++    "method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv",
++    "assumptions": "Frozen views and age_days; exact listed same-channel long-form peers; first five for sensitivity.",
++    "results": {"target_views_per_day": 43.72908741913692, "peer_ratio_10": 0.5967776364571833, "peer_ratio_5": 0.6665948600999668, "tier_10": "TYPICAL", "tier_5": "TYPICAL", "peer_ids_10": ["ypUI1Sv-Nhk", "ccNuYRhrA0U", "zwrY8QsDTgs", "8LncpNMNPW8", "eAzo0uvSnus", "vXBhBlBIUDs", "RUVOjfrIemY", "1W9dzLgpU4k", "mErWx9GiVUc", "-DIT32sBkAk"], "peer_ids_5": ["ypUI1Sv-Nhk", "ccNuYRhrA0U", "zwrY8QsDTgs", "8LncpNMNPW8", "eAzo0uvSnus"]}
++  }, {
++    "method": "Monthly normalization of Mary's explicitly stated amounts",
++    "assumptions": "$195 parking + $190 storage + $1,680 annual savings interest / 12 + $340 quarterly dividend / 3; Groundfloor cash flow not stated.",
++    "results": {"reproducible_monthly_amount": 638.3333333333, "script_claim_monthly": 1300, "unexplained_gap": 661.6666666667, "disposition": "NOT_REPRODUCIBLE_FROM_DISCLOSED_VALUES"}
++  }]
+ }

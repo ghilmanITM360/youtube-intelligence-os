@@ -1,0 +1,233 @@
+--- local
+
++++ remote
+
+@@ -9,14 +9,5 @@
+
+       "character_count": 17218,
+-      "source_word_count": 3047,
++      "source_word_count": 3101,
+       "coverage_token_count": 3101,
+-      "read_character_ranges": [
+-        [
+-          0,
+-          10000
+-        ],
+-        [
+-          10000,
+-          17218
+-        ]
+-      ],
++      "read_character_ranges": [[0, 6000], [6000, 12000], [12000, 17218]],
+       "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+@@ -25,25 +16,11 @@
+
+       "archive_member_bytes": 18789,
+-      "archive_member_lines": 493,
++      "archive_member_lines": 492,
+       "audio_verified": false,
+       "image_sha256": "0dbd11e392cb8ed654cf41732b259c5ed433e45da54dda2d404ebc3af2078fb4",
+-      "image_inspected_sizes": [
+-        [
+-          480,
+-          360
+-        ],
+-        [
+-          320,
+-          240
+-        ]
+-      ],
++      "image_inspected_sizes": [[480, 360], [240, 180]],
+       "registered_image_url": "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+       "fetched_image_url": "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+-      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL; REGISTERED_HQDEFAULT_480x360; NO_HIGHER_RESOLUTION_CLAIM",
+-      "image_fetch_attempts": [
+-        [
+-          "https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg",
+-          "OK"
+-        ]
+-      ],
+-      "acquired_date": "2026-10-19"
++      "image_acquisition": "RECOVERED_PRIOR_SINGLE_FETCH_FROM_REGISTERED_YTIMG_URL; BYTES_REHASHED_BEFORE_PERSISTENCE",
++      "image_fetch_attempts": [["https://i.ytimg.com/vi/QtXhRiEJ9zo/hqdefault.jpg", "PRIOR_FETCH_OK; NO REFETCH"]],
++      "acquired_date": "2026-10-20"
+     }
+@@ -52,21 +29,56 @@
+
+     {
+-      "claim": "US personal saving rate near publication",
+-      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE",
+-      "finding": "April 2026 personal saving rate 2.6% (released May 28, 2026, before 2026-06-09 publication); March about 3.6% per excerpt. Narrator 'about 3.5%' matches March, not the latest release."
++      "claim": "SCF retirement-account ownership",
++      "url": "https://www.federalreserve.gov/publications/october-2023-changes-in-us-family-finances-from-2019-to-2022.htm",
++      "accessed": "2026-10-20",
++      "access_scope": "OFFICIAL FEDERAL RESERVE HTML; table and explanatory text lines 252 and 271-272",
++      "finding": "In 2022, 54.3% of families held retirement accounts defined as IRAs, Keoghs and certain employer-sponsored accounts; conditional median $86,900 and mean $334,000. The 45.7% complement is lack of this account category, not proof of zero retirement-directed assets."
+     },
+     {
+-      "claim": "Vanguard 401(k) average and median balance",
+-      "url": "https://www.fool.com/retirement/2025/07/16/overall-average-401k-balance-vanguard-savings",
++      "claim": "SHED adults with no retirement savings",
++      "url": "https://www.federalreserve.gov/publications/2023-economic-well-being-of-us-households-in-2022-retirement-investments.htm",
+       "accessed": "2026-10-20",
+-      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_VANGUARD_HOW_AMERICA_SAVES_2025; Vanguard report not opened",
+-      "finding": "Average about $148,153, median about $38,176 at year-end 2024, Vanguard-administered plans only. Matches narrator."
++      "access_scope": "OFFICIAL FEDERAL RESERVE HTML; lines 48-56",
++      "finding": "About 28% of non-retired adults reported no retirement savings; 47% had retirement savings outside formal retirement accounts. Population and construct differ from SCF families/account ownership."
+     },
+     {
+-      "claim": "Share of families with retirement accounts (Fed SCF)",
+-      "url": "https://www.nerdwallet.com/article/investing/the-average-retirement-savings-by-age-and-why-you-need-more",
++      "claim": "Vanguard participant balances",
++      "url": "https://corporate.vanguard.com/content/dam/corp/research/pdf/how_america_saves_report_2025.pdf",
+       "accessed": "2026-10-20",
+-      "access_scope": "SEARCH_EXCERPT_SECONDARY_COVERAGE_OF_FED_SCF_2022; Fed SCF tables not opened",
+-      "finding": "About 54.4% of families held a retirement account in 2022, consistent with about 46% having none. One-in-four with $100,000+ not confirmed (UNVERIFIED)."
++      "access_scope": "OFFICIAL VANGUARD PDF; PDF page 5 highlights, PDF pages 48-49 / Figure 51 and surrounding text",
++      "finding": "For Vanguard defined-contribution-plan participants in 2024, average balance $148,153 and median $38,176. Vanguard says current DC balances are only a partial preparedness measure and about 75% of participants were below the average."
++    },
++    {
++      "claim": "Median household income available at publication",
++      "url": "https://www.census.gov/library/publications/2025/demo/p60-286.html",
++      "accessed": "2026-10-20",
++      "access_scope": "OFFICIAL U.S. CENSUS BUREAU 2024 INCOME REPORT; highlights line 178",
++      "finding": "2024 median household income was $83,730; supports the script's rounded 'about $84,000'."
++    },
++    {
++      "claim": "Personal saving rate available at publication",
++      "url": "https://www.bea.gov/taxonomy/term/746?page=0",
++      "accessed": "2026-10-20",
++      "access_scope": "OFFICIAL BEA RELEASE ARCHIVE; April 2026 release lines 94-108; March 2026 lines 122-136",
++      "finding": "The latest release available before the 2026-06-09 upload reported April 2026 personal saving rate 2.6%; March was 3.6%. The script's 'right now about 3.5%' does not match the latest available month and may use an unstated older/revised value."
++    },
++    {
++      "claim": "Historical U.S. stock returns",
++      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/blog/DataUpdate2for2026.pdf",
++      "accessed": "2026-10-20",
++      "access_scope": "ORIGINAL NYU PROFESSOR DATA UPDATE; historical-context slide for 1928-2025",
++      "finding": "1928-2025 U.S. stocks: 11.85% arithmetic average and 26 negative years out of 98. Supports broad average/negative-year framing; exact five-years-in-8%-to-12% count not independently reproduced here."
++    },
++    {
++      "claim": "Investment fee drag",
++      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/updated",
++      "accessed": "2026-10-20",
++      "access_scope": "OFFICIAL SEC INVESTOR.GOV BULLETIN; lines 87-98 and 124-127",
++      "finding": "Ongoing fees reduce the balance earning returns; SEC's 20-year illustration shows materially lower terminal values as annual fees rise. The video's 'around a quarter' needs its own horizon/return assumptions."
++    },
++    {
++      "claim": "CPI conversion method",
++      "url": "https://www.bls.gov/data/inflation_calculator_inside.htm",
++      "accessed": "2026-10-20",
++      "access_scope": "OFFICIAL BLS CPI INFLATION CALCULATOR METHODOLOGY",
++      "finding": "Calculator uses calendar-year average CPI and latest monthly index for the current year. Script's 'mid-90s' and 'today' are insufficiently precise to reproduce exactly $211,000."
+     }
+@@ -75,81 +87,28 @@
+
+     {
+-      "method": "End-of-month $1,000 deposits with rate/12 monthly compounding; time to each $100K by log formula and whole months; lump sums annual compounding; analyst convention, narrator states only annual rates",
++      "method": "Independent Python calculations: end-of-month annuity with nominal annual rate divided monthly; annual compound-growth endpoints; contribution/return crossover; fee-drag endpoint ratios; frozen lifetime-rate peer medians",
++      "assumptions": "No taxes or inflation unless noted; contributions at month end; nominal rates compounded monthly for contribution paths and annually for lump-sum examples; frozen views and age_days from VIDEO_MASTER.csv; first five peers are the PERFORMANCE_SENSITIVITY.csv cohort.",
+       "results": {
+-        "ladder_7pct_years": [
+-          6.58,
+-          4.49,
+-          3.42,
+-          2.76,
+-          2.31,
+-          1.99,
+-          1.75,
+-          1.56,
+-          1.4,
+-          1.28
+-        ],
+-        "ladder_7pct_whole_months": [
+-          80,
+-          53,
+-          41,
+-          33,
+-          28,
+-          24,
+-          21,
+-          19,
+-          17,
+-          15
+-        ],
+-        "ladder_10pct_years": [
+-          6.09,
+-          3.76,
+-          2.73,
+-          2.14,
+-          1.77,
+-          1.5,
+-          1.31,
+-          1.16,
+-          1.04,
+-          0.94
+-        ],
+-        "ladder_10pct_whole_months": [
+-          74,
+-          45,
+-          32,
+-          26,
+-          21,
+-          18,
+-          16,
+-          14,
+-          12,
+-          12
+-        ],
+-        "marcus_balances_y1_y4": [
+-          12393,
+-          25681,
+-          39930,
+-          55209
+-        ],
+-        "contribution_share_y1": 0.968,
+-        "dana_40K_37yr_10pct": 1360158,
+-        "crossover_7pct": 171429,
+-        "crossover_10pct": 120000,
+-        "100K_35yr_7pct": 1067658,
+-        "100K_35yr_10pct": 2810244,
+-        "100K_40yr_10pct": 4525926,
+-        "100K_30yr_10pct": 1744940,
+-        "gap_25_vs_35": 2780985,
+-        "dollar_35yr_10pct": 28.1,
+-        "10K_35yr_10pct": 281024,
+-        "years_to_100K_saving_2940": {
+-          "0pct": 34.0,
+-          "5pct": 20.4,
+-          "6pct": 19.1,
+-          "7pct": 18.0,
+-          "10pct": 15.5
+-        },
+-        "fee_1pct_ending_share_35yr": 0.72,
+-        "fee_1pct_ending_share_40yr": 0.687,
+-        "rule72_doubling_10pct": 7.2,
+-        "exact_doubling_10pct": 7.27,
+-        "letterbox_rows": "0-45 and 314-359 black",
++        "crossover_12000_at_7pct": 171428.57,
++        "crossover_12000_at_10pct": 120000,
++        "growth_on_100K_at_7pct": 7000,
++        "growth_on_100K_at_10pct": 10000,
++        "months_to_100K_7pct": 80,
++        "years_to_100K_7pct": 6.67,
++        "years_increment_100K_to_200K_7pct": 4.42,
++        "years_increment_200K_to_300K_7pct": 3.42,
++        "years_increment_300K_to_400K_7pct": 2.75,
++        "years_increment_400K_to_500K_7pct": 2.33,
++        "years_increment_900K_to_1M_7pct": 1.25,
++        "years_to_100K_10pct": 6.17,
++        "years_increment_900K_to_1M_10pct": 1.0,
++        "fv_40K_37y_10pct": 1360157.94,
++        "fv_100K_35y_7pct": 1067658.15,
++        "fv_100K_35y_10pct": 2810243.68,
++        "fv_100K_40y_10pct": 4525925.56,
++        "fv_100K_30y_10pct": 1744940.23,
++        "age25_vs35_gap_10pct": 2780985.33,
++        "monthly_saving_at_3_5pct_of_84K": 245,
++        "years_to_100K_at_245_month_6pct": 19,
++        "years_to_100K_at_245_month_no_return": 34.01,
++        "terminal_wealth_loss_1pct_fee_35y_7_to_6": 0.2801,
+         "peer_ratio_10": 0.8190327834466037,

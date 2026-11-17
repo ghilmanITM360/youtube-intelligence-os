@@ -1,0 +1,204 @@
+--- local
+
++++ remote
+
+@@ -9,14 +9,8 @@
+
+       "character_count": 18406,
+-      "source_word_count": 3178,
++      "canonical_utf8_bytes": 18406,
++      "canonical_whitespace_word_count": 3178,
+       "coverage_token_count": 3214,
+-      "read_character_ranges": [
+-        [
+-          0,
+-          10000
+-        ],
+-        [
+-          10000,
+-          18406
+-        ]
+-      ],
++      "read_character_ranges": [[0, 6000], [6000, 12000], [12000, 18000], [18000, 18406]],
++      "first_text_witness": "You open Credit Karma on a Tuesday morning. Not because anything's wrong, just a quick check before work. You're expecting to see the 738 you had last month, maybe 740.",
++      "last_text_witness": "If you found this useful, subscribe. I do this kind of breakdown every week and if this video just saved you from making one of these mistakes, drop it in the comments. I genuinely like hearing when this stuff actually helps someone.",
+       "read_provenance": "FULL_CANONICAL_STORED_TEXT_READ_WITHOUT_TRUNCATION; CANONICAL_HASH_AND_ARCHIVE_MEMBER_VERIFIED; AUTO_GENERATED_CAPTIONS_AUDIO_UNVERIFIED",
+@@ -25,25 +19,13 @@
+
+       "archive_member_bytes": 19955,
+-      "archive_member_lines": 525,
++      "archive_member_lines": 524,
+       "audio_verified": false,
+       "image_sha256": "9f1aaeba346d164b2780eec6b5e92212a28bd3104d11a2f8d07fb241b5c48250",
+-      "image_inspected_sizes": [
+-        [
+-          1280,
+-          720
+-        ],
+-        [
+-          320,
+-          180
+-        ]
+-      ],
++      "image_bytes": 114932,
++      "image_media_type": "image/jpeg",
++      "image_inspected_sizes": [[1280, 720], [320, 180]],
+       "registered_image_url": "https://i.ytimg.com/vi/RUVOjfrIemY/maxresdefault.jpg",
+       "fetched_image_url": "https://i.ytimg.com/vi/RUVOjfrIemY/maxresdefault.jpg",
+-      "image_acquisition": "FRESH_FETCH_FROM_REGISTERED_YTIMG_URL",
+-      "image_fetch_attempts": [
+-        [
+-          "https://i.ytimg.com/vi/RUVOjfrIemY/maxresdefault.jpg",
+-          "OK"
+-        ]
+-      ],
+-      "acquired_date": "2026-10-19"
++      "image_acquisition": "SINGLE_FRESH_FETCH_FROM_REGISTERED_YTIMG_URL; HTTP_SUCCESS; BYTES_HASHED_BEFORE_PERSISTENCE",
++      "image_fetch_attempts": [["https://i.ytimg.com/vi/RUVOjfrIemY/maxresdefault.jpg", "FETCH_OK_1280x720_JPEG"]],
++      "acquired_date": "2026-10-20"
+     }
+@@ -52,28 +34,80 @@
+
+     {
+-      "claim": "Hard inquiry impact and six-plus inquiries bankruptcy association",
+-      "url": "https://myfico.com/CreditEducation/CreditChecks/Inquiries.aspx",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_FICO_PAGE",
+-      "finding": "One additional inquiry takes less than five points for most people; people with six or more inquiries can be up to eight times more likely to declare bankruptcy than people with none (association). Rate-shopping window treatment omitted by narrator."
++      "claim": "Paying monthly, utilization and calculation timing",
++      "url": "https://www.consumerfinance.gov/ask-cfpb/will-paying-off-my-credit-card-balance-every-month-improve-my-score-en-1293/",
++      "accessed": "2026-10-20",
++      "source_date": "LAST_REVIEWED_2024-01-29; PREDATES_VIDEO",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "On-time monthly payment can help, but a high balance present when a score is calculated can affect the score even if paid in full the next day."
+     },
+     {
+-      "claim": "FTC credit report accuracy study",
+-      "url": "https://search.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE",
+-      "finding": "February 2013: 1,001 consumers; one in four identified potentially score-affecting errors; 5% had errors that could lead to less favorable terms; about 1 in 20 had max score change >25 points. 40 million extrapolation is not an FTC figure."
++      "claim": "Counterintuitive FICO changes and reporting lag",
++      "url": "https://www.myfico.com/credit-education/blog/unexpected-fico-score-changes",
++      "accessed": "2026-10-20",
++      "source_date": "CURRENT_UNDATED_PROVIDER_EDUCATION; CONTEMPORANEOUS_EXISTENCE_NOT_PROVED",
++      "access_scope": "FULL_PROVIDER_HTML",
++      "finding": "The whole file determines the score; reported balances may differ from current balances; closing revolving accounts and paying off car loans can affect utilization or credit mix; score direction and magnitude are not fixed."
+     },
+     {
+-      "claim": "CFPB Experian sham-investigations suit and Equifax $15M penalty, January 2025",
+-      "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-orders-equifax-to-pay-15-million-for-improper-investigations-of-credit-reporting-errors",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPT_OF_OFFICIAL_RELEASE_AND_SECONDARY_COVERAGE",
+-      "finding": "CFPB sued Experian in early January 2025 alleging sham dispute investigations; about ten days later ordered Equifax to pay $15M civil money penalty. Both before 2026-04-08 publication."
++      "claim": "Credit-limit decrease and closed-account effects",
++      "url": "https://www.myfico.com/credit-education/credit-scores/credit-limit-decrease-affect-fico-score",
++      "accessed": "2026-10-20",
++      "source_date": "CURRENT_UNDATED_PROVIDER_EDUCATION; CONTEMPORANEOUS_EXISTENCE_NOT_PROVED",
++      "access_scope": "FULL_PROVIDER_HTML",
++      "finding": "A lower limit may raise utilization, but the score may fall, rise or remain unchanged; closed accounts can remain and benefit history length for years."
+     },
+     {
+-      "claim": "850 scorers average 4.1% utilization",
+-      "url": "https://www.experianplc.com/newsroom/press-releases/2019/americans-end-the-decade-on-an-eight-year-high-with-an-average-credit-score-of-682",
+-      "accessed": "2026-10-19",
+-      "access_scope": "SEARCH_EXCERPTS_ONLY; NO_SOURCE_FOR_4.1_PERCENT_FOUND",
+-      "finding": "Experian State of Credit reports average revolving utilization ~26-30% for all consumers (2017-2020); 4.1% for 850 scorers not located; UNVERIFIED. FHFA score-model verification search failed (session limit)."
++      "claim": "Hard and soft inquiries",
++      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-inquiry-en-1317/",
++      "accessed": "2026-10-20",
++      "source_date": "LAST_REVIEWED_2025-09-05; PREDATES_VIDEO",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "Credit applications generally produce hard inquiries that can affect scores; prescreening, account review and self-review are soft inquiries and do not affect scores."
++    },
++    {
++      "claim": "Positive and negative account-history retention",
++      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-does-information-stay-on-my-credit-report-en-323/",
++      "accessed": "2026-10-20",
++      "source_date": "LAST_REVIEWED_2026-09-02; POSTDATES_VIDEO_RETROSPECTIVE",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "Negative account payment information is generally reportable for up to seven years; positive history may remain after payoff or closure. This current page does not validate selective retention after authorized-user removal."
++    },
++    {
++      "claim": "FICO factor categories and model dependence",
++      "url": "https://www.myfico.com/credit-education/blog/fico-scores-matter",
++      "accessed": "2026-10-20",
++      "source_date": "2017-06-20; PREDATES_VIDEO",
++      "access_scope": "FULL_PROVIDER_HTML",
++      "finding": "Documents the 35/30/15/10/10 factor categories and that bureau data can yield different scores. Percentages do not establish exact point changes from one action."
++    },
++    {
++      "claim": "Credit-report accuracy study",
++      "url": "https://www.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms",
++      "accessed": "2026-10-20",
++      "source_date": "2013-02; PREDATES_VIDEO",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "Among 1,001 participants, one in four identified possible errors that might affect scores, while about 5% had errors that could affect credit terms. The source does not support a current 40-million material-error count."
++    },
++    {
++      "claim": "Experian dispute investigations",
++      "url": "https://www.consumerfinance.gov/archive/newsroom/cfpb-sues-experian-for-sham-investigations-of-credit-report-errors/",
++      "accessed": "2026-10-20",
++      "source_date": "2025-01-07; PREDATES_VIDEO",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "CFPB alleged faulty intake, failure to convey relevant dispute information and improper reinsertion. Allegations were not a final adjudication at video publication."
++    },
++    {
++      "claim": "Equifax dispute order",
++      "url": "https://www.consumerfinance.gov/archive/newsroom/cfpb-orders-equifax-to-pay-15-million-for-improper-investigations-of-credit-reporting-errors/",
++      "accessed": "2026-10-20",
++      "source_date": "2025-01-17; PREDATES_VIDEO",
++      "access_scope": "PRIMARY_RELEASE_SEARCH_EXCERPT",
++      "finding": "CFPB ordered a $15 million civil penalty for improper investigations of credit-reporting disputes."
++    },
++    {
++      "claim": "Mortgage score-model transition",
++      "url": "https://www.fhfa.gov/news/fact-sheet/fhfa-announcement-on-credit-score-models",
++      "accessed": "2026-10-20",
++      "source_date": "2022-10-24; PREDATES_VIDEO",
++      "access_scope": "FULL_PRIMARY_HTML",
++      "finding": "FHFA approved FICO 10T and VantageScore 4.0 for future Enterprise use in 2022. The later implementation step occurred after the video's 2026-04-08 publication and is retrospective."
+     }
+@@ -82,22 +116,23 @@
+
+     {
+-      "method": "Standard monthly amortization, 360 payments; utilization ratios; implied limit from 9%->31% jump with $2,800",
++      "method": "Frozen lifetime-view-rate medians from VIDEO_MASTER.csv",
++      "assumptions": "Frozen views and age_days; nearest age-eligible same-channel long-form peers under build_baseline.compare; first five listed peers for sensitivity.",
+       "results": {
+-        "pmt_380K_7.1pct": 2553.72,
+-        "pmt_380K_6.7pct": 2452.06,
+-        "monthly_diff": 101.67,
+-        "lifetime_diff": 36599.45,
+-        "narrator_claim": 31200,
+-        "narrator_implied_monthly": 86.67,
+-        "interest_7.1": 539339.72,
+-        "interest_6.7": 502740.27,
+-        "util_limit_cut": 0.2857,
+-        "util_before_close": 0.2,
+-        "util_after_close": 0.45,
+-        "thomas_implied_limit": 12727.27,
+-        "thomas_implied_prior_balance": 1145.45,
+-        "gap_740_711": 29,
+-        "gap_738_711": 27,
+-        "gap_750_712": 38,
++        "target_views_per_day": 34.45110315733014,
+         "peer_ratio_10": 0.497645462774112,
+-        "peer_ratio_5": 0.4728675314840203
++        "peer_ratio_5": 0.4728675314840203,
++        "tier_10": "WEAK",
++        "tier_5": "WEAK",
++        "peer_ids_10": ["mErWx9GiVUc", "eAzo0uvSnus", "zwrY8QsDTgs", "4eGrsL5CwBQ", "ypUI1Sv-Nhk", "R_E6OOnF9e4", "8rhg_K7c4O8", "f6HIYQUiMoU", "ccNuYRhrA0U", "8LncpNMNPW8"],
++        "peer_ids_5": ["mErWx9GiVUc", "eAzo0uvSnus", "zwrY8QsDTgs", "4eGrsL5CwBQ", "ypUI1Sv-Nhk"]
++      }
++    },
++    {
++      "method": "Standard fully amortizing fixed-rate mortgage principal-and-interest calculation",
++      "assumptions": "$380,000 principal; 360 monthly payments; nominal annual rates divided by 12; no points, fees, taxes, insurance, prepayment or refinance.",
++      "results": {
++        "monthly_payment_at_7_1_percent": 2553.7214465195143,
++        "monthly_payment_at_6_7_percent": 2452.0563165523795,
++        "total_payment_difference": 36599.446788168534,
++        "script_claim": 31200,
++        "disposition": "SCRIPT_VALUE_NOT_REPRODUCED_UNDER_STATED_SIMPLE_ASSUMPTIONS"
+       }
