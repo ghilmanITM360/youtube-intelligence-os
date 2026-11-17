@@ -1,0 +1,149 @@
+{
+  "data": {
+    "id": "sITkppEYgnOijb9Oz",
+    "actId": "h7sDV53CddomktSi5",
+    "userId": "H24ACSyg2vOtQxYik",
+    "startedAt": "2026-10-20T07:37:20.801Z",
+    "finishedAt": "2026-10-20T07:37:51.409Z",
+    "status": "SUCCEEDED",
+    "statusMessage": "Finished! Total 5 requests: 5 succeeded, 0 failed.",
+    "isStatusMessageTerminal": true,
+    "meta": {
+      "origin": "WEB",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    },
+    "stats": {
+      "inputBodyLen": 486,
+      "migrationCount": 0,
+      "rebootCount": 0,
+      "restartCount": 0,
+      "durationMillis": 30264,
+      "resurrectCount": 0,
+      "runTimeSecs": 30.264,
+      "metamorph": 0,
+      "computeUnits": 0.008406666666666666,
+      "memAvgBytes": 139004885.37148538,
+      "memMaxBytes": 172814336,
+      "memCurrentBytes": 0,
+      "cpuAvgUsage": 7.86412466462553,
+      "cpuMaxUsage": 88.29313131313131,
+      "cpuCurrentUsage": 0,
+      "netRxBytes": 1034967,
+      "netTxBytes": 192751
+    },
+    "options": {
+      "build": "latest",
+      "timeoutSecs": 600,
+      "memoryMbytes": 1024,
+      "maxTotalChargeUsd": 0.05,
+      "maxItems": null,
+      "isMaxTotalChargeUsdSetByUser": true,
+      "diskMbytes": 2048
+    },
+    "buildId": "In6STRVSC4MxYagpi",
+    "exitCode": 0,
+    "defaultKeyValueStoreId": "LBzna7m0HhR3bldoy",
+    "defaultDatasetId": "9wMPVD6GcfyqlLsXs",
+    "defaultRequestQueueId": "VwuY2aNKSNBk5gfjM",
+    "storageIds": {
+      "keyValueStores": {
+        "default": "LBzna7m0HhR3bldoy"
+      },
+      "datasets": {
+        "default": "9wMPVD6GcfyqlLsXs"
+      },
+      "requestQueues": {
+        "default": "VwuY2aNKSNBk5gfjM"
+      }
+    },
+    "pricingInfo": {
+      "minimalMaxTotalChargeUsd": null,
+      "pricingModel": "PAY_PER_EVENT",
+      "isPriceChangeNotificationSuppressed": true,
+      "createdAt": "2026-09-02T13:52:04.236Z",
+      "startedAt": "2026-09-02T13:52:04.236Z",
+      "apifyMarginPercentage": 0.2,
+      "pricingPerEvent": {
+        "actorChargeEvents": {
+          "result": {
+            "eventTitle": "Video",
+            "eventDescription": "Each video written to the dataset.",
+            "isOneTimeEvent": false,
+            "isPrimaryEvent": true,
+            "eventPriceUsd": 0.004
+          },
+          "date-filter": {
+            "eventTitle": "Add-on: Date range for channels",
+            "eventDescription": "Extra cost when date filtering is used on channels.",
+            "isOneTimeEvent": false,
+            "eventPriceUsd": 0.0013
+          },
+          "ai-video-description": {
+            "eventTitle": "Add-on: AI description",
+            "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+            "isOneTimeEvent": false,
+            "eventPriceUsd": 0.015
+          },
+          "ai-video-summary": {
+            "eventTitle": "Add-on: AI summary",
+            "eventDescription": "Extra cost for AI summary of a video per minute.",
+            "isOneTimeEvent": false,
+            "eventPriceUsd": 0.015
+          },
+          "transcribeMinute": {
+            "eventTitle": "Add-on: Transcript minute",
+            "eventDescription": "Extra cost charged per started minute per video",
+            "isOneTimeEvent": false,
+            "eventPriceUsd": 0.048
+          }
+        }
+      }
+    },
+    "chargedEventCounts": {
+      "result": 3,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "platformUsageBillingModel": "DEVELOPER",
+    "accountedChargedEventCounts": {
+      "result": 3,
+      "date-filter": 0,
+      "ai-video-description": 0,
+      "ai-video-summary": 0,
+      "transcribeMinute": 0
+    },
+    "standby": null,
+    "generalAccess": "FOLLOW_USER_SETTING",
+    "buildNumber": "0.0.318",
+    "containerUrl": "https://h3tvnx8ewtkd.runs.apify.net",
+    "usageTotalUsd": 0.012,
+    "consoleUrl": "https://console.apify.com/view/runs/sITkppEYgnOijb9Oz",
+    "eventUsage": {
+      "result": {
+        "eventTitle": "Video",
+        "eventTotalUsd": 0.012
+      },
+      "date-filter": {
+        "eventTitle": "Add-on: Date range for channels",
+        "eventTotalUsd": 0
+      },
+      "ai-video-description": {
+        "eventTitle": "Add-on: AI description",
+        "eventTotalUsd": 0
+      },
+      "ai-video-summary": {
+        "eventTitle": "Add-on: AI summary",
+        "eventTotalUsd": 0
+      },
+      "transcribeMinute": {
+        "eventTitle": "Add-on: Transcript minute",
+        "eventTotalUsd": 0
+      }
+    },
+    "output": {
+      "dataset": "https://api.apify.com/v2/datasets/9wMPVD6GcfyqlLsXs/items"
+    }
+  }
+}
