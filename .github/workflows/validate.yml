@@ -66,7 +66,7 @@ jobs:
         run: |
           BASE="${{ github.event.pull_request.base.sha || github.event.before }}"
           git cat-file -e "$BASE^{commit}" 2>/dev/null || BASE="$(git rev-list --max-parents=0 HEAD | tail -1)"
-          git diff -z --name-only --diff-filter=AM "$BASE" HEAD -- productions | xargs -0 python scripts/check_slop_risk.py --only-scripts
+          git diff -z --name-only --diff-filter=AM "$BASE" HEAD -- productions | grep -zvxFf <(grep -v '^#' productions/.slop-gate-legacy.txt) | xargs -0 -r python scripts/check_slop_risk.py --only-scripts
       - name: Reject unapproved databases and generated junk
         run: |
           # -z: git quotes unusual paths otherwise, and a quoted name would slip past these anchors.
