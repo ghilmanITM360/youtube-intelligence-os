@@ -1,0 +1,2 @@
+Listen to each clip and record exact words, dates and numbers; approximation; measurement and period; intelligibility; listener identity/date; confidence sufficient to certify wording. The requested window begins 1.5 seconds into each clip. No direct listening has been performed by the agent.
+The second PxgCsLSf-w4 clip ends at the source end64.987891s, so trailing context is0.547891s rather than1.5s. Both requested windows are complete.
