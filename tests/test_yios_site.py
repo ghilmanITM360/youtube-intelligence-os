@@ -75,7 +75,9 @@ def test_assistant_tools_and_model_loop(tmp_path, monkeypatch):
     assert "error" in json.loads(a.run_tool("sql_query", {"sql": "delete from videos"}))  # read-only: only SELECT
     assert "error" in json.loads(a.run_tool("sql_query", {"sql": "select 1; select 2"}))
     assert "error" in json.loads(a.run_tool("read_document", {"path": "../../etc/passwd"}))  # only inventoried files
-    assert a.fts_query('aa" OR "bb') == '"aa" "or" "bb"'  # operators in a question cannot alter the FTS query
+    assert a.fts_query('aa" OR "bb') == '"aa" "bb"'  # operators in a question cannot alter the FTS query
+    assert a.fts_query("what if channel kaye baraye batao blood pressure") == '"blood" "pressure"'  # filler words (English + Roman Urdu) are dropped
+    out = []; a.retrieval_only("what if channel kaye baraye batao", "", out.append); assert out[-1]["type"] == "done"  # filler-only question: answers, never errors
     script = iter([([{"type": "text", "text": "Looking."}, {"type": "tool_use", "id": "t1", "name": "channel_overview", "input": {"channel_id": cid}}], {"input_tokens": 5, "output_tokens": 3}),
                    ([{"type": "text", "text": f"Done [channel: {cid}]"}], {"input_tokens": 9, "output_tokens": 4})])
     seen = []; a.chat([{"role": "user", "content": "tell me about it"}], seen.append, cid, model_fn=lambda m, s: next(script))

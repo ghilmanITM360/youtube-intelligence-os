@@ -8,7 +8,7 @@ the full-text search index and the inventoried files. Which model answers is con
 
 With neither set, the assistant still answers with search results only (no model, nothing leaves this machine).
 When a model is configured, the question and the excerpts the tools return are sent to that provider."""
-import gzip, json, os, re, sqlite3, time, urllib.error, urllib.request
+import html, gzip, json, os, re, sqlite3, time, urllib.error, urllib.request
 
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 SEARCH_DB = os.environ.get("YIOS_SEARCH_DB", f"{R}/data/catalog/yios_search.db")
@@ -28,9 +28,18 @@ def sconn():
     return c
 
 
+# filler words (English + Roman-Urdu/Hindi) that match nearly every document and drown the real topic words
+STOP = set("""the an of to for in on is are was were be what if how why who which when where about tell me show give find and or with from this that it its my our you your i we they them
+channel channels video videos please can could would should do does did has have had any some all most more into than then there here also not no yes
+kaye kay ke ka ki ko baraye liye batao bata bataye batain do de dena hai hain tha thi mein me main par pe aur ya se say ye yeh wo woh kya kaun kitna kitne kitni karo kar kare karna
+dikhao dikha mujhe humain hamain hum ek ik wala wali ab to bhi bi jo jis kis koi sab saray sare""".split())
+
+
 def fts_query(q, mode="and"):
-    """User text -> a safe FTS5 query (every word quoted, so punctuation or operators in the question can never break or alter the query)."""
-    w = re.findall(r"[\w'-]{2,}", q.lower())[:12]
+    """User text -> a safe FTS5 query (every word quoted, so punctuation or operators in the question can never break or alter the query).
+    Filler words are dropped (unless that would leave nothing)."""
+    w = re.findall(r"[\w'-]{2,}", q.lower())
+    w = ([x for x in w if x not in STOP] or w)[:12]
     return (" OR " if mode == "or" else " ").join('"' + x.replace('"', "") + '"' for x in w)
 
 
@@ -64,7 +73,7 @@ def channel_docs(cid, limit=200):
         q = ",".join("?" * len(RESEARCH_ROLES))
         return [dict(r) for r in s.execute(
             f"select d.ref, d.title, d.role, d.bytes, dc.via, (select count(*) from doc_channels x where x.doc_id=d.id) nch, substr(replace(f.text, char(10), ' '), 1, 320) preview from doc_channels dc join docs d on d.id=dc.doc_id join fts f on f.rowid=d.id "
-            f"where dc.channel_id=? and d.kind='doc' and d.role in ({q}) order by (dc.via='id') desc, d.role, d.bytes desc limit ?", (cid, *RESEARCH_ROLES, limit))]
+            f"where dc.channel_id=? and d.kind='doc' and d.ref not like '%SHA256SUMS%' and d.role in ({q}) order by (dc.via='id') desc, (d.ref like '%.md') desc, nch, d.role, d.bytes desc limit ?", (cid, *RESEARCH_ROLES, limit))]
     finally: s.close()
 
 
@@ -277,13 +286,52 @@ def clean(snip):
     return re.sub(r"\s+", " ", re.sub(r"\[\d+\.\d+\]\s*", "", snip)).replace("«", "**").replace("»", "**").strip()
 
 
+def norm(s):
+    return " ".join(re.sub(r"[^\w\s]", " ", re.sub(r"['\u2019]s\b", "", s.lower())).split())
+
+
+def match_channels(question, limit=5):
+    """Channels the question refers to: the longest run of question words found inside a channel name (a single word needs 5+ letters and must not be filler)."""
+    qw = norm(question).split()
+    grams = {" ".join(qw[i:i + n]) for n in (3, 2, 1) for i in range(len(qw) - n + 1)}
+    grams = [g for g in grams if " " in g or (len(g) >= 5 and g not in STOP)]
+    if not grams: return []
+    c = API["conn"]()
+    try: rows = c.execute("select c.channel_id, c.name, c.handle, count(v.video_id) videos from channels c left join videos v using(channel_id) group by 1").fetchall()
+    finally: c.close()
+    out = []
+    for r in rows:
+        hay = " " + norm((r["name"] or "") + " " + (r["handle"] or "").lstrip("@")) + " "
+        hit = [g for g in grams if f" {g} " in hay and any(w not in STOP for w in g.split())] or [g for g in grams if " " in g and f" {g} " in hay]
+        if hit: out.append((max(len(g.split()) for g in hit), max(len(g) for g in hit), r["videos"], dict(r)))
+    out.sort(key=lambda x: (-x[0], -x[1], -x[2]))
+    return [((o[0], o[1]), o[3]) for o in out[:limit]]
+
+
 def retrieval_only(question, channel_id, emit):
-    """No model configured: answer with the evidence itself (ranked documents, transcript hits, matching channels)."""
-    emit({"type": "text", "text": "_No AI model is configured, so this is search only (nothing left this machine). Set `ANTHROPIC_API_KEY` (or `YIOS_LLM_BASE_URL`) and restart the site to get written answers._\n"})
-    ch = json.loads(run_tool("find_channels", {"query": question[:60], "limit": 5})) if len(question) < 60 else []
-    if ch and isinstance(ch, list): emit({"type": "text", "text": "**Channels matching the text**\n" + "\n".join(f"- [channel: {c['channel_id']}] {c['name']} ({c['videos']} videos)" for c in ch) + "\n"})
+    """No model configured: answer with the evidence itself (the channel the question names, its research documents, ranked search hits)."""
+    emit({"type": "text", "text": "No AI model is configured, so this is search only (nothing left this machine). Set `ANTHROPIC_API_KEY` (or `YIOS_LLM_BASE_URL`) and restart the site to get written answers.\n"})
+    found = match_channels(question)
+    scope = channel_id or ""
+    # the question names one channel when its best match is unique (ties like "blood pressure" are a topic, not a channel)
+    if found and not scope and found[0][1]["videos"] and (len(found) == 1 or found[0][0] != found[1][0]): scope = found[0][1]["channel_id"]
+    if found and not channel_id:
+        emit({"type": "text", "text": "\n**Channels matching your words**\n" + "\n".join(f"- [channel: {c['channel_id']}] {html.unescape(c['name'] or '')} ({c['videos']} videos)" for _, c in found) + "\n"})
+    if scope:
+        ov = json.loads(run_tool("channel_overview", {"channel_id": scope}))
+        if "error" not in ov:
+            emit({"type": "tool", "name": "channel_overview", "input": {"channel_id": scope}})
+            top = "\n".join(f"  - [video: {v['video_id']}] {v['title']} ({v['views']:,} views)" for v in ov["top_videos"][:5] if v["views"] is not None)
+            emit({"type": "text", "text": f"\n**{html.unescape(ov['name'] or '')}** [channel: {scope}]: {ov['videos_in_catalogue']} videos, {ov['views_total'] or 0:,} views in total (median {ov['views_median'] or 0:,}), {ov['first']} to {ov['last']}, {ov['transcripts']} transcripts, {ov['specific_files']} channel-specific files.\n"
+                                      + ("Most viewed:\n" + top + "\n" if top else "")})
     for kind, label in (("doc", "Research documents"), ("transcript", "Transcripts")):
         emit({"type": "tool", "name": "search_research", "input": {"query": question, "kind": kind}})
-        d = search(question, kind, channel=channel_id or "", limit=6)
+        topic = [x for x in re.findall(r"[\w'-]{2,}", question.lower()) if x not in STOP]
+        if scope and not topic and kind == "transcript": continue  # the question only named the channel: its overview and files above are the answer
+        d = search(question, kind, channel=scope, limit=6) if topic or not scope else {"total": 0, "items": []}
+        if not d["items"] and scope and kind == "doc":  # the question only named the channel: list what has been written about it
+            docs = channel_docs(scope, 8)
+            emit({"type": "text", "text": f"\n**{label}** (research tied to this channel: {len(docs)} shown, ids first)\n" + ("\n".join(f"- [file: {x['ref']}] {x['title']}" + (" (name only)" if x["via"] == "name" else "") for x in docs) or "- nothing found") + "\n"})
+            continue
         emit({"type": "text", "text": f"\n**{label}** ({d['total']} hits)\n" + ("\n".join(f"- [{'file' if kind == 'doc' else 'video'}: {i['ref']}] {i['title']} — {clean(i['snippet'])}" for i in d["items"]) or "- nothing found") + "\n"})
     emit({"type": "done", "usage": {}})
