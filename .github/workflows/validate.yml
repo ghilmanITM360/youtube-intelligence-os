@@ -45,12 +45,19 @@ jobs:
       - name: Exercise partial catalog rebuilder against disposable database
         run: |
           python -m scripts.rebuild_inventory_catalog --database "$RUNNER_TEMP/bootstrap_inventory_catalog.db"
+      # The frozen audit reads its pinned copy. These gates run first so that committed evidence is judged before any rebuild.
+      - name: Finance and reference framework gates
+        run: |
+          python -m pytest -q research/finance-economics-intelligence/reference-framework/test_reference_comparison.py
+          python research/finance-economics-intelligence/reference-framework/reference_comparison.py check-all
+          python research/finance-economics-intelligence/validate_audit_966.py
       - name: Build channel registry from committed canonical sources
         run: python -m scripts.build_youtube_channel_registry --write-ledgers
       - name: Validate provenance and registry
         run: |
           python -m scripts.validate_dataset_ledgers
           python -m scripts.validate_youtube_channel_registry
+          python research/finance-economics-intelligence/validate_audit_966.py --current-registry
       - name: Run distributable suite
         run: python -m pytest -q
       - name: AI-slop risk gate on changed production scripts
@@ -60,6 +67,9 @@ jobs:
           git diff -z --name-only --diff-filter=AM "$BASE" HEAD -- productions | xargs -0 python scripts/check_slop_risk.py --only-scripts
       - name: Reject unapproved databases and generated junk
         run: |
-          test -z "$(git ls-files 'data/catalog/*.db-wal' 'data/catalog/*.db-shm' 'outputs/**' '*.pyc')"
-          UNAPPROVED_DBS="$(git ls-files '*.db' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' || true)"
+          # -z: git quotes unusual paths otherwise, and a quoted name would slip past these anchors.
+          TRACKED="$(git ls-files -z | tr '\0' '\n')"
+          JUNK="$(echo "$TRACKED" | grep -iE '\.(db-wal|db-shm|db-journal|sqlite3?|pyc)$|^outputs/' || true)"
+          test -z "$JUNK" || { echo "Tracked database sidecar or generated junk:"; echo "$JUNK"; exit 1; }
+          UNAPPROVED_DBS="$(echo "$TRACKED" | grep -iE '\.db$' | grep -vFx -e 'data/catalog/youtube_inventory.db' -e 'data/catalog/youtube_channel_registry.db' -e 'data/knowledge/reference_knowledge.db' -e 'research/finance-economics-intelligence/audit-baseline/youtube_channel_registry.frozen.db' || true)"
           test -z "$UNAPPROVED_DBS" || { echo "Unapproved tracked database(s):"; echo "$UNAPPROVED_DBS"; exit 1; }

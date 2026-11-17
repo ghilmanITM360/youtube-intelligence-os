@@ -10,7 +10,7 @@ class CurrentDeepAuditQualityContract(unittest.TestCase):
     def setUpClass(cls):
         cls.rows = {r['Video_ID']: r for r in map(json.loads, (BASE/'VIDEO_AUDIT_966.jsonl').read_text().splitlines())}
         cls.master = {r['Video_ID']: r for r in __import__('build_audit_966').read('VIDEO_MASTER.csv')}
-        cls.con = sqlite3.connect(f'file:{ROOT}/data/catalog/youtube_channel_registry.db?mode=ro', uri=True)
+        cls.con = sqlite3.connect(f"file:{BASE/'audit-baseline/youtube_channel_registry.frozen.db'}?mode=ro", uri=True)
 
     @classmethod
     def tearDownClass(cls):

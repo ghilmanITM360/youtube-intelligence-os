@@ -8,6 +8,8 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parents[1]
+# The audit's evidence is this exact registry version (MANIFEST.json source_hashes). The live data/catalog copy may move on.
+FROZEN_REGISTRY = BASE/'audit-baseline/youtube_channel_registry.frozen.db'
 DIMENSIONS = ('TITLE', 'THUMBNAIL', 'SCRIPT', 'TOPIC', 'PERFORMANCE', 'VIRALITY')
 STATUSES = {'COMPLETE_EVIDENCE_BACKED', 'COMPLETE_LIMITED_EVIDENCE', 'IN_PROGRESS', 'BLOCKED_MISSING_SOURCE', 'NOT_STARTED'}
 
@@ -93,7 +95,7 @@ def build():
     thumbnail_recovery = {r['Video_ID']:r for r in json.loads(thumbnail_recovery_path.read_text())['receipts']} if thumbnail_recovery_path.exists() else {}
     batches = load_batches(BASE/'audit-batches')
     assert not batch_identity_errors({r["Video_ID"] for r in master}, batches), "Unknown batch video"
-    con = sqlite3.connect(f'file:{ROOT}/data/catalog/youtube_channel_registry.db?mode=ro', uri=True)
+    con = sqlite3.connect(f'file:{FROZEN_REGISTRY}?mode=ro', uri=True)
     con.row_factory = sqlite3.Row
     result = []
     for v in master:

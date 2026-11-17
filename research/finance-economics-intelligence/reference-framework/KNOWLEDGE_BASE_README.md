@@ -27,7 +27,7 @@ Rebuild / portability: `python build_reference_kb.py <new-path>.db --fresh` (the
 
 
 ## Enforcement entry points (2026-11-02)
-- `scripts/run_youtube_intelligence.py --framework-plan <plan.json>`: plan must pass `content_plan_check.py` against `data/knowledge/reference_knowledge.db` (retrieval present, real and applicable rules, each of seven stages implemented or excepted) before any plan is written; exit 2 otherwise. Without the flag the plan carries no `reference_framework` block and must not be described as framework-guided.
-- `research/finance-economics-intelligence/validate_audit_966.py`: now runs `reference_comparison.check_coverage()` (accepted NICK_281+ batches need comparisons; every ledger reanalysis file must validate). Failing it fails the canonical audit validation.
+- `scripts/run_youtube_intelligence.py --framework-plan <plan.json>`: plan must pass `content_plan_check.py` against `data/knowledge/reference_knowledge.db` (retrieval present, real and applicable rules, rule dimension fits stage, rule source section retrieved, non-trivial text, each of seven stages implemented or reasonably excepted, at least one rule implemented) before any plan is written; exit 2 otherwise. Without the flag the plan carries no `reference_framework` block and must not be described as framework-guided.
+- `research/finance-economics-intelligence/validate_audit_966.py`: now runs `reference_comparison.check_coverage()` (accepted NICK_281+ batches need a comparison that validates and matches the batch and video; every ledger reanalysis file must validate). Failing it fails the canonical audit validation.
 - `AGENTS.md` records the requirement. All gates are structural; none set a record to semantically reviewed.
 - Tests: `reference-framework/test_reference_comparison.py` (missing retrieval, invalid rule, missing implementation fail; valid plan and an explicit exception pass).

@@ -1,5 +1,7 @@
 # Finance canonical writer ownership
 
+> **Current rule (2026-11-06):** both Macs are eligible writers; see "Writer coordination" in `AGENTS.md`. Everything below is dated history, kept unchanged. Sole-writer states in it applied only to their dates.
+
 Release date: 2026-10-23. Weekend: October 24–25. Canonical branch: `research/finance-economics-intelligence`; repository: `ghilmanITM360/youtube-intelligence-os`; draft PR #36.
 
 **State on successful publication of this release: `MACHINE_B_RELEASED_AWAITING_MACHINE_A_ACCEPTANCE`.** This release is effective only after its commit is pushed normally and local/origin/live GitHub/PR heads match. A local unpushed document alone is not a completed release. The external Friday result records that confirmation and exact commit.
