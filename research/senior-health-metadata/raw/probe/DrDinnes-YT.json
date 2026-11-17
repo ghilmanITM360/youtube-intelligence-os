@@ -1,0 +1,284 @@
+{
+ "run": {
+  "id": "sqWLXS7Jevjvlhrsk",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:02:26.397Z",
+  "finishedAt": "2026-11-11T08:02:40.959Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 366,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 14111,
+   "resurrectCount": 0,
+   "runTimeSecs": 14.111,
+   "metamorph": 0,
+   "computeUnits": 0.003919722222222222,
+   "memAvgBytes": 160211816.80640778,
+   "memMaxBytes": 186142720,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 13.081456922886325,
+   "cpuMaxUsage": 94.01899871630295,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 619204,
+   "netTxBytes": 85871
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "w2MuynvrbYRLebYXY",
+  "defaultDatasetId": "ypYc2ZNee1zmlnj6L",
+  "defaultRequestQueueId": "nfLwWv9guLlmFrIwu",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "w2MuynvrbYRLebYXY"
+   },
+   "datasets": {
+    "default": "ypYc2ZNee1zmlnj6L"
+   },
+   "requestQueues": {
+    "default": "nfLwWv9guLlmFrIwu"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://tekqj9hr5phk.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/sqWLXS7Jevjvlhrsk",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/ypYc2ZNee1zmlnj6L/items?signature=MC4wLjEzZWF2MGl5ak91N2E3MTNtN21vWA"
+  }
+ },
+ "records": [
+  {
+   "title": "Over 60? The REAL Reason You Wake Up to Pee at Night (Most Seniors Don't Know!)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "kcBf2fYtO34",
+   "url": "https://www.youtube.com/watch?v=kcBf2fYtO34",
+   "thumbnailUrl": "https://i.ytimg.com/vi/kcBf2fYtO34/maxresdefault.jpg",
+   "viewCount": 198,
+   "date": "2026-11-09T19:41:41.000Z",
+   "likes": 4,
+   "location": "UNITED STATES",
+   "channelName": "Dr. Dinnes Senior",
+   "channelUrl": "https://www.youtube.com/channel/UCvHD6lldf4L3XMAmGU44cYw",
+   "channelUsername": "DrDinnes-YT",
+   "collaborators": null,
+   "channelId": "UCvHD6lldf4L3XMAmGU44cYw",
+   "channelDescription": "👋 Welcome to Dr. Dinnes Senior! Simple, science-informed health tips to help seniors stay active, healthy, and independent. We cover healthy aging, heart health, joint & bone health, nutrition, supplements, and pain relief — with clear, practical advice without the medical jargon.\n\nSubscribe and take a simple step toward a healthier life! ❤️\n\n⚠️ This channel is for educational and informational purposes only and is not a substitute for personalized medical advice. Always consult your doctor or qualified healthcare professional.",
+   "channelJoinedDate": "Sep 22, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/9JcHKRVz-htGmJ1FLzvM1_4v8VOu70ZA2XwjTzs_VabWiqga761qQ4idbAoZDAA7gNFynpLH=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/whSl7SeR08nf9z7C0Kwv9040jMWNsyMsZ8q_UCLCjM9dgfyMCqQaK6IsErI9-B-Xv4NF3otiYw=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 23,
+   "channelTotalViews": 1070974,
+   "numberOfSubscribers": 6590,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@DrDinnes-YT",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "👋 Welcome to Dr. Dinnes Senior! Simple, science-informed health tips to help seniors stay active, healthy, and independent. We cover healthy aging, heart health, joint & bone health, nutrition, supplements, and pain relief — with clear, practical advice without the medical jargon.\n\nSubscribe and take a simple step toward a healthier life! ❤️\n\n⚠️ This channel is for educational and informational purposes only and is not a substitute for personalized medical advice. Always consult your doctor or qualified healthcare professional.",
+    "channelJoinedDate": "Sep 22, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "DrDinnes-YT",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/9JcHKRVz-htGmJ1FLzvM1_4v8VOu70ZA2XwjTzs_VabWiqga761qQ4idbAoZDAA7gNFynpLH=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/whSl7SeR08nf9z7C0Kwv9040jMWNsyMsZ8q_UCLCjM9dgfyMCqQaK6IsErI9-B-Xv4NF3otiYw=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 23,
+    "channelTotalViews": 1070974,
+    "numberOfSubscribers": 6590,
+    "isChannelVerified": false,
+    "channelName": "Dr. Dinnes Senior",
+    "channelUrl": "https://www.youtube.com/channel/UCvHD6lldf4L3XMAmGU44cYw",
+    "channelId": "UCvHD6lldf4L3XMAmGU44cYw",
+    "inputChannelUrl": "https://www.youtube.com/@DrDinnes-YT",
+    "isAgeRestricted": false
+   },
+   "duration": "00:14:51",
+   "commentsCount": 4,
+   "text": "#seniorhealth #kidneyhealth #nocturia #bladder \nOver 60? The REAL Reason You Wake Up to Pee at Night (Most Seniors Don't Know!)\n\nWaking up at night to pee after 60? You’re not alone. Up to six in ten older adults get up two or more times a night. \n\nIn this video, I walks through a research-checked nighttime routine for nocturia: when to drink, how salt can affect night trips, how to make the walk to the bathroom safer, why your pill list and kidney safety matter, and why your bladder may not be the real cause. We cover sleep apnea, bladder diaries, red-flag symptoms like blood in the urine, and five questions to ask your doctor. Sources include the CDC, NIH/NLM, Cleveland Clinic Journal of Medicine, and published studies. Where evidence is limited, we say so.\n\n📚 Research References:\n▪Nocturia is very common (Bosch & Weiss, J Urol, 2010).\nhttps://pubmed.ncbi.nlm.nih.gov/20620...\n▪The mechanism is often overnight urine production, not the bladder (Varilla, Cleveland Clinic Journal of Medicine, 2011; StatPearls/NCBI).\nhttps://community.the-hospitalist.org...\n▪Kidney disease is silent (CDC, updated March 2026).\nhttps://www.cdc.gov/kidney-disease/ph...\n▪NSAIDs and kidneys (NIDDK guidance as summarized by Express Scripts, March 2026; NKF).\nhttps://www.express-scripts.com/pharm...\n\n▪▪▪ What Is the REAL Ideal Blood Pressure After 65?\n   • What Is the REAL Ideal Blood Pressure Afte...  \n\nDisclaimer: ⚠️ This channel is for educational and informational purposes only and is not a substitute for personalized medical advice. Always consult your doctor or qualified healthcare professional. \n\n#BrainHealth #SeniorHealth #BloodPressure #HealthyAging #CardiovascularHealth #SleepHealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyhealth",
+     "text": "#kidneyhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/nocturia",
+     "text": "#nocturia"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bladder",
+     "text": "#bladder"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20620395/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/20620..."
+    },
+    {
+     "url": "https://community.the-hospitalist.org/index.php/content/nocturia-elderly-wake-call",
+     "text": "https://community.the-hospitalist.org..."
+    },
+    {
+     "url": "https://www.cdc.gov/kidney-disease/php/data-research/",
+     "text": "https://www.cdc.gov/kidney-disease/ph..."
+    },
+    {
+     "url": "https://www.express-scripts.com/pharmacy/blog/pain-relievers-and-your-kidneys",
+     "text": "https://www.express-scripts.com/pharm..."
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=gQOLx42PJaQ",
+     "text": "   • What Is the REAL Ideal Blood Pressure Afte...  "
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/brainhealth",
+     "text": "#BrainHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bloodpressure",
+     "text": "#BloodPressure"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/cardiovascularhealth",
+     "text": "#CardiovascularHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/sleephealth",
+     "text": "#SleepHealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "You wake up. The room is dark. The clock\nsays 2:47. You lie there. You hope it\nwill pass. It doesn't. So you sit up\nslowly. You find your slippers with your\nfeet. You shuffle down the hall with one\nhand on the wall. Then you're back in\nbed, wide awake, and a little voice\nwhispers, what is wrong with me? If\nthat's you, hear this first. Nothing is\nwrong with you, and this is not your\nfault. A review in the Journal of\nUrology found that up to six in 10 older\nadults wake two or more times a night to\nurinate. Doctors call it nocturia. That\njust means waking at night to urinate.\nAlmost nobody explains why it happens. A\nshort appointment rarely leaves room for\nit. So many people hear, oh, that's just\nage, and go home with no plan. Here's\nwhat matters. Those night trips cost\nmore than sleep. Research links them to\nmore falls, and the cause is often not\nyour bladder at all. Sometimes it's the\ntiming of your drinks. Sometimes it's\nyour salt. Sometimes it's your pills.\nAnd sometimes it's how you breathe in\nyour sleep. I'm Dennis Jiang. Today is a\nfive-step countdown. Five simple things\nto do at night to help your bladder,\nyour kidneys, and your safety. Starting\nwith the easiest, ending with the\nbiggest surprise. Number five is about\nwhen you drink. Number four is hiding in\nyour dinner plate. Number three is about\nthe walk to the bathroom. Number two is\nabout your medicine cabinet. And number\none, it changes how you think about all\nof this. It's about what your nighttime\ntrips may be trying to tell you. Stay\nfor that one. I read the research so you\ndon't have to. I'll tell you what's\nstrong. I'll tell you what's thin. And\nI'll say so clearly when the evidence is\nlimited. First, a quick question. In the\ncomments, type your age and how many\ntimes you wake each night. Just 72\ntwice. You'll see how many people are\nright there with you. Number five,\nchange when you drink, not just how\nmuch. Let's start with what your body is\nsupposed to do. The National Library of\nMedicine's Medline Plus that your body\nnormally makes less urine at night.\nThat's why most people can sleep six to\neight hours. But as we age, that\nnighttime slowdown can weaken. A review\nin the Cleveland Clinic Journal of\nMedicine describes how a hormone called\nvasopressin, also called ADH, can drop\ntoo low at night in some older adults.\nThat's the signal that tells your\nkidneys save water. The same review\nnotes that the aging kidney is also less\nable to concentrate urine. Put simply,\nyour kidneys make more urine just when\nyou want them to rest. Think of your\nkidneys as a night shift worker. If you\nhand them a big pile of work at 9:00\np.m., they're working at 3:00 a.m.\nHere's a picture. Imagine a man named\nRaymond, 67. Every evening, Raymond\ntakes his pills with a big glass of\nwater. Then he sips tea during his\nshows. By 10:00, he's had a lot to\ndrink. At 1:00 a.m. and again at 4:00\na.m., he's up. He thinks his bladder is\nfailing. It's not failing. It's timing.\nMedline Plus says drinking too much in\nthe evening can cause night trips.\nCaffeine and alcohol with or after\ndinner can add to it. Many clinicians\nsuggest finishing most of your drinks a\ncouple of hours before bed. I'll be\nhonest, that couple of hours is common\nguidance, not a hard rule proven by big\ntrials. It's a safe thing to test. Now\nthe important part. This does not mean\ndrinking less overall. The Cleveland\nClinic review notes that people who\nsimply cut back on fluids often get\nlimited results. Spread your drinks\nearlier in the day instead. If you have\nheart or kidney disease and your doctor\nhas given you a fluid limit, follow\nthat. So move your drinks earlier. Don't\ncut your daily total unless your doctor\nsays so. This is not I drink too much.\nIt's I drink at the wrong time. And that\nis an easy fix. Quick comment prompt.\nWhat time do you usually wake up? Let's\nsee the pattern. And here's something\nsurprising. The next one is hiding in\nyour dinner. A study of 321 people found\nsomething that most people have never\nconnected to nighttime bathroom trips.\nOkay, number four. Number four. go\neasier on salt at dinner.\nHere's the idea. Your body needs water\nto flush out extra salt. More salt means\nmore thirst and more fluid to clear, and\nsome of that clearing happens at night.\nThink of salt like a house guest who\nbrings friends. For every bit of salt,\nyour body needs water to usher it out\nthe door. But there's good news. Cutting\nsalt is already recommended for blood\npressure. The American Heart Association\nsays to aim for no more than 2,300\nmilligrams of sodium a day. That's about\none teaspoon of salt, and less is even\nbetter. So you may get a double benefit.\nDolores, 72. Dinner is canned soup and a\ndeli sandwich. It tastes light, but it's\nloaded with sodium. By midnight, she's\nthirsty. Then up at 2:00 a.m., she\nthinks, my bladder is weak. It's not\nweak. It's a salty dinner. Where's the\nsodium hiding? Canned soups, deli meats,\nfrozen dinners, and restaurant food.\nRead labels. Pick one salty item at\ndinner and swap it. Just one. Small\nchange. One caution. If you have heart\nfailure, kidney disease, or take water\npills, ask your doctor before you change\nyour salt or fluids. Some people need\nmore guidance, not less. So this is not\na bad bladder. It's often a salty\ndinner, and that's very fixable. Stay\nwith me. The next one isn't about your\nbody at all. It's about the walk from\nyour bed to the bathroom, and research\nsays that short walk may be the riskiest\nfew steps of your day. Number three,\nmake the nighttime path safe. Let's talk\nabout falls. I know, nobody wants to,\nbut please stay with me because this is\nthe most practical step today. The CDC\nsays one in four adults 65 and older\nfalls every year. Falls are the leading\ncause of injury in this age group, and\nfewer than half of people who fall tell\ntheir doctor. So what does that have to\ndo with nocturia? But the picture makes\nsense. You're half asleep, the hallway\nis dark, you're in a hurry. That's a\nrisky mix. Imagine a man named Harold,\n76. He gets up twice a night. He doesn't\nturn on a light because he doesn't want\nto wake his wife. He walks in socks over\na slippery floor past the small rug. One\nnight his foot catches. This is not I'm\nclumsy. It's a dark hallway and a sleepy\nbrain. That's why the fix is the path,\nnot blame. Here's what you can do\ntonight. Plug in night lights from the\nbed to the bathroom. Clear the path.\nMove cords, shoes, and anything on the\nfloor. Remove loose rugs or secure them\nfirmly. Wear non-slip slippers, not\nsocks. And sit on the edge of the bed\nfor a moment before you stand. If\ngetting there is hard, ask your doctor\nor a physical or occupational therapist\nabout other options like a bedside\ncommode. And if you ever fall and hit\nyour head, especially if you take blood\nthinners, see a doctor right away. The\nCDC says to get checked. So remember,\nnight lights, a clear path, non-slip\nfootwear, and sit before you stand up.\nIf this video is helping you, tap like.\nAnd if someone you love gets up in the\nnight, a parent, a husband, a wife, a\nfriend, send it to them. It might help\nthem more than you know. Now, number\ntwo, it's sitting in your medicine\ncabinet. And for your kidneys, it\nmatters a lot. Number two, do a pill\nclock check. Your medicines can play a\nrole in nighttime bathroom trips and in\nyour kidney health. There are three\nthings to know. First, timing. Water\npills called diuretics make you urinate\nmore. MedlinePlus says that if nighttime\nurination is due to a diuretic, a doctor\nmay suggest taking it earlier in the\nday. That's something to ask about.\nDon't change it on your own. Second,\npain relievers. Many people take\nibuprofen or naproxen for aching knees\nor backs. They're called NSAIDs. The\nNIDDK, part of the National Institutes\nof Health, says they can be harmful\nduring illness or dehydration. And the\nrisk is higher if you're 60 or older or\nyou have diabetes, high blood pressure,\nheart failure, or liver disease.\nFor healthy adults, occasional use as\ndirected is usually low risk, but\nfrequent or daily use is where kidneys\ncan get hurt. And early kidney trouble\noften has no symptoms. If you need pain\nrelief often, ask your pharmacist, is\nthis safe for my kidneys? Some people\ncan use other options, but don't stop\nany heart medicine, like low-dose\naspirin, without your doctor.\nThird, certain bladder and PM medicines.\nSome older bladder pills and some\nover-the-counter sleep or PM products\nbelong to a group called\nanticholinergics.\nThe American Geriatrics Society's Beers\ncriteria, a list doctors use, advises\ncaution with strong ones in older\nadults.\nThe takeaway isn't panic, it's a\nconversation. Think of your medicine\ncabinet as a kitchen with too many\ncooks. The heart doctor adds one, the\nbone doctor adds one, the pharmacy adds\na sleep aid. Nobody tastes the whole\ndish.\nHere's a comment prompt.\nDo you know exactly what time of day you\ntake each pill? Type yes or no, not\nreally. No judgment.\nNow, number one, and I promise this\nchanges how you see nighttime trips for\ngood.\nNumber one, your bladder may be\ninnocent.\nHere's the big idea.\nWaking up at night to urinate is a\nsymptom. It's like a smoke alarm. The\nalarm isn't the fire. It tells you to\nlook around. And the research says the\nfire is often not in your bladder.\nStat Pearls, a medical reference on the\nNational Library of Medicine site, says\nthe most common cause of nocturia is\nmaking too much urine at night,\nreportedly in up to 88% of patients.\nThat's a kidney and hormone story, not\njust a bladder story.\nSo, what could be going on?\nHere are a few things to look into.\nSleep apnea. That's when your breathing\nstops and starts while you sleep.\nResearchers think it can change pressure\nin your chest, which sends your heart a\nfalse signal that there's too much\nfluid. Your heart then releases a\nhormone that tells your kidneys to get\nrid of salt and water. More urine, more\nnight trips.\nThen there's blood sugar, heart, and\nfluid. Conditions like diabetes and\nheart problems are linked to nocturia,\nand so is chronic kidney disease. Here's\nthe kidney part. The CDC says about 34%\nof adults 65 and older have chronic\nkidney disease, and about 87% of adults\nwith it don't know they have it. It's\nquiet, no pain. But it's one more reason\nto ask for a simple check, a blood test\nand a urine test, especially if you have\ndiabetes or high blood pressure, the two\nmost common causes. So this is not an\nold bladder. It's a clue, and clues can\nbe followed. That's good news. And\nhere's the most useful tool. It costs\nnothing. Doctors call it a frequency\nvolume chart. I call it a bladder diary.\nFor three days, write down when you\ndrink, how much, and when and how much\nyou urinate. A review of nocturia in\nolder men calls this the most important\ntool for finding the cause. Doctors can\nthen see, is it too much urine at night,\na small bladder capacity, sleep trouble,\nor a mix? One more comment prompt. Do\nyou snore or has anyone told you that\nyou stop breathing at night? Type yes,\nno, or not sure. Plenty of people don't\nknow. Your night routine. Let's put it\ntogether. Here's your routine in order.\nOne, move your drinks earlier. Drink\nmost of your fluids in the morning and\nafternoon. Try finishing big drinks a\ncouple of hours before bed. Small sips\nif you're thirsty are fine. Don't cut\nyour daily total unless your doctor says\nso. Two, ease up on dinner salt. Swap\none salty food. Check labels. The AHA\nsuggests no more than 2,300 milligrams\nof sodium a day. Three, light the path.\nNight lights, a clear floor, non-slip\nslippers, and sit before you stand.\nFour, make a pill list. Include\nover-the-counter products. Ask your\npharmacist about timing and kidney\nsafety. Five, keep a three-day bladder\ndiary. Bring it to your appointment.\nSix, watch your sleep. Loud snoring,\npauses in breathing, or heavy daytime\ntiredness, ask about a sleep test.\nSeven, ask for a kidney check, a blood\ntest and a urine test, especially if you\nhave diabetes or high blood pressure.\nNow, what not to do. Don't stop drinking\nwater or skip fluids all day. Don't stop\nor change any medicine on your own.\nDon't take PM products or bladder pills\nevery night without asking a pharmacist.\nDon't wait on blood in your urine, and\ndon't accept it's just age without a\nconversation. Talk to your doctor soon\nif you have any of these. Blood in your\nurine, even once. Pink, red, or\ncola-colored. National guidelines say\npeople 35 and older with blood in the\nurine need an evaluation. Burning,\nfever, chills, or back or side pain. New\nconfusion or weakness in an older adult.\nThat can be a sign of infection, though\nconfusion alone has many possible\ncauses. Great thirst and heavy\nurination. Swelling in your legs or\ntrouble breathing when lying flat. A\nweak stream, trouble starting or\nleaking. And any fall or a near fall on\nthe way to the bathroom.\nHere are some questions to ask your\ndoctor. Could any of my medicines,\nincluding water pills and\nover-the-counter pain relievers, be\nadding to nighttime urination or\naffecting my kidneys? When should I take\nthem? Should I be checked for sleep\napnea, diabetes, or heart problems? Can\nwe check my kidney function with a blood\ntest and a urine test? Would a three-day\nbladder diary help us find the cause?\nAnd if a bladder medicine is an option,\nwhat are the risks for memory and\nconfusion? And are there other choices?\nHere's the countdown. One line each.\nFive. Move your drinks earlier. Timing\nbeats cutting back.\nFour. Go easier on dinner salt.\nThree. Make the path to the bathroom\nsafe. Two. Review your pills and take\nyour timing and kidney safety questions\nto a pharmacist. One. Your bladder may\nbe innocent. Night trips can be a clue\nabout sleep, sugar, heart, or kidneys.\nNow, please don't try to do everything\nthis week. Pick just one thing. Maybe\nthe night lights tonight. Maybe moving\nyour last drink earlier. One thing. In\nIn\ntell me which one you picked. And this\nvideo with a parent, a spouse, or a\nfriend who gets up at night. You might\nspark a conversation they needed. A\nquick note. This video is for education\nonly. It is not medical advice and I'm\nnot your doctor. Please talk to your own\nhealthcare provider about your own\nsituation, especially before changing\nany medicine. One important video about\nolder adults health. I'll cover what is\nthe real ideal blood pressure after 65.\nYou can see the video on the end screen\nor find the link to that video in the\ndescription. Until then, sleep safe,\ndrink early, and be kind to yourself.\nYou're doing better than you think. I'll\nsee you next time."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@DrDinnes-YT/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@DrDinnes-YT",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

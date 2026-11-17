@@ -1,0 +1,240 @@
+{
+ "run": {
+  "id": "gdxObF7KxysbXjDT7",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:03:18.451Z",
+  "finishedAt": "2026-11-11T08:03:42.631Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 369,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 23961,
+   "resurrectCount": 0,
+   "runTimeSecs": 23.961,
+   "metamorph": 0,
+   "computeUnits": 0.006655833333333333,
+   "memAvgBytes": 150187043.0002583,
+   "memMaxBytes": 172298240,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 7.03464916726173,
+   "cpuMaxUsage": 85.45340952380953,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 619677,
+   "netTxBytes": 97572
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "syjuOFt3277dFNq87",
+  "defaultDatasetId": "naBH07Pg0OLfcPB6G",
+  "defaultRequestQueueId": "f7Mb20bRNl8ErT34o",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "syjuOFt3277dFNq87"
+   },
+   "datasets": {
+    "default": "naBH07Pg0OLfcPB6G"
+   },
+   "requestQueues": {
+    "default": "f7Mb20bRNl8ErT34o"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://kdgnsaicemw3.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/gdxObF7KxysbXjDT7",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/naBH07Pg0OLfcPB6G/items?signature=MC4wLjFkNXA2dmZuS0pybFQ0WXVtdFFKdw"
+  }
+ },
+ "records": [
+  {
+   "title": "Doctor Explains: The Best Fruit to Eat Before Bed for Healthy Kidneys (And Which to Avoid)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "npd9lFx25v8",
+   "url": "https://www.youtube.com/watch?v=npd9lFx25v8",
+   "thumbnailUrl": "https://i.ytimg.com/vi/npd9lFx25v8/maxresdefault.jpg",
+   "viewCount": 387,
+   "date": "2026-11-07T11:48:35.000Z",
+   "likes": 28,
+   "location": "UNITED STATES",
+   "channelName": "Dr. Wade Collins",
+   "channelUrl": "https://www.youtube.com/channel/UC1rXgYI3Eqsyyt06QEbGg3Q",
+   "channelUsername": "Dr.WadeCollins",
+   "collaborators": null,
+   "channelId": "UC1rXgYI3Eqsyyt06QEbGg3Q",
+   "channelDescription": "Welcome to Dr. Wade Collins — your weekly guide to health, mobility, and wellness for the golden years.\n\nGetting older shouldn't mean slowing down. Every week, we break down simple, practical health tips designed specifically for seniors across the USA — from staying mobile and strong, to eating right, managing energy, and living independently for longer.\n\n🩺 What you'll find here:\n\nEasy-to-follow mobility & strength routines for seniors\nNutrition tips for healthy aging\nCommon senior health questions, explained simply\nPractical advice for everyday wellness — no jargon, no fluff\n\n\nMedical Disclaimer : This Channel is for educational purposes only. Always consult your physician before making any changes to your health routine.",
+   "channelJoinedDate": "Sep 25, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/-35TV4mVUwAW5RmBmrw07HuBkWPDiXjYRKmXDz3yG64yj6AfChKXrNQgOLboHxGpcaUexPP5kQ=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/LvPieknZS-NX-Xg7zxfKaapUWtOA3o2X1SUAZAYpyk-U1reHrejaCI0Cl3vdokuNVAV2Azta=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 10,
+   "channelTotalViews": 661490,
+   "numberOfSubscribers": 16100,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@Dr.WadeCollins",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Dr. Wade Collins — your weekly guide to health, mobility, and wellness for the golden years.\n\nGetting older shouldn't mean slowing down. Every week, we break down simple, practical health tips designed specifically for seniors across the USA — from staying mobile and strong, to eating right, managing energy, and living independently for longer.\n\n🩺 What you'll find here:\n\nEasy-to-follow mobility & strength routines for seniors\nNutrition tips for healthy aging\nCommon senior health questions, explained simply\nPractical advice for everyday wellness — no jargon, no fluff\n\n\nMedical Disclaimer : This Channel is for educational purposes only. Always consult your physician before making any changes to your health routine.",
+    "channelJoinedDate": "Sep 25, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "Dr.WadeCollins",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/-35TV4mVUwAW5RmBmrw07HuBkWPDiXjYRKmXDz3yG64yj6AfChKXrNQgOLboHxGpcaUexPP5kQ=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/LvPieknZS-NX-Xg7zxfKaapUWtOA3o2X1SUAZAYpyk-U1reHrejaCI0Cl3vdokuNVAV2Azta=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 10,
+    "channelTotalViews": 661490,
+    "numberOfSubscribers": 16100,
+    "isChannelVerified": false,
+    "channelName": "Dr. Wade Collins",
+    "channelUrl": "https://www.youtube.com/channel/UC1rXgYI3Eqsyyt06QEbGg3Q",
+    "channelId": "UC1rXgYI3Eqsyyt06QEbGg3Q",
+    "inputChannelUrl": "https://www.youtube.com/@Dr.WadeCollins",
+    "isAgeRestricted": false
+   },
+   "duration": "00:19:33",
+   "commentsCount": 9,
+   "text": "Is your bedtime snack hurting your kidneys? Or helping them?\n\nIn this video, a doctor explains the best fruit to eat before bed for healthy kidneys, and which fruits to be careful with.\n\nYour blood pressure is supposed to drop at night. That rest is good for your heart and your kidneys. But salty snacks can get in the way. The right swap can help.\n\nThis video is for adults over 60 and the people who love them. About 1 in 3 adults over 65 has kidney disease. Most don't know it.\n\nWHAT YOU'LL LEARN\n• Why your blood pressure should drop at night\n• Why no fruit can cure kidney disease (and what fruit can do)\n• Blueberries and other berries: what the research shows\n• Apples: the easiest, cheapest choice\n• The potassium warning most people never hear\n• Cranberries and UTIs: who they may help\n• Tart cherries and sleep: what one small study found\n• What matters more than the fruit\n• A simple 7-night plan to start tonight\n\n4 QUESTIONS TO ASK YOUR DOCTOR\n1. What is my kidney function (eGFR)?\n2. Is there protein (albumin) in my urine?\n3. What is my potassium level?\n4. Given my medicines, are there foods I should limit?\n\nCALL YOUR DOCTOR OR 911 IF YOU HAVE\nBurning or urgency with fever. Pain in your back or side. Sudden confusion. A fluttering heartbeat with weakness. Fainting. Chest pain.\n\n\n📚 RESEACH SOURCES:\n1. CDC. Chronic Kidney Disease in the United States, 2023.\n2. Johnson SA, et al. Daily blueberry consumption improves blood pressure and arterial stiffness in postmenopausal women with pre- and stage 1-hypertension. Journal of the Academy of Nutrition and Dietetics. 2015;115(3):369-377.\n3. Williams G, et al. Cranberries for preventing urinary tract infections. Cochrane Database of Systematic Reviews. 2023;4:CD001321.\n4. Pigeon WR, et al. Effects of a tart cherry juice beverage on the sleep of older adults with insomnia: a pilot study. Journal of Medicinal Food. 2010;13(3):579-583.\n5. National Kidney Foundation. 40 Low Potassium Fruits and Vegetables to Add to Your Grocery List.\n6. NIDDK / National Institutes of Health. Potassium: tips for people with chronic kidney disease.\n\nDISCLAIMER\nThis video is for general education only. It is not medical advice, diagnosis or treatment, and it does not replace a visit with your own doctor, pharmacist or kidney dietitian. If you have kidney disease, diabetes, heart disease, or take prescription medicines, talk to your care team before changing your diet or using any supplement, salt substitute or juice. No food or fruit can cure kidney disease. The people described in this video (Ruth, Gene, Harold, Evelyn and Linda) are fictional examples, and individual results will differ. Never ignore or delay medical care because of something you saw in a video.\n\nIf this helped you, please share it with someone over 60, and subscribe. It costs you nothing.\n\n\n#kidneyhealth  #kidneyfailure  #healthyaging #seniorhealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyhealth",
+     "text": "#kidneyhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyfailure",
+     "text": "#kidneyfailure"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#healthyaging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "About one in three Americans over 65 has\nchronic kidney disease. That means\nkidneys that don't clean the blood as\nwell as they should. And up to nine and\nten people who have it don't know it.\nHere's why tonight matters.\nWhat you eat in the last hour before bed\ncan change your blood pressure while you\nsleep. And your blood pressure at night\nmatters a lot to your kidneys.\nSo today I'll answer one simple\nquestion. What is the best fruit to eat\nbefore bed? I'll also warn you about one\npopular healthy sounding fruit that is a\nreal problem for some people over 60.\nAnd I'll tell you exactly who.\nBefore we start, please do one small\nthing for me. Tap the subscribe button.\nIt costs you nothing and it helps me\nkeep making videos like this for you.\nNow let's start with the part that\nsurprises people. Fact number one. Your\nblood pressure is supposed to drop at\nnight. Think of your blood pressure like\na dimmer switch. During the day it's\nturned up. At night it's supposed to\nturn down by about 10 to 20%. Doctors\ncall that dipping. That drop gives your\nheart, your blood vessels, and your\nkidneys a rest. But sometimes the switch\ngets stuck. The pressure stays high all\nnight. Doctors call that non dipping.\nHere's what researchers have seen.\nPeople whose pressure doesn't drop at\nnight have a higher risk of heart\nproblems. And in people who already have\nkidney disease, it's linked to faster\nkidney decline.\nSo what keeps the switch from turning\ndown? One big reason is salt. Doctors\ncall it sodium. Some people are very\nsensitive to salt. And for them a salty\nevening can mean a smaller drop at\nnight. In some studies, eating less salt\nfor about a week was enough to bring the\nnighttime drop back.\nAnd it works both ways. Weaker kidneys\nhave a harder time getting rid of salt.\nThat can also keep the pressure up at\nnight. So it can turn into a circle. Let\nme show you what that looks like.\nImagine a woman named Ruth. She's 74.\nEvery evening she sits in her favorite\nchair, turns on the\nand reaches for the bag of salty\npretzels.\nA few handfuls later, the bag is half\ngone.\n3 ounces of pretzels can have more than\n1,000 milligrams of sodium, most adults\nare advised to stay under about 2,300 a\nday.\nfeels fine. no pain, no warning, but her\nbody is carrying all that salt through\nthe night.\nRuth is made up, but I'd bet you know\nsomeone just like her. Maybe it's you.\nSo here's why this matters to you.\nThe last thing you eat at night isn't\njust a snack. It's a signal to your body\nabout how the night will go.\nThat's why the fruit question matters.\nBut here's the key point. The biggest\ngain doesn't come from adding fruit. It\ncomes from what the fruit replaces.\nNow I'd love to know who I'm talking to.\nPlease write a comment with your first\nname, your age, and where you're\nwatching from. Fact number two.\nNo fruit will cure your kidneys, but\nblueberries have earned their place.\nLet me be honest with you right away. No\nfruit can cure kidney disease. Not\nblueberries, not cherries, not anything.\nIf a video promises that, be careful.\nWhat fruit can do is smaller, but it\nstill counts. It can take the place of a\nsalty snack. It brings fiber, and some\nfruits may help lower blood pressure,\nwhich protects your kidneys over time.\nBlueberries have some of the best proof.\nHere's what happened in one study.\nResearchers at Florida State University\ntook 48 women after menopause.\nAll of them had high or borderline high\nblood pressure.\nHalf ate the equivalent of one cup of\nblueberries every day in the form of a\nfreeze-dried powder.\nThe other half got a lookalike powder\nwith no blueberries in it.\nAfter eight weeks, the blueberry group's\ntop blood pressure number was down about\nseven points. The bottom number was down\nabout five. The other group had no\nchange.\nNow I want you to pay attention to the\nfine print. It was a small study. A\nblueberry industry group helped pay for\nit, and it measured blood pressure, not\nkidney tests. So I can't tell you that\nblueberries protect your kidneys.\nHere's what we know. They may help lower\nblood pressure, and lower blood pressure\nis good for your kidneys.\nLet me show you how this could look.\nImagine a man named Gene. He's 68. His\ndoctor tells him his blood pressure is a\nlittle high.\nGene doesn't want another pill yet, so\nhe makes one change. Every evening, he\ntrades his bowl of ice cream for a cup\nof blueberries stirred into plain\nyogurt.\nHe's not expecting a miracle, but he's\nreplacing something heavy and sugary\nwith something that may help his blood\nvessels.\nGene is imaginary, and results will be\ndifferent for everyone, but a small swap\nlike that is how big changes start.\nHere's something you can try. Buy frozen\nblueberries. They're often cheaper, and\nthey're just as good.\nAnd skip anything that says blueberry\nflavored, like blueberry muffins,\ncereal, or flavored yogurt. Those\nusually have added sugar and almost no\nreal fruit. If blueberries aren't near\nthe top of the ingredient list, you\naren't getting what you think you're\ngetting.\nFact number three. Strawberries and\nother berries are easy wins.\nStrawberries, raspberries, and\nblackberries belong here, too. They have\nvitamin C and fiber, and they're lower\nin sugar than many fruits. The National\nInstitutes of Health lists berries as a\nlower potassium fruit.\nI'll explain why potassium matters in a\nfew minutes because it's the most\nimportant warning in this video.\nA cup of sliced strawberries, plain or\nwith a spoonful of plain yogurt, is an\neasy evening snack. It's sweet, it fills\nyou up, and it has almost no sodium.\nNow, you may hear that strawberries make\nyour ankles less puffy in 3 days, or\nthat they fix your blood pressure in a\nweek.\nI couldn't find good proof for that.\nSwollen ankles can come from many\nthings, like heart problems, vein\nproblems, medicines, and kidney\nproblems.\nIf your ankles swell, that's a reason to\ncall your doctor. It's not a reason to\ntry a new fruit.\nSo, here's what we know. Berries are a\nsmart swap for salty snacks, and the\nswap is where most of the benefit\nprobably comes from.\nThink of berries as the replacement for\nthe chips, crackers and pretzels, not as\na treatment.\nOne more thing, and this one matters for\npeople with kidney disease.\nPortion size counts.\nThe official potassium lists use a half\ncup serving.\nA full cup of berries has about twice as\nmuch potassium.\nIf your doctor has given you a potassium\nlimit, ask how big your serving should\nbe.\nFact number four.\nAn apple is the simplest answer.\nIf you want one fruit that's cheap, easy\nand almost always safe, here it is, a\nwhole apple.\nApples have fiber, including a kind\ncalled pectin.\nFiber slows down how fast sugar gets\ninto your blood.\nLet me put that simply. It's like\npouring water slowly instead of dumping\nit all at once.\nA slower rise in blood sugar is easier\non the tiny blood vessels in your\nkidneys. And high blood sugar is the\nnumber one cause of kidney disease. So\nanything that keeps it steady helps.\nApples are also on the lower potassium\nlist, so they're a good pick for people\nwatching their kidneys.\nEat the skin if you can because that's\nwhere a lot of the fiber is. And pick\nthe whole fruit, not the juice.\nA whole apple and a glass of apple juice\nare very different foods.\nThe juice has most of the sugar and\nalmost none of the fiber.\nIf you have diabetes, count your fruit\nas part of your daily carbohydrates and\nask your doctor or dietitian how much is\nright for you.\nLet me also mention a few other fruits\nthat are on the lower potassium list in\ncase apples and berries get boring.\nGrapes, pineapple, pears, peaches and\nplums are all on it.\nGrapes make a nice small handful, about\n15 or 20, but they're easy to overeat,\nso count them out.\nAnd a quick note about watermelon. It's\nlower in potassium, but it's very\nwatery. A big bowl right before bed may\nmean more trips to the bathroom at\nnight.\nNow we come to the fruit I warned you\nabout because some of the fruits that\nare great for most people can be real\nproblem for others.\nFacts number five, the potassium warning\nnobody mentions.\nPotassium is a mineral. Your heart,\nmuscles, and nerves need it to work.\nWhen your kidneys are healthy, they get\nrid of the extra and you never have to\nthink about it.\nHere's why this matters to you.\nIf your kidneys are weaker or you take\ncertain medicines, potassium can pile up\nin your blood.\nDoctors call that hyperkalemia. It\nsimply means too much potassium.\nIf it gets too high, it can disturb your\nheart rhythm.\nAnd here's the scary part. You can have\nit and feel nothing at all.\nSome people feel weak or tired or notice\na fluttering heartbeat, but many feel\nnothing until it's serious.\nLet me put that simply. Think of a sink\nwhere the drain has slowed down.\nEverything looks fine until the water\nstarts to rise.\nSo which fruits have the most potassium?\nThe National Institutes of Health lists\nthese as higher. Bananas, oranges and\norange juice, cantaloupe, kiwi,\nnectarines, and fresh apricots.\nDried fruits like raisins, dates, and\nprunes are on the list too.\nFor most people with healthy kidneys,\nthese fruits are fine. But if you have\nkidney disease, your doctor may ask you\nto limit them.\nThere's another group that needs to pay\nattention and people often miss it.\nSome common medicines can raise\npotassium. These include certain blood\npressure and heart medicines and some\nwater pills.\nThink about your medicine cabinet or\nyour weekly pill box. You may have one\npill for blood pressure, another for\nyour heart, and maybe something for\nswelling.\nAlso, many salt substitutes are made\nwith potassium chloride. They can add a\nlot of potassium without you noticing.\nLet me show you what that could look\nlike.\nImagine a man named Harold. He's 76.\nEvery morning he eats a banana. At lunch\nhe has a glass of orange juice. To cut\nback on salt, he switched to a salt\nsubstitute and he takes a blood pressure\npill.\nEach choice sounds healthy, but together\nthey could push his potassium too high.\nHarold is made up, but this is exactly\nwhy doctors check potassium with a\nsimple blood test.\nSo, here's what I want you to do. If you\nhave kidney disease, diabetes, heart\nfailure, or you take blood pressure or\nheart medicines, ask your doctor or\npharmacist three things. What is my\nkidney function and what is my potassium\nlevel?\nDo I need to limit high potassium\nfruits?\nAnd is it safe for me to use a salt\nsubstitute?\nAnd if you ever feel a fluttering\nheartbeat together with weakness,\nfainting, or chest pain, call 911.\nOne more safety note. Grapefruit and\ngrapefruit juice can interact with many\nmedicines, including some cholesterol\nand blood pressure drugs. If you take\ndaily medicines, ask your pharmacist\nbefore making grapefruit a habit.\nFact number six.\nCranberries help some people, but not\neveryone.\nCranberries get a lot of attention, and\nthe real story is more interesting than\nthe headlines.\nHere's why they matter for kidneys.\nRepeated urinary tract infections or\nUTIs can sometimes travel up toward the\nkidneys, so preventing them has real\nvalue.\nIn 2023, the Cochrane Group, which\nreviews medical research, looked at 50\nstudies with almost 9,000 people. Here's\nwhat they found. Cranberry products,\nmeaning juice, tablets, and capsules,\nlowered the risk of UTIs in women who\nget them often.\nThey also helped children and people who\nhad bladder procedures.\nFor women with repeat UTIs, the risk was\nabout 26% lower. But here's the catch.\nThe review found little or no benefit in\nolder people living in care facilities.\nIt also found none in pregnant women or\nin people whose bladders don't empty\nfully.\nSo, cranberry can help some people, but\nit isn't a sure fix, especially if\nyou're in one of those groups.\nAnd here's the most important part.\nCranberry is for prevention. It's not a\ntreatment.\nLet me show you why that matters.\nImagine a woman named Evelyn. She's 71\nand she's had several UTIs.\nShe starts drinking cranberry juice\nevery day.\nThen one morning, she feels burning, a\nsudden need to go, and a low fever. She\nthinks, I'll just drink more cranberry\njuice.\nThat would be a mistake. An infection\nthat has already started needs a doctor\nand often antibiotics.\nEvelyn is made up, but this risk is\nreal. I want you to pay attention to\nthis. Call your doctor for burning,\nurgency, fever, or pain in your back or\nside. And in older adults, a sudden\nchange in thinking or confusion can be a\nsign of an infection, too.\nIf you choose cranberry juice, here's\nthe key. It has to be unsweetened. The\nusual cranberry juice cocktail in the\nstore can have as much sugar as a soft\ndrink.\nLook for 100% cranberry juice and expect\nit to taste very tart.\nNow, if you've been enjoying this video,\nthere's one more thing I'd like to ask.\nIf you haven't subscribed yet, please do\nit now. It costs you nothing and it\nhelps me keep making videos like this\nfor you. Thank you. Now, let's talk\nabout sleep.\nFact number seven.\nTart cherries may help you sleep a\nlittle.\nHave you ever woken up at 3:00 in the\nmorning and just couldn't get back to\nsleep?\nIf sleep is part of your problem, tart\ncherries may help. They're one of the\nfew foods that contain melatonin. That's\nthe hormone that helps control your\nsleep cycle. Here's what happened in one\nsmall study. In 2010, researchers had 15\nolder adults with insomnia drink 8 oz of\na tart cherry juice drink twice a day\nfor two weeks. For another two weeks,\nthey drank a lookalike drink with no\ncherry juice. When they drank the cherry\njuice, they spent about 17 fewer minutes\nawake after falling asleep, but they\ndidn't fall asleep faster and their\ntotal sleep time didn't change. So, what\ndoes that tell us? It was a small study\nwith only 15 people. It was short, and\nthe cherry industry helped pay for the\nresearch. The scientists said the effect\nwas modest and weaker than proven\ntreatments for insomnia. Why bring it up\nin a kidney video? Because better sleep\nhelps your nighttime blood pressure, and\nyour blood pressure matters for your\nkidneys. It's a weak link, but a\nreasonable one.\nHere's something you can try. Cherry\njuice has a lot of sugar, and the\nstudies use a lot of it. So keep your\nserving small, about 4 oz, and you can\nmix it with sparkling water. Pick juice\nwith no added sugar. And if you have\ndiabetes, ask your doctor first.\nAlso remember this. A drink right before\nbed can send you to the bathroom at 3:00\nin the morning. Many people over 60\nalready wake up at night to urinate. So\ntry to finish drinks an hour or two\nbefore bed. Let me show you what that\ncould look like. Imagine a woman named\nLinda. She's 69. She wakes up two or\nthree times a night. She tries a small\nglass of tart cherry juice an hour\nbefore bed, and she drinks nothing after\nthat. After two weeks, she's still\nwaking up once, but she falls back\nasleep faster. Linda is imaginary, and\nyour results will be different, but it's\na reasonable thing to try once your\ndoctor says it's okay.\nFact number eight. What matters more\nthan the fruit?\nHere's the part I most want you to\nremember. The fruit matters less than\nthree other things. Number one is the\nswap. Don't add fruit on top of the\nsalty snack, replace it. If you eat\npretzels, chips, crackers, or cheese\npuffs every night, the fruit only helps\nif it takes their place.\nNumber two is hidden salt. Many foods\ntaste fine but carry a lot of sodium.\nCanned soup, deli meats, frozen dinners,\nbread and cheese are common ones. Next\ntime you're in the grocery store aisle,\nturn the box around and look at the\nlabel. A food with 5% or less of the\ndaily value for sodium is low. A food\nwith 20% or more is high.\nNumber three is timing.\nTry to finish eating at least one to two\nhours before you lie down.\nA heavy late meal can make your sleep\nworse, and poor sleep makes blood\npressure harder to control.\nAnd remember, big drinks late at night\ncan mean more trips to the bathroom.\nBeyond that, here are four questions to\nbring to your next doctor visit.\nFirst, what is my kidney function?\nThat's a number called eGFR, which shows\nhow well your kidneys filter.\nSecond, is there any protein called\nalbumin in my urine?\nThird, what is my potassium level?\nAnd fourth, given my medicines, are\nthere any fruits or foods I should\nlimit?\nThese are simple tests, one blood test\nand one urine test. They're especially\nworth asking about if you have diabetes,\nhigh blood pressure, heart disease, or a\nfamily history of kidney disease.\nRemember, up to nine in 10 people with\nkidney disease don't know they have it.\nSo what is the best fruit?\nLet me answer the question in the title.\nThere is no single best fruit for\neveryone, but here's a clear guide.\nIf your kidneys and potassium are\nnormal, the best everyday choices are\nblueberries or strawberries, about a cup\nor one whole apple.\nThey're easy, they're not salty, and\nblueberries have the best proof for\nlowering blood pressure.\nIf you have kidney disease or you take\nmedicines that raise potassium, stick to\nthe lower potassium fruits. That means\nberries in small portions, apples,\ngrapes, and pineapple.\nAsk your doctor about portion sizes.\nBe careful with bananas, oranges,\nmelons, and dried fruit.\nIf sleep is your main problem, try a\nsmall amount of tart cherry juice with\nno added sugar and give it at least two\nweeks.\nAnd if you're a woman with repeat UTIs,\nunsweetened cranberry may help, but call\nyour doctor for any symptoms.\nYour seven-night plan.\nHere's a simple plan you can start\ntonight.\nFor the next seven nights, swap your\nusual evening snack for one of the\nfruits we talked about.\nFinish eating at least one hour before\nbed.\nAnd each morning, write down one thing.\nHow did you sleep? Did you wake up to\nuse the bathroom? How do your ankles and\neyes feel?\nIf you have a blood pressure cuff at\nhome, take a reading at the same time\neach evening and write it down.\nAfter seven nights, look at your notes\nand bring them to your doctor.\nYou don't need a perfect routine. You\nneed a steady one.\nAnd remember, if you have kidney disease\nor take medicines, check with your\ndoctor first.\nSo what should you take away from this?\nYour blood pressure is supposed to drop\nat night, and salt can get in the way.\nNo fruit cures kidney disease, but\nberries and apples are smart swaps for\nsalty snacks.\nPotassium is the warning to remember,\nespecially if you have kidney disease or\ntake certain medicines.\nCranberries and tart cherries can help\nsome people in small ways.\nAnd the real win is the swap, the\ntiming, and knowing your numbers.\nBefore you go, please remember this.\nThis video is for general education\nonly. It is not medical advice.\nIf you have kidney disease, diabetes,\nheart disease, or you take prescription\nmedicines, please talk to your doctor or\npharmacist before you change your diet.\nYour own situation always matters more\nthan any general guideline.\nNow tell me in the comments, what is the\nsnack you eat before bed? I'd love to\nknow. And if someone you love is over\n60, send them this video. It could be\nthe push that gets them to ask about\ntheir kidney numbers.\nTake care of yourself, and I'll see you\nin the next video."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@Dr.WadeCollins/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@Dr.WadeCollins",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

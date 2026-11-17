@@ -1,0 +1,296 @@
+{
+ "run": {
+  "id": "yif1FZblBI8DrpoOK",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:05:49.786Z",
+  "finishedAt": "2026-11-11T08:06:07.234Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 372,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 17262,
+   "resurrectCount": 0,
+   "runTimeSecs": 17.262,
+   "metamorph": 0,
+   "computeUnits": 0.004795,
+   "memAvgBytes": 149184199.99628425,
+   "memMaxBytes": 173404160,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 11.288811403676146,
+   "cpuMaxUsage": 92.27492957746479,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 727355,
+   "netTxBytes": 137727
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "Th1xViRh2aPJxI08c",
+  "defaultDatasetId": "7pCUwwcNCrdbGTsmX",
+  "defaultRequestQueueId": "Hpc2oYaIlxU5VzUQW",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "Th1xViRh2aPJxI08c"
+   },
+   "datasets": {
+    "default": "7pCUwwcNCrdbGTsmX"
+   },
+   "requestQueues": {
+    "default": "Hpc2oYaIlxU5VzUQW"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://y9tencym2ehy.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/yif1FZblBI8DrpoOK",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/7pCUwwcNCrdbGTsmX/items?signature=MC4wLjEwNXFONFhnNkJLWlB4aXVQNEFBbw"
+  }
+ },
+ "records": [
+  {
+   "title": "Trump Offers Dana White A White House Job… Gets REJECTED On Camera And Jimmy Kimmel DESTROYS Him!",
+   "translatedTitle": "White House Says Kimmel Has A \"PEANUT-SIZED BRAIN\"… Then Kimmel FIRES BACK With Trump's Own Voice!",
+   "type": "video",
+   "id": "m8jikov3PIw",
+   "url": "https://www.youtube.com/watch?v=m8jikov3PIw",
+   "thumbnailUrl": "https://i.ytimg.com/vi/m8jikov3PIw/maxresdefault.jpg",
+   "viewCount": 42,
+   "date": "2026-11-10T20:10:03.000Z",
+   "likes": 1,
+   "location": null,
+   "channelName": "Ansel Senior Health",
+   "channelUrl": "https://www.youtube.com/channel/UCX_263NGp5srFTs-HfgWdSw",
+   "channelUsername": "AnselSeniorHealth",
+   "collaborators": null,
+   "channelId": "UCX_263NGp5srFTs-HfgWdSw",
+   "channelDescription": "Health stories for adults over 65, told through one small lake town.\n\nOn Birch Lane in Minnesota, Ansel and Marion Brooks and their neighbors live through the moments that matter after 65: the 3 a.m. trip to the bathroom, the bedroom that's too cold, the flu that won't let go, the new pill on the counter, the step you didn't see.\n\nEach episode follows one of them through an everyday situation and turns published research into plain steps: the warning signs worth a call today, a simple check you can do at home, and the questions to bring to your own doctor or pharmacist.\n\nTopics: falls and balance, sleep, heart and stroke warning signs, bladder and bowels, eyesight, medicines, surgery and tests, and winter safety.\n\nAnsel, Marion and the Birch Lane neighbors are fictional characters. Stories are narrated with an AI voice and the pictures are AI-generated. Nobody on this channel is a doctor, and nothing here is medical advice. Talk with your doctor before changing any medicine.",
+   "channelJoinedDate": "Aug 11, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/7U0-_7HCA22Vlf9cMbiKy7k-P3bMkEHicgMQvevlc_ysh2t68yfLqElluxWUqVEtAn5Tc8qp=s68-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/U8Wb-Wis93u2jFYzkn49v9YqU2mWpinJPM0uH80_Oq1OTvkNK0amJrNAEDvMl7fH-beNz-AW=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 31,
+   "channelTotalViews": 1229,
+   "numberOfSubscribers": 2200,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@AnselSeniorHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Health stories for adults over 65, told through one small lake town.\n\nOn Birch Lane in Minnesota, Ansel and Marion Brooks and their neighbors live through the moments that matter after 65: the 3 a.m. trip to the bathroom, the bedroom that's too cold, the flu that won't let go, the new pill on the counter, the step you didn't see.\n\nEach episode follows one of them through an everyday situation and turns published research into plain steps: the warning signs worth a call today, a simple check you can do at home, and the questions to bring to your own doctor or pharmacist.\n\nTopics: falls and balance, sleep, heart and stroke warning signs, bladder and bowels, eyesight, medicines, surgery and tests, and winter safety.\n\nAnsel, Marion and the Birch Lane neighbors are fictional characters. Stories are narrated with an AI voice and the pictures are AI-generated. Nobody on this channel is a doctor, and nothing here is medical advice. Talk with your doctor before changing any medicine.",
+    "channelJoinedDate": "Aug 11, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "AnselSeniorHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/7U0-_7HCA22Vlf9cMbiKy7k-P3bMkEHicgMQvevlc_ysh2t68yfLqElluxWUqVEtAn5Tc8qp=s68-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/U8Wb-Wis93u2jFYzkn49v9YqU2mWpinJPM0uH80_Oq1OTvkNK0amJrNAEDvMl7fH-beNz-AW=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 31,
+    "channelTotalViews": 1229,
+    "numberOfSubscribers": 2200,
+    "isChannelVerified": false,
+    "channelName": "Ansel Senior Health",
+    "channelUrl": "https://www.youtube.com/channel/UCX_263NGp5srFTs-HfgWdSw",
+    "channelId": "UCX_263NGp5srFTs-HfgWdSw",
+    "inputChannelUrl": "https://www.youtube.com/@AnselSeniorHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:20:32",
+   "commentsCount": 0,
+   "text": "Six days after the midterms, Trump found a new reason he lost, offered the White House press secretary job to the head of the UFC, and then said he was only kidding. Jimmy Kimmel, Seth Meyers and Jimmy Fallon kept the receipts, and we kept count of the excuses. He gets to six.\n\nAlong the way: the White House puts out a second official statement about Jimmy Kimmel (this one goes after his brain), Ted Cruz finds grief at a Best Buy, there turn out to be two Dana Whites, and the real one gives his answer in front of the cameras inside the White House. Plus bad messaging, the 60 Minutes question about what history will say, and a State of the Union with a jackhammer.\n\nWhat will excuse number seven be? Give us your best guess in the comments, and subscribe for the next one.\n\nChapters:\n0:00 \"I was kidding\"\n0:51 Six Days Late\n2:42 Grief Counseling\n4:12 White House vs. Kimmel: Round Two\n5:55 Raccoon In A Duffel Bag\n9:30 The Wrong Dana White\n12:41 His Own Press Secretary\n14:22 60 Minutes, Round Two\n\nSources:\n• Jimmy Kimmel Live! (ABC): monologue of Nov. 9, 2026\n• Late Night with Seth Meyers (NBC): Nov. 9, 2026\n• The Tonight Show Starring Jimmy Fallon (NBC): Nov. 9, 2026\n• President Trump's posts and the White House statement on Jimmy Kimmel, as read on Jimmy Kimmel Live\n• 60 Minutes (CBS): interview with President Trump by Ross Douthat, as played on the shows above\n• Photos: official presidential portrait (public domain); Wikimedia Commons (CC BY-SA)\n\nIndependent commentary and criticism. Not affiliated with ABC, NBC, CBS, any show, campaign or party. Short clips are used for commentary, criticism and news reporting under fair use.\n\n#JimmyKimmel #Trump #DanaWhite #SethMeyers #JimmyFallon #LateNight #Kimmel #TrumpNews #Comedy",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&pp=0gcJCWMAwfN6Pr3D",
+     "text": "0:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=51s",
+     "text": "0:51"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=162s",
+     "text": "2:42"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=252s",
+     "text": "4:12"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=355s",
+     "text": "5:55"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=570s",
+     "text": "9:30"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=761s",
+     "text": "12:41"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=m8jikov3PIw&t=862s",
+     "text": "14:22"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/jimmykimmel",
+     "text": "#JimmyKimmel"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/trump",
+     "text": "#Trump"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/danawhite",
+     "text": "#DanaWhite"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/sethmeyers",
+     "text": "#SethMeyers"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/jimmyfallon",
+     "text": "#JimmyFallon"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/latenight",
+     "text": "#LateNight"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kimmel",
+     "text": "#Kimmel"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/trumpnews",
+     "text": "#TrumpNews"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/comedy",
+     "text": "#Comedy"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "I was kidding, of course.\nUh so I was kidding.\nThat was an example of something where I\nwas kidding.\n>> Oh, I'm always kidding. Hey, why didn't\nyou say that in the first place?\n>> Uh I will not approve wind turbines\nbecause wind turbines are a major loser.\nMassie's a loser. Massie is a loser.\nStone cold loser. Massie's a loser just\nlike you're a loser at CNN.\n>> That was the president of the United\nStates explaining a job offer and then\nexplaining the free press.\nThe job was White House press secretary.\nHe offered it to the man who runs the\nUFC and the answer came in front of the\ncameras inside the White House. Count\nthe excuses with us on the way there. He\ngets to six.\n>> Well, you know what? This time it it\ntook Trump almost six full days to claim\nthe election was rigged. That's\nprogress, right?\n>> The first ones arrived in a post on\nMonday, November 9th. Jimmy Kimmel read\nit out.\n>> Does anybody really believe that this\nelection was honest? How could the polls\nbe so wrong? HOW COULD THE POLLS\nALL THE POLLS HAD THE Democrats winning\nbig.\n>> The latest Fox News poll reveals the\ncost of living is by far the top issue\nfor voters right now. It's weighing on\nthe GOP. Democrats lead 54 to 45% in the\nrace for the House and 77%\ndisapprove of the president's handling\nof inflation.\n>> But that was from those liberals at Fox\nNews.\n>> Excuse number one. The election wasn't\nhonest. Excuse number two. The polls\nwere wrong. They weren't. They said he\nwould lose and he lost. It's like\nblaming the weatherman because it rained\non the exact day he said it would.\n>> And then he went on. He said um some\nearly voting dumps were so large that it\nwas impossible to win no matter how many\npeople went to vote.\n>> Excuse number three. The early vote. Too\nmany people voted basically, which is\nusually how losing works. For the\nrecord, on election night he told the\nNew York he was absolutely willing to\naccept the results. That willingness\nlasted about as long as a New Year's\nresolution. Last time he lost an\nelection, he didn't wait for the count\nto finish before calling it stolen.\nKimmel remembers where that road ended.\n>> This is how it starts, though. This is\nhow he does it. A little taste of\nconspiracy.\nNothing too intense, just enough to wet\nyour appetite, and then he feeds it a\nlittle more, it grows, it gets bigger,\nhe keeps repeating it, and then he\nstarts talking about people talking\nabout him claiming the election was\nrigged as if there are people other than\nhim claiming the election was rigged.\nAnd before you know it, someone in a\nViking helmet is making a toilet at a\nNancy Pelosi's desk. God bless America.\nThat's how it goes.\n>> Not every Republican got the memo that\nit was stolen.\nTexas had just elected a Democrat to the\nSenate by more than 12 points, and Ted\nCruz had already admitted his party took\na beating.\nThen he went shopping.\n>> And now poor Ted Cruz is sad and all\nalone.\n>> Look, the last two days in Texas as I've\ntraveled the state, I I've just\nencountered people who are grieving.\nThey're in shock. I I went to Best Buy\nthis afternoon. I walked in and and\nthree people there were were almost in\ntears expressing shock.\n>> That's not because they're upset about\nthe election, that's because you're\nugly.\n>> Somewhere in Texas, there is a Best Buy\nemployee who just wanted to sell a\ntelevision and ended up comforting a\nUnited States senator.\nNobody covers that in the training\nvideo.\nColorado had its own cliffhanger.\nLauren Boebert's seat was supposed to be\none of the safe ones, and she was\ntrailing.\nSeth Meyers dug up an old campaign clip\nto mark the occasion, and it comes with\na preview of where this story is headed.\n>> Are you READY FOR PRESIDENT DONALD J.\nTRUMP TO WALK INTO THE WHITE HOUSE\nJANUARY 20TH, 2025\nAND LOOK THE SWAMP CREATURES IN THE EYE\nAND SAY,\nas I was saying?\n>> Now come on, that's not\nwhat Trump said the swamp creatures in\nthe White House. He said,\n\"Congratulations. You're the chief of\nstaff now.\"\n>> We will get to that chief of staff.\nFirst, the White House went back to the\none job it never falls behind on.\nIt put out another official statement\nabout Jimmy Kimmel.\n>> And then the White House got back to the\nimportant business of attacking me. I\ngot another statement from White House\nspokesperson Davis Dingle, who wrote,\nJimmy Kimmel's case of Trump Derangement\nSyndrome is so advanced that it has\ncompletely rotted his peanut-sized\nbrain. He's far more entertaining when\nyou're laughing at him than with him,\nbut unfortunately, his real talent is\nhis failing ratings. Sick burn, bro.\n>> That is the second official White House\nstatement about one talk show host in\nunder a week. The first one called him a\nno-talent loser. This one went after his\nbrain. A grown adult on a government\nsalary typed the words peanut-sized\nbrain and hit send. It ended by mocking\nhis ratings, which is bold talk from an\nadministration that just lost the House,\nthe Senate, and a Senate seat in Kansas.\nYour tax dollars are paying for a roast,\nand the writing isn't even good. Kimmel\nwrote back.\n>> Trump now has interns insulting me. It's\nlike that sad day when your cat gets too\nfat to chase mice.\nThis guy says I have a peanut-sized\nbrain. Let me explain something. I know\nyou're young. That's impossible. You\nknow what happens when you try to run a\nfull human body with a peanut-sized\nbrain? Human\ngenome\nStop saying things like\nlike that guy. He has a brain like a\nlike a peanut.\n>> That sound came from a speech to\naerospace leaders where the president\nwas listing America's great scientific\nachievements. He got as far as the\ngenome. The counter is still at three,\nbut Kimmel's bigger worry is the next\ntwo months. That's how long it is until\nthe new Congress is sworn in. And until\nthen, the president is a lame duck with\nnothing left to lose.\nAbout 100 members of the house are on\ntheir way out, too. Seth Meyers noticed\nhe is already dressing for the occasion.\nAt an Oval Office event the week before,\nthere was a red hat on his desk that\nsaid veto.\nKimmel sees two ways it can go.\n>> I don't think we're prepared for the\namount of insanity that this drama queen\npresident is about to pump on us. Donald\nTrump right now is a raccoon in a duffel\nbag. He's been\ncut off at the cankles, and there are\ntwo possible paths he can take. The\nfirst one is to check out. No more\nmeetings, lots of trips to Mar-a-Lago,\nlots of golf with Natalie running behind\nthe cart. Every once in a while he'll\nhost a Super Bowl team. That's the best\ncase scenario.\n>> For a lot of the country, that's the\ndream scenario, too.\nThen Kimmel described door number two.\n>> Just watch. He'll announce plans to\ninvade Narnia. He'll declare\nwar on California. He'll add himself to\nMount Rushmore four times. It'll be\nTrump, Trump, Trump, and another Trump.\nThey'll have to wheel him out of the\nOval Office in a in a straight jacket\nand mask like the late, great Hannibal\nLecter.\n>> If you had Narnia on your foreign policy\nbingo card, congratulations. To be\nclear, none of that has happened. It is\nalso only November. Kimmel says the plan\nis already in motion, and he has an\nexhibit.\n>> And\nthe plan is already in motion. I'm sure\nyou saw. He wrote, I am pleased to\nannounce that Mr. Stephen Miller, the\ncurrent deputy chief and one of my most\ntrusted advisors, will become the chief\nof staff starting Monday, November 9th.\nThis feels like\nthe part of the movie where Satan is\nsmiling and rubbing his hooves together.\n>> How the last chief of staff left depends\non who is telling it.\nThe author Michael Wolff says Trump\nscreamed at Suzy Wiles in front of a\nroom after the midterms, and she walked\nout. Seth Meyers went with fired.\nKimmel, for his part, was sorry to see\nher go.\n>> Suzy Wiles was said\n>> to be one of the few if only decent\npeople in Trump's inner circle. She was\nhis longest serving chief of staff. And\nit's especially shame to see her go\nbecause\nshe always looked like she was having\nsuch a good time.\nWiles released a statement.\nShe said serving as chief of staff was\nthe honor of a lifetime and she looks\nforward to spending more time not being\naround Trump's family.\n>> Half of that statement is real. She did\ncall the job the honor of a lifetime.\nThe other half is Kimmel reading between\nthe lines. Either way, the job was open\nand Seth had some encouragement for the\nman who got it.\n>> President Trump on Friday fired White\nHouse chief of staff Susie Wiles and\nnamed Steven Miller as her replacement.\nAll right, Steven, this is your time to\nwhat's the opposite of shine?\nThis is your time to absorb light.\n>> Seth also had a note on the timing of\nthat promotion.\n>> During last night's 60 Minutes\ninterview, President Trump acknowledged\nthat his hardline immigration policy was\ntoo extreme and said quote, I think it\nwas too tough. So you made Steven Miller\nchief of staff?\nHe's currently standing outside Home\nDepot with a fishing net.\n>> So far that's three excuses, one insult\nfrom the government and one new chief of\nstaff. And we haven't even reached the\njob offer\nbecause there is a second empty desk in\nthat building and the president had a\nplan for it.\n>> You know, we still don't have a White\nHouse press secretary, but we did get an\nupdate from the president on that one\ntoo. He wrote, I am pleased to announce\nthat the great Dana White, a violent\nfighter and warrior, has been offered\nthe job of press secretary of the United\nStates. Now Dana White, if you don't\nknow, is the CEO of UFC. He's not a\nviolent warrior. He has a job and he's\nworth many hundreds of millions of\ndollars. There's no way he would want a\ngig like this.\n>> To be fair to the president, the\nbriefing room and the octagon have a lot\nin common. People shout, somebody leaves\nbleeding, and nobody answers the\nquestion. There was one more wrinkle.\nThere is another Dana White, Dana W.\nWhite used to be the chief spokesperson\nat the Pentagon, which is the kind of\nresume you would normally want for this\njob. People started wondering which Dana\nhe meant.\n>> There was so much talk about this that\nDana W. White had to put out a statement\nsaying to everyone texting me\ncongratulations, thank you, but you have\nthe wrong Dana White.\n>> When your job offer is so confusing that\na stranger has to issue a denial, the\nhiring process may need work.\nSomewhere, a third Dana White is keeping\nthe phone off just in case.\nJimmy Fallon picked up the story from\nthere.\n>> Some more political news. Trump is now\nclaiming that he offered the press\nsecretary job to UFC's Dana White as a\njoke.\nTrump was like, although that does sound\nlike something I would do.\n>> The kidding part is real. It happened on\nan airport tarmac.\n>> I will tell you I I was only kidding.\nDana loves the idea. Of course I was\nkidding. And you could see that because\nI put all of the great fighters as his\nassistants that they're all going to\ncome with him.\n>> Excuse number four. I was kidding. You\nheard the rest of that answer at the\ntop, and you heard how many tries it\ntook.\n>> And as a comedian, I have to say I know\nthat the best jokes are the ones you\nhave to clarify\non a tarmac at a later date.\nI'm still trying to figure out if the\nlast press secretary he hired was a joke\nor not.\n>> Most people would let it die there.\nThis president flew Dana White in from\nLondon, brought him into the White House\nbriefing room in front of the cameras\nand asked him the question again.\nThis is the answer we promised you.\n>> So let me ask you the big question.\nDana, would you like to be press\nsecretary of the United States of\nAmerica?\nLook at the sign you'd have this behind\nyou all the time, the White House\nWashington. Would you like that or do\nyou just want to stay with this\nridiculous UFC? Huh?\n>> Thank you for the officer for the offer.\nI have no\nno I do not want to be in politics now.\n>> I am devastated to hear this. Goodbye\neverybody.\n>> Goodbye goodbye. What a hoot huh?\n>> He got a no on camera in his own\nbuilding under his own sign to an offer\nhe says was a joke. That is a joke that\nneeded a post a denial from a stranger a\ntarmac clarification and a flight from\nLondon. Most jokes get by with a\npunchline.\nThe counter is at four and he had two\nmore in.\nFirst Kimmel's view is that the job\ndoesn't need filling anyway because this\npresident handles the press just fine by\nhimself. You heard the start of this at\nthe top.\n>> Who you with? Who you with?\n>> With MSNBC now. What at what point\n>> now it's a fake\nMSNBC now gets the worst ratings. MSNBC\nnow what a joke you are. Your ratings\nare a loser. You're a fake network. Go\nahead.\n>> It's going to be so boring when we go\nback to sane isn't it?\n>> The Massey he kept calling a loser is\nThomas Massey a Republican congressman\nfrom Kentucky. On Monday November 9th\nMassey filed articles of impeachment\nagainst the defense secretary Pete\nHegseth.\nKimmel looked ahead.\n>> Well if it happens Pete would become the\nfirst secretary of defense in American\nhistory to be impeached since the 1800s\nand\nand there's\na 24-hour fitness out there that's about\nto get a very angry new general manager\nif he does.\n>> So the week's to-do list now reads one\nimpeachment vote one empty press office\nand one comedian to insult.\nGuess which one got done first.\nAnd while we're taking attendance among\nthe month's big losers Elon Musk had\nnews too. He's the man who put almost\nhalf a billion dollars into Republican\ncampaigns. Seth Meyers had the update.\n>> Elon Musk announced last week that Tesla\nis ending production of the Cybertruck\nto focus on its Cybercab autonomous ride\nshare vehicle. Oh is that why and not\nbecause no one was buying them?\n>> It has been a hard month to be something\nElon Musk believed in. The truck, the\ncandidates, the half a billion dollars.\nOnly one of those came with a warranty.\nThen there was the 60 minutes interview.\nIt's the same one where he said he\nprobably couldn't forgive his enemies,\neven for a seat in heaven.\nOne more excuse was hiding in it. Kimmel\nhad a review.\n>> So after laying low for a couple of\ndays, Trump is back in front of the\ncameras. He sat for a lengthy interview\nwith 60 minutes that aired last night\nand that went so well, he's only going\nto sue them for $5 billion.\n>> The lawsuit is a joke for now. With this\npresident, you have to label the jokes.\nHe taught us that himself on a tarmac.\nJimmy Fallon found the real headline in\nthat interview.\n>> Talk about\nlast night President Trump appeared on\n60 minutes for his first interview since\nthe midterms and he blamed the result on\nbad messaging.\nTrump was like some more on kept talking\nabout butts, ballrooms and reflecting\npools. I don't know who\nBad messaging, yeah. At that point even\nthe CBS logo at the bottom of the screen\nrolled its eye.\nGoodbye.\n>> Excuse number five. Bad messaging from\nthe man who was the message. He held the\nrallies, he wrote the posts and he\npicked the topics.\nFallon also mentioned that diesel is at\nrecord highs and that 221 trucking\ncompanies have gone bankrupt this year.\nThat is a hard thing to message around.\nAnd at a speech shortly before that\ninterview aired, Seth Meyers caught him\nbringing back a classic.\n>> During an event on Friday at the Kennedy\nSpace Center, President Trump discussed\nthe midterm elections and said quote, by\nthe way, I was not on the ballot. Yeah,\ndog, we know what midterms are.\nIt would have been very weird if you\nwere on the ballot.\nBabe, who do we like for railroad\ncommissioner again? Scott Jones or the\ncurrent president of the United States?\n>> Excuse number six and the only one on a\nreunion tour.\nHe wasn't on the ballot. He has now\nexplained that on the phone, in a post,\nand at a space center. If he says it at\na wedding, we'll let you know.\nHe wasn't done at that microphone.\n>> During the same event, President Trump\npraised Florida Governor elect Byron\nDonalds for his victory and said quote,\nhe won it and he did it the hard way by\nsurviving an endorsement from Trump.\n>> That one speech produced an excuse, a\nbackhanded compliment, and the most\nfamous mispronunciation of the month.\nBack on 60 Minutes, the interviewer Ross\nDouthat asked about the family crypto\nbusiness, the one with investors tied to\nthe United Arab Emirates. The president\nsaid he knows nothing about it. Kimmel\nbelieved one part of that answer.\n>> The only believable part of that\nstatement is that he and his son don't\ntalk. Other than that,\na billion and a half dollars in crypto,\nhe knows nothing about it.\n>> A billion and a half dollars is Kimmel's\nnumber.\nWhatever the real figure is, most people\ncan tell you what's in their own wallet.\nThen Douthat tried a bigger question.\nWhat will history say?\n>> Lawn so presidents are remembered with a\nsingle line.\nHe freed the slaves.\nHe won the Cold War.\nA hundred years from now,\nwhile you're working out your situation\nin purgatory,\nwhat is the line that your presidency is\nremembered with?\n>> That\nI made\nAmerica great again.\n>> I guess I asked for that.\nThank you, Mr. President.\n>> I don't know if he was kidding again or\nthat was real. It's impossible to tell.\n>> He read the hat. Lincoln got freed the\nslaves. Reagan got won the Cold War. He\nwent with the merchandise. Then Douthat\nmoved on to the afterlife.\n>> What do you think happens when you die?\n>> Well, I hope I missed.\n>> No, I mean I mean to you.\n>> but I really mean it. I hope I missed.\n>> I I understand. I mean to you.\n>> I've done a good job as\n>> What do you think happens to Donald\nTrump when you die?\n>> Well, again\n>> your memory, your self.\n>> His first thought was his reviews. Even\neternity for him comes with a comment\nsection.\nDoubt it did eventually get him to the\nactual question.\n>> Do you think you're going to heaven?\n>> Uh, I hope so. I don't want to go to\nhell.\n>> Well, you are going to hell.\n>> Seth Meyers took the president's side on\nthat one. Sort of.\n>> That's right. When asked during last\nday's 60 minutes interview about what he\nthinks will happen when he dies,\nPresident Trump said quote, in theory I\ngo to heaven. Okay, well we've seen your\nversion of that. You can just go there\nnow.\n>> And in the president's defense, Kimmel\ndid find some evidence of his faith.\n>> Donald Trump is a devout and religious\nman. We know that because he sells\nBibles.\n>> One last stop at a familiar location.\nThe president keeps taking impeachment\nquestions at construction sites where\nthe machinery is louder than the\nreporters.\nSeth Meyers pictured where that leads.\n>> Construction noise is so loud we can't\neven hear the president anymore. I can't\nwait for his next State of the Union\naddress.\n>> Americans ventured out across the\ndaunting and dangerous continent.\n>> HEY, WATCH THE PIPES, Jimmy Brody.\n>> The weather is hot.\n>> At this rate, the official White House\ntranscript is going to need a hard hat.\nThe final count is six excuses in under\na week. Six excuses and not one of them\nwas I lost. If you're grading them, the\npolls one is the weakest because the\npolls were right. I was kidding is the\nstrongest because at least somebody flew\nin from London for it. And the three\nbest burns of the week. Number three,\nSeth Meyers telling the new chief of\nstaff it's his time to absorb light.\nNumber two, Kimmel on the best jokes\nbeing the ones you have to clarify on a\ntarmac. Number one goes to Dana White\nwho beat every comedian in America with\none sentence.\nI do not want to be in politics.\nSo what will excuse number seven be?\nGive us your best guess in the comments.\nAnd if you want the next one, subscribe."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@AnselSeniorHealth/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#JimmyKimmel",
+    "#Trump",
+    "#DanaWhite"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@AnselSeniorHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

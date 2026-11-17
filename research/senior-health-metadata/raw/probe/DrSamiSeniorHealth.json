@@ -1,0 +1,252 @@
+{
+ "run": {
+  "id": "fvOgd8HZvwpeoHsTc",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:07:28.072Z",
+  "finishedAt": "2026-11-11T08:07:53.560Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 373,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 25313,
+   "resurrectCount": 0,
+   "runTimeSecs": 25.313,
+   "metamorph": 0,
+   "computeUnits": 0.007031388888888889,
+   "memAvgBytes": 143738508.26313916,
+   "memMaxBytes": 157777920,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 7.630541311831929,
+   "cpuMaxUsage": 88.53982256020278,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 692754,
+   "netTxBytes": 144681
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "eIRTbSgfkVxnxJb4S",
+  "defaultDatasetId": "nNjTW1PUtznBop3js",
+  "defaultRequestQueueId": "T6EnvTLZFG8MLZzmF",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "eIRTbSgfkVxnxJb4S"
+   },
+   "datasets": {
+    "default": "nNjTW1PUtznBop3js"
+   },
+   "requestQueues": {
+    "default": "T6EnvTLZFG8MLZzmF"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://sxkvsbpd1yiz.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/fvOgd8HZvwpeoHsTc",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/nNjTW1PUtznBop3js/items?signature=MC4wLkVZOTFIeW42NkxIQXBRNlJZeDMx"
+  }
+ },
+ "records": [
+  {
+   "title": "What Happens to Your Body When You Eat Peanut Butter Every Day After 60? Doctor Explains!",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "5H4JBsTi86w",
+   "url": "https://www.youtube.com/watch?v=5H4JBsTi86w",
+   "thumbnailUrl": "https://i.ytimg.com/vi/5H4JBsTi86w/maxresdefault.jpg",
+   "viewCount": 85,
+   "date": "2026-11-09T23:00:09.000Z",
+   "likes": 1,
+   "location": null,
+   "channelName": "Dr Sami Senior Health",
+   "channelUrl": "https://www.youtube.com/channel/UC6pNF4Fi-id3YyJI8c8kxpw",
+   "channelUsername": "DrSamiSeniorHealth",
+   "collaborators": null,
+   "channelId": "UC6pNF4Fi-id3YyJI8c8kxpw",
+   "channelDescription": "Welcome to Dr. Sami Senior Health! 🩺💙\n\nA trusted space for seniors who want to live healthier, stronger, and more active lives. Here, you’ll find simple health tips, healthy aging advice, eye-care information, nutrition guidance, wellness ideas, and practical ways to support your everyday well-being.\n\nOur mission is to make health information easy to understand and helpful for your daily life.\n\nSubscribe today and become part of the Dr. Sami Senior Health family!\n\n#DrSamiSeniorHealth #HealthyAging #HealthTips\n\nDisclaimer ⚠️\n\nAll content on this channel is provided for general education and awareness. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Please speak with your doctor or a qualified healthcare provider before making changes to your health routine, diet, medication, or treatment.",
+   "channelJoinedDate": "Sep 14, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/Ke9C6in9zZHTB391OTeeufbJXvAnYKk6UmbuxG0DS-5M17fPXCUbtQon3xVJVT994WGkkyFB3Q=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/AV4D5M4Q2DypjGnrtzLwzNVAQBNFgewWkppL5Yjqwjlr2nQXGF4w8SU-lgOLjM_wu6O-50rTCpI=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 14,
+   "channelTotalViews": 149675,
+   "numberOfSubscribers": 1040,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@DrSamiSeniorHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Dr. Sami Senior Health! 🩺💙\n\nA trusted space for seniors who want to live healthier, stronger, and more active lives. Here, you’ll find simple health tips, healthy aging advice, eye-care information, nutrition guidance, wellness ideas, and practical ways to support your everyday well-being.\n\nOur mission is to make health information easy to understand and helpful for your daily life.\n\nSubscribe today and become part of the Dr. Sami Senior Health family!\n\n#DrSamiSeniorHealth #HealthyAging #HealthTips\n\nDisclaimer ⚠️\n\nAll content on this channel is provided for general education and awareness. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Please speak with your doctor or a qualified healthcare provider before making changes to your health routine, diet, medication, or treatment.",
+    "channelJoinedDate": "Sep 14, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "DrSamiSeniorHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/Ke9C6in9zZHTB391OTeeufbJXvAnYKk6UmbuxG0DS-5M17fPXCUbtQon3xVJVT994WGkkyFB3Q=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/AV4D5M4Q2DypjGnrtzLwzNVAQBNFgewWkppL5Yjqwjlr2nQXGF4w8SU-lgOLjM_wu6O-50rTCpI=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 14,
+    "channelTotalViews": 149675,
+    "numberOfSubscribers": 1040,
+    "isChannelVerified": false,
+    "channelName": "Dr Sami Senior Health",
+    "channelUrl": "https://www.youtube.com/channel/UC6pNF4Fi-id3YyJI8c8kxpw",
+    "channelId": "UC6pNF4Fi-id3YyJI8c8kxpw",
+    "inputChannelUrl": "https://www.youtube.com/@DrSamiSeniorHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:24:20",
+   "commentsCount": 0,
+   "text": "Is eating peanut butter every day good or bad after 60? Dr. Sami Malik explains what is really in a jar, what regular peanut butter may do for your heart, blood sugar, muscles, digestion, and weight, the real risks to watch for, and how to choose a jar that actually helps.\nIn this video, you’ll learn:\n ✅ What is inside two tablespoons of peanut butter: protein, healthy fats, fiber, and key minerals\n ✅ How peanut butter may affect your heart and cholesterol\n ✅ How it may help steady blood sugar, and what to know if you have diabetes\n ✅ How much protein it adds and how it can support muscles and appetite\n ✅ Why it can help you feel full, and when the calories can work against you\n ✅ How to read a label: added sugar, salt, and hydrogenated oils to avoid\n ✅ How much is sensible for most older adults, and easy ways to enjoy it\n ✅ Why a thick, sticky spoonful can be a problem if you have swallowing difficulties\n ✅ Allergy warning signs and when kidney disease or other conditions call for caution\n ✅ Common mistakes: eating from the jar, choosing sweetened or “reduced fat” versions, oversized portions\n ✅ A step-by-step plan you can start this week\n ✅ Warning signs that mean it’s time to talk to your doctor or call emergency services\nIf you’re over 60 and love peanut butter, or you’re wondering whether it belongs in your daily routine, this video will help you enjoy it wisely and safely.\n⚠️ This video is for general educational purposes only and does not replace medical advice from your own doctor or dietitian. If you develop itching or swelling of the lips, tongue, or throat, hives, wheezing, or difficulty breathing after eating peanuts, seek emergency help immediately and call your local emergency number. If you often cough or choke when eating, feel food sticking in your throat, or have unplanned weight loss, please speak with a healthcare professional promptly. Check with your doctor or dietitian first if you have kidney disease, diabetes, or a restricted diet.\n👉 If you found this helpful, please LIKE, SUBSCRIBE, and turn on notifications so you don’t miss future videos on senior health.\n#SeniorHealth #PeanutButter #HealthyEating #HeartHealth #DoctorExplains #HealthyAging",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/peanutbutter",
+     "text": "#PeanutButter"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyeating",
+     "text": "#HealthyEating"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hearthealth",
+     "text": "#HeartHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/doctorexplains",
+     "text": "#DoctorExplains"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Let me ask you a simple question.\nWhat is sitting in your kitchen cupboard\nright now that you have probably eaten\nfor years without ever thinking twice\nabout it?\nFor millions of people, the answer is a\njar of peanut butter.\nIt is on the toast in the morning, on a\nspoon late at night, in a sandwich for\nlunch, or tucked into a bowl of oatmeal.\nIt is cheap, it is comforting, and it\nreminds many of us of childhood. But if\nyou are over 60, a question may have\ncrossed your mind. Is it actually good\nfor me to eat this every single day? Or\nis it quietly doing something I do not\nknow about?\nSome people will tell you that peanut\nbutter is fattening and should be\navoided. Others will tell you that it is\na superfood that protects your heart,\nand both groups speak with great\nconfidence. So, who is right?\nThe honest answer, as with most things\nin health, is more interesting than\neither extreme. What happens in your\nbody when you eat peanut butter every\nday depends on how much you eat, which\nkind you choose, what it replaces in\nyour diet, and your own health\nconditions. And that is exactly what we\nare going to walk through today.\nBy the end of this video, you will\nunderstand what is really inside a\nspoonful of peanut butter, what it may\ndo for your heart, your blood sugar,\nyour muscles, your digestion, and your\nweight. The real risks that deserve\nattention after 60. How to pick a jar\nthat actually helps you. How much is\nsensible, and the common mistakes I see.\nI will explain it in plain language\nwithout complicated medical terms and\nwithout pressure.\nAnd I want to ask you for one small\nthing as you listen.\nDo not look for a simple yes or no. Look\nfor the version of the answer that fits\nyour own life. That is the answer that\nactually helps.\nBut first, let me tell you who I am and\nwhy this topic matters to me.\nMy name is Dr. Sammy Malik. For many\nyears, I have worked closely with older\nadults. And one of the questions I hear\nmost often, usually at the end of a\nvisit, sounds very simple.\nDoctor, is it all right if I eat this\nevery day?\nIt might be eggs, or bread, or tea, or\npeanut butter. These everyday foods\nmatter far more than any supplement\nbecause they are eaten hundreds of times\na year.\nI have met patients who gave up peanut\nbutter entirely because someone told\nthem it was unhealthy, and who missed it\nterribly. And I have met patients who\nate half a jar a week, and believed it\nwas a health food.\nBoth of them had only half the picture.\nToday, I would like to give you the\nwhole picture.\nBefore we continue, if you find this\nkind of information helpful, I would\nreally appreciate it if you considered\nsubscribing to this channel.\nEvery week we break down topics like\nthis one. Real and practical health\ninformation made simple, especially for\npeople in their 60s, 70s, and beyond.\nSubscribing helps more people find these\nvideos, and it helps us keep making\nthem.\nNow, let's get into it.\nLet's start with what is actually inside\nthe jar.\nPeanut butter is made from roasted\npeanuts that are ground into a paste.\nPeanuts, interestingly, are not true\nnuts. They are legumes, in the same\nfamily as beans and lentils, and they\ngrow underground. That is one reason\ntheir nutrition looks a little different\nfrom almonds or walnuts.\nA typical serving is 2 Tbsp, which is\nabout 32 g. That serving contains\nroughly 190 to 200 calories. It has\naround 7 to 8 g of protein, around 16 g\nof fat, about 2 to 3 g of fiber, and\nonly about 3 g of carbohydrate.\nIt also contains useful amounts of\nvitamin E, niacin, magnesium, potassium,\nmanganese, and other minerals.\nThe fat deserves a closer look because\nit is the part that confuses people.\nMost of the fat in peanut butter is\nunsaturated, the kind that is generally\nconsidered friendlier to your heart.\nIt also contains a small amount of\nsaturated fat, around 3 g per serving,\nwhich is why moderation still matters.\nSo, it is not a fat-free food, and it is\nnot a heart-damaging food. It sits\nsomewhere in the middle, and its effect\ndepends on what it replaces.\nThat last point is important enough that\nI want to say it again. Foods never work\nalone.\nIf peanut butter replaces a pastry, a\nsugary spread, or processed meat, your\nbody is likely to benefit.\nIf it is simply added on top of\neverything else you already eat, you are\nadding about 200 calories a day, and\nyour body will notice that, too.\nNow, let's talk about what may happen\ninside your body when you eat it\nregularly.\nThe first area is your heart. This is\nwhere peanut butter has the most\nencouraging story.\nLarge studies that followed tens of\nthousands of people over many years have\nfound that people who eat peanuts and\nother nuts regularly tend to have a\nlower risk of heart disease. Most of\nthat research looks at whole peanuts and\nnuts in general, and less at peanut\nbutter on its own. So, I want to be\nhonest about that. But, the nutrients\nare similar, and the overall picture is\nencouraging.\nWhy might this be?\nUnsaturated fats can help improve\ncholesterol patterns when they replace\nless healthy fats. Peanuts also contain\nfiber, magnesium, and plant compounds\nthat may support healthy blood vessels.\nSome studies suggest that regular peanut\nintake is linked with lower levels of\nthe harmful LDL cholesterol compared\nwith diets without them.\nNone of this means peanut butter is a\nmedicine.\nIt means that, as part of a sensible\ndiet, it may be a helpful food rather\nthan a harmful one.\nThe second area is blood sugar. Peanut\nbutter is low in carbohydrate, and the\ncombination of protein, fat, and fiber\nslows the way sugar enters your\nbloodstream. That is why a spoonful of\nnatural peanut butter on an apple slice\nor on whole grain toast tends to cause a\ngentler rise in blood sugar than the\nsame toast with jam. Some long-term\nstudies have also found that women who\nate peanut butter regularly had a lower\nrisk of developing type 2 diabetes.\nAgain, this is an association, not a\npromise, but it fits with what we\nunderstand about the food.\nIf you already have diabetes, peanut\nbutter can usually fit well into your\nmeals, but the portion and the type\nmatter.\nA brand with added sugar can undo the\nbenefit, and the calories still count.\nPlease check with your doctor or\ndietitian about how it fits into your\nown plan.\nThe third area is your muscles. As I\nhave explained in other videos, muscle\nloss after 60 is one of the biggest\nhidden threats to independence, and\nprotein is one of the key protections.\nTwo tablespoons of peanut butter provide\nroughly 7 to 8 g of protein. That is\nhelpful, but I want to keep it in\nperspective. It is about the same as one\negg. It will not replace fish, chicken,\nbeans, yogurt, or eggs in your day, but\nit can add a meaningful boost,\nespecially for people who struggle to\neat enough protein.\nPeanut butter is also easy to eat. For\nsomeone with a small appetite or someone\nwho lives alone and does not feel like\ncooking, a slice of toast with peanut\nbutter can be a quick, nourishing snack\nthat delivers protein, healthy fats, and\ncalories without any effort. For some of\nmy older patients who are losing weight\nwithout trying, that simplicity matters\na great deal.\nThe fourth area is your appetite and\nyour weight. This is where the fear\ncomes from. Peanut butter is calorie\ndense, so people assume it will make\nthem gain weight. And yes, if you eat it\nby the spoonful without thinking, those\ncalories can add up quickly. But studies\non nuts and peanuts generally show\nsomething surprising.\nPeople who eat them regularly do not\ntend to gain more weight than people who\ndo not. And this seems to be partly\nbecause they are filling.\nThe mix of protein, fat, and fiber helps\nyou feel satisfied. So you may eat less\nof other things later in the day.\nSo, the effect on weight depends on your\nsituation.\nIf you are trying to lose weight, a\nmeasured portion can help you feel full,\nbut a large daily amount can slow your\nprogress.\nIf you are underweight, losing weight\nunintentionally, or struggling to eat\nenough, peanut butter can be a very\nuseful tool.\nIt is the same food, but it does\ndifferent jobs for different people.\nThe fifth area is your digestion. The\nfiber in peanut butter, around 2 to 3 g\nper serving, can support regular bowel\nmovements, especially when you also\ndrink enough fluids.\nBut if you suddenly start eating a lot\nof it, some people notice bloating or\ngas.\nA gradual start is usually well\ntolerated.\nAnd the sixth area is your general\nnutrition.\nPeanut butter gives you vitamin E, which\nacts as an antioxidant, niacin, which\nsupports energy metabolism, magnesium,\nwhich is involved in muscle and nerve\nfunction and blood pressure, and\npotassium.\nMany older adults do not get enough\nmagnesium from their diet, so even a\nmodest contribution is useful.\nBut remember, no single food gives you\neverything. Peanut butter is a helpful\npiece, not the whole puzzle.\nLet me tell you about a gentleman I once\ncared for.\nHe was 73, a retired postal worker, and\na widower who lived alone.\nHe had been losing weight slowly over\nabout a year, and his clothes were\nhanging loose.\nWhen I asked what he ate, he told me,\n\"Honestly, doctor, tea and biscuits.\nCooking for one is no fun.\"\nWe did not make big changes. We simply\nadded two things.\nA slice of whole grain toast with\nnatural peanut butter in the morning and\na banana with a spoonful of peanut\nbutter in the afternoon. That was all.\nWithin 3 months, his weight had\nstabilized. He told me he had more\nenergy and he said, \"It is the first\nthing I have looked forward to eating in\na long time.\"\nFor him, peanut butter was not a risk.\nIt was a small, easy bridge back to\nbetter nutrition.\nNow, I want to be equally honest about\nthe other side because a video that only\ntells you the good news is not telling\nyou the truth.\nThe first concern is calories. As I\nsaid, 2 Tbsp contain around 200 calories\nand many people eat far more than that\nwithout noticing. If you are carrying\nextra weight or you have a condition\nwhere weight matters, such as diabetes,\nhigh blood pressure, or arthritis in the\nknees, then measuring your portion is\nwise.\nA spoonful licked from the jar at\nmidnight does not count as nothing.\nThe second concern is added ingredients.\nThis is the most important practical\npoint in this video.\nMany commercial peanut butters contain\nadded sugar, added salt, and sometimes\nadded oils, including palm oil or\npartially hydrogenated oils, which are\nused to keep the spread smooth and\nprevent oil separation.\nSome reduced fat versions replace fat\nwith extra sugar, which is not an\nimprovement. If your jar lists sugar,\nsyrup, or hydrogenated oil among the\nfirst ingredients, you are eating\nsomething quite different from the\nsimple food we have been discussing.\nThe third concern is salt.\nPeanut butter often contains added salt,\nsometimes around 100 mg or more per\nserving. For most healthy people, that\nis modest. But if you have high blood\npressure, heart failure, or kidney\ndisease and you eat peanut butter\nseveral times a day, it can add up\nalongside the salt in bread and other\nfoods. Choosing an unsalted or low-salt\nversion is an easy fix.\nThe fourth concern is allergy.\nPeanut allergy is usually discovered in\nchildhood, but occasionally people\nnotice reactions later in life. If you\never develop itching in the mouth,\nswelling of the lips, hives, vomiting,\nor difficulty breathing after eating\npeanuts, stop and seek medical help\nimmediately.\nSevere reactions are emergencies.\nIf you have never had any problem with\npeanuts, there is no reason to expect\none now, but it is important to know the\nwarning signs.\nThe fifth concern is one that I think is\nvery important for older adults, and it\nis rarely mentioned. Peanut butter is\nthick and sticky.\nFor most people, that is no problem. But\nfor older adults who have weakened\nswallowing muscles, dry mouth, dentures,\nor conditions that affect swallowing, a\nlarge sticky spoonful can be difficult\nto move through the mouth and throat.\nIt can stick to the roof of the mouth or\nform a heavy lump that is harder to\nswallow safely. If you have had trouble\nswallowing, if you often cough when\neating, or if you have had a choking\nepisode, please take this seriously.\nSpread peanut butter thinly, eat it with\nmoist foods like banana, apple, or\nporridge, take small bites, sit upright,\nand sip fluids as needed. And if you\noften find food sticking in your throat,\nplease speak with your doctor about a\nswallowing evaluation.\nSmooth peanut butter is usually easier\nthan crunchy, and thinly spread is far\nsafer than a heaping spoonful.\nThe sixth concern is kidney disease.\nPeanuts contain potassium and\nphosphorus. For most people, that is not\na problem. But if you have advanced\nkidney disease, and your doctor has told\nyou to limit these minerals, then peanut\nbutter needs to be discussed with your\ndoctor or dietitian first.\nThe seventh concern is a very small one,\nand I mention it because people ask.\nPeanuts can sometimes carry a mold\nproduced substance called aflatoxin. In\ncountries with good food regulation, the\nlevels in commercial products are\nmonitored and kept low, and for most\npeople, this is not a practical concern.\nBut, it is another reason to buy from\nreputable brands and to avoid peanut\nbutter that looks moldy, smells unusual,\nor tastes bitter or stale.\nSo, how do you choose a good jar?\nFirst, read the ingredient list, not the\nfront of the label.\nThe best peanut butters have one or two\ningredients, peanuts and perhaps a\nlittle salt.\nIf the list is that short, you are in\ngood shape.\nSecond, avoid added sugar.\nLook for brands with no sugar, syrup, or\nhoney added, or as little as possible.\nThird, avoid hydrogenated oils.\nIf you see partially hydrogenated\nvegetable oil on the label, put it back.\nPalm oil is less harmful than that, but\nit is still an added ingredient that you\ndo not need.\nFourth, look at the salt. If you have\nhigh blood pressure, choose unsalted or\ncompare brands and pick the lower sodium\noption.\nFifth, do not be alarmed by the layer of\noil that separates on top of natural\npeanut butter. That is normal. Stir it\nin and keep the jar in a cool place or\nin the fridge after opening to slow\nseparation and keep it fresh.\nAnd sixth, do not be fooled by the words\nnatural, light, or reduced fat. Always\ncheck the ingredients.\nNow, how much should you eat?\nFor most healthy older adults, one to\ntwo tablespoons a day is a sensible\nportion. That is about the size of a\nping pong ball for two tablespoons.\nIf you are managing your weight, one\ntablespoon is often enough to enjoy the\ntaste and the benefits.\nIf you are underweight or eating poorly,\nyour doctor or dietitian may suggest\nmore.\nThe best way to enjoy it is as part of a\nmeal or snack that adds fiber and\nnutrients.\nA spoonful on an apple or a banana,\nspread thinly on whole grain toast,\nstirred into oatmeal, blended into a\nsmoothie with milk and fruit, or served\nwith celery sticks.\nThese pairings make it easier to\nswallow, add fiber, and slow the\ndigestion of sugars.\nHere is how to think about the daily\nhabit.\nIf peanut butter replaces something less\nnourishing, like a sweet pastry, a\nsugary spread, or a processed snack, it\nis likely a good swap. If it is simply\nadded on top with no other changes, you\nare adding about 200 calories a day, and\nyou should consider whether that fits\nyour needs.\nLet me share another story. A lady in\nher late 60s, a retired teacher, told me\nshe had started eating peanut butter\nevery day because she had read that it\nwas good for her heart. She was eating\nit straight from the jar, three or four\nspoonfuls a day, and she was a little\npuzzled that her weight was creeping up.\nWhen I looked at the jar, it was a\nsweetened brand with added oils.\nWe switched to a natural version with\njust peanuts, measured two tablespoons\non whole grain toast in the morning, and\nshe kept everything else in her diet the\nsame.\nOver a few months, her weight stopped\nrising, and her next blood tests were\nstable.\nShe told me, \"It was never the peanut\nbutter, it was how I was eating it.\"\nAnd I think that is exactly right.\nNow, let me share the most common\nmistakes I see. The first mistake is\neating it straight from the jar because\nit is easy to lose track of the amount.\nMeasure it, at least for a week, to\nlearn what a real portion looks like.\nThe second mistake is choosing sweetened\nor reduced-fat versions, believing they\nare healthier. They often contain more\nsugar and less of the benefit.\nThe third mistake is eating very large\nportions, thinking that because it is\nhealthy, more must be better.\nAt 200 per 2 Tbsp, it adds up.\nThe fourth mistake is ignoring the salt,\nespecially if you have high blood\npressure or heart problems.\nThe fifth mistake is eating a thick,\nsticky spoonful when you have trouble\nswallowing.\nSpread it thinly and pair it with moist\nfoods.\nThe sixth mistake is using it as a\nreplacement for real meals.\nIt is a good addition, but you still\nneed a variety of foods, including fish,\neggs, vegetables, fruits, and whole\ngrains.\nThe seventh mistake is storing it badly\nor eating a jar that smells stale or\ntastes bitter. If it smells or tastes\nwrong, throw it away.\nAnd the eighth mistake is believing that\nany single food can fix your health.\nPeanut butter can be a helpful piece of\na good diet, but it will not replace\nexercise, sleep, medical care, or the\nrest of your meals. Let me answer a few\nquestions that I often hear.\nPeople ask me, \"Dr. Malik, is peanut\nbutter bad for cholesterol?\"\nFor most people, no. The fat is mostly\nunsaturated, and studies on peanuts\ngenerally show neutral or favorable\neffects on cholesterol. But the added\noils and sugar in some brands can change\nthat, which is why the ingredient list\nmatters.\nAnother question is, \"Is it safe if I\nhave diabetes?\" For many people with\ndiabetes, a measured portion of\nunsweetened peanut butter fits well\nbecause it has little carbohydrate and\nhelps slow the rise in blood sugar.\nBut please check with your doctor or\ndietitian about portions and your own\ntargets.\nPeople also ask, \"Is crunchy better than\nsmooth?\" Nutritionally, they are very\nsimilar.\nFor people with swallowing difficulty or\ndentures, smooth is usually easier. For\npeople without these issues, it comes\ndown to taste.\nAnother question is, \"Does peanut butter\nraise blood pressure?\nNot on its own.\nBut added salt in some brands can\ncontribute if you eat a lot. So, choose\nan unsalted version if you have high\nblood pressure.\nPeople also ask, can I eat it every day\nfor years?\nFor most healthy people, yes, in\nsensible portions as part of a varied\ndiet. Some of the large studies that\nfound benefits followed people who ate\npeanuts or nuts several times a week\nover many years.\nAnd finally,\nis peanut butter better than other nut\nbutter? Almond, cashew, and walnut\nbutters have slightly different nutrient\nprofiles, but the differences are\nmodest. The best nut butter is one with\nminimal added ingredients that you enjoy\nand can eat safely.\nPeanut butter is usually the most\naffordable, which matters, too.\nNow, let me give you a simple plan to\nstart this week. Step one.\nLook at the ingredient list of the jar\nyou have now. If it contains added sugar\nor hydrogenated oils, plan to switch to\na version made mainly from peanuts.\nStep two. Measure 1 Tbsp and 2 Tbsp so\nyou know what a real portion looks like.\nStep three.\nChoose one daily way to enjoy it, such\nas on whole grain toast, apple slices,\nbanana, or oatmeal.\nStep four.\nIf it replaces a sweet spread or a\nprocessed snack, you have made a\nhealthier swap. If you are adding it on\ntop, consider whether you need to adjust\nyour other foods.\nStep five.\nIf you have high blood pressure, kidney\ndisease, diabetes, or trouble\nswallowing, mention your plan to your\ndoctor or dietitian.\nStep six.\nStore it in a cool place, stir the oil\nback in, and check the smell and taste\nfrom time to time. Step seven.\nPair it with water or another fluid and\nsit upright when you eat it.\nStep eight.\nAfter a few weeks, notice how you feel,\nhow your appetite and weight are doing,\nand whether it fits comfortably into\nyour meals.\nAnd remember, you do not need to change\neverything at once.\nSmall, steady changes are far more\neffective than dramatic ones that are\nhard to maintain.\nNow, I want to take a moment to speak\nabout safety, and to be very clear about\nthe limits of what a video can do.\nWhat I have explained today is general\neducation about peanut butter and\nnutrition in older adults.\nI cannot diagnose your specific\nsituation, and I cannot replace the\nadvice of your own doctor or dietitian,\nwho knows your full health history and\nmedicines.\nPlease stop eating peanut butter and\nseek medical help immediately if you\nexperience itching or swelling of the\nlips, tongue, or throat, hives, repeated\nvomiting, wheezing, or difficulty\nbreathing after eating it. Severe\nallergic reactions are emergencies, and\nyou should call your local emergency\nnumber right away.\nPlease also speak to your doctor if you\noften cough or choke when eating, feel\nfood sticking in your throat, or have\nhad unplanned weight loss.\nAnd please check with your doctor or\ndietitian before making peanut butter a\ndaily habit if you have kidney disease,\na restricted diet, or any condition that\nrequires careful control of weight,\nsalt, or potassium.\nThese do not always mean there is a\nproblem, but they deserve proper\nguidance. And please remember that this\nvideo is for general information and\ndoes not replace medical advice from\nyour own doctor.\nSo, let's bring this all together.\nWhen you eat peanut butter every day\nafter 60, what happens in your body\ndepends on what is in the jar, how much\nyou eat, what it replaces, and your own\nhealth.\nA simple peanut butter made from peanuts\nwith little or no added sugar, oil, or\nsalt, and eaten in sensible portions can\nbe a helpful food.\nIt may support your heart, help steady\nyour blood sugar, add useful protein and\nfiber, keep you feeling full, and make\nit easier to eat well when your appetite\nis small.\nBut the benefits are not automatic.\nCalories add up.\nAdded sugar and salt can undo the good.\nA thick, sticky spoonful can be a\nproblem if you have swallowing\ndifficulties. And people with allergies\nor kidney disease need to be careful.\nI would encourage you, right now, to do\none small thing. Maybe go to your\nkitchen and read the ingredient list on\nyour jar. Or measure out 2 Tbsp, just\nonce, to see what a real portion looks\nlike. Or put an apple next to the jar,\nso that the next time you reach for it,\nyou have a good partner. Small, specific\nactions like these turn information into\nprotection.\nThe humble jar of peanut butter does not\nneed to be a guilty pleasure, and it\ndoes not need to be a miracle cure. It\ncan simply be a good, ordinary food,\neaten wisely by someone who understands\nwhat is inside it.\nTaking small steps like this is exactly\nhow we protect our health, one habit at\na time.\nIf this video helped you understand your\nown body a little better today, please\nconsider subscribing. Share it with\nsomeone you love, and I will see you in\nthe next one."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@DrSamiSeniorHealth/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#SeniorHealth",
+    "#PeanutButter",
+    "#HealthyEating"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@DrSamiSeniorHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

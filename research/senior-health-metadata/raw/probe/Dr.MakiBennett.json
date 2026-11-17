@@ -1,0 +1,262 @@
+{
+ "run": {
+  "id": "lY1s2wKDK02BCDYxj",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:04:58.983Z",
+  "finishedAt": "2026-11-11T08:05:13.966Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 369,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 14827,
+   "resurrectCount": 0,
+   "runTimeSecs": 14.827,
+   "metamorph": 0,
+   "computeUnits": 0.004118611111111111,
+   "memAvgBytes": 153425616.736524,
+   "memMaxBytes": 179068928,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 12.196203857132728,
+   "cpuMaxUsage": 95.05182165605095,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 619862,
+   "netTxBytes": 97279
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "fVKuBgfzqIBghiNXh",
+  "defaultDatasetId": "F1WAKIN4gYVQwRimP",
+  "defaultRequestQueueId": "DIAjjqozxXtYnU8uP",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "fVKuBgfzqIBghiNXh"
+   },
+   "datasets": {
+    "default": "F1WAKIN4gYVQwRimP"
+   },
+   "requestQueues": {
+    "default": "DIAjjqozxXtYnU8uP"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://xquozibucblq.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/lY1s2wKDK02BCDYxj",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/F1WAKIN4gYVQwRimP/items?signature=MC4wLkpyTHJUUWV2OFZMT0I4YlEyOVlq"
+  }
+ },
+ "records": [
+  {
+   "title": "Stop DRIBBLING After You Pee FOREVER (The S-Bend Method)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "o7dNqymqCd0",
+   "url": "https://www.youtube.com/watch?v=o7dNqymqCd0",
+   "thumbnailUrl": "https://i.ytimg.com/vi/o7dNqymqCd0/maxresdefault.jpg",
+   "viewCount": 23,
+   "date": "2026-11-10T17:56:29.000Z",
+   "likes": 1,
+   "location": null,
+   "channelName": "Dr. Maki Bennett",
+   "channelUrl": "https://www.youtube.com/channel/UCYvd-AWIJPkB7jAwYYUp7jw",
+   "channelUsername": "Dr.MakiBennett",
+   "collaborators": null,
+   "channelId": "UCYvd-AWIJPkB7jAwYYUp7jw",
+   "channelDescription": "👋 Welcome to the channel! I'm Dr. Maki Bennett. Simple, science-backed health tips to help men over 60 stay ahead of illness — not just treat it. On this channel, we talk prevention: the small daily habits, health screenings, and lifestyle changes that support your heart, your energy, your strength, and your long-term health. No jargon. No fear-mongering. Just clear, practical advice to help you age well, stay active, and live a healthier life after 60. Hit subscribe and let's build healthier habits together — one short at a time.\n\nThis channel is for educational purposes only and is not a substitute for personalized medical advice from your own physician.",
+   "channelJoinedDate": "Sep 22, 2026",
+   "channelDescriptionLinks": [
+    {
+     "text": "X",
+     "url": "https://x.com/makibennett"
+    }
+   ],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/l1fo6R_8uZTcxR9KER0AnDZbD9RBLFcije40pdOEXPaYLDzv7yT7-L164oXZte-BIRRpPDbQ_Q=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/xV5ZI9v5qhg7JLp6GGKUaQ1WI4AUEeo-6hqgmMhKdgPagw_iJDKcLIUelDmR25T2dvPL_nTAXN0=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 21,
+   "channelTotalViews": 400648,
+   "numberOfSubscribers": 1960,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@Dr.MakiBennett",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "👋 Welcome to the channel! I'm Dr. Maki Bennett. Simple, science-backed health tips to help men over 60 stay ahead of illness — not just treat it. On this channel, we talk prevention: the small daily habits, health screenings, and lifestyle changes that support your heart, your energy, your strength, and your long-term health. No jargon. No fear-mongering. Just clear, practical advice to help you age well, stay active, and live a healthier life after 60. Hit subscribe and let's build healthier habits together — one short at a time.\n\nThis channel is for educational purposes only and is not a substitute for personalized medical advice from your own physician.",
+    "channelJoinedDate": "Sep 22, 2026",
+    "channelDescriptionLinks": [
+     {
+      "text": "X",
+      "url": "https://x.com/makibennett"
+     }
+    ],
+    "channelLocation": "United States",
+    "channelUsername": "Dr.MakiBennett",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/l1fo6R_8uZTcxR9KER0AnDZbD9RBLFcije40pdOEXPaYLDzv7yT7-L164oXZte-BIRRpPDbQ_Q=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/xV5ZI9v5qhg7JLp6GGKUaQ1WI4AUEeo-6hqgmMhKdgPagw_iJDKcLIUelDmR25T2dvPL_nTAXN0=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 21,
+    "channelTotalViews": 400648,
+    "numberOfSubscribers": 1960,
+    "isChannelVerified": false,
+    "channelName": "Dr. Maki Bennett",
+    "channelUrl": "https://www.youtube.com/channel/UCYvd-AWIJPkB7jAwYYUp7jw",
+    "channelId": "UCYvd-AWIJPkB7jAwYYUp7jw",
+    "inputChannelUrl": "https://www.youtube.com/@Dr.MakiBennett",
+    "isAgeRestricted": false
+   },
+   "duration": "00:11:09",
+   "commentsCount": 1,
+   "text": "Stop Dribbling After You Pee (The S-Bend Method That Actually Works)\n\nDribbling after you pee is extremely common in men over 50, and it’s usually not dangerous. Learn why it happens (urine trapped in the natural S-shaped curve of the urethra), the 10-second “S-Bend Method” quick fix, and the pelvic floor exercises that helped 75% of men in one clinical trial stop dribbling completely.\n\n\n💬 Type “me too” if this happens to you. You’re not alone.\n\n📚 Sources:\n• Paterson J, Pinnock CB, Marshall VR. Pelvic floor exercises as a treatment for post-micturition dribble. Br J Urol. 1997;79(6):892–897.\n• Dorey G et al. Pelvic floor exercises for treating post-micturition dribble in men with erectile dysfunction: a randomized controlled trial. Urol Nurs. 2004;24(6):490–497. https://pubmed.ncbi.nlm.nih.gov/15658...\n• Dorey G. Prevalence, aetiology and treatment of post-micturition dribble in men: literature review. Physiotherapy. 2002;88(4):225–234.\n• Albakr A et al. Management of post-micturition dribble in men: systematic review and meta-analysis (ICS-EUS 2025).\n\n⚠️ Educational content only, not medical advice. See your doctor if you have a weak stream, pain, blood in your urine, or trouble urinating.\n\n#MensHealth #ProstateHealth #PelvicFloor #Over50 #BladderHealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/15658735/",
+     "text": "https://pubmed.ncbi.nlm.nih.gov/15658..."
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/menshealth",
+     "text": "#MensHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/prostatehealth",
+     "text": "#ProstateHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/pelvicfloor",
+     "text": "#PelvicFloor"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/over50",
+     "text": "#Over50"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bladderhealth",
+     "text": "#BladderHealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "You finish at the urinal. You shake. You\nzip up. You walk away. And a few seconds\nlater, you feel it. That warm little\nleak. A dark spot on your trousers that\neveryone can see. If you're a man over\n50, this has probably happened to you.\nAnd you've probably been too embarrassed\nto mention it to anyone, even your\ndoctor. So, let me tell you three things\nright now. First, you're not alone. In\none clinical study, about two out of\nevery three men attending a urology\nclinic for erection problems also had\nthis problem. Second, it's usually not a\nsign of anything dangerous. And third,\nthere's a simple two-part technique\ntested in clinical trials that helped\nmost men in one study stop the dribbling\nwithin a few months. I call it the Sband\nmethod, and I'll show you exactly how to\ndo it step by step. Welcome to another\ninteresting video. On this channel, we\nturn real research into plain English\nguidance for adults over 60. And every\nstudy I mention is linked in the\ndescription. Before we start, let's make\nthis easy. If this happens to you, just\ntype me too in the comments. [music] No\ndetails needed. You'll see just how\ncommon this really is. So, why does this\nhappen? To understand the fix, you need\nto understand the plumbing. In men, the\ntube that carries urine out of the\nbladder, called the urethra, isn't the\nstraight pipe. It's long and it has a\nnatural curve, a bit like an S. And part\nof that curve, deep underneath, behind\nthe scrotum, sits lower than the rest.\nThink of the S-bend pipe under your\nkitchen sink. After the water stops\nrunning, a little bit always stays\ntrapped in that low curve. The same\nthing happens in your body. When you\nfinish urinating, a small amount of\nurine stays trapped in that low part of\nthe curve. Now, here's the important\npart. When you're younger, a muscle at\nthe base of your pelvis called the bulbo\ncavernosis muscle automatically squeezes\nat the end of urination. It works like a\nhand squeezing the last bit of\ntoothpaste out of a tube. It pushes that\ntrapped urine out before you zip up. But\nas we get older, that muscle can get\nweaker. It can also be affected by an\nenlarged prostate. prostate surgery,\nweight gain, diabetes, or long periods\nof sitting, so the squeeze isn't strong\nenough anymore. The urine stays trapped\nin the Sbend, and when you stand up\nstraight and start walking, it trickles\nout. Doctors call this postmurition\ndribble. Post means after, and mixtur\nmeans urinating. So, simply dribbling\nafter you urinate. And here's what\ndoesn't work. shaking harder, waiting\nlonger, squeezing the tip. None of those\nreach the S-bend because the trapped\nurine is further back behind the\nscrotum. If you're finding this helpful\nso far, type Sbend in the comments so I\nknow you're still with me. Now, here's\nwhat the research says actually works.\nIn a study published in 1997 in the\nBritish Journal of Urology, researchers\n[music] in Australia took 49 men aged 36\nto 83 who had this exact problem. They\nsplit them into three groups. One group\ngot only advice. One group learned a\ntechnique to clear the Sben by hand\ncalled urethal milking and one group did\ndaily pelvic floor exercises. After 12\nweeks, the advice only group didn't\nimprove at all. Both the hand technique\nand the exercises helped and the\nexercises helped the most. Then in 2004,\na researcher in England named Grace Dory\ntested pelvic [music] floor exercises\nplus a strong squeeze at the end of\nurinating in a randomized trial of men\nwith erection problems. [music]\nAbout two out of three of those men also\nhad post urination dribbling. After\nthree months of supervised exercises and\nthree more months of exercising at home,\n75% of the men with dribbling became\ncompletely free of it. So, the Sbend\nmethod combines both of these. The quick\nfix you can use today and the long-term\nfix that strengthens the muscle so the\n[music] problem can fade away. Part one,\nthe quick fix, which you can use\nstarting today. This is what you do\nevery time you urinate. Step one, don't\nrush. When your stream stops, wait a few\nseconds. Relax and let your bladder\nfinish completely. Step two, the\nsqueeze. Before you move, tighten the\nmuscles at the base of your pelvis.\nFirmly, the same muscles you'd use to\nstop yourself from passing gas or hold\nin urine. Squeeze strongly once or\ntwice. This is the squeeze out that was\nused in the Dory trial. It helps push\nthe trapped urine forward. Step three,\nthe Sbend sweep. Now place two or three\nfingertips on the skin just behind your\nscrotum, the area between the scrotum\nand the back passage. Press gently\nupward. Then keeping that gentle\npressure, slide your fingers forward\ntoward the base of the penis and along\nthe underside. This gently pushes the\nurine trapped in the low part of the\ncurve forward so it can come out. You\nmay need to do it two or three times.\nThis is the technique tested in the\nAustralian study. Step four, a gentle\nshake or a quick blot [music] with\ntoilet paper to catch the last drops.\nThat's it. It takes about 10 seconds and\nfor many men, it stops the dribbling the\nvery first day. A few tips. Be gentle.\nYou don't need to press hard. If you're\nat a public urinal and don't want to use\nyour hand, use a stall instead. You can\nalso do the sweep through your clothing\nbefore you fully zip up. And if you're\nsitting down to urinate, lean slightly\nforward at the end and do the squeeze\nbefore you stand. If you're still with\nme, type squeeze in the comments. Part\ntwo, the long-term fix. Strengthen the\nmuscle. The quick fix clears the sbend,\nbut the long-term goal is to make that\nmuscle strong enough to do the job on\nits own again. And that's where pelvic\nfloor exercises come in. Many people\nthink of these as exercises for women,\nbut men have pelvic floor muscles, too,\nand they can be trained just like any\nother muscle. First, find the right\nmuscles. Imagine you're trying to stop\nyourself from passing gas, and at the\nsame time trying to lift your scrotum\nslightly upward without moving your legs\nor your butttocks. That gentle lifting\nand tightening feeling deep at the base\nof your pelvis is your pelvic floor. If\nyou look in a mirror while standing, you\nmay see the base of the penis move\nslightly upward. A quick note, you might\nhear advice to stop your stream midway\nto practice. You can do it once just to\nfind the muscles, but don't make it a\nhabit because stopping the flow\nregularly can make it harder for your\nbladder to empty properly. Now, here's a\nsimple routine. Exercise one, the slow\nsqueeze. Tighten your pelvic floor\nmuscles and hold for 3 to 5 seconds.\nKeep breathing normally. Don't hold your\nbreath and don't squeeze your butttocks\nor thighs. Then relax fully for the same\namount of time. Do 10 of these. Exercise\ntwo, the quick squeeze. Tighten firmly\nand quickly, then relax right away. Do\n10 of these. Do this routine three times\na day. You can do it lying down,\nsitting, or standing. Nobody will even\nknow you're doing it. Try it while\nwatching TV, waiting at a red light, or\nbrushing your teeth. [music] And as you\nget stronger over a few weeks, work up\nto holding each slow squeeze for up to\n10 seconds. Now, be patient. Muscles\ntake time to get stronger. In the\nstudies, men practice for about 3\nmonths, so give it at least 6 to 12\nweeks. Keep using the quick fix every\ntime you urinate in the meantime.\n[music] And once the problem improves,\nkeep doing your exercises a few times a\nweek to keep that muscle strong. And\nhere's the bonus. Remember the Dory\nstudy I mentioned? It was actually done\nin men with erection problems, and the\nsame pelvic floor exercises helped many\nof those men with their erections, too.\nThese are the muscles that help with\nboth. So, this routine may help you in\nmore ways than one. If you can't find\nthe right muscles or you're not sure\nyou're doing it right, ask your doctor\nto refer you to a pelvic floor physical\ntherapist. Yes, they treat men, too.\nThey can teach you exactly how to do\nthese correctly. And there's one more\noption to know about. Research has\nsuggested that a daily lowd dose tidal,\na medicine many men already take for an\nenlarged prostate or erection problems,\nmay also reduce dribbling after\nurination. I covered that medicine in\ndetail in another video. It's\nprescription only, so talk to your\ndoctor. And ladies, if you're watching,\ndribbling [music] after you stand up can\nhappen to women, too. It's often from\nurine trapped near the vaginal opening.\n[music] Leaning forward at the end of\nurinating and then standing and sitting\nback down again for a moment can help.\n[music] And pelvic floor exercises help\nwomen as well. Now, here's when\ndribbling needs a doctor's attention.\nThe Sbend method is for simple dribbling\nafter you finish, but please see your\n[music] doctor if your stream is weak or\nslow or you have to strain to get\nstarted. If you dribble at the end of\nyour stream or you feel your bladder\nnever fully empties. If you're getting\nup often at night to urinate. If you\nleak when you cough, sneeze, lift,\n[music] or stand up. If you have pain or\nburning or see blood in your urine. Or\nif the dribbling started suddenly or got\nmuch [music] worse quickly. These can be\nsigns of an enlarged prostate, an\ninfection, or another problem [music]\nthat deserves a proper checkup. And if\nyou suddenly can't urinate at all, go to\nthe emergency room. So, let's lock this\nin. Dribbling after you urinate is\nextremely common in [music] men as they\nget older. It usually happens because a\nlittle urine gets trapped in the natural\nS-shaped curve of the urethra and the\nmuscle that normally squeezes it out has\ngotten weaker. [music] The Sbend method\nhas two parts. The quick fix every time,\nweight, squeeze, [music]\nsweep forward from behind the scrotum\nand blot. and the long-term fix, pelvic\nfloor [music] exercises three times a\nday for at least 6 to 12 weeks. In\nclinical studies, these techniques\nhelped most men, and in one trial, 75%\nof men with dribbling became completely\nfree of it. Try the quick fix today and\nstart your exercises tonight. Then come\nback in a few weeks and tell me in the\ncomments how it's going. Your story\nmight give another man the courage to\ntry. And if you're also getting up at\nnight to urinate, there are six possible\nreasons, and only some of them are your\nbladder. Watch this video next. It's on\nyour screen right now. Just remember,\nthis video is for education only, and\nit's not medical advice. If you have\npain, blood in your urine, or trouble\nurinating, please see your doctor.\nTake care and I'll see you"
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@Dr.MakiBennett/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#MensHealth",
+    "#ProstateHealth",
+    "#PelvicFloor"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@Dr.MakiBennett",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

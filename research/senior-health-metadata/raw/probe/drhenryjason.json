@@ -1,0 +1,248 @@
+{
+ "run": {
+  "id": "spby6Xrfvx534IhaW",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:00:21.314Z",
+  "finishedAt": "2026-11-11T08:00:39.439Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 367,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 17883,
+   "resurrectCount": 0,
+   "runTimeSecs": 17.883,
+   "metamorph": 0,
+   "computeUnits": 0.0049675,
+   "memAvgBytes": 173673347.8847013,
+   "memMaxBytes": 200110080,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 14.542490012243391,
+   "cpuMaxUsage": 48.917353882535814,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 651847,
+   "netTxBytes": 109498
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "Jct16PtgHnqBPcQMk",
+  "defaultDatasetId": "55gohXRdAZVVmSKPr",
+  "defaultRequestQueueId": "gmgwhomDZF9NsbN6m",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "Jct16PtgHnqBPcQMk"
+   },
+   "datasets": {
+    "default": "55gohXRdAZVVmSKPr"
+   },
+   "requestQueues": {
+    "default": "gmgwhomDZF9NsbN6m"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://mlhruu7zqp7x.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/spby6Xrfvx534IhaW",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/55gohXRdAZVVmSKPr/items?signature=MC4wLjF5MTl2cm5aSldmcG1hZHV1amE3"
+  }
+ },
+ "records": [
+  {
+   "title": "Doctor Explains: What Happens When You Eat 4 Eggs Every Day",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "NQwr6G-2Yh8",
+   "url": "https://www.youtube.com/watch?v=NQwr6G-2Yh8",
+   "thumbnailUrl": "https://i.ytimg.com/vi/NQwr6G-2Yh8/maxresdefault.jpg",
+   "viewCount": 7941,
+   "date": "2026-10-23T21:09:09.000Z",
+   "likes": 462,
+   "location": null,
+   "channelName": "DR HENRY JASON",
+   "channelUrl": "https://www.youtube.com/channel/UC-a-yheeRqTvbKMt7UDivfA",
+   "channelUsername": "drhenryjason",
+   "collaborators": null,
+   "channelId": "UC-a-yheeRqTvbKMt7UDivfA",
+   "channelDescription": "👋 Welcome to the channel! I'm **DR Henry Jason**, 65, and I’m here to share the health knowledge and life experience I’ve gained over the years.\n\nOn this channel, we focus on **prevention, healthy aging, and everyday habits** that can help you stay ahead of illness — rather than simply reacting when something goes wrong.\n\nFrom heart health and energy to nutrition, exercise, screenings, sleep, and simple lifestyle changes, I share **practical, science-backed advice** in a clear and easy-to-understand way.\n\nNo complicated jargon. No unnecessary fear. Just useful health information, lessons learned through years of experience, and simple habits you can apply to everyday life.\n\nAt 65, I’ve learned that taking care of your health isn’t about perfection — it’s about making better choices consistently.\n\n⚠️ This channel is for educational and informational purposes only and is not a substitute for personalized medical advice from your own doctor or qualified healthcare professional.",
+   "channelJoinedDate": "Jul 5, 2025",
+   "channelDescriptionLinks": [],
+   "channelLocation": null,
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/0oiZIFiw8b29nGqK2B72lBozraRtaZ03Ab4B1sTUIWF_sAkLXLFAxOGYv3SBYQqIp-y4-pLAAg=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/2U6TyNH0-9JCbEfQn7g2glWgyNLbdG0JkCSRBN9h-osvL85_idNXLeYvJDWudx-9dgIvmvnB8A=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 6,
+   "channelTotalViews": 1751324,
+   "numberOfSubscribers": 14400,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@drhenryjason",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "👋 Welcome to the channel! I'm **DR Henry Jason**, 65, and I’m here to share the health knowledge and life experience I’ve gained over the years.\n\nOn this channel, we focus on **prevention, healthy aging, and everyday habits** that can help you stay ahead of illness — rather than simply reacting when something goes wrong.\n\nFrom heart health and energy to nutrition, exercise, screenings, sleep, and simple lifestyle changes, I share **practical, science-backed advice** in a clear and easy-to-understand way.\n\nNo complicated jargon. No unnecessary fear. Just useful health information, lessons learned through years of experience, and simple habits you can apply to everyday life.\n\nAt 65, I’ve learned that taking care of your health isn’t about perfection — it’s about making better choices consistently.\n\n⚠️ This channel is for educational and informational purposes only and is not a substitute for personalized medical advice from your own doctor or qualified healthcare professional.",
+    "channelJoinedDate": "Jul 5, 2025",
+    "channelDescriptionLinks": [],
+    "channelLocation": null,
+    "channelUsername": "drhenryjason",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/0oiZIFiw8b29nGqK2B72lBozraRtaZ03Ab4B1sTUIWF_sAkLXLFAxOGYv3SBYQqIp-y4-pLAAg=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/2U6TyNH0-9JCbEfQn7g2glWgyNLbdG0JkCSRBN9h-osvL85_idNXLeYvJDWudx-9dgIvmvnB8A=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 6,
+    "channelTotalViews": 1751324,
+    "numberOfSubscribers": 14400,
+    "isChannelVerified": false,
+    "channelName": "DR HENRY JASON",
+    "channelUrl": "https://www.youtube.com/channel/UC-a-yheeRqTvbKMt7UDivfA",
+    "channelId": "UC-a-yheeRqTvbKMt7UDivfA",
+    "inputChannelUrl": "https://www.youtube.com/@drhenryjason",
+    "isAgeRestricted": false
+   },
+   "duration": "00:20:13",
+   "commentsCount": 67,
+   "text": "Most people over 60 were told to avoid eggs. After nearly 40 years in medicine, Dr. Henry Jason looked at what the research actually says, and one effect shows up within weeks that almost nobody expects. 🥚\n\nIn this video, you’ll learn what happens when eggs become a regular part of your life after 60, organ by organ and system by system. We cover how eggs may support muscle strength and help fight sarcopenia (age-related muscle loss), why the protein, choline, vitamin B12, and folate in eggs matter for brain health and memory, and how the lutein and zeaxanthin in egg yolks may help protect your eyes from macular degeneration and cataracts. We also look at vitamin D, vitamin K2, bone health, steady energy and blood sugar, and sleep.\n\nThen comes the honest part: what eating four eggs a day really means for your cholesterol, who may be a hyper-responder, how many eggs per day is reasonable for seniors, the safest way to cook eggs, and which health conditions mean you should talk to your own doctor first, including diabetes, heart disease, high LDL, and kidney disease.\n\nIf you’re over 60 and wondering whether eggs are good or bad for you, this is a clear, practical, research-based guide to protecting your strength, memory, vision, and independence as you age.\n\n📚 SOURCES AND RESEARCH REFERENCED\n\nCDC: data on falls among adults 65+\nDietary Guidelines for Americans (2015): removal of the strict daily dietary cholesterol limit\nBMJ systematic review and meta-analysis (Rong et al., 2013): egg intake and heart disease/stroke risk\nJAMA (Zhong et al., 2019): dietary cholesterol, egg consumption, and cardiovascular risk\nFramingham Offspring Study (Poly et al., 2011): choline intake and cognitive performance\nUniversity of Connecticut study (Goodrow et al., 2006): one egg daily in older adults and blood lutein/zeaxanthin\nvan Vliet et al., 2017: whole eggs vs. egg whites and muscle protein synthesis in young men\nVander Wal et al., 2005: egg breakfast vs. bagel breakfast and satiety\nObservational research on lutein/zeaxanthin intake and advanced macular degeneration (including AREDS2)\n\nDisclaimer: This video is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. The benefits discussed are not guaranteed, and individual nutritional needs vary. Consult a qualified healthcare professional about your personal health and dietary needs.\n\n👍 Like, subscribe, and tell me in the comments how you like your eggs.\n\n#SeniorHealth #EggsAfter60 #HealthyAging #Over60 #Nutrition",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/eggsafter60",
+     "text": "#EggsAfter60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/over60",
+     "text": "#Over60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/nutrition",
+     "text": "#Nutrition"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "I want you to stop and think for a\nsecond. There's a carton of eggs sitting\nin your refrigerator right now. Maybe\nthere's a hard-boiled one in there, too.\nThe one you peel over the sink and eat\nstanding at the counter with a pinch of\nsalt when no one's looking. Maybe this\nmorning you scrambled a couple and\ndunked your toast in the yolk the way\nyou've done since you were a kid. It\nfeels like the most ordinary moment of\nyour day. But what if I told you that\nthis plain little food could be doing\nsomething remarkable inside an aging\nbody? Something most people your age\nhave never taken advantage of because\nfor decades they were told to stay away\nfrom it. Here's what surprised even me.\nAfter nearly four decades practicing\nmedicine, I sat down with a stack of\nresearch on eggs. Not because a patient\nasked, but because I kept noticing a\npattern. Older adults who ate them\nregularly seemed to hold onto their\nstrength, their energy, and their\nindependence. And many of them kept\nwalking into my office on their own two\nfeet well into their 70s and 80s. I\nstarted digging and what I found changed\nhow I talk to my patients about food.\nToday, I'm going to walk you through\nwhat happens organ by organ, system by\nsystem when eggs become a steady part of\nyour life. Some of it, especially what's\nhappening in your brain and your eyes,\nyou may never have heard before. And one\neffect, the one that begins to show up\naround the three-week mark, is something\nalmost nobody sees coming. I'll tell you\nexactly what it is, so stay with me.\nI'll also be honest about the part\nnobody likes to talk about, what four\neggs every single day really means and\nwho needs to be careful. Because this\nisn't about a breakfast food. This is\nabout protecting the next 20 years of\nyour life. Let's get into it. Section\none, the aging body's nutritional blind\nspot. Here's something I wish someone\nhad told me early on. The older you get,\nthe more your body asks of your food,\nbut the less food you feel like eating.\nYour appetite shrinks. Chewing gets\nharder. Cooking for one feels like too\nmuch work, so dinner becomes cereal over\nthe sink.\nYet, your need for protein, vitamins,\nand minerals doesn't shrink at all. And\nmost people just assume the tiredness\nand fog are aging. It's not always\naging. Sometimes it's a nutritional gap\nyour body is trying to tell you about.\nThis is where the humble egg becomes\ninteresting. One egg is soft, cheap,\neasy to chew, and takes 5 minutes to\ncook. Inside it, you'll find\nhigh-quality protein, vitamin B12,\ncholine, vitamin D, selenium, and the\neye nutrients lutein and zeaxanthin, all\npacked into roughly 70 calories. Picture\na woman I'll call Margaret, 73, living\nalone. She skips breakfast because she\nisn't hungry, and lunch is a cup of tea\nand a slice of toast. But day after day,\nher body is running on an almost empty\ntank. Small gaps like that are exactly\nwhere a simple food can help.\nStill with me? Good. Because next, I\nwant to talk about a silent thief that\nstarts stealing from you decades before\nyou notice. Before we move on, tell me\nyour name and age in the comments. I'd\nlove to know where you're watching from\nand who I'm talking to today. Section\ntwo, the silent thief that steals your\nstrength.\nThere's a process that begins quietly\naround the age of 40. It's called\nsarcopenia, which simply means\nage-related muscle loss. It's not a\ndisease, it's a\nprocess. But natural\nAfter 60, that loss tends to speed up.\nAnd here's why that worries me as a\nphysician. People rarely get into\ntrouble because they lost muscle. They\nget into trouble because losing muscle\nled to a fall, which led to a fracture,\nwhich led to a hospital stay that\nstarted a cascade they couldn't recover\nfrom. The CDC says about one in four\nadults over 65 falls every year.\nYour body fights back with protein every\nsingle day. An egg is a starter kit\nholding everything needed to build a\nliving creature from a single cell.\nThat's why scientists rank egg protein\namong the highest quality proteins we\ncan eat. A large egg carries about 6 g,\nso four eggs bring you to roughly 25.\nMany experts suggest older adults aim\nfor around 25 to 30 g of protein at each\nmeal. And breakfast is the meal most\npeople miss. A bowl of cereal and a\nbanana won't get you there. Four eggs\nwill, and even two eggs with a cup of\nGreek yogurt gets you close.\nNow, if you've been ordering the egg\nwhite omelet for years, here's something\nto think about. In one small study of\nyounger men, whole eggs did more to\nswitch on muscle building than the same\namount of protein from egg whites alone.\nThat study wasn't done in seniors, so I\nwon't overstate it. But it's a reason\nnot to throw the yolk away.\nEggs contain leucine, about half a gram\nin each one. And leucine is like a light\nswitch for muscle repair. It tells your\nbody, \"Time to rebuild.\" But as we age,\nour muscles respond less sharply to that\nsignal.\nResearchers call it anabolic resistance.\nIn plain words, you need a firmer nudge\nthan you did years ago.\nEggs alone will not rebuild muscle. Add\nwalking, standing up from a chair, and\nlight resistance exercises, and you give\nyour muscles the material and the\nreason.\nThe muscle you keep is the independence\nyou keep. Carrying your own groceries,\ngetting up off the floor, not needing\nhelp out of a chair at 72. That's\neverything.\nAnd the next section is the one my\npatients never expect because it\ninvolves your brain.\nSection three, your brain on eggs. We\nall joke about senior moments.\nForgetting a name, walking into a room\nand wondering why, having an actor's\nname on the tip of your tongue for three\ndays, but memory changes build quietly\nover many years, which means the habits\nyou keep now matter. Eggs are one of the\nbest food sources of three nutrients\nthat work together, choline, vitamin\nB12, and folate. Together, they support\na process called methylation.\nThink of it as a maintenance crew that\nworks around the clock, helping repair\nyour cells, and helping your brain make\nthe chemical messengers it uses to\ncommunicate. Choline in particular is\nused to build a messenger involved in\nmemory and learning. Surveys suggest\nmany older adults fall short on choline.\nA large egg has about 150 mg, so four\neggs would cover a full day's\nrecommended amount. And B12 gets harder\nto absorb with age because the stomach\nmakes less of the acid needed to free it\nfrom food. Researchers working with the\nFramingham offspring study, a\nlong-running health study, found that\npeople with higher choline intake tended\nto score better on some memory tests.\nThat's an association, not proof.\nEggs can't fix a memory problem, and no\nsingle food can.\nYour brain is also made largely of fat,\nand egg yolk phospholipids help build\nits cell membranes.\nPicture a man I'll call Harold, 68, who\nkeeps losing his glasses and his train\nof thought. Sometimes that may quietly\nhide a nutrient gap worth asking a\ndoctor about. If you're still watching,\nyou're thinking about who you want to be\nin 10 years. That's exactly the right\ninstinct. Section four, the cholesterol\nstory nobody told you honestly. Let's\ntalk about the elephant in the kitchen.\nFor decades, you were told to avoid eggs\nbecause of cholesterol. Maybe you've\nbeen eating egg whites for years and\nfeeling a little guilty about the yolk.\nMaybe you took one deviled egg at the\nfamily picnic and then wondered if you\nshould have.\nHere's what researchers have learned\nsince. Your liver makes most of the\ncholesterol in your body. It's a quiet\nlittle factory, and when more comes in\nfrom food, it often makes less. For many\npeople, the saturated fat in a meal\npushes blood cholesterol up more than\nthe cholesterol in an egg does. A large\negg has under 2 g of saturated fat. One\ntablespoon of butter has around seven.\nSo, the real question may be what's\nsitting beside your eggs on the plate.\nThe bacon, the sausage, the buttered\ntoast.\nThat's one reason the dietary guidelines\nfor Americans dropped the old strict\ndaily cholesterol limit in 2015.\nAnd a large review published in the BMJ\nfound no link between up to one egg a\nday and heart disease or stroke in the\ngeneral population. Though people with\ndiabetes may be an exception.\nNow, here's where I have to be honest\nwith you.\nA large egg holds roughly 185 mg of\ncholesterol, so four eggs add up to\naround 740. That's far more than most\nguidelines address, and the evidence at\nthat level is more mixed. A 2019 study\nin JAMA linked eating more eggs to a\nslightly higher risk of heart disease,\nwhile others haven't. Researchers also\nknow that some people are hyper\nresponders, meaning their blood\ncholesterol rises more when they eat\ncholesterol-rich foods. You can't tell\nby looking. Only a blood test can tell\nyou.\nSo, the answer isn't that eggs are\nmagic, and it isn't that eggs are\npoison. How you cook them and what you\neat them with matters, and your own\nnumbers matter most. If you have\ndiabetes, heart disease, or a high LDL,\nplease talk to your own doctor before\nyou change anything.\nAre you paying attention to your own\nnumbers or just to the headlines?\nStay with me because next I'm going to\nshow you something eggs may do for your\neyes, and it's where that three-week\neffect finally pays off. Section five,\nyour eyes and the week three effect.\nLosing your eyesight is one of the\nbiggest fears I hear from older\npatients. Not being able to read the\nmenu in a dim restaurant, not being able\nto thread a needle, not being able to\nsee your grandchildren's faces. Two of\nthe most common causes are age-related\nmacular degeneration and cataracts. The\nmacula is the small center of your\nretina, the part you use for reading and\nrecognizing faces. Protecting it takes\ntwo pigments called lutein and\nzeaxanthin.\nThey act like internal sunglasses,\nfiltering harsh blue light and calming\ncellular stress.\nYour body can't make them, so you have\nto eat them. Leafy greens contain\nplenty, but here's the surprising part.\nThe lutein in an egg yolk is absorbed\nunusually well because it arrives with a\nlittle fat, and fat helps your body take\nit up. A well-known study from the\nUniversity of Connecticut had older\nadults eat one egg a day for 5 weeks.\nTheir blood levels of lutein and\nzeaxanthin went up without a harmful\nchange in their cholesterol numbers.\nLarger observational research has linked\nhigher intake of these pigments to a\nlower risk of advanced macular\ndegeneration.\nBut eggs are not a cure and no food\nreplaces a regular eye exam. Now,\nremember the effect I promised you\naround the 3-week mark? Here it is. It\nisn't dramatic. It's that within a few\nweeks of eating eggs regularly, studies\nshow that blood markers like lutein can\nbegin to shift. Your body is quietly\nstocking up the nutrients your eyes and\nyour brain depend on long before any\nsymptom would tell you something is\nwrong. That's what I mean when I say\nthese benefits are cumulative.\nIf you're still watching and this is\nhelping you, type the number five in the\ncomments so I know you're here with me.\nSection six, steady energy, the egg\nwhite myth, and food safety.\nLet me paint you a picture that I've\nseen play out in my exam room many\ntimes.\nA man comes in feeling exhausted by 2:00\nin the afternoon. His breakfast was a\nbowl of sweet cereal and a glass of\njuice. By 10:30, he's hungry again and\nby 2:00, he's dragging himself toward\nthe cookie tin.\nThat's a blood sugar rollercoaster. The\nyolk adds fat and fat is a slow-burning\nfuel.\nIn a well-known study of overweight\nadults, those who ate an egg breakfast\nfelt fuller and ate less later in the\nday than those who ate a bagel breakfast\nwith the same calories.\nAnd please don't toss the white.\nThe egg white is a tiny fortress with\nproteins that help resist bacteria\nbefore a chick ever hatches.\nYou may have heard a myth that raw egg\nwhites cause a vitamin deficiency.\nThere's a kernel of truth. Raw egg white\ncontains avidin, a protein that can\nlatch onto biotin, vitamin B7. But\ncooking changes avidin, so it can't do\nthat. If your eggs are cooked, it's\nsimply not a worry.\nAnd here's what matters more after 60.\nPlease cook your eggs until the whites\nare set and the yolks are firm. As we\nage, our immune system doesn't defend us\nquite as strongly. And raw or runny eggs\ncan carry salmonella.\nYou're still watching, which tells me\nyou take your health seriously, and that\nputs you ahead of most people.\nIf you take medicine for diabetes, don't\nchange your eating without talking to\nyour doctor. Are you eating in a way\nthat keeps your energy steady, or in a\nway that sends you crashing by\nlunchtime?\nSection seven covers two things people\nignore until something goes wrong.\nSection seven, bones, hidden vitamins,\nand sleep. Eggs hold a few vitamins that\nrarely get the spotlight. Vitamin D\nhelps your body use calcium and supports\nyour bones, muscles, and immune system.\nMany older adults run low because skin\nmakes less vitamin D with age. An egg\nhas a modest amount. It won't replace\nsunshine or a supplement, but it helps.\nVitamin K2 helps steer calcium toward\nyour bones, and retinol, a form of\nvitamin A, supports your immune system\nand your vision. Hip fractures are one\nof the leading reasons people lose their\nindependence after 70.\nThen there's sleep. After 60, deep sleep\ngets harder to hold on to. Maybe you've\nlain awake at 3:00 in the morning\nlistening to the clock. Eggs contain\ntryptophan, which your body uses to\nbuild serotonin and then melatonin. The\namount in food is modest, and an egg\nisn't a sleeping pill, but a\nprotein-rich meal earlier in the evening\ngently supports your body's rhythms. Are\nyou sleeping deeply or just sleeping?\nYou've stayed with me this long, so\nlet's make sure you walk away with\nsomething useful. Section eight is next,\nand it's the most important one. Section\neight, the practical guide. How to do\nthis right.\nRule number one, choose your eggs and\nread the carton. Caged eggs come from\nhens kept in tight quarters.\nCage-free is better, though the hens may\nstill live indoors. Pasture-raised is\noften considered the best because the\nhens roam outdoors, sometimes giving\neggs more vitamin D and omega-3 fats.\nIf you can't afford premium eggs,\nregular eggs are still a great choice.\nDon't let the perfect get in the way of\nthe good.\nRule number two, know your numbers.\nFour eggs a day is a higher intake than\nmost guidelines cover, so it works best\nwhen you know how your own body\nresponds.\nGet your cholesterol checked before you\nstart, then again after about 3 months.\nIf your numbers hold steady, four eggs\nmay fit well into your day. If they\nclimb, that's your body telling you\nsomething, and your doctor can help you\nadjust. Rule number three, timing and\nsafety. Morning is great because protein\nat breakfast gives you steadier energy.\nIf your goal is muscle, have your eggs\nwithin a couple of hours of a walk or\nany light exercise. And always cook them\nuntil the whites are set and the yolks\nare firm. Boil a half dozen on Sunday\nand keep them in the fridge, shells on,\nand they're good for about a week.\nThat's your counter-snack, and now\nnobody needs to look away.\nRule number four, cooking method and\npairing. Boil, scramble, or fry gently\nin a little olive oil, and skip the\nbacon grease, the sausage, and the white\nbread. Pair eggs with leafy greens like\nspinach, because the fat in the yolk\nhelps you absorb the nutrients in them.\nAdd tomatoes for lycopene. Add avocado\nand whole grain toast, and yes, you can\nstill dunk that toast in the yolk.\nPicture Margaret again with scrambled\neggs, spinach, and tomato on her plate.\nTell me in the comments how you like\nyour eggs.\nRule number five, be consistent with a\n90-day challenge. I tell my patients,\ngive it 90 days, then go get your blood\nwork done with your doctor's blessing,\nand see where your numbers stand.\nWho should talk to their doctor first?\nIf you have diabetes or established\nheart disease. If you have familial\nhypercholesterolemia\nor a very high LDL. If you take\ncholesterol-lowering medication or blood\nthinners. If you have kidney disease, or\nif you have an egg allergy. Talk to your\nown doctor, especially if you have any\nof these. And remember, this video is\nfor education. It's not a substitute for\npersonal medical advice.\nHere's what I really want you to take\naway. The biggest mistake I see older\nadults make is waiting.\nWaiting for a diagnosis. Waiting for a\nsymptom. Waiting for someone to tell\nthem something is wrong before they\nstart doing something right.\nYour body is giving you a window right\nnow.\nPicture a Sunday morning with the\ngrandchildren at your table. You at the\nstove on your own two feet. Eggs aren't\nmagic, and they're not the only thing\nyou should be doing, but they are\nsimple, affordable, and well-researched,\nand a dozen costs only a few dollars.\nSo, check your carton, check your\nnumbers, and take the next step this\nweek.\nIf this gave you something new to think\nabout today, do me a favor, hit that\nlike button. It helps get this kind of\ninformation in front of people who need\nit. And subscribe if you haven't,\nbecause every week I come back with\nsomething that I hope genuinely helps\nyou live longer, feel better, and stay\nindependent longer. And eggs aren't the\nonly everyday food that raises big\nquestions.\nWhat happens when you drink milk every\nday? What it may do for your bones, your\nmuscles, and your body after 60 might\nsurprise you. Watch it next.\nYour health isn't one decision. It's\nthousands of small ones made over years.\nThe fact that you're here watching this\nalready puts you ahead. So, go check\nyour carton, and take care of yourself,\nbecause nobody else can do it for you."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@drhenryjason/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#SeniorHealth",
+    "#EggsAfter60",
+    "#HealthyAging"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@drhenryjason",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

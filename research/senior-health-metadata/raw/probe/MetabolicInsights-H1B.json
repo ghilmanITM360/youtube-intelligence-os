@@ -1,0 +1,386 @@
+{
+ "run": {
+  "id": "Bkwb2jmhtJh1lhYeM",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:06:12.516Z",
+  "finishedAt": "2026-11-11T08:06:54.744Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 376,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 42064,
+   "resurrectCount": 0,
+   "runTimeSecs": 42.064,
+   "metamorph": 0,
+   "computeUnits": 0.011684444444444445,
+   "memAvgBytes": 131000602.2213081,
+   "memMaxBytes": 159592448,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 5.016473411257614,
+   "cpuMaxUsage": 86.93085350318471,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 695391,
+   "netTxBytes": 131174
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "TcXNlcrUZSW6sq4Oh",
+  "defaultDatasetId": "9O0StUOvsiLK7e2bc",
+  "defaultRequestQueueId": "HmhliwjJUrWP5fNII",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "TcXNlcrUZSW6sq4Oh"
+   },
+   "datasets": {
+    "default": "9O0StUOvsiLK7e2bc"
+   },
+   "requestQueues": {
+    "default": "HmhliwjJUrWP5fNII"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://pz0lpwh9wf6j.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/Bkwb2jmhtJh1lhYeM",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/9O0StUOvsiLK7e2bc/items?signature=MC4wLlFROHBHVjkyclF1YjE0VHV1TTNh"
+  }
+ },
+ "records": [
+  {
+   "title": "SHOCKING Secret! — Use This Before Bed And GROW Your Hair BACK!   | Dr. Jason Fung",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "YndAkr30fPQ",
+   "url": "https://www.youtube.com/watch?v=YndAkr30fPQ",
+   "thumbnailUrl": "https://i.ytimg.com/vi/YndAkr30fPQ/maxresdefault.jpg",
+   "viewCount": 167,
+   "date": "2026-11-10T01:00:28.000Z",
+   "likes": 4,
+   "location": "UNITED STATES",
+   "channelName": "Metabolic Insights",
+   "channelUrl": "https://www.youtube.com/channel/UCmb4yX00qPWBO3KKmjTllDA",
+   "channelUsername": "MetabolicInsights-H1B",
+   "collaborators": null,
+   "channelId": "UCmb4yX00qPWBO3KKmjTllDA",
+   "channelDescription": "🩺Welcome to Metabolic Insights! 🩺\n\nDiscover how metabolism, nutrition, fasting, insulin, and lifestyle habits influence health.\n\nWe make complex health topics simple and accessible. Explore metabolic health, intermittent fasting, insulin resistance, type 2 diabetes, weight management, and healthy living.\n\n🔬 What You'll Learn:\n🔬 Metabolic Health\n⏳ Intermittent Fasting\n🩺 Diabetes Education\n⚖️ Weight Management\n🥗 Nutrition & Healthy Living\n\nOur content explores health research and ideas discussed by metabolic health experts, including topics associated with Dr. Jason Fung, with our educational explanations.\n\nUnderstand Your Metabolism. Improve Your Health.\n\n⚠️ Disclaimer: \nThis channel provides educational information only and is not a substitute for professional medical advice, diagnosis, or treatment. Consult a qualified healthcare professional before changing your diet, fasting routine, or medication.\n\n#MetabolicHealth #InsulinResistance #IntermittentFasting #DiabetesEducation",
+   "channelJoinedDate": "Oct 7, 2026",
+   "channelDescriptionLinks": [
+    {
+     "text": "MetabolicInsights-H1B",
+     "url": "https://www.youtube.com/channel/UCmb4yX00qPWBO3KKmjTllDA"
+    }
+   ],
+   "channelLocation": null,
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/DwybZEOfYUhoEwM5YVrhdLZBdQoVKt87d-IVSmpEdfB_h-Xq-3ExaWH30GLHC3bE_rqD1A3yBA=s68-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/sEgxPrjwqzbK_IkbdTyC1_p7qKBLPOCjxd6N6gZ39_lYIsjX56vsOoWdfA6RjXhDc2dPAy632g=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 20,
+   "channelTotalViews": 240368,
+   "numberOfSubscribers": 3750,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@MetabolicInsights-H1B",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "🩺Welcome to Metabolic Insights! 🩺\n\nDiscover how metabolism, nutrition, fasting, insulin, and lifestyle habits influence health.\n\nWe make complex health topics simple and accessible. Explore metabolic health, intermittent fasting, insulin resistance, type 2 diabetes, weight management, and healthy living.\n\n🔬 What You'll Learn:\n🔬 Metabolic Health\n⏳ Intermittent Fasting\n🩺 Diabetes Education\n⚖️ Weight Management\n🥗 Nutrition & Healthy Living\n\nOur content explores health research and ideas discussed by metabolic health experts, including topics associated with Dr. Jason Fung, with our educational explanations.\n\nUnderstand Your Metabolism. Improve Your Health.\n\n⚠️ Disclaimer: \nThis channel provides educational information only and is not a substitute for professional medical advice, diagnosis, or treatment. Consult a qualified healthcare professional before changing your diet, fasting routine, or medication.\n\n#MetabolicHealth #InsulinResistance #IntermittentFasting #DiabetesEducation",
+    "channelJoinedDate": "Oct 7, 2026",
+    "channelDescriptionLinks": [
+     {
+      "text": "MetabolicInsights-H1B",
+      "url": "https://www.youtube.com/channel/UCmb4yX00qPWBO3KKmjTllDA"
+     }
+    ],
+    "channelLocation": null,
+    "channelUsername": "MetabolicInsights-H1B",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/DwybZEOfYUhoEwM5YVrhdLZBdQoVKt87d-IVSmpEdfB_h-Xq-3ExaWH30GLHC3bE_rqD1A3yBA=s68-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/sEgxPrjwqzbK_IkbdTyC1_p7qKBLPOCjxd6N6gZ39_lYIsjX56vsOoWdfA6RjXhDc2dPAy632g=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 20,
+    "channelTotalViews": 240368,
+    "numberOfSubscribers": 3750,
+    "isChannelVerified": false,
+    "channelName": "Metabolic Insights",
+    "channelUrl": "https://www.youtube.com/channel/UCmb4yX00qPWBO3KKmjTllDA",
+    "channelId": "UCmb4yX00qPWBO3KKmjTllDA",
+    "inputChannelUrl": "https://www.youtube.com/@MetabolicInsights-H1B",
+    "isAgeRestricted": false
+   },
+   "duration": "00:15:55",
+   "commentsCount": 0,
+   "text": "#HairGrowth #HairRegrowth #HairLoss #HealthyHair #HairCare #ThinningHair #NaturalHairCare\n\n\nSHOCKING Secret! — Use This Before Bed And GROW Your Hair BACK! 😱🌙 | Dr. Jason Fung\n\n\nCould the secret to healthier, fuller-looking hair begin with what you do before going to bed? Hair thinning, excessive shedding, and a widening hairline can affect confidence, self-esteem, and how we feel about ourselves, especially after age 50. But understanding the science behind hair growth may help you make smarter decisions about your nighttime hair-care routine. In this educational video, we explore the connection between scalp health, hair follicles, nutrition, hormones, and healthy nighttime habits—and why consistency matters when supporting stronger, healthier hair.\n\n\nTIMESTAMPS:\n00:00 – 😱 The Surprising Connection Between Bedtime and Hair Health  \n01:20 – 🧬 Understanding Why Hair Starts Thinning  \n02:45 – 🌙 The Nighttime Hair-Care Secret Explained  \n04:10 – 🌿 Supporting Healthy Scalp Conditions  \n05:35 – 🥗 Essential Nutrients for Healthy Hair  \n07:00 – 💪 Protein, Iron, and Zinc: What Your Hair Needs  \n08:30 – 🩸 Hormones and Their Role in Hair Loss  \n10:00 – 😴 Sleep, Stress, and Hair Health  \n11:30 – 🚫 Common Hair-Care Mistakes to Avoid  \n13:00 – 👨‍⚕️ When Hair Loss Needs Medical Attention  \n14:30 – ❤️ Building Healthier Habits After 50  \n15:30 – 🌟 Final Thoughts: Protect Your Hair Health\n\n\nKEYWORDS:\nhair regrowth, hair growth after 50, natural hair care, hair loss treatment, nighttime hair routine, thinning hair solutions, healthy scalp, stronger hair naturally, hair follicle health, prevent hair thinning, hair growth tips, aging and hair loss, hair nutrition, healthy hair habits, hair shedding, scalp care routine, hair health for seniors, female hair loss, male pattern baldness, Dr Jason Fung.\n\n\nHASHTAGS:\n#HairGrowth #HairRegrowth #HairLoss #HealthyHair #HairCare #ThinningHair #NaturalHairCare #ScalpHealth #HairGrowthTips #HairAfter50 #HairHealth #HealthyAging #HairFollicles #NighttimeRoutine #HairNutrition #SeniorHealth #HealthyLifestyle #DrJasonFung\n\n\nDISCLAIMER:\nThis video is for educational and informational purposes only and does not constitute medical advice. It is not a substitute for professional diagnosis or treatment. Hair loss can have several underlying causes, including hormonal changes, nutritional deficiencies, genetics, and medical conditions. Always consult a qualified healthcare professional or dermatologist before starting new treatments or supplements. Individual results may vary.\n\n\nREFERENCES:\n- Stenn KS, Paus R. Controls of hair follicle cycling. *Physiological Reviews*. 2001;81(1):449–494.\n- Almohanna HM et al. The Role of Vitamins and Minerals in Hair Loss: A Review. *Dermatology and Therapy*. 2019;9:51–70.\n- Guo EL, Katta R. Diet and Hair Loss: Effects of Nutrient Deficiency and Supplement Use. *Dermatology Practical & Conceptual*. 2017;7(1):1–10.\n- Phillips TG, Slomiany WP, Allison R. Hair Loss: Common Causes and Treatment. *American Family Physician*. 2017;96(6):371–378.",
+   "translatedText": "#HairGrowth #HairRegrowth #HairLoss #HealthyHair #HairCare #ThinningHair #NaturalHairCare\n\n\nSHOCKING Secret! — Use This Before Bed And GROW Your Hair BACK! 😱🌙 | Dr. Jason Fung\n\n\nCould the secret to healthier, fuller-looking hair begin with what you do before going to bed? Hair thinning, excessive shedding, and a widening hairline can affect confidence, self-esteem, and how we feel about ourselves, especially after age 50. But understanding the science behind hair growth may help you make smarter decisions about your nighttime hair-care routine. In this educational video, we explore the connection between scalp health, hair follicles, nutrition, hormones, and healthy nighttime habits—and why consistency matters when supporting stronger, healthier hair.\n\n\nTIMESTAMPS:\n00:00 – 😱 The Surprising Connection Between Bedtime and Hair Health  \n01:20 – 🧬 Understanding Why Hair Starts Thinning  \n02:45 – 🌙 The Nighttime Hair-Care Secret Explained  \n04:10 – 🌿 Supporting Healthy Scalp Conditions  \n05:35 – 🥗 Essential Nutrients for Healthy Hair  \n07:00 – 💪 Protein, Iron, and Zinc: What Your Hair Needs  \n08:30 – 🩸 Hormones and Their Role in Hair Loss  \n10:00 – 😴 Sleep, Stress, and Hair Health  \n11:30 – 🚫 Common Hair-Care Mistakes to Avoid  \n13:00 – 👨‍⚕️ When Hair Loss Needs Medical Attention  \n14:30 – ❤️ Building Healthier Habits After 50  \n15:30 – 🌟 Final Thoughts: Protect Your Hair Health\n\n\nKEYWORDS:\nhair regrowth, hair growth after 50, natural hair care, hair loss treatment, nighttime hair routine, thinning hair solutions, healthy scalp, stronger hair naturally, hair follicle health, prevent hair thinning, hair growth tips, aging and hair loss, hair nutrition, healthy hair habits, hair shedding, scalp care routine, hair health for seniors, female hair loss, male pattern baldness, Dr Jason Fung.\n\n\nHASHTAGS:\n#HairGrowth #HairRegrowth #HairLoss #HealthyHair #HairCare #ThinningHair #NaturalHairCare #ScalpHealth #HairGrowthTips #HairAfter50 #HairHealth #HealthyAging #HairFollicles #NighttimeRoutine #HairNutrition #SeniorHealth #HealthyLifestyle #DrJasonFung\n\n\nDISCLAIMER:\nThis video is for educational and informational purposes only and does not constitute medical advice. It is not a substitute for professional diagnosis or treatment. Hair loss can have several underlying causes, including hormonal changes, nutritional deficiencies, genetics, and medical conditions. Always consult a qualified healthcare professional or dermatologist before starting new treatments or supplements. Individual results may vary.\n\n\nREFERENCES:\nStenn KS, Paus R. Controls of hair follicle cycling. *Physiological Reviews*. 2001;81(1):449–494.\nAlmohanna HM et al. The Role of Vitamins and Minerals in Hair Loss: A Review. *Dermatology and Therapy*. 2019;9:51–70.\nGuo EL, Katta R. Diet and Hair Loss: Effects of Nutrient Deficiency and Supplement Use. *Dermatology Practical & Conceptual*. 2017;7(1):1–10.\nPhillips TG, Slomiany WP, Allison R. Hair Loss: Common Causes and Treatment. *American Family Physician*. 2017;96(6):371–378.",
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/hairgrowth",
+     "text": "#HairGrowth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairregrowth",
+     "text": "#HairRegrowth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairloss",
+     "text": "#HairLoss"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyhair",
+     "text": "#HealthyHair"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/haircare",
+     "text": "#HairCare"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/thinninghair",
+     "text": "#ThinningHair"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/naturalhaircare",
+     "text": "#NaturalHairCare"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ",
+     "text": "00:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=80s",
+     "text": "01:20"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=165s",
+     "text": "02:45"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=250s",
+     "text": "04:10"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=335s",
+     "text": "05:35"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=420s",
+     "text": "07:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=510s",
+     "text": "08:30"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=600s",
+     "text": "10:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=690s",
+     "text": "11:30"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=780s",
+     "text": "13:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=870s",
+     "text": "14:30"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=930s",
+     "text": "15:30"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairgrowth",
+     "text": "#HairGrowth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairregrowth",
+     "text": "#HairRegrowth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairloss",
+     "text": "#HairLoss"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyhair",
+     "text": "#HealthyHair"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/haircare",
+     "text": "#HairCare"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/thinninghair",
+     "text": "#ThinningHair"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/naturalhaircare",
+     "text": "#NaturalHairCare"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/scalphealth",
+     "text": "#ScalpHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairgrowthtips",
+     "text": "#HairGrowthTips"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairafter50",
+     "text": "#HairAfter50"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairhealth",
+     "text": "#HairHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairfollicles",
+     "text": "#HairFollicles"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/nighttimeroutine",
+     "text": "#NighttimeRoutine"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hairnutrition",
+     "text": "#HairNutrition"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthylifestyle",
+     "text": "#HealthyLifestyle"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/drjasonfung",
+     "text": "#DrJasonFung"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=YndAkr30fPQ&t=591s",
+     "text": "9:51"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Hair loss or alopecia is a problem that\nI often get asked about. What can we do\nfor hair loss? How can we grow new hair?\nThis is Jason Fung, a famous health\nexpert known worldwide. She strongly\nsupports holistic and natural health\nwith many testimonials backing her\nmethods. In this video, Jason will\nreveal the causes of hair loss, offer\ntips on how to prevent it, share natural\nremedies, and provide advice on\nachieving longer, healthier hair. So\nstay tuned. Well, first of all, we have\nto put the detective hat on and find out\nwhy there is hair loss. So what would be\nsome of the most common causes of hair\nloss? Well, one friend of mine, she\nalways dyed her hair. She was showing\ngray hair from a very early age, and so\nfrom about the age of 30, she began to\ndye her hair. Now you can get a hair dye\nmade of henna, and henna is a plant that\ncan dye your hair and that is not toxic.\nBut my friend did not use that one. She\nused a chemical hair dye, and little by\nlittle it was killing off her hair\nfollicles where the hair grows. So it\ncan be chemicals on the hair. Another\nfriend of mine did not like her very\ncurly hair, and so all her life\nfrom probably about her late teens right\nup until her 50s, she straightened her\nhair. Now the solutions that they use to\nstraighten the hair or for people with\nstraight hair that want curly hair is a\nvery toxic chemical. So what happens is\nif a person wants to straighten their\nhair, what the hairdresser does is pull\nthe hair over great big rods like that.\nAnd so the curly hair, it is this curly\nof course, gets pulled over them and\nthat straightens it. But if a person has\ngot straight hair and they want curly\nhair, well the rods are that big and\nthey stretch the hair around and around\nand around. So whether it is to\nstraighten the hair or whether it is to\ncurl the hair, they put this toxic\nsolution on. It is a strong chemical,\nand what it does is it breaks all the\nlittle joins in because hair has all\nthese little joins like this. So what it\ndoes is it breaks the joins, breaks the\njoins, and then it is molded of course\naround either there for the curl or\nthere for the straight. And then when\nall of those little bonds are broken and\nit has been stretched into a certain\nshape, they rinse off that chemical and\nthen they put another chemical on to set\nit, so to set the bonds together, and\nthen that sets the hair structure as\nstraight or as curly. So basically that\nis how the hair is permed. Proper\nnutrition is vital for healthy hair, and\ndeficiencies in iron, zinc, biotin, or\nprotein can lead to hair loss.\nMaintaining a diet rich in vitamins and\nminerals is essential. Certain\nmedications for conditions like high\nblood pressure, cancer, or depression\nmay also contribute to hair loss, so\nconsult your doctor if you suspect this.\nUnderstanding these factors is key to\nadopting effective treatments and\nlifestyle changes for healthier hair. I\nhave also seen in some areas where\npeople braid their hair really, really\ntightly, you will often see that they\nhave got hair loss around here where\nyou've got that weight. You have got\nthat constant weight on the hair which\ncan really just keep pulling the hair\nout and then the follicles are damaged.\nSo no matter how it happens, we must\nstop what is causing the damage. That is\nfirst. If you do not turn the tap off,\nyou are still mopping up in the other\ncorner. Sometimes I see hair loss in a\nhormonal imbalance. So if it is a\nhormonal imbalance, then the hormones\nmust be balanced back again. Hair loss\nis often driven by hormonal changes.\nFluctuations in hormones like\ntestosterone can result in androgenetic\nalopecia, which causes hair thinning in\nboth men and women. Disruptions in\nhormone levels during pregnancy,\nmenopause, or due to thyroid disorders\ncan also lead to increased hair\nshedding. Additionally, elevated\ncortisol levels from stress can cause\ntemporary hair loss, which is called\ntelogen effluvium. Sometimes high\nstress, if someone goes through a very\nstressful situation, one of the\nreactions can be hair loss. So what can\nyou do to bring it back again? Ah, there\nis one more that I did not mention, and\nthat is anemia. If a person is anemic,\nit can cause hair loss. So what is\nanemic? Anemic means very low iron in\nthe blood, and anemia can be caused\nbecause of heavy blood loss at period\ntime. A lot of women suffer from that,\nand that can cause anemia, and the\nanemia can cause the hair loss. So to\nresolve that again, watch my lecture on\nhormones, boost the progesterone, get\nthe estrogen down, then there will not\nbe the heavy blood loss every month, and\nthe person will not be anemic anymore.\nAnd so again, the hair can grow. Another\ncause of anemia can be low hydrochloric\nacid because iron is bound up in food,\nand it needs acid to liberate it from\nfood. So it is very important that the\nperson ensure they have nice strong\nhydrochloric acid. Simple way to ensure\nthat is to have a quarter of a teaspoon\nof cayenne pepper and a little bit of\nwater before every meal. If you are\nfinding that a little bit hard, you can\nhave the juice of a lemon before every\nmeal. Important to leave a break between\nmeals. Important not to drink water with\nyour meals because that dilutes the\nhydrochloric acid. Also important to\nhave a very happy, relaxed environment\nat the meal table. I target those points\nin more detail on my lecture on the gut.\nSo the causes of hair loss can be\nanemia, it can be high stress, it can be\na hormonal imbalance, and it can be\ndamage. That is just physical damage.\nThis has been done to the hair\nfollicles. Iron deficiency reduces\nhemoglobin production, reducing oxygen\nflow to cells including hair follicles.\nSince follicles need oxygen and\nnutrients to grow, a lack of it weakens\nhair, making it thinner and prone to\nshedding. But what can you do to the\nscalp to encourage the hair to grow\nagain? You can make a mix that you can\nput on your hair, and this mix is Let us\nmake up the mix. So half a cup of\ncoconut oil and half a cup of castor\noil. Castor oil is a very thick oil, but\ncastor oil penetrates deeper than any\nother oil. So when that is put onto the\nscalp, it penetrates even deeper.\nCoconut oil is a very nourishing oil. It\nis an antifungal oil, antibacterial oil.\nBut what you also can put with that So\nnow you have got a cup of oil there. To\nthat cup of oil, you can add 10 drops of\nrosemary essential oil. Rosemary is a\nherb that is specific for the scalp,\nrosemary essential oil. So you could\nmake up this mix in a jar and mix it\nvery very well, and maybe once a week\nyou massage it into the scalp. Your hair\nwill be very oily, of course, but you\nmassage it into the scalp. Just even the\nmassaging into the scalp stimulates\nblood supply to the hair follicles. That\ncastor oil penetrates very deep, and\nwherever it penetrates, it can revive\nlife into that area. And the coconut\nalso is a very nourishing oil, and the\nrosemary essential oil stimulates. Every\nherb stimulates different parts of the\nbody, and this rosemary herb is specific\nfor the scalp. The massaging So leave it\nin as much as you can. Maybe you choose\na Sunday when you are going to be home\nall day, and at the end of the day you\nwash out. Now you might need to put\nshampoo on a couple of times to get all\nthat oil out. Just use a little bit of\nhot water and then a nice amount of\nshampoo. Also good to know is that\nhibiscus flowers help strengthen hair by\nproviding essential vitamins, minerals,\nand amino acids that nourish the scalp\nand support healthy growth. To use,\ncrush three to four flowers with coconut\noil into a paste, apply it to your scalp\nand hair and leave it for 30 minutes\nbefore rinsing.\nFor best results, repeat this treatment\nonce or twice a week. And if it is still\na little bit greasy, maybe shampoo it\nagain. Now that brings us to the\nshampoo. There is something that you\nmust keep right away from,\nand it is called sodium lauryl sulfate.\nSodium lauryl sulfate is what is in many\nshampoos, and sodium lauryl sulfate\nkills the hair follicles. it is\nimportant to take a magnifying glass\ninto the shop and read the labels.\nplaces like Whole Foods, Sprouts, Trader\nJoe's, where they have a lot of health\nfoods, so they have a lot of supplements\nand they have a more healthier brand of\nproducts. So have a look for a shampoo\nthat has no So we have got to make sure\nyou realize no sodium lauryl sulfate.\nBecause the sodium lauryl sulfate is a\nchemical that causes the foaming of the\nshampoo, and that sodium lauryl sulfate\nhas the ability to kill the hair\nfollicles in the scalp. So please keep\naway from that. You can get some very\nnice coconut-based shampoos. When\nselecting a shampoo, choose sulfate-free\nformulas to help minimize hair loss and\nsupport scalp health. Seek out products\ncontaining biotin, keratin, vitamins,\nand essential oils. Ingredients like\naloe vera, rosemary, and tea tree can\nfurther improve hair quality. Opt for\nshampoos that are both gentle and\neffective for the best care of your hair\nand scalp. Exercise. What exercise does\nis it increases the circulation of the\nblood to the extremities, and the scalp\nis considered an extremity. So exercise\ndaily, especially the high intensity\ninterval training, the high intensity\ninterval training because of the periods\nof very high intensity that really gets\nthe blood moving out to the extremities.\nSo that should be done daily. And\nhydration, keep well hydrated. Remember\nthe rule of thumb is eight glasses to\n100 lb body weight. That is a good rule\nof thumb, too, to know how much to how\nmuch water to give the children.\nNourishment. We need to nourish that\nscalp from the inside because your scalp\nis fed by your blood. That is why when\nyou exercise you get more blood to the\narea. But when you get the blood to the\narea, you want it be well watered.\nExercise will automatically put the\noxygen in there. And nourishment. We\nneed to be having a high fiber diet,\nhigh fiber. We also need to be having\ngenerous amounts of protein. Here is\nyour legumes, your nuts, your seeds, so\ngenerous proteins. Proteins are the\nbuilding blocks of the body and healthy\nfats. So there is your nuts, your seeds,\nyour avocados, coconut coconut and olive\noil. Eating a diverse range of fruits\nand vegetables is essential for overall\nhealth including scalp health.\nB vitamins, especially biotin, are\ncrucial for hair health and can be found\nin foods like eggs, leafy greens and\nwhole grains. Omega-3 fatty acids\npresent in fish such as salmon as well\nas flax seeds and walnuts also support a\nhealthy scalp.\nSleep. You want to heal, you got to get\n8 hours.\n8 hours not negotiable every night. The\nsleep is vital. The sleep is not\nnegotiable. If you are not used to that\nmuch sleep, little by little by little\nyou can train yourself back into\nsleeping longer. Rome was not built in a\nday, but little by little by little as\nyou take those steps that are conducive\nto good sleep. Breakfast like a king,\nlunch like a queen, light or no evening\nmeal, going to bed early, soft lights,\nsoft music, fresh air coming in, nice\nclean natural fiber sheets and pillows.\nAll of this is conducive to a good\nnight's sleep. Getting enough sleep is\nessential for preventing hair loss as it\nreduces stress and promotes hair\nfollicle repair. Quality sleep regulates\nhormones like cortisol and melatonin\ncrucial for hair growth and improves\nblood circulation to nourish follicles.\nA consistent sleep schedule is key for\nhealthy hair. So we might as well start\nwith hair. The color of the hair a lot\nhas to do with genetics. My husband is\nwhite and both his parents were white at\n50 and my mother died at 51 with brown\nhair and my father just passed at 92\nwith graying hair but a a of black now.\nThere is my brother, then me and three\nyounger sisters, and none of us have\ngray hair because from both sides of our\nfamily there was not gray. Now my\nfather's sister, she died at 68 with\nbrown hair, and at the funeral I saw my\nthree cousins, her sons, that I have not\nseen for a long time, and they are all\ngray. So they have probably got that a\nlittle bit from the father's side. So\nMichael and I are interesting because we\nare both extremes really. Both his\nparents white at 50, and my parents are\nnot gray. But I also know that people\nhave claimed to get the color back in\ntheir hair by drinking a lot of green\ndrinks. Now what green drinks contain is\na lot of minerals.\nAnd when you consider what we talked\nabout this afternoon, that the mineral\ncontent of the soil is about 50% less\nwhat it was 50 years ago, that a lot of\nthe foods today have less minerals in\nthem. You see in Australia the soil is\njust the plants are just put in year\nafter year after year. What should\nhappen is when a crop comes out of the\nground, then the soil should be fed with\nrich compost because every time a crop\nis in the ground it is taking new\nnutrients out, and if you do not replace\nthe nutrients, then the next crop that\nis grown there is going to be nutrient\ndeficient. So that makes sense, does it\nnot? So really looking at agriculture is\nthe only way to change the farming\nhabits. And unfortunately, because there\nis big dollars made in big industry and\ngrowing lots of stuff in super\nphosphate, I do not know how that will\never turn around. But you can do the\nbest you can. You can grow as much as\nyou can. You can buy the best quality\nthat you can, and you can have green\ndrinks. So how do you have green drinks?\nWell, you can buy chlorophyll, you can\nbuy green barley powder, you can buy\nwheatgrass powder, you can buy super\ngreens. So basically taking that three\ntimes a day, making sure you have lots\nof greens in your daily salad will will\nit. You do not lose the minerals when\nyou cook your greens. You only lose your\nminerals if you throw the water away\nthat you cook them in. What about\ndandruff? Dandruff can often happen when\nusing shampoo with sodium lauryl\nsulfate. It can also happen when a\nperson is on a high sugar diet because\nthat basically feeds the dandruff. So\ngetting a better shampoo and doing a\ncoconut oil rub or soak every month\nideally and also looking at your diet\nbecause we are what we eat. And I have a\nbook at home called Pure, White and\nDeadly and the whole book is about\nsugar. And Dr. Yudkin, the author, he\nmaintains that it should be banned. It\nis so dangerous and we do not need to\neat sugar because we have got honey and\nmaple syrup. And you have got a sugar\nhere on your islands which is an\nexcellent sugar. It is palm sugar or\ncoconut sugar. It is just the\ncrystallized nectar from the palm\nflower. So that is hair. Green drinks\nare good for you because they have a lot\nof chlorophyll. This helps fight off\nfree radicals and supports detoxing.\nChlorophyll can also lower inflammation,\nhelp wounds heal, and increase red blood\ncell production. Plus, green drinks are\nfull of important vitamins and minerals\nlike A, C, K, and B vitamins, which are\ngreat for your health, immune system,\nand keeping your skin and hair healthy.\nAlthough green drinks will not stop your\nhair from turning gray, eating a diet\nrich in nutrients can help your hair by\nsupporting melanin production and\noverall health. And that is it again for\ntoday, guys. I hope you found these\ninsights helpful for promoting healthier\nhair and overall well-being."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@MetabolicInsights-H1B/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@MetabolicInsights-H1B",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}
