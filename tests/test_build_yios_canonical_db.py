@@ -18,6 +18,13 @@ def test_normalizers():
     assert canon.pdate("(date only)") is None  # corrupt placeholder found in registry/finance
 
 
+def test_caption_kind_and_language():
+    assert canon.kind_of("user_generated") == "CREATOR" and canon.kind_of("en_creator") == "CREATOR"
+    assert canon.kind_of("en-orig_auto") == "AUTO" and canon.kind_of("auto_generated, user_generated") == "MIXED"
+    assert canon.kind_of("NONE AVAILABLE") == "NONE" and canon.kind_of(None) == "UNKNOWN"
+    assert canon.lang1("en, en-US") == "en" and canon.lang1("-") is None
+
+
 def test_every_source_spelling_is_mapped_and_build_reconciles(tmp_path, monkeypatch):
     monkeypatch.setattr(canon, "OUT", str(tmp_path / "c.db"))
     monkeypatch.setattr(canon, "MANIFEST", str(tmp_path / "m.json"))

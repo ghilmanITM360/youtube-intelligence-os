@@ -44,6 +44,12 @@ CREATE TABLE video_sources(video_id TEXT, source_id TEXT, raw_channel_id TEXT, r
   raw_video_type TEXT, raw_views TEXT, raw_likes TEXT, raw_comments TEXT, PRIMARY KEY(video_id, source_id));
 CREATE TABLE conflicts(video_id TEXT, field TEXT, chosen_source TEXT, chosen_value TEXT, other_source TEXT, other_value TEXT);
 CREATE TABLE quality_issues(video_id TEXT, source_id TEXT, field TEXT, raw_value TEXT, issue TEXT);
+CREATE TABLE transcript_texts(sha256 TEXT PRIMARY KEY, text TEXT NOT NULL);
+CREATE TABLE transcript_candidates(video_id TEXT, source_id TEXT, origin TEXT, raw_caption_type TEXT, caption_kind TEXT, language TEXT,
+  status TEXT, word_count INTEGER, source_sha256 TEXT, text_sha256 TEXT, sha_matches_source INTEGER, note TEXT);
+CREATE TABLE transcripts(video_id TEXT PRIMARY KEY REFERENCES videos(video_id), text_sha256 TEXT NOT NULL REFERENCES transcript_texts(sha256),
+  caption_kind TEXT, language TEXT, word_count INTEGER, source_id TEXT, origin TEXT, has_timestamps INTEGER, candidates INTEGER, distinct_texts INTEGER);
+CREATE INDEX idx_tc_video ON transcript_candidates(video_id);
 CREATE INDEX idx_videos_channel ON videos(channel_id);
 CREATE INDEX idx_videos_type ON videos(video_type);
 """
@@ -133,6 +139,72 @@ def first(vals):  # vals: [(source, value)] in precedence order, None = unusable
     return next(((s, v) for s, v in vals if v not in (None, "")), (None, None))
 
 
+KIND_RANK = {"CREATOR": 1, "AUTO": 2, "MIXED": 2, "ASR_LOCAL": 3, "UNKNOWN": 4}  # best first; NONE (placeholder) is never selected
+
+
+def kind_of(raw):  # raw caption_type text -> CREATOR / AUTO / MIXED / NONE / UNKNOWN
+    r = (raw or "").lower()
+    if not r: return "UNKNOWN"
+    if r.startswith("none"): return "NONE"
+    cr, au = ("user_generated" in r or "creator" in r), ("auto" in r)
+    return "MIXED" if cr and au else "CREATOR" if cr else "AUTO" if au else "UNKNOWN"
+
+
+def lang1(x):
+    x = (x or "").split(",")[0].strip().lower()
+    return None if x in ("", "-") else x
+
+
+def transcript_candidates():
+    """-> list of dict(video, source, origin, raw, kind, lang, status, wc, ssha, text, note) from every transcript store."""
+    out = []
+    c = ro(f"{R}/{SRC['registry']}")
+    for vid, txt, ph, why, ct, lg, wc, sh, ds in c.execute(
+            "select youtube_video_id,transcript_text,is_placeholder,unavailable_reason,caption_type,language,word_count,transcript_sha256,dataset_id from transcripts"):
+        out.append(dict(video=vid, source="registry", origin=ds, raw=ct, kind="NONE" if ph else kind_of(ct), lang=lang1(lg),
+                        status="PLACEHOLDER" if ph else "TEXT", wc=wc, ssha=sh, text=None if ph else txt, note=why if ph else None))
+    c = ro(f"{R}/{SRC['finance']}")
+    FK = {"youtube_creator_caption": "CREATOR", "youtube_auto_caption": "AUTO", "casual_finance:whisper_base": "ASR_LOCAL", "local_whisper_machine_transcribed": "ASR_LOCAL"}
+    for vid, src, ct, lg, st, txt, wc, sh, org in c.execute("select video_id,source,caption_type,language,status,text,word_count,sha256,origin from transcripts"):
+        out.append(dict(video=vid, source="finance", origin=src, raw=ct, kind=FK.get(src) or kind_of(ct), lang=lang1(lg), status=st,
+                        wc=wc, ssha=sh, text=txt, note=org))
+    core = ro(f"{R}/{SRC['sh_core']}")
+    for i in (1, 2, 3):
+        t = ro(f"{R}/data/catalog/senior_health/senior_health_transcripts_{i}.db")
+        for vid, txt, wc, lg, ct, sh, src in t.execute("select video_id,text,word_count,language,caption_type,sha256,source from transcripts"):
+            out.append(dict(video=vid, source="sh_core", origin=src, raw=ct, kind=kind_of(ct), lang=lang1(lg), status="TEXT", wc=wc, ssha=sh, text=txt, note=f"shard {i}"))
+    c = ro(f"{R}/{SRC['inventory']}")
+    for vid, av, ct, lg, wc, sh, so in c.execute("select video_id,availability_status,caption_type,language,word_count,transcript_sha256,transcript_source from transcripts"):
+        out.append(dict(video=vid, source="inventory", origin=so, raw=ct, kind=kind_of(ct), lang=lang1(lg), status=f"METADATA_ONLY_{av}",
+                        wc=wc, ssha=sh, text=None, note="inventory keeps no transcript text"))
+    return out
+
+
+def load_transcripts(db):
+    ids = {r[0] for r in db.execute("select video_id from videos")}
+    inv_vid = {r[0]: r[1] for r in ro(f"{R}/{SRC['inventory']}").execute("select video_id,youtube_video_id from videos")}
+    cands = {}
+    for t in transcript_candidates():
+        t["video"] = inv_vid.get(t["video"], t["video"]) if t["source"] == "inventory" else t["video"]
+        if t["video"] not in ids:
+            db.execute("insert into quality_issues values(?,?,?,?,?)", (t["video"], t["source"], "transcript", None, "TRANSCRIPT_FOR_VIDEO_NOT_IN_CANONICAL"))
+            continue
+        h = hashlib.sha256(t["text"].encode("utf-8")).hexdigest() if t["text"] else None
+        if h: db.execute("insert or ignore into transcript_texts values(?,?)", (h, t["text"]))
+        t["h"] = h
+        db.execute("insert into transcript_candidates values(?,?,?,?,?,?,?,?,?,?,?,?)", (
+            t["video"], t["source"], t["origin"], t["raw"], t["kind"], t["lang"], t["status"], t["wc"], t["ssha"], h,
+            None if not h or not t["ssha"] else int(h == t["ssha"]), t["note"]))
+        if h and t["kind"] in KIND_RANK: cands.setdefault(t["video"], []).append(t)
+    for vid in sorted(cands):
+        rows = cands[vid]
+        best = min(rows, key=lambda t: (KIND_RANK[t["kind"]], ORDER.index(t["source"]), -(t["wc"] or 0)))
+        db.execute("insert into transcripts values(?,?,?,?,?,?,?,?,?,?)", (
+            vid, best["h"], best["kind"], best["lang"], best["wc"], best["source"], best["origin"],
+            int(bool(re.match(r"\s*\[\d+(\.\d+)?\]", best["text"]))), len(rows), len({t["h"] for t in rows})))
+    db.execute("update videos set has_transcript = (select count(*) from transcripts t where t.video_id = videos.video_id)")
+
+
 def build():
     ch_src, vd_src = read_sources()
     if os.path.exists(OUT): os.remove(OUT)
@@ -213,9 +285,10 @@ def build():
     for raw, n in sorted(tcount.items()):
         norm = VTYPE.get(raw, ("UNKNOWN", "UNKNOWN"))
         db.execute("insert into video_type_map values(?,?,?,?)", (raw or "(null)", norm[0], norm[1], n))
+    load_transcripts(db)
     db.commit()
     h = logical_hash(db)
-    n = {t: db.execute(f"select count(*) from {t}").fetchone()[0] for t in ("channels", "videos", "video_sources", "conflicts", "quality_issues", "unresolved_channels")}
+    n = {t: db.execute(f"select count(*) from {t}").fetchone()[0] for t in ("channels", "videos", "video_sources", "conflicts", "quality_issues", "unresolved_channels", "transcripts", "transcript_candidates", "transcript_texts")}
     db.close()
     srcs = {s: dict(zip(("path", "sha256", "bytes", "video_rows", "channel_rows"), r)) for s, *r in
             sqlite3.connect(OUT).execute("select source_id,path,sha256,bytes,video_rows,channel_rows from source_dbs")}
@@ -229,7 +302,8 @@ def logical_hash(db):
     h = hashlib.sha256()
     for (t,) in db.execute("select name from sqlite_master where type='table' order by 1").fetchall():
         h.update(t.encode())
-        for row in db.execute(f"select * from {t} order by 1,2,3,4"): h.update(repr(row).encode())
+        n = len(db.execute(f"pragma table_info({t})").fetchall())
+        for row in db.execute(f"select * from {t} order by {','.join(map(str, range(1, n + 1)))}"): h.update(repr(row).encode())
     return h.hexdigest()
 
 
@@ -245,6 +319,10 @@ def verify():
         "video_type in {LONG,SHORT,STREAM,UNKNOWN}": one("select count(*) from videos where video_type not in ('LONG','SHORT','STREAM','UNKNOWN')") == 0,
         "every channel has >=1 source row": one("select count(*) from channels c where not exists (select 1 from channel_sources s where s.channel_id=c.channel_id)") == 0,
         "video_id is 11 chars": one("select count(*) from videos where length(video_id)<>11") == 0,
+        "has_transcript == selected transcripts": one("select count(*) from videos where has_transcript=1") == one("select count(*) from transcripts"),
+        "every selected transcript has stored text whose sha matches": one(
+            "select count(*) from transcripts t left join transcript_texts x on x.sha256=t.text_sha256 where x.sha256 is null") == 0,
+        "no placeholder/NONE transcript selected": one("select count(*) from transcripts where caption_kind='NONE'") == 0,
     }
     for k, ok in checks.items(): print("PASS" if ok else "FAIL", k)
     print("videos", one("select count(*) from videos"), "channels", one("select count(*) from channels"), "source rows", src_rows)
