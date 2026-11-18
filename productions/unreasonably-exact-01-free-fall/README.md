@@ -1,6 +1,6 @@
 # Unreasonably Exact — Day 1 (Mon 2026-11-23): "What If You Fell From Every Height — 1 Metre to the Edge of Space?"
 
-**Status:** script DRAFT v1.1, awaiting owner review. Nothing recorded or animated yet.
+**Status:** script APPROVED 2026-11-18 (v1.1). Next: voice-over and animation.
 
 | File | What |
 |---|---|
@@ -22,7 +22,7 @@ Cut from the `[EXCERPT → Day 2 Short]` segment (Rung 5, ~2:40–3:25). Working
 
 ## Still to do (owner)
 
-- Approve or edit the script.
+- ~~Approve the script~~ (done 2026-11-18).
 - Record the voice-over.
 - Produce the animation (original line art).
 - Register the CH-id and replace `UNREGISTERED` in the script header.

@@ -8,7 +8,7 @@ images: productions/unreasonably-exact-01-free-fall/thumbnail_day01.png
 
 **Channel and slot:** Unreasonably Exact. Calendar Day 1 (Mon 2026-11-23). Family L (ladder). Bank ID WIB-36.
 
-**Status:** DRAFT v1.1 for owner review. Original narration. v1.1 narrowed claim D1-24.
+**Status:** APPROVED by the owner 2026-11-18 (v1.1). Original narration. v1.1 narrowed claim D1-24.
 
 **Target:** ~1,250 spoken words ≈ 8–9 min at ~150 wpm.
 

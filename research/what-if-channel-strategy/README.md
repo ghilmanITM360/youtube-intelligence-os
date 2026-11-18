@@ -3,7 +3,8 @@
 **Status:**
 - Calendar **APPROVED** by the owner on 2026-11-18. Day 1 = **Monday 2026-11-23**.
 - Channel name **decided 2026-11-18: Unreasonably Exact** (07). The handle must still be claimed in Studio.
-- Day 1 script drafted (v1.1, slop gate PASS) in `productions/unreasonably-exact-01-free-fall/`.
+- Day 1 script **APPROVED** (v1.1): `productions/unreasonably-exact-01-free-fall/`.
+- Day 3 script drafted (v1.1, slop gate PASS): `productions/unreasonably-exact-03-neutron-bullet/`.
 - Scripts are not written yet. Each one goes in `productions/<project>/**/*SCRIPT*.md` and must pass `scripts/check_slop_risk.py`.
 
 ## Read in this order
@@ -17,6 +18,7 @@
 | 05 | [05_30_DAY_EXPERIMENTAL_CALENDAR.md](05_30_DAY_EXPERIMENTAL_CALENDAR.md) | **The approved calendar**, dated schedule, pre-production gates, Day 14 and Day 30 evaluations | 12, 13 |
 | 06 | [06_SCIENCE_VERIFICATION.md](06_SCIENCE_VERIFICATION.md) | Science check of all 23 items; corrections applied to 05 | brief rule: "independently verify" |
 | 07 | [07_CHANNEL_BRANDING.md](07_CHANNEL_BRANDING.md) | Name shortlist, logo, banner, watermark, descriptions | owner follow-up |
+| 08 | [08_XKCD_OPENINGS_AND_COPYING.md](08_XKCD_OPENINGS_AND_COPYING.md) | How xkcd opens long videos (37/43 open with an attributed reader question), what we do instead, and what happens if a channel copies | owner follow-up |
 
 **Framework record:** [calendar_plan_framework_2026-11-18.json](calendar_plan_framework_2026-11-18.json). It passes `content_plan_check.py`, which is a STRUCTURAL check only.
 

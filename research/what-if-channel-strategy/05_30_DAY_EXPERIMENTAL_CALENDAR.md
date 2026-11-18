@@ -86,7 +86,7 @@ Columns: Fmt = Long (L) / Short (S); Fam = format family; Score = 03 §6.
 |---|---|---|---|---|---|---|---|
 | 1 | Long | WIB-36 | What If You Fell From Every Height — 1 Metre to the Edge of Space? (06: "orbit" reframed) | L | 89 | Falling figure beside an altitude ruler; one label "39 km: fastest fall ever" | L #1 |
 | 2 | Short | WIB-36 | Excerpt: why jumping from higher makes you slow down before landing (06 reframe) | L | — | Same art, cropped | Excerpt test |
-| 3 | Long | WIB-55 | What If a Bullet Were Made of Neutron Star? | S | 90 | Tiny glowing pellet vs a mountain-sized weight label: "1 teaspoon ≈ 1 km³ of rock" (06: 1.3–4.9 billion t) | S #1 |
+| 3 | Long | WIB-55 | What If a Bullet Were Made of Neutron Star? | S | 90 | Level balance: glowing 0.7 cm³ pellet vs a 412 m rock cube; "AT LEAST 190 MILLION TONNES" (06; changed at scripting to show the bullet itself) | S #1 |
 | 4 | Short | WIB-55 | Excerpt: if something held it together and you dropped it (assumption stated, SIMULATION label; 06) | S | — | — | Excerpt test |
 | 5 | Long | NEW-06 | What If the Moon Vanished Tonight? Night One to a Million Years (06: "hour by hour" overpromised) | T | 73 | Night sky with an empty dashed circle; "HOUR 1" | T #1 |
 | 6 | Short | T-01 | What Will Apophis Look Like on 13 April 2029? (owner choice 2026-11-18: "What will" only for real future events) | T | (unscored, timely) | Earth, Moon and asteroid path to scale; "13 APR 2029 · 31,640 km" (06, JPL) | Standalone test |

@@ -11,3 +11,6 @@ r thumbnail_sample_day25 1280 720
 P="$PWD/../../../productions/unreasonably-exact-01-free-fall"
 "$CHROME" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1280,720 \
   --screenshot="$P/thumbnail_day01.png" "file://$P/thumbnail_day01.svg" >/dev/null 2>&1
+P3="$PWD/../../../productions/unreasonably-exact-03-neutron-bullet"
+"$CHROME" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1280,720 \
+  --screenshot="$P3/thumbnail_day03.png" "file://$P3/thumbnail_day03.svg" >/dev/null 2>&1

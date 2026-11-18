@@ -109,3 +109,22 @@ day1 = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48, 
         + f'<text x="506" y="446" {HEAVY} font-size="56" fill="{PAPER}">FASTER THAN SOUND</text>'
         + chip(1040, 34, "REAL DATA", DATA, 24))
 open(f"{PROD}/thumbnail_day01.svg", "w").write(svg(1280, 720, day1))
+
+# ---- Day 3 thumbnail: "What If a Bullet Were Made of Neutron Star?" (level balance, equal arms of 210 px: 0.7 cm3 pellet = 412 m rock cube) ----
+PROD3 = "../../../productions/unreasonably-exact-03-neutron-bullet"
+os.makedirs(PROD3, exist_ok=True)
+by = 380
+day3 = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48, 0.05)
+        + '<defs><radialGradient id="glow"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.25" stop-color="#9FD8FF"/>'
+          '<stop offset="1" stop-color="#9FD8FF" stop-opacity="0"/></radialGradient></defs>'
+        + f'<path d="M80 {by}H680" stroke="{PAPER}" stroke-width="10" stroke-linecap="round"/>'
+        + f'<path d="M360 {by} L310 {by+170} H410 Z" fill="none" stroke="{PAPER}" stroke-width="8" stroke-linejoin="round"/>'
+        + f'<circle cx="150" cy="{by-14}" r="60" fill="url(#glow)"/><circle cx="150" cy="{by-14}" r="9" fill="#FFFFFF"/>'
+        + f'<rect x="470" y="{by-200}" width="200" height="200" fill="#1C2742" stroke="{PAPER}" stroke-width="6"/>'
+        + f'<text x="150" y="{by+50}" text-anchor="middle" {MONO} font-size="24" fill="{PAPER}">0.7 cm³</text>'
+        + f'<text x="570" y="{by+50}" text-anchor="middle" {MONO} font-size="24" fill="{PAPER}">412 m rock cube</text>'
+        + f'<text x="740" y="190" {HEAVY} font-size="44" fill="{PAPER}">AT LEAST</text>'
+        + f'<text x="730" y="360" {HEAVY} font-size="200" fill="{SIGNAL}">190</text>'
+        + f'<text x="736" y="440" {HEAVY} font-size="52" fill="{PAPER}">MILLION TONNES</text>'
+        + chip(1050, 34, "THE MATH", MATH, 24))
+open(f"{PROD3}/thumbnail_day03.svg", "w").write(svg(1280, 720, day3))

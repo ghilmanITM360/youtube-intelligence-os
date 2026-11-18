@@ -262,3 +262,26 @@ for _ in range(25):
         lo = mid
 print(f"lowest drop height that goes supersonic (model): {hi/1e3:.1f} km")
 print(f"10 m in vacuum {math.sqrt(2*G0*10)*3.6:.0f} km/h; 100 m in vacuum {math.sqrt(2*G0*100)*3.6:.0f} km/h")
+
+# ---------- Day 3 script (WIB-55) extra claims ----------
+section("Day 3 script: neutron bullet")
+V_b = 8.0e-3 / 11340                      # 8 g lead 9 mm bullet volume, m3
+r_b = (3 * V_b / (4 * math.pi)) ** (1 / 3)
+L_SUN = 3.828e26                          # IAU 2015 B3 nominal solar luminosity, W
+print(f"bullet volume {V_b*1e6:.2f} cm3, equivalent-sphere radius {r_b*1e3:.1f} mm")
+for rho in (rho_sat, 1e18):
+    m = V_b * rho
+    side = (m / 2700) ** (1 / 3)
+    e = m / 1.6749e-27 * 16e6 * 1.602e-19
+    print(f"rho {rho:.1e}: mass {m/1e9:,.0f} million t; rock cube {side:.0f} m a side; "
+          f"g at 1 m {G*m/G0:.1f} g; surface g {G*m/r_b**2/G0:,.0f} g; surface escape {math.sqrt(2*G*m/r_b):.0f} m/s; "
+          f"release {e:.1e} J = {e/L_SUN:.1f} s of Sun = {e/4.184e15:.1e} Mt; "
+          f"same push as 8 g at 343 m/s -> {0.008*343/m:.1e} m/s = {0.008*343/m*3.156e7*1e3:.2f} mm/yr; "
+          f"stress on floor {m*G0/(math.pi*r_b**2):.1e} Pa ({m*G0/(math.pi*r_b**2)/2e8:.0e}x granite ~0.2 GPa)")
+print("free neutron mean life 878.4 s = 14.6 min (PDG 2024)")
+for rho in (rho_sat, 1e18):
+    r_earth_ns = (3 * M_E / (4 * math.pi * rho)) ** (1 / 3)
+    m = V_b * rho
+    v_orb = math.sqrt(G * m / 1.0)
+    print(f"rho {rho:.1e}: whole Earth at this density -> ball {2*r_earth_ns:.0f} m across; "
+          f"dust orbit at 1 m: {v_orb:.1f} m/s ({v_orb*3.6:.0f} km/h), period {2*math.pi/v_orb:.1f} s")
