@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-18T18:43:38+00:00",
+  "script": "productions/new-finance-channel-v2-airfares-01/V2_AIRFARES_SCRIPT.md",
+  "sha256": "857af7d6dd51ffa3f22e896397575259d2abe3de6f5b286db353bcc348f9fd43",
+  "title": "Airfares Are Up 22%. Airlines Are Forecast to Make $4.50 a Passenger.",
+  "channel": "NEW-FINANCE-CHANNEL-TBD",
+  "project": "new-finance-channel-v2-airfares-01",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no images (header `images:` or --images); visual check skipped"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}
