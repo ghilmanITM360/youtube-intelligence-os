@@ -1,0 +1,40 @@
+{
+  "plan_id": "WHATIF-NEW-CHANNEL-30D-CALENDAR-v1-2026-11-18",
+  "framework_version": "v1",
+  "retrieved": [
+    "RM-2d31bc62bc87:p.1",
+    "RM-8b65784803f2:p.4",
+    "RM-8b65784803f2:p.5",
+    "RM-242707556f81:p.4",
+    "RM-242707556f81:p.5",
+    "RM-6d9840bbe0ca:p.1",
+    "RM-52235e9459a8:p.1",
+    "RM-cb50fe7ec900:p.2",
+    "RM-1f228411d7ab:chunk.3",
+    "RM-1f228411d7ab:chunk.11",
+    "RM-1f228411d7ab:chunk.60",
+    "RM-1f228411d7ab:chunk.65",
+    "RM-1f228411d7ab:chunk.100"
+  ],
+  "applications": [
+    {"stage": "TOPIC", "rule_id": "FR-VC-01", "implementation": "Every long-form slot comes from the scored bank (03 §6) where demand is evidenced by on-topic views in the Method-4 scan; the audience desire served is the curiosity question in the title, and each slot cites its score row in topic_scores_2026-11-18.csv."},
+    {"stage": "TOPIC", "rule_id": "FR-VC-06", "implementation": "One standalone Short (Day 6) uses the dated 13 April 2029 Apophis close approach as a timeliness peg, framed as a scale explanation of the real miss distance rather than an impact fantasy."},
+    {"stage": "TITLE_THUMBNAIL", "rule_id": "FR-TITLE-02", "implementation": "Working titles state the exact premise (subject plus situation) so the title matches the video concept; each thumbnail adds one number or contrast clue in original line art instead of repeating the title words."},
+    {"stage": "TITLE_THUMBNAIL", "rule_id": "FR-TITLE-04", "implementation": "Each working title opens one question (how far, how long, what happens) that the final rung of the ladder or the final reveal must answer on screen; reviewers check the answer timestamp before publish."},
+    {"stage": "TITLE_THUMBNAIL", "rule_id": "FR-TITLE-03", "implementation": "Titles avoid claims the physics cannot support (no 'scientists confirm' or impact predictions); the Apophis Short states it will miss, and remake titles must differ clearly from xkcd's titles."},
+    {"stage": "HOOK_SCRIPT", "rule_id": "FR-16C-05", "implementation": "Each episode has one throughline question carried by a persistent on-screen progress tracker (ladder scoreboard or speed/altitude HUD), a device observed in both CT-scanned ladder and runaway outliers."},
+    {"stage": "HOOK_SCRIPT", "rule_id": "FR-INTRO-02", "implementation": "The opening shows the end state or the most extreme rung first (cold open), then restates the exact title question within the first lines so the thumbnail expectation is confirmed early."},
+    {"stage": "HOOK_SCRIPT", "rule_id": "FR-BT-01", "implementation": "Rung-to-rung transitions are written as complication and consequence (this altitude solves X but therefore Y) rather than a flat list, to be checked in the script review after calendar approval."},
+    {"stage": "HOOK_SCRIPT", "rule_id": "FR-SCR-02", "implementation": "Mini-hooks are the next rung teased before the current one closes, and the tracker shows which rungs remain; no fixed seconds-based rule is imposed."},
+    {"stage": "PAYOFF_CTA", "rule_id": "FR-SCR-03", "implementation": "The final rung or reveal answers the title question explicitly with the computed number and its uncertainty, and the end screen points to the next episode of the same format family."},
+    {"stage": "PAYOFF_CTA", "rule_id": "FR-16C-16", "implementation": "Episodes close by returning to the opening image or question with the answer now known, as the Apophis outlier does by ending on the real 2029 sky event."},
+    {"stage": "STORYBOARD_EDIT", "exception": "Framework v1 has no storyboard or edit rule; visual decisions come from the 2026-11-18 competitor CT pass (04 report) and the existing CH-000004 visual DNA, using original line-art and simple 3D only, with no third-party footage or xkcd likeness."},
+    {"stage": "SOURCE_ACCURACY", "exception": "Framework v1 has no accuracy rule; every long has a per-claim verification table against primary sources (NASA/JPL, peer-reviewed papers, standard references) that must be complete before scripting, per the brief's independent-verification requirement."},
+    {"stage": "POST_PUBLICATION", "exception": "Framework v1 has no post-publication rule; the Day 14 and Day 30 evaluation procedures in the calendar define first-party metrics, comparison units (format families) and decision rules, ingested through scripts/ingest_youtube_analytics.py."}
+  ],
+  "unavailable_inputs": [
+    "No first-party analytics exist yet for the new channel (no CTR, AVD or traffic-source data).",
+    "Competitor CTR and retention are not observable; competitor view counts are public display counts only.",
+    "Production capacity (hours per long) is not yet measured; cadence is a proposal pending the first two productions."
+  ]
+}
