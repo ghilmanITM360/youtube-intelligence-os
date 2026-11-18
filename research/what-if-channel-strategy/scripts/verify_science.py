@@ -206,3 +206,59 @@ sigma = 3000 * G0 * R_E / 2  # thin self-gravitating shell membrane stress, rock
 print(f"Hollow Earth thin rock shell stress ~{sigma/1e9:.0f} GPa vs granite compressive strength ~0.2 GPa")
 print(f"Gravity doubles (Earth mass x2, Moon speed unchanged): new perigee {d_moon/3/1e3:,.0f} km")
 print("Time machine on one spot: Earth orbital speed 29.78 km/s -> 1 s jump = ~30 km displacement (frame must be stated)")
+
+# ---------- Day 1 script (WIB-36) extra claims ----------
+section("Day 1 script: per-rung numbers")
+
+
+def trace(h0, k, dt=0.01):
+    """Return list of (t, h, v, decel_g) samples for a drop from rest."""
+    h, v, t, out = h0, 0.0, 0.0, []
+    while h > 0:
+        rho, _ = atmosphere(h)
+        g = G0 * (R_E / (R_E + h)) ** 2
+        drag = 0.5 * rho * v * v * k
+        v += (g - drag) * dt
+        h -= v * dt
+        t += dt
+        out.append((t, h, v, drag / G0))
+    return out
+
+
+k = k_stratos
+for h0 in (1, 10, 100, 1_000):
+    tr = trace(h0, k, 0.001)
+    print(f"drop {h0} m: {tr[-1][0]:.2f} s, impact {tr[-1][2]*3.6:.0f} km/h")
+tr = trace(5_000, k, 0.01)
+vt = tr[-1][2]
+t95 = next(t for t, h, v, _ in tr if v >= 0.95 * vt)
+d95 = 5_000 - next(h for t, h, v, _ in tr if v >= 0.95 * vt)
+print(f"sea-level terminal ~{vt*3.6:.0f} km/h; 95% reached after {t95:.0f} s and {d95:.0f} m")
+for h0 in (10e3, 38_969, 100e3):
+    tr = trace(h0, k, 0.01)
+    vmax = max(tr, key=lambda s: s[2])
+    print(f"from {h0/1e3:.1f} km: peak {vmax[2]*3.6:.0f} km/h at {vmax[1]/1e3:.1f} km after {vmax[0]:.0f} s; "
+          f"at 5 km alt {next(v for t,h,v,_ in tr if h <= 5e3)*3.6:.0f} km/h; total {tr[-1][0]/60:.1f} min")
+tr = trace(38_969, k, 0.01)
+sup = sum(0.01 for t, h, v, _ in tr if v > math.sqrt(1.4 * 287.053 * atmosphere(h)[1]))
+print(f"Stratos model: supersonic for {sup:.0f} s (Red Bull reported 30 s)")
+tr = trace(400e3, k, 0.005)
+v100 = next(v for t, h, v, _ in tr if h <= 100e3)
+t100 = next(t for t, h, v, _ in tr if h <= 100e3)
+over10 = sum(0.005 for *_, d in tr if d > 10)
+print(f"400 km drop: reaches 100 km after {t100/60:.1f} min at {v100*3.6:,.0f} km/h; >10 g for {over10:.0f} s; "
+      f"peak {max(d for *_, d in tr):.0f} g")
+rho19, T19 = atmosphere(19e3)
+print(f"pressure at 19 km {rho19*287.053*T19/1e3:.1f} kPa (water vapour pressure at 37 C = 6.28 kPa)")
+print(f"air temperature at 10 km {atmosphere(10e3)[1]-273.15:.0f} C; at 39 km {atmosphere(38_969)[1]-273.15:.0f} C")
+print(f"air density at 39 km vs sea level: 1/{1.225/atmosphere(38_969)[0]:.0f}")
+print(f"gravity at 400 km: {(R_E/(R_E+400e3))**2:.0%} of surface value")
+lo, hi = 30e3, 39e3  # lowest start height (from rest) that reaches Mach 1
+for _ in range(25):
+    mid = (lo + hi) / 2
+    if fall(mid, k_stratos, dt=0.02)["mach_max"] >= 1.0:
+        hi = mid
+    else:
+        lo = mid
+print(f"lowest drop height that goes supersonic (model): {hi/1e3:.1f} km")
+print(f"10 m in vacuum {math.sqrt(2*G0*10)*3.6:.0f} km/h; 100 m in vacuum {math.sqrt(2*G0*100)*3.6:.0f} km/h")

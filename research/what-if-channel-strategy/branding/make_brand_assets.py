@@ -83,3 +83,29 @@ thumb = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48,
          + chip(36, 34, "REAL DATA", DATA, 24))
 open("thumbnail_sample_day25.svg", "w").write(svg(1280, 720, thumb))
 print("svgs written")
+
+# ---- Day 1 thumbnail: "What If You Fell From Every Height?" (written into the production folder) ----
+import os
+PROD = "../../../productions/unreasonably-exact-01-free-fall"
+os.makedirs(PROD, exist_ok=True)
+top, bot, rx = 80, 650, 150
+def ry(metres):  # vertical log ruler, 1 m at bottom .. 400 km at top
+    return bot - math.log10(metres) / math.log10(400e3) * (bot - top)
+marks = [(1, "1 m"), (100, "100 m"), (10e3, "10 km"), (38_969, "39 km"), (100e3, "100 km"), (400e3, "400 km")]
+ruler = f'<path d="M{rx} {top}V{bot}" stroke="{PAPER}" stroke-width="5"/>'
+for m, label in marks:
+    y, hot = ry(m), label == "39 km"
+    col = SIGNAL if hot else PAPER
+    ruler += (f'<path d="M{rx-18} {y:.0f}H{rx+(40 if hot else 18)}" stroke="{col}" stroke-width="{8 if hot else 5}" stroke-linecap="round"/>'
+              f'<text x="{rx-30}" y="{y+9:.0f}" text-anchor="end" {MONO} font-size="{28 if hot else 22}" fill="{col}">{label}</text>')
+fy = ry(38_969)
+diver = (f'<g transform="translate(330,{fy:.0f})" stroke-linecap="round">'
+         f'<path d="M0 -150V-40 M-40 -160V-70 M40 -160V-70" stroke="{PAPER}" stroke-opacity="0.35" stroke-width="5"/>'
+         f'<path d="M-70 -30 L-30 0 M70 -30 L30 0 M-20 40 L-55 85 M20 40 L55 85" stroke="{PAPER}" stroke-width="22"/>'
+         f'<ellipse cx="0" cy="15" rx="34" ry="46" fill="{PAPER}"/>'
+         f'<circle cx="0" cy="-40" r="30" fill="{PAPER}"/><path d="M-18 -44 H18" stroke="{INK}" stroke-width="10"/></g>')
+day1 = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48, 0.05) + ruler + diver
+        + f'<text x="500" y="370" {HEAVY} font-size="110" fill="{SIGNAL}">1,358 km/h</text>'
+        + f'<text x="506" y="446" {HEAVY} font-size="56" fill="{PAPER}">FASTER THAN SOUND</text>'
+        + chip(1040, 34, "REAL DATA", DATA, 24))
+open(f"{PROD}/thumbnail_day01.svg", "w").write(svg(1280, 720, day1))

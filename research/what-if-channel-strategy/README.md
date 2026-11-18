@@ -2,7 +2,8 @@
 
 **Status:**
 - Calendar **APPROVED** by the owner on 2026-11-18. Day 1 = **Monday 2026-11-23**.
-- Branding is a **proposal**; the owner picks the name.
+- Channel name **decided 2026-11-18: Unreasonably Exact** (07). The handle must still be claimed in Studio.
+- Day 1 script drafted (v1.1, slop gate PASS) in `productions/unreasonably-exact-01-free-fall/`.
 - Scripts are not written yet. Each one goes in `productions/<project>/**/*SCRIPT*.md` and must pass `scripts/check_slop_risk.py`.
 
 ## Read in this order
@@ -52,10 +53,11 @@ The SHA-256 prefixes of the MP4s are in 04. Machine A does not have these files.
 | 2026-11-18 | All 4 decisions in 03 §10 approved: scoring weights and top 25; no xkcd remake within 12 months (at most one older remake); 2 longs + 3 Shorts per week, week 1 front-loaded; download 3 competitor videos |
 | 2026-11-18 | Titles: "What if" for hypotheticals; "What will" **only** for real future events (Day 6 → "What Will Apophis Look Like on 13 April 2029?") |
 | 2026-11-18 | Calendar approved; Day 1 = Monday 2026-11-23 |
+| 2026-11-18 | Channel name: Unreasonably Exact |
 
 ## Open before Day 1 (owner)
 
-1. Pick the channel name (07 §2). Claim the handle and the same name on other platforms.
+1. Claim @unreasonablyexact in YouTube Studio, plus the same name on other platforms (not checked).
 2. Register the channel's CH-id, then run `scripts/run_youtube_intelligence.py --framework-plan calendar_plan_framework_2026-11-18.json`.
 3. Production-time risk: the calendar assumed about 10 production days for the Day 1/3/5 longs, and only 5 remain. The fallback is in 05.
 

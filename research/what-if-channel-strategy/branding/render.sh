@@ -8,3 +8,6 @@ r watermark 300 300
 r banner 2560 1440
 r banner_safe_area_check 2560 1440
 r thumbnail_sample_day25 1280 720
+P="$PWD/../../../productions/unreasonably-exact-01-free-fall"
+"$CHROME" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=1280,720 \
+  --screenshot="$P/thumbnail_day01.png" "file://$P/thumbnail_day01.svg" >/dev/null 2>&1

@@ -1,6 +1,6 @@
 # 07 — Channel branding: name, logo, banner, descriptions (proposal, 2026-11-18)
 
-**Status:** PROPOSAL. The owner picks the final name. Every asset below is generated from one script (`branding/make_brand_assets.py`), so changing the name means editing one constant and re-running it.
+**Status:** NAME DECIDED 2026-11-18. The owner chose **Unreasonably Exact** (@unreasonablyexact). Claim the handle in YouTube Studio as soon as possible. The rest of this report is the proposal it was chosen from. Every asset below is generated from one script (`branding/make_brand_assets.py`), so changing the name means editing one constant and re-running it.
 
 ## 1. Brand position (from the research, not taste)
 
