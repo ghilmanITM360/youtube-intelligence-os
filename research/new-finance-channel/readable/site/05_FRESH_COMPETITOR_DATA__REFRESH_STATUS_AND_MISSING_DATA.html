@@ -1,0 +1,594 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fresh data: status, missing data, refresh proposal (2026-11-18)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="cur">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/05_FRESH_COMPETITOR_DATA/REFRESH_STATUS_AND_MISSING_DATA.md</code> (original badla nahi gaya)</div><h1>Fresh data: status, missing data, refresh proposal (2026-11-18)</h1>
+<p>Labels: VERIFIED (read from DB/files today) / INFERRED / UNKNOWN. No paid run was made for this document. Nothing was scraped today for this branch.</p>
+<h2>1. Refresh status per primary channel</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>In DB</th>
+<th>Latest in DB</th>
+<th>Needs</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monkey Economics (@MonkeyEconomic, 224K subs)</td>
+<td>60 of 60 (19 long + 41 Shorts), 60 transcripts</td>
+<td>2026-11-09</td>
+<td>nothing</td>
+<td>FRESH (Apify run 2026-11-18, merged to main via PR #62)</td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>206 of 220 reported, 206 transcripts</td>
+<td>2026-10-10</td>
+<td>everything after 10-10; 14 videos missing; no local thumbnail files</td>
+<td>STALE (39 days)</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>63 of 63, 60 transcripts</td>
+<td>2026-10-18</td>
+<td>after 10-18; 3 missing transcripts</td>
+<td>STALE (31 days)</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>30 of 30</td>
+<td>2026-09-09</td>
+<td>after 09-09</td>
+<td>STALE (70 days; may have stopped uploading, UNKNOWN)</td>
+</tr>
+<tr>
+<td>Capital Case (11.7K subs)</td>
+<td>13</td>
+<td>2026-11-02</td>
+<td>after 11-02</td>
+<td>16 days old</td>
+</tr>
+<tr>
+<td>PaperBillionsTV (14.1K subs, 4 videos on channel)</td>
+<td>0 (not in DB)</td>
+<td>2026-11-13 (spot scrape)</td>
+<td>transcripts, thumbnails, Shorts check, DB ingest</td>
+<td>LOW: only 4 view snapshots</td>
+</tr>
+</tbody>
+</table></div>
+<p>PaperBillionsTV raw JSON (<code>01_CHANNEL_REPORTS/071_paperbillionstv/raw/apify_youtube_scraper_JsyvS0PVokzdfwCAb.json</code>) holds 5 rows: 1 channel-info row plus 4 videos (views 144K to 2.1M, 14 to 20 min), no subtitles. The 11-12 CSV has 3 of them with likes/comments. Joined 2022-09; channel page says 4 videos. VERIFIED from the files.</p>
+<p>Name check (VERIFIED from DB handles): <strong>Monkey Economics = @MonkeyEconomic (224K)</strong>, and <strong>Primate Economics = @Primateeconomics (577K)</strong> is a different channel. Both are in the inventory.</p>
+<h2>2. Time windows today</h2>
+<p>The DB stops at 2026-11-11, so the 7/30/60/90-day windows are partly empty. Windows with data (from <code>MASTER_INVENTORY.csv</code>): last-30-day counts exist for only Monkey Economics 2, Capital Case 1, PaperBillionsTV 4, Primate Economics 1. Casual Finance, MonkeyExplains, Crayon Capital: 0. A fresh pull is needed before any "recent performance" claim.</p>
+<h2>3. Missing-data report</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Size</th>
+<th>Fix</th>
+<th>Paid?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Videos after DB cut-off for 5 primary channels</td>
+<td>est. 60 to 100 items</td>
+<td>Apify delta scrape</td>
+<td>yes, small</td>
+</tr>
+<tr>
+<td><strong>Publish dates missing</strong> on 192 videos: Economics Explained, How Money Works, Money &amp; Macro, Patrick Boyle, Modern MBA, PensionCraft (30 each) plus ~12 others. These came from the Videos tab with rounded views and derived thumbnail URLs</td>
+<td>192</td>
+<td>Apify re-scrape (dates, exact views, real thumbnails)</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Transcripts missing</td>
+<td>224 of 3,694 (3,470 present). Includes MonkeyExplains 3, Tom Lazy Dividend 40, Finance Simplified 40, Max Invests 40, Rick Finance 40, Wise Future 33</td>
+<td>check for existing caption files first; else Apify subtitles; or local whisper-cli (installed 2026-11-14, free)</td>
+<td>partly</td>
+</tr>
+<tr>
+<td>Casual Finance local thumbnails</td>
+<td>0 files (206 URLs)</td>
+<td>download from <code>i.ytimg.com</code> URLs (free, public)</td>
+<td>no</td>
+</tr>
+<tr>
+<td>14 Casual Finance videos not in DB</td>
+<td>14</td>
+<td>delta scrape</td>
+<td>yes, small</td>
+</tr>
+<tr>
+<td>Wealth Logic channel unavailable/deleted</td>
+<td>1</td>
+<td>none; keep as UNAVAILABLE</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Studio CTR, retention, impressions for any channel</td>
+<td>all</td>
+<td>owner's own channel only; competitors' are UNKNOWN permanently</td>
+<td>n/a</td>
+</tr>
+<tr>
+<td>Likes/comments for most Shorts and older videos</td>
+<td>many</td>
+<td>Apify</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table></div>
+<p>Free first: (a) local transcripts via whisper-cli for the missing ones where audio can be obtained legitimately, (b) public thumbnail downloads, (c) Trends, News and YouTube search in the browser. None of these cost money.</p>
+<h2>4. Paid refresh proposal (needs your approval; nothing run)</h2>
+<p>Price evidence (VERIFIED, 2026-11-18 run notes): actor <code>streamers/youtube-scraper</code>, about $0.004 per video row with English subtitles (19 rows $0.072, 41 rows $0.164). Per-run cap $0.30 is the convention used so far.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Batch</th>
+<th>Scope</th>
+<th style="text-align: right;">Est. rows</th>
+<th style="text-align: right;">Est. cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1 primary delta</td>
+<td>Casual Finance (since 10-10, incl. 14 missing), MonkeyExplains (since 10-18), Crayon Capital, Capital Case, PaperBillionsTV (all 4 + Shorts tab)</td>
+<td style="text-align: right;">about 100</td>
+<td style="text-align: right;">about $0.40</td>
+</tr>
+<tr>
+<td>R2 date repair</td>
+<td>the 6 undated channels, latest 30 each</td>
+<td style="text-align: right;">180</td>
+<td style="text-align: right;">about $0.72</td>
+</tr>
+<tr>
+<td>R3 additional explainers</td>
+<td>about 12 P1 channels (Neu, Business Decoded, Nostalgic Wheels, Built On You, The Expensive Part, Econ in a Nutshell, Finance ANALYST, Mr. Ranks, Primate Economics, Penny Explains Finance, etc.), last 90 days</td>
+<td style="text-align: right;">about 300</td>
+<td style="text-align: right;">about $1.20</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td style="text-align: right;">about 580</td>
+<td style="text-align: right;"><strong>about $2.3, cap $3.00</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Expected benefit: a real last-7/30/60/90 view of the six primary channels, usable publish dates for the six largest economics channels (the most relevant for our positioning), current view counts for the topic scoring. Earlier you set a $5.00 cumulative Apify cap for the Finance batch (2026-11-10); spend on record since then is about $2.44 + $0.08 + $0.27, so R1+R2+R3 would sit near that cap. Please confirm whether the cap is still $5.00. Run R1 first and stop to review.</p>
+<p>Not proposed: re-scraping data already held (Monkey Economics, all 60 rows), and the 71 per-channel history.</p>
+<h2>5. R1 RESULT (executed 2026-11-18, owner-approved, new Apify account, free plan $5.00)</h2>
+<p>Two runs of <code>streamers/youtube-scraper</code>, subtitles on (<code>ALWAYS_SUBTITLES</code>), newest first. Total <strong>$0.236</strong> (run x8dELGyWu8l9Ufzhe $0.148, 77 requests; run DRAGcutlIUr24oUmJ $0.088, 45 requests), 0 failed. Estimate was about $0.40. Raw JSON (unchanged) and <code>SHA256SUMS.txt</code> in <code>raw/</code>; flat table <code>R1_FRESH_VIDEOS_2026-11-18.csv</code> (56 videos). Snapshot date 2026-11-18, public views only. DB <code>data/catalog/</code> was NOT modified; ingest is a separate step.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Rows</th>
+<th style="text-align: right;">Not in DB</th>
+<th>Newest</th>
+<th style="text-align: right;">7d</th>
+<th style="text-align: right;">30d</th>
+<th style="text-align: right;">90d</th>
+<th style="text-align: right;">Subs now</th>
+<th style="text-align: right;">Transcripts</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paper Billions</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td>11-17</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">23,600 (14,100 on 11-13)</td>
+<td style="text-align: right;">6</td>
+<td>all videos on channel (no Shorts); 3 new since 11-13</td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td style="text-align: right;">30 (15 long + 15 Shorts)</td>
+<td style="text-align: right;">17</td>
+<td>11-17</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">440,000</td>
+<td style="text-align: right;">30</td>
+<td>cap reached, so counts are lower bounds</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td style="text-align: right;">10 (5+5)</td>
+<td style="text-align: right;">10</td>
+<td>11-14</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">261,000</td>
+<td style="text-align: right;">8</td>
+<td>cap reached; 2 are Member Edition (no views, no transcript)</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>11-14</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">319,000</td>
+<td style="text-align: right;">5</td>
+<td><strong>NOT stale: the DB was behind</strong> (earlier "70 days old" label was wrong)</td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td>11-02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">5</td>
+<td>nothing new; about 1 video a month</td>
+</tr>
+</tbody>
+</table></div>
+<p>What changed: Casual Finance posts roughly 13 items in 30 days (mostly housing/real-estate-crisis Shorts plus a long video about every 5 to 10 days, long videos at 0.7M to 1.4M views). MonkeyExplains is now 100% on the AI bubble (long video 2.66M views on 11-01, Shorts about 9K to 17K). Crayon Capital's NVIDIA video (11-14) has 553K views in 4 days. Paper Billions' top video reached 3.24M views (was 2.10M on 11-13). Public views only; they are not CTR or retention.</p>
+<p>Still open: R2 (192 undated videos) and R3 are not run. Spent so far on this account: $0.236 of $5.00.</p>
+<h2>6. R2 RESULT (executed 2026-11-18, owner-approved): date repair for 6 economics channels</h2>
+<p>Two runs, 30 newest long videos each, no Shorts, no subtitles (transcripts already in DB). Cost <strong>$0.716</strong> (R2a 8pZsatgjxninGb5h9 $0.360; R2b Lh3aocZMhPPaVLXfc $0.356), 192 requests, 0 failed. Raw JSON + checksums in <code>raw/</code>; flat table <code>R2_DATE_REPAIR_2026-11-18.csv</code> (180 rows, real publish dates and exact views). Total spent on this Apify account: $0.952 of $5.00 (about $4.05 left). <code>data/catalog/</code> not modified; matching to the 30 undated DB rows per channel by video_id is still to do (143 of 180 fresh ids already exist in the DB, so the undated rows can be dated by join).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Subs now</th>
+<th>Newest</th>
+<th>Oldest in sample</th>
+<th style="text-align: right;">7d</th>
+<th style="text-align: right;">30d</th>
+<th style="text-align: right;">60d</th>
+<th style="text-align: right;">90d</th>
+<th style="text-align: right;">Median views (30 newest)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Economics Explained</td>
+<td style="text-align: right;">2.89M</td>
+<td>11-17</td>
+<td>05-11</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">579,750</td>
+</tr>
+<tr>
+<td>How Money Works</td>
+<td style="text-align: right;">1.77M</td>
+<td>11-17</td>
+<td>04-26</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">830,048</td>
+</tr>
+<tr>
+<td>Money &amp; Macro</td>
+<td style="text-align: right;">681K</td>
+<td>11-05</td>
+<td>02-02</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">245,376</td>
+</tr>
+<tr>
+<td>Patrick Boyle</td>
+<td style="text-align: right;">1.37M</td>
+<td>11-15</td>
+<td>04-25</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">1,527,601</td>
+</tr>
+<tr>
+<td>Modern MBA</td>
+<td style="text-align: right;">848K</td>
+<td>10-31</td>
+<td>2024-12-15</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">293,546</td>
+</tr>
+<tr>
+<td>PensionCraft</td>
+<td style="text-align: right;">219K</td>
+<td>11-14</td>
+<td>05-09</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">41,862</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reading (INFERRED, public views only): these big channels post about 1 video a week (Modern MBA far less). The first four have 7-day-to-30-day views already in the hundreds of thousands, so they are strong benchmarks for what a trending topic does at scale, not for a new channel's starting point. Dates are now usable for Phase D topic-recency checks. R3 (about 12 channels, about $1.20) is not run.</p>
+<h2>7. R3 RESULT (executed 2026-11-18, owner-approved): 12 additional explainer channels, last ~90 days</h2>
+<p>Four runs, each 3 channels, up to 20 long + 5 Shorts per channel, subtitles on. Cost <strong>$1.004</strong> (A XoDF6Brpp3oT1kLh0 $0.260; B 3ala8emOPEkjfhSbU $0.228; C 4fyGVqKzZG61uIzFQ $0.268; D GMObwEwtkQtGH1UiR $0.248), 512 requests, 0 failed. Raw JSON + checksums in <code>raw/</code>; table <code>R3_ADDITIONAL_CHANNELS_2026-11-18.csv</code> (243 videos, flag <code>already_in_db</code>). <strong>Apify total on this account: about $1.956 of $5.00 (about $3.04 left).</strong> <code>data/catalog/</code> not modified.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Rows</th>
+<th style="text-align: right;">In DB</th>
+<th>Newest</th>
+<th style="text-align: right;">7d</th>
+<th style="text-align: right;">30d</th>
+<th style="text-align: right;">90d</th>
+<th style="text-align: right;">Subs now</th>
+<th style="text-align: right;">Median long views</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neu</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">17</td>
+<td>11-18</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">40,700</td>
+<td style="text-align: right;">40,933</td>
+</tr>
+<tr>
+<td>Primate Economics</td>
+<td style="text-align: right;">22 (5 Shorts)</td>
+<td style="text-align: right;">22</td>
+<td>10-27</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">577,000</td>
+<td style="text-align: right;">459,347</td>
+</tr>
+<tr>
+<td>PENNY (Penny Explains Finance)</td>
+<td style="text-align: right;">22 (5 Shorts)</td>
+<td style="text-align: right;">0</td>
+<td>11-17</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">9,060</td>
+<td style="text-align: right;">13,796</td>
+</tr>
+<tr>
+<td>Built On You</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">10</td>
+<td>11-17</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">16,600</td>
+<td style="text-align: right;">22,648</td>
+</tr>
+<tr>
+<td>Business Decoded</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">14</td>
+<td>11-17</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">6,330</td>
+<td style="text-align: right;">4,706</td>
+</tr>
+<tr>
+<td>Nostalgic Wheels, now named "The Wealth Cortex"</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">18</td>
+<td>11-17</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">29,200</td>
+<td style="text-align: right;">434</td>
+</tr>
+<tr>
+<td>Econ in a Nutshell</td>
+<td style="text-align: right;">25 (5 Shorts)</td>
+<td style="text-align: right;">14</td>
+<td>11-17</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">6,330</td>
+<td style="text-align: right;">1,573</td>
+</tr>
+<tr>
+<td>The Expensive Part</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">19</td>
+<td>11-15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4,920</td>
+<td style="text-align: right;">2,137</td>
+</tr>
+<tr>
+<td>Brimm.</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">18</td>
+<td>09-20</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21,500</td>
+<td style="text-align: right;">9,431</td>
+</tr>
+<tr>
+<td>Finance ANALYST</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td>11-01</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">3,250</td>
+<td style="text-align: right;">3,416</td>
+</tr>
+<tr>
+<td>Mr. Ranks</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">19</td>
+<td>11-12</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">32,000</td>
+<td style="text-align: right;">15,400</td>
+</tr>
+<tr>
+<td>Mr. Finance</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;"><strong>0</strong></td>
+<td>11-18</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">83,100</td>
+<td style="text-align: right;">1,300</td>
+</tr>
+</tbody>
+</table></div>
+<p>Flags (INFERRED, check before relying on them):
+- <strong>Mr. Finance (UC6AwWrR...)</strong>: none of the 20 fresh videos exist in the DB (DB has 65 videos up to 08-24), 83K subs and median 1,300 views, 7 uploads in 7 days. Probably a repurposed, renamed or very different channel under the same ID, or a mass-upload channel. Do not use it as a benchmark until opened by hand.
+- <strong>Nostalgic Wheels</strong> now appears as "The Wealth Cortex" (handle @thewealthcortexx), so rename or pivot; median long views 434.
+- <strong>Business Decoded and Econ in a Nutshell</strong> both show exactly 6,330 subs; coincidence is possible, but verify.
+- <strong>Primate Economics has gone quiet</strong>: 1 upload in 30 days, 3 in 90, last 10-27 (577K subs). Its older hits (e.g. Shorts at millions of views) are not recent evidence.
+- <strong>PENNY</strong> (9K subs, 21 uploads in 30 days, median 13.8K views) is the closest new-channel-scale benchmark besides Paper Billions (23.6K subs, 6 videos).</p>
+<p>Reading: the channels with strongest recent numbers at small scale are Neu (40K subs, 41K median), Built On You (22.6K median at 16.6K subs) and PENNY. Public views only; not CTR/retention.</p>
+<h2>8. INGEST into <code>data/catalog/finance_economics_complete.db</code> (2026-11-18, owner-approved)</h2>
+<p>Script: <code>05_FRESH_COMPETITOR_DATA/ingest/ingest_r1_r2_r3.py</code> (idempotent; batch tag <code>apify_2026-11-18_R123</code>). Pre-ingest copy of the DB kept outside the repo (scratchpad; SHA-256 <code>9b5bf2d0...ee52d0</code>, equals git HEAD blob). Result: 479 fresh rows = <strong>138 new videos + 341 existing videos updated</strong> (no duplicates; 3,832 video rows, all unique), <strong>2 new channels</strong> (Paper Billions, PENNY; DB now 72 channels), 107 new transcripts (existing transcripts untouched), <strong>152 undated videos now dated</strong>, integrity check ok. Updated rows keep their old values in new table <code>video_snapshots</code> (batch <code>PRE_...</code>) beside the fresh values; channel subscriber history in new table <code>channel_snapshots</code>. Newest video now 2026-11-18. Remaining undated: 28 older videos outside the 30-newest window (Economics Explained 7, How Money Works 5, Money &amp; Macro 5, Patrick Boyle 5, PensionCraft 5, Modern MBA 1). Nostalgic Wheels got an <code>availability_note</code> about the new name. The DB file is modified in the working tree and NOT committed. <code>MASTER_INVENTORY.csv/.md</code> still show the pre-ingest snapshot and need regenerating.</p></main></div></body></html>

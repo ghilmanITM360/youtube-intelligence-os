@@ -1,0 +1,289 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DECISION LOG</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="cur">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/DECISION_LOG.md</code> (original badla nahi gaya)</div><h1>DECISION LOG</h1>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Decision</th>
+<th>Evidence / reason</th>
+<th>By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-11-18</td>
+<td>Refresh the existing blueprint; do not rebuild</td>
+<td>Existing 11-13/14/16 work covers most phases (gap map)</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Separate workspace <code>research/new-finance-channel/</code>; originals untouched</td>
+<td>owner instruction; avoids breaking paths</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Workspace left untracked on the current checkout; no branch switch, no commit</td>
+<td>two-Mac policy: no branch change without checks</td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>"Monkey Economics" = @MonkeyEconomic (224K); "Primate Economics" = separate channel (@Primateeconomics, 577K)</td>
+<td>DB handles and subscriber counts</td>
+<td>assistant (VERIFIED)</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>No scripts until topics, titles and thumbnails are validated</td>
+<td>owner instruction; Video 1/2 scripts of 11-16 on hold</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>R1 approved and run; R2/R3 still need approval</td>
+<td>owner said "Approve R1 first"</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>R2 approved and run</td>
+<td>owner said "Run R2"</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>R3 approved and run</td>
+<td>owner said "Run R3"</td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Mr. Finance not used as benchmark until verified</td>
+<td>fresh videos do not match DB; median 1,300 views at 83K subs</td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Crayon Capital re-labelled ACTIVE (not stale)</td>
+<td>fresh scrape shows uploads on 10-31, 11-10, 11-14</td>
+<td>assistant (VERIFIED)</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>No paid Apify run until estimate approved</td>
+<td>owner instruction; estimate in <code>05_.../REFRESH_STATUS_AND_MISSING_DATA.md</code></td>
+<td>owner</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>No AI-generated expert persona giving financial advice; decide voice policy before production</td>
+<td>official monetization policy (answer 1311392)</td>
+<td>assistant, pending owner confirmation</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase B part 1 done; editing/animation analysis stays NA; Shorts-vs-long split noted (Monkey Economics Shorts median 913K, long 10K)</td>
+<td><code>03_.../STRENGTH_MATRIX_AND_LEARNINGS.md</code></td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase C: 5 sub-niche candidates shortlisted (S1 to S5); retirement/senior, wealth POV fiction and crypto not pursued; demand UNKNOWN until Phase D</td>
+<td><code>10_.../SUB_NICHE_DISCOVERY.md</code> (title-keyword classification, INFERRED)</td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase D round 1: 0 of 25 seed topics approved; rent and airlines-with-angle advance to round 2</td>
+<td><code>09_.../TOPIC_VALIDATION_ROUND1_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase D round 2: rent (durable) and flights-expensive-now (news, time-boxed) CONDITIONAL; generic 'how airlines make money' rejected; 0 approved</td>
+<td><code>09_.../TOPIC_VALIDATION_ROUND2_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase D closed at screening level; BLS release verified (shelter +3.2%, airline fares +22.4%); rent and airfare topics go to Phase E as CONDITIONAL, 0 approved</td>
+<td><code>09_.../PHASE_D_CLOSURE_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase E: title features do not separate winners from losers (within 6 points); no title template; 6 title candidates, 4 thumbnail briefs, 2 hook models, none approved; no scripts</td>
+<td><code>13_TITLE_MODELS/PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase E claim check: CPI rent lag is about 6 months (six-panel design; BLS pages seen via search snippets only), so R2 "a Year Late" and T-R2 are wrong as written; MASTER_INDEX validated-topics line fixed; A2 $400 marked illustrative; A3 figures consistent across outlets, still SECONDARY</td>
+<td><code>13_TITLE_MODELS/PHASE_E_...md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Primary data pull: BLS 6-month rent pricing and IATA press-release figures VERIFIED; Apartment List/Zillow unreachable (DNS, 403), market-rent claims still SECONDARY; R1/T-R1 blocked</td>
+<td><code>09_.../PRIMARY_DATA_PULL_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase F (master Phase Six) positioning: recommend Concept 1 "number behind the price" as identity with Concept 2 "industry mechanism" as main series; Concept 3 (company/history stories) rejected as core. Master Phase Four formal scorecard still not produced</td>
+<td><code>16_.../PHASE_F_POSITIONING_2026-11-18.md</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Owner said "take best decision": working defaults adopted: C1+C2 positioning, human or labelled voice (no AI expert), light real charts; Phase G format/duration: long 8-12 min, Shorts 30-55 s, 1 long + 2 Shorts per week (capacity UNKNOWN). Launch 2026-11-23 treated as not firm</td>
+<td><code>16_.../PHASE_G_FORMAT_DURATION_2026-11-18.md</code></td>
+<td>assistant (default), owner may override</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Re-audit of Phases A to G (numbers recomputed from DB and primary pages): fixed 48% to 49% and ratio range 0.68 to 1.34, MonkeyExplains "48% questions" (really 10%), Paper Billions 1.2M video (not Nvidia), PENNY cadence, stale IATA wording, "Year Late" title withdrawn (R2b), R3 blocked, A1/A3 reworded as forecasts, "no search demand" softened for the industry cluster</td>
+<td>edits in the named files</td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>New primary facts read in Chrome: BLS Sep CPI rent index +2.8% (shelter 3.2%); newer Oct CPI (2026-11-10) exists, next 2026-12-10; Apartment List needs a US-residency answer, not given on the owner's behalf</td>
+<td><code>09_.../PRIMARY_DATA_PULL_2026-11-18.md</code> section 3b</td>
+<td>assistant</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phase Four scorecard: 12 topics, revised weights (gap/originality 20), hard gates; categories: B rent (blocked on market series), C airfares, D industry cluster (no topic), rest E; no A</td>
+<td><code>17_.../PHASE_FOUR_...</code></td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Phases Eight to Fourteen drafted; V3 ports REJECTED in Phase Ten (Neu 64K video exists); launch 2026-11-23 NOT recommended, earliest 2026-12-14; calendar 5 of 13 slots topic-backed, all conditional; branding: 3 directions, recommend A; Search-first traffic order</td>
+<td>files listed in MASTER_INDEX</td>
+<td>assistant, pending owner review</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Owner said "take best decision and approve V1 and V2": PACKAGING approved for V1 (title V1-1 "Why Is Rent So High? The Official Number Updates Every Six Months" + thumbnail T2) and V2 (title V2-1 "Airfares Are Up 22%. Airlines Are Forecast to Make $4.50 a Passenger." + thumbnail T1), as conditional packages. V2 conditions: re-read the October 2026 CPI table before use, "Forecast" stays, news slot near 2026-12-14. V3 ports rejected. This approves packaging only: no script written, no publish date fixed, topics remain unproven (no Studio data)</td>
+<td><code>18_.../PHASE_NINE_...</code></td>
+<td>owner (best-decision default chosen by assistant)</td>
+</tr>
+<tr>
+<td>2026-11-18</td>
+<td>Follow-up reads: Oct CPI table (no 12-month rates; airfares Oct +3.8% NSA); Zillow US rent index +2.7% (Sep), +2.9% (Oct), so market rent is NOT falling and CPI rent (+2.8%) agrees. V1 title amended for accuracy (rent is re-priced every six months; the index itself is monthly); V1 angle rebuilt. DRAFT scripts V1 and V2 written to <code>productions/</code> and run through the slop gate: V1 WARN (R7 only: no images exist yet), V2 WARN (R7 only). Gate is a proxy; C1 to C5 are manual and open</td>
+<td><code>09_.../PRIMARY_DATA_PULL...</code> 3c, <code>18_.../PHASE_NINE...</code> G1</td>
+<td>assistant, drafts pending owner review</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Topic decisions</h2>
+<p>Packaging approved 2026-11-18 for V1 rent and V2 airfares (conditional, see row above); no topic is proven and no script exists. Earlier (2026-11-14) screening: 0 of 10 approved, 16 rejected, 1 conditional (C1). Those are historical, to be re-checked in Phase D.
+| 2026-11-19 | Owner approved P0 audit fixes. Done: empty folders documented/pointed, transcript manifest, calendar addendum with candidate topics (L3 jobs-number, L4 gasoline price split, news slot moved after 2027-01-13 CPI). Candidates are NOT validated or approved | <code>19_.../P0_FIX_CALENDAR_ADDENDUM_2026-11-19.md</code>, <code>audit/18_...</code> | assistant, pending owner review |
+| 2026-11-19 | L3/L4 validated: L4 gasoline price split REJECTED as drafted (11+ near-identical fresh videos from the same EIA table, 0-107 views); L3 jobs-number CONDITIONAL (thin supply, needs news hook). Calendar: 6 of 13 slots topic-backed, 0 validated | <code>17_.../L3_L4_VALIDATION_2026-11-19.md</code> | assistant, pending owner review |
+| 2026-11-19 | L3 finished (BLS tech note, GAO-26-107538, release schedule, Trends read): CONDITIONAL, move to Mon 2027-01-11, title around the jobs report not the method. New L4 found: CPI basket + shutdown data hole (BLS 2027 weight page VERIFIED, no YouTube competitor found): CONDITIONAL, Dec 28 slot. Unverified secondary response-rate figures barred. Calendar 8 of 13 backed, 0 validated | <code>17_.../L3_L4_VALIDATION_2026-11-19.md</code> | assistant, pending owner review |
+| 2026-11-19 | Owner asked for L3 draft script: written to <code>productions/new-finance-channel-l3-jobs-01/L3_JOBS_SCRIPT.md</code> (about 1,200 words incl. header and sources); gate WARN (R7 no images only; an R4 6% overlap with the V1 script was fixed by rewording shared boilerplate). C1-C5 and [CHECK] items open; Jan 8, 2027 release values not yet available | script file | assistant, draft pending owner review |</p></main></div></body></html>

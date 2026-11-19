@@ -1,0 +1,138 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not approved for production)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="cur">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>productions/new-finance-channel-l3-jobs-01/L3_JOBS_SCRIPT.md</code> (original badla nahi gaya)</div><div class="box"><b>Seedhi baat</b>Video 3 ki draft script: jobs report ka margin ~122,000.<b>Nateeja</b>~8 minute. Gate WARN (sirf images nahi).<b>Agla kadam</b>8 Jan 2027 ki release ke baad publish.</div><h1>L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not approved for production)</h1>
+<p>Narration: a named person or a plainly labelled voice, never a fake expert. Length 7 to 9 minutes. Release window: Mon 2027-01-11 or later, once the Jan 8, 2027 report is out (BLS schedule, read 2026-11-19). Each figure on screen shows where it came from. [CHECK] marks a line a human must confirm at the source before publishing (C5). Method only: no forecasts, no advice, no views on any release.</p>
+<h2>1. Hook (0:00 to 0:40)</h2>
+<p>Every month, one number from the US jobs report moves markets and fills headlines: how many jobs were added.</p>
+<p>Here is a line from the Bureau of Labor Statistics own technical note. The confidence interval for the monthly change in total nonfarm employment from the payroll survey is, quote, on the order of plus or minus 122,000. [on screen: BLS Employment Situation technical note, 2026 M10 results; CHECK: re-read the figure in the technical note for the release being covered]</p>
+<p>So a headline can say a hundred thousand jobs were added, and the agency itself says the true change could be roughly 122,000 either side of that, at a 90 percent level of confidence. This video is about where that margin comes from, and what it does and does not mean.</p>
+<h2>2. Two surveys, two different numbers (0:40 to 2:30)</h2>
+<p>The jobs report is built from two separate surveys, and they answer different questions. [on screen: BLS technical note, household and establishment survey]</p>
+<p>The household survey asks people. It covers about 60,000 eligible households, run by the Census Bureau for the BLS. The unemployment rate comes from here.</p>
+<p>The establishment survey asks employers. Each month it surveys about 119,000 businesses and government agencies, which represent about 622,000 individual worksites. That sample includes about 26 percent of all nonfarm payroll jobs. The headline number of jobs added comes from here.</p>
+<p>So when someone says the economy added jobs and the unemployment rate rose in the same month, that is not automatically a contradiction. Two samples, two methods, two margins.</p>
+<h2>3. How the household survey counts (2:30 to 4:00)</h2>
+<p>From the BLS page on how the government measures unemployment. [on screen: bls.gov/cps/cps_htgm.htm]</p>
+<p>About 110,000 people are covered each month. One quarter of the households in the sample are replaced every month, so about 75 percent of the sample is the same from one month to the next. Interviewers ask about the week that includes the 12th of the month. Each person is classified as employed, unemployed, or not in the labor force. The answers are then weighted to match Census population estimates by age, sex, race, Hispanic ethnicity and state.</p>
+<p>And the BLS says plainly: a sample is not a total count. The chances are 90 out of 100 that the monthly unemployment estimate is within about 300,000 of the figure you would get by questioning everyone. [CHECK: this sentence is on the BLS page; confirm wording and whether the figure has been updated]</p>
+<h2>4. Why payroll numbers get revised (4:00 to 5:45)</h2>
+<p>The establishment survey has a built in problem. A new business cannot be in a sample until it exists and is counted. So the BLS estimates new and closing businesses with a model. [on screen: technical note, birth-death]</p>
+<p>Per the technical note, one part imputes to non-responding firms the same employment trend as other firms in the sample. A second part is a time series model, an ARIMA model, which estimates the remaining net business births and deaths using the past five years of unemployment insurance records.</p>
+<p>Then comes the check against reality. Each year the sample based March estimate is compared with universe counts from unemployment insurance tax records. The difference is called the benchmark revision, and the BLS calls it a rough proxy for total survey error. Over the prior 10 years, the average absolute benchmark revision for total nonfarm employment was 0.2 percent, and the range ran from minus 0.4 percent to plus 0.3 percent. [CHECK: re-read these three figures in the current technical note]</p>
+<p>Small percentages, but total payrolls are a very large base. That is why a revision can be a large number of jobs even when the percentage looks tiny.</p>
+<h2>5. What the Government Accountability Office found (5:45 to 7:15)</h2>
+<p>In June 2026 the GAO published a report on the jobs report, number GAO-26-107538. [on screen: gao.gov/products/gao-26-107538]</p>
+<p>Its main points. Stakeholders with jobs data expertise said the report generally meets users needs. They also said occasional large revisions can make the data less useful for timely decisions, and that lower survey response rates over time are a risk to data quality. The BLS met its goals for precision and the size of revisions in fiscal years 2020 through 2025, though it relaxed one goal during the pandemic.</p>
+<p>On response rates, the GAO says agency studies found limited effects on the accuracy of the household survey. But the BLS has not released its assessments for the establishment survey, because of limitations such as trouble linking survey data to more comprehensive sources. A new study is under way. And the BLS and Census plan to add an online response method to the household survey in 2027, though funding limits may delay it. [CHECK: confirm these statements in the GAO text; do NOT add response rate percentages unless read from the GAO figure]</p>
+<h2>6. What we did not check (7:15 to 8:00)</h2>
+<p>We did not verify any response rate percentage, because the GAO shows it in a chart and other sources disagree on how they quote it. We did not test whether any particular release was right or wrong. And the margin in the technical note describes sampling error, not every possible source of error. [CHECK: BLS wording on what the confidence interval covers]</p>
+<h2>7. What that means, without the advice (8:00 to 8:40)</h2>
+<p>Three questions to ask of any jobs headline. Is it the household number or the payroll number? How big is the change compared with the margin the BLS publishes? Is this the first estimate, or a revised one?</p>
+<p>None of this predicts the next report or tells you what to do with money. It is a description of how one published statistic is put together. The four documents behind it are listed below the video.</p>
+<h2>Sources</h2>
+<ol>
+<li>BLS, Employment Situation Technical Note, 2026 M10 results: bls.gov/news.release/empsit.tn.htm (household sample about 60,000; establishment survey about 119,000 businesses and government agencies, about 622,000 worksites, about 26 percent of nonfarm payroll jobs; confidence interval on the order of plus or minus 122,000; birth-death model; benchmark revision 0.2 percent average, minus 0.4 to plus 0.3 percent). Read 2026-11-19.</li>
+<li>BLS, How the Government Measures Unemployment: bls.gov/cps/cps_htgm.htm (about 110,000 people; one quarter of households replaced monthly; 90 in 100 chance within about 300,000). Read 2026-11-19.</li>
+<li>BLS, Schedule of Releases for the Employment Situation: bls.gov/schedule/news_release/empsit.htm (Dec. 4, 2026; Jan. 8, 2027; Feb. 5, 2027). Read 2026-11-19.</li>
+<li>U.S. Government Accountability Office, GAO-26-107538, Federal Statistics: Stakeholders Said Jobs Report Generally Meets Their Needs, but Opportunities Exist to Improve Data Quality, published 2026-06-02: gao.gov/products/gao-26-107538. Summary page read 2026-11-19; full report not read.</li>
+</ol></main></div></body></html>

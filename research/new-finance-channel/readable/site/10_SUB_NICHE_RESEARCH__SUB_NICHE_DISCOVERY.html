@@ -1,0 +1,341 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase C: sub-niche discovery (2026-11-18)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="cur">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/10_SUB_NICHE_RESEARCH/SUB_NICHE_DISCOVERY.md</code> (original badla nahi gaya)</div><h1>Phase C: sub-niche discovery (2026-11-18)</h1>
+<p>Data: <code>data/catalog/finance_economics_complete.db</code> after R1-R3, read-only; 3,404 dated long-form videos (Mr. Finance's 82 excluded, anomaly) from 71 channels (Shorts excluded; 28 videos undated). Script: <code>subniche_metrics.py</code>; outputs in this folder (<code>SUBNICHE_METRICS_2026-11-18.csv</code>, <code>PRIMARY_CHANNEL_BY_SUBNICHE_2026-11-18.csv</code>, <code>TOP_VIDEOS_BY_SUBNICHE_2026-11-18.csv</code>, <code>CLASSIFICATION_AUDIT_SAMPLE_2026-11-18.csv</code>).</p>
+<h2>Method and limits (read first)</h2>
+<ul>
+<li>Sub-niche = first matching keyword rule on the <strong>title only</strong> (INFERRED). I hand-read about 8 titles per bucket: most fit, but some do not (e.g. Housing holds senior-benefit titles; "Economic history" is mostly noise). 12% of videos stay Unclassified. Treat bucket sizes as rough (plus or minus a few points), not exact.</li>
+<li>"Ratio" = video views divided by that channel's own long-form median (channels with 8+ long videos only, videos 14+ days old). It removes channel size; 1.0 means typical for the channel. Public views only, not CTR or retention.</li>
+<li>"Small channels" = under 100K subscribers. Several channels show 0 subscribers (not collected), so they drop out of that column. Note: ratio medians use each channel's own median, so channels with very low medians inflate outliers.</li>
+<li>The set was chosen because channels perform, so it shows what works for these channels, not total market demand. <strong>Demand (Trends, News, YouTube search) is UNKNOWN until Phase D; nothing here is a validated topic.</strong></li>
+</ul>
+<p>Independence caveat (audit 2026-11-18): 89 titles appear on more than one channel (copy-style and pipeline channels; for example one "Never Keep More Than This in the Bank After 65" title sits on 5 channels). Those rows are not independent evidence, so bucket counts and medians can be inflated in the crowded retirement and personal-finance buckets. They were not removed.</p>
+<h2>1. Sub-niche map (long-form)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Sub-niche</th>
+<th style="text-align: right;">Videos</th>
+<th style="text-align: right;">Channels</th>
+<th style="text-align: right;">Median ratio</th>
+<th style="text-align: right;">% at 2x+ own median</th>
+<th style="text-align: right;">Small-channel median views (channels)</th>
+<th style="text-align: right;">Videos last 90 d (channels)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retirement, pensions and senior money</td>
+<td style="text-align: right;">917</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">5.2K (26)</td>
+<td style="text-align: right;">537 (30)</td>
+</tr>
+<tr>
+<td>Personal finance and wealth</td>
+<td style="text-align: right;">765</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">1.05</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">2.7K (35)</td>
+<td style="text-align: right;">316 (40)</td>
+</tr>
+<tr>
+<td>Unclassified</td>
+<td style="text-align: right;">419</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">0.98</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">3.5K (34)</td>
+<td style="text-align: right;">200 (48)</td>
+</tr>
+<tr>
+<td>Wealth POV / fiction stories</td>
+<td style="text-align: right;">332</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.09</td>
+<td style="text-align: right;">34%</td>
+<td style="text-align: right;">6.4K (8)</td>
+<td style="text-align: right;">228 (11)</td>
+</tr>
+<tr>
+<td>Central banks, rates, inflation, debt</td>
+<td style="text-align: right;">159</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">0.99</td>
+<td style="text-align: right;">34%</td>
+<td style="text-align: right;">4.0K (28)</td>
+<td style="text-align: right;">76 (32)</td>
+</tr>
+<tr>
+<td>Business economics ("Economics of owning X", how X makes money)</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;"><strong>1.34</strong></td>
+<td style="text-align: right;"><strong>37%</strong></td>
+<td style="text-align: right;">6.4K (7)</td>
+<td style="text-align: right;">20 (6)</td>
+</tr>
+<tr>
+<td>Jobs, wages, cost of living</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">1.03</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">2.6K (22)</td>
+<td style="text-align: right;">60 (24)</td>
+</tr>
+<tr>
+<td>Housing and real estate</td>
+<td style="text-align: right;">147</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">2.2K (26)</td>
+<td style="text-align: right;">58 (24)</td>
+</tr>
+<tr>
+<td>AI and big-tech</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1.03</td>
+<td style="text-align: right;">21%</td>
+<td style="text-align: right;">3.4K (12)</td>
+<td style="text-align: right;">42 (17)</td>
+</tr>
+<tr>
+<td>Stock market and companies</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">0.81</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;">3.4K (15)</td>
+<td style="text-align: right;">29 (16)</td>
+</tr>
+<tr>
+<td>Geopolitics, trade, energy</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0.80</td>
+<td style="text-align: right;">14%</td>
+<td style="text-align: right;">9.2K (7)</td>
+<td style="text-align: right;">21 (10)</td>
+</tr>
+<tr>
+<td>Economics concepts (ELI5)</td>
+<td style="text-align: right;">57</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">0.73</td>
+<td style="text-align: right;">19%</td>
+<td style="text-align: right;">2.7K (12)</td>
+<td style="text-align: right;">18 (10)</td>
+</tr>
+<tr>
+<td>Industry, logistics, infrastructure</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">29%</td>
+<td style="text-align: right;"><strong>37.1K (7)</strong></td>
+<td style="text-align: right;">16 (4)</td>
+</tr>
+<tr>
+<td>Crashes, crises, bubbles</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">31%</td>
+<td style="text-align: right;">3.1K (8)</td>
+<td style="text-align: right;">20 (14)</td>
+</tr>
+<tr>
+<td>Economic history and systems</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">4.0K (11)</td>
+<td style="text-align: right;">27 (11)</td>
+</tr>
+<tr>
+<td>Crypto, gold, commodities</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0.68</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">0.6K (3)</td>
+<td style="text-align: right;">8 (4)</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. What the numbers say (INFERRED)</h2>
+<ol>
+<li><strong>The sub-niche barely predicts performance.</strong> Median ratios sit between 0.68 and 1.34 (an earlier draft said 1.5, a figure from before Mr. Finance was excluded); 9 of 16 are within 0.95-1.1. Packaging, channel and the specific story matter more than the bucket.</li>
+<li><strong>Supply is concentrated in retirement/senior and generic personal finance</strong> (49% of long videos: 917 + 765 of 3,405; an earlier draft said 48%, from before Mr. Finance was excluded). Their small-channel medians are low (2.7K to 5.2K) and they are mostly list or POV formats. This is where the crowd is, not where our reference channels are. The six primaries put only 1 to 4 videos each there.</li>
+<li><strong>Two buckets stand out for small channels:</strong>
+   - <em>Industry, logistics and infrastructure</em> (ships, ports, airlines, data centres): small-channel median 37K, but only 7 channels and mostly <strong>Neu</strong> (40.7K subs) plus <strong>Brimm.</strong> Top items: Brimm. airline layout 553K (71x its own median), Neu ship graveyard 1.12M (25x). Few competitors, but this rests on two channels (HYPOTHESIS that it generalises).
+   - <em>Business economics</em> ("The Economics of Owning X"): ratio 1.34, 37% of videos beat 2x (first run 1.48 and 44% included Mr. Finance; re-run without it after review). 9 channels, one repeated template (Nostalgic Wheels, Millionaire Problems, The Expensive Part). Ratios for tiny channels are fragile (Nostalgic Wheels' top item is 283x a median of 661 views). A copied template is the exact "inauthentic / mass-produced" exposure from Phase A. A mechanism-led version of the same idea is possible; the template is not.</li>
+<li><strong>AI/big-tech, crashes and geopolitics have huge medians (200K to 410K) only because the big channels cover them</strong> (Casual Finance, MonkeyExplains, Patrick Boyle). For small channels the medians are 3.1K to 9.2K, with 7 to 12 channels. High ceiling, crowded, and fast news cycles. A new channel competes with the same-week uploads of four primaries (Phase B).</li>
+<li><strong>Cost-of-living, housing, rates</strong> are broad, many channels (22 to 28 small), small-channel medians 2.2K to 4K: weak opportunity unless the angle is specific.</li>
+<li><strong>Wealth POV / fiction</strong> (15 channels, ratio 1.09): reach is real but it is fiction, and several of these channels lean on AI voices. Not our category (decision log: adjacent categories stay P3).</li>
+</ol>
+<h2>3. Candidate sub-niches for Phase D (shortlist, none validated)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Candidate</th>
+<th>Evidence for</th>
+<th>Evidence against / risk</th>
+<th>Next test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td><strong>How a real industry makes money (ships, airlines, ports, data centres, food, retail)</strong></td>
+<td>Neu and Brimm. outliers; 10 channels only; no primary channel covers it; fits "cost of ownership" gap in earlier research</td>
+<td>2 channels carry the evidence; needs real sourcing per video; demand UNKNOWN</td>
+<td>Trends/search check on 10 topic seeds; title and thumbnail comparison</td>
+</tr>
+<tr>
+<td>S2</td>
+<td><strong>Company and history stories with a mechanism</strong> (Crayon, Built On You: Amazon 471K at 16.6K subs)</td>
+<td>Proven at 12K to 320K subs; Capital Case shows format works small</td>
+<td>Crayon, Capital Case, Paper Billions already own the cartoon look; AI companies are crowded</td>
+<td>Pick non-AI companies; originality check vs three look-alikes</td>
+</tr>
+<tr>
+<td>S3</td>
+<td><strong>Everyday money mechanisms as Shorts plus a long follow-up</strong></td>
+<td>Monkey Economics Shorts median 913K</td>
+<td>Its long videos median 10K; Shorts to long conversion is a HYPOTHESIS; character look must be our own</td>
+<td>Test small batch of Shorts; track Studio traffic</td>
+</tr>
+<tr>
+<td>S4</td>
+<td><strong>News translated into balance sheets</strong> (rates, housing, tariffs)</td>
+<td>Casual Finance, Money &amp; Macro scale</td>
+<td>Most crowded; speed and sourcing cost; news read-out is not monetizable</td>
+<td>Only with a distinct data angle</td>
+</tr>
+<tr>
+<td>S5</td>
+<td><strong>"Economics of owning X" mechanism series</strong></td>
+<td>Highest ratio (1.34 after review)</td>
+<td>Template copying, fragile small-channel ratios, mass-produced risk</td>
+<td>Treat as a format to learn from, not copy</td>
+</tr>
+</tbody>
+</table></div>
+<p>Not pursued: retirement/senior (crowded, POV/AI-persona and monetization risk), wealth POV fiction, crypto (smallest and weakest bucket).</p>
+<h2>4. Not done / open</h2>
+<ul>
+<li>No Trends, News or YouTube search validation yet (Phase D, with dated captures). No paid Apify run was used in this phase.</li>
+<li>Keyword classification is title-only; transcripts and descriptions were not used. A semantic re-label (by reading) would tighten the buckets.</li>
+<li>Single-channel dependence (Neu, Brimm.) must be broken by finding more small channels in S1 before relying on it.</li>
+<li>Subscribers are missing for several small channels.</li>
+<li>Manual check of Mr. Finance still pending (its rows are now excluded here).</li>
+</ul></main></div></body></html>

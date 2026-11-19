@@ -1,0 +1,241 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L3 / L4 validation (2026-11-19)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="cur">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/17_TOPIC_VALIDATION/L3_L4_VALIDATION_2026-11-19.md</code> (original badla nahi gaya)</div><div class="box"><b>Seedhi baat</b>Jobs report aur gas-price topic ki jaanch.<b>Nateeja</b>Gas topic REJECT (bohot copies). Jobs report aur CPI-weights topic CONDITIONAL.<b>Agla kadam</b>Ye topics abhi &#x27;proven&#x27; nahi, sirf aage badhne layak.</div><h1>L3 / L4 validation (2026-11-19)</h1>
+<p>Labels: VERIFIED = opened by me in the built-in browser today. Method for YouTube: logged-out built-in browser (sidebar showed "Sign in", so not personalised), first ~10-20 results per query. Limits: one session, 3 queries per topic, US-facing results, view counts are a snapshot.</p>
+<h2>L4 gasoline price split: result NOT APPROVED (filter 5 and 7 fail as drafted)</h2>
+<ul>
+<li>Primary (VERIFIED, EIA gaspump_hist, released 2026-11-17): Aug-26 $4.058 = crude 50.3%, refining 24.4%, distribution+marketing 12.5%, taxes 12.9%; May-26 $4.479 = 51.9 / 21.7 / 14.8 / 11.5; Jan-26 $2.809 = 50.6 / 19.7 / 11.4 / 18.4. Distribution is a residual (EIA definition, search snippet).</li>
+<li>Our arithmetic (shares are rounded, so about +/-2 cents): tax per gallon was about $0.52 in Jan, May and Aug 2026 (0.517, 0.515, 0.523), so the tax SHARE fell from 18.4% to 11.5-12.9% only because the price rose. Crude per gallon went 1.42 -&gt; 2.32 (May) -&gt; 2.04 (Aug). This framing is ours, not seen in the results below.</li>
+<li>YouTube search "what is in a gallon of gasoline price breakdown": at least 11 videos in the last ~4 weeks use this same EIA table (titles like "Where Your $4.48 Gallon of Gas Actually Goes (2026)", "$4.29", "$4.30", "What You Really Pay For In A Gallon Of Gas"; channels Itemized, Dollargraph, Crude Logic, Plain Numbers, Behind The Barrel, Clackonomics, Turtle Money, Follow the Stash). Views 0 to 107 each; best older item "How Do Gas Prices Work?" 8K over 4 years.</li>
+<li>Verdict: saturated and templated (near-identical titles and data), with no demonstrated demand (max 107 views on fresh ones). Publishing the draft L4 would add a copy of the swarm = high AI-slop/originality risk. L4 REJECTED as drafted. Salvage only as the "tax is a flat ~52 cents, share fell because price rose" angle inside a different video, and only if a primary table is saved; not a slot.</li>
+<li>Shorts S5 and S7 (gas tax) inherit this: REJECTED unless reframed.</li>
+</ul>
+<h2>L3 what the jobs number measures: CONDITIONAL</h2>
+<ul>
+<li>Primary (VERIFIED, bls.gov/cps/cps_htgm.htm): about 60,000 eligible households, about 110,000 people a month; one quarter of the sample changes each month; 75% overlap month to month; interviews in the week with the 12th; 90 in 100 chance the monthly unemployment estimate is within about 300,000 of a full count (BLS notes it as a statement of precision). Not yet opened: payroll-survey page, response-rate source (one secondary site), GAO-26-107538. So those figures stay SECONDARY and must not be used until opened.</li>
+<li>YouTube (logged-out): "how the jobs report is made survey": WSJ "How to Read the Jobs Report" 83K (4 yr), Schwab 17K (2 yr), Decode Econ 1.7K, Scripps 228; fresh items 2 to 135 views. "why jobs report gets revised": ClearValue Tax "The Jobs Report is Much Worse Than It Looks" 492K (1 mo), ABC11 13K, ABC News 7.4K, rest under 800. Method-only explainers are thin in supply but also low in views; high views come from news-hook framing.</li>
+<li>DB: 0 of 3,832 competitor videos on the topic (our set only).</li>
+<li>Verdict: no copy swarm (good), demand for pure method is weak (hypothesis: needs a news hook). Keep as CONDITIONAL with changed angle: tie the method to a live release (Employment Situation) and revisions, state method only, no forecasts. Needs: open payroll survey page, GAO report, next release date, Trends.</li>
+</ul>
+<h2>Filters (L3 / L4)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>L3</th>
+<th>L4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 competitor evidence (DB)</td>
+<td>none in our set; outlier pattern "why does X work" supports format</td>
+<td>none; pattern same</td>
+</tr>
+<tr>
+<td>2 historical performance</td>
+<td>news-hook jobs videos get 10K-500K; method explainers 0.2K-83K</td>
+<td>fresh gas-split videos 0-107 views</td>
+</tr>
+<tr>
+<td>3 news</td>
+<td>Oct jobs report (165,000 after 29,000 in Sep) is covered by others; not opened by me</td>
+<td>gas $4+ is in the news</td>
+</tr>
+<tr>
+<td>4 Trends</td>
+<td>NOT RUN (browser Trends read not attempted)</td>
+<td>NOT RUN</td>
+</tr>
+<tr>
+<td>5 YouTube search</td>
+<td>thin supply, low views</td>
+<td>saturated, identical template</td>
+</tr>
+<tr>
+<td>6 Suggested</td>
+<td>not measured (UNKNOWN)</td>
+<td>not measured</td>
+</tr>
+<tr>
+<td>7 gap</td>
+<td>method + revisions plus sampling is open; needs hook</td>
+<td>gap closed by the swarm</td>
+</tr>
+<tr>
+<td>Result</td>
+<td><span class="chip mid">CONDITIONAL</span></td>
+<td>REJECTED as drafted</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Consequence for the calendar</h2>
+<p>L4 (Mon 2027-01-04) returns to NO TOPIC; S5 and S7 return to NO TOPIC. L3 stays candidate-conditional. Topic-backed slots: L1, L2 (conditional), L3 (conditional), L5, S4, S6 (candidates) = 6 of 13; validated 0. Honest score for REQ-025 does not change from FAIL.
+Next if approved: open the BLS payroll page and the GAO report, run Trends, find a different L4 (the "why does X work" pattern with a primary dataset and no swarm; check the YouTube swarm first this time).</p>
+<hr />
+<h1>ROUND 2 (same day): L3 finished, new L4 found</h1>
+<h2>L3 jobs number: primary sources opened, Trends run</h2>
+<p>VERIFIED today (own eyes, built-in browser):
+- BLS Employment Situation technical note (2026 M10): household survey about 60,000 eligible households (Census for BLS); establishment survey (CES) about 119,000 businesses and government agencies, about 622,000 worksites, about 26% of all nonfarm payroll jobs; birth-death modelling (imputation plus an ARIMA model) for new firms; benchmark revision: 10-year absolute average 0.2%, range -0.4% to +0.3%; <strong>90% confidence interval for the monthly change in nonfarm payrolls is on the order of plus or minus 122,000.</strong>
+- BLS CPS page: about 110,000 people a month, one quarter of households replaced each month, 90-in-100 chance unemployment estimate within about 300,000 of a full count.
+- GAO-26-107538 (published 2026-06-02): stakeholders say the report generally meets needs but occasional large revisions reduce usefulness; response rates have fallen (shown in a figure, not in text I could read); BLS met its precision and revision goals FY2020-2025 (relaxed one goal during COVID); agency studies found limited effects of lower response on household data; BLS has not released its establishment-survey nonresponse assessment; an online response option is planned for 2027 but funding may delay it. <strong>The "61% to 42.6%" response-rate numbers from a secondary site are NOT verified: do not use them.</strong>
+- BLS release schedule: Employment Situation Dec 4, 2026 (Nov data), <strong>Jan 8, 2027 (Dec data)</strong>, Feb 5, 2027.
+Trends (Google Trends, US, past 12 months, read by eye in the built-in browser):
+- Web Search: "jobs report" stays low (about 5 to 12 on a 0-100 scale shared with "gas prices"; gas prices peaked at 100 and spiked again later; bar average jobs report roughly one sixth of gas prices).
+- YouTube Search: "jobs report" is spiky, repeating peaks roughly monthly (up to 100, many weeks near 0), consistent with release days; "how unemployment is calculated" is flat near 0. Reading: demand follows the release; there is no standing search demand for the method. (Visual reading; causality with release dates not tested.)
+Verdict: <strong>L3 CONDITIONAL (strengthened).</strong> Primary sources now cover every number. Must be published right after a release (Jan 8, 2027 =&gt; Mon 2027-01-11) and titled around the jobs report, not "how unemployment is calculated". Safe statement-of-method hook: the payroll change carries about plus or minus 122,000 at 90% confidence, so a month's headline change can sit inside the noise. Do NOT cite the Sep/Oct 2026 payroll values until the BLS tables are opened (seen only in YouTube snippets). Open: Trends for the exact title phrase, owner voice policy, script not written.</p>
+<h2>New L4: "the shutdown hole in the CPI basket": CONDITIONAL</h2>
+<p>Why a new topic: generic "why is X expensive" topics are swarmed. Checked "why car insurance premiums keep rising": 14+ fresh near-identical videos (0 to 190 views). CPI "how it is calculated" has big old videos (WSJ 365K, JPMorgan 1.2M, Econ in Many Lessons 404K, EconplusDal 215K) but fresh ones are tiny, and V1/S6 already use the basket weights. So L4 must not be another "what is the CPI".
+Candidate: <strong>how BLS patched the missing October and November 2025 Consumer Expenditure Survey data (government-shutdown lapse), what that does to the 2027 CPI spending weights, and what the weight update in February 2027 changes.</strong> VERIFIED (BLS 2027 CPI Weight Information page, last modified 2026-07-30): CE survey data were not collected in Oct and Nov 2025; BLS considered three approaches (survey weight adjustments, unit-level modelling, domain-level modelling incl. interpolation, ARIMA, ESN), consulted NABE and CNSTAT expert panels, and plans a survey-weight adjustment for CPI-U and CPI-W (Interview Survey: July and October 2025 expenditures x3 for the 1/3 shortfall, Aug and September x3/2 for the 2/3 shortfall; for the C-CPI-U, October weights copy September and November copy December); release planned February 2027 as scheduled.
+YouTube supply (logged-out): query "shutdown missing data CPI weights consumer expenditure survey" returned 9 results; none explains the weights patch. Nearest: BLS's own "CPI imputation: not just a guess" (1.4K), October 2026 "no yearly inflation number" news explainers (8 to 83 views, 7 to 10 days old), shutdown CPI news (133 to 1.8K, 1 year old). No swarm; but also no proven demand (Trends not run for this phrase; likely low).
+Risks: dry topic, audience small; I have not verified WHY the October 2026 table lacks 12-month rates (the news videos assert a link; BLS release not read for that sentence); do not state it until read. Technical wording must be checked by a human (C5).
+Status: CONDITIONAL. A "What is inside the basket, and how a hole in the data is patched" video fits the pillar "how official statistics are built". Demand is a hypothesis; test with 1 Short first (see S7/S4 pattern).</p>
+<h2>Calendar update (supersedes earlier L-slot mapping in the addendum)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Slot</th>
+<th>Topic</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon 2026-12-28</td>
+<td>L3-new</td>
+<td>CPI basket + shutdown hole (new L4 topic)</td>
+<td><span class="chip mid">CONDITIONAL</span></td>
+</tr>
+<tr>
+<td>Mon 2027-01-04</td>
+<td>former L4</td>
+<td>no topic (gas rejected)</td>
+<td>NO TOPIC</td>
+</tr>
+<tr>
+<td>Mon 2027-01-11</td>
+<td>L3</td>
+<td>jobs report: what the number measures (after Jan 8 release)</td>
+<td><span class="chip mid">CONDITIONAL</span></td>
+</tr>
+<tr>
+<td>Thu 2027-01-14</td>
+<td>L5</td>
+<td>December CPI (released Wed 01-13)</td>
+<td><span class="chip mid">CANDIDATE</span></td>
+</tr>
+<tr>
+<td>Shorts S4 (60,000 homes), S6 (housing 35.3% weight), new S7 (payroll change carries about plus or minus 122,000 at 90% confidence)</td>
+<td></td>
+<td>each own hook, VERIFIED facts</td>
+<td><span class="chip mid">CANDIDATE</span></td>
+</tr>
+<tr>
+<td>S5 (gas tax) and S8 stay NO TOPIC. Topic-backed 8 of 13 (L1, L2, L3, L-Dec28 conditional; L5, S4, S6, S7 candidates); validated 0. Weekdays: 2026-12-28 Mon, 2027-01-04 Mon, 2027-01-11 Mon, 2027-01-14 Thu (python-checked earlier for the Jan dates; Dec 28 follows from Dec 14 Monday plus 14 days).</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div></main></div></body></html>

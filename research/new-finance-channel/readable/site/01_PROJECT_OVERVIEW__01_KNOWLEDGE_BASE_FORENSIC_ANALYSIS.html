@@ -1,0 +1,251 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase A: Knowledge base forensic analysis (2026-11-18)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="cur">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/01_PROJECT_OVERVIEW/01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.md</code> (original badla nahi gaya)</div><h1>Phase A: Knowledge base forensic analysis (2026-11-18)</h1>
+<p>Labels: VERIFIED (read or fetched today) / REUSED (from earlier repo audits, not re-read today) / INFERRED / UNKNOWN. This file integrates the knowledge sources into the new-channel branch. It does not replace the earlier audits (paths in section 7).</p>
+<h2>1. What each source is</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>What it really is</th>
+<th>Authority for us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master Playbook PDF (<code>~/Downloads/YouTube_Automation_Complete_Master_Playbook.pdf</code>, 556 pp, compiled 2026-11-11, outside repo)</td>
+<td>Part A to C: creator-course lessons, title formats, validation and script prompts (compiled, unmodified). Part D (pp. 554-556): new official-source appendix dated 2026-11-11</td>
+<td>Creative heuristics and prompt templates; only Part D cites official YouTube pages</td>
+</tr>
+<tr>
+<td>DS-000011 (17 files) + supplement 2026-11-11</td>
+<td>Mixed creator-education and creative library (hook, packaging SOP, viral checklist, script/intro analyzers, algorithm guides, storytelling engines, image/video prompt guides, "Intelligence Brain v1")</td>
+<td>Creative heuristics; not official YouTube material</td>
+</tr>
+<tr>
+<td>DS-000018</td>
+<td>One third-party Google Doc snapshot with 63 creator-video transcript tabs about the "2026 algorithm"</td>
+<td>Commentary. Earlier audit of 33 claims: 10 supported, 12 partial, 1 contradicted, 8 lacking primary support, 2 not verifiable</td>
+</tr>
+<tr>
+<td>DS-000031</td>
+<td>Urdu/Hinglish creator lectures (topic selection, comments as research, post-hit behaviour)</td>
+<td>Context only</td>
+</tr>
+<tr>
+<td>Repo framework</td>
+<td><code>data/knowledge/reference_knowledge.db</code> (rule classes: creative heuristic, owner preference, platform claim, empirical hypothesis, tool-specific, superseded) and <code>scripts/check_slop_risk.py</code></td>
+<td>Mandatory for content plans and scripts</td>
+</tr>
+</tbody>
+</table></div>
+<h2>2. Reading coverage (honest)</h2>
+<ul>
+<li>Today: Playbook Part D read in full (3 pages); six official YouTube Help pages fetched (section 4); playbook text extraction re-done (92,260 words, 556 pages).</li>
+<li>Earlier, REUSED: <code>00_PROJECT_OVERVIEW/PDF_KNOWLEDGE_MAP.md</code> records pp. 1-108, 263-284, 318-352, 425-439 and 554-556 as read in full, and pp. 109-262, 285-317, 353-424, 440-553 as outline/rule level only (mostly prompt templates). I did not re-read those mid-sections today. Claim "whole PDF read" would be false.</li>
+<li>DS-000011 / DS-000018: not re-read today; rely on <code>DS-000011-DS-000018-DEEP-KNOWLEDGE-AUDIT.md</code> (2026-09-24) and the 2026-09-04 primary-source validation file.</li>
+</ul>
+<h2>3. What the Playbook gives us, by rule class</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Content</th>
+<th>Use for the new channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creative heuristic</td>
+<td>Outlier transplant, title formats (100), five-part title engine, thumbnail one-idea rule, hook zones (0-5 s, 5-15 s, 30 s loop), but/therefore, engagement techniques, script audit checklists</td>
+<td>Starting hypotheses to test on our own videos; never rules</td>
+</tr>
+<tr>
+<td>Course heuristic that conflicts with official guidance</td>
+<td>"8+ minute sweet spot" (Module 2.3), 10x outlier, 20+ outliers, 50+ topic ideas, A/B/C/D supply grades</td>
+<td>Treated as working heuristics (Part D says so itself)</td>
+</tr>
+<tr>
+<td>Prompt/workflow templates</td>
+<td>Validators, repackage plugin, script engine, VO emotion, storyboard</td>
+<td>Production tooling candidates (Phase J), gated by the slop checker</td>
+</tr>
+<tr>
+<td>Official-source</td>
+<td>Part D sections 1 to 10</td>
+<td>Anchors; re-verified below</td>
+</tr>
+</tbody>
+</table></div>
+<p>Known internal inconsistencies (from the earlier map): Method 2 lists 9 of 10 title formats; Method 4 supply threshold 50K+ vs 10K+; lesson numbering 2.3/2.4/2.5; several screenshot transcriptions with gaps.</p>
+<h2>4. Official claims re-verified today (2026-11-18)</h2>
+<p>Fetched from support.google.com. Pages show only a "2026 Google" footer, no last-updated date, except the monetization page, whose newest changelog entry is 2025-07-15.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Result</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Half of channels/videos have impressions CTR between 2% and 10%; varies by content, audience, placement; videos under about a week old or under 100 views can be wider; high CTR with low view duration may signal clickbait</td>
+<td><strong>VERIFIED</strong>. Not a target; no universal benchmark</td>
+<td>answer/7628154</td>
+</tr>
+<tr>
+<td>A/B tests: up to 3 titles and/or thumbnails; winner by watch-time share, not CTR; excluded: Shorts, scheduled lives, Premieres, made-for-kids, mature, private; desktop Studio only; about 2 weeks</td>
+<td><strong>VERIFIED</strong>. A video is a Short if 3 minutes or less and square or taller</td>
+<td>answer/16391400</td>
+</tr>
+<tr>
+<td>Mid-rolls on monetized videos 8 minutes or longer; no guarantee an ad serves</td>
+<td><strong>VERIFIED</strong> (page has one small internal inconsistency about Shorts defaults)</td>
+<td>answer/6175006</td>
+</tr>
+<tr>
+<td>Repetitive/mass-produced content is "inauthentic" and not monetizable; template-made AI content is listed explicitly; reused content needs significant original commentary; channel-level review</td>
+<td><strong>VERIFIED</strong> (renamed 2025-07-15). Allowed: AI for editing scripts or backgrounds if original insight is added</td>
+<td>answer/1311392</td>
+</tr>
+<tr>
+<td>Browse, Suggested and Search are separate traffic sources; no new-channel guidance</td>
+<td><strong>VERIFIED</strong> definitions</td>
+<td>answer/9314355</td>
+</tr>
+<tr>
+<td>AI disclosure required for realistic AI-generated or altered content (real person saying something they did not, altered real events, realistic scenes that did not occur); not required for non-realistic content, script/title/thumbnail help, or cloning your own voice</td>
+<td><strong>VERIFIED</strong>. Disclosure alone does not limit reach or monetization</td>
+<td>answer/14328491</td>
+</tr>
+</tbody>
+</table></div>
+<p>New findings that matter for a finance channel (not in Part D):
+1. <strong>AI-generated personas presenting as human experts who give financial advice are not monetizable</strong> (the page's example is AI podcast hosts offering financial guidance). So we must not present an AI voice or avatar as an adviser; frame as explainer, not personal financial advice, and decide the voice and persona policy now (Phase F/J).
+2. Content that <strong>only reads out</strong> text from websites or news feeds is not monetizable; news-driven finance videos need original analysis and sourcing.
+3. Reviewers judge the <strong>whole channel</strong>: main theme, top and newest videos, titles, thumbnails, About. A templated 30-video calendar is itself a risk.</p>
+<h2>5. Contradictions, stale items, tests still open</h2>
+<ul>
+<li>DS-000011 "10%+ CTR" goal vs official 2% to 10% median band: treat as creator target only (REUSED; confirmed today).</li>
+<li>Playbook "8+ min sweet spot" vs official: 8 minutes is an ad-eligibility rule only. Competitor data today supports length diversity: Monkey Economics 42 of 60 items are Shorts (41 typed SHORT plus one of 60 s or less); Casual Finance 185 of 223 are Shorts.</li>
+<li>No threshold in any source can be tested without our own YouTube Studio data: CTR, retention, impressions, traffic mix. Competitor public views are not CTR.</li>
+<li>DS-000018: stays context, not platform fact (REUSED). The one claim marked contradicted remains in the earlier audit file.</li>
+<li>Not re-run today: Viral-checklist score vs performance (earlier result: no within-channel relationship; REUSED).</li>
+</ul>
+<h2>6. Consequences for the new-channel decisions (HYPOTHESES to test, not conclusions)</h2>
+<ol>
+<li>Use the measurement dashboard in Part D section 10 from video 1 (Studio columns), and keep A/B title/thumbnail tests for long-form only (Shorts excluded).</li>
+<li>Build originality in at channel level: distinct structure per video, own source work, no generic template look; run <code>scripts/check_slop_risk.py</code> on every script.</li>
+<li>Decide a human-voice-or-clearly-labelled-narration policy before production; no AI "expert" persona.</li>
+<li>Add a monetization-risk line to the topic scorecard: original analysis present? sources primary? not a news read-out?</li>
+<li>Keep the playbook's 25-point scorecard (evidence freshness, multi-channel validation, distinct angle, research feasibility, audience fit) as one input to the 100-point scoring in Phase D.</li>
+</ol>
+<h2>7. Source paths (read-only)</h2>
+<ul>
+<li><code>research/finance-economics-channel-forensics/00_PROJECT_OVERVIEW/PDF_KNOWLEDGE_MAP.md</code>, <code>GLOBAL_KNOWLEDGE_MAP.md</code></li>
+<li><code>research/finance-economics-channel-forensics/02_SHARED_EVIDENCE/PDF_PRINCIPLE_EVALUATION.csv</code>, <code>04_FINAL_SYNTHESIS/PLAYBOOK_RUBRIC_SCORECARD_2026-11-14.md</code></li>
+<li><code>DS-000011-DS-000018-DEEP-KNOWLEDGE-AUDIT.md</code> (repo root), <code>data/intelligence/global/youtube-algorithm-primary-validation-2026-09-04.md</code></li>
+<li><code>data/raw/global-youtube-knowledge/DS-000011</code>, <code>DS-000018</code>, <code>DS-000011-supplement-2026-11-11</code>, <code>DS-000031</code></li>
+<li>Official pages fetched 2026-11-18: answer ids 7628154, 16391400, 1311392, 6175006, 14328491, 9314355 on support.google.com/youtube</li>
+</ul></main></div></body></html>

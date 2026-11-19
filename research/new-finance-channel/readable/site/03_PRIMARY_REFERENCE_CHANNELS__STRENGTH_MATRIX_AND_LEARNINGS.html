@@ -1,0 +1,290 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase B: primary reference channels, strength matrix and learnings (2026-11-18)</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="cur">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/03_PRIMARY_REFERENCE_CHANNELS/STRENGTH_MATRIX_AND_LEARNINGS.md</code> (original badla nahi gaya)</div><div class="box"><b>Seedhi baat</b>Chhe bade competitor channels ne kya achha kiya.<b>Nateeja</b>Monkey Economics, Casual Finance, Crayon Capital waghera ki taqat aur kamzori ek jagah.<b>Agla kadam</b>Naye channel ki identity yahin se bani.</div><h1>Phase B: primary reference channels, strength matrix and learnings (2026-11-18)</h1>
+<p>Data: <code>data/catalog/finance_economics_complete.db</code> after R1-R3 (read-only), public views only. Script: <code>channel_metrics.py</code>; outputs <code>CHANNEL_METRICS_2026-11-18.csv</code>, <code>TOP_LONGFORM_VIDEOS_2026-11-18.csv</code>; thumbnails and montages in <code>07_THUMBNAIL_LIBRARY/primary/</code> (61 public thumbnails, 7 MB, manifest included). Labels: VERIFIED (counted from data or looked at) / INFERRED / HYPOTHESIS / NA (no evidence collected).</p>
+<p>Limits that apply to every row: views are not CTR or retention; long videos are compared with the channel's own long-form median; videos less than 14 days old are left out of "outlier" counts; "Shorts" = type SHORT or 60 s or less; Shorts thumbnails in the DB are letterboxed crops, so they say nothing about packaging; hook lines are counted on the first 40 transcript words (a proxy); samples are small for Capital Case (13 videos) and Paper Billions (6 videos). Selection bias: channels were chosen because they perform.</p>
+<h2>1. Numbers (VERIFIED from DB)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Subs</th>
+<th>Videos (long / Shorts)</th>
+<th style="text-align: right;">Items per 30 d (last 90 d)</th>
+<th style="text-align: right;">Long median views</th>
+<th style="text-align: right;">Shorts median views</th>
+<th style="text-align: right;">Median long length</th>
+<th style="text-align: right;">Long outliers (2x own median)</th>
+<th style="text-align: right;">Title has number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Casual Finance</td>
+<td style="text-align: right;">440K</td>
+<td>223 (38 / 185)</td>
+<td style="text-align: right;">18.3</td>
+<td style="text-align: right;">559,520</td>
+<td style="text-align: right;">22,298</td>
+<td style="text-align: right;">12.9 min</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">16%</td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td style="text-align: right;">224K</td>
+<td>60 (18 / 42)</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">10,244</td>
+<td style="text-align: right;"><strong>913,379</strong></td>
+<td style="text-align: right;">8.2 min</td>
+<td style="text-align: right;">24%</td>
+<td style="text-align: right;">28%</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td style="text-align: right;">261K</td>
+<td>71 with views (51 / 20; the DB holds 73, 2 have no view count)</td>
+<td style="text-align: right;">7.7</td>
+<td style="text-align: right;">353,570</td>
+<td style="text-align: right;">16,487</td>
+<td style="text-align: right;">14.1 min</td>
+<td style="text-align: right;">14%</td>
+<td style="text-align: right;">8%</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td style="text-align: right;">319K</td>
+<td>35 (35 / 0)</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">301,336</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">15.3 min</td>
+<td style="text-align: right;">27%</td>
+<td style="text-align: right;">71%</td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td style="text-align: right;">12K</td>
+<td>13 (13 / 0)</td>
+<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">54,627</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">11.5 min</td>
+<td style="text-align: right;">38%</td>
+<td style="text-align: right;">77%</td>
+</tr>
+<tr>
+<td>Paper Billions</td>
+<td style="text-align: right;">23.6K</td>
+<td>6 (6 / 0)</td>
+<td style="text-align: right;">2.0 (6 videos in 12 days)</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">16.7 min</td>
+<td style="text-align: right;">n/a (too new)</td>
+<td style="text-align: right;">33%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Same engine, opposite format: Monkey Economics earns its reach in Shorts (median 913K, top 7.7M) while its long videos median 10K; Casual Finance is the reverse (long median 560K, Shorts 22K).</p>
+<p>Cadence note: "items per 30 d" divides the last 90 days by 3, so it understates channels that are younger than 90 days or were scraped only for their newest videos (Paper Billions has 6 videos in 12 days; PENNY, in the other file, has 21 in 30 days against a printed 7.3). The channel_metrics.py figures were recomputed from the DB on 2026-11-18 and match this table (audit pass).</p>
+<h2>2. Strength matrix (primary six)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Topic selection</th>
+<th>Visual editing</th>
+<th>Storytelling</th>
+<th>Titles</th>
+<th>Thumbnails</th>
+<th>Scripts</th>
+<th>Best contribution to us</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Casual Finance</td>
+<td>Live macro/housing/market stress; one theme chased for weeks (housing crisis); 13 items in 30 d</td>
+<td>NA here (repo has a separate editing forensic for this channel; not re-read)</td>
+<td>Starts with a precise number or fact, then a contradiction ("prices should fall, except they haven't")</td>
+<td>Short statement, no question (5%), few numbers (16%)</td>
+<td>One short sentence in handwriting font plus one real chart with a year marker (2026) and a recurring map/character; same layout repeated</td>
+<td>Opening of the top video: 58% sellers vs buyers, Redfin since 2013, then "except"</td>
+<td>Data-chart-first packaging and topic cadence on one running story</td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>Everyday money mechanics (banks, minimum wage, money laundering) as Shorts; long videos on rates and inflation</td>
+<td>NA</td>
+<td>Monkey characters act out the mechanism; long script opens with "Monkey walks through the jungle office"</td>
+<td>Fragments ending "..." ; 22% start with Why/How/What</td>
+<td>Long: text + monkey + chart; Shorts: no thumbnail value</td>
+<td>Second-person is rare in hooks (11%)</td>
+<td>Short-form mechanism explainers and the proof that a character can carry millions of Shorts views (7.7M top)</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>One theme, AI bubble, across long and Shorts: 7 of the last 90 days' titles contain "bubble"</td>
+<td>NA</td>
+<td>Cast of animal characters; opening names a character with a "huge problem"</td>
+<td>Hook words like "Worse Than You Think", "(Yet)?"; 14% questions</td>
+<td>Gorilla characters, big red falling chart, 2-4 words in all caps with a stat badge ("15.28%")</td>
+<td>10% of openings (first 40 words) contain a question; 4% use "you" (n=48 long videos; an earlier draft wrongly printed "48%", which was the sample size)</td>
+<td>Theme serial (the same story told from many angles) and the stat-badge thumbnail</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>Famous stories and companies with a "Explained Like You're 5" frame: Wolf of Wall Street 4.2M, Great Depression 2.8M, 2008 crisis 2.3M; now tied to news (NVIDIA scandal, Anthropic)</td>
+<td>NA</td>
+<td>Story-first openings: one-line stakes then a dated scene ("Bayside, Queens, 1962")</td>
+<td>Number or title-template in 71%</td>
+<td>Same character in glasses, big single word (ROCKEFELLER, Anthropic), glowing object, rich background</td>
+<td>91% of openings carry a number or big claim</td>
+<td>Reusable series title template and proof that history+company stories scale to millions</td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>Same history/company set (Rockefeller, Great Depression, WWII, Hormuz, BYD) with "Explained in N Minutes"</td>
+<td>NA</td>
+<td>Opens with a record or consequence ("controlled 90% of America's oil")</td>
+<td>Number in 77%</td>
+<td>Close visual copy of the Crayon style: a big word plus 2 to 3 cartoon people</td>
+<td>85% of openings contain a number</td>
+<td>A 12K-subscriber channel reaching 54K median shows the format works at small scale; also a warning about look-alikes</td>
+</tr>
+<tr>
+<td>Paper Billions</td>
+<td>One news story at a time, framed as a spy/crime/money drama (Nvidia: 3.2M and 1.35M; stock-market crash 1.2M; corrected 2026-11-18 audit, the 1.2M video is not about Nvidia)</td>
+<td>NA</td>
+<td>Opens in a specific place and moment ("In Singapore, ... having dinner with a Chinese spy")</td>
+<td>83% start with Why/How; dollar amounts in the thumbnail text</td>
+<td>Dark, glowing scene; one caricatured person with a shocked face; one big red or white number ("-$80 BILLION", "$2 BILLION OF CHIPS")</td>
+<td>Scene-led, no greeting</td>
+<td>Grew 14.1K (2026-11-13 scrape) to 23.6K subs (2026-11-18); it is the only channel with a before/after pair, so "fastest-growing" is NOT shown; packaging formula of person + object + number</td>
+</tr>
+</tbody>
+</table></div>
+<p>Visual-editing column is NA on purpose: this pass looked at thumbnails and transcripts only. Motion, pacing and animation style were not analysed here.</p>
+<h2>3. What the thumbnails show (looked at all six montages)</h2>
+<ul>
+<li>Casual Finance and MonkeyExplains/Monkey Economics use a hand-drawn, flat, chart-led look with a few words; Crayon Capital, Capital Case and Paper Billions use a polished, high-contrast, cartoon-character look with one big word or number.</li>
+<li>Three of the six (Crayon, Capital Case, Paper Billions) share a family look: round-headed cartoon people, big glasses or exaggerated faces, dark dramatic backgrounds. Looking alike is also a risk: our channel must not copy any of these characters or layouts (originality and "inauthentic content" exposure, see Phase A).</li>
+<li>Common devices across the strongest packages: one dominant word or number; one character with a clear emotion; one object that makes the story concrete (zipper, bell, chip, flame); a real chart with a year marker in the macro channels.</li>
+</ul>
+<h2>4. Topic evolution (INFERRED from titles, last 90 days)</h2>
+<ul>
+<li>Casual Finance: market, America, crisis, debt, housing. MonkeyExplains: bubble, OpenAI. Paper Billions: Nvidia, spy, Chinese. Crayon Capital: "Explained Like You're 5", tech and company stories (TSMC, Tesla, BYD, Nvidia). Capital Case: history plus companies (Rockefeller, Rothschilds, BYD, OpenAI).</li>
+<li>Overlap in the same weeks: AI/Nvidia/OpenAI (MonkeyExplains, Crayon Capital, Paper Billions, Capital Case), SpaceX IPO (Casual Finance, MonkeyExplains), housing (Casual Finance). These are crowded news topics; the 11-14 screening already rejected most such topics for a new channel.</li>
+</ul>
+<h2>5. Combined intelligence framework (HYPOTHESES for Phase F, none tested on our own channel)</h2>
+<ol>
+<li><strong>One running story, many angles</strong> (Casual Finance housing, MonkeyExplains AI bubble) beats one-off topics on cadence and recognition; needs a story that stays current.</li>
+<li><strong>Concrete mechanism or person-and-event beats abstract concept</strong> (Paper Billions' spy dinner, Crayon's Wolf of Wall Street, Casual Finance's 58% figure): open with the specific fact, not a greeting or question.</li>
+<li><strong>Format by job</strong>: Shorts for mechanisms and reach (Monkey Economics), long form for depth (Casual Finance, Crayon). Our earlier "no Shorts in the first 10" rule is not supported by this data, but no source proves Shorts help long-form growth (HYPOTHESIS).</li>
+<li><strong>Packaging</strong>: one big word or number, one emotion, one object; keep text in the thumbnail different from the title.</li>
+<li><strong>Differentiation requirement</strong>: the current leaders already own the cartoon-character look; ours needs its own visual system and sourcing (charts, filings) to avoid look-alike risk.</li>
+</ol>
+<h2>6. Not yet done in Phase B</h2>
+<p>Frame-level editing/animation analysis, comment analysis, Studio data (UNKNOWN permanently for competitors), the Monkey Economics channel report (it has no folder in the old forensics package), and reading more than the top video's opening per channel. Next: additional-channel learnings (<code>04_ADDITIONAL_FINANCE_CHANNELS/</code>).</p></main></div></body></html>

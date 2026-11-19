@@ -1,0 +1,408 @@
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 2026-11-18</title><style>
+:root{--bg:#fafaf7;--fg:#1d1d1b;--mut:#5f5f58;--card:#fff;--line:#dcdcd2;--acc:#0b5cad;--ok:#1f7a3d;--bad:#b3261e;--mid:#9a6700;--gray:#6b6b63}
+@media(prefers-color-scheme:dark){:root{--bg:#141412;--fg:#ecece6;--mut:#a5a59c;--card:#1d1d1a;--line:#34342f;--acc:#7db4ee;--ok:#5ec27d;--bad:#f2837c;--mid:#e0b04a;--gray:#a0a098}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:flex;min-height:100vh}nav{width:290px;flex:none;border-right:1px solid var(--line);padding:18px 14px;position:sticky;top:0;height:100vh;overflow:auto;font-size:14.5px;background:var(--card)}
+nav h4{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}nav a{display:block;padding:3px 6px;border-radius:6px;color:var(--fg);text-decoration:none}nav a:hover,nav a.cur{background:var(--line)}
+main{flex:1;min-width:0;padding:28px clamp(16px,4vw,56px) 80px;max-width:1100px}
+h1{font-size:1.9rem;line-height:1.25}h2{margin-top:2.2em;padding-top:.4em;border-top:1px solid var(--line);font-size:1.35rem}h3{font-size:1.1rem;margin-top:1.6em}
+a{color:var(--acc)}code{background:var(--line);padding:1px 5px;border-radius:4px;font-size:.88em;word-break:break-word}pre{background:var(--card);border:1px solid var(--line);padding:12px;overflow:auto;border-radius:8px}pre code{background:none}
+.tw{overflow-x:auto;margin:1em 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:90px}th{position:sticky;top:0;background:var(--card);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}tr:nth-child(even) td{background:color-mix(in srgb,var(--line) 25%,transparent)}
+.chip{display:inline-block;padding:1px 9px;border-radius:99px;font-size:12.5px;font-weight:700;color:#fff}.chip.ok{background:var(--ok)}.chip.bad{background:var(--bad)}.chip.mid{background:var(--mid)}.chip.gray{background:var(--gray)}
+.box{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--acc);border-radius:10px;padding:14px 18px;margin:0 0 26px}.box b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin-top:8px}.box b:first-child{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}.card .n{font-size:1.9rem;font-weight:700}.card .l{color:var(--mut);font-size:14px}
+.src{color:var(--mut);font-size:13px;margin-bottom:6px}.menu{display:none}
+@media(max-width:820px){.wrap{display:block}nav{position:static;width:auto;height:auto;border:0;border-bottom:1px solid var(--line)}}
+</style></head><body><div class="wrap"><nav><a href="index.html" class=""><b>START HERE</b></a>
+<h4>Audit (jaanch)</h4>
+<a href="audit__01_INDEPENDENT_AUDIT_SUMMARY.html" class="">01 Independent Audit Summary (2026-11-18)</a>
+<a href="audit__02_REQUIREMENT_TRACEABILITY_MATRIX.html" class="">02 Requirement Traceability Matrix (audit date 2026-11-18)</a>
+<a href="audit__03_NEW_BRANCH_STRUCTURE_AUDIT.html" class="">03 New Branch Structure Audit</a>
+<a href="audit__04_FINANCE_CHANNEL_COVERAGE_AUDIT.html" class="">04 Finance Channel Coverage Audit (recomputed from finance_e</a>
+<a href="audit__05_FRESH_DATA_EXTRACTION_AUDIT.html" class="">05 Fresh Data Extraction Audit</a>
+<a href="audit__06_HISTORICAL_RESEARCH_REUSE_AUDIT.html" class="">06 Historical Research Reuse Audit</a>
+<a href="audit__07_KNOWLEDGE_DOCUMENT_APPLICATION_AUDIT.html" class="">07 Knowledge Document Application Audit</a>
+<a href="audit__08_COMPETITOR_FORENSIC_QUALITY_AUDIT.html" class="">08 Competitor Forensic Quality Audit</a>
+<a href="audit__09_SUB_NICHE_AND_MARKET_RESEARCH_AUDIT.html" class="">09 Sub-niche and Market Research Audit</a>
+<a href="audit__10_TOPIC_DISCOVERY_VALIDATION_AUDIT.html" class="">10 Topic Discovery and Validation Audit</a>
+<a href="audit__11_TITLE_THUMBNAIL_PACKAGING_AUDIT.html" class="">11 Title, Thumbnail and Packaging Audit</a>
+<a href="audit__12_ORIGINALITY_COPYRIGHT_AI_SLOP_AUDIT.html" class="">12 Originality, Copyright and AI-Slop Audit</a>
+<a href="audit__13_CHANNEL_POSITIONING_STRATEGY_AUDIT.html" class="">13 Channel Positioning and Strategy Audit</a>
+<a href="audit__14_CONTENT_CALENDAR_ACCEPTANCE_TEST.html" class="">14 Content Calendar Acceptance Test</a>
+<a href="audit__15_BRANDING_AND_PRODUCTION_WORKFLOW_AUDIT.html" class="">15 Branding and Production Workflow Audit</a>
+<a href="audit__16_DELIVERABLE_INVENTORY_AUDIT.html" class="">16 Deliverable Inventory Audit</a>
+<a href="audit__17_NUMERICAL_QUALITY_SCORECARD.html" class="">17 Numerical Quality Scorecard</a>
+<a href="audit__18_GAP_ANALYSIS_AND_CORRECTION_PLAN.html" class="">18 Gap Analysis and Correction Plan (no rework started; need</a>
+<a href="audit__19_FINAL_ACCEPTANCE_REPORT.html" class="">19 Final Acceptance Report</a>
+<a href="audit__20_AUDIT_EVIDENCE_INDEX.html" class="">20 Audit Evidence Index</a>
+<h4>1 Project overview</h4>
+<a href="01_PROJECT_OVERVIEW__01_KNOWLEDGE_BASE_FORENSIC_ANALYSIS.html" class="">Phase A: Knowledge base forensic analysis (2026-11-18)</a>
+<a href="01_PROJECT_OVERVIEW__README.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE (overview)</a>
+<h4>2 Channel inventory</h4>
+<a href="02_FINANCE_CHANNEL_MASTER_INVENTORY__MASTER_INVENTORY.html" class="">Finance &amp; Economics Channel Master Inventory (regenerated 20</a>
+<h4>3 Primary six channels</h4>
+<a href="03_PRIMARY_REFERENCE_CHANNELS__STRENGTH_MATRIX_AND_LEARNINGS.html" class="">Phase B: primary reference channels, strength matrix and lea</a>
+<h4>4 Additional channels</h4>
+<a href="04_ADDITIONAL_FINANCE_CHANNELS__ADDITIONAL_CHANNELS_LEARNINGS.html" class="">Additional finance and economics channels: metrics and learn</a>
+<h4>5 Fresh data</h4>
+<a href="05_FRESH_COMPETITOR_DATA__REFRESH_STATUS_AND_MISSING_DATA.html" class="">Fresh data: status, missing data, refresh proposal (2026-11-</a>
+<h4>6 Transcripts</h4>
+<a href="06_VIDEO_TRANSCRIPTS__README.html" class="">06 Video transcripts</a>
+<h4>8 Visual (NOT DONE)</h4>
+<a href="08_VISUAL_STORYTELLING_INTELLIGENCE__README.html" class="">08 Visual storytelling intelligence: NOT DONE (honest status</a>
+<h4>9 Topics</h4>
+<a href="09_TOPIC_DISCOVERY__PHASE_D_CLOSURE_2026-11-18.html" class="">Phase D closure: extra validation and verdict (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__PRIMARY_DATA_PULL_2026-11-18.html" class="">Primary data pull (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND1_2026-11-18.html" class="">Phase D round 1: topic discovery and validation (2026-11-18)</a>
+<a href="09_TOPIC_DISCOVERY__TOPIC_VALIDATION_ROUND2_2026-11-18.html" class="">Phase D round 2: rent and airlines (2026-11-18)</a>
+<h4>10 Sub-niches</h4>
+<a href="10_SUB_NICHE_RESEARCH__SUB_NICHE_DISCOVERY.html" class="">Phase C: sub-niche discovery (2026-11-18)</a>
+<h4>11 Trends/News</h4>
+<a href="11_GOOGLE_TRENDS_AND_NEWS__TRENDS_AND_NEWS_CAPTURE_2026-11-18.html" class="">Google Trends and news capture (2026-11-18)</a>
+<h4>12 YouTube search</h4>
+<a href="12_YOUTUBE_SEARCH_AND_SUGGESTED__SUGGESTED_OVERLAP_NOTE_2026-11-18.html" class="">Suggested and audience-overlap check (master Filter 6), 2026</a>
+<h4>13 Titles/Hooks</h4>
+<a href="13_TITLE_MODELS__PHASE_E_TITLE_THUMBNAIL_HOOK_MODELS_2026-11-18.html" class="">Phase E: title, thumbnail and hook models (2026-11-18)</a>
+<a href="13_TITLE_MODELS__PHASE_FIVE_SCRIPT_AND_THUMBNAIL_INTELLIGENCE_ADDENDUM_2026-11-18.html" class="">Phase Five addendum (master Phase Five parts B and C), 2026-</a>
+<a href="13_WINNING_TITLE_MODELS__README.html" class="">Pointer: title models live in ../13_TITLE_MODELS/ (title_fea</a>
+<h4>14 Thumbnail models</h4>
+<a href="14_WINNING_THUMBNAIL_MODELS__README.html" class="">Pointer: thumbnail briefs (4) are in ../13_TITLE_MODELS/PHAS</a>
+<h4>15 Script models</h4>
+<a href="15_SCRIPT_AND_HOOK_INTELLIGENCE__README.html" class="">Pointer: hook work is in ../13_TITLE_MODELS/hook_features.py</a>
+<h4>16 Positioning</h4>
+<a href="16_CHANNEL_POSITIONING__PHASE_F_POSITIONING_2026-11-18.html" class="cur">Phase F: channel positioning (master prompt &quot;Phase Six&quot;), 20</a>
+<a href="16_CHANNEL_POSITIONING__PHASE_G_FORMAT_DURATION_2026-11-18.html" class="">Phase G: video format and duration (master prompt &quot;Phase Sev</a>
+<h4>17 Validation</h4>
+<a href="17_TOPIC_VALIDATION__L3_L4_VALIDATION_2026-11-19.html" class="">L3 / L4 validation (2026-11-19)</a>
+<a href="17_TOPIC_VALIDATION__PHASE_FOUR_TOPIC_SCORECARD_2026-11-18.html" class="">Phase Four: topic scoring and final selection (master &quot;Phase</a>
+<a href="17_TOPIC_VALIDATION__PHASE_TEN_FINAL_TOPIC_VALIDATION_2026-11-18.html" class="">Phase Ten: final topic validation before approval (master &quot;P</a>
+<h4>18 Packaging</h4>
+<a href="18_CONTENT_PACKAGING__PHASE_NINE_TOPIC_TITLE_THUMBNAIL_PACKAGING_2026-11-18.html" class="">Phase Nine: topic-to-video packaging (master &quot;Phase Nine&quot;), </a>
+<h4>19 Calendar</h4>
+<a href="19_30_DAY_CONTENT_CALENDAR__P0_FIX_CALENDAR_ADDENDUM_2026-11-19.html" class="">Calendar addendum, 2026-11-19 (audit gap G01). The original </a>
+<a href="19_30_DAY_CONTENT_CALENDAR__PHASE_ELEVEN_30_DAY_CALENDAR_2026-11-18.html" class="">Phase Eleven: 30-day content calendar (master &quot;Phase Eleven&quot;</a>
+<h4>20 Branding</h4>
+<a href="20_CHANNEL_BRANDING__PHASE_TWELVE_BRANDING_DIRECTIONS_2026-11-18.html" class="">Phase Twelve: channel branding and basic identity (master &quot;P</a>
+<h4>21 Workflow</h4>
+<a href="21_PRODUCTION_WORKFLOW__PHASE_THIRTEEN_PRODUCTION_WORKFLOW_2026-11-18.html" class="">Phase Thirteen: production workflow (master &quot;Phase Thirteen&quot;</a>
+<h4>22 Originality</h4>
+<a href="22_ORIGINALITY_AND_AI_SLOP_AUDIT__PHASE_EIGHT_ORIGINALITY_COPYRIGHT_SLOP_AUDIT_2026-11-18.html" class="">Phase Eight: originality, copyright and AI-slop audit (maste</a>
+<h4>23 Final strategy</h4>
+<a href="23_FINAL_STRATEGY__FINAL_STRATEGIC_RECOMMENDATION_2026-11-18.html" class="">Final strategic recommendation and deliverable map, 2026-11-</a>
+<a href="23_FINAL_STRATEGY__PHASE_FOURTEEN_LAUNCH_AND_MEASUREMENT_2026-11-18.html" class="">Phase Fourteen: launch and performance measurement (master &quot;</a>
+<h4>24 Sources</h4>
+<a href="24_SOURCE_DATA_AND_REFERENCES__EXISTING_RESEARCH_REUSE_AND_STALE_AUDIT.html" class="">Existing research: reuse vs stale audit (2026-11-18)</a>
+<h4>Scripts (drafts)</h4>
+<a href="productions__new-finance-channel-v1-rent-01__V1_RENT_SCRIPT.html" class="">V1 Rent: draft script (DRAFT 1, 2026-11-18, not approved for</a>
+<a href="productions__new-finance-channel-v2-airfares-01__V2_AIRFARES_SCRIPT.html" class="">V2 Airfares: draft script (DRAFT 1, 2026-11-18, not approved</a>
+<a href="productions__new-finance-channel-l3-jobs-01__L3_JOBS_SCRIPT.html" class="">L3 Jobs report: draft script (DRAFT 1, 2026-11-19, not appro</a>
+<h4>Logs</h4>
+<a href="DECISION_LOG.html" class="">DECISION LOG</a>
+<a href="MASTER_INDEX.html" class="">NEW FINANCE CHANNEL — RESEARCH &amp; INTELLIGENCE: MASTER INDEX</a>
+<a href="RESEARCH_CHANGELOG.html" class="">RESEARCH CHANGELOG</a></nav><main><div class="src">Source file: <code>research/new-finance-channel/16_CHANNEL_POSITIONING/PHASE_F_POSITIONING_2026-11-18.md</code> (original badla nahi gaya)</div><div class="box"><b>Seedhi baat</b>Channel ki pehchaan: kis cheez ke liye jana jayega.<b>Nateeja</b>&#x27;Keemat ke peeche ka number&#x27; + &#x27;industry kaise kaam karti hai&#x27;.<b>Agla kadam</b>Aap ki mansoori chahiye.</div><h1>Phase F: channel positioning (master prompt "Phase Six"), 2026-11-18</h1>
+<p>Status: proposal for owner decision. Nothing here is approved. Labels: VERIFIED (counted from our DB or read on a primary page) / INFERRED / HYPOTHESIS / UNKNOWN. No script, no channel name (name is decided in the branding phase).</p>
+<p>Numbering note: our working letters (A to I) and the master prompt's phase names (One to Fourteen) differ. This file answers master "Phase Six". Master "Phase Four" (a 100-point topic scorecard) was only done as screening (rounds 1 and 2), not as a formal scored table. It is still open and is flagged at the end.</p>
+<h2>1. What the evidence allows us to say (inputs)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Finding</th>
+<th>Label</th>
+<th>Source file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sub-niche barely predicts performance</td>
+<td>median ratios 0.68 to 1.34; packaging and the specific story matter more</td>
+<td><span class="chip gray">INFERRED</span></td>
+<td><code>10_.../SUB_NICHE_DISCOVERY.md</code></td>
+</tr>
+<tr>
+<td>Crowded zones</td>
+<td>retirement/senior and generic personal finance hold 49% of long videos; low small-channel medians (2.7K to 5.2K)</td>
+<td>VERIFIED count, INFERRED meaning</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Under-supplied, high small-channel median</td>
+<td>"industry, logistics, infrastructure": 10 channels, small-channel median 37K, but carried by 2 channels (Neu, Brimm.)</td>
+<td>VERIFIED count, HYPOTHESIS that it generalises</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Primary six own: news-to-balance-sheet, cartoon history/company stories, monkey/animal characters</td>
+<td>three of six share a round-head cartoon look</td>
+<td>VERIFIED (looked at)</td>
+<td><code>03_.../STRENGTH_MATRIX_AND_LEARNINGS.md</code></td>
+</tr>
+<tr>
+<td>Policy</td>
+<td>AI persona giving financial advice is not monetizable; read-outs of news are not monetizable; whole-channel review; mass-produced templates are "inauthentic"</td>
+<td>VERIFIED (official page 1311392)</td>
+<td>Phase A</td>
+</tr>
+<tr>
+<td>Our two live topic candidates</td>
+<td>rent (CPI vs market rent) and airfares; both conditional, 0 approved; R1 blocked on market-rent primary data</td>
+<td>VERIFIED status</td>
+<td>Phase D/E files</td>
+</tr>
+<tr>
+<td>Our own Studio data</td>
+<td>none exists</td>
+<td><span class="chip gray">UNKNOWN</span></td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table></div>
+<p>Honest limit: positioning is a bet. Public data cannot tell us which concept wins on our channel.</p>
+<h2>2. The eight questions, answered once (applies to all three concepts unless a concept overrides)</h2>
+<ol>
+<li>Central theme: how money and the economy work, shown through one real number at a time.</li>
+<li>Audience: adults 22 to 45 who feel prices, rent, jobs or interest rates in daily life and want a mechanism, not advice (HYPOTHESIS; no audience data exists).</li>
+<li>Unique value: one verified number, one visible contradiction, one mechanism, with the source on screen.</li>
+<li>Questions we answer: "why is X like this?" with price, rent, wages, fares, rates, company economics. Not "what should I buy".</li>
+<li>Format identity: analytical-educational with story structure (not documentary, not news read-out, not advice).</li>
+<li>Storytelling angle: open with a dated, sourced fact, state the contradiction, resolve with a mechanism (matches Casual Finance and Crayon openings, Phase B).</li>
+<li>Competitive advantage we can actually control: primary-source verification and a visible source trail; own visual system (no round-head cartoon, no animal cast); named human or clearly labelled narration policy.</li>
+<li>Difference from references: they sell speed (Casual Finance, Paper Billions) or characters (Monkey Economics, Crayon). We sell verification and a clear mechanism. HYPOTHESIS: viewers reward that; untested.</li>
+</ol>
+<h2>3. Three positioning concepts</h2>
+<h3>Concept 1: "The number behind the price" (data-led mechanism explainer)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positioning statement</td>
+<td>We take one price people complain about (rent, airfares, groceries) and show who actually sets it, using the official number.</td>
+</tr>
+<tr>
+<td>Target audience</td>
+<td>Adults who feel cost-of-living pressure and are suspicious of headlines</td>
+</tr>
+<tr>
+<td>Content pillars</td>
+<td>(1) Prices and who sets them (rent, fares, food); (2) How official statistics are built (CPI, jobs); (3) "Two numbers that disagree"</td>
+</tr>
+<tr>
+<td>Visual identity direction</td>
+<td>Real charts with date and source on screen, flat paper-and-ink look, one accent colour, no mascot (decided in branding phase)</td>
+</tr>
+<tr>
+<td>Storytelling identity</td>
+<td>Fact, contradiction, mechanism, what it means (not what to buy)</td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td>Source-on-screen as a rule; only reference doing something close is Casual Finance, which is news-speed and higher volume</td>
+</tr>
+<tr>
+<td>Advantages</td>
+<td>Fits both live topics (rent, airfares); verifiable; durable evergreen core; low look-alike risk; works for Shorts clips</td>
+</tr>
+<tr>
+<td>Disadvantages</td>
+<td>Cost-of-living/housing/rates are broad with small-channel medians 2.2K to 4K (Phase C); data charts are labour-heavy; abstract if not tied to a story</td>
+</tr>
+<tr>
+<td>Long-term sustainability</td>
+<td>High: new CPI and data releases monthly give a standing hook (HYPOTHESIS); needs a data pipeline we do not have</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Concept 2: "How one industry actually makes money" (mechanism-of-industry explainer)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positioning statement</td>
+<td>We open one industry (airline, port, shipping, data centre, grocery) and trace where each dollar goes.</td>
+</tr>
+<tr>
+<td>Target audience</td>
+<td>Curious generalists plus business-minded viewers; strong overlap with Neu/Brimm. audiences (INFERRED)</td>
+</tr>
+<tr>
+<td>Content pillars</td>
+<td>(1) Follow the dollar through one ticket/product; (2) Hidden fixed costs; (3) Why the industry looks like this</td>
+</tr>
+<tr>
+<td>Visual identity direction</td>
+<td>Cutaway diagrams and maps, objects as the visual hero, one running "ledger" device</td>
+</tr>
+<tr>
+<td>Storytelling identity</td>
+<td>One object, one price, split into slices (hook model H2 in Phase E)</td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td>Few competitors (10 channels in the bucket); none of the primary six covers it</td>
+</tr>
+<tr>
+<td>Advantages</td>
+<td>Highest small-channel median in our data (37K, VERIFIED count); airfare topic already fits; strong visuals; evergreen</td>
+</tr>
+<tr>
+<td>Disadvantages</td>
+<td>Evidence rests on 2 channels (HYPOTHESIS); generic "how airlines make money" was REJECTED in Phase D (no gap, existing videos); needs sourcing per video; the "Economics of owning X" template is a mass-production trap</td>
+</tr>
+<tr>
+<td>Long-term sustainability</td>
+<td>Medium: a finite list of industries, but each can be reopened with news; risk of a templated feel</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Concept 3: "The story with a mechanism" (company and history explainer, own look)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positioning statement</td>
+<td>We tell one company or crisis as a story and end on the economic rule it proves.</td>
+</tr>
+<tr>
+<td>Target audience</td>
+<td>Story-first viewers 18 to 40, broad</td>
+</tr>
+<tr>
+<td>Content pillars</td>
+<td>(1) Company rise and fall; (2) Crises and bubbles; (3) "The rule behind the story"</td>
+</tr>
+<tr>
+<td>Visual identity direction</td>
+<td>Own illustrated style (not round-head cartoons), archive documents and charts</td>
+</tr>
+<tr>
+<td>Storytelling identity</td>
+<td>Dated scene, stakes, turn, mechanism</td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td>Weakest: Crayon (319K), Capital Case, Paper Billions already own it with similar look</td>
+</tr>
+<tr>
+<td>Advantages</td>
+<td>Proven ceiling (Crayon 2.8M to 4.2M top videos); Capital Case shows small-channel viability (12K subs, 54K median)</td>
+</tr>
+<tr>
+<td>Disadvantages</td>
+<td>Most look-alike risk; AI/Nvidia stories crowded in the same weeks (Phase B); heavy research per video; ours would be late and smaller</td>
+</tr>
+<tr>
+<td>Long-term sustainability</td>
+<td>High topic supply, but weak ownership of any position</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Comparison (HYPOTHESIS scores, 1 = weak, 5 = strong; judgement, not measured)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th style="text-align: right;">C1 Number behind the price</th>
+<th style="text-align: right;">C2 Industry mechanism</th>
+<th style="text-align: right;">C3 Story with mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Evidence of demand in our data</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>Competition gap</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Fits the two live topics</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Originality / look-alike safety</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Policy and monetization safety (original analysis, sources)</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Production feasibility for a small team</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>Evergreen plus news hook</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Total (out of 35)</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td>The scores are my judgement from the cited evidence; change the weights and the order may change. They are not a prediction of views.</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table></div>
+<h2>5. Recommendation</h2>
+<p><strong>Concept 1 as the identity, with Concept 2 as the main series inside it.</strong> One-line positioning (working): "One price, one official number, one mechanism: why things cost what they cost."
+- Concept 1 is the channel promise (verified numbers, source on screen). Concept 2 is the repeatable video type that proves the promise (follow one ticket, one rent, one product).
+- Rent and airfares already fit this blend. Airfares is time-boxed news; rent is durable.
+- Reject Concept 3 as a core: late, look-alike risk, and the three leaders are stronger.
+- Keep "who is on screen" (human or labelled narration) as a decision for the owner; no AI persona as adviser.</p>
+<p>Why not only Concept 2: its evidence rests on two channels and the generic version was rejected; inside Concept 1 it gets a stronger frame.</p>
+<h2>6. What this positioning does NOT claim</h2>
+<ul>
+<li>No evidence that viewers prefer verified numbers (UNKNOWN until Studio data).</li>
+<li>No audience size or demographics (UNKNOWN; no data).</li>
+<li>Rent title R1 stays blocked (market-rent primary series not obtained); R2 must say "every six months".</li>
+<li>No topic is approved; this is not a topic list.</li>
+</ul>
+<h2>7. Open decisions for the owner</h2>
+<ol>
+<li>Accept Concept 1 + 2 as direction, pick another, or ask for a rework.</li>
+<li>Voice policy: named human, own voice, or clearly labelled narration (no AI "expert").</li>
+<li>Is the data-chart labour acceptable (charts per video) or should the visual identity be lighter?</li>
+<li>Is the 2026-11-23 launch date still firm? (Likely too early; no topic approved.)</li>
+</ol>
+<h2>8. Next and gaps</h2>
+<ul>
+<li>Next in master order: Phase Seven (format and duration), then Phase Eight (originality/slop audit), Nine (packaging), Ten (final topic validation).</li>
+<li>Gap: master Phase Four formal 100-point topic scorecard was not produced; only round 1 and 2 screening. Recommended to produce it from existing evidence before approving any topic.</li>
+<li>Gap: market-rent primary series, IATA full report, full BLS calculation page.</li>
+</ul></main></div></body></html>
