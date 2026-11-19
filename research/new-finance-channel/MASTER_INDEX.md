@@ -1,5 +1,7 @@
 # NEW FINANCE CHANNEL — RESEARCH & INTELLIGENCE: MASTER INDEX
 
+**Full status report (2026-11-19):** `FULL_STATUS_REPORT_2026-11-19.html` (md alongside).
+
 Working title only; the real channel name is decided in Phase I. Created 2026-11-18. Location: `research/new-finance-channel/` (untracked in the checkout on `data/apify-monkey-economics-primate-science-2026-11-18`; not committed). Source-of-truth folders are never edited: `research/finance-economics-channel-forensics/`, `research/finance-economics-intelligence/`, `data/catalog/`, `data/raw/`.
 
 ## Status of the 24 folders

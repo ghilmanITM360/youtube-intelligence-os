@@ -1,0 +1,452 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Beenomics full status report</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.55}table{border-collapse:collapse;width:100%;font-size:14px;margin:10px 0}th,td{border:1px solid #ccc;padding:6px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd}</style><h1>Beenomics (new finance channel): poori report, shuru se ab tak (2026-11-19)</h1>
+<p>Yeh report Roman Urdu mein hai taa ke aap aasani se padh sakein. Figures aur sources English mein hain. Har cheez ke saath label hai: VERIFIED (aaj primary page par padha), SECONDARY (news/blog), INFERRED (chart ya search se andaza), HYPOTHESIS (meri raay, saboot nahi), UNKNOWN (pata nahi). Yeh report maine files, DB aur aaj ke checks se likhi hai, apni yaaddasht se nahi.</p>
+<hr />
+<h2>1. Ek nazar mein</h2>
+<table>
+<thead>
+<tr>
+<th>Sawal</th>
+<th>Jawab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Research kitni mukammal hai?</td>
+<td>Competitor data aur topic research ka bada hissa hua hai. Lekin koi bhi topic owner-approved nahi hai, aur koi video bana nahi.</td>
+</tr>
+<tr>
+<td>Kitne topics research hue?</td>
+<td>16 topics: 6 GO, 8 GO-CONDITIONAL, 2 HOLD.</td>
+</tr>
+<tr>
+<td>Calendar?</td>
+<td>5 long videos + 8 Shorts, 14 Dec 2026 se 11 Jan 2027. Yeh proposal hai, approved plan nahi.</td>
+</tr>
+<tr>
+<td>Script?</td>
+<td>V1 Rent, V2 Airfares, L3 Jobs, E06 CPI basket ke 4 drafts. Sab par gate WARN (sirf R7: images nahi). E06 ka ek block 10 Dec ke baad bharna hai.</td>
+</tr>
+<tr>
+<td>Git?</td>
+<td>Commit hua (<code>8f76522f</code>, local). Push GitHub ne reject kiya, kyunke purane commit ki DB file 112 MB hai.</td>
+</tr>
+<tr>
+<td>Channel chalega ya nahi?</td>
+<td>Mujhe iska bharosa nahi, aur is data se koi sachchi probability nikal nahi sakti. Detail section 8 mein.</td>
+</tr>
+</tbody>
+</table>
+<p>Seedha jawab: research itni hai ke pehle 2-3 videos ek <strong>tajurba</strong> ke taur par banaye ja sakte hain. Itni nahi hai ke main kahun "yeh channel zaroor chalega".</p>
+<hr />
+<h2>2. Owner ke faisle (jo aapne diye)</h2>
+<ul>
+<li>Channel ka naam: <strong>Beenomics</strong> (final). Domain, trademark, doosre handles check nahi hue.</li>
+<li>Zuban/audience: English, US audience.</li>
+<li>Voice: aap khud record karenge.</li>
+<li>Rate: 1 long + 2 Shorts har hafte (aapka batayaa hua 15-20 ghante, naapa nahi gaya).</li>
+<li>Pehla publish: Mon 14 Dec 2026.</li>
+<li>Thumbnail model: chart-forward.</li>
+<li>Topic themes: housing/rent, inflation-rates-debt, crises/history, AI bubble/IPO.</li>
+<li>Licences: sirf free/royalty-free. Naya, alag Google account. Editing aap khud, charts HyperFrames (code) se.</li>
+<li>Pehla video: L1 ka faisla aapne mujh par chhoda. Maine E06 (inflation basket) pehle rakha, V1 Rent doosre number par.</li>
+</ul>
+<hr />
+<h2>3. Ab tak kya hua (waqt ke hisaab se)</h2>
+<h3>3.1 Phase A se 14 (18 Nov 2026)</h3>
+<p>Pehla pura draft: knowledge base audit, 72-channel inventory, sub-niche, topic round 1/2, title aur thumbnail models, positioning, format, originality audit, packaging, calendar, branding, workflow, launch plan. Saath mein R1-R3 Apify refreshes (kharch: $0.236 + $0.716 + $1.004) aur 3 draft scripts.</p>
+<h3>3.2 Strict audit (19 Nov)</h3>
+<p>Pichla audit 55.5/100 REJECTED tha. Strict audit ne dikhaya: chhe competitors mein se 0 ka proper forensic report nahi tha, topics apne hi keyword se aaye the (competitor winners se nahi), calendar 0 validated topics par bana tha, aur kharch un channels par hua jo chhe mein nahi the. Us ke baad owner ne "EXECUTION APPROVAL" diya: 7 stages, fixed order, extra kaam band.</p>
+<h3>3.3 Chhe competitor (fixed)</h3>
+<p>Casual Finance, Monkey Economics, MonkeyExplains, Crayon Capital, PaperBillionsTV, Capital Case.</p>
+<h3>3.4 Stage by stage</h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Kya hua</th>
+<th>Nateeja</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Data gaps</td>
+<td>Chhe channels ki inventory DB se mila ke dekhi. MonkeyExplains ke liye Apify run (R4, R5).</td>
+<td>Casual Finance 223, Monkey Economics 60, Crayon 35, Capital Case 13, Paper Billions 6 (poora). MonkeyExplains 136 / 149; 13 Member-Edition jaise items missing aur documented. Paper Billions ka pichla "incomplete" claim wapas liya gaya.</td>
+</tr>
+<tr>
+<td>2. Chhe reports</td>
+<td>Har channel ki alag forensic report + index (md/html).</td>
+<td>6 reports likhi. Visual storytelling NOT AVAILABLE (koi video media analyse nahi hua).</td>
+</tr>
+<tr>
+<td>3. Frameworks</td>
+<td>DS-000011, DS-000018, Playbook aur framework DB 172 asli long videos par test.</td>
+<td>Zyadatar rules supported nahi nikle. Sirf "crisis wale titles" ka signal bacha, jo multiple-test correction ke baad significant nahi raha.</td>
+</tr>
+<tr>
+<td>4. Topic discovery</td>
+<td>54 winners (42 long, 12 Shorts) se 26 candidates.</td>
+<td>16 advance, 7 hold, 3 drop.</td>
+</tr>
+<tr>
+<td>5. Validation</td>
+<td>16 topics: competitor, YouTube search, Trends, news, framework, angle.</td>
+<td>6 GO, 8 GO-CONDITIONAL, 2 HOLD.</td>
+</tr>
+<tr>
+<td>5B. Sources + live check</td>
+<td>BLS, Treasury, Freddie Mac, Fed, BoJ, SEC se figures; Trends aur YouTube ka 1 ghanta/aaj/7 din/30 din check.</td>
+<td>Section 5 dekhein.</td>
+</tr>
+<tr>
+<td>6. Ranking</td>
+<td>Likha hua rule, koi banaawati weights nahi, 9-item sheets.</td>
+<td>Ranking niche.</td>
+</tr>
+<tr>
+<td>7. Calendar</td>
+<td>5 long + 8 Shorts.</td>
+<td>Proposal.</td>
+</tr>
+<tr>
+<td>E06 script</td>
+<td>CPI basket ki draft script.</td>
+<td>Gate WARN R7.</td>
+</tr>
+</tbody>
+</table>
+<h3>3.5 Final ranking (Stage 6)</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Topic</th>
+<th>Faisla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>E06 Inflation basket</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>2</td>
+<td>F02 IPO kaise kaam karta hai</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>3</td>
+<td>E01 Housing lock-in</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>4</td>
+<td>E11 Jobs report</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>5</td>
+<td>E03 Yield se mortgage</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>6</td>
+<td>F04 Bhoole hue crash</td>
+<td>GO</td>
+</tr>
+<tr>
+<td>7-14</td>
+<td>E04 debt, F01 AI paisa, F08 credit card, E08 Airfares (V2), E02 Rent (V1), F10 Japan/yen, E07 RAM, F05 AI vs dot-com</td>
+<td>GO-CONDITIONAL</td>
+</tr>
+<tr>
+<td>15-16</td>
+<td>E09 fuel shock, E12 ageing</td>
+<td>HOLD</td>
+</tr>
+</tbody>
+</table>
+<p>Dhyan dein: aapke apne topics V1 Rent aur V2 Airfares evidence ranking mein 11 aur 10 par hain (chhe channels mein inka koi winner nahi, search demand bahut kam). Inka case aapki choice, kam competition aur live data hook par tikta hai, evidence par nahi.</p>
+<h3>3.6 30-din calendar (proposal)</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Long</th>
+<th>Data hook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mon 14 Dec 2026</td>
+<td>E06 inflation basket</td>
+<td>Nov CPI (10 Dec)</td>
+</tr>
+<tr>
+<td>Mon 21 Dec</td>
+<td>V1 Rent</td>
+<td>wahi CPI (shelter)</td>
+</tr>
+<tr>
+<td>Mon 28 Dec</td>
+<td>F02 IPO</td>
+<td>SEC filings</td>
+</tr>
+<tr>
+<td>Mon 4 Jan 2027</td>
+<td>E01 housing lock-in</td>
+<td>Freddie Mac / inventory</td>
+</tr>
+<tr>
+<td>Mon 11 Jan</td>
+<td>E11 jobs report</td>
+<td>Dec report (8 Jan)</td>
+</tr>
+</tbody>
+</table>
+<p>Shorts (Thu/Sat): 17, 19, 24, 26, 31 Dec; 2, 7, 9 Jan. V2 Airfares long slot se hata di (holiday hook 21 Dec tak khatam). Detail: <code>19_30_DAY_CONTENT_CALENDAR/STAGE7_CALENDAR_2026-11-19.md</code>.</p>
+<hr />
+<h2>4. Competitors se kya seekha (data se)</h2>
+<ul>
+<li><strong>Cadence:</strong> chhe mein se koi channel hafte mein ~2 long videos se zyada sustain nahi karta. Casual Finance 0.56/hafta, Crayon 0.43, Capital Case 0.36, Monkey Economics 0.22 long, MonkeyExplains ~2 (Member re-edits ke saath ~1.3 public), Paper Billions 3.8 (sirf 11 din ka launch batch). Aapka 1 long/hafta is range ke andar hai. Cadence se views barhne ka saboot nahi.</li>
+<li><strong>Shorts:</strong> sabse kamzor evidence. Monkey Economics ke Shorts 57.2M views par, lekin long median sirf 10K. MonkeyExplains ke Shorts se long views nahi badhe. </li>
+<li><strong>Titles/topics:</strong> famous subject ya crisis wale videos jeetay (Rockefeller, Great Depression). Sirf kisi unknown company par video aksar fail. Abstract money-theory (Capital Case) fail.</li>
+<li><strong>Capital Case:</strong> Crayon ka format copy karke chhota channel Crayon ke views tak nahi pahunch saka (median 54K vs Crayon 301K). Yaani "wohi format, naya channel" kaafi nahi.</li>
+<li><strong>Hook formula:</strong> "This is X, and he has a huge problem" MonkeyExplains aur Paper Billions dono use karte hain, yaani trope ban raha hai. Hum nahi karenge.</li>
+<li><strong>Gap (HYPOTHESIS):</strong> "kisi price ke peechhe ka number, data release se jodkar" Economics mein kisi ke paas nahi mila. Crayon aur Capital Case history/story karte hain, MonkeyExplains allegory.</li>
+</ul>
+<hr />
+<h2>5. Aaj (19 Nov) ke primary-source checks, 5B</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value (VERIFIED)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct CPI</td>
+<td>+0.4% (Sep +0.6%)</td>
+</tr>
+<tr>
+<td>Oct CPI 12-month</td>
+<td>zyadatar series ka publish nahi hua (Oct 2025 data collect nahi hua, funding lapse)</td>
+</tr>
+<tr>
+<td>Nov CPI release</td>
+<td>Thu 10 Dec 2026</td>
+</tr>
+<tr>
+<td>Dec CPI</td>
+<td>13 Jan 2027</td>
+</tr>
+<tr>
+<td>Jobs reports</td>
+<td>4 Dec 2026, 8 Jan 2027</td>
+</tr>
+<tr>
+<td>FOMC</td>
+<td>8-9 Dec, 26-27 Jan</td>
+</tr>
+<tr>
+<td>BoJ</td>
+<td>17-18 Dec, 21-22 Jan</td>
+</tr>
+<tr>
+<td>10-year yield</td>
+<td>5.07% (18 Nov), 5.15% (13 Nov)</td>
+</tr>
+<tr>
+<td>30-year mortgage (Freddie Mac)</td>
+<td>7.11% (12 Nov), saal pehle 6.24%</td>
+</tr>
+<tr>
+<td>CPI weights (Dec 2025)</td>
+<td>housing 44.469; shelter <strong>35.625</strong>; transport 16.316; food and bev 14.539</td>
+</tr>
+<tr>
+<td>Anthropic IPO</td>
+<td>S-1 18 Nov ko effective; 178,250,000 aur shares register (Rule 462(b))</td>
+</tr>
+</tbody>
+</table>
+<p>Ek galti theek ki: calendar mein shelter "35.3%" tha, sahi 35.6% hai.</p>
+<p><strong>Trends (aankh se, INFERRED):</strong> IPO har window mein sabse upar aur sirf pichhle 2 din mein tez chadha. Mortgage rates aur inflation chhote band mein, CPI aur jobs report sirf release ke din spike.</p>
+<p><strong>YouTube (aaj ka):</strong> har GO topic par log bana rahe hain. CPI, rent, jobs report par fresh uploads 100 views se kam. Housing lock-in par is hafte 26K aur 12K views waale do channels. IPO sabse bheed waala (103K, 38K). Crash history ke upar bade channels (455K, 971K).</p>
+<hr />
+<h2>6. Kya nahi hua (seedhi list)</h2>
+<ol>
+<li><strong>Koi topic owner-approved nahi.</strong></li>
+<li><strong>Koi video nahi bana.</strong> Production workflow kabhi end-to-end chali nahi, isliye aapka 15-20 ghante ka capacity naapa nahi gaya (UNKNOWN).</li>
+<li><strong>Koi first-party analytics nahi</strong> (CTR, retention, impressions). Sirf competitors ke public views.</li>
+<li><strong>Visual storytelling</strong> (editing, camera, motion) NOT AVAILABLE: koi video media analyse nahi hua.</li>
+<li><strong>Thumbnails:</strong> chhe channels ke 58 dekhe, jo 966 mein se ek chhota hissa hai. Hamari apni thumbnails bani nahi.</li>
+<li><strong>Trends:</strong> export nahi, sirf chart padha.</li>
+<li><strong>MonkeyExplains:</strong> DB mein 136/149 (13 missing) aur nayi rows DB mein ingest nahi hui (approval chahiye).</li>
+<li><strong>IPO facts:</strong> price aur lock-up abhi unverified (final prospectus file nahi hua); SpaceX lock-up unverified; "Fed hike karega" sirf chhote channels ke titles.</li>
+<li><strong>Scripts:</strong> 4 drafts, sab gate WARN R7 (images nahi). C1-C5 manual checks aur <code>[CHECK]</code> items khule hain. E06 ka [UPDATE 12-10] block baaki.</li>
+<li><strong>Branding:</strong> domain, trademark, doosre handles check nahi.</li>
+<li><strong>Nine-item sheet</strong> ki list strict audit ke alfaaz se li gayi; owner ne confirm nahi ki.</li>
+<li><strong>Git:</strong> commit local, push blocked (section 7).</li>
+<li><strong>Buffer:</strong> launch se pehle 2-3 videos ka stock nahi bana.</li>
+<li><strong>Shorts:</strong> sirf titles/hook; koi bana nahi.</li>
+</ol>
+<hr />
+<h2>7. Git ka haal</h2>
+<ul>
+<li>Branch <code>research/new-finance-channel-2026-11-18</code>, commit <code>8f76522f</code> (78 files).</li>
+<li>Push fail: <code>data/catalog/finance_economics_complete.db</code> 112.41 MB hai, GitHub ka limit 100 MB. Yeh file purane commit <code>13138e04</code> (R1-R3 DB ingest) se aayi, aaj ki files se nahi.</li>
+<li>Theek karne ke raaste (history badalti hai, isliye aapki ijazat chahiye): DB ko Git LFS mein migrate karna, ya us commit se hata kar dobara banana, phir force push.</li>
+<li>Commit mein shamil nahi: <code>docs/research/dr-rehan-recording-pack-2026-11-17/build/all_text_check.txt</code>, <code>research/senior-health-forensics/senior_health_complete.db</code>.</li>
+</ul>
+<hr />
+<h2>8. Mujhe kitna bharosa hai (seedhi baat)</h2>
+<p>Koi sachchi probability nikalna mumkin nahi, kyunke hamare paas apne channel ka koi data nahi. Yeh meri raay hai (HYPOTHESIS), levels ke saath:</p>
+<table>
+<thead>
+<tr>
+<th>Sawal</th>
+<th>Bharosa</th>
+<th>Wajah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Competitor ke counts, views, dates sahi hain?</td>
+<td><strong>Zyada</strong></td>
+<td>DB aur channel page se mila ke gine; 13 videos missing documented.</td>
+</tr>
+<tr>
+<td>Aaj ke sarkari figures (BLS, Treasury, Freddie Mac, Fed, SEC) sahi hain?</td>
+<td><strong>Zyada</strong></td>
+<td>Primary page par padhe. Lekin yeh figures badalte hain (weekly/daily).</td>
+</tr>
+<tr>
+<td>In topics par audience maujood hai?</td>
+<td><strong>Darmiyana</strong></td>
+<td>Competitors ke winners aur search se dikhta hai. Lekin sab saturated se zyada nahi.</td>
+</tr>
+<tr>
+<td>Hamara "number behind the price" angle alag hai aur kaam karega?</td>
+<td><strong>Kam se Darmiyana</strong></td>
+<td>Kisi competitor ke paas nahi mila, lekin yeh sirf ek search aur 6 channels par based hai. Angle chalta hai ya nahi, yeh sirf video banane par pata chalega.</td>
+</tr>
+<tr>
+<td>Naya channel in topics par views layega?</td>
+<td><strong>Kam</strong></td>
+<td>Capital Case (naya, format copy) ka median 54K hai, aur uske 4 videos 5K-6K par. Hamare paas koi subscriber nahi. Chhote creators ke fresh videos 100 views se kam aa rahe.</td>
+</tr>
+<tr>
+<td>Shorts se channel barhega?</td>
+<td><strong>Bahut kam</strong></td>
+<td>Chhe mein se do channels mein Shorts se long views nahi badhe.</td>
+</tr>
+<tr>
+<td>Aap 1 long + 2 Shorts har hafte nibha payenge?</td>
+<td><strong>Pata nahi</strong></td>
+<td>Capacity naapi nahi gayi. Ek video bana kar waqt naapna zaroori hai.</td>
+</tr>
+<tr>
+<td>Calendar ki tarikhen sahi hain?</td>
+<td><strong>Zyada</strong> (Fed, BLS, BoJ)</td>
+<td>Verified. IPO wala slot (28 Dec) news ke lehaaz se kamzor hai.</td>
+</tr>
+<tr>
+<td>Scripts publish layak hain?</td>
+<td><strong>Abhi nahi</strong></td>
+<td>Gate WARN, [CHECK], C1-C5 baaki, owner approval nahi.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kul mila kar:</strong>
+- Mujhe is baat ka bharosa hai ke research sach par khadi hai aur topics ka order evidence se nikla hai.
+- Mujhe is baat ka bharosa nahi ke channel 6-12 mahine mein grow karega. Is ka koi saboot is research mein hai hi nahi, aur isse tab tak nahi nikal sakta jab tak aapka pehla video publish na ho.
+- Is liye mera mashwara: pehle 30 din ko <strong>tajurba</strong> samjhein, "guaranteed plan" nahi.</p>
+<hr />
+<h2>9. Khatre (jo mujhe sabse bade lagte hain)</h2>
+<ol>
+<li><strong>Saturation:</strong> CPI/inflation explainer sab bana rahe hain. Hum sirf angle se alag ho sakte hain.</li>
+<li><strong>Naya channel, koi audience nahi:</strong> competitors ke medians hamare liye ceiling hain, expectation nahi.</li>
+<li><strong>Evergreen vs news:</strong> data-release topics kuch ghanton se din tak chalte hain. Release ke baad late video ka faida kam.</li>
+<li><strong>IPO ka waqt:</strong> F02 ka news peak abhi hai, 28 Dec tak purana.</li>
+<li><strong>Capacity:</strong> ek video ka asli time naapa nahi.</li>
+<li><strong>AI-slop/originality:</strong> script gate ek proxy hai. PASS ka matlab "detect nahi hoga" nahi. Hamari scripts ko apni awaaz aur apna analysis chahiye.</li>
+<li><strong>Data dependence:</strong> BLS/Fed/SEC ki date badal sakti hai; har video se pehle dobara check.</li>
+</ol>
+<hr />
+<h2>10. Aapse faisle chahiye</h2>
+<ol>
+<li>Topic order approve/badlein (E06 pehle, V1 Rent doosra).</li>
+<li>F02 IPO: 28 Dec par mechanics-only rakhein, ya pehle layein?</li>
+<li>Git: kaun sa raasta (LFS migrate ya history se DB hatana) aur force push ki ijazat?</li>
+<li>Nine-item list confirm karein.</li>
+<li>Pehle video ki script approve karein (E06) taa ke [CHECK] items band hon.</li>
+<li>MonkeyExplains ka R4/R5 DB ingest approve karein?</li>
+<li>Launch se pehle "kamyabi/nakaami" ka naap likh lein (kaunsa metric, kitne din baad).</li>
+</ol>
+<h2>11. Mera agla qadam (aapke haan par)</h2>
+<ol>
+<li>E06 ke [CHECK] items primary pages se band karna.</li>
+<li>10 Dec ko Nov CPI aane par [UPDATE 12-10] bharna.</li>
+<li>Ek video ka asli production time naapna.</li>
+<li>F02 ki 424B4 (price, lock-up) check karna jab file ho.</li>
+</ol>
+<hr />
+<h2>12. Files ka naqsha</h2>
+<table>
+<thead>
+<tr>
+<th>Cheez</th>
+<th>Jagah</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start page</td>
+<td><code>START_HERE.html</code></td>
+</tr>
+<tr>
+<td>Master index, changelog, decision log</td>
+<td><code>MASTER_INDEX.md</code>, <code>RESEARCH_CHANGELOG.md</code>, <code>DECISION_LOG.md</code></td>
+</tr>
+<tr>
+<td>Strict audit</td>
+<td><code>audit_strict/STRICT_STATE_AUDIT_2026-11-19.md</code></td>
+</tr>
+<tr>
+<td>Stage 1</td>
+<td><code>05_FRESH_COMPETITOR_DATA/STAGE1_DATA_GAPS_2026-11-19.md</code></td>
+</tr>
+<tr>
+<td>Stage 2 (6 reports)</td>
+<td><code>03_PRIMARY_REFERENCE_CHANNELS/STAGE2_SIX_REPORTS/</code></td>
+</tr>
+<tr>
+<td>Stage 3</td>
+<td><code>03_PRIMARY_REFERENCE_CHANNELS/STAGE3_FRAMEWORK_APPLICATION/</code></td>
+</tr>
+<tr>
+<td>Stage 4</td>
+<td><code>09_TOPIC_DISCOVERY/STAGE4/</code></td>
+</tr>
+<tr>
+<td>Stage 5, 5B, 6</td>
+<td><code>17_TOPIC_VALIDATION/STAGE5/</code>, <code>STAGE5B_...md</code>, <code>STAGE6/</code></td>
+</tr>
+<tr>
+<td>Stage 7 calendar</td>
+<td><code>19_30_DAY_CONTENT_CALENDAR/STAGE7_CALENDAR_2026-11-19.md</code></td>
+</tr>
+<tr>
+<td>Thumbnail model</td>
+<td><code>14_WINNING_THUMBNAIL_MODELS/THUMBNAIL_MODEL_SIX_CHANNELS_2026-11-19.md</code></td>
+</tr>
+<tr>
+<td>Scripts</td>
+<td><code>productions/new-finance-channel-*/</code> (V1, V2, L3, E06)</td>
+</tr>
+</tbody>
+</table>
+<p>Apify kharch: R1 $0.236, R2 $0.716, R3 $1.004, R4/R5 Stage 1 mein (account mein lagbhag $2.59 baaqi, Stage 1 report ke mutabiq). DB read-only rahi, raw files nahi badli.</p>
