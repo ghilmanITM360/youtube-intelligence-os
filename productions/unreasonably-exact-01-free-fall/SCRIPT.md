@@ -8,7 +8,7 @@ images: productions/unreasonably-exact-01-free-fall/thumbnail_day01.png
 
 **Channel and slot:** Unreasonably Exact. Calendar Day 1 (Mon 2026-11-23). Family L (ladder). Bank ID WIB-36.
 
-**Status:** DRAFT v3, 2026-11-19, for owner review. Not approved until the owner says so. v3 is a length cut of v2 (the v2 text is in git history). Original narration.
+**Status:** v3 **APPROVED by the owner, 2026-11-19** (owner message in chat: Day 1 "meri taraf say done hai"). Any later change needs re-approval. The manual checklist C1–C5 was not separately confirmed. v3 is a length cut of v2 (the v2 text is in git history). Original narration.
 
 **Why v3:** the 83-script study of xkcd's What If? (`research/what-if-scripts/analysis/01_INVENTORY.md`) measured their 43 long videos at a median of 3:16 and 680 words, and 31 of 43 run under 4 minutes. v2 was ~1,230 words and ~9 min. v3 keeps the same spine (a ladder where the landing-speed line goes flat) and the same claims, minus the beats that cost the most time. Three original dry lines were added (the air as free safety equipment, estimates as "educated guesses in a lab coat", "more time to reconsider"). Cut: ground-rules block, the ten-metre height, the 19 km pressure height, Eustace, Alkemade, the Baumgartner spin and freefall-duration detail. Structure only is followed from xkcd; no words, jokes, art or invented reader questions are used (08).
 
