@@ -41,3 +41,12 @@
 ## 2026-11-18 Phase E claim check
 - Fixed stale MASTER_INDEX validated-topics line.
 - Phase E: R2/T-R2 "a Year Late" corrected to a ~6-month CPI rent lag (BLS snippets; read full page before use). A2 $400 illustrative. A3 fuel figures consistent across outlets, SECONDARY.
+
+## 2026-11-19 Audit P0 fixes
+- Independent audit written to `audit/` (20 files, score 55.5/100, REJECTED - REWORK REQUIRED). P0 work: transcript manifest (3,617 rows) + READMEs for the 5 empty folders (08 stays "NOT DONE"); calendar addendum with 12 of 13 slots researched (0 validated) and a date defect found (L5 before the 2027-01-13 CPI release). No spend, no scripts, nothing committed.
+
+## 2026-11-19 L3/L4 validation
+- Opened EIA pump-components table and BLS CPS page; logged-out YouTube search for both topics. L4 rejected, L3 conditional. No spend, nothing committed.
+
+## 2026-11-19 L3 finish and new L4
+- Opened BLS Employment Situation note and release schedule, GAO-26-107538, BLS 2027 CPI weight page; ran Trends (US, 12 months) and 4 logged-out YouTube searches. L3 conditional, new L4 conditional, gas L4 stays rejected. No spend, nothing committed.

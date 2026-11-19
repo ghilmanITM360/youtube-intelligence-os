@@ -1,0 +1,1 @@
+# Pointer: thumbnail briefs (4) are in `../13_TITLE_MODELS/PHASE_E_*.md`; packaging concepts (9) in `../18_CONTENT_PACKAGING/`. 61 primary thumbnails are in `../07_THUMBNAIL_LIBRARY/`. No thumbnail model is proven: the 966-thumbnail review (Phase 5B, audit gap G07) is not done.

@@ -1,0 +1,2 @@
+# 08 Visual storytelling intelligence: NOT DONE (honest status)
+No scene-level video analysis exists for the new-channel research. Editing, animation and motion are labelled NA wherever they appear. Needs: video media (check docs/LOCAL_MEDIA_AVAILABILITY.md and YIOS_MEDIA_ROOT) and a frame/scene pass on the six primary channels. Older forensic work for Casual Finance exists in research/casually-finance-editing-forensics/ (separate, not reused as new-channel evidence). Tracked as audit gap G03 (P1). This README is a status note, not a deliverable.

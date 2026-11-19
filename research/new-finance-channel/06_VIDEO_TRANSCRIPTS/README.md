@@ -1,0 +1,2 @@
+# 06 Video transcripts
+Transcript text lives in `data/catalog/finance_economics_complete.db` (table `transcripts`, 3,617 rows for 3,577 videos). It is not copied here (large, duplicate of the DB, and copyright-sensitive third-party text). `TRANSCRIPT_MANIFEST_2026-11-19.csv` lists every row: video_id, channel, published, source, caption type, language, status, word count, sha256. Missing: 255 of 3,832 videos have no transcript (primary six: MonkeyExplains 5 of 73). Added 2026-11-19 (audit gap G02).
