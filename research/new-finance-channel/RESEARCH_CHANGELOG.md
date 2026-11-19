@@ -50,3 +50,6 @@
 
 ## 2026-11-19 L3 finish and new L4
 - Opened BLS Employment Situation note and release schedule, GAO-26-107538, BLS 2027 CPI weight page; ran Trends (US, 12 months) and 4 logged-out YouTube searches. L3 conditional, new L4 conditional, gas L4 stays rejected. No spend, nothing committed.
+
+## 2026-11-19 L3 draft script
+- Draft script written and gated (WARN, R7 only). No spend. Not committed.
