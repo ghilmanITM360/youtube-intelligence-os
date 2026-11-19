@@ -30,6 +30,8 @@ Per-claim table (05 §3.1). Builds on `06_SCIENCE_VERIFICATION.md` (Day 3/4 sect
 | D3-17 | Decay adds "a few percent" | 0.782 MeV vs ~16 MeV ≈ 5% | computed | COMPUTED |
 | D3-18 | Ends as a hot cloud of ordinary hydrogen | protons + electrons → hydrogen | follows from D3-16 | COMPUTED (qualitative) |
 
+**v2 length cut (2026-11-19):** claims **no longer in the script** (kept for reference): D3-03 (NICER on ISS), D3-05 (Earth at this density), D3-09 (dust orbit), D3-10 (surface pull), D3-17 (decay adds a few percent). All remaining claims are unchanged from v1.1.
+
 ## Notes
 
 **Self-review fixes in v1.1:**
@@ -49,5 +51,5 @@ Per-claim table (05 §3.1). Builds on `06_SCIENCE_VERIFICATION.md` (Day 3/4 sect
 - The firing beat only shows that it can't be fired.
 
 **Packaging (FR-TITLE-03/04):**
-- The title question is answered at ~6:35.
+- The title question is answered at ~4:02.
 - The thumbnail claim "AT LEAST 190 MILLION TONNES" is D3-06 (the low end, labelled THE MATH).

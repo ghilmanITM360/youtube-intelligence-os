@@ -1,13 +1,19 @@
 {
-  "checked_at": "2026-11-18T12:03:21+00:00",
+  "checked_at": "2026-11-19T06:37:25+00:00",
   "script": "productions/unreasonably-exact-01-free-fall/SCRIPT.md",
-  "sha256": "08ec26adb091920b583ee4f98361973ebba3e41692d2c741adc2b2568daa71f1",
-  "title": "What If You Fell From Every Height \u2014 1 Metre to the Edge of Space?",
+  "sha256": "ba458b54905509eecdbe628ccc6b3dbb6457a84d045adc2d363e0e914e9cc91f",
+  "title": "Does a Higher Fall Always Hit Harder? 1 Metre to the Edge of Space",
   "channel": "UNREGISTERED (Unreasonably Exact; CH-id pending)",
   "project": "unreasonably-exact-01-free-fall",
-  "verdict": "PASS",
+  "verdict": "WARN",
   "delivery_blocked": false,
-  "findings": [],
+  "findings": [
+    {
+      "rule": "R4",
+      "level": "WARN",
+      "detail": "7% of script 5-grams match our other project productions/unreasonably-exact-03-neutron-bullet/SCRIPT.md"
+    }
+  ],
   "manual_checklist": [
     "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
     "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",

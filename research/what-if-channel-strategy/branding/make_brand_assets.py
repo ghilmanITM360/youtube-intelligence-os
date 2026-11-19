@@ -84,14 +84,14 @@ thumb = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48,
 open("thumbnail_sample_day25.svg", "w").write(svg(1280, 720, thumb))
 print("svgs written")
 
-# ---- Day 1 thumbnail: "What If You Fell From Every Height?" (written into the production folder) ----
+# ---- Day 1 thumbnail: "Does a Higher Fall Always Hit Harder?" (written into the production folder) ----
 import os
 PROD = "../../../productions/unreasonably-exact-01-free-fall"
 os.makedirs(PROD, exist_ok=True)
 top, bot, rx = 80, 650, 150
 def ry(metres):  # vertical log ruler, 1 m at bottom .. 400 km at top
     return bot - math.log10(metres) / math.log10(400e3) * (bot - top)
-marks = [(1, "1 m"), (100, "100 m"), (10e3, "10 km"), (38_969, "39 km"), (100e3, "100 km"), (400e3, "400 km")]
+marks = [(1, "1 m"), (100, "100 m"), (10e3, "10 km"), (100e3, "100 km"), (400e3, "400 km")]  # no 39 km highlight: v2 thumbnail is about landing speed
 ruler = f'<path d="M{rx} {top}V{bot}" stroke="{PAPER}" stroke-width="5"/>'
 for m, label in marks:
     y, hot = ry(m), label == "39 km"
@@ -105,9 +105,10 @@ diver = (f'<g transform="translate(330,{fy:.0f})" stroke-linecap="round">'
          f'<ellipse cx="0" cy="15" rx="34" ry="46" fill="{PAPER}"/>'
          f'<circle cx="0" cy="-40" r="30" fill="{PAPER}"/><path d="M-18 -44 H18" stroke="{INK}" stroke-width="10"/></g>')
 day1 = (f'<rect width="1280" height="720" fill="{INK}"/>' + grid(1280, 720, 48, 0.05) + ruler + diver
-        + f'<text x="500" y="370" {HEAVY} font-size="110" fill="{SIGNAL}">1,358 km/h</text>'
-        + f'<text x="506" y="446" {HEAVY} font-size="56" fill="{PAPER}">FASTER THAN SOUND</text>'
-        + chip(1040, 34, "REAL DATA", DATA, 24))
+        + f'<text x="500" y="330" {HEAVY} font-size="76" fill="{SIGNAL}">1 KM: 204 km/h</text>'
+        + f'<text x="500" y="430" {HEAVY} font-size="76" fill="{PAPER}">100 KM: 204 km/h</text>'
+        + f'<text x="506" y="530" {HEAVY} font-size="60" fill="{PAPER}">SAME LANDING?</text>'
+        + chip(1000, 34, "SIMULATION", DATA, 24))  # v2 (2026-11-19): landing-speed contrast, model values D1-07/D1-19
 open(f"{PROD}/thumbnail_day01.svg", "w").write(svg(1280, 720, day1))
 
 # ---- Day 3 thumbnail: "What If a Bullet Were Made of Neutron Star?" (level balance, equal arms of 210 px: 0.7 cm3 pellet = 412 m rock cube) ----

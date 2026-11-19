@@ -239,6 +239,11 @@ for h0 in (10e3, 38_969, 100e3):
     vmax = max(tr, key=lambda s: s[2])
     print(f"from {h0/1e3:.1f} km: peak {vmax[2]*3.6:.0f} km/h at {vmax[1]/1e3:.1f} km after {vmax[0]:.0f} s; "
           f"at 5 km alt {next(v for t,h,v,_ in tr if h <= 5e3)*3.6:.0f} km/h; total {tr[-1][0]/60:.1f} min")
+for h0 in (220, 300, 1_000, 3_000, 5_000, 10e3, 38_969, 60e3, 100e3):  # v2: landing speed is capped
+    tr = trace(h0, k, 0.01)
+    print(f"landing speed from {h0/1e3:g} km: {tr[-1][2]*3.6:.0f} km/h")
+tr = trace(400e3, k, 0.01)
+print(f"landing speed from 400 km (model; ignores survival/heating): {tr[-1][2]*3.6:.0f} km/h")
 tr = trace(38_969, k, 0.01)
 sup = sum(0.01 for t, h, v, _ in tr if v > math.sqrt(1.4 * 287.053 * atmosphere(h)[1]))
 print(f"Stratos model: supersonic for {sup:.0f} s (Red Bull reported 30 s)")

@@ -69,7 +69,7 @@
 - cold open on the most extreme rung or end state
 - labelled evidence layers (e.g. "SIMULATION / REAL DATA / THE MATH") with on-screen primary-source citations (04 §2, Tracer)
 - same voice
-- 6–10 min target
+- 3–5 min target for longs (owner decision 2026-11-19, after the xkcd length study: their 43 longs have median 3:16, 680 words; was 6–10 min). Day 1 and Day 3 scripts are cut to ~890 and ~750 words. Unmeasured: this is a plan, not a result
 - same publish hour
 - end screen pointing to the next video of the same family
 
@@ -84,7 +84,7 @@ Columns: Fmt = Long (L) / Short (S); Fam = format family; Score = 03 §6.
 
 | Day | Fmt | Bank ID | Working title (HYPOTHESIS) | Fam | Score | Thumbnail concept (original) | Experiment role |
 |---|---|---|---|---|---|---|---|
-| 1 | Long | WIB-36 | What If You Fell From Every Height — 1 Metre to the Edge of Space? (06: "orbit" reframed) | L | 89 | Falling figure beside an altitude ruler; one label "39 km: fastest fall ever" | L #1 |
+| 1 | Long | WIB-36 | Does a Higher Fall Always Hit Harder? 1 Metre to the Edge of Space (retitled 2026-11-19 after review; script cut to ~860 words / ~4–5 min in v3 after the xkcd length study: stakes question, answered on screen; was "What If You Fell From Every Height — …"; 06: "orbit" reframed) | L | 89 | Falling figure beside an altitude ruler; "1 KM: 204 km/h · 100 KM: 204 km/h · SAME LANDING?" (model values) | L #1 |
 | 2 | Short | WIB-36 | Excerpt: why jumping from higher makes you slow down before landing (06 reframe) | L | — | Same art, cropped | Excerpt test |
 | 3 | Long | WIB-55 | What If a Bullet Were Made of Neutron Star? | S | 90 | Level balance: glowing 0.7 cm³ pellet vs a 412 m rock cube; "AT LEAST 190 MILLION TONNES" (06; changed at scripting to show the bullet itself) | S #1 |
 | 4 | Short | WIB-55 | Excerpt: if something held it together and you dropped it (assumption stated, SIMULATION label; 06) | S | — | — | Excerpt test |
