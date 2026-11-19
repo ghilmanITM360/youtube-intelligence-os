@@ -7,9 +7,9 @@ Working title only; the real channel name is decided in Phase I. Created 2026-11
 |---|---|
 | 01_PROJECT_OVERVIEW | README + execution plan written |
 | 02_FINANCE_CHANNEL_MASTER_INVENTORY | DONE: `MASTER_INVENTORY.md/.csv` (72 channels) |
-| 03_PRIMARY_REFERENCE_CHANNELS | `STRENGTH_MATRIX_AND_LEARNINGS.md`, metrics CSVs, script (Phase B part 1 done; editing analysis NA) |
+| 03_PRIMARY_REFERENCE_CHANNELS | `STRENGTH_MATRIX_AND_LEARNINGS.md`, metrics CSVs, script (Phase B part 1 done; editing analysis NA). **Stage 2 (2026-11-19): `STAGE2_SIX_REPORTS/` = six individual forensic reports + index (md/html), data builder, classified CSVs** |
 | 04_ADDITIONAL_FINANCE_CHANNELS | `ADDITIONAL_CHANNELS_LEARNINGS.md` |
-| 05_FRESH_COMPETITOR_DATA | R1-R3 run and ingested (raw JSON, CSVs, status doc); account has about $3.04 left |
+| 05_FRESH_COMPETITOR_DATA | R1-R3 run and ingested (raw JSON, CSVs, status doc). **Stage 1 (2026-11-19): `STAGE1_DATA_GAPS_2026-11-19.md`; R4/R5 MonkeyExplains runs (not in DB), merged inventory 136/149; account about $2.59 left** |
 | 07_THUMBNAIL_LIBRARY | 61 primary thumbnails + montages + manifest |
 | 10_SUB_NICHE_RESEARCH | `SUB_NICHE_DISCOVERY.md`, metrics CSVs, script (Phase C part 1; no demand validation yet) |
 | 09_TOPIC_DISCOVERY, 11_GOOGLE_TRENDS_AND_NEWS, 12_YOUTUBE_SEARCH_AND_SUGGESTED | Phase D round 1 (25 seeds screened, 0 approved) |
@@ -73,3 +73,16 @@ Trends/News/YouTube search of 2026-11-13/14; 30-day calendar; first-10 list; las
 
 ## Missing data
 See `05_.../REFRESH_STATUS_AND_MISSING_DATA.md` section 3. External sources used so far: 6 official YouTube Help pages (support.google.com/youtube answer ids 7628154, 16391400, 1311392, 6175006, 14328491, 9314355), fetched 2026-11-18.
+
+## Execution approval 2026-11-19 (stages)
+- Stage 1 data gaps: DONE (`05_.../STAGE1_DATA_GAPS_2026-11-19.md`); Paper Billions complete 6/6; MonkeyExplains 136/149, 13 documented.
+- Stage 2 six forensic reports: WRITTEN (`03_.../STAGE2_SIX_REPORTS/INDEX.html`); visual storytelling NOT AVAILABLE (no media analysed).
+- Stage 3 frameworks applied: WRITTEN (`03_.../STAGE3_FRAMEWORK_APPLICATION/STAGE3_FRAMEWORK_APPLICATION_2026-11-19.html`): DS-000011, DS-000018, Playbook, framework DB v1 tested on 172 real long videos; most rules not supported, crisis-title family only repeatable signal.
+- Stage 3 REVIEWED (2026-11-19): crisis-title signal downgraded (fails multiple-test correction), topic clusters rebuilt first-match; section 11 of the Stage 3 report.
+- Stage 4 topic discovery: WRITTEN (`09_TOPIC_DISCOVERY/STAGE4/STAGE4_TOPIC_DISCOVERY_2026-11-19.html`): 54 winners (42 long, 12 Shorts) -> 26 candidates, 17 advance (Economics 10, Finance 7), 6 hold, 3 drop. Not validated.
+- Stages 5 to 7: not started.
+- Stage 4 reviewed: 26 candidates -> 16 advance, 7 hold, 3 drop (F09 moved to HOLD; coverage claims corrected).
+- Stage 5 topic validation: WRITTEN (`17_TOPIC_VALIDATION/STAGE5/STAGE5_TOPIC_VALIDATION_2026-11-19.html`): 16 topics checked on competitor evidence, YouTube search, Trends (visual, INFERRED), news (secondary, some UNVERIFIED), framework, angle. 6 GO, 8 GO-CONDITIONAL, 2 HOLD.
+- Stage 5B source verification + live check: WRITTEN (`17_TOPIC_VALIDATION/STAGE5B_SOURCE_VERIFICATION_AND_LIVE_CHECK_2026-11-19.html`). E06 draft script: `productions/new-finance-channel-e06-cpi-basket-01/E06_CPI_BASKET_SCRIPT.md` (gate WARN R7 only; not approved).
+- Stage 6 final ranking and nine-item sheets: WRITTEN (`17_TOPIC_VALIDATION/STAGE6/STAGE6_FINAL_RANKING_2026-11-19.html`). Nine-item list taken from the strict audit wording; owner to confirm.
+- Stage 7 calendar: WRITTEN as PROPOSAL (`19_30_DAY_CONTENT_CALENDAR/STAGE7_CALENDAR_2026-11-19.html`): 5 long + 8 Shorts, Mon 2026-12-14 to 2027-01-11. Nothing owner-approved; no scripts changed.

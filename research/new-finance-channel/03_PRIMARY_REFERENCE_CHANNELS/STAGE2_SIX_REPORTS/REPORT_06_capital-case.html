@@ -1,0 +1,535 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Forensic report: Capital Case</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.55;color:#1a1a1a}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}th,td{border:1px solid #ccc;padding:5px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd;padding-bottom:4px}a{color:#0b5cd5}.box{background:#f6f8fa;border-left:4px solid #0b5cd5;padding:8px 14px;margin:12px 0}@media(prefers-color-scheme:dark){body{background:#15171a;color:#e6e6e6}th{background:#23262b}td,th{border-color:#444}code,.box{background:#23262b}a{color:#7ab4ff}}</style><p><a href='../../START_HERE.html'>&larr; START HERE</a> | <a href='INDEX.html'>Stage 2 index</a></p><p><a href="REPORT_01_monkeyexplains.html">MonkeyExplains</a> | <a href="REPORT_02_casual-finance.html">Casual Finance</a> | <a href="REPORT_03_monkey-economics.html">Monkey Economics</a> | <a href="REPORT_04_crayon-capital.html">Crayon Capital</a> | <a href="REPORT_05_paper-billions.html">Paper Billions</a> | <b>Capital Case</b></p><h1>Forensic report 06: Capital Case</h1>
+<p>Stage 2, 2026-11-19. Scope: this channel only, from <code>finance_economics_complete.db</code> (read-only). Data builder: <code>build_data.py</code>. Classified video list: <code>data/capital-case_classified.csv</code>.</p>
+<p><strong>Evidence labels:</strong> VERIFIED = read from the DB or raw Apify file. INFERRED = our reading of a pattern. HYPOTHESIS = untested idea. NOT AVAILABLE = no data or media in this workspace. Views are public counts as of the pull dates (2026-11-17 to 2026-11-19). Shorts = duration &lt;= 180 s. No view count proves a cause; there is no CTR or retention data.</p>
+<h1>Part 1. Reading</h1>
+<h2>A. Reading of the channel (INFERRED)</h2>
+<p>Capital Case is a young (first video 2026-02-22), small story channel: 13 long videos, 1.51M views total, median 54,627, 11 min 31 s. It is the closest structural copy of Crayon Capital in the set ("Explained Like You're 5", "Explained in 11 Minutes", dated-scene openers). It is also the weakest performer: median is 18% of Crayon's. It has two breakouts: Rockefeller (385K, 7.1x) and The Great Depression (294K, 5.4x).</p>
+<h2>B. Finance AND Economics coverage</h2>
+<ul>
+<li>Finance (9 long, 1.06M views): companies/billionaires (5: Rockefeller 385K, BYD 152K, SpaceX 55K, Rothschilds 41K, BlackRock 5K), crashes (2: Great Depression 294K, FTX 5K), Epstein (86K), OpenAI (33K).</li>
+<li>Economics (4 long, 451K views): Strait of Hormuz/oil (250K, 4.6x), WW2 appeasement (189K, 3.5x), debt/currency (2 videos: "If Every Country is in Debt, Who Owns the Money?" 6K and "When $100 Trillion Couldn't Buy a Bread" 6K).</li>
+<li>Economics winners are geopolitics-linked and news-timed (Hormuz after the 2026-02-28 strikes). The two money-theory videos are the worst in the channel (both ~0.1x).</li>
+</ul>
+<h2>C. Winning and failing topics</h2>
+<ul>
+<li>Winners (5 of 13): Rockefeller, Great Depression, Hormuz, WW2 appeasement, Epstein (86K, 1.6x).</li>
+<li>Failures (4 of 11 older videos): BlackRock conspiracies (5K, 0.09x), FTX (5K), 100 trillion bread (6K), who owns the debt (6K). Conspiracy framing and abstract money-theory both fail; named historical events and one famous person work.</li>
+<li>Cross-check with Crayon, same topics: Rockefeller Crayon 1.33M vs Capital Case 385K; Great Depression 2.76M vs 294K; BYD 98K vs 152K (Capital Case ahead); Epstein 49K vs 86K (ahead); Iran/Hormuz 162K vs 250K (ahead). So Capital Case beat the larger channel on the three newest, news-linked topics. INFERRED from 5 pairs; publish dates and subscriber bases differ.</li>
+</ul>
+<h2>D. Title structures</h2>
+<ul>
+<li>6 of 13 use "Explained" templates (median 47.6K); "Explained in N Minutes" (4) is the channel's own variation.</li>
+<li>77% contain a digit (median 70.5K vs 6.4K without). Small n; the non-digit titles are the 4 failures.</li>
+<li>Colon titles (2): "BlackRock: The Conspiracies..." (5K), "Epstein: The $1.9 Billion Mystery..." (86K).</li>
+<li>"How the Great Depression Actually Happened (The Fatal Decisions)" (294K) is the only explicit explanatory-causal title and the best non-Rockefeller title, with a parenthesised subtitle.</li>
+</ul>
+<h2>E. Thumbnail patterns</h2>
+<p>Source: 8-image sample (thumbnail model doc): round-head cartoon characters, dark cinematic ground, one name or event. INFERRED.</p>
+<h2>F. Script and hook structure (VERIFIED text, INFERRED structure)</h2>
+<p>Same spine as Crayon: a dated scene or a stakes statement, no greeting. Examples: "September 30th, 1938, Munich, Germany. Neville Chamberlain..."; "In 1928, an economist at Harvard stood up and told an audience that poverty in America was nearly solved... One year later, a quarter of the American workforce had nowhere to go."; "On February 28th, 2026, the United States and Israel launched nearly 900 strikes on Iran in 12 hours." The hook states an irony or reversal (confident prediction then collapse; hero then failure). Rockefeller and SpaceX open with a stats-first claim ("controlled 90% of America's oil"). Narration is formal and measured.</p>
+<h2>G. Visual storytelling and editing</h2>
+<p>NOT AVAILABLE (no video files analysed).</p>
+<h2>H. Shorts vs long-form and frequency</h2>
+<p>No Shorts. 13 long in 253 days = 0.36 a week, 1 to 2 a month (none in 2026-09). Monday is the most common day (5 of 13). Last 30 days: 1; 90 days: 4. Cadence is flat and low; views per video did not rise steadily; three of the four lowest videos (5K to 6K) are from 2026-02 to 2026-03.</p>
+<h2>I. Implications for our channel (HYPOTHESIS)</h2>
+<ol>
+<li>A Crayon clone format on a small channel did not reach Crayon's views; "same format, newer channel" is not enough. 2. Topics timed to a current event (Hormuz, BYD, Epstein) outperformed evergreen money-theory. 3. Two videos per month is the floor evidence of viable survival for a story channel in this set, and its median is only 55K.</li>
+</ol>
+<h2>J. Limits</h2>
+<p>Only 13 videos; many have had less than 60 days. Subscriber base not compared. No CTR or retention data.</p>
+<h1>Part 2. Data tables</h1>
+<h2>1. Full inventory (VERIFIED from DB)</h2>
+<ul>
+<li>Videos held: <strong>13</strong> (long-form 13, Shorts 0 by duration &lt;= 180 s). Date range 2026-02-22 to 2026-11-02.</li>
+<li>With public view counts: 13. Transcripts held: 13 of 13.</li>
+<li>Views, long-form: total 1,507,780, median 54,627, mean 115,983, max 385,205.</li>
+<li>Median long-form duration: 11 min 31 s.</li>
+</ul>
+<h2>2. Top videos</h2>
+<h3>Top 15 long-form</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: right;">Views</th>
+<th>Date</th>
+<th style="text-align: right;">Dur</th>
+<th>Category</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">385,205</td>
+<td>2026-08-25</td>
+<td style="text-align: right;">10:02</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=sGtEBUIppYc">Rockefeller Explained in 10 Minutes</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">294,004</td>
+<td>2026-06-22</td>
+<td style="text-align: right;">11:29</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=CAsim5HC-uI">How the Great Depression Actually Happened (The Fatal Decisions)</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">249,538</td>
+<td>2026-05-02</td>
+<td style="text-align: right;">9:30</td>
+<td>Energy, oil &amp; commodities</td>
+<td><a href="https://www.youtube.com/watch?v=0k5C-MrLjAI">Strait of Hormuz Explained Like You're 5</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">189,476</td>
+<td>2026-06-15</td>
+<td style="text-align: right;">11:47</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=SwO1JS_9MCw">The Mistake That Started World War 2</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">152,354</td>
+<td>2026-10-14</td>
+<td style="text-align: right;">11:16</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=jjRo2QSMybU">The Rise (And Fall?) of BYD in 11 Minutes</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">86,396</td>
+<td>2026-04-03</td>
+<td style="text-align: right;">11:59</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/watch?v=du4FfP8UY6k">Epstein: The $1.9 Billion Mystery Nobody Can Explain</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">54,627</td>
+<td>2026-07-23</td>
+<td style="text-align: right;">10:57</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=GDlvUd_BUPY">The Rise of SpaceX Explained in 11 Minutes</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">40,603</td>
+<td>2026-11-02</td>
+<td style="text-align: right;">11:33</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=uJ_vkUHLJNs">The Rothschilds Explained in 11 Minutes</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">33,116</td>
+<td>2026-08-28</td>
+<td style="text-align: right;">11:10</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=WgpX3oyOKY4">The Rise of OpenAI Explained in 11 Minutes</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">6,379</td>
+<td>2026-02-23</td>
+<td style="text-align: right;">11:48</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=HA1BLrrkYjg">If Every Country is in Debt, Who Owns the Money?</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5,558</td>
+<td>2026-02-22</td>
+<td style="text-align: right;">12:15</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=Voky9e_WNHY">When $100 Trillion Couldn't Buy a Bread</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">5,396</td>
+<td>2026-03-27</td>
+<td style="text-align: right;">11:50</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=F0q0tg7JHKI">FTX Collapse Explained Like You're 5</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5,128</td>
+<td>2026-05-18</td>
+<td style="text-align: right;">11:31</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=Fv3STb4g23Q">BlackRock: The Conspiracies You're Currently Living In</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. Recent uploads (newest 12, any type)</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th style="text-align: right;">Views</th>
+<th style="text-align: right;">Age (d)</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-11-02</td>
+<td>Long</td>
+<td style="text-align: right;">40,603</td>
+<td style="text-align: right;">17</td>
+<td>The Rothschilds Explained in 11 Minutes</td>
+</tr>
+<tr>
+<td>2026-10-14</td>
+<td>Long</td>
+<td style="text-align: right;">152,354</td>
+<td style="text-align: right;">36</td>
+<td>The Rise (And Fall?) of BYD in 11 Minutes</td>
+</tr>
+<tr>
+<td>2026-08-28</td>
+<td>Long</td>
+<td style="text-align: right;">33,116</td>
+<td style="text-align: right;">83</td>
+<td>The Rise of OpenAI Explained in 11 Minutes</td>
+</tr>
+<tr>
+<td>2026-08-25</td>
+<td>Long</td>
+<td style="text-align: right;">385,205</td>
+<td style="text-align: right;">86</td>
+<td>Rockefeller Explained in 10 Minutes</td>
+</tr>
+<tr>
+<td>2026-07-23</td>
+<td>Long</td>
+<td style="text-align: right;">54,627</td>
+<td style="text-align: right;">119</td>
+<td>The Rise of SpaceX Explained in 11 Minutes</td>
+</tr>
+<tr>
+<td>2026-06-22</td>
+<td>Long</td>
+<td style="text-align: right;">294,004</td>
+<td style="text-align: right;">150</td>
+<td>How the Great Depression Actually Happened (The Fatal Decisions)</td>
+</tr>
+<tr>
+<td>2026-06-15</td>
+<td>Long</td>
+<td style="text-align: right;">189,476</td>
+<td style="text-align: right;">157</td>
+<td>The Mistake That Started World War 2</td>
+</tr>
+<tr>
+<td>2026-05-18</td>
+<td>Long</td>
+<td style="text-align: right;">5,128</td>
+<td style="text-align: right;">185</td>
+<td>BlackRock: The Conspiracies You're Currently Living In</td>
+</tr>
+<tr>
+<td>2026-05-02</td>
+<td>Long</td>
+<td style="text-align: right;">249,538</td>
+<td style="text-align: right;">201</td>
+<td>Strait of Hormuz Explained Like You're 5</td>
+</tr>
+<tr>
+<td>2026-04-03</td>
+<td>Long</td>
+<td style="text-align: right;">86,396</td>
+<td style="text-align: right;">230</td>
+<td>Epstein: The $1.9 Billion Mystery Nobody Can Explain</td>
+</tr>
+<tr>
+<td>2026-03-27</td>
+<td>Long</td>
+<td style="text-align: right;">5,396</td>
+<td style="text-align: right;">237</td>
+<td>FTX Collapse Explained Like You're 5</td>
+</tr>
+<tr>
+<td>2026-02-23</td>
+<td>Long</td>
+<td style="text-align: right;">6,379</td>
+<td style="text-align: right;">269</td>
+<td>If Every Country is in Debt, Who Owns the Money?</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 30 / 60 / 90-day patterns (to 2026-11-19)</h2>
+<table>
+<thead>
+<tr>
+<th>Window</th>
+<th style="text-align: right;">Uploads</th>
+<th style="text-align: right;">Long</th>
+<th style="text-align: right;">Shorts</th>
+<th style="text-align: right;">Long views median</th>
+<th style="text-align: right;">Long views total</th>
+<th style="text-align: right;">Per week</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>last 30 d</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">40,603</td>
+<td style="text-align: right;">40,603</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>last 60 d</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">96,478</td>
+<td style="text-align: right;">192,957</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>last 90 d</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">96,478</td>
+<td style="text-align: right;">611,278</td>
+<td style="text-align: right;">0.3</td>
+</tr>
+<tr>
+<td>last 180 d</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">152,354</td>
+<td style="text-align: right;">1,149,385</td>
+<td style="text-align: right;">0.3</td>
+</tr>
+<tr>
+<td>last 365 d</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">54,627</td>
+<td style="text-align: right;">1,507,780</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+</tbody>
+</table>
+<p>Monthly uploads (last 14 active months): 2026-02: 2L/0S; 2026-03: 1L/0S; 2026-04: 1L/0S; 2026-05: 2L/0S; 2026-06: 2L/0S; 2026-07: 1L/0S; 2026-08: 2L/0S; 2026-10: 1L/0S; 2026-11: 1L/0S</p>
+<p>Long-form upload weekday: Mon 5, Fri 3, Sun 1, Wed 1, Tue 1, Sat 1, Thu 1</p>
+<h2>5. Finance / Economics categories and sub-niche distribution</h2>
+<p>Classification: title-keyword rules (<code>build_data.py</code>), then <strong>audited by reading the titles</strong> (section 9). Labels are INFERRED, not channel-declared.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-niche</th>
+<th>F/E</th>
+<th style="text-align: right;">Long n</th>
+<th style="text-align: right;">Long median views</th>
+<th style="text-align: right;">x channel median</th>
+<th style="text-align: right;">Long total views</th>
+<th style="text-align: right;">Shorts n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Companies, billionaires &amp; business history</td>
+<td>Finance</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">54,627</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">637,917</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Crashes, recessions &amp; crises</td>
+<td>Finance</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">149,700</td>
+<td style="text-align: right;">2.74</td>
+<td style="text-align: right;">299,400</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Energy, oil &amp; commodities</td>
+<td>Economics</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">249,538</td>
+<td style="text-align: right;">4.57</td>
+<td style="text-align: right;">249,538</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td>Economics</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">189,476</td>
+<td style="text-align: right;">3.47</td>
+<td style="text-align: right;">189,476</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Personal finance &amp; consumer</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">86,396</td>
+<td style="text-align: right;">1.58</td>
+<td style="text-align: right;">86,396</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>AI &amp; tech bubble</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">33,116</td>
+<td style="text-align: right;">0.61</td>
+<td style="text-align: right;">33,116</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Debt, Fed &amp; inflation</td>
+<td>Economics</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5,968</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">11,937</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Finance vs Economics (long-form, public views): Finance: 9 videos / 1,056,829 views; Economics: 4 videos / 450,951 views</p>
+<h2>6. Winning and failing topics (long-form, relative to channel long median 54,627)</h2>
+<ul>
+<li>Winners (&gt;= 2x median): <strong>5</strong> of 13; breakouts (&gt;= 5x): <strong>2</strong>; failures (&lt;= 0.5x, older than 60 d): <strong>4</strong> of 11.</li>
+<li>Winners by sub-niche: Companies, billionaires &amp; business history 2; Trade, tariffs &amp; geopolitics 1; Crashes, recessions &amp; crises 1; Energy, oil &amp; commodities 1.</li>
+<li>Failures by sub-niche: Debt, Fed &amp; inflation 2; Companies, billionaires &amp; business history 1; Crashes, recessions &amp; crises 1.</li>
+</ul>
+<p>Breakouts:</p>
+<ul>
+<li>385,205 (7.1x) 2026-08-25 <a href="https://www.youtube.com/watch?v=sGtEBUIppYc">Rockefeller Explained in 10 Minutes</a></li>
+<li>294,004 (5.4x) 2026-06-22 <a href="https://www.youtube.com/watch?v=CAsim5HC-uI">How the Great Depression Actually Happened (The Fatal Decisions)</a></li>
+</ul>
+<p>Lowest long-form (older than 60 d):</p>
+<ul>
+<li>5,128 (0.09x) 2026-05-18 <a href="https://www.youtube.com/watch?v=Fv3STb4g23Q">BlackRock: The Conspiracies You're Currently Living In</a></li>
+<li>5,396 (0.10x) 2026-03-27 <a href="https://www.youtube.com/watch?v=F0q0tg7JHKI">FTX Collapse Explained Like You're 5</a></li>
+<li>5,558 (0.10x) 2026-02-22 <a href="https://www.youtube.com/watch?v=Voky9e_WNHY">When $100 Trillion Couldn't Buy a Bread</a></li>
+<li>6,379 (0.12x) 2026-02-23 <a href="https://www.youtube.com/watch?v=HA1BLrrkYjg">If Every Country is in Debt, Who Owns the Money?</a></li>
+<li>33,116 (0.61x) 2026-08-28 <a href="https://www.youtube.com/watch?v=WgpX3oyOKY4">The Rise of OpenAI Explained in 11 Minutes</a></li>
+<li>54,627 (1.00x) 2026-07-23 <a href="https://www.youtube.com/watch?v=GDlvUd_BUPY">The Rise of SpaceX Explained in 11 Minutes</a></li>
+<li>86,396 (1.58x) 2026-04-03 <a href="https://www.youtube.com/watch?v=du4FfP8UY6k">Epstein: The $1.9 Billion Mystery Nobody Can Explain</a></li>
+<li>189,476 (3.47x) 2026-06-15 <a href="https://www.youtube.com/watch?v=SwO1JS_9MCw">The Mistake That Started World War 2</a></li>
+</ul>
+<h2>7. Title structures (long-form)</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: right;">Share of long titles</th>
+<th style="text-align: right;">Median views with</th>
+<th style="text-align: right;">Median views without</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question mark</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">79,366</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>Contains a digit</td>
+<td style="text-align: right;">77%</td>
+<td style="text-align: right;">70,511</td>
+<td style="text-align: right;">6,379</td>
+</tr>
+<tr>
+<td>Colon</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">45,762</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>Ellipsis</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>ALL-CAPS word</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">78,875</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>Year</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>Starts with how/why/what/is…</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">149,781</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+<tr>
+<td>Addresses you/we</td>
+<td style="text-align: right;">23%</td>
+<td style="text-align: right;">5,396</td>
+<td style="text-align: right;">70,511</td>
+</tr>
+<tr>
+<td>Negative/threat word</td>
+<td style="text-align: right;">15%</td>
+<td style="text-align: right;">45,896</td>
+<td style="text-align: right;">54,627</td>
+</tr>
+</tbody>
+</table>
+<p>Median title length 7 words (top-10 median 8). Feature medians are descriptive; they do not show causation.</p>
+<h2>8. Shorts vs long-form and upload frequency</h2>
+<ul>
+<li>Long-form: 13 items, median views 54,627. Shorts: 0 items, median views 0.</li>
+<li>Whole-history cadence: 0.36 uploads/week (0.36 long, 0.00 Shorts) over 253 days.</li>
+</ul>
+<h2>9. Hook data (first ~60 words of transcript, top 8 long-form)</h2>
+<ul>
+<li><strong>Rockefeller Explained in 10 Minutes</strong> (385,205): "At its peak, one company controlled 90% of America's oil. Every lamp in every home burned on terms it set. The government spent 11 years trying to kill it, and did. The greatest legal victory the country had ever won. The man who built it didn't seem to notice. Two years later, he was the richest human being in recorded"</li>
+<li><strong>How the Great Depression Actually Happened (The Fatal Decisions)</strong> (294,004): "In 1928, an economist at Harvard stood up and told an audience that poverty in America was nearly solved. He wasn't alone in thinking it. Presidents said it. Bankers said it. Confidently, publicly, on the record. One year later, a quarter of the American workforce had nowhere to go. The breadlines stretched around city blocks. Families packed everything [music] they"</li>
+<li><strong>Strait of Hormuz Explained Like You're 5</strong> (249,538): "On February 28th, 2026, the United States and Israel launched nearly 900 strikes on Iran in 12 hours. Military bases, missile sites, nuclear facilities, one of the most devastating opening salvos in modern history. [music] Iran's response didn't come with missiles. It closed a gap of water 21 miles wide. &gt;&gt; [music] &gt;&gt; In the weeks that followed, oil surged"</li>
+<li><strong>The Mistake That Started World War 2</strong> (189,476): "September 30th, 1938, Munich, Germany. Neville Chamberlain just spent 13 hours sitting across from the most dangerous man in Europe and gave him everything he asked for. He flew home to London, stepped off the plane, held the paper up to a crowd of thousands. Peace of our time. He was called a hero, a statesman, the man who just"</li>
+<li><strong>The Rise (And Fall?) of BYD in 11 Minutes</strong> (152,354): "October 2011, a Bloomberg reporter asks Elon Musk if a Chinese battery company called BYD could ever threaten Tesla. Have you seen their car? 15 years later, BYD sells more electric cars in a year than anyone alive, Tesla included. Then the crown nearly kills it. By March 2026, BYD's own factories are running under half capacity. Mega pain. This"</li>
+<li><strong>Epstein: The $1.9 Billion Mystery Nobody Can Explain</strong> (86,396): "August 10th, 2019. A man passed away in a Manhattan jail cell. The guards assigned to watch him hadn't checked in 3 hours. The cameras outside his cell had malfunctioned that night. No official time of death was ever determined. Two days before he was found, he had signed a will. $577 million. The dollars. The media called him a"</li>
+<li><strong>The Rise of SpaceX Explained in 11 Minutes</strong> (54,627): "June 12th, 2026. The largest stock sale in Wall Street history happens on the Nasdaq. Bigger than Saudi Aramco, bigger than any tech company that's ever listed. Hundreds of thousands of people buy in on day one. They get almost no say in how the company is run. Buried in the paperwork, a second class of stock held almost entirely"</li>
+<li><strong>The Rothschilds Explained in 11 Minutes</strong> (40,603): "1815, two decades of war finally end. And within a few years, the kings of Europe are lining up to borrow from the same family. 50 years earlier, that family wasn't legally allowed to own the ground under their own house. The street they lived on had a gate, and every night someone locked it from the outside. Nearly everything"</li>
+</ul>
+<h2>10. Title audit list (all items with assigned sub-niche)</h2>
+<details><summary>Show all 13 titles</summary>
+
+| Date | T | Views | Sub-niche | Title |
+|---|---|---:|---|---|
+| 2026-11-02 | L | 40,603 | Companies, billionaires & business history | The Rothschilds Explained in 11 Minutes |
+| 2026-10-14 | L | 152,354 | Companies, billionaires & business history | The Rise (And Fall?) of BYD in 11 Minutes |
+| 2026-08-28 | L | 33,116 | AI & tech bubble | The Rise of OpenAI Explained in 11 Minutes |
+| 2026-08-25 | L | 385,205 | Companies, billionaires & business history | Rockefeller Explained in 10 Minutes |
+| 2026-07-23 | L | 54,627 | Companies, billionaires & business history | The Rise of SpaceX Explained in 11 Minutes |
+| 2026-06-22 | L | 294,004 | Crashes, recessions & crises | How the Great Depression Actually Happened (The Fatal Decisions) |
+| 2026-06-15 | L | 189,476 | Trade, tariffs & geopolitics | The Mistake That Started World War 2 |
+| 2026-05-18 | L | 5,128 | Companies, billionaires & business history | BlackRock: The Conspiracies You're Currently Living In |
+| 2026-05-02 | L | 249,538 | Energy, oil & commodities | Strait of Hormuz Explained Like You're 5 |
+| 2026-04-03 | L | 86,396 | Personal finance & consumer | Epstein: The $1.9 Billion Mystery Nobody Can Explain |
+| 2026-03-27 | L | 5,396 | Crashes, recessions & crises | FTX Collapse Explained Like You're 5 |
+| 2026-02-23 | L | 6,379 | Debt, Fed & inflation | If Every Country is in Debt, Who Owns the Money? |
+| 2026-02-22 | L | 5,558 | Debt, Fed & inflation | When $100 Trillion Couldn't Buy a Bread |
+
+</details>

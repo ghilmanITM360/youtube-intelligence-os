@@ -1,0 +1,546 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Strict State Audit</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.5;color:#1a1a1a}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}th,td{border:1px solid #ccc;padding:6px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd;padding-bottom:4px}a{color:#0b5cd5}</style><p><a href='../START_HERE.html'>&larr; START HERE</a></p><h1>Strict State Audit and Execution Accountability (2026-11-19)</h1>
+<p>Scope: the six competitors only (Casual Finance, Monkey Economics, MonkeyExplains, Crayon Capital, Paper Billions, Capital Case). The other 66 channels in the DB are reference data, not primary. No new research, no existing file changed, no correction started. Earlier claims are not evidence; every number below was recounted from <code>data/catalog/finance_economics_complete.db</code> (read-only) or from a file I name.</p>
+<p>Status words: COMPLETE / PARTIAL / NOT STARTED / FILE-ONLY (a file exists, no real work behind it) / SUPERFICIAL / FALSELY SHOWN COMPLETE / DELAYED.</p>
+<h2>1. Folder-by-folder status</h2>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th style="text-align: right;">Files</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01_PROJECT_OVERVIEW</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>Playbook pp. 109-262, 285-317, 353-424, 440-553 outline-level only; DS-000011/18 "not re-read today" (file line 19)</td>
+<td>knowledge documents summarised, not applied rule by rule</td>
+</tr>
+<tr>
+<td>02_FINANCE_CHANNEL_MASTER_INVENTORY</td>
+<td style="text-align: right;">2</td>
+<td>COMPLETE</td>
+<td>72 channels / 3,832 videos from DB</td>
+<td>counted from data</td>
+</tr>
+<tr>
+<td>03_PRIMARY_REFERENCE_CHANNELS</td>
+<td style="text-align: right;">4</td>
+<td>PARTIAL</td>
+<td>one combined strength matrix, no per-channel report</td>
+<td>six forensic reports were never written</td>
+</tr>
+<tr>
+<td>04_ADDITIONAL_FINANCE_CHANNELS</td>
+<td style="text-align: right;">1</td>
+<td>OUT OF SCOPE</td>
+<td>learnings from other channels</td>
+<td>not the six</td>
+</tr>
+<tr>
+<td>05_FRESH_COMPETITOR_DATA</td>
+<td style="text-align: right;">14</td>
+<td>PARTIAL</td>
+<td>R1-R3 raw + SHA256; 3 of 6 channels fully refreshed; MonkeyExplains 73 of 149 videos; Paper Billions 6 videos</td>
+<td>$1.72 of $1.956 went to R2/R3, which included channels outside the six</td>
+</tr>
+<tr>
+<td>06_VIDEO_TRANSCRIPTS</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>manifest of 3,617 rows; 3,577 of 3,832 videos have text</td>
+<td>manifest is an index, not analysis</td>
+</tr>
+<tr>
+<td>07_THUMBNAIL_LIBRARY</td>
+<td style="text-align: right;">68</td>
+<td>PARTIAL</td>
+<td>58 thumbnails of the six (CF 14, ME 11, MEx 13, Crayon 9, CC 8, PB 6); contact sheets viewed top 12 per channel</td>
+<td>966-thumbnail review never done</td>
+</tr>
+<tr>
+<td>08_VISUAL_STORYTELLING_INTELLIGENCE</td>
+<td style="text-align: right;">1</td>
+<td>NOT STARTED (README says so)</td>
+<td>needs video media, none acquired</td>
+<td>the honest state</td>
+</tr>
+<tr>
+<td>09_TOPIC_DISCOVERY</td>
+<td style="text-align: right;">4</td>
+<td>PARTIAL</td>
+<td>25 seeds screened, 0 approved</td>
+<td>seeds came from my own Phase C keyword classification, not from the six channels' winners</td>
+</tr>
+<tr>
+<td>10_SUB_NICHE_RESEARCH</td>
+<td style="text-align: right;">6</td>
+<td>SUPERFICIAL</td>
+<td>keyword classification of titles; 18 of 161 six-channel rows "Unclassified"</td>
+<td>title keywords only</td>
+</tr>
+<tr>
+<td>11_GOOGLE_TRENDS_AND_NEWS</td>
+<td style="text-align: right;">1</td>
+<td>PARTIAL</td>
+<td>Trends viewed by eye, US, 12 months</td>
+<td>no export, no per-topic series</td>
+</tr>
+<tr>
+<td>12_YOUTUBE_SEARCH_AND_SUGGESTED</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>autocomplete + logged-out searches; Suggested test failed (personalised)</td>
+<td>Suggested overlap UNKNOWN</td>
+</tr>
+<tr>
+<td>13_TITLE_MODELS / 13_WINNING_TITLE_MODELS</td>
+<td style="text-align: right;">5 + 1</td>
+<td>PARTIAL</td>
+<td>lift test over 64 channels found no separating feature; second folder is a pointer README</td>
+<td>duplicate folder name; model is weak</td>
+</tr>
+<tr>
+<td>14_WINNING_THUMBNAIL_MODELS</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>observation of 58 images; causal claims barred</td>
+<td>observation, not proof</td>
+</tr>
+<tr>
+<td>15_SCRIPT_AND_HOOK_INTELLIGENCE</td>
+<td style="text-align: right;">1</td>
+<td>FILE-ONLY</td>
+<td>pointer README</td>
+<td>hook analysis sits in 13_TITLE_MODELS</td>
+</tr>
+<tr>
+<td>16_CHANNEL_POSITIONING</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>three concepts, owner decisions logged</td>
+<td>rests on unvalidated topics</td>
+</tr>
+<tr>
+<td>17_TOPIC_VALIDATION</td>
+<td style="text-align: right;">4</td>
+<td>PARTIAL</td>
+<td>0 topics fully validated; L4 gas rejected; V1, V2, L3, new L4 CONDITIONAL</td>
+<td>no topic has all required evidence</td>
+</tr>
+<tr>
+<td>18_CONTENT_PACKAGING</td>
+<td style="text-align: right;">1</td>
+<td>PARTIAL</td>
+<td>titles/thumbnail briefs for V1/V2</td>
+<td>thumbnails not produced</td>
+</tr>
+<tr>
+<td>19_30_DAY_CONTENT_CALENDAR</td>
+<td style="text-align: right;">2</td>
+<td>FALSELY SHOWN COMPLETE</td>
+<td>13 slots, 8 with candidate/conditional topics, 0 validated, S5/S8 and Jan 4 empty</td>
+<td>a calendar existed, but is not publishable</td>
+</tr>
+<tr>
+<td>20_CHANNEL_BRANDING</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>name Beenomics chosen; domain, trademark, other handles UNVERIFIED</td>
+<td>owner decision, not checked fully</td>
+</tr>
+<tr>
+<td>21_PRODUCTION_WORKFLOW</td>
+<td style="text-align: right;">1</td>
+<td>PARTIAL</td>
+<td>20-step workflow, never run end to end</td>
+<td>no video produced</td>
+</tr>
+<tr>
+<td>22_ORIGINALITY_AND_AI_SLOP_AUDIT</td>
+<td style="text-align: right;">1</td>
+<td>PARTIAL</td>
+<td>gate WARN (R7 no images) on 3 scripts; [CHECK] items and C1-C5 open</td>
+<td>manual checks need a human</td>
+</tr>
+<tr>
+<td>23_FINAL_STRATEGY</td>
+<td style="text-align: right;">2</td>
+<td>PARTIAL</td>
+<td>recommendation written before topics were validated</td>
+<td>ordering problem</td>
+</tr>
+<tr>
+<td>24_SOURCE_DATA_AND_REFERENCES</td>
+<td style="text-align: right;">1</td>
+<td>PARTIAL</td>
+<td>reuse/stale audit</td>
+<td>fine as an index</td>
+</tr>
+<tr>
+<td>audit/ (20 files)</td>
+<td style="text-align: right;">20</td>
+<td>COMPLETE as a record</td>
+<td>score 55.5/100, REJECTED</td>
+<td>an audit, not product work</td>
+</tr>
+<tr>
+<td>readable/ (63 files)</td>
+<td style="text-align: right;">63</td>
+<td>OUT OF SCOPE</td>
+<td>HTML reader</td>
+<td>useful, not requested by master prompt</td>
+</tr>
+</tbody>
+</table>
+<h2>2. The six channels (scope check)</h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Videos in DB / reported</th>
+<th>Per-channel forensic report</th>
+<th>Thumbnails seen</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Casual Finance</td>
+<td>223 / 220</td>
+<td>NO</td>
+<td>14</td>
+<td>data complete, analysis shallow</td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>60 / 60</td>
+<td>NO (the old package has no folder)</td>
+<td>11</td>
+<td>data complete, analysis shallow</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>73 / 149 (49%)</td>
+<td>NO</td>
+<td>13</td>
+<td>INCOMPLETE data</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>35 / 30</td>
+<td>NO</td>
+<td>9</td>
+<td>data complete, analysis shallow</td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>13 / 0 reported</td>
+<td>NO</td>
+<td>8</td>
+<td>data present; channel total unknown</td>
+</tr>
+<tr>
+<td>Paper Billions</td>
+<td>6 / unknown</td>
+<td>NO</td>
+<td>6</td>
+<td>INCOMPLETE and suspect</td>
+</tr>
+</tbody>
+</table>
+<p>Count: 0 of 6 properly analysed (no per-channel forensic report, no frame-level or script-structure study); 4 of 6 have usable data; 2 of 6 (MonkeyExplains, Paper Billions) have incomplete data.</p>
+<h2>3. Master prompt compliance</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Status</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Finance AND economics coverage</td>
+<td>PARTIAL</td>
+<td>six channels' 161 classified titles (indicative, keyword-based): economics-leaning (inflation/rates, jobs, geopolitics/trade, ELI5 concepts, crashes/crises, history) 63 = 39%; finance-leaning (personal finance, stocks, crypto, retirement) 41 = 25%; AI/big-tech 35 = 22%; housing 4; unclassified 18. Our own validated/conditional topics lean economics-data; no personal-finance topic exists. Economics was not neglected, finance was.</td>
+</tr>
+<tr>
+<td>Deep competitor forensic analysis</td>
+<td>FAIL</td>
+<td>no per-channel reports, no visual storytelling, no script/hook study of the six beyond top-video openings</td>
+</tr>
+<tr>
+<td>Topics selected from competitor data</td>
+<td>FAIL for 3 of 4</td>
+<td>see section 4</td>
+</tr>
+<tr>
+<td>DS-000011, DS-000018 applied</td>
+<td>PARTIAL / SUPERFICIAL</td>
+<td>summarised in 01_KNOWLEDGE_BASE; not re-read; no per-rule application record</td>
+</tr>
+<tr>
+<td>YouTube Automation Master Playbook</td>
+<td>UNVERIFIED</td>
+<td>92,260 words extracted; about half outline-level only</td>
+</tr>
+<tr>
+<td>Existing PDFs/frameworks practically applied</td>
+<td>FAIL</td>
+<td>reference-framework DB (<code>reference_knowledge.db</code>) was not used for retrieval, so scripts cannot claim "framework-guided"</td>
+</tr>
+<tr>
+<td>Trends/News/YouTube validation</td>
+<td>PARTIAL</td>
+<td>by eye, US, 12 months; new L4 not run in Trends export form</td>
+</tr>
+<tr>
+<td>Titles/thumbnails/visual storytelling</td>
+<td>PARTIAL</td>
+<td>thumbnail model from 58 images; visual storytelling NOT STARTED</td>
+</tr>
+<tr>
+<td>Originality / AI-slop</td>
+<td>PARTIAL</td>
+<td>gate WARN on all 3 scripts; manual C1-C5 open</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Topic-selection audit (counts from DB, titles of the six channels, keyword match)</h2>
+<table>
+<thead>
+<tr>
+<th>Our topic</th>
+<th>Six-channel videos (count, latest, max views)</th>
+<th>Used a six-channel winner as source?</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1 Rent / housing</td>
+<td>14 (Casual Finance 11, latest 2026-11-17, max 2.42M; Capital Case 1; MonkeyExplains 1; Monkey Economics 1)</td>
+<td>Yes for the theme; the angle ("what a rent number measures") is original</td>
+<td>CONDITIONAL; saturated theme, differentiated by angle</td>
+</tr>
+<tr>
+<td>V2 Airfares</td>
+<td>0</td>
+<td>No. Chosen from my own seed list</td>
+<td>NOT VALIDATED against the six; no competitor demand proof inside scope</td>
+</tr>
+<tr>
+<td>L3 Jobs report</td>
+<td>3 (Crayon 1 latest 2026-10-31, 246K; Casual Finance 1, 20K; Monkey Economics 1, 932K)</td>
+<td>Weak</td>
+<td>CONDITIONAL; thin competitor evidence</td>
+</tr>
+<tr>
+<td>New L4 CPI basket</td>
+<td>CPI/inflation 11 (Casual Finance 7, Monkey Economics 3, MonkeyExplains 1); basket-specific videos not isolated</td>
+<td>Partly</td>
+<td>CONDITIONAL; own angle</td>
+</tr>
+<tr>
+<td>Theme AI bubble/IPO (owner-selected)</td>
+<td>26 (MonkeyExplains 16, Casual Finance 14 overlap by keyword, Paper Billions 4, Crayon 4)</td>
+<td>Yes</td>
+<td>no script drafted for it yet</td>
+</tr>
+<tr>
+<td>Theme inflation-rates-debt</td>
+<td>debt/rates 31</td>
+<td>Yes</td>
+<td>no script yet</td>
+</tr>
+</tbody>
+</table>
+<p>Required per-topic evidence (competitor coverage, upload date, performance, relevance, Trends, News, YouTube search, DS-000011/18 application, original angle): none of the four scripted topics has all nine. Status for all: not fully validated. Only V1 maps cleanly to a six-channel theme; V2 does not map at all. Seeds originated from my own Phase C keyword classification (S1/S2/S3), then were screened, rather than ranked from the six channels' best-performing videos.</p>
+<h2>5. Calendar vs competitor cadence (90-day basis, per 30 days, from DB)</h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Shorts (&lt;=180 s)</th>
+<th style="text-align: right;">Long</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Casual Finance</td>
+<td style="text-align: right;">14.7</td>
+<td style="text-align: right;">3.3</td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">4.3</td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">2.3</td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1.3</td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td style="text-align: right;">-</td>
+<td style="text-align: right;">1.0</td>
+</tr>
+<tr>
+<td>Paper Billions</td>
+<td style="text-align: right;">unknown</td>
+<td style="text-align: right;">unknown</td>
+</tr>
+<tr>
+<td>Our plan (1 long + 2 Shorts/week)</td>
+<td style="text-align: right;">8.7</td>
+<td style="text-align: right;">4.3</td>
+</tr>
+</tbody>
+</table>
+<p>Findings: our long-form rate matches the top of the long-form range (MonkeyExplains 4.3); our Shorts rate is below Casual Finance and above the rest. The benchmark leans on Casual Finance (the only channel with high Shorts volume). The 1+2 rate is an owner capacity statement (15-20 h, unmeasured), not derived from competitor evidence. Realism: UNKNOWN until one video is actually produced and timed. Shorts format is approximated from duration; the <code>video_type</code> column is inconsistent.</p>
+<h2>6. Scope creep and delay</h2>
+<table>
+<thead>
+<tr>
+<th>Work not asked for in the master prompt or outside the six</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R2/R3 refreshes of additional channels ($1.72 of $1.956)</td>
+<td>owner approved, but used the budget before MonkeyExplains and Paper Billions were completed</td>
+</tr>
+<tr>
+<td>Thumbnails/title lift over 64 channels</td>
+<td>six-channel depth postponed</td>
+</tr>
+<tr>
+<td>Phases A-14 plus 20-file audit plus 63-page HTML reader plus naming rounds (33 names)</td>
+<td>time spent on packaging and branding before topics were validated</td>
+</tr>
+<tr>
+<td>Three scripts (V1, V2, L3)</td>
+<td>written while 0 topics were validated</td>
+</tr>
+<tr>
+<td>Calendar dates, V1/V2 order</td>
+<td>decided before validation</td>
+</tr>
+</tbody>
+</table>
+<p>Stop expansion: no more channels, no more naming work, no more scripts until the six-channel work and topic validation below are done.</p>
+<h2>7. Final accountability table</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Remaining Work</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Six-channel data</td>
+<td>PARTIAL (4/6 usable)</td>
+<td>DB counts above</td>
+<td>MonkeyExplains 76 videos, Paper Billions total</td>
+<td>paid refresh needs estimate and approval</td>
+</tr>
+<tr>
+<td>Six per-channel forensic reports</td>
+<td>NOT STARTED</td>
+<td>no files</td>
+<td>six reports</td>
+<td>only a combined matrix was written</td>
+</tr>
+<tr>
+<td>Visual storytelling</td>
+<td>NOT STARTED</td>
+<td>08 README</td>
+<td>needs media</td>
+<td>no video acquired</td>
+</tr>
+<tr>
+<td>Thumbnail model</td>
+<td>PARTIAL</td>
+<td>58 images</td>
+<td>review remaining ~900</td>
+<td>observation only</td>
+</tr>
+<tr>
+<td>Topic selection from six channels</td>
+<td>FAIL</td>
+<td>section 4</td>
+<td>re-rank from six-channel winners</td>
+<td>seeds were self-classified</td>
+</tr>
+<tr>
+<td>Topic validation (Trends/News/YouTube)</td>
+<td>PARTIAL</td>
+<td>0 validated</td>
+<td>per-topic nine-item sheet</td>
+<td>evidence collected ad hoc</td>
+</tr>
+<tr>
+<td>DS-000011/18 + Playbook + framework</td>
+<td>SUPERFICIAL</td>
+<td>01 file</td>
+<td>per-rule application, framework DB retrieval</td>
+<td>summarised, not applied</td>
+</tr>
+<tr>
+<td>Calendar</td>
+<td>FALSELY SHOWN COMPLETE</td>
+<td>8 of 13 slots, 0 validated</td>
+<td>fill and validate</td>
+<td>cadence benchmark one-channel</td>
+</tr>
+<tr>
+<td>Scripts V1/V2/L3</td>
+<td>DRAFT</td>
+<td>gate WARN R7</td>
+<td>[CHECK], C1-C5, images</td>
+<td>human steps open</td>
+</tr>
+<tr>
+<td>Branding (Beenomics)</td>
+<td>PARTIAL</td>
+<td>handle checked only</td>
+<td>domain, trademark</td>
+<td>owner tasks</td>
+</tr>
+<tr>
+<td>Uncommitted files</td>
+<td>OPEN</td>
+<td>git status: 3 new, 3 modified</td>
+<td>commit on owner word</td>
+<td>not asked yet</td>
+</tr>
+</tbody>
+</table>
+<h2>8. Answers</h2>
+<ol>
+<li>Actual work completed: data inventory and refresh for 4 of 6 channels, 58-thumbnail observation, primary-source numbers (BLS, IATA, Zillow, GAO, EIA), three draft scripts (gate WARN), a 20-file audit, decisions logged.</li>
+<li>Most important remaining work: six per-channel forensic reports, re-ranking topics from six-channel winners, finishing MonkeyExplains and Paper Billions data.</li>
+<li>Why research stays incomplete: each phase added new surfaces (naming, reader, calendar, scripts) before the previous evidence layer was closed, and the budget went to channels outside the six.</li>
+<li>Original instructions followed? Partly. Data, thumbnails and sourcing yes; deep competitor forensics, framework application and topic-from-competitor selection no.</li>
+<li>Finance and Economics both covered? The competitor set is about 39% economics-leaning, 25% finance-leaning, 22% AI/big-tech. Our topics are economics-data; personal finance is missing.</li>
+<li>Topic selection evidence-based? Not yet. Only V1's theme is backed by six-channel data; V2 has zero six-channel videos.</li>
+<li>Existing documents properly applied? No: summarised, not applied; framework DB unused.</li>
+<li>Exact remaining tasks: (a) approve a paid refresh for MonkeyExplains (+Paper Billions) after estimate, (b) six forensic reports from existing DB/transcripts/thumbnails, (c) re-rank topics from six-channel winners and validate each on the nine-item sheet, (d) apply DS-000011/18 and framework retrieval per rule, (e) rebuild the calendar from validated topics, (f) close the [CHECK] and C1-C5 items, (g) owner: domain, trademark, commit.</li>
+</ol>
+<p>Waiting for owner approval before any correction starts.</p>

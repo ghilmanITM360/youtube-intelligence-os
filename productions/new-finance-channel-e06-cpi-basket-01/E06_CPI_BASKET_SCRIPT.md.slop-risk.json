@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-19T02:59:34+00:00",
+  "script": "productions/new-finance-channel-e06-cpi-basket-01/E06_CPI_BASKET_SCRIPT.md",
+  "sha256": "a50badc7852c173916344987c06aece7e2eca22e3d90418bc1c3c3ee2bbf0569",
+  "title": "What the CPI Basket Actually Counts, and What October's Report Could Not Tell You",
+  "channel": "NEW-FINANCE-CHANNEL-TBD",
+  "project": "new-finance-channel-e06-cpi-basket-01",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no images (header `images:` or --images); visual check skipped"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

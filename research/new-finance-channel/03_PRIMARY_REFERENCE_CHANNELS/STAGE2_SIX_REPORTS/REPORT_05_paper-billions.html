@@ -1,0 +1,377 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Forensic report: Paper Billions</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.55;color:#1a1a1a}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}th,td{border:1px solid #ccc;padding:5px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd;padding-bottom:4px}a{color:#0b5cd5}.box{background:#f6f8fa;border-left:4px solid #0b5cd5;padding:8px 14px;margin:12px 0}@media(prefers-color-scheme:dark){body{background:#15171a;color:#e6e6e6}th{background:#23262b}td,th{border-color:#444}code,.box{background:#23262b}a{color:#7ab4ff}}</style><p><a href='../../START_HERE.html'>&larr; START HERE</a> | <a href='INDEX.html'>Stage 2 index</a></p><p><a href="REPORT_01_monkeyexplains.html">MonkeyExplains</a> | <a href="REPORT_02_casual-finance.html">Casual Finance</a> | <a href="REPORT_03_monkey-economics.html">Monkey Economics</a> | <a href="REPORT_04_crayon-capital.html">Crayon Capital</a> | <b>Paper Billions</b> | <a href="REPORT_06_capital-case.html">Capital Case</a></p><h1>Forensic report 05: Paper Billions</h1>
+<p>Stage 2, 2026-11-19. Scope: this channel only, from <code>finance_economics_complete.db</code> (read-only). Data builder: <code>build_data.py</code>. Classified video list: <code>data/paper-billions_classified.csv</code>.</p>
+<p><strong>Evidence labels:</strong> VERIFIED = read from the DB or raw Apify file. INFERRED = our reading of a pattern. HYPOTHESIS = untested idea. NOT AVAILABLE = no data or media in this workspace. Views are public counts as of the pull dates (2026-11-17 to 2026-11-19). Shorts = duration &lt;= 180 s. No view count proves a cause; there is no CTR or retention data.</p>
+<h1>Part 1. Reading</h1>
+<h2>A. Reading of the channel (INFERRED)</h2>
+<p>PaperBillionsTV has 6 long videos, all uploaded 2026-11-06 to 2026-11-17 (12 days). Together 6.11M views, median 709,991, 14 to 24 min each. Videos are very young (age 2 to 13 days), so the numbers are launch numbers, not settled performance. The channel looks launched with a pre-produced batch: 3.8 uploads a week over 11 days, a pace not seen anywhere else in the set. Stage 1 confirmed that 6 is the complete inventory.</p>
+<h2>B. Finance AND Economics coverage</h2>
+<ul>
+<li>All 6 videos are Finance: AI/Nvidia/Anthropic stories (4 videos about Nvidia, Google or AI chips, 4.69M views; plus the Anthropic IPO video), one markets video ("Why the Stock Market Just Crashed" 1.20M), one IPO video ("The Biggest IPO in History Lost $80 Billion" 224K, about Anthropic).</li>
+<li>Economics: none as a topic. The market-crash video is the only macro-adjacent piece; it explains an Nvidia-driven sell-off and not a data release.</li>
+<li>This leaves Economics as a documented gap at this channel (no housing, no rates, no jobs).</li>
+</ul>
+<h2>C. Winning and failing topics</h2>
+<ul>
+<li>Winner (&gt;= 2x median 709,991): "How a Chinese Spy Got Inside Nvidia" 3.24M (4.6x, 2026-11-10). Strong follow-ups: Jensen Huang 1.35M (2026-11-13), stock-market crash 1.20M (2026-11-08).</li>
+<li>Weak: the two sequel videos about the Chinese-spy theme at 88K and 18K (2026-11-15 and 2026-11-17), and the Anthropic IPO video at 224K. The sequel pair were published only 2 to 4 days ago, so their numbers are not final. HYPOTHESIS: audience fatigue on a repeated theme within a week; alternative: they are simply young.</li>
+<li>No failure can be defined yet (no video older than 60 days).</li>
+</ul>
+<h2>D. Title structures</h2>
+<ul>
+<li>5 of 6 start with how/why/what: "How a Chinese Spy Got...", "Why Nvidia Would Fail Without Jensen Huang", "Why the Stock Market Just Crashed" (the beginning-with-how/why group has median 1.20M).</li>
+<li>Titles name a person or company and a surprising claim; no ellipses, questions, years or second person. The $ figure ("$80 Billion", "$77.5 Billion") appears in 2 of 6 and both are lower than the others (88K, 224K), so a big number alone does not carry a title in this sample.</li>
+<li>Median 7 words.</li>
+</ul>
+<h2>E. Thumbnail patterns</h2>
+<p>Source: 6-image sample (thumbnail model doc): dark background with red and green glow, large caricature of real people (Jensen Huang), numeric overlay ("-$80 BILLION", "NVIDIA -$400B"), panic/sweat expressions. The model doc flagged sensational and sexualised framing in some thumbnails ("BLACKMAIL?", dinner-date framing) as not a model for a serious channel. INFERRED.</p>
+<h2>F. Script and hook structure (VERIFIED text, INFERRED structure)</h2>
+<p>Two hook types. (1) Scene-first thriller: "In Singapore, the boss of the most valuable company on Earth is having dinner with a Chinese spy... American agents are taking pictures. Jensen has no idea." (2) Protagonist formula: "This is Jensen. And Jensen has a huge problem." and "This is Leon. And Leon has three jobs." — this is the same opening formula that MonkeyExplains uses ("This is Sam, and he's got a huge problem"); 2 of 6 PaperBillions videos use it. Other openings give a loss figure first: "On Thursday, Nvidia lost more than four hundred billion dollars in a single morning, and it hadn't done anything wrong." The scripts use character-and-intrigue storytelling for finance news.</p>
+<h2>G. Visual storytelling and editing</h2>
+<p>NOT AVAILABLE (no video files analysed).</p>
+<h2>H. Shorts vs long-form and frequency</h2>
+<p>No Shorts. 6 long in 12 days. Do not treat 3.8 per week as a sustainable cadence: the whole history is 11 days and the batch is probably pre-produced (INFERRED, no evidence of production method). Days of upload: 2026-11-06, 08, 10, 13, 15, 17, i.e. every 2 to 3 days.</p>
+<h2>I. Implications for our channel (HYPOTHESIS)</h2>
+<ol>
+<li>A launch batch at roughly one video every two days produced 6.1M views in 12 days, but we have no evidence that cadence was a cause. 2. Story-first finance news about a single famous company/person outperforms the abstract. 3. The "This is X, and he has a huge problem" formula is shared by two channels, so it is becoming a category trope and should not be our hook. 4. Real-person caricature and clickbait thumbnails are policy and brand risks to avoid.</li>
+</ol>
+<h2>J. Limits</h2>
+<p>n = 6; all videos under 14 days old; no longitudinal view data. DB held only one snapshot of views. No media analysis.</p>
+<h1>Part 2. Data tables</h1>
+<h2>1. Full inventory (VERIFIED from DB)</h2>
+<ul>
+<li>Videos held: <strong>6</strong> (long-form 6, Shorts 0 by duration &lt;= 180 s). Date range 2026-11-06 to 2026-11-17.</li>
+<li>With public view counts: 6. Transcripts held: 6 of 6.</li>
+<li>Views, long-form: total 6,114,081, median 709,991, mean 1,019,013, max 3,237,543.</li>
+<li>Median long-form duration: 16 min 41 s.</li>
+</ul>
+<h2>2. Top videos</h2>
+<h3>Top 15 long-form</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: right;">Views</th>
+<th>Date</th>
+<th style="text-align: right;">Dur</th>
+<th>Category</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3,237,543</td>
+<td>2026-11-10</td>
+<td style="text-align: right;">19:48</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=_MG4v3foET8">How a Chinese Spy Got Inside Nvidia</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1,350,908</td>
+<td>2026-11-13</td>
+<td style="text-align: right;">14:20</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=Vy1m4ZXNzpo">Why Nvidia Would Fail Without Jensen Huang</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1,196,142</td>
+<td>2026-11-08</td>
+<td style="text-align: right;">15:00</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=zEUKLSrbRZk">Why the Stock Market Just Crashed</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">223,840</td>
+<td>2026-11-06</td>
+<td style="text-align: right;">14:08</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=hPCywNDA60o">The Biggest IPO in History Lost $80 Billion</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">87,918</td>
+<td>2026-11-15</td>
+<td style="text-align: right;">24:10</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=DLNT1JfIf6I">How a Chinese Spy Got $77.5 Billion of Nvidia Chips</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">17,730</td>
+<td>2026-11-17</td>
+<td style="text-align: right;">18:22</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=X-hlJ0fdBM4">Why Google Hired a Chinese Spy</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. Recent uploads (newest 12, any type)</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th style="text-align: right;">Views</th>
+<th style="text-align: right;">Age (d)</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-11-17</td>
+<td>Long</td>
+<td style="text-align: right;">17,730</td>
+<td style="text-align: right;">2</td>
+<td>Why Google Hired a Chinese Spy</td>
+</tr>
+<tr>
+<td>2026-11-15</td>
+<td>Long</td>
+<td style="text-align: right;">87,918</td>
+<td style="text-align: right;">4</td>
+<td>How a Chinese Spy Got $77.5 Billion of Nvidia Chips</td>
+</tr>
+<tr>
+<td>2026-11-13</td>
+<td>Long</td>
+<td style="text-align: right;">1,350,908</td>
+<td style="text-align: right;">6</td>
+<td>Why Nvidia Would Fail Without Jensen Huang</td>
+</tr>
+<tr>
+<td>2026-11-10</td>
+<td>Long</td>
+<td style="text-align: right;">3,237,543</td>
+<td style="text-align: right;">9</td>
+<td>How a Chinese Spy Got Inside Nvidia</td>
+</tr>
+<tr>
+<td>2026-11-08</td>
+<td>Long</td>
+<td style="text-align: right;">1,196,142</td>
+<td style="text-align: right;">11</td>
+<td>Why the Stock Market Just Crashed</td>
+</tr>
+<tr>
+<td>2026-11-06</td>
+<td>Long</td>
+<td style="text-align: right;">223,840</td>
+<td style="text-align: right;">13</td>
+<td>The Biggest IPO in History Lost $80 Billion</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 30 / 60 / 90-day patterns (to 2026-11-19)</h2>
+<table>
+<thead>
+<tr>
+<th>Window</th>
+<th style="text-align: right;">Uploads</th>
+<th style="text-align: right;">Long</th>
+<th style="text-align: right;">Shorts</th>
+<th style="text-align: right;">Long views median</th>
+<th style="text-align: right;">Long views total</th>
+<th style="text-align: right;">Per week</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>last 30 d</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">6,114,081</td>
+<td style="text-align: right;">1.4</td>
+</tr>
+<tr>
+<td>last 60 d</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">6,114,081</td>
+<td style="text-align: right;">0.7</td>
+</tr>
+<tr>
+<td>last 90 d</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">6,114,081</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>last 180 d</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">6,114,081</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>last 365 d</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+<td style="text-align: right;">6,114,081</td>
+<td style="text-align: right;">0.1</td>
+</tr>
+</tbody>
+</table>
+<p>Monthly uploads (last 14 active months): 2026-11: 6L/0S</p>
+<p>Long-form upload weekday: Tue 2, Fri 2, Sun 2</p>
+<h2>5. Finance / Economics categories and sub-niche distribution</h2>
+<p>Classification: title-keyword rules (<code>build_data.py</code>), then <strong>audited by reading the titles</strong> (section 9). Labels are INFERRED, not channel-declared.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-niche</th>
+<th>F/E</th>
+<th style="text-align: right;">Long n</th>
+<th style="text-align: right;">Long median views</th>
+<th style="text-align: right;">x channel median</th>
+<th style="text-align: right;">Long total views</th>
+<th style="text-align: right;">Shorts n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI &amp; tech bubble</td>
+<td>Finance</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">719,413</td>
+<td style="text-align: right;">1.01</td>
+<td style="text-align: right;">4,694,099</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Crashes, recessions &amp; crises</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1,196,142</td>
+<td style="text-align: right;">1.68</td>
+<td style="text-align: right;">1,196,142</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Investing, stocks &amp; crypto</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">223,840</td>
+<td style="text-align: right;">0.32</td>
+<td style="text-align: right;">223,840</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Finance vs Economics (long-form, public views): Finance: 6 videos / 6,114,081 views</p>
+<h2>6. Winning and failing topics (long-form, relative to channel long median 709,991)</h2>
+<ul>
+<li>Winners (&gt;= 2x median): <strong>1</strong> of 6; breakouts (&gt;= 5x): <strong>0</strong>; failures (&lt;= 0.5x, older than 60 d): <strong>0</strong> of 0.</li>
+<li>Winners by sub-niche: AI &amp; tech bubble 1.</li>
+<li>Failures by sub-niche: none.</li>
+</ul>
+<p>Breakouts:</p>
+<p>Lowest long-form (older than 60 d):</p>
+<h2>7. Title structures (long-form)</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: right;">Share of long titles</th>
+<th style="text-align: right;">Median views with</th>
+<th style="text-align: right;">Median views without</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question mark</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+</tr>
+<tr>
+<td>Contains a digit</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">155,879</td>
+<td style="text-align: right;">1,273,525</td>
+</tr>
+<tr>
+<td>Colon</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+</tr>
+<tr>
+<td>Ellipsis</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+</tr>
+<tr>
+<td>ALL-CAPS word</td>
+<td style="text-align: right;">17%</td>
+<td style="text-align: right;">223,840</td>
+<td style="text-align: right;">1,196,142</td>
+</tr>
+<tr>
+<td>Year</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+</tr>
+<tr>
+<td>Starts with how/why/what/is…</td>
+<td style="text-align: right;">83%</td>
+<td style="text-align: right;">1,196,142</td>
+<td style="text-align: right;">223,840</td>
+</tr>
+<tr>
+<td>Addresses you/we</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">709,991</td>
+</tr>
+<tr>
+<td>Negative/threat word</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">787,374</td>
+<td style="text-align: right;">642,030</td>
+</tr>
+</tbody>
+</table>
+<p>Median title length 7 words (top-10 median 7). Feature medians are descriptive; they do not show causation.</p>
+<h2>8. Shorts vs long-form and upload frequency</h2>
+<ul>
+<li>Long-form: 6 items, median views 709,991. Shorts: 0 items, median views 0.</li>
+<li>Whole-history cadence: 3.82 uploads/week (3.82 long, 0.00 Shorts) over 11 days.</li>
+</ul>
+<h2>9. Hook data (first ~60 words of transcript, top 8 long-form)</h2>
+<ul>
+<li><strong>How a Chinese Spy Got Inside Nvidia</strong> (3,237,543): "In Singapore, the boss of the most valuable company on Earth is having dinner with a Chinese spy. He's Jensen Huang, who runs Nvidia. She's Alice Huang, no relation, and she runs one of his biggest customers. But here's the strange part. Somewhere nearby, American agents are taking pictures. They know exactly who she is. Jensen has no idea. To"</li>
+<li><strong>Why Nvidia Would Fail Without Jensen Huang</strong> (1,350,908): "This is Jensen. And Jensen has a huge problem. For thirty-three years, he built one company. It almost went broke, and he saved it. He bet a huge share of his profits on software nobody wanted, and waited ten years to be right. He turned a video game chip maker into the most valuable company on Earth. Thirty-three years. And"</li>
+<li><strong>Why the Stock Market Just Crashed</strong> (1,196,142): "On Thursday, Nvidia lost more than four hundred billion dollars in a single morning, and it hadn't done anything wrong. Nobody had. No bank failed. No law passed. The economy looked fine. The S&amp;P five hundred still lost more than two trillion dollars by midmorning. And the Nasdaq needed just six minutes to give back a rally that was one"</li>
+<li><strong>The Biggest IPO in History Lost $80 Billion</strong> (223,840): "In the first six months of this year, the company behind Claude lost eighty billion dollars. That's about eighteen million dollars an hour. Nights included. And Wall Street's answer? We want in. Because Anthropic is about to sell itself to the public, in the biggest IPO ever planned. Wait. It lost how much? Eighty billion. Okay. Where do I tap?"</li>
+<li><strong>How a Chinese Spy Got $77.5 Billion of Nvidia Chips</strong> (87,918): "This is a love letter. And it's the most expensive one ever sent. Inside are two hundred and forty thousand Nvidia chips. Seven and a half billion dollars of them. The kind America banned China from buying. The man holding it is Jensen Huang, who built the most valuable company on Earth. The woman it's going to is a Chinese"</li>
+<li><strong>Why Google Hired a Chinese Spy</strong> (17,730): "This is Leon. And Leon has three jobs. Job one: he's an engineer at Google, on the supercomputers that train its AI. Job two: he's the technology chief of an AI startup in Beijing. Job three: he's the boss of his own AI company in Shanghai. Google only knows about the first one. Where are you going? Lunch. For how"</li>
+</ul>
+<h2>10. Title audit list (all items with assigned sub-niche)</h2>
+<details><summary>Show all 6 titles</summary>
+
+| Date | T | Views | Sub-niche | Title |
+|---|---|---:|---|---|
+| 2026-11-17 | L | 17,730 | AI & tech bubble | Why Google Hired a Chinese Spy |
+| 2026-11-15 | L | 87,918 | AI & tech bubble | How a Chinese Spy Got $77.5 Billion of Nvidia Chips |
+| 2026-11-13 | L | 1,350,908 | AI & tech bubble | Why Nvidia Would Fail Without Jensen Huang |
+| 2026-11-10 | L | 3,237,543 | AI & tech bubble | How a Chinese Spy Got Inside Nvidia |
+| 2026-11-08 | L | 1,196,142 | Crashes, recessions & crises | Why the Stock Market Just Crashed |
+| 2026-11-06 | L | 223,840 | Investing, stocks & crypto | The Biggest IPO in History Lost $80 Billion |
+
+</details>

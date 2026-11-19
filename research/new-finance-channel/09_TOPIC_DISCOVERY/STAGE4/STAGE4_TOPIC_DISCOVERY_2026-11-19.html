@@ -1,0 +1,870 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Stage 4 topic discovery</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.55;color:#1a1a1a}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}th,td{border:1px solid #ccc;padding:5px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd;padding-bottom:4px}a{color:#0b5cd5}.box{background:#f6f8fa;border-left:4px solid #0b5cd5;padding:8px 14px;margin:12px 0}@media(prefers-color-scheme:dark){body{background:#15171a;color:#e6e6e6}th{background:#23262b}td,th{border-color:#444}code,.box{background:#23262b}a{color:#7ab4ff}}</style><p><a href='../../START_HERE.html'>&larr; START HERE</a></p><h1>Stage 4: Finance and Economics topic discovery from the six channels' winners (2026-11-19)</h1>
+<p>Scope: Casual Finance, Monkey Economics, MonkeyExplains, Crayon Capital, PaperBillionsTV, Capital Case only. Discovery only: nothing below is validated (Google Trends, news, YouTube search, demand and competition checks, nine-item sheets are Stages 5 and 6). Read-only on the DB; no spend; nothing committed. Builder <code>build_stage4.py</code>, winners list <code>winners_2026-11-19.csv</code>, candidates <code>topic_candidates_2026-11-19.csv</code>.</p>
+<h2>1. Method (how topics were found)</h2>
+<ol>
+<li><strong>Winners and breakouts</strong>: every public long-form video at &gt;= 2x its own channel's long-form median (42 videos) and every Short at &gt;= 5x its channel's Shorts median (12 Shorts). Member Edition items excluded. Views are snapshots from 2026-11-17 to 2026-11-19; recent videos have had fewer days, so older videos are favoured (see Stage 3 age caveat).</li>
+<li><strong>Seeds</strong>: winners grouped by theme with the first-match clusters of Stage 3 (crisis history, AI bubble, IPOs, rates/Fed, debt, housing, prices, jobs, demographics, origin stories, scams, geopolitics/energy).</li>
+<li><strong>Candidates</strong>: each seed became one or more candidate topics with the winning video(s) that justify it, how many of the six channels already cover it, a hypothesis for an original angle, and a data source that would have to be opened in Stage 5. Where no winner supports a candidate it is flagged, not hidden.</li>
+<li><strong>Decision rule for advancing to Stage 5</strong> (INFERRED rule, our own): at least one competitor winner in the topic's cluster, or an explicit owner theme; an angle that uses public data rather than a news reaction; not dependent on a live event; not dependent on cinematic illustration load. Topics that fail go to HOLD (revisit) or DROP (cluster without winners).</li>
+<li>Framework use: Playbook P01/P06 (cross-validated outliers, competitor overlap), DS-000018 REC-009 (net-new information), and the Stage 3 result that no title or hook rule can be used as a gate.</li>
+</ol>
+<p>Result: <strong>26 candidates; 16 advance to Stage 5, 7 on hold, 3 dropped.</strong> Finance and Economics both advance: Economics 10, Finance 6.</p>
+<h2>2. Candidate topics</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>F/E</th>
+<th>Working topic</th>
+<th>Winner evidence (competitor, views, date)</th>
+<th>Competitor coverage</th>
+<th>Original-angle hypothesis</th>
+<th>Candidate data source</th>
+<th>Saturation</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E01</td>
+<td>E</td>
+<td>Why sellers outnumber buyers but house prices hold (the lock-in gap)</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=Uumnx2Fo6cE">The New American Housing Crisis Has Landed</a> 2,422,378 (2026-09-29)<br>Casual Finance: <a href="https://www.youtube.com/shorts/Es5c2MKzbDg">58% More Home Sellers Than Buyers... So Why Are We Still Pay</a> 168,155 (2026-10-15, Short)</td>
+<td>Casual Finance: 13 housing titles (long 2.42M, 738K; Short 168K); Monkey Economics mortgage Short 2.07M; MonkeyExplains housing-bubble long 276K (1.0x)</td>
+<td>Show the gap between existing mortgage rates and today’s rate by metro, using public series, so the viewer can see why owners do not sell</td>
+<td>FRED/Freddie Mac mortgage rates, Redfin/Realtor.com inventory (not yet opened)</td>
+<td>High (Casual Finance has 13 housing videos)</td>
+<td><strong>ADVANCE (owner theme: housing)</strong></td>
+</tr>
+<tr>
+<td>E02</td>
+<td>E</td>
+<td>Rent: why official rent inflation lags the rent you actually pay</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=Uumnx2Fo6cE">The New American Housing Crisis Has Landed</a> 2,422,378 (2026-09-29)</td>
+<td>No six-channel video on rent; housing cluster has 3 long videos on 2 channels</td>
+<td>Explain the CPI shelter measure and its ~6-month lag against market rent series (earlier work: BLS CPI, Zillow ZORI read in Phase D)</td>
+<td>BLS CPI shelter table, Zillow ZORI (opened earlier)</td>
+<td>Low on rent specifically</td>
+<td><strong>ADVANCE (owner V1; derived indirectly from the housing winner, no rent winner)</strong></td>
+</tr>
+<tr>
+<td>E03</td>
+<td>E</td>
+<td>Rates: why the 30-year yield and the Fed decision hit a household budget</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=xtqbRt94TTw">To Save the Economy... We’re About to Break It</a> 1,585,207 (2026-09-22)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=DgbHW0IqHrI">America Is Walking Into Something It Can't Stop</a> 1,429,484 (2026-09-16)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=0ll9rEtoRrs">The World's Safest Market Is Breaking</a> 1,813,496 (2026-09-01)<br>Monkey Economics: <a href="https://www.youtube.com/watch?v=ePES31n6NV8">The Interest Rates Are Going Up Again...</a> 23,933 (2026-10-13)</td>
+<td>Casual Finance 3 winners (1.43M to 1.81M) among 8 rates titles; Monkey Economics and MonkeyExplains 4 more; median PI of the Fed/rates cluster 1.88x</td>
+<td>Translate one yield move into a mortgage, car loan and credit-card payment with a worked example per week of release</td>
+<td>Treasury auction data, FRED DGS30/MORTGAGE30US (not yet opened)</td>
+<td>High (Casual Finance 8 titles)</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>E04</td>
+<td>E</td>
+<td>National debt: the interest bill per household and what it crowds out</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=bz0OGtrkjv0">The US National Debt Crisis Explained with Bananas</a> 1,920,233 (2025-06-13)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=7K991LgY3tc">America Is Quietly Drowning in Debt</a> 119,708 (2025-11-20)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=IcxhABuHITM">The (Inevitable) United States Debt Crisis</a> 88,497 (2025-12-09)</td>
+<td>MonkeyExplains 1.92M breakout (7.0x); Casual Finance 119K and 88K; debt cluster median PI 0.21x, so the breakout is one-off</td>
+<td>Use the Monthly Treasury Statement to compare interest outlays with defence, Medicare, education per household</td>
+<td>Treasury MTS, CBO (not yet opened)</td>
+<td>High (26 debt titles, Casual Finance 18)</td>
+<td><strong>ADVANCE conditional: one breakout, weak cluster</strong></td>
+</tr>
+<tr>
+<td>E06</td>
+<td>E</td>
+<td>Inflation basket: which prices are actually rising and which are not</td>
+<td>Monkey Economics: <a href="https://www.youtube.com/watch?v=HCOr-nryE0Y">The New Inflation Is Here... And You Dont Even Know it Yet</a> 21,531 (2026-10-25)<br>Casual Finance: <a href="https://www.youtube.com/shorts/turJ6VMfUjI">Why You (Mathematically) Need Inflation</a> 389,111 (2026-08-02, Short)</td>
+<td>Monkey Economics 21.5K winner (2.1x); Casual Finance Short 389K (17.5x); cluster 1.88x</td>
+<td>One-chart-per-category CPI components for the latest release; "official number vs your basket"</td>
+<td>BLS CPI release tables (opened earlier)</td>
+<td>Medium</td>
+<td><strong>ADVANCE (owner theme: inflation)</strong></td>
+</tr>
+<tr>
+<td>E07</td>
+<td>E</td>
+<td>One price decomposed: why memory/RAM and other hardware got expensive</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=IfOREULEqRU">RAM Prices Are Worse Than You Think</a> 687,982 (2026-01-18)</td>
+<td>MonkeyExplains only (688K, 2.5x)</td>
+<td>Same "who gets each dollar" decomposition used for the gas and airfare ideas, applied to DRAM contract prices and demand from AI data centres</td>
+<td>DRAM contract price trackers, company filings (not yet opened)</td>
+<td>Low (1 channel)</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>E08</td>
+<td>E</td>
+<td>Airfares: what an airline ticket pays for (owner V2)</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=IfOREULEqRU">RAM Prices Are Worse Than You Think</a> 687,982 (2026-01-18)<br>Capital Case: <a href="https://www.youtube.com/watch?v=0k5C-MrLjAI">Strait of Hormuz Explained Like You're 5</a> 249,538 (2026-05-02)</td>
+<td>No six-channel video on airfares (strict audit finding); related only through the price-decomposition and fuel winners</td>
+<td>BLS CPI airline fares and IATA cost breakdown read earlier (airfares +22.4% in the CPI table)</td>
+<td>BLS, IATA (opened earlier)</td>
+<td>Low</td>
+<td><strong>ADVANCE CONDITIONAL: no direct competitor winner; Stage 5 must prove demand</strong></td>
+</tr>
+<tr>
+<td>E09</td>
+<td>E</td>
+<td>Fuel shocks: how a strait closure becomes a pump price</td>
+<td>Capital Case: <a href="https://www.youtube.com/watch?v=0k5C-MrLjAI">Strait of Hormuz Explained Like You're 5</a> 249,538 (2026-05-02)<br>MonkeyExplains: <a href="https://www.youtube.com/watch?v=5x5IaKO6R5I">The One Shortage America Can't Fix</a> 282,642 (2026-10-18)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=Xkk9GnnJHBg">Why the Oil Crisis Is (Secretly) Good...</a> 137,305 (2026-03-31)</td>
+<td>Capital Case 250K (4.6x), MonkeyExplains 283K, Casual Finance 137K; Iran/oil cluster median 0.62x</td>
+<td>EIA pump-price breakdown (earlier L4, rejected in Phase D as "gasoline", kept only if an event angle exists)</td>
+<td>EIA gasoline composition (opened earlier)</td>
+<td>High (20 oil/fuel titles, MonkeyExplains 9)</td>
+<td><strong>ADVANCE conditional (earlier rejection must be re-justified)</strong></td>
+</tr>
+<tr>
+<td>E11</td>
+<td>E</td>
+<td>Jobs: what the monthly jobs number measures and why it is revised</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=GQG-yWSSdDk">America's Job Market Is Completely F*cked</a> 300,802 (2026-08-30)<br>Monkey Economics: <a href="https://www.youtube.com/watch?v=GkJCXwm7Ous">Stop Being Good at Your Job...</a> 211,692 (2026-04-01)</td>
+<td>MonkeyExplains 301K (1.1x); Monkey Economics careers 212K (20.7x); jobs cluster has 4 long videos</td>
+<td>Household vs payroll survey, revisions, with the actual release (earlier L3)</td>
+<td>BLS CPS and Employment Situation notes (opened earlier)</td>
+<td>Low</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>E12</td>
+<td>E</td>
+<td>Ageing economies: what a shrinking population does to growth</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=rgm0ZDdNLOA">The South Korean Population Disaster Explained using Monkeys</a> 500,813 (2025-08-14)<br>Casual Finance: <a href="https://www.youtube.com/shorts/rSa2aziEsAI">Why Japan's Economy Is Awful</a> 279,072 (2026-08-26, Short)</td>
+<td>MonkeyExplains 501K; Casual Finance Short 279K (12.5x); China/other-countries cluster median 1.48x</td>
+<td>Country comparison on one chart (working-age population vs GDP per worker) using UN and World Bank series</td>
+<td>UN WPP, World Bank (not yet opened)</td>
+<td>Low for ageing itself; Japan is covered by Casual Finance (11 titles)</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>F01</td>
+<td>F</td>
+<td>AI companies: the revenue-versus-spend arithmetic behind the bubble debate</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=7rtn4doHIuY">Why Hasn't The AI Bubble Popped (Yet)?</a> 2,660,895 (2026-11-01)<br>MonkeyExplains: <a href="https://www.youtube.com/watch?v=LfQIJgU_W2w">The OpenAI Bubble is Worse Than You Think</a> 1,325,113 (2025-12-04)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=HXlcMbxzz0U">The AI Bubble Survives on $1.65 Trillion in Hidden Debt</a> 550,530 (2026-08-01)<br>Paper Billions: <a href="https://www.youtube.com/watch?v=hPCywNDA60o">The Biggest IPO in History Lost $80 Billion</a> 223,840 (2026-11-06)</td>
+<td>MonkeyExplains 6 winners, Casual Finance, Paper Billions, Crayon: 5 channels, 28 long videos, 19.4M views</td>
+<td>Only with a distinct data angle: capex per dollar of revenue from company filings, per company, updated each quarter</td>
+<td>SEC filings (not yet opened)</td>
+<td><strong>Very high</strong> (most saturated cluster)</td>
+<td><strong>ADVANCE with warning (owner theme: AI bubble/IPO)</strong></td>
+</tr>
+<tr>
+<td>F02</td>
+<td>F</td>
+<td>How an IPO works and why very large IPOs worry markets</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=-X6YzlY_8tM">The SpaceX IPO... It's Worse Than You Think</a> 1,710,013 (2026-05-21)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=roe3SgezmmU">The Stock Market Is Being Used as a Dumping Ground</a> 1,461,536 (2026-10-04)<br>Casual Finance: <a href="https://www.youtube.com/shorts/10nEByVLya0">The IPO Boom Is the Danger Sign</a> 144,743 (2026-07-22, Short)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=H5GYXhpE5yI">The Rise of Anthropic Explained Like You're 5</a> 1,116,354 (2026-10-16)</td>
+<td>Casual Finance 1.71M, 1.46M, Short 145K; Crayon 1.12M; Capital Case 55K; SpaceX/IPO cluster median 1.25x</td>
+<td>Explain lock-up, float and index inclusion with a worked example; avoids guessing a company’s future</td>
+<td>SEC S-1 and index rules (not yet opened)</td>
+<td>High</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>F04</td>
+<td>F</td>
+<td>Crashes people forgot: the same chart for 1929, 1973, 2000, 2008 and now</td>
+<td>Crayon Capital: <a href="https://www.youtube.com/watch?v=LuEcoqizj0o">The Great Depression Explained Like You’re 5</a> 2,762,821 (2025-08-15)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=KE-WJevx-7c">The 2008 Financial Crisis Explained Like You’re 5</a> 2,285,772 (2025-06-15)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=DKyJABtbF2o">The 1973 Stock Market Crash that Nobody Remembers</a> 1,281,284 (2025-10-03)<br>Capital Case: <a href="https://www.youtube.com/watch?v=CAsim5HC-uI">How the Great Depression Actually Happened (The Fatal Decisi</a> 294,004 (2026-06-22)</td>
+<td>5 channels, 13 long videos, 6 winners, median 1.65x; "nobody remembers" framing worked at Casual Finance (1.28M)</td>
+<td>One drawdown-and-recovery chart per crash on a common axis; add less-covered crashes (1987, 1998, 2000)</td>
+<td>FRED/S&amp;P series (not yet opened)</td>
+<td>High for 1929/2008, low for forgotten ones</td>
+<td><strong>ADVANCE (owner theme: crises/history)</strong></td>
+</tr>
+<tr>
+<td>F05</td>
+<td>F</td>
+<td>AI boom versus dot-com and railroads: is the spending bigger?</td>
+<td>Crayon Capital: <a href="https://www.youtube.com/watch?v=kx_okFl98Vw">The AI Bubble Explained Like You're 5</a> 438,100 (2025-12-12)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=CCXYfrAfW6g">The Dot-Com Bubble Explained Like You're 5</a> 392,754 (2025-10-27)<br>MonkeyExplains: <a href="https://www.youtube.com/watch?v=7rtn4doHIuY">Why Hasn't The AI Bubble Popped (Yet)?</a> 2,660,895 (2026-11-01)</td>
+<td>Intersection of two top clusters; Crayon dot-com 393K (1.3x) and AI bubble 438K</td>
+<td>Capex as a share of GDP on one chart for three booms</td>
+<td>FRED, company capex (not yet opened)</td>
+<td>High on AI, low on the comparison</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>F08</td>
+<td>F</td>
+<td>How the credit-card fee system works (interchange and the duopoly)</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=hn5RqOTOlhk">Explaining how 2 Companies Ruined the Credit Card Market</a> 666,463 (2025-09-12)</td>
+<td>MonkeyExplains only (666K, 2.4x)</td>
+<td>Use public interchange and network-fee data to show where a $100 swipe goes</td>
+<td>Fed/CFPB interchange data (not yet opened)</td>
+<td>Low (3 channels touch credit cards, 1 long winner)</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>F09</td>
+<td>F</td>
+<td>The consumer-debt wave: cards, car loans and who is late</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=YEhsWyY_WKQ">The $2.5 Trillion Credit Wave Nobody Sees Coming</a> 717,296 (2026-06-14)<br>MonkeyExplains: <a href="https://www.youtube.com/watch?v=xrB226MIYyc">The 2 Trillion Credit Wave No One Sees Coming</a> 227,584 (2026-10-11)</td>
+<td>Casual Finance 717K (1.3x) and MonkeyExplains 228K on the same idea</td>
+<td>Use delinquency series by loan type</td>
+<td>NY Fed household debt report (not yet opened)</td>
+<td>Medium (2 channels)</td>
+<td><strong>HOLD: no winner (717K is 1.3x, 228K is 0.8x); fails the decision rule</strong></td>
+</tr>
+<tr>
+<td>F10</td>
+<td>F</td>
+<td>Japan, the yen and why its bond market matters to the US</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=OC1yu0L7jT4">Nobody Wants To Admit Why America Just Bailed Out Japan</a> 779,376 (2026-08-18)<br>Casual Finance: <a href="https://www.youtube.com/shorts/rSa2aziEsAI">Why Japan's Economy Is Awful</a> 279,072 (2026-08-26, Short)<br>Casual Finance: <a href="https://www.youtube.com/shorts/4IZIyIQDrLY">What (Actually) is the Yen Carry Trade?</a> 15,871 (2026-03-19, Short)</td>
+<td>Casual Finance long 779K (1.4x), Shorts 279K (12.5x) and 16K</td>
+<td>Explain the carry trade with one number path; do not predict</td>
+<td>BoJ/Treasury data (not yet opened)</td>
+<td>High (Casual Finance has 11 Japan titles)</td>
+<td><strong>ADVANCE</strong></td>
+</tr>
+<tr>
+<td>E10</td>
+<td>E</td>
+<td>Tariffs: who actually pays</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=bPHZkC1XLcE">Tariff Wars Explained Using Bananas</a> 652,686 (2025-06-01)<br>MonkeyExplains: <a href="https://www.youtube.com/watch?v=bPHZkC1XLcE">Tariff Wars Explained Using Bananas</a> 652,686 (2025-06-01)</td>
+<td>MonkeyExplains 653K and 228K; event-timed</td>
+<td>Import price evidence by product</td>
+<td>BLS import prices (not yet opened)</td>
+<td>Medium</td>
+<td><strong>HOLD: one channel, event-driven, tariffs cluster only 2 videos</strong></td>
+</tr>
+<tr>
+<td>E13</td>
+<td>E</td>
+<td>France and European debt</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=d2n4qXk31TA">The World’s Next Great Crisis Just Started With France</a> 1,363,116 (2026-10-26)</td>
+<td>Casual Finance 1.36M (2.4x)</td>
+<td>Spread chart of French vs German yields</td>
+<td>ECB data (not yet opened)</td>
+<td>Low</td>
+<td><strong>HOLD: event-timed</strong></td>
+</tr>
+<tr>
+<td>E14</td>
+<td>E</td>
+<td>Government shutdown economics</td>
+<td>MonkeyExplains: <a href="https://www.youtube.com/watch?v=ZyHwdD26BtY">The US Shutdown Explained Using Bananas</a> 725,803 (2025-10-29)</td>
+<td>MonkeyExplains 726K (2.6x)</td>
+<td>Cost of shutdown by sector</td>
+<td>CBO</td>
+<td>Low</td>
+<td><strong>HOLD: only valid on a live event</strong></td>
+</tr>
+<tr>
+<td>E15</td>
+<td>E</td>
+<td>Country development stories (Singapore)</td>
+<td>Crayon Capital: <a href="https://www.youtube.com/watch?v=y51JjcymEAY">The Man Who Built Singapore in One Generation</a> 973,784 (2025-12-27)</td>
+<td>Crayon 974K (3.2x)</td>
+<td>Development chart story</td>
+<td>World Bank</td>
+<td>Low</td>
+<td><strong>HOLD: narrative and illustration load; one winner</strong></td>
+</tr>
+<tr>
+<td>F06</td>
+<td>F</td>
+<td>Company and billionaire origin stories</td>
+<td>Crayon Capital: <a href="https://www.youtube.com/watch?v=sMH8WchxQR8">Rockefeller: The First Confirmed Billionaire (And How He Did</a> 1,326,122 (2026-02-28)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=rSgS4wNLLDM">How Jeff Bezos Actually Built Amazon</a> 1,006,867 (2025-11-28)<br>Capital Case: <a href="https://www.youtube.com/watch?v=sGtEBUIppYc">Rockefeller Explained in 10 Minutes</a> 385,205 (2026-08-25)</td>
+<td>Crayon 1.33M, 1.01M; Capital Case 385K; cluster median 0.78x with 12 videos</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Medium</td>
+<td><strong>HOLD: production-heavy, rated a poor core in Phase F, cluster median below 1</strong></td>
+</tr>
+<tr>
+<td>F07</td>
+<td>F</td>
+<td>Famous frauds and scams</td>
+<td>Crayon Capital: <a href="https://www.youtube.com/watch?v=HawmGu7oNrc">The Wolf of Wall Street Scam Explained Like You're 5</a> 4,219,017 (2025-10-03)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=VSbO8vmZNm0">The $63 BILLION Company That Sold Nothing</a> 920,247 (2025-07-19)</td>
+<td>Crayon 4.22M breakout (14x), Enron 920K; cluster median 0.58x with 14 videos</td>
+<td>Forensic accounting angle</td>
+<td>n/a</td>
+<td>Medium</td>
+<td><strong>HOLD: one breakout plus legal-risk care</strong></td>
+</tr>
+<tr>
+<td>E16</td>
+<td>E</td>
+<td>Gold and the dollar system</td>
+<td>Monkey Economics: <a href="https://www.youtube.com/watch?v=Y0aFpODhcXc">Why Gold Always Go Up Explained With Bananas</a> 5,796 (2026-03-12)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=eePIUX0Sd6c">WTF Is Happening To Gold?!</a> 396,046 (2025-12-31)<br>Crayon Capital: <a href="https://www.youtube.com/watch?v=9r-45QPLl-Y">Petrodollar Explained Like You're 5</a> 254,882 (2026-04-30)</td>
+<td>0 winners in cluster; median 0.64x</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Medium</td>
+<td><strong>DROP: no winners</strong></td>
+</tr>
+<tr>
+<td>F11</td>
+<td>F</td>
+<td>Crypto and Bitcoin "scam" claims</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=hbsYaLaN_F8">Crypto Is a Brilliant Scam and I Can Prove It</a> 587,176 (2025-11-03)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=dPoDyl9Ys38">Bitcoin Is a Brilliant Scam and I Can Prove It (Again)</a> 358,189 (2026-03-24)</td>
+<td>Casual Finance 587K and 358K; crypto/fraud cluster 0.58x</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Medium</td>
+<td><strong>DROP: weak cluster, legal and policy risk</strong></td>
+</tr>
+<tr>
+<td>F12</td>
+<td>F</td>
+<td>Private credit and personal-investing basics</td>
+<td>Casual Finance: <a href="https://www.youtube.com/watch?v=7uu6qaCGZsY">Private Credit: The Secret Industry Taking Over Wall Street</a> 48,404 (2025-10-17)<br>Casual Finance: <a href="https://www.youtube.com/watch?v=kwMHrTFCWUE">Every Type of Investor Explained in 6 Minutes</a> 191,741 (2025-09-08)<br>Monkey Economics: <a href="https://www.youtube.com/watch?v=yDaa-Ael_jU">The 5 Money Traps 99% of Monkeys Fall Into...</a> 8,936 (2026-04-05)</td>
+<td>Casual Finance 48K and 192K; Monkey Economics 9K</td>
+<td>n/a</td>
+<td>n/a</td>
+<td>Medium</td>
+<td><strong>DROP: all below channel medians</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>3. Reading the table</h2>
+<ul>
+<li><strong>Open gaps (low saturation with at least one winner):</strong> rent/CPI shelter lag (0 titles in all six channels), hardware price spikes (1 channel), ageing economies as a theme, credit-card fees (1 long winner), jobs-report mechanics. Japan/yen is NOT a gap: Casual Finance has 11 titles on it. Each rests on a single channel's winner or on none, so Stage 5 demand checks are essential.</li>
+<li><strong>Saturated (competitor winners on 4 to 5 channels):</strong> AI companies and crisis history. These advance only because the owner chose those themes; they need a distinct data angle (F01, F04, F05).</li>
+<li><strong>Not derived from any competitor winner:</strong> airfares (E08) and the earlier gasoline idea (E09 in its earlier form). The strict audit found no airfare video in any of the six channels; the only link is the price-decomposition format of the RAM winner. Treat E08 as owner-chosen, not evidence-chosen.</li>
+<li><strong>Strongest single-video evidence:</strong> the AI-bubble question (2.66M), national debt (1.92M breakout), housing crisis (2.42M), crisis history (Crayon 2.76M, 2.29M), and the stock-market-structure trio at Casual Finance. These were mostly delivered by the channels with large subscriber bases (Casual Finance 440K, MonkeyExplains 261K, Crayon 319K), so a new channel should not assume the same reach.</li>
+<li><strong>Shorts:</strong> the highest-view Shorts are basic concept explainers (Monkey Economics bank, laundering, minimum wage, inflation: 3.1M to 7.7M) and short "one claim" Shorts at Casual Finance (up to 389K). Stage 3 and Stage 2 found Shorts did not carry long-form reach, so Shorts concepts stay a format question for Stage 7, not a topic source.</li>
+</ul>
+<h2>4. Winners list (the evidence base)</h2>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Type</th>
+<th>Date</th>
+<th style="text-align: right;">Views</th>
+<th style="text-align: right;">x median</th>
+<th>Sub-niche</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monkey Economics</td>
+<td>L</td>
+<td>2026-04-01</td>
+<td style="text-align: right;">211,692</td>
+<td style="text-align: right;">20.7</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/watch?v=GkJCXwm7Ous">Stop Being Good at Your Job...</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-10-03</td>
+<td style="text-align: right;">4,219,017</td>
+<td style="text-align: right;">14.0</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=HawmGu7oNrc">The Wolf of Wall Street Scam Explained Like You're 5</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-11-01</td>
+<td style="text-align: right;">2,660,895</td>
+<td style="text-align: right;">9.7</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=7rtn4doHIuY">Why Hasn't The AI Bubble Popped (Yet)?</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-08-15</td>
+<td style="text-align: right;">2,762,821</td>
+<td style="text-align: right;">9.2</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=LuEcoqizj0o">The Great Depression Explained Like You’re 5</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-06-15</td>
+<td style="text-align: right;">2,285,772</td>
+<td style="text-align: right;">7.6</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=KE-WJevx-7c">The 2008 Financial Crisis Explained Like You’re 5</a></td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>L</td>
+<td>2026-08-25</td>
+<td style="text-align: right;">385,205</td>
+<td style="text-align: right;">7.1</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=sGtEBUIppYc">Rockefeller Explained in 10 Minutes</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-06-13</td>
+<td style="text-align: right;">1,920,233</td>
+<td style="text-align: right;">7.0</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=bz0OGtrkjv0">The US National Debt Crisis Explained with Bananas</a></td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>L</td>
+<td>2026-06-22</td>
+<td style="text-align: right;">294,004</td>
+<td style="text-align: right;">5.4</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=CAsim5HC-uI">How the Great Depression Actually Happened (The Fatal Decisions)</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-12-04</td>
+<td style="text-align: right;">1,325,113</td>
+<td style="text-align: right;">4.8</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=LfQIJgU_W2w">The OpenAI Bubble is Worse Than You Think</a></td>
+</tr>
+<tr>
+<td>Paper Billions</td>
+<td>L</td>
+<td>2026-11-10</td>
+<td style="text-align: right;">3,237,543</td>
+<td style="text-align: right;">4.6</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=_MG4v3foET8">How a Chinese Spy Got Inside Nvidia</a></td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>L</td>
+<td>2026-05-02</td>
+<td style="text-align: right;">249,538</td>
+<td style="text-align: right;">4.6</td>
+<td>Energy, oil &amp; commodities</td>
+<td><a href="https://www.youtube.com/watch?v=0k5C-MrLjAI">Strait of Hormuz Explained Like You're 5</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2026-02-28</td>
+<td style="text-align: right;">1,326,122</td>
+<td style="text-align: right;">4.4</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=sMH8WchxQR8">Rockefeller: The First Confirmed Billionaire (And How He Did It)</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-09-29</td>
+<td style="text-align: right;">2,422,378</td>
+<td style="text-align: right;">4.3</td>
+<td>Housing &amp; real estate</td>
+<td><a href="https://www.youtube.com/watch?v=Uumnx2Fo6cE">The New American Housing Crisis Has Landed</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>L</td>
+<td>2025-06-07</td>
+<td style="text-align: right;">43,845</td>
+<td style="text-align: right;">4.3</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=QZdM9DlrMTE">Monkey Economics - How to Start a Business</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-11-11</td>
+<td style="text-align: right;">1,053,556</td>
+<td style="text-align: right;">3.8</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=9hXlMbSMHeU">The AI Bubble Just Claimed Its First Victim</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2026-10-16</td>
+<td style="text-align: right;">1,116,354</td>
+<td style="text-align: right;">3.7</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=H5GYXhpE5yI">The Rise of Anthropic Explained Like You're 5</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-03-10</td>
+<td style="text-align: right;">2,038,798</td>
+<td style="text-align: right;">3.6</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=5umJ63d3rzQ">Brace For Impact.</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-06-23</td>
+<td style="text-align: right;">999,806</td>
+<td style="text-align: right;">3.6</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=sy4HzG_qzKw">The SpaceX Bubble Crash Is Worse Than It Looks</a></td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>L</td>
+<td>2026-06-15</td>
+<td style="text-align: right;">189,476</td>
+<td style="text-align: right;">3.5</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=SwO1JS_9MCw">The Mistake That Started World War 2</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-11-28</td>
+<td style="text-align: right;">1,006,867</td>
+<td style="text-align: right;">3.3</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=rSgS4wNLLDM">How Jeff Bezos Actually Built Amazon</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-09-01</td>
+<td style="text-align: right;">1,813,496</td>
+<td style="text-align: right;">3.2</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=0ll9rEtoRrs">The World's Safest Market Is Breaking</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-12-27</td>
+<td style="text-align: right;">973,784</td>
+<td style="text-align: right;">3.2</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=y51JjcymEAY">The Man Who Built Singapore in One Generation</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-05-21</td>
+<td style="text-align: right;">1,710,013</td>
+<td style="text-align: right;">3.1</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=-X6YzlY_8tM">The SpaceX IPO... It's Worse Than You Think</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2025-07-19</td>
+<td style="text-align: right;">920,247</td>
+<td style="text-align: right;">3.1</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=VSbO8vmZNm0">The $63 BILLION Company That Sold Nothing</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-02-13</td>
+<td style="text-align: right;">838,476</td>
+<td style="text-align: right;">3.0</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=TSJQ8SjcTPk">How did Apestein Get So Rich?</a></td>
+</tr>
+<tr>
+<td>Crayon Capital</td>
+<td>L</td>
+<td>2026-01-10</td>
+<td style="text-align: right;">871,891</td>
+<td style="text-align: right;">2.9</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=GSkySDNmjV8">Palantir Technologies Explained Like You’re 5</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-09-22</td>
+<td style="text-align: right;">1,585,207</td>
+<td style="text-align: right;">2.8</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=xtqbRt94TTw">To Save the Economy... We’re About to Break It</a></td>
+</tr>
+<tr>
+<td>Capital Case</td>
+<td>L</td>
+<td>2026-10-14</td>
+<td style="text-align: right;">152,354</td>
+<td style="text-align: right;">2.8</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/watch?v=jjRo2QSMybU">The Rise (And Fall?) of BYD in 11 Minutes</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-10-04</td>
+<td style="text-align: right;">1,461,536</td>
+<td style="text-align: right;">2.6</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=roe3SgezmmU">The Stock Market Is Being Used as a Dumping Ground</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-09-16</td>
+<td style="text-align: right;">1,429,484</td>
+<td style="text-align: right;">2.6</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=DgbHW0IqHrI">America Is Walking Into Something It Can't Stop</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-07-11</td>
+<td style="text-align: right;">717,058</td>
+<td style="text-align: right;">2.6</td>
+<td>Non-finance (gaming/social/tech culture)</td>
+<td><a href="https://www.youtube.com/watch?v=zLDMOAlWLfc">Stop Killing Games Explained Using Bananas</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-10-29</td>
+<td style="text-align: right;">725,803</td>
+<td style="text-align: right;">2.6</td>
+<td>Government, politics &amp; policy</td>
+<td><a href="https://www.youtube.com/watch?v=ZyHwdD26BtY">The US Shutdown Explained Using Bananas</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-01-18</td>
+<td style="text-align: right;">687,982</td>
+<td style="text-align: right;">2.5</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/watch?v=IfOREULEqRU">RAM Prices Are Worse Than You Think</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-10-26</td>
+<td style="text-align: right;">1,363,116</td>
+<td style="text-align: right;">2.4</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=d2n4qXk31TA">The World’s Next Great Crisis Just Started With France</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>L</td>
+<td>2026-11-09</td>
+<td style="text-align: right;">24,508</td>
+<td style="text-align: right;">2.4</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=UNzjgBbmt3o">Everything Is About To Change On This Day</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-06-01</td>
+<td style="text-align: right;">652,686</td>
+<td style="text-align: right;">2.4</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=bPHZkC1XLcE">Tariff Wars Explained Using Bananas</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2025-09-12</td>
+<td style="text-align: right;">666,463</td>
+<td style="text-align: right;">2.4</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=hn5RqOTOlhk">Explaining how 2 Companies Ruined the Credit Card Market</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2025-10-03</td>
+<td style="text-align: right;">1,281,284</td>
+<td style="text-align: right;">2.3</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=DKyJABtbF2o">The 1973 Stock Market Crash that Nobody Remembers</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>L</td>
+<td>2026-10-13</td>
+<td style="text-align: right;">23,933</td>
+<td style="text-align: right;">2.3</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=ePES31n6NV8">The Interest Rates Are Going Up Again...</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>L</td>
+<td>2026-11-09</td>
+<td style="text-align: right;">1,182,458</td>
+<td style="text-align: right;">2.1</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/watch?v=YUyoWFlaOKg">The Smart People Have Started Looking for the Exit</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>L</td>
+<td>2026-10-25</td>
+<td style="text-align: right;">21,531</td>
+<td style="text-align: right;">2.1</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=HCOr-nryE0Y">The New Inflation Is Here... And You Dont Even Know it Yet</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>L</td>
+<td>2026-07-06</td>
+<td style="text-align: right;">585,401</td>
+<td style="text-align: right;">2.1</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=eXbZrx5XW_k">OpenAI's Financial Crisis Keeps Getting Worse</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-08-02</td>
+<td style="text-align: right;">389,111</td>
+<td style="text-align: right;">17.5</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/turJ6VMfUjI">Why You (Mathematically) Need Inflation</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-09-08</td>
+<td style="text-align: right;">366,349</td>
+<td style="text-align: right;">16.4</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/shorts/Qof71Ef-3EU">The Cheap Money Era Is Coming to an End</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-08-26</td>
+<td style="text-align: right;">279,072</td>
+<td style="text-align: right;">12.5</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/shorts/rSa2aziEsAI">Why Japan's Economy Is Awful</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-06-01</td>
+<td style="text-align: right;">212,576</td>
+<td style="text-align: right;">9.5</td>
+<td>Companies, billionaires &amp; business history</td>
+<td><a href="https://www.youtube.com/shorts/JsK53moCyZA">The SpaceX IPO Nobody Can (Actually) Explain...</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-06-07</td>
+<td style="text-align: right;">206,481</td>
+<td style="text-align: right;">9.3</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/shorts/SYSUh-oow6M">Why Being a Millionaire Doesn't Impress Anyone...</a></td>
+</tr>
+<tr>
+<td>MonkeyExplains</td>
+<td>S</td>
+<td>2026-10-15</td>
+<td style="text-align: right;">131,980</td>
+<td style="text-align: right;">8.5</td>
+<td>AI &amp; tech bubble</td>
+<td><a href="https://www.youtube.com/watch?v=HoMjC5lG6Sk">OpenAI is (Probably) Not Gonna Survive #animation #openai</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>S</td>
+<td>2025-04-28</td>
+<td style="text-align: right;">7,690,991</td>
+<td style="text-align: right;">8.4</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/shorts/rWbZwFnI7dQ">Monkey Economics How Bank Work</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-06-16</td>
+<td style="text-align: right;">173,008</td>
+<td style="text-align: right;">7.8</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/shorts/CFrVTZBYa3Q">You're Celebrating Stocks, They're Heading For The Exits.</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-10-15</td>
+<td style="text-align: right;">168,155</td>
+<td style="text-align: right;">7.5</td>
+<td>Housing &amp; real estate</td>
+<td><a href="https://www.youtube.com/shorts/Es5c2MKzbDg">58% More Home Sellers Than Buyers... So Why Are We Still Paying More?</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-07-22</td>
+<td style="text-align: right;">144,743</td>
+<td style="text-align: right;">6.5</td>
+<td>Investing, stocks &amp; crypto</td>
+<td><a href="https://www.youtube.com/shorts/10nEByVLya0">The IPO Boom Is the Danger Sign</a></td>
+</tr>
+<tr>
+<td>Monkey Economics</td>
+<td>S</td>
+<td>2025-05-21</td>
+<td style="text-align: right;">5,351,485</td>
+<td style="text-align: right;">5.9</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/dyzgdD_kk1o">Monkey Economic Money Laundring</a></td>
+</tr>
+<tr>
+<td>Casual Finance</td>
+<td>S</td>
+<td>2026-06-14</td>
+<td style="text-align: right;">115,334</td>
+<td style="text-align: right;">5.2</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/shorts/4zUVBW2z7dc">How America Mass Produced Degenerates</a></td>
+</tr>
+</tbody>
+</table>
+<h2>5. Review of this report (done 2026-11-19, before Stage 5)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Check</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>Coverage strings were typed by hand</td>
+<td>Keyword search of all six channels' titles (long and Shorts) per candidate</td>
+<td>E01 said "other 5 channels none": wrong, Monkey Economics has a 2.07M mortgage Short and MonkeyExplains a housing-bubble video. E04 debt (26 titles, Casual Finance 18), E09 oil/fuel (20 titles, MonkeyExplains 9), F10 Japan (Casual Finance 11) and E03 rates were rated Medium/Low saturation: corrected to High. E02 rent and E08 airfares confirmed at 0 titles</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Decision rule requires a competitor winner or an owner theme</td>
+<td>Checked each ADVANCE</td>
+<td>F09 consumer debt has no winner (717K = 1.3x, 228K = 0.8x) and no owner theme: <strong>moved to HOLD</strong>. E02 and E08 stay only as owner-chosen conditional topics; E11 (jobs-report mechanics) rests on a careers winner (Stop Being Good at Your Job, 20.7x), not on a jobs-report video</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Winner threshold is relative to each channel's median</td>
+<td>Noted</td>
+<td>Small channels' "winners" can be below large channels' averages; unchanged, stated in Limits</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Dates</td>
+<td>Many winners are old (the 1.92M debt video is 2025-06-13)</td>
+<td>Age is shown in every evidence cell; no change</td>
+</tr>
+</tbody>
+</table>
+<p>After review: <strong>26 candidates; 16 advance, 7 hold, 3 drop.</strong></p>
+<h2>6. Limits</h2>
+<ul>
+<li>Keyword/theme grouping is ours (INFERRED); a topic can be mis-grouped.</li>
+<li>Winner status uses each channel's own median, so a small channel's "winner" can be below a large channel's average video.</li>
+<li>Competitor topic coverage is counted from the DB holdings, not from the full channels (MonkeyExplains 136 of 149; 13 Member items missing).</li>
+<li>No demand, competition, Trends, news or search checks yet: Stage 5.</li>
+</ul>

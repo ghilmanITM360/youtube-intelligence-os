@@ -1,0 +1,700 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Forensic report: Monkey Economics</title><style>body{font-family:system-ui,sans-serif;max-width:1000px;margin:24px auto;padding:0 16px;line-height:1.55;color:#1a1a1a}table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}th,td{border:1px solid #ccc;padding:5px 8px;vertical-align:top;text-align:left}th{background:#f1f1f1}code{background:#f4f4f4;padding:1px 4px}h1,h2{border-bottom:1px solid #ddd;padding-bottom:4px}a{color:#0b5cd5}.box{background:#f6f8fa;border-left:4px solid #0b5cd5;padding:8px 14px;margin:12px 0}@media(prefers-color-scheme:dark){body{background:#15171a;color:#e6e6e6}th{background:#23262b}td,th{border-color:#444}code,.box{background:#23262b}a{color:#7ab4ff}}</style><p><a href='../../START_HERE.html'>&larr; START HERE</a> | <a href='INDEX.html'>Stage 2 index</a></p><p><a href="REPORT_01_monkeyexplains.html">MonkeyExplains</a> | <a href="REPORT_02_casual-finance.html">Casual Finance</a> | <b>Monkey Economics</b> | <a href="REPORT_04_crayon-capital.html">Crayon Capital</a> | <a href="REPORT_05_paper-billions.html">Paper Billions</a> | <a href="REPORT_06_capital-case.html">Capital Case</a></p><h1>Forensic report 03: Monkey Economics</h1>
+<p>Stage 2, 2026-11-19. Scope: this channel only, from <code>finance_economics_complete.db</code> (read-only). Data builder: <code>build_data.py</code>. Classified video list: <code>data/monkey-economics_classified.csv</code>.</p>
+<p><strong>Evidence labels:</strong> VERIFIED = read from the DB or raw Apify file. INFERRED = our reading of a pattern. HYPOTHESIS = untested idea. NOT AVAILABLE = no data or media in this workspace. Views are public counts as of the pull dates (2026-11-17 to 2026-11-19). Shorts = duration &lt;= 180 s. No view count proves a cause; there is no CTR or retention data.</p>
+<h1>Part 1. Reading</h1>
+<h2>A. Reading of the channel (INFERRED)</h2>
+<p>Monkey Economics is a Shorts-first channel that later added a few long videos. Its 42 Shorts total 57.2M views (median 913,379; 18 of 42 above 1M; max 7.69M); its 18 long videos total only 446K (median 10,244, max 212K). The Shorts burst: 6 in April, 18 in May and 10 in June 2025 (34 of 42, 55.4M of the 57.2M Shorts views), then 2 in July, 5 in October 2025 and 1 in August 2026. Long videos came in 2026 (Jan to Apr, then 3 more since October). The channel's size is a Shorts story.</p>
+<h2>B. Finance AND Economics coverage</h2>
+<ul>
+<li>Economics-style concept explainers dominate the Shorts: How Bank Works (7.69M), Money Laundering (5.35M, finance), Golden Exchange (3.73M), Minimum Wage (3.31M), "Just Print More!" inflation (3.14M), How Tariff Works (2.62M), Recession (2.08M), Mortgage (2.07M). These are basic concept explainers: one question, one monkey cast, under a minute (37 to 58 s).</li>
+<li>Long-form: Debt/Fed/inflation (6 long, 3 of the 5 winners), jobs/career (2; "Stop Being Good at Your Job..." 212K is the long outlier, 20.7x median), personal finance (4, all 6K to 9K), trade (2), housing (1, 6.6K).</li>
+<li>Both Finance and Economics are covered, but finance-basics (bank, laundering, gold) and economics-basics (wages, inflation, tariffs) are both explained at beginner level.</li>
+</ul>
+<h2>C. Winning and failing topics</h2>
+<ul>
+<li>Long winners: Stop Being Good at Your Job (212K, 20.7x, breakout), How to Start a Business (44K), Everything Is About To Change On This Day (rare earths, 24.5K), Interest Rates Going Up Again (23.9K), New Inflation (21.5K). Most winners are timely (rare earth deadline, rates) or personal-career framed.</li>
+<li>Shorts winners cluster in the first month of the channel (2025-04-23 to 2025-05-21). They are the same format repeated: "Monkey Economics [Concept]".</li>
+<li>There are no long-form failures below 0.5x in videos older than 60 days, but the bar is low (median 10K). The 6K to 9K videos are personal-finance and housing/market explainers.</li>
+<li>Caution: a channel median of 10,244 means a 2x winner is only 20K views. This channel's long-form data is a weak model for a new channel's ceiling; its Shorts data is the useful signal.</li>
+</ul>
+<h2>D. Title structures</h2>
+<ul>
+<li>Shorts: "Monkey Economics [Concept]" ("How Bank Work", "Minimum Wage", "Ressesion", sic). Plain, un-hooked, with typos. Nothing about the title seems to drive the views; the format and animation are the likely drivers. HYPOTHESIS.</li>
+<li>Long: "..." trailing ellipsis in 6 of 18 (33%, median 16.8K vs 7.5K); second-person ("Stop Being Good at Your Job...", "Why Your Job is a Trap...") in 22%, median 16.8K vs 9.0K; digit titles 28%, median 8.9K.</li>
+<li>No question marks. 7-word median.</li>
+</ul>
+<h2>E. Thumbnail patterns</h2>
+<p>Source: our 11-image sample (thumbnail model doc, viewed 2026-11-19): monkey character in a jungle-office world, white or dark ground, 2 to 4 word text. Shorts thumbnails are vertical frames. INFERRED; no CTR.</p>
+<h2>F. Script and hook structure (VERIFIED text, INFERRED structure)</h2>
+<p>Two scripting styles. (1) Short-form and early long: simplified "Monkey Island have big problem... Monkey government say easy just print more leaves" — broken-English narration of a monkey-economy parable; the concept is explained in a story. (2) 2026 long videos: standard narrated explainers ("Chinese monkeys makes more than 31% of everything manufactured on Earth... that's about to change on November 10..."). A deadline-driven hook ("By the end of this video, you'll know exactly where oil is hiding") appears in the inflation video. The list video "Loopholes that are banned forever.." opens "Number one, ..." straight into item one with no preamble.</p>
+<h2>G. Visual storytelling and editing</h2>
+<p>NOT AVAILABLE. No video files were analysed; transcripts show narration only. Not claimed.</p>
+<h2>H. Shorts vs long-form and frequency</h2>
+<ul>
+<li>Shorts median 913K vs long median 10K: a 89x gap. The April to June 2025 burst (34 Shorts) produced 55.4M of the 57.2M Shorts views.</li>
+<li>Cadence collapsed: 0.74 uploads/week whole history (0.52 Shorts), but only 3 uploads in the last 90 days. The last Shorts batch was 2025-10; one Short in 2026-08.</li>
+<li>Does Shorts virality convert to long-form? The channel's long median is 10K with the Shorts at ~1M, so in this sample it did not convert. INFERRED from two numbers; no analytics.</li>
+<li>Subscribers data in DB lets Shorts reach be compared; not done in Stage 2.</li>
+</ul>
+<h2>I. Implications for our channel (HYPOTHESIS)</h2>
+<ol>
+<li>Concept-explainer Shorts of one basic economics question can reach seven figures, but this does not transfer to long-form views. 2. A Shorts-first plan would need a separate audience-to-long bridge that this channel did not build. 3. Do not model long-form ambitions on this channel.</li>
+</ol>
+<h2>J. Limits</h2>
+<p>DB has all 60 reported. Shorts dated by Apify R2. Views as of the pull dates. No subscriber-conversion data.</p>
+<h1>Part 2. Data tables</h1>
+<h2>1. Full inventory (VERIFIED from DB)</h2>
+<ul>
+<li>Videos held: <strong>60</strong> (long-form 18, Shorts 42 by duration &lt;= 180 s). Date range 2025-04-23 to 2026-11-09.</li>
+<li>With public view counts: 60. Transcripts held: 60 of 60.</li>
+<li>Views, long-form: total 446,143, median 10,244, mean 24,785, max 211,692.</li>
+<li>Views, Shorts: total 57,225,439, median 913,379, max 7,690,991.</li>
+<li>Median long-form duration: 8 min 10 s.</li>
+</ul>
+<h2>2. Top videos</h2>
+<h3>Top 15 long-form</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: right;">Views</th>
+<th>Date</th>
+<th style="text-align: right;">Dur</th>
+<th>Category</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">211,692</td>
+<td>2026-04-01</td>
+<td style="text-align: right;">8:38</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/watch?v=GkJCXwm7Ous">Stop Being Good at Your Job...</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">43,845</td>
+<td>2025-06-07</td>
+<td style="text-align: right;">4:15</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=QZdM9DlrMTE">Monkey Economics - How to Start a Business</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">24,508</td>
+<td>2026-11-09</td>
+<td style="text-align: right;">10:00</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=UNzjgBbmt3o">Everything Is About To Change On This Day</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">23,933</td>
+<td>2026-10-13</td>
+<td style="text-align: right;">9:55</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=ePES31n6NV8">The Interest Rates Are Going Up Again...</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21,531</td>
+<td>2026-10-25</td>
+<td style="text-align: right;">12:00</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=HCOr-nryE0Y">The New Inflation Is Here... And You Dont Even Know it Yet</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">17,331</td>
+<td>2025-06-12</td>
+<td style="text-align: right;">16:09</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/watch?v=-BqoR3LbfkU">Monkey Economics Compilation Part 1</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">15,505</td>
+<td>2026-04-21</td>
+<td style="text-align: right;">8:28</td>
+<td>Other / unclassified</td>
+<td><a href="https://www.youtube.com/watch?v=krWeHgin-E0">Loopholes that are banned forever..</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">11,997</td>
+<td>2026-04-18</td>
+<td style="text-align: right;">9:01</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/watch?v=AhpAwRg79zo">Why Your Job is a Trap...</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11,420</td>
+<td>2026-01-04</td>
+<td style="text-align: right;">5:18</td>
+<td>Crashes, recessions &amp; crises</td>
+<td><a href="https://www.youtube.com/watch?v=97owJXL-8rg">Oversimplified The Great Depression in 5 mins</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">9,069</td>
+<td>2026-01-28</td>
+<td style="text-align: right;">6:14</td>
+<td>Government, politics &amp; policy</td>
+<td><a href="https://www.youtube.com/watch?v=awOgsY9IMbk">The Government Situation Right Now...</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">8,936</td>
+<td>2026-04-05</td>
+<td style="text-align: right;">9:39</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/watch?v=yDaa-Ael_jU">The 5 Money Traps 99% of Monkeys Fall Into...</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7,983</td>
+<td>2026-02-17</td>
+<td style="text-align: right;">6:05</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/watch?v=2JzM2q-Y3qE">It was never about Oil or Gold..</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">7,027</td>
+<td>2026-03-25</td>
+<td style="text-align: right;">10:25</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/watch?v=TlItPXhiwfg">Every Way To Get Rich In 2026 Explained By Monkeys</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">6,590</td>
+<td>2026-04-08</td>
+<td style="text-align: right;">7:52</td>
+<td>Housing &amp; real estate</td>
+<td><a href="https://www.youtube.com/watch?v=TD0d55zLohw">Why No One Can Buy Homes Anymore</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">6,543</td>
+<td>2026-03-22</td>
+<td style="text-align: right;">7:48</td>
+<td>Personal finance &amp; consumer</td>
+<td><a href="https://www.youtube.com/watch?v=oyLEGSHpif4">Monkey Explains EVERY level of Wealth Explain</a></td>
+</tr>
+</tbody>
+</table>
+<h3>Top 8 Shorts</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: right;">Views</th>
+<th>Date</th>
+<th style="text-align: right;">Dur</th>
+<th>Category</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7,690,991</td>
+<td>2025-04-28</td>
+<td style="text-align: right;">0:49</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/shorts/rWbZwFnI7dQ">Monkey Economics How Bank Work</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5,351,485</td>
+<td>2025-05-21</td>
+<td style="text-align: right;">0:49</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/dyzgdD_kk1o">Monkey Economic Money Laundring</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3,727,416</td>
+<td>2025-05-04</td>
+<td style="text-align: right;">0:48</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/ARVgtRiCE_w">Monkey Economics Golden Exchange</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3,309,333</td>
+<td>2025-05-02</td>
+<td style="text-align: right;">0:42</td>
+<td>Jobs, wages &amp; labour</td>
+<td><a href="https://www.youtube.com/shorts/2IO49htPrQg">Monkey Economics Minimum Wage</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3,138,340</td>
+<td>2025-04-25</td>
+<td style="text-align: right;">0:58</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/Jdl13JwUuRM">Monkey Economics Just Print More! - Inflation</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2,618,729</td>
+<td>2025-04-26</td>
+<td style="text-align: right;">0:37</td>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td><a href="https://www.youtube.com/shorts/c_ipt9C1Gas">Monkey Economics How Tariff Works</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2,079,637</td>
+<td>2025-04-23</td>
+<td style="text-align: right;">0:45</td>
+<td>Debt, Fed &amp; inflation</td>
+<td><a href="https://www.youtube.com/shorts/mXNp2L9QR2c">Monkey Economics Ressesion</a></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2,070,053</td>
+<td>2025-05-01</td>
+<td style="text-align: right;">0:45</td>
+<td>Housing &amp; real estate</td>
+<td><a href="https://www.youtube.com/shorts/2Ven3O_l_ew">Monkey Economics How Bank Mortgage Works</a></td>
+</tr>
+</tbody>
+</table>
+<h2>3. Recent uploads (newest 12, any type)</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type</th>
+<th style="text-align: right;">Views</th>
+<th style="text-align: right;">Age (d)</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-11-09</td>
+<td>Long</td>
+<td style="text-align: right;">24,508</td>
+<td style="text-align: right;">10</td>
+<td>Everything Is About To Change On This Day</td>
+</tr>
+<tr>
+<td>2026-10-25</td>
+<td>Long</td>
+<td style="text-align: right;">21,531</td>
+<td style="text-align: right;">25</td>
+<td>The New Inflation Is Here... And You Dont Even Know it Yet</td>
+</tr>
+<tr>
+<td>2026-10-13</td>
+<td>Long</td>
+<td style="text-align: right;">23,933</td>
+<td style="text-align: right;">37</td>
+<td>The Interest Rates Are Going Up Again...</td>
+</tr>
+<tr>
+<td>2026-08-05</td>
+<td>Short</td>
+<td style="text-align: right;">30,325</td>
+<td style="text-align: right;">106</td>
+<td>Bank vs Credit Union</td>
+</tr>
+<tr>
+<td>2026-04-21</td>
+<td>Long</td>
+<td style="text-align: right;">15,505</td>
+<td style="text-align: right;">212</td>
+<td>Loopholes that are banned forever..</td>
+</tr>
+<tr>
+<td>2026-04-18</td>
+<td>Long</td>
+<td style="text-align: right;">11,997</td>
+<td style="text-align: right;">215</td>
+<td>Why Your Job is a Trap...</td>
+</tr>
+<tr>
+<td>2026-04-08</td>
+<td>Long</td>
+<td style="text-align: right;">6,590</td>
+<td style="text-align: right;">225</td>
+<td>Why No One Can Buy Homes Anymore</td>
+</tr>
+<tr>
+<td>2026-04-05</td>
+<td>Long</td>
+<td style="text-align: right;">8,936</td>
+<td style="text-align: right;">228</td>
+<td>The 5 Money Traps 99% of Monkeys Fall Into...</td>
+</tr>
+<tr>
+<td>2026-04-01</td>
+<td>Long</td>
+<td style="text-align: right;">211,692</td>
+<td style="text-align: right;">232</td>
+<td>Stop Being Good at Your Job...</td>
+</tr>
+<tr>
+<td>2026-03-28</td>
+<td>Long</td>
+<td style="text-align: right;">6,178</td>
+<td style="text-align: right;">236</td>
+<td>Stock Market Explain with Bananas</td>
+</tr>
+<tr>
+<td>2026-03-25</td>
+<td>Long</td>
+<td style="text-align: right;">7,027</td>
+<td style="text-align: right;">239</td>
+<td>Every Way To Get Rich In 2026 Explained By Monkeys</td>
+</tr>
+<tr>
+<td>2026-03-22</td>
+<td>Long</td>
+<td style="text-align: right;">6,543</td>
+<td style="text-align: right;">242</td>
+<td>Monkey Explains EVERY level of Wealth Explain</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 30 / 60 / 90-day patterns (to 2026-11-19)</h2>
+<table>
+<thead>
+<tr>
+<th>Window</th>
+<th style="text-align: right;">Uploads</th>
+<th style="text-align: right;">Long</th>
+<th style="text-align: right;">Shorts</th>
+<th style="text-align: right;">Long views median</th>
+<th style="text-align: right;">Long views total</th>
+<th style="text-align: right;">Per week</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>last 30 d</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23,019</td>
+<td style="text-align: right;">46,039</td>
+<td style="text-align: right;">0.5</td>
+</tr>
+<tr>
+<td>last 60 d</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23,933</td>
+<td style="text-align: right;">69,972</td>
+<td style="text-align: right;">0.4</td>
+</tr>
+<tr>
+<td>last 90 d</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">23,933</td>
+<td style="text-align: right;">69,972</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>last 180 d</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">23,933</td>
+<td style="text-align: right;">69,972</td>
+<td style="text-align: right;">0.2</td>
+</tr>
+<tr>
+<td>last 365 d</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">9,002</td>
+<td style="text-align: right;">384,967</td>
+<td style="text-align: right;">0.3</td>
+</tr>
+</tbody>
+</table>
+<p>Monthly uploads (last 14 active months): 2025-04: 0L/6S; 2025-05: 0L/18S; 2025-06: 2L/10S; 2025-07: 0L/2S; 2025-10: 0L/5S; 2026-01: 2L/0S; 2026-02: 1L/0S; 2026-03: 5L/0S; 2026-04: 5L/0S; 2026-08: 0L/1S; 2026-10: 2L/0S; 2026-11: 1L/0S</p>
+<p>Long-form upload weekday: Wed 5, Sun 4, Tue 3, Sat 3, Thu 2, Mon 1</p>
+<h2>5. Finance / Economics categories and sub-niche distribution</h2>
+<p>Classification: title-keyword rules (<code>build_data.py</code>), then <strong>audited by reading the titles</strong> (section 9). Labels are INFERRED, not channel-declared.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-niche</th>
+<th>F/E</th>
+<th style="text-align: right;">Long n</th>
+<th style="text-align: right;">Long median views</th>
+<th style="text-align: right;">x channel median</th>
+<th style="text-align: right;">Long total views</th>
+<th style="text-align: right;">Shorts n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Jobs, wages &amp; labour</td>
+<td>Economics</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">111,844</td>
+<td style="text-align: right;">10.92</td>
+<td style="text-align: right;">223,689</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>Debt, Fed &amp; inflation</td>
+<td>Economics</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">21,531</td>
+<td style="text-align: right;">2.10</td>
+<td style="text-align: right;">112,436</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Trade, tariffs &amp; geopolitics</td>
+<td>Economics</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">16,245</td>
+<td style="text-align: right;">1.59</td>
+<td style="text-align: right;">32,491</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>Personal finance &amp; consumer</td>
+<td>Finance</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6,785</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">28,765</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Other / unclassified</td>
+<td>Unclassified</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15,505</td>
+<td style="text-align: right;">1.51</td>
+<td style="text-align: right;">15,505</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Crashes, recessions &amp; crises</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11,420</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">11,420</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Government, politics &amp; policy</td>
+<td>Economics</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">9,069</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">9,069</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Housing &amp; real estate</td>
+<td>Economics</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6,590</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">6,590</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Investing, stocks &amp; crypto</td>
+<td>Finance</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6,178</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">6,178</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Finance vs Economics (long-form, public views): Economics: 11 videos / 384,275 views; Finance: 6 videos / 46,363 views; Unclassified: 1 videos / 15,505 views</p>
+<h2>6. Winning and failing topics (long-form, relative to channel long median 10,244)</h2>
+<ul>
+<li>Winners (&gt;= 2x median): <strong>5</strong> of 18; breakouts (&gt;= 5x): <strong>1</strong>; failures (&lt;= 0.5x, older than 60 d): <strong>0</strong> of 15.</li>
+<li>Winners by sub-niche: Debt, Fed &amp; inflation 3; Jobs, wages &amp; labour 1; Trade, tariffs &amp; geopolitics 1.</li>
+<li>Failures by sub-niche: none.</li>
+</ul>
+<p>Breakouts:</p>
+<ul>
+<li>211,692 (20.7x) 2026-04-01 <a href="https://www.youtube.com/watch?v=GkJCXwm7Ous">Stop Being Good at Your Job...</a></li>
+</ul>
+<p>Lowest long-form (older than 60 d):</p>
+<ul>
+<li>5,796 (0.57x) 2026-03-12 <a href="https://www.youtube.com/watch?v=Y0aFpODhcXc">Why Gold Always Go Up Explained With Bananas</a></li>
+<li>6,178 (0.60x) 2026-03-28 <a href="https://www.youtube.com/watch?v=M_VyQyd8q38">Stock Market Explain with Bananas</a></li>
+<li>6,259 (0.61x) 2026-03-18 <a href="https://www.youtube.com/watch?v=Ok84V8uQgeI">How EVERYTHING changes After you save $10,000</a></li>
+<li>6,543 (0.64x) 2026-03-22 <a href="https://www.youtube.com/watch?v=oyLEGSHpif4">Monkey Explains EVERY level of Wealth Explain</a></li>
+<li>6,590 (0.64x) 2026-04-08 <a href="https://www.youtube.com/watch?v=TD0d55zLohw">Why No One Can Buy Homes Anymore</a></li>
+<li>7,027 (0.69x) 2026-03-25 <a href="https://www.youtube.com/watch?v=TlItPXhiwfg">Every Way To Get Rich In 2026 Explained By Monkeys</a></li>
+<li>7,983 (0.78x) 2026-02-17 <a href="https://www.youtube.com/watch?v=2JzM2q-Y3qE">It was never about Oil or Gold..</a></li>
+<li>8,936 (0.87x) 2026-04-05 <a href="https://www.youtube.com/watch?v=yDaa-Ael_jU">The 5 Money Traps 99% of Monkeys Fall Into...</a></li>
+</ul>
+<h2>7. Title structures (long-form)</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: right;">Share of long titles</th>
+<th style="text-align: right;">Median views with</th>
+<th style="text-align: right;">Median views without</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question mark</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10,244</td>
+</tr>
+<tr>
+<td>Contains a digit</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">8,936</td>
+<td style="text-align: right;">11,997</td>
+</tr>
+<tr>
+<td>Colon</td>
+<td style="text-align: right;">0%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10,244</td>
+</tr>
+<tr>
+<td>Ellipsis</td>
+<td style="text-align: right;">33%</td>
+<td style="text-align: right;">16,764</td>
+<td style="text-align: right;">7,505</td>
+</tr>
+<tr>
+<td>ALL-CAPS word</td>
+<td style="text-align: right;">11%</td>
+<td style="text-align: right;">6,401</td>
+<td style="text-align: right;">11,708</td>
+</tr>
+<tr>
+<td>Year</td>
+<td style="text-align: right;">6%</td>
+<td style="text-align: right;">7,027</td>
+<td style="text-align: right;">11,420</td>
+</tr>
+<tr>
+<td>Starts with how/why/what/is…</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">6,424</td>
+<td style="text-align: right;">13,462</td>
+</tr>
+<tr>
+<td>Addresses you/we</td>
+<td style="text-align: right;">22%</td>
+<td style="text-align: right;">16,764</td>
+<td style="text-align: right;">9,002</td>
+</tr>
+<tr>
+<td>Negative/threat word</td>
+<td style="text-align: right;">17%</td>
+<td style="text-align: right;">7,983</td>
+<td style="text-align: right;">11,420</td>
+</tr>
+</tbody>
+</table>
+<p>Median title length 7 words (top-10 median 6). Feature medians are descriptive; they do not show causation.</p>
+<h2>8. Shorts vs long-form and upload frequency</h2>
+<ul>
+<li>Long-form: 18 items, median views 10,244. Shorts: 42 items, median views 913,379.</li>
+<li>Whole-history cadence: 0.74 uploads/week (0.22 long, 0.52 Shorts) over 565 days.</li>
+</ul>
+<h2>9. Hook data (first ~60 words of transcript, top 8 long-form)</h2>
+<ul>
+<li><strong>Stop Being Good at Your Job...</strong> (211,692): "Monkey walks through the jungle office, carrying stacks of leaves and papers. Monkey finishes tasks, fixes problems, and helps other monkeys. Monkey feels like everything is going right, but what if doing everything right is exactly what monkey is doing wrong? And that's what is keeping monkey trapped. The beginning. Monkey becomes very good at the jungle job, but monkey"</li>
+<li><strong>Monkey Economics - How to Start a Business</strong> (43,845): "Monkey Boss tried getting a job, but job is not it for Monkey Boss. Monkey Boss worked for 10 hours, but only got paid with Tiny Leaf. Monkey Boss says jobs are lowpaying and work long hours for other Monkey Boss. So, Monkey Boss goes and starts his own business. If Boss Monkey wants to make millions of leaves, Boss"</li>
+<li><strong>Everything Is About To Change On This Day</strong> (24,508): "Chinese monkeys makes more than 31% of everything manufactured on Earth. And that's a big part of why so much of monkey stuff is so cheap. But that's about to change on November 10 because China's temporary pause on certain rare earth export controls is set to expire. Rare earth minerals are used to make everything from smartphones to powerful"</li>
+<li><strong>The Interest Rates Are Going Up Again...</strong> (23,933): "Monkey might think the biggest threat to a paycheck right now is a barista up charging for oat milk or the crypto market crashing again. But the real threat to what monkey pays every month on a treehouse loan, a car loan, or a credit card has nothing to do with lattes. It's sitting quietly inside a marble building in"</li>
+<li><strong>The New Inflation Is Here... And You Dont Even Know it Yet</strong> (21,531): "You've seen the number at the pump go up. What you haven't seen is how it hides in your everyday items. It's baked into your bread, tucked into your plane, and even sitting inside your mortgage rate. By the end of this video, you'll know exactly where oil is hiding and why the number everyone quotes is barely telling half"</li>
+<li><strong>Monkey Economics Compilation Part 1</strong> (17,331): "Monkey Island have big problem. Monkey government broke. Monkey government say easy just print more leaves. Prin or go. Now monkeys have lots of leaves. Monkeys feel rich. Monkeys buy house, buy car, buy a lots of bananas. But banana farmers say, "I didn't grow more bananas. Only the same bananas as last year, but now too many monkeys can"</li>
+<li><strong>Loopholes that are banned forever..</strong> (15,505): "Number one, the monkeys who exploited the lottery system. Most monkeys buy lottery tickets and lose leaves every single time. But a group of very smart monkeys in Massachusetts found a lottery where buying enough tickets almost guaranteed a profit. The lottery was called cash windfall and it had a strange rule called a roll down. The top prize was"</li>
+<li><strong>Why Your Job is a Trap...</strong> (11,997): "If monkey doesn't find a way to make leaves while monkey sleeps, monkey will work until monkey dies. This is not a motivational quote. This is a warning about monkey's future. Welcome to the most dangerous trap in the jungle. Monkey calls it the employee trap. Most monkeys watching this video are currently selling the only asset that monkey cannot"</li>
+</ul>
+<h2>10. Title audit list (all items with assigned sub-niche)</h2>
+<details><summary>Show all 60 titles</summary>
+
+| Date | T | Views | Sub-niche | Title |
+|---|---|---:|---|---|
+| 2026-11-09 | L | 24,508 | Trade, tariffs & geopolitics | Everything Is About To Change On This Day |
+| 2026-10-25 | L | 21,531 | Debt, Fed & inflation | The New Inflation Is Here... And You Dont Even Know it Yet |
+| 2026-10-13 | L | 23,933 | Debt, Fed & inflation | The Interest Rates Are Going Up Again... |
+| 2026-08-05 | S | 30,325 | Investing, stocks & crypto | Bank vs Credit Union |
+| 2026-04-21 | L | 15,505 | Other / unclassified | Loopholes that are banned forever.. |
+| 2026-04-18 | L | 11,997 | Jobs, wages & labour | Why Your Job is a Trap... |
+| 2026-04-08 | L | 6,590 | Housing & real estate | Why No One Can Buy Homes Anymore |
+| 2026-04-05 | L | 8,936 | Personal finance & consumer | The 5 Money Traps 99% of Monkeys Fall Into... |
+| 2026-04-01 | L | 211,692 | Jobs, wages & labour | Stop Being Good at Your Job... |
+| 2026-03-28 | L | 6,178 | Investing, stocks & crypto | Stock Market Explain with Bananas |
+| 2026-03-25 | L | 7,027 | Personal finance & consumer | Every Way To Get Rich In 2026 Explained By Monkeys |
+| 2026-03-22 | L | 6,543 | Personal finance & consumer | Monkey Explains EVERY level of Wealth Explain |
+| 2026-03-18 | L | 6,259 | Personal finance & consumer | How EVERYTHING changes After you save $10,000 |
+| 2026-03-12 | L | 5,796 | Debt, Fed & inflation | Why Gold Always Go Up Explained With Bananas |
+| 2026-02-17 | L | 7,983 | Trade, tariffs & geopolitics | It was never about Oil or Gold.. |
+| 2026-01-28 | L | 9,069 | Government, politics & policy | The Government Situation Right Now... |
+| 2026-01-04 | L | 11,420 | Crashes, recessions & crises | Oversimplified The Great Depression in 5 mins |
+| 2025-10-30 | S | 50,560 | Government, politics & policy | Monkey Explains Gov Shutdown |
+| 2025-10-22 | S | 81,404 | Other / unclassified | Monkey Explains Prohibition |
+| 2025-10-17 | S | 301,294 | Personal finance & consumer | Monkey Explain How to Build Credit |
+| 2025-10-15 | S | 377,620 | Debt, Fed & inflation | Monkey Economics Diamond Economics |
+| 2025-10-14 | S | 131,759 | Debt, Fed & inflation | Monkey Economics Debt Ceiling |
+| 2025-07-05 | S | 332,164 | Debt, Fed & inflation | Monkey Economics Insurance Thing |
+| 2025-07-01 | S | 553,631 | Debt, Fed & inflation | Monkey Economics Cartel |
+| 2025-06-28 | S | 709,062 | Debt, Fed & inflation | Monkey Economics Communist |
+| 2025-06-27 | S | 684,741 | Debt, Fed & inflation | Monkey Economics Government Bailout |
+| 2025-06-25 | S | 542,058 | Debt, Fed & inflation | Monkey Economics Charity |
+| 2025-06-24 | S | 745,289 | Debt, Fed & inflation | Monkey Economics Insider monkey |
+| 2025-06-23 | S | 1,675,716 | Debt, Fed & inflation | Monkey Economics Tax Write Off |
+| 2025-06-21 | S | 396,425 | Debt, Fed & inflation | Monkey Economics Tax Evasion |
+| 2025-06-18 | S | 453,567 | Debt, Fed & inflation | Monkey Economic Capitalism |
+| 2025-06-16 | S | 678,644 | Jobs, wages & labour | Monkey Economics Pension |
+| 2025-06-15 | S | 826,946 | Debt, Fed & inflation | Monkey Economics Disability |
+| 2025-06-13 | S | 964,232 | Debt, Fed & inflation | Monkey Economics Social Security |
+| 2025-06-12 | L | 17,331 | Debt, Fed & inflation | Monkey Economics Compilation Part 1 |
+| 2025-06-07 | L | 43,845 | Debt, Fed & inflation | Monkey Economics - How to Start a Business |
+| 2025-05-31 | S | 896,097 | Debt, Fed & inflation | Monkey Economics Credit Card |
+| 2025-05-30 | S | 609,391 | Debt, Fed & inflation | Monkey Economics Insurance |
+| 2025-05-28 | S | 932,145 | Jobs, wages & labour | Monkey Economics Ghost Jobs |
+| 2025-05-27 | S | 1,025,218 | Debt, Fed & inflation | Monkey Economics Capital Gain Tax |
+| 2025-05-24 | S | 1,607,220 | Debt, Fed & inflation | Monkey Economics Taxes |
+| 2025-05-21 | S | 5,351,485 | Debt, Fed & inflation | Monkey Economic Money Laundring |
+| 2025-05-20 | S | 899,507 | Debt, Fed & inflation | Monkey Economics Treasury Bonds |
+| 2025-05-19 | S | 1,050,661 | Debt, Fed & inflation | Monkey Economics Federal Reserve Bank |
+| 2025-05-15 | S | 464,017 | Debt, Fed & inflation | Monkey Economics How Bank Inflation works |
+| 2025-05-13 | S | 1,715,832 | Debt, Fed & inflation | Monkey Economics Monopoly |
+| 2025-05-10 | S | 1,494,388 | Debt, Fed & inflation | Monkey Economics Union and Strike |
+| 2025-05-08 | S | 1,279,584 | Debt, Fed & inflation | Monkeys Economics Shortage and Surplus |
+| 2025-05-07 | S | 927,252 | Crashes, recessions & crises | Monkey Economics Bank Crash |
+| 2025-05-05 | S | 1,542,108 | Debt, Fed & inflation | Monkey Economics Competition |
+| 2025-05-05 | S | 1,785,132 | Debt, Fed & inflation | Monkey Economics Ponzi Scheme |
+| 2025-05-04 | S | 3,727,416 | Debt, Fed & inflation | Monkey Economics Golden Exchange |
+| 2025-05-02 | S | 3,309,333 | Jobs, wages & labour | Monkey Economics Minimum Wage |
+| 2025-05-01 | S | 2,070,053 | Housing & real estate | Monkey Economics How Bank Mortgage Works |
+| 2025-04-29 | S | 1,413,689 | Debt, Fed & inflation | Monkey Economics How Crypto Works |
+| 2025-04-28 | S | 7,690,991 | Jobs, wages & labour | Monkey Economics How Bank Work |
+| 2025-04-27 | S | 61,777 | Trade, tariffs & geopolitics | Monkey Economics - Tariff |
+| 2025-04-26 | S | 2,618,729 | Trade, tariffs & geopolitics | Monkey Economics How Tariff Works |
+| 2025-04-25 | S | 3,138,340 | Debt, Fed & inflation | Monkey Economics Just Print More! - Inflation |
+| 2025-04-23 | S | 2,079,637 | Debt, Fed & inflation | Monkey Economics Ressesion |
+
+</details>
