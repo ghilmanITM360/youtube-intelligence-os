@@ -1,0 +1,212 @@
+[
+ {
+  "id": "S01",
+  "f0": 0,
+  "f1": 88,
+  "label": "US-map character with yen note popping; caption 'Because America did not buy those yen with dollars'",
+  "layers": "map character; yen note; caption",
+  "assets": "CH_USMAP,PR_YENNOTE",
+  "transition_in": "START",
+  "purpose": "Hook: America did not buy yen with dollars [ART_DIRECTION_INFERENCE]",
+  "notes": "",
+  "no_auto_cut": true
+ },
+ {
+  "id": "S02",
+  "f0": 88,
+  "f1": 127,
+  "label": "Large euro note 'It sold euros.'",
+  "layers": "euro notes; caption",
+  "assets": "PR_EURONOTE",
+  "transition_in": "HARD_CUT",
+  "purpose": "America sold euros [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S03",
+  "f0": 127,
+  "f1": 233,
+  "label": "ECB article on a beige page with highlight; euro notes drifting",
+  "layers": "article screenshot; highlight; euro notes; caption",
+  "assets": "SS_FT_ARTICLE,OV_HIGHLIGHT,PR_EURONOTE",
+  "transition_in": "HARD_CUT",
+  "purpose": "The ECB only found out after the trades [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S04",
+  "f0": 233,
+  "f1": 422,
+  "label": "FT article with highlighted quote; woman on a phone, then host with pointer",
+  "layers": "article; highlight; woman figure; host; red 'never happened before'",
+  "assets": "SS_FT_ARTICLE,OV_HIGHLIGHT,CH_WOMAN,CH_HOST,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "Senior officials: never happened before [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S05",
+  "f0": 422,
+  "f1": 627,
+  "label": "Treasury answer: SBS-style page, Treasury seal rising; 'It's MY money and I do what I want!' bubble",
+  "layers": "page; seal; bubble; caption",
+  "assets": "SS_CBS_PAGE,LOGO_TREASURY,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Treasury: doesn't coordinate with anyone [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S06",
+  "f0": 627,
+  "f1": 692,
+  "label": "Treasury seal with pixel sunglasses and a figure: 'basically the same as saying you plead the fifth'",
+  "layers": "seal; sunglasses overlay; figure; caption",
+  "assets": "LOGO_TREASURY,OV_SUNGLASSES,CH_HOST",
+  "transition_in": "HARD_CUT",
+  "purpose": "Plead the fifth joke [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S07",
+  "f0": 692,
+  "f1": 729,
+  "label": "Giant seal with sunglasses and bubble 'No comment.'",
+  "layers": "seal (zoom); sunglasses; bubble; caption",
+  "assets": "LOGO_TREASURY,OV_SUNGLASSES,OV_BUBBLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "No comment [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S08",
+  "f0": 729,
+  "f1": 785,
+  "label": "Black ? circle beside a figure: 'there's one more thing in this timeline'",
+  "layers": "figure; ? circle; caption",
+  "assets": "CH_FIG,PR_QCIRCLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Set up the watch-list reveal [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S09",
+  "f0": 785,
+  "f1": 813,
+  "label": "Red 'VERY IMPORTANT!' beside the figure",
+  "layers": "figure; red text; caption",
+  "assets": "CH_FIG,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "Emphasis beat [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S10",
+  "f0": 813,
+  "f1": 973,
+  "label": "Report cover (Treasury Monitoring List) zooming; red circle on the date",
+  "layers": "report cover (zoom); red circle; caption",
+  "assets": "SS_REPORT_COVER,OV_REDCIRCLE",
+  "transition_in": "HARD_CUT",
+  "purpose": "July 23rd report published [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S11",
+  "f0": 973,
+  "f1": 1213,
+  "label": "Report pages scrolling and zooming with host pointing; shadow figure with red eyes and a note; China-map character",
+  "layers": "report pages; host; shadow figure; note; map character; caption",
+  "assets": "SS_REPORT_PAGES,CH_HOST,CH_SHADOW,CH_MAPS",
+  "transition_in": "HARD_CUT",
+  "purpose": "Watch-list countries: China, Germany, Korea, Japan [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S12",
+  "f0": 1213,
+  "f1": 1351,
+  "label": "Report text with highlight; China, Japan map characters",
+  "layers": "report text; highlights; map characters; caption",
+  "assets": "SS_REPORT_PAGES,OV_HIGHLIGHT,CH_MAPS",
+  "transition_in": "HARD_CUT",
+  "purpose": "'...and most importantly Japan' [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S13",
+  "f0": 1351,
+  "f1": 1443,
+  "label": "'Eight days later...' with the Treasury seal",
+  "layers": "text; seal; caption",
+  "assets": "LOGO_TREASURY",
+  "transition_in": "HARD_CUT",
+  "purpose": "Eight days later [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S14",
+  "f0": 1443,
+  "f1": 1491,
+  "label": "Treasury seal with yen money bags",
+  "layers": "seal; yen bags; caption",
+  "assets": "LOGO_TREASURY,PR_BAGS",
+  "transition_in": "HARD_CUT",
+  "purpose": "The same building bought Japan's currency [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S15",
+  "f0": 1491,
+  "f1": 1564,
+  "label": "US-map character with a news card on the joint intervention",
+  "layers": "map character; news card; caption",
+  "assets": "CH_USMAP,SS_NEWS_CARD",
+  "transition_in": "HARD_CUT",
+  "purpose": "America broke a 28-year rule [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S16",
+  "f0": 1564,
+  "f1": 1620,
+  "label": "Rulebook document, then euro notes: 'paid by dumping Europe's currency'",
+  "layers": "document; euro notes; caption",
+  "assets": "PR_RULES_DOC,PR_EURONOTE",
+  "transition_in": "HARD_CUT",
+  "purpose": "Paid by dumping euros [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S17",
+  "f0": 1620,
+  "f1": 1685,
+  "label": "FT article with large red 'only told them AFTER'",
+  "layers": "article; red text; caption",
+  "assets": "SS_FT_ARTICLE,TY_RED",
+  "transition_in": "HARD_CUT",
+  "purpose": "Only told them after the trade [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S18",
+  "f0": 1685,
+  "f1": 1808,
+  "label": "Report cover with Japan-map character and a growing caption",
+  "layers": "report cover; Japan map character; caption",
+  "assets": "SS_REPORT_COVER,CH_JAPAN",
+  "transition_in": "HARD_CUT",
+  "purpose": "A country it had listed as currency risk [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ },
+ {
+  "id": "S19",
+  "f0": 1808,
+  "f1": 1825,
+  "label": "Report cover with Japan character and large 'Why?'",
+  "layers": "report cover; Japan character; 'Why?' (end)",
+  "assets": "SS_REPORT_COVER,CH_JAPAN,TY_WHY",
+  "transition_in": "HARD_CUT",
+  "purpose": "Closing question [ART_DIRECTION_INFERENCE]",
+  "notes": ""
+ }
+]

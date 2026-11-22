@@ -1,0 +1,5 @@
+# H02 long-form rules frozen before extraction
+
+On an unseen chart-heavy long-form, code two separate intervals without tuning from the samples. For a chart used as evidence, expect enough context to establish units, time and series on display or through the adjacent explanation. If the chart only illustrates direction, expect the adjacent explanation to carry the precise claim. Alternative source placement and motion are acceptable when they preserve meaning. When identity is invoked, expect the person image to establish identity or carry the explanatory role. A photographic body composite is optional. A source, parody or diagram must not be passed off as a real quote. If the two intervals omit an opportunity, score the relevant rule untested. Sample two fixed time windows in each of `YEhsWyY_WKQ` and `HXlcMbxzz0U`, around 70 and 150 seconds. Check local prior records for time-window exposure and downgrade holdout independence if necessary.
+
+H03 uses the unchanged H02 tests on `IcxhABuHITM` at 65 and 140 seconds. B05 checks `kW48sP3rb2o` and `roe3SgezmmU` prospectively for an overlooked claim-to-chart or staged annotation rule.

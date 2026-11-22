@@ -1,0 +1,12 @@
+# Original Finance storyboard test
+
+Cold-start prompt: “Why can falling bond yields coexist with rising borrowing costs for some households?” This is an original hypothetical script topic, not a competitor script. Research entry: [Casually Finance channel index](../../research/visual-forensics/channels/UCrNfRFWnLC3tCy1TnyhVQ7g/START_HERE.md), then pinned PR #21 channel DNA and per-video `0ll9rEtoRrs` bond evidence. The source offers explanation grammar; the economic claims below require new dated primary sources before publication.
+
+| Time estimate | Original narration | Original visual and asset prompt | Motion and evidence boundary |
+|---|---|---|---|
+| 0–8 s | “A bond yield can fall while your loan quote rises. How can both be true?” | Draw two clearly labelled gauges, “market bond yield” and “household loan quote,” from a blank canvas; simple original icons, high contrast, no competitor characters. | Reveal one gauge, then the other. This contradiction-first structure is inspired by PR #21 `0ll9rEtoRrs` 0–18 s; no rate claim is certified by that scene. |
+| 8–22 s | “They measure different prices, for different borrowers, at different moments.” | Create three original cards: borrower, loan term, quote date. Use one neutral accent per card. | Sequential card builds; hold each long enough to read. General sequential explanation principle from PR #21 `VISUAL_DNA.md`; duration is a creative estimate. |
+| 22–42 s | “A lender can add credit risk, operating costs and its own funding conditions.” | Draw an original layered quote stack with labelled layers and blank placeholders for sourced figures. | Add layers one at a time, with a brief pause before the final quote. Requires independent finance-source ledger; source-video visuals do not verify this market mechanism. |
+| 42–58 s | “So compare the same date, term and borrower group before calling it a contradiction.” | Split screen: mismatched comparison receives a caution mark; matched comparison gets an aligned ruler. | Swap to corrected comparison and end on a source-card placeholder. Original design choice; no copied source frame. |
+
+Production handoff: create original vector art, source-card layout, narration recording, beat sheet and motion timing. Add primary-source citations for every financial assertion; verify quote date, loan product and geography. Human listening, final timing and mobile legibility remain untested. This test demonstrates navigation and an evidence-qualified storyboard, not a rendered video or full audiovisual certification.

@@ -1,0 +1,30 @@
+{
+  "starting_head": "a01b883d4b200a3c79641b6b0f9175598a898a32",
+  "failed_run": 38277040305,
+  "classification": "BRANCH_SPECIFIC_MUTABLE_CONFIGURATION_SNAPSHOT_VALIDATION_DEFECT",
+  "canonical_main": "08e719264e31ecd82de24f8eeb8f065c08359fe5",
+  "canonical_main_focused_validation": "PASS",
+  "pre_current_recovery_commits": true,
+  "expected": {
+    "path": ".gitattributes",
+    "size": 627,
+    "sha256": "1970079d0da551fe6400b93d55c5f8cf9be2beeb628089457be11a6d0a79f43d",
+    "blob": "d4b4b3449031d2ee5ab61ef21c526d5cdec11820"
+  },
+  "actual": {
+    "size": 983,
+    "sha256": "fee4229f8139e25fe3ded541b9a363e4fa936a7697e696004a385cb527b77f7e",
+    "blob": "711997d1909fd926fae317022f1f15f2f84d7199"
+  },
+  "snapshot_pins": {
+    "DS-000028-F020": "59cf21851b5f6e57975ab51944b7572a3edf7471",
+    "DS-000030-F019": "c740f89212dd7a1c59c273fce07e2613f24a68c4"
+  },
+  "cause": "Finance commits71bb594 andb28f048 legitimately expanded shared repository configuration. Historical configuration rows were incorrectly treated as current-byte invariants. Canonical main still has matching627byte configuration. Registry generation did not cause these mismatches.",
+  "lfs_pointer": false,
+  "checkout_bytes_equal_git_blob": true,
+  "line_ending_transformation": false,
+  "raw_evidence_changed": false,
+  "repair": "Use existing exact historical blob verification for two configuration snapshots. No ledger metadata, raw evidence, validator algorithm or blanket exclusions changed.",
+  "regression": "Observed12test run fail2beforefix; pass12afterfix; tamperedexpectedSHAstillrejected."
+}

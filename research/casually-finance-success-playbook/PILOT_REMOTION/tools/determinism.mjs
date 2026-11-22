@@ -1,0 +1,11 @@
+import {selectComposition,renderStill} from '@remotion/renderer';
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const options={serveUrl:path.resolve('.bundle'),browserExecutable:process.env.PILOT_BROWSER||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',onBrowserLog:()=>{}};
+const composition=await selectComposition({...options,id:'FixedMortgage'});
+for(const [name,frame] of [['a',556],['reset',0],['b',556]])await renderStill({...options,composition,frame,output:`qa_frames/reseek-${name}.png`});
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const a=hash('qa_frames/reseek-a.png'),b=hash('qa_frames/reseek-b.png');if(a!==b)throw new Error('Repeated frame differs after seek reset');
+fs.writeFileSync('evidence/seek-determinism.json',JSON.stringify({sequence:[556,0,556],png_hash_first:a,png_hash_repeated:b,result:'PASS byte-identical PNG on this machine',limit:'Not a cross-machine encoder/font bit-identity guarantee'},null,2));
+console.log('PASS render seek 556 → 0 → 556: identical PNG hashes');

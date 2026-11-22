@@ -1,0 +1,221 @@
+# Operating-system and editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Temporary and cache files
+.cache/
+.tmp/
+tmp/
+*.tmp
+
+# Isolated Python environment for optional image-pipeline dependencies
+# (Pillow — Phase 1C). Never the system Python; see docs/TOOLS_INSTALLED.md.
+.venv/
+
+# Generated operational logs; keep documentation and placeholders
+logs/*
+!logs/README.md
+!logs/.gitkeep
+*.log
+
+# Raw data is intentionally not ignored wholesale as a *policy* (see README.md,
+# "Git and large raw data"): each dataset still needs an explicit inventory and
+# storage decision. But as a *safety default* (Decision 013), files copied into
+# data/raw/ are not staged automatically — .gitkeep placeholders stay tracked,
+# everything else under data/raw/ must be added deliberately, file by file.
+data/raw/**/*
+!data/raw/**/.gitkeep
+!data/raw/**/README.md
+
+# DS-000020 is an explicitly authorized, checksum-registered Apify evidence set.
+# Only these three immutable JSON exports are versioned; all other raw-data
+# safety defaults remain in force.
+!data/raw/channel-data/
+!data/raw/channel-data/DS-000020/
+!data/raw/channel-data/DS-000020/apify/
+!data/raw/channel-data/DS-000020/apify/*/
+!data/raw/channel-data/DS-000020/apify/*/*.json
+
+# DS-000021 is an explicitly authorized, checksum-registered Apify evidence set.
+# Only immutable JSON exports below this dataset path are versioned.
+!data/raw/channel-data/DS-000021/
+!data/raw/channel-data/DS-000021/apify/
+!data/raw/channel-data/DS-000021/apify/*/
+!data/raw/channel-data/DS-000021/apify/*/*.json
+
+# DS-000022 is an explicitly authorized, checksum-registered set of
+# user-provided channel workbooks and transcript archives. Source-artifact
+# copies remain byte-identical; other raw-data defaults remain in force.
+!data/raw/channel-data/DS-000022/
+!data/raw/channel-data/DS-000022/source-artifacts/
+!data/raw/channel-data/DS-000022/source-artifacts/*/
+!data/raw/channel-data/DS-000022/source-artifacts/*/*.xlsx
+!data/raw/channel-data/DS-000022/source-artifacts/*/*.zip
+
+# DS-000022 targeted Lucas Grant transcript-recovery evidence. This exact run
+# directory contains immutable Actor output plus its registered input/run log.
+!data/raw/channel-data/DS-000022/apify-transcript-recovery/
+!data/raw/channel-data/DS-000022/apify-transcript-recovery/dmUFY1GHENjMdqsB9/
+!data/raw/channel-data/DS-000022/apify-transcript-recovery/dmUFY1GHENjMdqsB9/*
+
+# DS-000026 preflight evidence is an explicitly authorized immutable evidence
+# set. The dataset itself remains unstarted; only these two preflight exports
+# are versioned.
+!data/raw/channel-data/DS-000026/
+!data/raw/channel-data/DS-000026/preflight/
+!data/raw/channel-data/DS-000026/preflight/29_channel_public_counts.json
+!data/raw/channel-data/DS-000026/preflight/29_channel_registry_export.json
+
+# DS-000027 (Dr. Ares) is an explicitly authorized, checksum-registered Apify
+# evidence set. Version the preflight authorization trail and the run's
+# observed input/API/balance evidence; the raw actor payload and per-run
+# evidence/ subdirectory are already tracked separately.
+!data/raw/channel-data/DS-000027/
+!data/raw/channel-data/DS-000027/preflight/
+!data/raw/channel-data/DS-000027/preflight/channel_identity_evidence.json
+!data/raw/channel-data/DS-000027/preflight/actor_input_schema_evidence.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_balance_evidence.json
+!data/raw/channel-data/DS-000027/preflight/proposed_actor_input.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_pricing_evidence.json
+!data/raw/channel-data/DS-000027/preflight/preflight_cost_proposal.json
+!data/raw/channel-data/DS-000027/preflight/authenticated_apify_prelaunch_verification_20260920T163357+0500.json
+!data/raw/channel-data/DS-000027/apify/
+!data/raw/channel-data/DS-000027/apify/*/
+!data/raw/channel-data/DS-000027/apify/*/*.json
+
+# DS-000028 is an explicitly authorized, checksum-registered Apify evidence
+# set. Version its immutable raw result, observed input/run metadata, and
+# acquired transcript while keeping the general raw-data safety default.
+!data/raw/competitors/
+!data/raw/competitors/DS-000028/
+!data/raw/competitors/DS-000028/dataset.json
+!data/raw/competitors/DS-000028/apify/
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/evidence/
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/evidence/actor_input.json
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/evidence/run_metadata_console_observation.json
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/transcripts/
+!data/raw/competitors/DS-000028/apify/4Jkn3vuO1nDp57HfT/transcripts/eD2OnCE8iKM.txt
+
+# DS-000030 is an explicitly authorized, checksum-registered Apify evidence
+# set. Version the immutable result, exact stored input, run observation, and
+# generated transcripts while keeping the general raw-data safety default.
+!data/raw/competitors/DS-000030/
+!data/raw/competitors/DS-000030/dataset.json
+!data/raw/competitors/DS-000030/apify/
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/raw/
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/raw/dataset.json
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/evidence/
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/evidence/actor_input.json
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/evidence/run_metadata_console_observation.json
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/transcripts/
+!data/raw/competitors/DS-000030/apify/ai1C2ifFj7SPFkINt/transcripts/*.txt
+
+# DS-000032 is an explicitly authorized, checksum-registered Apify evidence
+# set for the user's OWN channel (Decode Your Heart - Dr. Rehan, OWN_CHANNEL,
+# not a Senior Health competitor). Version the immutable result, exact stored
+# input, run observation, and generated transcripts while keeping the general
+# raw-data safety default.
+!data/raw/competitors/DS-000032/
+!data/raw/competitors/DS-000032/dataset.json
+!data/raw/competitors/DS-000032/apify/
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/raw/
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/raw/dataset.json
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/evidence/
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/evidence/actor_input.json
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/evidence/run_metadata_console_observation.json
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/transcripts/
+!data/raw/competitors/DS-000032/apify/KgQRSlx1CGL0OKq7Q/transcripts/*.txt
+
+# DS-000033 is an explicitly authorized, checksum-registered Apify evidence
+# set for a Senior Health competitor acquisition (Better Health While Aging,
+# Group C P1 tier, ACQUISITION-BACKLOG.md). Version the immutable result,
+# exact stored input, run observation, and generated transcripts while
+# keeping the general raw-data safety default.
+!data/raw/competitors/DS-000033/
+!data/raw/competitors/DS-000033/dataset.json
+!data/raw/competitors/DS-000033/apify/
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/raw/
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/raw/dataset.json
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/evidence/
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/evidence/actor_input.json
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/evidence/run_metadata_console_observation.json
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/transcripts/
+!data/raw/competitors/DS-000033/apify/AuZ65QkXBmVIXcOn9/transcripts/*.txt
+
+# Operational browser/export staging. Canonical registered copies live under
+# their checksum-registered data/raw/ and data/extracted/ dataset paths.
+/outputs/
+
+# Phase 1 SQLite inventory catalog (Decision 012, Decision 013): the database
+# is a regenerable local index, not source evidence. Its schema and manifests
+# stay in Git; the runtime database file does not.
+data/catalog/*.db
+data/catalog/*.db-wal
+data/catalog/*.db-shm
+data/catalog/*.sqlite
+data/catalog/*.sqlite3
+
+# Owner-required durable catalog snapshots. SQLite journals remain ignored.
+!data/catalog/youtube_inventory.db
+!data/catalog/youtube_channel_registry.db
+# senior_health_complete.db = local working DB (written by the backfill); git carries the split files below (each < 100 MB)
+!data/catalog/senior_health/
+!data/catalog/senior_health/*.db
+!data/catalog/finance_economics_complete.db
+
+# Private first-party YouTube Analytics exports and derived diagnoses stay local.
+# Only capability contracts/status and synthetic test fixtures are versioned.
+data/intelligence/first-party/**/*
+
+# Phase 1C transient handoff file between `register_batch.py discover` and
+# `register` — scratch state, not a durable record (the durable records are
+# data/manifests/batches/*.md and *_FILES.csv, both regenerated from the
+# catalog database by scripts/generate_batch_manifests.py).
+data/manifests/batches/*_state.json
+
+# Python/test/build caches are always disposable and must never enter Git.
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local inspection sidecars produced while validating generated workbooks.
+*.inspect.ndjson
+
+# Local rendering-pipeline test output (not checksum-registered dataset
+# evidence). Matches the /outputs/ naming already ignored above; this repo
+# also produces a singular "output/" directory from local pipeline runs.
+/output/
+/output.zip
+
+# Private, user-supplied third-party channel media. Manifests and tooling are
+# versioned under research/media-library; media bytes remain local-only and
+# must never enter ordinary Git, GitHub, or LFS without separate authorization.
+/data/local-channel-media/**
+/.cache/yios-media/**
+
+# Local normalized What If forensic staging. The reviewed source contract and
+# importer code are versioned; row payloads and diff reports stay local.
+/data/staging/what-if-forensic/
+
+# Reviewed document capture, restored externally for proof validation
+/productions/doc-animation-proof-01/evidence/originals/cfpb_compound_interest_full.png

@@ -1,0 +1,19 @@
+# Visual DNA supplement
+
+See the [current status and media guide](CURRENT_STATUS_AND_MEDIA.md) for authority, external evidence and first-run commands.
+
+A screen may use sparse original actors and objects to explain roles and movement, or a denser authentic document for evidence. When both appear, separate hierarchy into evidence and explanatory overlay. Keep the authentic capture immutable, move it with its annotations in document-local coordinates, and stage explanatory graphics and character independently. Preserve the complete relevant excerpt and clearly show attribution. Choose sparse hold or isolated overlay when the next change is informational and the surrounding motion would compete for reading.
+
+Portrait treatments include a rectangle attached at an original line-body neck, a foreground cutout at a clothed body's collar, and an unaltered photo within an identity card. Record the independent photo asset's anchor, rights and fit. An observed held pose gives no basis for asserting a facial rig. Logos can identify participants in an original diagram and require their own source and reuse review. A map character can signal an actor or joke. Geographical data requires a properly labeled map or chart. See corresponding frame receipts before treating any observed variation as a recurring default.
+
+## Applying the grammar to an original long-form episode
+
+Compose around one reading task per beat. Use a quiet background, a stable visual anchor and short labels for original explanations. Keep axes, units, time basis, source tag and any forecast status visible on factual graphics. A presenter can point from separate negative space or leave completely during a reading hold. Move only the element that changes meaning. A recurrent object can survive a cut to connect a sequence such as source → comparison → mechanism → consequence. A suitable original design can use layered 2D assets and simple motion. The visual evidence establishes visible transformations and editorial structure without identifying internal rigs or software.
+
+For real people, establish identity with date and name before moving from a verified photo to an editorial character. Use an independently sourced crop or matte with a lower-center neck anchor over a separate original body. Prepare a still expression and story-specific poses. Step body poses or move a single joint when the cue needs it. Check the meeting point at three or more frames during any change and recheck the face at phone scale. Held faces and body pose changes occur in the reference windows. Motion or compositing internals are optional implementation choices. Mark speech as editorial where it is authored. Use a standalone image if recognition is the beat and a drawn photo-free role when identity is irrelevant. Treat maps, premises and company symbols as context unless the underlying evidence supports the asserted proposition.
+
+For a historical sequence, establish period using a timeline and source identity with a dated image. Carry one variable or visual motif across eras. Verify scope and definitions for each era before using a single axis, denominator or comparison arrow. In a mechanism sequence, reveal inputs and flows in clause order and show the end state. Delimit a hypothetical case visually and in narration. The [photographic examples](ADAPTIVE_VISUAL_RESEARCH/B03_PHOTOGRAPHIC_MOTION_AND_VIDEO006.md) and [chart and history examples](ADAPTIVE_VISUAL_RESEARCH/B04_B07_STORYTELLING_AND_HOLDOUT.md) show variations and exceptions.
+
+## From a visual recipe to a render
+
+Use the [claim-bound render contract](../../productions/doc-animation-proof-01/RENDER_CONTRACT.md) for reviewed document layers, labels, calculated geometry and their approved cues. Treat a mark or crop as an authored factual decision when it makes a source assertion visually salient. Check source meaning, intended inference and readability separately before approving the final export.

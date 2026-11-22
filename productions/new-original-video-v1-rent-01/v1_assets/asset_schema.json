@@ -1,0 +1,155 @@
+{
+ "_doc": "V1 Rent local asset schema (own root, so the shared CH001 registry is untouched). Same pipeline.py workflow.",
+ "poses": [],
+ "rig_canvas": [
+  2048,
+  2048
+ ],
+ "rig_anchors": {
+  "neck": [
+   1024,
+   0
+  ],
+  "shoulder": [
+   1024,
+   168
+  ],
+  "hip": [
+   1024,
+   1032
+  ]
+ },
+ "anchor_tol": 48,
+ "ignore_prefixes": [],
+ "families": {
+  "v1_ch_master_front": {
+   "kind": "illustration"
+  },
+  "v1_ch_p1_neutral_closed": {
+   "kind": "illustration"
+  },
+  "v1_ch_p3_bill_closed": {
+   "kind": "illustration"
+  },
+  "v1_bg_room_table": {
+   "kind": "illustration"
+  }
+ },
+ "aliases": {},
+ "kinds": {
+  "illustration": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "head": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "rig_arm": {
+   "min_opaque_px": 800
+  },
+  "rig_torso": {
+   "min_opaque_px": 800
+  },
+  "rig_legs": {
+   "min_opaque_px": 800
+  },
+  "earth_body": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "earth_face": {
+   "min_opaque_px": 800
+  },
+  "earth_flames": {
+   "min_opaque_px": 800
+  },
+  "rig_body": {
+   "min_opaque_px": 2000,
+   "min_height_frac": 0.5
+  },
+  "earth_flame_side": {
+   "min_opaque_px": 800
+  }
+ },
+ "rig_versions": {
+  "v1": {
+   "_doc": "legacy draft rig (2026-11-20 staging): neck at canvas top",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     0
+    ],
+    "shoulder": [
+     1024,
+     168
+    ],
+    "hip": [
+     1024,
+     1032
+    ]
+   },
+   "anchor_tol": 48
+  },
+  "v2": {
+   "_doc": "correction rig (2026-11-21): body scaled 0.8, shifted down 320px; anchors measured from rig_torso top (y=320), arm roots (y~437-454), legs top (y=1145)",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     320
+    ],
+    "shoulder": [
+     1024,
+     454
+    ],
+    "hip": [
+     1024,
+     1146
+    ]
+   },
+   "anchor_tol": 48
+  },
+  "v3": {
+   "_doc": "measured contract (2026-11-21): same neck/hip anchors as v2 (v2 legs/heads stay usable) but shoulder moved to 29% of torso (measured on 12 frames of SH008/010/012/015 and cross-checked on SH004 at identical head height). Legs: source legs are short and splayed (54 src px = ~258 canvas) vs v2's 601. See rig_measurements/hips_landmarks.json",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     320
+    ],
+    "shoulder": [
+     1024,
+     559
+    ],
+    "hip": [
+     1024,
+     1146
+    ]
+   },
+   "anchor_tol": 48,
+   "legs_min_h": 200,
+   "legs_max_h": 340,
+   "pose_rules": {
+    "hips": {
+     "hand_y_frac": [
+      0.47,
+      0.62
+     ]
+    }
+   },
+   "head_scale": 1.205
+  }
+ },
+ "default_contract": "v1"
+}

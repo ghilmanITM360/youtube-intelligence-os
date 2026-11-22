@@ -1,0 +1,26 @@
+# Casually Finance integration and synchronization verification
+
+This dated local record describes the initial publication block. Use the [publication manifest](GITHUB_PUBLICATION_MANIFEST.md) for the authorized clean publication workflow.
+
+## Repository and status
+
+Machine A's canonical checkout at `~/workprojects/youtube-intelligence-os` and the existing channel worktree at `~/workprojects/visual-audit-worktrees/casually-finance` share the canonical Git common directory. Use the existing `visual-audit/casual-finance` worktree. The [origin repository](https://github.com/ghilmanITM360/youtube-intelligence-os) advertised 14 heads at verification, with no matching channel ref. Fetch succeeded. This is a first-publication case. The last accepted research commit is `824229da3abbfadf36a1d68de44c352b552ace4e` and engineering is `52dcefd3d8b512a545e099c9967747d4f824369c`. The recorded V1 writer claim and local changes remain outside this checkpoint. The shared object store was used directly.
+
+**Remote synchronization blocked by unpublished historical media.** A normal push of this branch would introduce commit `b8b836e6ffa8b0a9fe385502beb592486d7666a5` with `productions/doc-animation-proof-01/out/DOC_PROOF_60s.mp4` (2,649,949 bytes; Git blob `e097e3ff4d298b6bede128bce08ef089930cc97e`). New files or a tip deletion cannot exclude an ancestor's blob. The history also includes extracted reference sheets and staging art that need review before a first publication. Preserving the exact accepted ancestry and excluding publication of those objects require an explicit choice of publication history. This session kept the original local history and media. No GitHub branch has been created by this session.
+
+## Structure and disposition
+
+- [Current status and media guide](CURRENT_STATUS_AND_MEDIA.md) establishes precedence and first-run instructions. The four [entry](CASUAL_FINANCE_NEW_AI_START_PROMPT.md), [index](CASUAL_FINANCE_VISUAL_INTELLIGENCE_INDEX.md), [playbook](CASUAL_FINANCE_SCRIPT_TO_VIDEO_PLAYBOOK.md) and [Visual DNA](CASUAL_FINANCE_MASTER_VISUAL_DNA.md) files link to it.
+- `ADAPTIVE_VISUAL_RESEARCH/` holds corpus classification, identity reconciliation, motion and evidence recipes, coverage, holdouts, transfer reviews and authoritative closure decisions.
+- `CLOSURE2/` holds corrected evidence analysis, the claim gate and regression tests. `PRODUCTION_SYSTEM/` holds inventory, approved-art recipes and asset tooling.
+- `research/visual-audit/CHANNEL_001_CasuallyFinance/` holds inherited acquisition and source records. `CODEX_INDEPENDENT_AUDIT/`, `RECONSTRUCTION_TESTS/` and numbered Shorts documents retain evidence and historical verdicts.
+- `productions/new-original-video-v1-rent-01/` holds the applied episode lessons, schema and renderer. `productions/doc-animation-proof-01/` holds the evidence capture, approved resolved render plan, build and independent review.
+- [Inventory](INTEGRATION_INVENTORY.csv) describes 806 tracked baseline paths by Git blob, independently computed SHA-256, purpose, role, duplicate identity and disposition, plus two selected excluded local artifacts. The baseline excludes the live V1 claim edit. Media-specific manifests and the corpus table cover the external collection. The earlier local independent delta report is preserved as historical. Its governing engineering findings are in the committed operational closure record.
+
+## Checks
+
+- The corpus CSV has 216 physical rows, 215 hashes and inherited counts of 17 gated, 11 partial and 188 coarse. The accepted batch ledger covers 22 distinct adaptive source videos. These tiers and adaptive windows describe different evidence depths.
+- Fifteen core CSV/JSON files parsed, including the corpus, inventory and actual proof input JSON. The four startup documents are present. Relative links in those documents and this guide were checked. Exact proof and Rent R9b hashes match the closure record.
+- All 60 tests passed, including 17 actual-entry regressions. The legacy renderer issued its known rig-anchor file-handle warning. The actual `build_proof.py --check` accepted the resolved payload. Scope remains one approved document capture with the proof's supported operations.
+- An isolated reviewer read only the committed four-file entry chain and prepared an original mortgage scene. It proposed an original borrower, a short authentic CFPB source beat timed to the spoken definition, then separate white-background hypothetical term rails. It distinguished about $2,532 versus $1,799 monthly principal and interest from $155,683 versus $347,515 lifetime interest on equal $300,000 hypothetical loans at a fixed 6% annual rate over 15 and 30 years. It required rights, rate basis and arithmetic review, structural preflight, phone checks and a final audio listen. It made any named photo conditional on a genuine attribution beat. The gate path and external-media navigation were clarified after the exercise. Source acquisition, pixel quality, audio and publication stay outside the written transfer result.
+- The new checkpoint is text and structured data only. The unpublished history requires a separate asset and privacy clearance pass or a scoped clean-history publication. This report does not certify inherited binary rights or remote availability.
