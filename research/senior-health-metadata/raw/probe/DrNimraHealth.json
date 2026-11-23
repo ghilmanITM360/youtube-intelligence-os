@@ -1,0 +1,328 @@
+{
+ "run": {
+  "id": "CUYftGNgeyaeIBQwO",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:00:45.389Z",
+  "finishedAt": "2026-11-11T08:01:16.223Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 368,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 30543,
+   "resurrectCount": 0,
+   "runTimeSecs": 30.543,
+   "metamorph": 0,
+   "computeUnits": 0.008484166666666666,
+   "memAvgBytes": 143940055.22243485,
+   "memMaxBytes": 170426368,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 6.6788823840351785,
+   "cpuMaxUsage": 93.18357005758158,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 700138,
+   "netTxBytes": 130553
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "eDJAuERgCdQwMcitv",
+  "defaultDatasetId": "tz4RvLhihd9Eif8DD",
+  "defaultRequestQueueId": "QKsbkbQ79KvC3UlZD",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "eDJAuERgCdQwMcitv"
+   },
+   "datasets": {
+    "default": "tz4RvLhihd9Eif8DD"
+   },
+   "requestQueues": {
+    "default": "QKsbkbQ79KvC3UlZD"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://opuabjlpu92d.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/CUYftGNgeyaeIBQwO",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/tz4RvLhihd9Eif8DD/items?signature=MC4wLlBibGZOUnpWSEtTSVB2SEFhYWhJ"
+  }
+ },
+ "records": [
+  {
+   "title": "Stool Color After 60? Don't Ignore These 2 Colors (Look Before You Flush)",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "9lAf2mrtLlA",
+   "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA",
+   "thumbnailUrl": "https://i.ytimg.com/vi/9lAf2mrtLlA/maxresdefault.jpg",
+   "viewCount": 34,
+   "date": "2026-11-07T21:00:31.000Z",
+   "likes": 0,
+   "location": null,
+   "channelName": "Dr Nimra | Health After 60",
+   "channelUrl": "https://www.youtube.com/channel/UCFLGAsUeu3d4oIOx-MQkt0A",
+   "channelUsername": "DrNimraHealth",
+   "collaborators": null,
+   "channelId": "UCFLGAsUeu3d4oIOx-MQkt0A",
+   "channelDescription": "Welcome to Dr Nimra | Health After 60 🩺\n\nI'm Dr Nimra, this channel exists for one reason: to explain, in plain and simple language, what your 15-minute doctor's visit doesn't have time to explain.\n\nEvery week I break down what really happens inside your body after 60, and what you can do about it:\n💊 Medicines: what your pills really do, side effects, and dangerous combinations\n🥗 Food & diet: what to eat, what to limit, and why\n🚶 Exercise & mobility: simple movement that keeps you strong and independent\n😴 Sleep, bathroom and daily habits: the small things that add up\n❤️ Heart, blood pressure, blood sugar, kidneys, bones, brain and eyes\n\n⚠️ Disclaimer\nThe content on this channel is for general education and information only. It is not personal medical advice, diagnosis or treatment. Never start, stop or change a medicine without speaking to your own doctor or pharmacist. If you have a medical emergency, call your local emergency number.",
+   "channelJoinedDate": "Sep 29, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/vA9XM_UhIn4OmRc4lX4sjGCT4iZlq5fRHhQhRWtqlT12nD9sD8g9CPSBua7Wg4UKjGBmL7eH1kw=s68-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/swALWii2tkm0AjtlaFReAaTVbvXjmdKe5Zot78zEBAEOo9aluxp98eSKPAR-sR9MvnH7KG9y8w=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 21,
+   "channelTotalViews": 149791,
+   "numberOfSubscribers": 1160,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@DrNimraHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Dr Nimra | Health After 60 🩺\n\nI'm Dr Nimra, this channel exists for one reason: to explain, in plain and simple language, what your 15-minute doctor's visit doesn't have time to explain.\n\nEvery week I break down what really happens inside your body after 60, and what you can do about it:\n💊 Medicines: what your pills really do, side effects, and dangerous combinations\n🥗 Food & diet: what to eat, what to limit, and why\n🚶 Exercise & mobility: simple movement that keeps you strong and independent\n😴 Sleep, bathroom and daily habits: the small things that add up\n❤️ Heart, blood pressure, blood sugar, kidneys, bones, brain and eyes\n\n⚠️ Disclaimer\nThe content on this channel is for general education and information only. It is not personal medical advice, diagnosis or treatment. Never start, stop or change a medicine without speaking to your own doctor or pharmacist. If you have a medical emergency, call your local emergency number.",
+    "channelJoinedDate": "Sep 29, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "DrNimraHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/vA9XM_UhIn4OmRc4lX4sjGCT4iZlq5fRHhQhRWtqlT12nD9sD8g9CPSBua7Wg4UKjGBmL7eH1kw=s68-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/swALWii2tkm0AjtlaFReAaTVbvXjmdKe5Zot78zEBAEOo9aluxp98eSKPAR-sR9MvnH7KG9y8w=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 21,
+    "channelTotalViews": 149791,
+    "numberOfSubscribers": 1160,
+    "isChannelVerified": false,
+    "channelName": "Dr Nimra | Health After 60",
+    "channelUrl": "https://www.youtube.com/channel/UCFLGAsUeu3d4oIOx-MQkt0A",
+    "channelId": "UCFLGAsUeu3d4oIOx-MQkt0A",
+    "inputChannelUrl": "https://www.youtube.com/@DrNimraHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:20:59",
+   "commentsCount": 0,
+   "text": "Stool color after 60: what does each color mean, and when do black or red stools need help today?\n\nMost stool colors are harmless and come from food or tablets. But black and red can be signs of bleeding. In this video we go through every color one by one: brown, green, yellow and greasy, pale or clay-colored, black, and red. You will learn the harmless causes (iron tablets, Pepto-Bismol, beetroot, leafy greens), the warning signs, and exactly when to see your doctor, when to call the same day, and when to call 999 or 911.\n\nThere is also a special section for anyone on blood thinners or aspirin, and a simple 2-second \"look before you flush\" habit.\n\n💬 Which color surprised you most? Tell us in the comments.\n👍 Please share this with a friend or family member over 60.\n\nCHAPTERS\n0:00 Look before you flush\n0:20 Why stool is brown\n1:26 Brown: every shade\n2:24 Green stool\n3:37 Yellow, greasy and hard to flush\n4:50 Pale, white or clay-colored stool\n6:37 A quick recap\n7:17 Black stool: harmless causes\n8:45 Black stool: the dangerous cause\n10:02 How to tell iron from blood\n10:41 Black stool: when to get help today\n12:01 Red stool: harmless causes\n12:47 Red stool: what it can mean\n14:03 Blood from the bottom: when to act\n15:18 If you take a blood thinner\n16:02 Other bowel cancer symptoms\n16:57 Free home bowel screening test\n18:05 Your 2-second toilet check\n19:12 The stool color chart\n20:31 Final words\n\nIMPORTANT: This video is for general education only and is not personal medical advice. Never stop, start or change a medicine, including a blood thinner, without speaking to your own doctor or pharmacist. If you have a lot of blood, red toilet water, clots, or black stool with faintness, dizziness, vomiting blood or severe tummy pain, call 999 (UK), 911 (US) or your local emergency number now.\n\n#stoolcolor #healthafter60 #seniorhealth #bowelhealth #bloodinstool",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&pp=0gcJCWMAwfN6Pr3D",
+     "text": "0:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=20s",
+     "text": "0:20"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=86s",
+     "text": "1:26"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=144s",
+     "text": "2:24"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=217s",
+     "text": "3:37"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=290s",
+     "text": "4:50"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=397s",
+     "text": "6:37"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=437s",
+     "text": "7:17"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=525s&pp=0gcJCWMAwfN6Pr3D",
+     "text": "8:45"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=602s",
+     "text": "10:02"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=641s",
+     "text": "10:41"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=721s",
+     "text": "12:01"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=767s",
+     "text": "12:47"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=843s",
+     "text": "14:03"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=918s&pp=0gcJCWMAwfN6Pr3D",
+     "text": "15:18"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=962s",
+     "text": "16:02"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=1017s",
+     "text": "16:57"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=1085s",
+     "text": "18:05"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=1152s",
+     "text": "19:12"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=9lAf2mrtLlA&t=1231s",
+     "text": "20:31"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/stoolcolor",
+     "text": "#stoolcolor"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthafter60",
+     "text": "#healthafter60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bowelhealth",
+     "text": "#bowelhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bloodinstool",
+     "text": "#bloodinstool"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "user_generated",
+     "language": "en",
+     "plaintext": "Before you flush today, stop for two\nseconds and look. Most\nstool colors are harmless.\nBut two are different. Black\nand red can be a sign of bleeding,\nand sometimes they mean you should get help\ntoday, not next week.\nLet us go through every\ncolor and exactly when to act.\nFirst, a quick picture of\nwhy stool is brown at all.\nYour liver makes a fluid called bile. It\nhelps you digest fat.\nBile starts out green-yellow.\nAs it travels through your gut,\nenzymes change it, and the color slowly\nturns from green to brown.\nSo brown is the color of a gut that is\ndoing its normal job.\nMayo Clinic, one of the best-known\nhospitals in the United States,\nputs it simply, \"All shades of brown, and\neven green, are considered typical.\nOnly rarely does stool color\npoint to a serious problem.\"\nThat is the calm part.\nKeep it in mind as we go,\nbecause most of what you see in the toilet\nwill fall into the normal group.\nWhat changes the color? Two things, mostly.\nWhat you eat and drink, and\nhow much bile reaches the stool.\nMedicines and\nsupplements can change it too.\nAnd blood, from anywhere in\nthe gut, can change it a lot.\nThat is why we will spend\nthe most time on black and red.\nLet us start with the good news. Light\nbrown, mid brown, dark brown.\nAll of these are normal. Your shade can\nchange from day to day.\nA day with more vegetables, a day with more\nmeat, a cup of strong tea or coffee,\na change in how much water you drink. All\nof these can move the\nshade a little lighter,\nor a little darker. That is not a warning.\nWhat matters more than the exact shade is\nchange that does not go away.\nIf your stool has been one way for years,\nand now it has looked different for weeks,\nwith no food or medicine to explain it,\nthat is worth mentioning to your doctor.\nNot an emergency. Just worth a check.\nAnd remember, color is\nonly one part of the picture.\nChanges in how often you go, or in the\nshape and softness of\nyour stool, matter too.\nWe will come back to those near the end.\nNext, green. Green stool often worries\npeople, but it is usually harmless.\nThere are three common reasons. The first\nis food. Green leafy\nvegetables like spinach and kale,\nand anything with green food\ncoloring, can turn stool green.\nThink of a green iced cake at a birthday\nparty, or a very green smoothie.\nThe second is iron tablets. Iron\nsupplements can turn stool green,\nand often dark green to almost black. We\nwill talk more about\niron when we reach black,\nbecause it matters there. The third reason\nis speed. Remember the\nbile that starts out green.\nIf food moves through the large bowel too\nquickly, for example\nwhen you have diarrhea,\nthe bile does not have time to change to\nbrown. So the stool comes out green.\nSo when is green worth a call? If it comes\nwith diarrhea that does not\nsettle, if you feel unwell,\nor if it keeps going for weeks with no food\nor tablet to explain it,\nask your doctor or pharmacist.\nOn its own, after a big plate of greens,\ngreen stool is usually\nnothing to worry about.\nNow yellow. And here, the color is only\nhalf the story. What really\nmatters is what comes with it.\nWatch for stool that is yellow or pale,\nlooks greasy or oily,\nsmells much worse than usual,\nfloats, and is hard to flush away.\nSometimes you need to\nflush two or three times.\nThat pattern can mean there\nis too much fat in the stool.\nIn other words, your body is not absorbing\nfat properly from your food.\nWhy might that happen? Mayo Clinic names\n\"malabsorption\", for\nexample celiac disease,\nwhere gluten damages the lining of the gut.\nThe NHS lists very smelly\npoo that floats and is hard\nto flush as one symptom of chronic\npancreatitis, a long-term\ninflammation of the pancreas,\nthe organ that makes the juices that digest\nfat. A very fatty meal\ncan do this once. A rich,\ngreasy takeaway, for example. That is not a\nworry if it settles.\nBut if greasy, floating,\nsmelly stool keeps happening, please see\nyour doctor. And see\nthem sooner if it comes with\ntummy pain or with weight loss you cannot\nexplain. Now we move to one\nof the more important colors.\nPale, white, gray or clay colored stool.\nThe color of putty or wet clay.\nRemember, bile is what makes stool brown.\nSo when stool turns\nvery pale, it can mean that\nnot enough bile is reaching the gut. One\ncause, as Mayo Clinic\nexplains, is a blockage in the bile\nduct, the small tube that carries bile from\nthe liver and gallbladder\ninto the gut. Gallstones\ncan do this. So can problems in the liver\nor the pancreas. There are\nsome harmless reasons too.\nIf you had a barium test, an x-ray where\nyou drink a white\nliquid, your stool can be pale\nor white for a day or two. Large doses of\nbismuth, the ingredient in Pepto-Bismol,\nand some antacids that contain aluminium\ncan also make stool lighter.\nBut here is the combination\nI want you to remember. Yellow skin or\nyellow whites of the\neyes. Darker pee than usual.\nPaler poo than usual. Sometimes itchy skin\ntoo. That group of\nsigns is called jaundice.\nThe NHS says jaundice can be\na sign of something serious,\nsuch as liver disease, and that you need to\nget urgent medical help.\nIn the UK, that means an\nurgent appointment with your GP or calling\nNHS 111 the same day. In\nother countries, call your\ndoctor's surgery that day and say the word\n\"jaundice\". If your stool is\npale once, after a barium test,\nand then goes back to brown, that is\nexpected. If it stays pale\nfor more than a day or two,\nand you have not had a barium test, call\nyour doctor. Let us\ntake a short breath here,\nbecause this can feel like a lot. So far,\nbrown is normal. Green is\nusually food, iron or speed.\nYellow and greasy needs a check if it keeps\nhappening. Pale with yellow eyes and dark pee needs help the same day.\nBefore we get to the two colors that\nmatter most, I would love to know,\ndid anything so far surprise you? Write the\ncolor that surprised you in the comments.\nIt helps other people your age find this\nvideo, and I read them.\nNow, the most important part of this video.\nBlack and red. Black\nstool. This one needs care,\nbecause black can be completely harmless,\nor it can be a sign of\nbleeding high up in the gut.\nSo let us first clear the harmless causes,\nthen talk about the dangerous one,\nand then exactly how to tell them apart.\nThe harmless causes first.\nIron tablets. This is the most common\nreason older people\nsee dark or black stool.\nThe NHS medicine page on ferrous sulfate,\nthe most common iron\ntablet, says darker than usual\npoo is common when taking iron, and is\nusually nothing to worry\nabout. Bismuth. That is the\nactive ingredient in Pepto-Bismol and some\nother tummy medicines.\nIt can turn the stool,\nand sometimes even the tongue, black.\nFoods. Black licorice, and a lot of dark\nfoods like blueberries,\ncan make stool look dark or black. So if\nyour stool turns dark a\nfew days after you started iron tablets,\nand you feel well, that is usually the\ntablet. But, and this\nis an important but, even the\nNHS iron medicine page says, talk to a\ndoctor or call 111 straight\naway if your poo is black,\ntar-like or red, or has blood in or on it,\nor if you also feel unwell.\nSo being on iron does not mean every black\nstool is the iron. Which\nbrings us to the dangerous\ncause. Black stool can be a sign of\nbleeding in the upper part of the gut,\nsuch as the stomach. When blood travels a\nlong way through the gut, it gets digested,\nand it turns from red to black. So it does\nnot look like blood at\nall. It looks like black tar.\nWhere does that bleeding come from? A\ncommon cause is a stomach\nulcer, a sore in the lining\nof the stomach, or the first part of the\nsmall bowel. The NHS says\nthe risk of stomach ulcers\nincreases as you get older. Two of the main\ncauses are an infection called H. pylori,\nand taking anti-inflammatory painkillers\nlike ibuprofen regularly.\nAnd here is the part that\nmatters most for people over 60. Many of us\ntake medicines that\nmake bleeding more likely.\nThe NHS names aspirin, anti-inflammatory\npainkillers such as ibuprofen, and blood\nthinning medicines, called anticoagulants,\nsuch as warfarin and\napixaban. These are important\nmedicines. They prevent strokes and heart\nattacks. But they also mean that if\nbleeding does start in\nthe gut, it can be more serious. So if you\ntake any of these, black\nstool is something to take\nseriously, quickly. So how can you tell\niron or food from blood?\nThe NHS describes the worrying\nkind of black stool as black, sticky and\nvery smelly. Think of\ntar on a road on a hot day.\nShiny, sticky, and a strong, unusual smell,\ndifferent from your usual. Iron tablets can\nturn stool dark green or black too, so the\ncolor alone does not\nsettle it. But please hear this clearly.\nYou cannot always tell by looking. Even\ndoctors cannot be sure without a test.\nSo if you are unsure, treat it as possible\nblood and get it checked.\nHere is the action plan for black stool.\nBlack or very dark red stool with no clear\nharmless cause and you feel otherwise well,\nthe NHS says ask for\nan urgent GP appointment\nor call NHS 111. That means today. Not next\nweek, not after the\nweekend. In other countries,\ncall your doctor's surgery or a nurse line\nthe same day. Now, the emergency signs.\nCall 999 in the UK or 911 in the US or your\nlocal emergency number\nif you have black stool\nand any of these. You are vomiting blood or\nyour vomit looks like\ncoffee grounds. You feel faint,\ndizzy or confused. Your skin is cold,\nclammy and pale, or your breathing is fast.\nYou have severe tummy pain. These can be\nsigns of a serious bleed. The\nNHS lists them as reasons to\ncall 999 or go to A&E. And the NHS stomach\nulcer page lists poo that\nis black, sticky and very\nsmelly in its \"go now\" group too. One more\nthing. If you feel faint,\nplease do not drive yourself to\nhospital. Call an ambulance or ask someone\nto take you. Now the\nlast color. Red. Again,\nlet us clear the harmless causes first\nbecause there are several.\nBeetroot is the famous one. A good portion\nof beetroot can turn\nstool and sometimes urine,\nred or pink the next day. It can look\nalarming. Tomatoes and tomato soup,\ncranberries, red jelly,\nred drink mixes and red food coloring can\ndo the same. So if you ate\nbeetroot yesterday and the\ncolor is the same pinkish red as the\nbeetroot and you feel\ncompletely well, food is the likely\nreason. If it does not clear by the next\nday or so, or you are not\nsure, please ask. A pharmacist or\nNHS 111 can help you decide. Real blood\nthat is bright red usually\ncomes from lower down near the\nend of the gut, the large bowel or the back\npassage. Blood from high\nup turns black, as we said.\nBlood from low down stays red. Mayo Clinic\nsays bright red blood in\nthe stool often comes from\nhemorrhoids, which many people call piles.\nPiles are swollen blood\nvessels around the back passage.\nThey are very common and often show up as\nbright red blood on the\ntoilet paper or streaks on the\noutside of the stool, especially after\nstraining. Constipation and\nstraining can also cause a small\ntear, called a fissure,, which can bleed and\nsting. But here is why I\nnever want you to simply assume it\nis piles. The NHS says bleeding from the\nbottom is sometimes a sign\nof bowel cancer. And blood in\nyour poo, which may look red or black, is\none of the main symptoms of\nbowel cancer listed by the\nNHS. Blood thinners like warfarin, apixaban\nand aspirin can also cause\nbleeding. Most of the time\nit is piles, but only a check can tell you\nthat for sure. So even if\nyou have had piles before,\nnew bleeding deserves a check. Here is the\nNHS plan for blood from\nthe bottom in three steps.\nStep one, a small amount of bright red\nblood once on the paper.\nThe NHS says a small one-off\namount of bleeding is not usually serious,\nbut a GP can check. See\nyour GP if you have had blood in your poo\nfor three weeks, or if your poo has been\nsofter, thinner or longer\nthan normal for three weeks.\nAlso see a GP if you are more tired than\nusual, losing weight for no reason,\nor have pain or a lump in your tummy. Step\ntwo, your poo is dark red or black,\nor you have bloody diarrhea. The NHS says\nask for an urgent GP\nappointment or call 111. Today.\nStep three, the emergency. You are bleeding\nnon-stop or there is a\nlot of blood. For example,\nthe toilet water turns red or you see large\nblood clots. The NHS\nsays go to A&E or call 999.\nIn the US, call 911 or go to the emergency\nroom. And again, do not drive yourself.\nA special word for anyone on a blood\nthinner or on aspirin. If you\nsee black stool or red blood,\nplease do not stop your blood thinner on\nyour own. These medicines\nprotect you from strokes\nand clots and stopping them suddenly can be\ndangerous too. Instead, call your doctor,\nyour anticoagulant clinic or NHS 111 the\nsame day and tell them three\nthings. Which blood thinner\nyou take. What you saw, and when. And how you\nfeel right now. They will\ndecide what to do with your\nmedicine. And of course, if you have any of\nthe emergency signs, call\n999 or 911 straight away.\nColor is only one clue. The NHS lists the\nmain symptoms of bowel cancer,\nand some of them have nothing to do with\ncolor at all. Blood in your\npoo, which may look red or\nblack. Bleeding from your bottom. Changes\nin your poo, such as it\nbecoming softer or thinner.\nNeeding to poo more often or less often\nthan usual. Tummy pain, a\nlump in your tummy or bloating.\nLosing weight without trying. Feeling very\ntired or breathless.\nThis can happen when slow,\nhidden bleeding causes low iron called\nanemia. The NHS says see a\nGP if you have any of these\nsymptoms. Most of the time, they turn out\nto be something much less\nserious. But they deserve a\nproper check and bowel cancer is much\neasier to treat when it is\nfound early. There is one more\nthing you can do that does not even need a\nsymptom. In England,\nthe NHS offers a free home bowel\ncancer screening test to everyone aged 50\nto 74 every two years.\nIt is called a FIT test.\nYou collect a tiny sample of poo at home\nand post it back. It checks for tiny\namounts of blood that\nyou cannot see. If you are 75 or over, you\ncan still ask for it. The\nNHS says you can call the\nbowel cancer screening helpline on 0800 707\n6060 and ask for the test.\nIf you live outside England,\nask your own doctor what bowel screening is\noffered where you\nlive. Two important things\nabout the test. A positive result does not\nalways mean cancer. It\nmeans blood was found and needs\nto be looked into and the cause can be\nsomething like polyps or a\nsmall tear. And a clear result\ndoes not always mean you do not have bowel cancer.\nSo if you have symptoms,\nsee your GP even if your last\nscreening test was clear. So here is a\nsimple habit for every\nday. Look before you flush.\nTwo seconds, that is all. If the color\nseems unusual, ask\nyourself three questions. One,\nwhat did I eat or drink\nin the last day or two?\nBeetroot, greens, licorice, blueberries,\ntomato soup, something with food coloring?\nTwo, have I started a new tablet? Iron,\nPepto-Bismol, an\nantacid or a new antibiotic?\nThree, how do I feel? Well or faint, dizzy,\nin pain or tired in a new way?\nIf there is a clear food or tablet reason\nand you feel well, watch it\nfor a day or so. If there is\nno clear reason, if it keeps happening or\nif you feel unwell, ask for\nhelp. And if you are caring\nfor a parent or partner, it is kind to ask\ngently, have you noticed\nanything different in the toilet?\nMany older people feel embarrassed and will\nnot mention it unless asked.\nLet us put it all together.\nBrown, any shade. Normal. Green. Usually\nleafy greens, food\ncoloring, iron, or food moving\nthrough quickly. Ask if it keeps going with\ndiarrhea or you feel\nunwell. Yellow, greasy,\nsmelly and hard to flush. See your doctor\nif it keeps happening,\nsooner with weight loss or tummy pain.\nPale, white or clay. If it comes with\nyellow eyes or skin and dark\npee, get help the same day.\nBlack, could be iron, bismuth or licorice.\nBut black, sticky,\ntar-like stool can be bleeding.\nGet help today. Call 999 or 911 if you also\nfeel faint, dizzy, vomit\nblood or have severe pain.\nRed, could be beetroot or tomatoes. Bright\nred blood is often piles,\nbut always worth a check.\nDark red or bloody diarrhea, get help\ntoday. Lots of blood, red\nwater or clots, call 999 or 911.\nAnd if you take a blood thinner, never stop\nit on your own. Call\nfor advice the same day.\nYour stool will never be the most pleasant\ntopic at the dinner table.\nBut two seconds of looking each day can\nhelp you catch a problem\nearly when it is much easier to\nfix. If this was useful, write \"checked\" in\nthe comments so I know you\nwill look before you flush.\nAnd please share this with a friend or\nfamily member over 60.\nIt might be the video\nthat helps them speak up.\nTake care of yourself\nand thank you for watching."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@DrNimraHealth/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#healthafter60",
+    "#seniorhealth",
+    "#bloodinstool"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@DrNimraHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

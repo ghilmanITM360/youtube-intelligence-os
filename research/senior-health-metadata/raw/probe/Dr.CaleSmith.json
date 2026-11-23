@@ -1,0 +1,260 @@
+{
+ "run": {
+  "id": "kKluphrxHKcqTMsdx",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:04:33.516Z",
+  "finishedAt": "2026-11-11T08:04:53.400Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 367,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 19734,
+   "resurrectCount": 0,
+   "runTimeSecs": 19.734,
+   "metamorph": 0,
+   "computeUnits": 0.005481666666666667,
+   "memAvgBytes": 156888219.49924773,
+   "memMaxBytes": 177184768,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 10.057817530437513,
+   "cpuMaxUsage": 97.58581632653062,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 654499,
+   "netTxBytes": 122795
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "7w3IXd7AEmgDxv0z3",
+  "defaultDatasetId": "TfjrBA1vQMvynAyJu",
+  "defaultRequestQueueId": "YT3D5cmVJvOHXY4Yj",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "7w3IXd7AEmgDxv0z3"
+   },
+   "datasets": {
+    "default": "TfjrBA1vQMvynAyJu"
+   },
+   "requestQueues": {
+    "default": "YT3D5cmVJvOHXY4Yj"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://jiebp9oplvac.runs.apify.net",
+  "usageTotalUsd": 0.004,
+  "consoleUrl": "https://console.apify.com/view/runs/kKluphrxHKcqTMsdx",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0.004
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/TfjrBA1vQMvynAyJu/items?signature=MC4wLjFTa1FlaHlzV0Zsb0taRzBXUDNaag"
+  }
+ },
+ "records": [
+  {
+   "title": "Add This One Ingredient to Beet Juice and Double the Blood Flow Effect!",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "CwkK6VjS66k",
+   "url": "https://www.youtube.com/watch?v=CwkK6VjS66k",
+   "thumbnailUrl": "https://i.ytimg.com/vi/CwkK6VjS66k/maxresdefault.jpg",
+   "viewCount": 552,
+   "date": "2026-11-07T22:00:33.000Z",
+   "likes": 16,
+   "location": "UNITED STATES",
+   "channelName": "Dr. Cale Smith",
+   "channelUrl": "https://www.youtube.com/channel/UCsPba6Pqq_cp37zyU6MP82g",
+   "channelUsername": "Dr.CaleSmith",
+   "collaborators": null,
+   "channelId": "UCsPba6Pqq_cp37zyU6MP82g",
+   "channelDescription": "Welcome to Dr. Cale Smith, your trusted source for senior health, healthy aging, and disease prevention.\n\nHere, we share simple, practical, and evidence-based health information to help older adults stay active, informed, and healthier for longer. From prevention tips and everyday wellness to understanding common age-related health concerns, our goal is to make medical information easy to understand and apply.\n\nSubscribe to Dr. Cale Smith and take a smarter step toward healthy aging and a better quality of life.",
+   "channelJoinedDate": "Aug 8, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/oi2n0GsFk5oK6clEr1RqeTHAmiSxiY0rBaMWLEz36lOfIyRCBQ7hDNwzFlqbsp2IT_FhVA3Z=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/i79gshhy4bUZFDgOwDr4mNQoAeKxU00aJSdpLTHFce03yd1yh1tr97_76b0Kuqyfx0UQxu4tIg=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 17,
+   "channelTotalViews": 3262494,
+   "numberOfSubscribers": 24000,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@Dr.CaleSmith",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Dr. Cale Smith, your trusted source for senior health, healthy aging, and disease prevention.\n\nHere, we share simple, practical, and evidence-based health information to help older adults stay active, informed, and healthier for longer. From prevention tips and everyday wellness to understanding common age-related health concerns, our goal is to make medical information easy to understand and apply.\n\nSubscribe to Dr. Cale Smith and take a smarter step toward healthy aging and a better quality of life.",
+    "channelJoinedDate": "Aug 8, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "Dr.CaleSmith",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/oi2n0GsFk5oK6clEr1RqeTHAmiSxiY0rBaMWLEz36lOfIyRCBQ7hDNwzFlqbsp2IT_FhVA3Z=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/i79gshhy4bUZFDgOwDr4mNQoAeKxU00aJSdpLTHFce03yd1yh1tr97_76b0Kuqyfx0UQxu4tIg=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 17,
+    "channelTotalViews": 3262494,
+    "numberOfSubscribers": 24000,
+    "isChannelVerified": false,
+    "channelName": "Dr. Cale Smith",
+    "channelUrl": "https://www.youtube.com/channel/UCsPba6Pqq_cp37zyU6MP82g",
+    "channelId": "UCsPba6Pqq_cp37zyU6MP82g",
+    "inputChannelUrl": "https://www.youtube.com/@Dr.CaleSmith",
+    "isAgeRestricted": false
+   },
+   "duration": "00:22:29",
+   "commentsCount": 1,
+   "text": "#Add This One Ingredient to Beet Juice and Double the Blood Flow Effect\n\nAre you drinking beet juice for better circulation but still experiencing cold hands, numb feet, or aching legs? After 65, changes in the body's nitric oxide production system may affect how well your blood vessels function. In this video, Dr. Cale Smith explains why adding L-citrulline to beet juice may support circulation through two different nitric oxide pathways.\n\nDiscover how beet juice provides dietary nitrates that help the body produce nitric oxide, encouraging blood vessels to relax and supporting blood flow. You'll also learn about the endothelial pathway, the eNOS enzyme, and how age-related changes in arginase activity can affect the availability of L-arginine needed for nitric oxide production.\n\nThe featured ingredient is L-citrulline — an amino acid your kidneys convert into L-arginine. The video explains why this process may help bypass some of the metabolic barriers associated with aging and how L-citrulline and beet juice may complement each other to support vascular function.\n\nYou'll also explore clinical research involving older adults, including findings on femoral blood flow, vascular conductance, arterial flexibility, and exercise performance. Plus, learn the practical morning routine discussed in the video, including beetroot juice, L-citrulline powder, fresh lemon juice, timing, and the potential role of quercetin-rich foods such as red onion.\n\nIf you're over 60 and interested in healthy circulation, nitric oxide production, vascular health, and cardiovascular aging, this video breaks down the science behind this combination and what the research actually shows.\n\n💬 Join the conversation: Have you heard of L-citrulline before? Tell me your age, whether you've tried beet juice, and what you hope to improve. Share your thoughts in the comments!\n\nSubscribe to Dr. Cale Smith for more research-focused videos about preventive health, healthy aging, circulation, and cardiovascular wellness.\n\n📚 Research Sources:\n\n1. Le Roux-Mallouf et al. — Nitrate + Citrulline in older adults (60–70) — *Aging*, 2019 — aging-us.com/article/101984\n2. Gonzales JU et al. — L-Citrulline improves exercise blood flow in older adults — *Experimental Physiology*, 2017 — doi.org/10.1113/EP086587\n3. Chen Y et al. — L-Citrulline improves FMD & arterial stiffness in elderly (meta-analysis, 8 RCTs) — *Frontiers in Nutrition*, 2025 — doi.org/10.3389/fnut.2025.1632952\n4. Shanely RA et al. — L-Citrulline improves vascular endothelial function — *British Journal of Nutrition*, 2022 — doi.org/10.1017/S0007114521004104\n5. Lacchini S et al. — Arginase elevated in aged tissue, competes with eNOS — *Oxidative Medicine & Cellular Longevity*, 2019 — PMC6530149\n6. PubMed — Declining nitric oxide bioavailability in cardiovascular aging — *PubMed*, 2025 — PMID: 41953454\n\nDisclaimer: This video is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Beet juice and L-citrulline are not replacements for prescribed medication or medical care. If you have cardiovascular disease, circulation problems, take blood pressure medication, or are considering supplements, consult your healthcare professional before making changes to your routine.\n\n#BeetJuice #LCitrulline #BloodCirculation #HealthyAging #Over60Health #NitricOxide #VascularHealth #seniorhealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/add",
+     "text": "#Add"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/beetjuice",
+     "text": "#BeetJuice"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/lcitrulline",
+     "text": "#LCitrulline"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bloodcirculation",
+     "text": "#BloodCirculation"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/over60health",
+     "text": "#Over60Health"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/nitricoxide",
+     "text": "#NitricOxide"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/vascularhealth",
+     "text": "#VascularHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "If you are drinking beet juice for your\ncirculation right now, I need you to\nstay with me for the next few minutes.\nBecause what I am about to share with\nyou may genuinely change the results you\nare getting from every single glass you\nconsume. Here's the truth about beet\njuice. It works. The research on this is\nclear. The mechanism is well understood.\nAnd adults over 60 who drink it\nconsistently do show measurable\nimprovements in blood flow and vascular\nfunction. That part is not in question.\nBut there is a specific point inside\nyour body's nitric oxide production\nsystem, a gap, that beet juice cannot\nreach on its own. And after the age of\n65, that gap becomes progressively\nwider. It becomes, in many cases, the\nprimary reason why adults who are doing\neverything right, drinking the juice,\nfollowing the guidance, putting in the\neffort, still wake up with cold hands,\nstill deal with aching legs, still\nnotice that their walking distance keeps\nquietly shrinking. There is one\ningredient that, when combined with beet\njuice, closes that gap. It works through\na completely different biological\npathway than beet juice does. And the\ntwo together produce a nitric oxide\nresponse that researchers in clinical\ntrials specifically designed to test\nthis combination in adults over 60\ndescribed as producing effects that\nmeaningfully exceeded the vascular\nimprovement compared to beet juice\nconsumed alone. This ingredient is not\nlemon juice. It is not garlic. It is not\nginger or cacao or any of the additions\nyou may have seen on other circulation\nlists. It operates at a completely\ndifferent level of your metabolic\nbiology. And the reason most health\ncontent has never explained it to you\nproperly is not that the research is\nweak. It is that the mechanism requires\nabout 5 minutes of genuine explanation\nto understand. And most health content\ndoes not invest those 5 minutes. I am\ngoing to invest them today. Because once\nyou understand why this works, you will\nnot need to be reminded to use it. You\nwill want to.\nBy the end of this video, you will know\nexactly what this ingredient is, exactly\nwhy it produces the specific synergy it\ndoes alongside beet juice at the precise\nstage of nitric oxide biochemistry where\nolder adults need the most support. And\nexactly how to add it to your morning\nroutine in a way that takes under 90\nseconds. Stay with me because the\nfoundational science I need to give you\nfirst changes everything.\nResearchers publishing in the\npeer-reviewed journal Aging conducted a\nrandomized double-blind\nplacebo-controlled trial examining the\neffect of combined nitric oxide\nprecursor supplementation on vascular\nfunction and cardiovascular performance\nin healthy older adults between 60 and\n70 years of age. One group received a\ndaily placebo. The other group consumed\na daily combination of dietary nitrate,\nthe same compound that powers beet\njuice, and a second specific compound we\nwill get to in a moment. After 4 weeks,\nthe combination group showed a\nstatistically significant 7.5 mm of\nmercury reduction in resting systolic\nblood pressure and a 6.8 mm reduction in\nmean arterial pressure. They also showed\na measurable 5.2% improvement in maximal\ncardiovascular exercise output. Those\nresults exceeded what prior research had\nshown from nitrate supplementation\nalone, which a separate meta-analysis\nfound produces an average 4-mm blood\npressure reduction in healthy adults.\nSame nitrate base. The addition of a\nsecond compound amplified the vascular\nbenefit across every measurement\ncategory. Every reference in this video\nis linked in the description below.\nBefore I name the compound, I need to\ngive you the biology. Because if I\nsimply told you what it was right now,\nit would sound like just another\nsupplement. And it is not just another\nsupplement. It is the specific answer to\na specific problem that aging creates in\nyour arterial walls. And understanding\nthat problem is what will motivate you\nto actually use this every morning\nrather than trying it twice and drifting\nback to old habits. Before I go further,\nI want to hear from you right now. Drop\nyour age in the comments below and tell\nme, have you been drinking beet juice?\nHow long have you been at it? And\nhonestly, have you noticed that after a\ncertain point, the results seem to level\noff? That feeling of doing something\nright but sensing you are not getting\neverything you should be getting? I read\nevery comment on this channel\npersonally. Your answer takes 10 seconds\nand it directly shapes what I bring you\neach week. Now, let us get into the\nscience. How beet juice actually works.\nHere's what beet juice genuinely does\ninside your body and why it matters\nspecifically for people over 60. Beets\nare one of the richest dietary sources\nof inorganic nitrates. When you drink\nbeet juice, those nitrates are absorbed\nand begin a conversion process that\nstarts earlier than most people realize.\nIt starts in your mouth. The bacteria\nthat live naturally on the surface of\nyour tongue convert dietary nitrates\ninto nitrites. This is why oral hygiene\nresearchers have noted something\ncounterintuitive. People who use strong\nantibacterial mouthwash excessively can\nactually reduce the cardiovascular\nbenefit of beet juice. They are killing\nthe bacteria responsible for that first\nconversion step. The nitrites then\ntravel to your stomach where in an\nacidic environment they are converted\ninto nitric oxide. And nitric oxide is\nthe molecule that signals the smooth\nmuscle cells surrounding your arterial\nwalls to relax. When those muscle cells\nrelax, the artery widens. Blood moves\nthrough it more easily with less\nresistance in greater volume. That is\nvasodilation. That is what improved\ncirculation feels like in practice. This\npathway, nitrate to nitrite to nitric\noxide, is called the dietary nitrate\npathway and beet juice feeds it\nexceptionally well.\nThe gap, building tension. Here is what\nvirtually no health content ever\nexplains. There is a second pathway\nthrough which your body produces nitric\noxide. And this second pathway does not\nuse dietary nitrates at all. Your\narterial walls are lined with a layer of\nspecialized cells called endothelial\ncells. These cells manufacture their own\nnitric oxide using an enzyme called\nendothelial nitric oxide synthase, which\nscientists abbreviate as eNOS. This\nenzyme takes a specific amino acid\ncalled L-arginine and converts it\ndirectly into nitric oxide right there\ninside the cells lining your arterial\nwalls. This endothelial pathway is not a\nbackup system. In a healthy\ncardiovascular system, the endothelial\npathway and the dietary nitrate pathway\nrun in parallel, together producing the\ntotal nitric oxide your arteries need to\nperform properly. Now, here is where the\nproblem lives. After the age of 65, two\nthings happen to the endothelial pathway\nthat significantly reduce its nitric\noxide output. First, the eNOS enzyme\nitself becomes progressively impaired.\nResearchers have established that with\nadvancing age, reduced nitric oxide\nbioavailability stems from compromised\neNOS activity. Not because the enzyme\ndisappears, but because aging-related\noxidative stress causes the enzyme to\nuncouple. Rather than producing nitric\noxide as it is designed to do, an\nuncoupled eNOS begins producing\nsuperoxide instead, a molecule that\nactually degrades the nitric oxide you\ndo have. The result is the same, less\nfunctional nitric oxide from your\narterial walls increasingly as the\ndecades pass. Second, and this is the\npiece that almost nobody talks about,\nthe supply of L-arginine available to\nthat eNOS enzyme declines at the same\ntime. And the reason it declines is not\nthat older adults are eating too little\nprotein. The reason is an enzyme called\narginase. Arginase is present throughout\nyour body's tissues. Its job is to\nprocess L-arginine for various metabolic\nfunctions. The critical issue is that\narginase activity measurably increases\nwith age. Research has demonstrated that\narginase activity and expression are\nsignificantly elevated in aged tissue\ncompared to young tissue, competing\ndirectly with eNOS for the same\nL-arginine substrate and limiting nitric\noxide output. Studies in aged vascular\ntissue have shown arginase activity\nrunning as much as twice as high as in\nyounger tissue. What this means in\npractice is that when you consume\nL-arginine, whether through food or\nthrough a supplement, more of it is\nintercepted and broken down before it\never reaches your arterial walls. Think\nof it this way. Imagine trying to refill\na water tank using a garden hose, but\nsomeone has punched holes along the\nlength of the hose. No matter how much\npressure you apply at the source, a\nsignificant portion of the water leaks\nout before it arrives. That is what\nelevated arginase does to L-arginine in\nthe aging body.\nAnd the tank that runs short is the eNOS\nenzyme sitting inside your arterial wall\ncells, unable to produce the nitric\noxide your arteries are waiting for.\nBeet juice addresses the nitrate pathway\nbeautifully. It floods that system with\nraw material. But it does nothing to fix\nthe holes in the other hose. Anecdote\none, before the reveal, I want to tell\nyou about Raymond, a 77-year-old retired\nengineer from Portland, Oregon, who\nreached out to me after watching an\nearlier video on this channel. Raymond\nwas what I would call a disciplined\nperson. He had been drinking beet juice\nevery morning for 8 months. He had given\nup processed food, was walking 30\nminutes a day, and his cardiologist had\nnoted his consistent effort. But Raymond\nhad plateaued. His hands were still\ngoing numb in temperatures his wife\nfound perfectly comfortable. His legs\nstill ached before he reached the end of\ntheir neighborhood street. And when his\nankle brachial index, the clinical\nmeasure of blood flow reaching the lower\nlegs, was reassessed, it had moved only\nmarginally despite 8 months of daily\nbeet juice. He said something to me that\nI think will resonate with many of you\nwatching. He said, \"I am doing\neverything right, and I am still not\ngetting where I need to be.\" What\nRaymond did not know was that the reason\nhis beet juice was producing diminishing\nreturns had nothing to do with the beet\njuice. It had to do with the other\npathway, the one beet juice was never\ndesigned to reach. We added one compound\nto his morning beet juice. I'm going to\ntell you exactly what it is in just a\nmoment. But first, I want you to know\nthe outcome. Within 6 weeks, the morning\nstiffness in Raymond's fingers had\nreduced noticeably.\nWithin 3 months, his walking distance\nbefore leg pain onset had increased by a\nmargin that his physical therapist\nmeasured at approximately 70%. His next\nankle brachial index assessment showed\nan improvement that his cardiologist\ndescribed, in Raymond's words, as more\nthan I would have expected from dietary\nchanges alone. The only change was one\ningredient, added to the same glass of\nbeet juice he was already drinking.\nThe reveal, L-citrulline. That\ningredient is L-citrulline. And I want\nto make a prediction right now. Despite\nthe fact that you may have heard of\nL-arginine, despite the fact that you\nmay have even tried L-arginine\nsupplements at some point, there is a\nvery high likelihood that no one has\never explained L-citrulline to you in a\nway that made its specific value for\npeople over 65 clear. Here is what makes\nL-citrulline fundamentally different\nfrom L-arginine and why that difference\nis extraordinary for aging vascular\nsystems. L-citrulline is an amino acid.\nYour body can convert it into\nL-arginine. But instead of making that\nconversion in your intestine or liver,\nwhere arginase is waiting to intercept\nit, L-citrulline travels through your\ndigestive system largely untouched. It\npasses through the intestinal wall into\ncirculation and is converted into\nL-arginine in a completely different\nlocation. Your kidneys. The kidneys do\nnot carry the same elevated arginase\nburden that your intestine and other\ntissues accumulate with aging. This\nmeans that the L-arginine produced from\nL-citrulline in the kidneys arrives in\nyour systemic circulation in\nsignificantly higher concentrations than\nthe L-arginine you would swallow\ndirectly.\nResearch comparing both approaches has\nconsistently shown that L-citrulline\nsupplementation raises plasma L-arginine\nlevels more effectively than taking\nL-arginine directly. With studies\nfinding that even a modest dose of\nL-citrulline produced a greater and more\nsustained increase in plasma arginine\nthan an equivalent dose of L-arginine\nitself due to this bypass mechanism. You\nare not simply getting more L-arginine\nto your arterial walls. You are\nbypassing the specific age-related\nmetabolic barrier that makes direct\nL-arginine supplementation increasingly\ninefficient as you get older. The name\nL-citrulline, incidentally, comes from\nthe Latin name for watermelon, Citrullus\nlanatus. It was first isolated by\nJapanese researchers Yotaro Koga and Rio\nOhtake in 1914 from watermelon juice.\nAnd watermelon remains one of its\nrichest natural dietary sources with\nmeaningful amounts found in both the\nflesh and the rind of the fruit. The\nsynergy mechanism. Let me now bring this\ndirectly back to beet juice and explain\nprecisely what happens when these two\ncompounds enter your body together. Beet\njuice activates the nitrate nitrite\nnitric oxide pathway. This primarily\nbenefits nitric oxide production in your\nbloodstream and in the smooth muscle\ncells surrounding medium and large\narterial walls. It is powerful for\nvasodilation of the larger vessels that\ncarry blood from your heart towards your\nextremities. L-citrulline, converted to\nL-arginine in the kidneys and delivered\nto the endothelial cells lining your\narterial walls, activates the eNOS\npathway. This pathway primarily benefits\nnitric oxide production inside the\narterial wall cells themselves and tends\nto have particular impact on small\nvessel function, including the\ncapillaries that supply your fingers,\nyour toes, and the deep muscles of your\nlower legs. These two pathways are not\nredundant. They are complementary. They\noperate on different parts of the\nvascular system through entirely\nseparate biochemical mechanisms. And\nwhen both are stimulated simultaneously\nat higher output, the total nitric oxide\nresponse in the vascular system is not\nsimply additive. Because nitric oxide\nproduced through the eNOS pathway\nstimulates further eNOS activity. And\nnitric oxide produced through the\ndietary nitrate pathway partially\nupregulates nitrate reducing capacity in\nthe bloodstream.\nBoth systems, running simultaneously,\nreinforce each other in ways that\nneither is capable of producing alone.\nClinical evidence. In a study published\nin Experimental Physiology, researchers\nexamined the effect of L-citrulline\nsupplementation specifically in older\nadults. 25 participants completed 14\ndays of supplementation with 6 g of\nL-citrulline daily compared to a placebo\nin a randomized double-blind crossover\ndesign. The results showed that\nL-citrulline supplementation increased\nfemoral blood flow by 11% and vascular\nconductance by 14% during lower limb\nexercise in older men, a finding the\nauthors described as the first\ndemonstration that citrulline can\nincrease volumetric blood flow during\nexercise in this population. The\nimprovement was most pronounced in those\nwith higher baseline blood pressure,\nwhich corresponds precisely to the the\nwhose arginase-mediated L-arginine\nlimitation would be greatest. A 2025\nsystematic review and meta-analysis\npublished in Frontiers in Nutrition,\nanalyzing eight randomized controlled\ntrials specifically in middle-aged and\nelderly individuals, confirmed that\nL-citrulline supplementation\nsignificantly improved flow-mediated\ndilation, the clinical gold standard for\nmeasuring arterial flexibility and\nendothelial function in this age group.\nIt also significantly reduced arterial\nstiffness measured by pulse wave\nvelocity.\nThe authors concluded that L-citrulline\nsupplementation has a positive impact on\nvascular function in middle-aged and\nelderly individuals across both\nendothelial function and arterial wall\nflexibility measures. What the research\ncollectively demonstrates is exactly\nwhat the dual pathway theory predicts.\nBeet juice addresses nitrate-driven\nvasodilation at the larger vessel level.\nL-citrulline addresses endothelial\nnitric oxide production at the arterial\nwall and capillary level. Together, they\naddress the circulation problem from\nboth ends simultaneously. Cold hands,\nnumb feet, leg fatigue, cramping at\nshort walking distances. These are\nperipheral circulation symptoms. And\nthey respond to both large vessel\ndilation and capillary level supply\nsimultaneously. That is precisely what\nthe dual pathway activation of beet\njuice plus L-citrulline produces. Before\nI give you the exact protocol, the\nspecific amounts, the timing, and the\nmost effective form of L-citrulline to\nlook for, I want to pause. If this\ninformation is genuinely new to you\ntoday, if no one has ever explained that\nthere is a specific metabolic barrier in\nthe aging body that prevents beet juice\nfrom delivering its full potential,\nplease take 5 seconds and hit the like\nbutton right now. Every senior dealing\nwith cold extremities, with leg pain on\nshort walks, with the quiet frustration\nof doing the right things and still not\nfeeling as well as they should, they\nwill only see this video if you engage\nwith it.\nOne more person before the protocol,\nbecause her story illustrates something\nimportant about why starting this sooner\nrather than later genuinely matters.\nDorothy was 82 years old and had been\ntold by her vascular specialist that her\nperipheral circulation had declined to a\npoint where surgical intervention was\nbeing discussed as a future possibility.\nShe had been drinking beet juice but had\nnot been told about anything that would\nwork alongside it. When her daughter\nreached out after finding this channel,\nDorothy was experiencing numbness in\nboth feet most mornings and leg cramping\nthat limited her to walking around her\nsmall apartment with rest stops in\nbetween. We worked alongside her\nphysician to add the L-citrulline\nprotocol to her existing treatment plan.\nWithin 2 months, Dorothy's morning\nnumbness had reduced meaningfully.\nWithin 4 months, she was walking to the\nend of her building hallway without\nstopping. Her follow-up vascular\nassessment showed measurable improvement\nin ankle-brachial index scores. Her\nvascular specialist did not raise\nsurgery at the next review. I am not\nsuggesting this replaces medical care.\nDorothy's improvement happened with her\nphysician involved and alongside her\nexisting medications. But, I am telling\nyou that the research supporting these\ntwo compounds working together for\nperipheral circulation in older adults\nis not fringe science. It is documented,\nmechanistically clear, and achievable\nthrough a morning routine that costs you\nunder 2 minutes. Here's exactly how to\nimplement this. The form of L-citrulline\nmost consistently used in cardiovascular\nresearch on older adults is either pure\nL-citrulline powder or L-citrulline\nmalate, which pairs L-citrulline with\nmalic acid for improved absorption. If\nyou are using pure L-citrulline powder,\nthe research-supported dose for\ncardiovascular benefit in adults over 65\nis between 3 and 6 g per day. If you are\nusing L-citrulline malate, which is more\ncommonly available at health food\nstores, use 6 to 8 g because citrulline\nmalate is approximately 60% citrulline\nby weight. Both forms are flavorless or\nvery mildly flavored and dissolve\ncompletely in liquid within about 30\nseconds of stirring. Combine 6 to 8 oz\nof pure cold-pressed beetroot juice,\ncold-pressed rather than from\nconcentrate to preserve maximum nitrate\ncontent, with 3 to 5 g of L-citrulline\npowder, stirred until fully dissolved.\nAdd the juice of one full lemon squeezed\nfresh at the time of preparation. That\nlemon is not incidental. After 65,\nstomach acid production declines\nsignificantly and the nitrate to nitric\noxide conversion in your stomach depends\non an acidic environment to proceed\nefficiently. Fresh lemon juice provides\nthe citric acid that partially restores\nthat environment. It is a secondary\namplifier that costs you 30 seconds and\nhalf a lemon. Timing matters\nsubstantially. Research shows that\nplasma nitrate, the biomarker that\ntracks your nitric oxide availability\nfrom beet juice, peaks approximately 2\nto 3 hours after consumption. If you\nplan to walk, exercise, attend a\nphysical therapy session, or engage in\nany meaningful physical activity,\nconsuming this preparation 2 to 3 hours\nbefore aligns the nitric oxide peak with\nthe period when increased blood flow\ndemand is highest. The clinical benefit\nto peripheral tissue oxygenation during\nthat window is substantially greater\nwhen this timing is respected compared\nto random consumption. Consume it on an\nempty stomach or at least 2 hours after\nyour previous meal. Food slows gastric\nemptying and extends the time to nitric\noxide peak. If breakfast comes first,\ndrink this after and simply adjust your\n2 to 3-hour timing window accordingly.\nTake it daily. L-citrulline's vascular\nbenefits are not primarily acute.\nResearch on sustained supplementation\nshows cumulative improvement in\nendothelial function over 6 to 12 weeks\nof consistent daily use. With the most\npronounced improvements typically\nappearing between weeks 4 and 8 in older\nadults. The first week may feel modest.\nWeek 6 is typically when patients stop\nand notice something has changed.\nOptimization note. One additional layer\nfor those who want to push this further.\nQuercetin, a flavonoid found abundantly\nin raw red onion, in capers, and in\napple skin has been shown in laboratory\nand animal research to reduce arginase\nactivity in endothelial cells. Because\nreducing arginase activity is part of\nwhat makes L-citrulline work so well by\nrouting L-arginine production to the\nkidneys, adding a quercetin-rich food to\nyour daily diet may further support\noverall L-arginine delivery to your\nendothelial cells. You do not need a\nsupplement for this. Add a quarter of a\nthinly sliced raw red onion to your\nlunch or dinner on the days you consume\nthis protocol. It costs you nothing\nbeyond what you may already have in your\nrefrigerator, and it creates a third\nlayer of support for the same biological\nmechanism. I want to close by speaking\nwith you plainly. You have not been\ngetting less benefit from beet juice\nbecause you have been doing something\nwrong. You have been getting less\nbenefit because beet juice consumed\nalone was never able to reach the part\nof your nitric oxide system that aging\nhas compromised most significantly.\nThe endothelial pathway. The machinery\ninside your arterial wall cells that\nmanufactures nitric oxide from\nL-arginine that it can no longer\nreliably receive because of an enzyme\nthat grows more aggressive as you age.\nThat is not a failure of willpower or\ndiscipline. That is not a consequence of\nchoices you made at 40 or 50. That is a\nbiochemical reality operating on its own\nschedule, and it has a biochemical\nsolution. One that is now sitting in\nyour morning routine, 90 seconds away\nevery day that you choose to implement\nit. If you are 70 or 76 or 83 years old,\nif your circulation has been declining,\nif someone told you this progression is\nsimply how aging works and that you\nshould learn to manage expectations, I\nwant you to hear something clearly. The\nresearch does not support passive\nacceptance of that trajectory. Your\nendothelial cells have not forgotten how\nto make nitric oxide. They are substrate\nlimited. They are waiting for what the\nbiology says they need. What you add to\nthat glass tomorrow morning may be the\nmost consequential 60 seconds in your\ncardiovascular health routine.\nPlease subscribe to this channel if you\nhave not done so. Every week I bring you\nresearch that is filtered specifically\nfor the biology of adults over 60 and\ntranslated into the kind of protocols\nthat you can actually implement, not\njust understand. And tell me in the\ncomments, had you ever heard of\nL-citrulline before today? Did Raymond's\nstory or Dorothy's story resonate with\nsomething you have personally\nexperienced? And if you are going to try\nthis combination, tell me when you are\nstarting and what you hope to notice. I\nread every single comment, everyone.\nThank you for being here. I will see you\nnext week."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@Dr.CaleSmith/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@Dr.CaleSmith",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

@@ -1,0 +1,284 @@
+{
+ "run": {
+  "id": "k3snjmM58pgexKXZJ",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:08:25.031Z",
+  "finishedAt": "2026-11-11T08:09:15.376Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 372,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 50156,
+   "resurrectCount": 0,
+   "runTimeSecs": 50.156,
+   "metamorph": 0,
+   "computeUnits": 0.013932222222222223,
+   "memAvgBytes": 126507855.9847659,
+   "memMaxBytes": 161284096,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 4.107289934857712,
+   "cpuMaxUsage": 84.7808000053829,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 702314,
+   "netTxBytes": 147777
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "kQc7skaHO1RHYZHdd",
+  "defaultDatasetId": "O0PFnoYfcTGaMa6ws",
+  "defaultRequestQueueId": "0d4ETeiNceaL8iS8m",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "kQc7skaHO1RHYZHdd"
+   },
+   "datasets": {
+    "default": "O0PFnoYfcTGaMa6ws"
+   },
+   "requestQueues": {
+    "default": "0d4ETeiNceaL8iS8m"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://gu9bwrbibjhj.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/k3snjmM58pgexKXZJ",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/O0PFnoYfcTGaMa6ws/items?signature=MC4wLjFCTHZqUXNWZ3k3ZnVuSUdTRlhLdg"
+  }
+ },
+ "records": [
+  {
+   "title": "Doctor Reveals: The #1 Best Fruit to Eat for Healthy Eyesight!",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "GF-2EUDlSnE",
+   "url": "https://www.youtube.com/watch?v=GF-2EUDlSnE",
+   "thumbnailUrl": "https://i.ytimg.com/vi/GF-2EUDlSnE/maxresdefault.jpg",
+   "viewCount": 106,
+   "date": "2026-11-10T17:00:12.000Z",
+   "likes": 0,
+   "location": null,
+   "channelName": "Healing & Health",
+   "channelUrl": "https://www.youtube.com/channel/UCwdi3NgBtFc_LfhoxQ2eB7w",
+   "channelUsername": "HealingHealth-l4c",
+   "collaborators": null,
+   "channelId": "UCwdi3NgBtFc_LfhoxQ2eB7w",
+   "channelDescription": "Welcome to Healing and Health!\n\nSimple, science-backed tips to help you stay healthier, prevent illness, and improve your overall well-being. On this channel, we focus on prevention, healthy daily habits, nutrition, regular screenings, and lifestyle changes that support your heart, boost your energy, and protect your long-term health.\n\nNo confusing jargon. No fear-mongering. Just clear, practical, and easy-to-understand health information to help you make informed decisions and build a healthier lifestyle.\n\nHit subscribe and let's build healthier habits together — one video at a time!\n\nDisclaimer: This channel is for educational and informational purposes only and is not a substitute for personalized medical advice, diagnosis, or treatment from a qualified healthcare professional. Always consult your physician regarding your individual health concerns.",
+   "channelJoinedDate": "Oct 18, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/yo0Mp9VBjlzgJ59BmOuwKveOSNZMoER2Zx8DhACllo23KlaroDlq4wozFo92VF6dj7zAj-804-w=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/9JOoDQuX8vSX-80uUufR0TdhSSnyKUSiKRyHRLrPCApydLqCqQGb1pbGu-R-coeuFE5tlTqQDA=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 20,
+   "channelTotalViews": 743220,
+   "numberOfSubscribers": 4960,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@HealingHealth-l4c",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to Healing and Health!\n\nSimple, science-backed tips to help you stay healthier, prevent illness, and improve your overall well-being. On this channel, we focus on prevention, healthy daily habits, nutrition, regular screenings, and lifestyle changes that support your heart, boost your energy, and protect your long-term health.\n\nNo confusing jargon. No fear-mongering. Just clear, practical, and easy-to-understand health information to help you make informed decisions and build a healthier lifestyle.\n\nHit subscribe and let's build healthier habits together — one video at a time!\n\nDisclaimer: This channel is for educational and informational purposes only and is not a substitute for personalized medical advice, diagnosis, or treatment from a qualified healthcare professional. Always consult your physician regarding your individual health concerns.",
+    "channelJoinedDate": "Oct 18, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": "United States",
+    "channelUsername": "HealingHealth-l4c",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/yo0Mp9VBjlzgJ59BmOuwKveOSNZMoER2Zx8DhACllo23KlaroDlq4wozFo92VF6dj7zAj-804-w=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/9JOoDQuX8vSX-80uUufR0TdhSSnyKUSiKRyHRLrPCApydLqCqQGb1pbGu-R-coeuFE5tlTqQDA=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 20,
+    "channelTotalViews": 743220,
+    "numberOfSubscribers": 4960,
+    "isChannelVerified": false,
+    "channelName": "Healing & Health",
+    "channelUrl": "https://www.youtube.com/channel/UCwdi3NgBtFc_LfhoxQ2eB7w",
+    "channelId": "UCwdi3NgBtFc_LfhoxQ2eB7w",
+    "inputChannelUrl": "https://www.youtube.com/@HealingHealth-l4c",
+    "isAgeRestricted": false
+   },
+   "duration": "00:22:50",
+   "commentsCount": 0,
+   "text": "#eyehealth  #healthyvision  #healthyaging  #seniorhealth  \nCan the right fruit help support your eyesight as you age? In this 22-minute video, Healing and Health explores the potential benefits of kiwi for eye health and explains how important nutrients such as vitamin C, lutein, and zeaxanthin support healthy vision.\n\nDiscover how antioxidants help protect eye cells, why the macula is important for central vision, and how nutrition may contribute to long-term retinal health. We also discuss the role of healthy fats in absorbing certain nutrients, the connection between blood sugar and eye health, and why people over 50 and 60 should pay attention to regular eye examinations.\n\nLearn practical ways to support your vision through a balanced diet, healthy habits, and proactive eye care. Remember, no single fruit can prevent or cure vision loss, but nutrient-rich foods can be part of a healthy lifestyle.\n\nResearch and Sources:\n\nNational Eye Institute (NEI) — Age-Related Eye Disease Studies (AREDS).\n\nAmerican Journal of Clinical Nutrition — Research on carotenoids and macular pigment.\n\nJournal of Nutrition — Research on avocado and carotenoid absorption.\n\nDiabetes Care — Research on retinal changes associated with prediabetes.\n\nCenters for Disease Control and Prevention (CDC) — Diabetic Eye Disease and Vision Health.\n\n\nSubscribe to Healing and Health for evidence-informed videos about eye health, nutrition, healthy aging, and wellness after 50.\n\nKeywords:\n\n best fruit for eyesight, kiwi benefits for eyes, foods for healthy vision, eye health after 50, eyesight improvement foods, lutein benefits for eyes, zeaxanthin for eye health, vitamin C and eyesight, macular health, retinal health, antioxidants for vision, eye health after 60, nutrition for healthy eyes, prediabetes and eye health, senior eye care\n\nHashtags: \n#over60health  #kiwibenefits  #luteina  #zeaxanthin  #MacularHealth #retinalhealth  #visioncare  #eyenutrition  #antioxidants  #prediabetesawareness  \n\nDisclaimer:\n\n This video is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Consult an eye-care professional for vision concerns and routine eye examinations.",
+   "translatedText": "#eyehealth  #healthyvision  #healthyaging  #seniorhealth  \nCan the right fruit help support your eyesight as you age? In this 22-minute video, Healing and Health explores the potential benefits of kiwi for eye health and explains how important nutrients such as vitamin C, lutein, and zeaxanthin support healthy vision.\n\nDiscover how antioxidants help protect eye cells, why the macula is important for central vision, and how nutrition may contribute to long-term retinal health. We also discuss the role of healthy fats in absorbing certain nutrients, the connection between blood sugar and eye health, and why people over 50 and 60 should pay attention to regular eye examinations.\n\nLearn practical ways to support your vision through a balanced diet, healthy habits, and proactive eye care. Remember, no single fruit can prevent or cure vision loss, but nutrient-rich foods can be part of a healthy lifestyle.\n\nResearch and Sources:\n\nNational Eye Institute (NEI) — Age-Related Eye Disease Studies (AREDS).\n\nAmerican Journal of Clinical Nutrition — Research on carotenoids and macular pigment.\n\nJournal of Nutrition — Research on avocado and carotenoid absorption.\n\nDiabetes Care — Research on retinal changes associated with prediabetes.\n\nCenters for Disease Control and Prevention (CDC) — Diabetic Eye Disease and Vision Health.\n\n\nSubscribe to Healing and Health for evidence-informed videos about eye health, nutrition, healthy aging, and wellness after 50.\n\nKeywords:\n\n best fruit for eyesight, kiwi benefits for eyes, foods for healthy vision, eye health after 50, eyesight improvement foods, lutein benefits for eyes, zeaxanthin for eye health, vitamin C and eyesight, macular health, retinal health, antioxidants for vision, eye health after 60, nutrition for healthy eyes, prediabetes and eye health, senior eye care\n\nHashtags: \n#over60health  #kiwibenefits  #luteina  #zeaxanthin  #MacularHealth #retinalhealth  #visioncare  #eyenutrition  #antioxidants  #prediabetesawareness  \n\nDisclaimer:\n\n This video is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Consult an eye-care professional for vision concerns and routine eye examinations.",
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/eyehealth",
+     "text": "#eyehealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyvision",
+     "text": "#healthyvision"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#healthyaging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/over60health",
+     "text": "#over60health"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kiwibenefits",
+     "text": "#kiwibenefits"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/luteina",
+     "text": "#luteina"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/zeaxanthin",
+     "text": "#zeaxanthin"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/macularhealth",
+     "text": "#MacularHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/retinalhealth",
+     "text": "#retinalhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/visioncare",
+     "text": "#visioncare"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/eyenutrition",
+     "text": "#eyenutrition"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/antioxidants",
+     "text": "#antioxidants"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/prediabetesawareness",
+     "text": "#prediabetesawareness"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "I want to tell you about a single fruit,\none fruit that when you understand what\nit does inside your eye, not in your\ngut, not in your joints, but\nspecifically inside your eye, you will\nnever look at the produce aisle the same\nway again. Here is what surprises most\npeople. It is not the most expensive\nfruit. It is not the hardest to find. In\nfact, I would be willing to bet that\nsome of you walk past it every single\nweek at the grocery store without giving\nit a second thought. And yet the\nresearch on what this fruit does to\nprotect your vision as you age, the\nspecific mechanism, the way it targets\nthe exact part of the eye most\nvulnerable to damage is some of the most\ncompelling nutritional science I have\ncome across in years of studying\npreventive medicine. By the end of this\nvideo, you will know exactly which fruit\nit is. More importantly, you will know\nwhy, and you will have a simple, honest,\npractical way to make it part of your\ndaily life. starting tomorrow.\nI work in preventive health and today we\nare talking about your eyes. Stay with\nme. But before we get into it, I want to\nhear from you. Drop your name and your\nage in the comments right now. Tell me\nwhere you are watching from. Are you in\nFlorida, Ohio, the UK? And tell me this,\nwhen was the last time you genuinely\nworried about your eyesight? Because I\nthink more of you are thinking about\nthis than you let on. I read every\ncomment. Let me know you are here. And\nif this is your first time on this\nchannel, welcome. Hit that subscribe\nbutton right now because what we talk\nabout here is the kind of information\nthat genuinely changes how you live\nevery single week. All right, let us get\ninto it. What is actually happening\ninside your aging eye? Let me start with\nsomething that nobody explains clearly\nenough. Your eye is not just an organ\nthat processes light. It is one of the\nmost metabolically demanding tissues in\nyour entire body.\nThe cells in your retina, that paper\nthin layer at the back of your eye that\nconverts light into the signals your\nbrain reads as vision, those cells burn\nenergy at an extraordinary rate. They\nwork around the clock. They never stop.\nAnd here is what that means for you. All\nthat metabolic activity generates\nsomething called oxidative stress. Think\nof it like exhaust from a running\nengine. The harder the engine works, the\nmore exhaust it produces. Your retinal\ncells are working constantly, so they\nproduce a constant stream of free\nradicals, unstable molecules that if not\nneutralized, begin to damage the very\nstructures they come from. Now, here is\nwhere it gets specifically important for\nanyone over 60. Your body's internal\nantioxidant defenses, the systems you\nwere born with that neutralize those\nfree radicals, weaken with age. They\nsimply do not work as efficiently at 65\nas they did at 35. This is not a\nfailure. It is biology. But what it\nmeans practically is that the gap\nbetween the oxidative stress your eyes\ngenerate and your body's ability to\nmanage it gets wider every decade. And\ninto that gap, that is where the damage\ncomes from. Cataracts, macular\ndegeneration, declining night vision,\nincreasing sensitivity to glare. These\nare not random events. They are the long\nslow result of oxidative stress\naccumulating in eye tissue that no\nlonger has the defenses it once did. So\nwhat do most people do about this? Most\npeople do nothing. Not because they do\nnot care about their vision, but because\nnobody has ever explained the mechanism\nto them clearly enough to make it feel\nurgent. It feels abstract. It feels like\nsomething that happens to other people.\nUntil the day your opthalmologist tells\nyou that your lenses are starting to\ncloud. Until the day you reach for a\nbook and realize the words are blurry in\na way they were not six months ago.\nUntil the day your grandchild asks why\nyou are not driving at night anymore and\nyou do not have a good answer. The point\nis this. The eyes you have right now are\nthe eyes you will have for the rest of\nyour life. There is no replacement for\nthem. And the decisions you make about\nwhat you eat, not dramatically, not with\na complicated regimen, but quietly,\nconsistently, over the years, those\ndecisions shape the outcome. That is the\nfoundation. That is why what I am about\nto tell you matters. Now, most nutrition\nconversations about eye health give you\na list. Five fruits, seven vegetables,\n12 supplements. I am not going to do\nthat today because I think lists without\nunderstanding are forgettable. Instead,\nI want to tell you about the one fruit\nthat researchers keep coming back to.\nThe one that lines up most precisely\nwith what your aging eye actually needs.\nAnd the reason it works has everything\nto do with where it works. Not in your\nbloodstream, not in your stomach,\ndirectly in the macula. If you do not\nknow what the macula is, stay with me\nbecause this is the whole story. The\nmacula is a tiny specialized region at\nthe center of your retina. It is about\nthe size of a pencil eraser and it is\nresponsible for virtually everything you\nthink of as sharp vision. Reading,\nrecognizing faces, threading a needle,\nseeing the numbers on a phone screen,\nall of it. That razor sharp central\nvision comes from the macula. Here is\nwhat makes the macula extraordinary and\nalso extraordinarily vulnerable. The\nmacula contains a unique set of pigments\ncalled macular pigment. These pigments\ncomposed primarily of two compounds\ncalled lutein and zeazanthin function\nlike a pair of internal sunglasses. They\nabsorb high energy blue light before it\nreaches the most sensitive photo\nreceptor cells in your eye. They act as\na chemical shield. And here is the\nnumber that should stop you cold.\nStudies published in the journal\ninvestigative opthalmology and visual\nscience have shown that people with\nhigher macular pigment density have\nsignificantly lower risk of developing\nage- related macular degeneration AMD\nwhich is the leading cause of\nirreversible vision loss in adults over\n50 in the developed world. Not a modest\nreduction in risk a significant one. Now\nhere is the critical piece. Your body\ncannot manufacture luteine or zeazanthin\non its own. Not a single molecule. Every\nbit of macular pigment you have came\nfrom the food you have eaten across your\nlifetime. And as the years go on, if you\nare not replenishing it, it thins. Most\nAmericans are not getting enough. A 2013\nNational Health and Nutrition\nExamination Survey found that the\naverage American intake of lutein and\nzeazanthin is somewhere around 1 to 2\nmilligs per day. Eye health researchers\ngenerally consider 6 milligs per day of\nluteine and 2 milligs of zeazanthin to\nbe a meaningful protective target.\nThat is a gap, a quiet, invisible gap\nthat most people do not know exists\nuntil something goes wrong. So the\nquestion becomes, what fills that gap\nmost efficiently? What food delivers the\ncombination of lutein and zeazanthin and\nthe supporting nutrients the macula\nneeds in a form the body can actually\nabsorb that is also realistic for a\nregular person to eat regularly? That is\nthe question the research answers and\nthe answer is not what most people\nexpect. Before I tell you the number one\nfruit and I am about to I need to tell\nyou something that most nutrition advice\ngets wrong. It is not just about which\nnutrients are in a food. It is about\nwhich nutrients your body can actually\nget out of it. And this changes\neverything about how you evaluate what\nyou eat for your eyes. The hash shown\nfruit and the science behind why. Most\npeople guess berries and berries are\nexcellent. I will come back to that.\nSome people guess citrus also good. Some\npeople guess papaya or mango because\nthey have seen articles about beta\ncarotene. But the research literature,\nwhen you look at the studies that\nspecifically measure macular pigment\noptical density as an outcome and the\nfoods that most reliably increase it,\none fruit comes up consistently, kiwi\nfruit. Here is why kiwi earns its place\nat the top of this list. A study\npublished in the American Journal of\nClinical Nutrition, a landmark paper\noften cited in this field, followed a\ngroup of adults over a 12-week period.\nParticipants who consume three kiwi\nfruits per day showed a meaningful and\nmeasurable increase in macular pigment\noptical density. This is not a\ntheoretical benefit. This is a measured\nchange in the actual pigment protecting\nthe center of their retina. Why does\nkiwi perform so well? Three reasons.\nFirst, luteine content. Kiwi contains\nmeaningful amounts of luteine,\napproximately 0.1 mg per 100 g.\nMore relevantly, the luteine and kiwi\nappears to be bioavailable, meaning your\nbody actually absorbs and utilizes it\nefficiently. This matters enormously\nbecause luteine from some sources passes\nthrough the body largely unabsorbed.\nSecond, vitamin C. Ounce for ounce, kiwi\nis one of the most vitamin C dense\nfruits available. A single kiwi delivers\nmore vitamin C than an orange of similar\nsize. And vitamin C is specifically\ncritical for the lens of your eye. The\nlens contains one of the highest\nconcentrations of vitamin C of any\ntissue in the human body and it uses\nthat vitamin C to defend its proteins\nagainst the oxidative damage that over\ndecades contributes to cataract\nformation. The age related eye disease\nstudy known as ARDS\nidentified vitamin C as one of the key\nnutrients associated with reduced risk\nof cataract progression. Third, vitamin\nE. Kiwi contains vitamin E which\nprotects the membranes of your photo\nreceptor cells, the rods and cones that\nactually convert light into signals.\nVitamin E is fat soluble which means it\nworks within the fatty membranes of\nthese cells in a way water- soluble\nvitamins cannot. So in one small fruit\nsmaller than your fist, you have lutein\nfor the macula, vitamin C for the lens\nand vitamin E for the photo receptors.\nThree layers of protection, three\ndifferent parts of the eye addressed\nsimultaneously.\nLet me tell you about a patient I will\ncall Arthur. He was 68 years old. He\ncame to see me not because of a vision\ncrisis, but because his wife had noticed\nhe was squinting more at the dinner\ntable, and she was worried. His\nopthalmologist had told him at his last\nexam that his macular pigment was on the\nlow side, not dangerously so, but enough\nto be worth paying attention to. Arthur\nhad been eating fairly well, or so he\nthought. Lots of cooked vegetables, some\nsalad, the occasional piece of fruit.\nThe problem was the bioavailability gap\nI mentioned earlier. He was eating\nluteine containing foods, but mostly in\nways that limited absorption, cooked\nvegetables without fat, low-fat\ndressings, very little of the high\nabsorption pairings that actually get\nthe nutrients where they need to go. We\nmade one change first. One, he started\neating two kiwis a day, one with\nbreakfast, one as an afternoon snack. He\nalso started adding half an avocado to\nhis lunch salad three or four times a\nweek, specifically to improve the\nabsorption of everything else he was\neating. 8 months later, at his follow-up\nappointment, his opthalmologist\ncommented that his retinal measurements\nwere holding stable and looked better\nthan expected given his age and history.\nArthur called me from the parking lot of\nthe clinic. He was not dramatic about\nit. He just said, \"I think the kiwis are\nworking. I cannot prove causality from\none patient's story, but the mechanism\nis sound. The research is consistent,\nand Arthur still eats his kiwis.\" If you\nare still watching and this is helping\nyou understand something you did not\nknow before, type the number two in the\ncomments right now. Just the number two.\nIt tells me you are here. It tells me\nthis is valuable to you. And honestly,\nit helps other people find this video.\nwhen the algorithm sees that engagement.\nSo, do it now. Type two. What makes kiwi\nwork even better? The absorption secret\nhere is the piece that almost no\nnutrition video for eye health ever\ntalks about. Eating the right nutrients\nis only half the equation. The other\nhalf is whether your body can absorb\nthem at all. And this is where kiwi has\na hidden advantage that surprises people\nwhen I explain it. Kiwi contains an\nenzyme called actctinadin. This enzyme\nis specific to kiwi fruit. And research,\nincluding a study from the Plant and\nFood Research Institute, has shown that\nActinadin significantly enhances the\ndigestion and absorption of proteins\nfrom meals eaten alongside kiwi.\nWhy does this matter for your eyes?\nBecause the proteins in your retina, the\nstructural proteins that hold the\narchitecture of your photo receptor\ncells together, require precise\nnutritional building blocks to be\nmaintained and repaired. As we age,\nprotein digestion becomes less\nefficient. The stomach produces less\nacid, digestive enzyme production\ndeclines, and the nutrients that should\nbe feeding your retinal cells begin\narriving in smaller quantities. Kiwi,\nspecifically through Actinadin, helps\nbridge that gap. It improves the overall\ndigestive efficiency of a meal, which\nmeans more of everything you eat makes\nit through to be absorbed.\nThere is also a practical implication\nhere for people who eat a lot of leafy\ngreens.\nThe luteine in spinach, kale, and other\ndark greens is fat soluble. Eating it\nwith fat increases absorption\ndramatically. Up to four or five times\nmore luteine absorbed compared to eating\nthe same greens with no fat. But kiwi\neaten alongside those greens also\nsupports the digestive efficiency of the\noverall meal. It is not just a nutrient\nsource, it is a nutrient enhancer.\nNow, I want to be honest with you about\none thing because I think honesty is\nmore respectful than hype. Two kiwis a\nday will not restore vision that has\nalready been significantly lost. If you\nhave advanced macular degeneration, kiwi\nis not going to reverse it. If your\ncataracts have progressed to the point\nwhere surgery is being discussed, kiwi\nis not the answer to that conversation.\nWhat the research supports is prevention\nand slowing, protecting macular pigment\nin eyes that still have it, supporting\nlens clarity in eyes that have not yet\ncrossed into significant cataract\ndevelopment, reducing the rate at which\nthese processes progress.\nThese are exactly the outcomes that\nmatter most to people who are 60, 65, 70\nwho still have good vision and want to\nkeep it. The window for food to make a\ndifference in your eyes is not after\ndamage has been done. The window is now\nwhile the machinery is still working.\nWhile the pigment is still there to\nprotect, while the lens proteins are\nstill clear enough to be defended, that\nis when what you eat changes what\nhappens next. If you are still with me\nand you are genuinely thinking about\nmaking some changes after watching this,\ntype the number four in the comments.\nJust the number four. I love seeing\nthose come in. It tells me these\nconversations are reaching the people\nwho need them. The supporting cast\nmaking Kiwi work as part of a larger\nstrategy. Actually, pause for just a\nsecond. If this video has given you\nsomething valuable so far, I want to ask\nyou a favor. Hit the like button right\nnow. It takes 1 second. And if you have\na friend or a family member, a spouse, a\nsibling, someone you care about whose\nvision you think about, share this video\nwith them today. Not tomorrow, today.\nBecause the information we are talking\nabout is the kind that genuinely changes\nwhat people do. And sharing it is one of\nthe kindest things you can do for\nsomeone you love. All right, back to the\nscience. Kiwi is the number one fruit on\nthis list. But I would be doing you a\ndisservice if I did not give you the\nsupporting cast because the eye is a\ncomplex system and no single food\naddresses all of it. Think of kiwi as\nyour anchor and then think of these\nothers as the team around it.\nBlueberries and the blood vessel\nconnection. The deep color of\nblueberries comes from anthocyanins,\npowerful antioxidants that have a\nspecific affinity for the small blood\nvessels of the body. The retina is fed\nby some of the most delicate blood\nvessels in your circulation.\nAnthocyanins support the integrity of\nthose vessel walls, reduce inflammatory\ndamage, and support the microvascular\ncirculation on which your retina\ndepends. A 2012 study in the British\nJournal of Nutrition found that bilberry\nanthocyanins, closely related to those\nin blueberries, were associated with\nimprovements in retinal microirculation.\na handful of blueberries several\nmornings a week. Frozen is just as\neffective as fresh and considerably more\naffordable. Avocado and the absorption\nmultiplier. Avocado is the only fruit\nthat delivers meaningful luteine, the\nfat needed to absorb it in one package.\nHalf an avocado on your salad increases\nthe luteine absorption from every other\nvegetable in that salad by a factor that\nresearchers at Ohio State University\nmeasured at between four and five times\ncompared to a fat-free dressing. This is\nnot a trivial difference. This is the\ndifference between getting meaningful\neye protective nutrients from your meal\nand getting almost none.\nOranges and the lens connection. Whole\noranges, not juice. Whole oranges\ndeliver vitamin C alongside\nbioflavonoids in the white pith beneath\nthe peel. These bioflavonoids work in\npartnership with vitamin C to support\nthe small blood vessels of the eye and\nenhance vitamin C's protective effect on\nthe lens. The Blue Mountains Eye Study,\none of the largest population studies of\ndiet and eye disease, found that\nparticipants with the highest vitamin C\nintake, had significantly lower rates of\nnuclear cataract over a 10-year period.\nHere is what a simple weekly rhythm\nlooks like. No complicated schedule, no\nmeasuring, just a quiet pattern.\nMornings, two kiwis with breakfast or as\na mid-m morninging snack. This is your\nanchor. This is non-negotiable.\nThree or four mornings a week, a small\nbowl of blueberries alongside breakfast.\nThree or four times a week, half an\navocado on your lunch salad or sliced\nonto your toast. This amplifies\neverything else in the meal.\nMost days, a whole orange as an\nafternoon snack. Not juice, the whole\nfruit. When it is available, a few\nslices of papaya or mango as your\noccasional addition for betaarotene.\nThat is the entire program. No\nsupplements required, no exotic\ningredients, no complicated timing. Just\na quiet weekly rhythm that your body,\nspecifically your eyes, will benefit\nfrom across the years. Now I want to\ntalk about one more thing because I have\nwatched patients make all the right\ndietary choices and still lose ground on\ntheir vision. And when I looked at why\nthe answer was not the fruit they were\neating or the greens they were not\neating. It was something that was\nquietly undermining everything. The\nsilent sabotur most people miss\neverything I have described works. The\nresearch is consistent. The mechanisms\nare sound. But there is a a that can\nneutralize almost all of it. A condition\nthat an estimated 34 million Americans\nhave and that many of them do not manage\nas carefully as they should.\nUncontrolled blood sugar. Diabetic\nretinopathy, the eye damage caused by\nchronically elevated blood sugar, is now\nthe leading cause of new blindness in\nworking age adults in the United States.\nBut here is what many people do not\nrealize. You do not have to have\ndiabetes for elevated blood sugar to\ndamage your eyes. Pre-diabetes blood\nsugar that is elevated but not yet in\nthe diabetic range is associated with\nearly microvascular changes in the\nretina that can be detected by careful\nimaging before any symptoms develop. A\n2018 study in diabetes care found\nretinal changes in pre-diabetic\nindividuals that mirrored early stages\nof diabetic retinopathy. The small blood\nvessels of the retina are among the\nfirst casualties of glucose toxicity and\nthe damage is cumulative. Every spike,\nevery extended period of elevated sugar\ndeposits damage that adds up over years.\nThe fruits I have recommended today are\ngenerally low to moderate on the\nglycemic scale. Kiwi, blueberries,\navocado in particular. But I want to\nflag this honestly. If you have diabetes\nor pre-diabetes, the quantity and timing\nof even healthy fruit matters. A\nconversation with your physician about\nhow to incorporate fruit into your\nspecific dietary pattern is worth\nhaving. Blood sugar management is not\nseparate from my health. It is central\nto it. And the daily choices you make\nabout what you eat, how much you move,\nand whether you monitor your blood sugar\nare among the most powerful things you\ncan do for your vision. Full stop. This\nis why I always tell patients, take care\nof the whole system. The eye is\ndownstream of everything else in your\nbody. When the rest is inflamed, when\nblood sugar is swinging, when blood\npressure is poorly controlled, the eye\npays the price first. So, let me leave\nyou with this. Your vision is not an\naccident of luck. It is the long result\nof the choices you make about how you\nfeed and care for your body. Today you\nlearned why the macula is the target\nthat matters most. You learned that kiwi\nspecifically has the most complete\nnutritional profile for protecting it,\nsupported by real evidence and a clear\nbiological mechanism. You learn the\nsupporting cast that amplifies\neverything kiwi does. And you learned\nthat blood sugar control is not optional\nif you want your eyes to last. But here\nis what this video did not cover, and it\nis arguably more important than anything\nI have talked about today.\nThere is a specific combination of\nnutrients that research suggests can\nactively slow the progression of early\nmacular degeneration once it has already\nstarted. Not prevent it, slow it. It is\nnot a fruit. It is not a supplement most\npeople have heard of. And the dosing,\nwhich matters enormously, is something\nalmost nobody explains correctly. I am\ngoing to cover that in the next video.\nIf you want to be the first to see it\nthe moment it goes live, subscribe right\nnow and hit the notification bell. Your\neyes have been showing you the world\nyour entire life. Give them the same\nfaithfulness in return.\nIf this video helped you today, like it,\nshare it with someone whose vision\nmatters to you, and subscribe to this\nchannel so you never miss what we cover\nnext. I will see you in the next one.\nTake care of yourself. Take care of your\nvision."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@HealingHealth-l4c/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#eyehealth",
+    "#healthyvision",
+    "#healthyaging"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@HealingHealth-l4c",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

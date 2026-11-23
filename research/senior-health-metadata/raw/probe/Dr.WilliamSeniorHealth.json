@@ -1,0 +1,266 @@
+{
+ "run": {
+  "id": "1InXahjsGryXE1Pz3",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:07:00.535Z",
+  "finishedAt": "2026-11-11T08:07:24.685Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 377,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 23946,
+   "resurrectCount": 0,
+   "runTimeSecs": 23.946,
+   "metamorph": 0,
+   "computeUnits": 0.006651666666666667,
+   "memAvgBytes": 143820243.76782557,
+   "memMaxBytes": 159326208,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 8.636519296723483,
+   "cpuMaxUsage": 87.18371501272266,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 716664,
+   "netTxBytes": 115809
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "fW4emQyYrbrsjgGVs",
+  "defaultDatasetId": "lt04bwsWUdbjhf3W9",
+  "defaultRequestQueueId": "y5aGJd8wipUWMQYRl",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "fW4emQyYrbrsjgGVs"
+   },
+   "datasets": {
+    "default": "lt04bwsWUdbjhf3W9"
+   },
+   "requestQueues": {
+    "default": "y5aGJd8wipUWMQYRl"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://pldod5bslvde.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/1InXahjsGryXE1Pz3",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/lt04bwsWUdbjhf3W9/items?signature=MC4wLms1UGJXanNUckVGdFFmNnlHSVEx"
+  }
+ },
+ "records": [
+  {
+   "title": "Your Doctor NEVER Told You These 5 Snacks Can Lower Creatinine Fast After 65 — Here's Why!",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "FZW8uzFiVT0",
+   "url": "https://www.youtube.com/watch?v=FZW8uzFiVT0",
+   "thumbnailUrl": "https://i.ytimg.com/vi/FZW8uzFiVT0/maxresdefault.jpg",
+   "viewCount": 119515,
+   "date": "2026-07-28T20:48:29.000Z",
+   "likes": 2300,
+   "location": "UNITED STATES",
+   "channelName": "Dr. William Parker Senior Health",
+   "channelUrl": "https://www.youtube.com/channel/UCPq6p8XwJcO5wY6BZiHab-A",
+   "channelUsername": "Dr.WilliamSeniorHealth",
+   "collaborators": null,
+   "channelId": "UCPq6p8XwJcO5wY6BZiHab-A",
+   "channelDescription": "Welcome to the official YouTube channel of Dr. William Parker, your trusted home for evidence-based medical advice built to help you thrive in your golden years. Aging shouldn't mean slowing down. Whether you want to boost your daily energy, protect your heart, maintain a sharp mind, or safely manage prescriptions, Dr. Parker delivers clear, jargon-free health insights you can actually use to stay independent.\n\nNew Videos Daily! Make sure to subscribe to take control of your health and longevity.\n\nDisclaimer: This content is provided for educational and informational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional regarding any medical concerns or before making decisions about your health.",
+   "channelJoinedDate": "Nov 1, 2016",
+   "channelDescriptionLinks": [
+    {
+     "text": "Longevity Guide",
+     "url": "https://healthinsight1.gumroad.com/l/umrlj"
+    }
+   ],
+   "channelLocation": "Canada",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/ViMPdE5zSwbw-aVOrtHjjllWyXkESKZ4I5Njqt3LUSnI4s81Q_KBG57R6rlWJpAYSjRIqIOG=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/M7SlBOpP1_IlDCkuUqhbRZ3B4AfKgXfOmd1_cCuuPo4tPw4taniTRYJ0Nk4W5zBLr_TgQLGQ=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 26,
+   "channelTotalViews": 9549325,
+   "numberOfSubscribers": 94600,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@Dr.WilliamSeniorHealth",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "Welcome to the official YouTube channel of Dr. William Parker, your trusted home for evidence-based medical advice built to help you thrive in your golden years. Aging shouldn't mean slowing down. Whether you want to boost your daily energy, protect your heart, maintain a sharp mind, or safely manage prescriptions, Dr. Parker delivers clear, jargon-free health insights you can actually use to stay independent.\n\nNew Videos Daily! Make sure to subscribe to take control of your health and longevity.\n\nDisclaimer: This content is provided for educational and informational purposes only and is not intended as a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional regarding any medical concerns or before making decisions about your health.",
+    "channelJoinedDate": "Nov 1, 2016",
+    "channelDescriptionLinks": [
+     {
+      "text": "Longevity Guide",
+      "url": "https://healthinsight1.gumroad.com/l/umrlj"
+     }
+    ],
+    "channelLocation": "Canada",
+    "channelUsername": "Dr.WilliamSeniorHealth",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/ViMPdE5zSwbw-aVOrtHjjllWyXkESKZ4I5Njqt3LUSnI4s81Q_KBG57R6rlWJpAYSjRIqIOG=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/M7SlBOpP1_IlDCkuUqhbRZ3B4AfKgXfOmd1_cCuuPo4tPw4taniTRYJ0Nk4W5zBLr_TgQLGQ=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 26,
+    "channelTotalViews": 9549325,
+    "numberOfSubscribers": 94600,
+    "isChannelVerified": false,
+    "channelName": "Dr. William Parker Senior Health",
+    "channelUrl": "https://www.youtube.com/channel/UCPq6p8XwJcO5wY6BZiHab-A",
+    "channelId": "UCPq6p8XwJcO5wY6BZiHab-A",
+    "inputChannelUrl": "https://www.youtube.com/@Dr.WilliamSeniorHealth",
+    "isAgeRestricted": false
+   },
+   "duration": "00:27:32",
+   "commentsCount": 99,
+   "text": "🔗 Save $16,000 A Year in Medical Bills With My Complete Longevity Guide: https://healthinsight1.gumroad.com/l/...\nThese 5 kidney-friendly snacks may help support your kidneys naturally after 60 if you have Chronic Kidney Disease (CKD). In this video, you'll learn which healthy snacks may reduce inflammation, lower kidney workload, and help protect your remaining kidney function. You'll also discover the best way to prepare certain foods to reduce potassium and avoid common diet mistakes many people with CKD make.\n\nYou'll learn about:\n\nBest snacks for Chronic Kidney Disease (CKD)\nKidney-friendly foods that are low in potassium and phosphorus\nFoods that may help reduce kidney inflammation\nThe correct way to prepare potatoes for CKD\nHigh-quality protein choices for kidney health\nHealthy nuts for people with kidney disease\nTips to help slow CKD progression naturally\nSimple kidney diet advice backed by research\n\nIf you're living with Stage 2, Stage 3, or Stage 4 CKD, or caring for someone with kidney disease, this video will help you make smarter food choices that support both kidney and heart health.\n\n👍 If you found this video helpful, please Like, Subscribe, and Share to help others learn more about kidney health.\n\n⚠️ Disclaimer: This video is for educational purposes only and is not medical advice. Always talk to your doctor or renal dietitian before making changes to your diet, especially if you have chronic kidney disease or other medical conditions.\n\n#seniorhealth #kidneyhealth #ckd #healthyaging #kidney #health #doctor",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://healthinsight1.gumroad.com/l/umrlj",
+     "text": "https://healthinsight1.gumroad.com/l/..."
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#seniorhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidneyhealth",
+     "text": "#kidneyhealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/ckd",
+     "text": "#ckd"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#healthyaging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/kidney",
+     "text": "#kidney"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/health",
+     "text": "#health"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/doctor",
+     "text": "#doctor"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "If you have chronic kidney disease,\nthere's a version of dietary advice\nyou've probably heard that goes roughly\nlike this. Avoid this, restrict that,\ndon't eat this either. Lists of things\nto eliminate, foods with warning labels\nattached. The impression that eating\nwell with CKD is primarily about what\nyou can't have. That framing is\nincomplete. And I'd argue it's doing\nsome real harm. Not because the\nrestrictions aren't real. They are, but\nbecause it leaves out something equally\nimportant. What you can deliberately eat\nthat actively reduces the workload on\nyour kidneys, supports the filters that\nare still functioning, and slows the\nprogression of damage that would\notherwise build quietly over months and\nyears. I want to tell you about a woman\nI'll call Evelyn, 71 years old, stage 3\nCKD, diligent about her health. She'd\nbeen given a list of foods to limit, and\nshe followed it faithfully. But nobody\nhad ever explained to her what to add,\nwhich foods could actually support her\nkidneys rather than simply burdening\nthem less. When we had that\nconversation, she said it was the first\ntime diet had felt like something\nworking with her kidney health rather\nthan just something she was managing\naround it. My name is Dr. William\nParker. For 21 years, I've worked with\nadults over 60 navigating kidney\ndisease. And today I want to walk you\nthrough five specific grocery store\nsnacks that research links to reduced\ninflammation, lower kidney workload, and\nbetter mineral management for people\nwith C. Stay with me through all five\nbecause the fourth one involves a\npreparation technique that almost nobody\nexplains correctly. And the fifth one is\nthe one most people with kidney disease\nnever think to consider because they\nassume all nuts are off limits. Before\nwe go further, if this kind of specific\npractical kidney health education is\nwhat you're looking for, go ahead and\nsubscribe. Now, this channel exists to\ntranslate the research into something\nyou can actually use, and it helps more\npeople find that when you do. Now, let's\nget into it. Before we look at the five\nsnacks themselves, you need one concept\nbecause without it, the reasoning behind\neach food choice won't fully make sense.\nI call it the kidney workload framework.\nHere's what's actually changing in your\nkidneys with CKD and why food choices\naffect the rate of progression. Three\nthings specifically. First, as kidney\ndisease progresses, the number of\nfunctioning nephrons. Those are the\nindividual microscopic filtering units\ninside your kidneys decreases. Each\nremaining nephron works harder to\ncompensate for the ones that are no\nlonger functioning, which means the\nsurviving nephrons are under increased\nstrain. Anything that reduces the\nfiltering burden on those surviving\nnephrons, including reducing excess\nwaste products from the diet helps\npreserve their function longer. Second,\ninflammation and oxidative stress\naccelerate CKD progression beyond what\nthe underlying disease itself would\nproduce. This is a consistently\ndocumented finding in nefrology\nresearch. Systemic inflammation, partly\ndriven by metabolic waste products that\naccumulate when kidneys filter less\nefficiently, feeds back into further\nkidney damage, creating a cycle that\ndiet can genuinely influence by reducing\ninflammatory inputs. Third, and this is\nthe piece most people with CKD never\nhear about clearly, the three minerals\nthat matter most in kidney disease,\npotassium, phosphorus, and sodium don't\nall behave the same way or require the\nsame restrictions at every stage of CKD.\nWhat's appropriate for stage two looks\ndifferent from stage 4, and individual\nblood work matters more than any general\nrecommendation. Keep the kidney workload\nframework in mind as we go through each\nsnack today because every food I'm about\nto recommend connects back to reducing\nburden on surviving nephrons while\nactively supporting the kidney filters\nthat remain. Now take a moment and think\nback to how eating felt before a CKD\ndiagnosis. Do you remember choosing food\nwithout checking a list first? Do you\nremember a meal feeling like something\nto enjoy rather than something to manage\ncarefully? A lot of people with CKD\ndescribe the dietary transition as one\nof the emotionally heavier parts of the\ndiagnosis, not because the restrictions\nare unreasonable, but because nobody\nexplains what you can eat for your\nkidneys, only what to reduce. If that\nresonates, this video was made\nspecifically for you. Here's what I need\nyou to understand before we go any\nfurther. None of what I'll share today\nis a replacement for working with a\nnefologist and a renal dietician who\nknow your specific blood work, your\nstage of CKD, and your individual\npotassium and phosphorus numbers. What\nI'm offering is the layer of information\nthat often gets skipped in a standard\nappointment. Namely, which specific\nfoods have research backing for being\nkidney supportive in ways that go beyond\nsimply having fewer of the wrong\nminerals. And as always, nothing in this\nvideo is medical advice. Before we go\ndeeper, if you'd like a structured way\nto track dietary changes like these\nalongside your other health habits, I've\nput together a free longevity guide\nlinked in the description. Thousands of\npeople in this community already use it.\nGo grab it now and let's keep working\nthrough today's topic together. So, how\ndoes CKD actually progress at the\nbiological level? Picture your kidneys\nas two fist-sized organs containing\nroughly 1 million nephrons each. Those\nmicroscopic filtering units. Each\nnephron looks like a tiny ball of blood\nvessels connected to a tube. Blood flows\ninto the ball under pressure. Waste and\nexcess fluid are filtered through and\nthe clean blood returns to circulation\nwhile the waste exits as urine. When a\nnephron is damaged by diabetes, high\nblood pressure, inflammation or other\ncauses, it stops filtering effectively.\nthe kidney can't replace it. The\nsurviving nephrons enlarge and work\nharder, which over time places enough\nmechanical and metabolic stress on them\nthat they too begin to fail. Creatinine,\na waste product of normal muscle\nmetabolism, is what your doctor measures\nto estimate how well this filtering\nsystem is working. As fewer nephrons\nfunction, creatinine accumulates in the\nblood. and GFR, the glomeular filtration\nrate, which measures how much blood the\nkidneys can clean per minute, declines.\nThe goal of dietary management isn't to\nfix damaged nephrons. It's to reduce the\nstress on surviving ones, slow their\nrate of decline, and reduce the\ninflammatory environment that\naccelerates the whole process. Now that\nyou understand the mechanism, let's look\nat the five snacks that work with that\ngoal. Before we get into specific foods,\nit's worth naming the three minerals\nthat make kidney supportive eating more\nspecific than general healthy eating\nbecause understanding them changes how\nyou evaluate any food recommendation you\nencounter. Potassium is a mineral that\nhealthy kidneys regulate precisely,\nexcreting excess efficiently. When\nkidney function declines, potassium can\naccumulate in the bloodstream and at\nhigh enough levels, it affects heart\nrhythm. Which is why managing potassium\nintake becomes genuinely important in\nmoderate to advanced CKD. Phosphorus is\na mineral that damaged kidneys also\nstruggle to excrete. And elevated\nphosphorus triggers a hormonal cascade\nthat pulls calcium from bones, stresses\nblood vessel walls, and accelerates both\nbone loss and cardiovascular disease in\nCKD patients specifically. Sodium drives\nfluid retention and blood pressure, both\nof which place additional workload on\nalready strained kidneys. Every food I'm\nabout to recommend scores favorably on\nat least one of these three mineral\nconsiderations while offering additional\nactive support through anti-inflammatory\nor antioxidant mechanisms. A pilot study\npublished in food and chemical\ntoxicology followed 23 CKD patients who\nreceived grape seed extract\nsupplementation at 2 grams daily for 6\nmonths compared to 10 patients receiving\nplacebo. At the end of 6 months the\nsupplemented group showed improved\nglumeular filtration rate protein ura\nreduced markers of oxidative stress and\nimprovements in inflammatory markers\nincluding C reactive protein compared to\nthe control group. That's not a large\ntrial and grape seed extract is not the\nsame as eating whole grapes, but it\ndemonstrates the biologically plausible\nmechanism through which the antioxidant\ncompounds in red grapes interact with\nkidney function in people who already\nhave CKD. That's not just theory. That's\na directionally consistent finding that\nchanges how we should think about\nincluding red grapes as a deliberate\nsnack choice in a kidney supportive\ndiet. I've ranked five snacks from\nhelpful to most carefully chosen so you\nknow exactly where to focus. And the\nfifth one, the one most people with\nkidney disease assume they can't have,\nturns out to be among the most kidney\nfriendly nuts available based on its\nmineral profile. Stay with me because it\nonly fully lands once you understand\neverything that comes before it. Let's\nstart with fresh red grapes. Sandra was\n68, had stage three CKD, and had given\nup most fruit out of concern about\npotassium and sugar, assuming all fruit\nwas uniformly risky for her kidneys.\nMost people with CKD assume all fruit is\nroughly equivalent in its kidney impact,\nwhich leads many people to eliminate\nfruit almost entirely as a precaution.\nThat's not the full picture, and it\nremoves a category of food that for some\nfruits actively supports kidney health\nrather than stressing it. Red grapes\nhave two specific advantages for someone\nwith CKD. First, they're relatively\nlower in potassium compared to many\nother fruits. A half cup serving of red\ngrapes contains roughly 150 mg of\npotassium compared to about 420 mg in a\nmedium banana. For someone managing\npotassium intake carefully, this\ndifference is meaningful. Second, red\ngrapes are concentrated sources of\nresveratrol and other anthsy and\npolyphenols which have demonstrated\nanti-inflammatory and antioxidant\nproperties in multiple laboratory and\nanimal studies. And as we just\ndiscussed, the grape seed extract human\npilot study showed improvements in GFR\nand inflammatory markers over 6 months.\nWithin a week or two of consistently\nincluding a small portion of fresh red\ngrapes as a regular snack, some people\nnotice their overall snack routine\nfeeling more satisfying, partly because\nthe natural sweetness of grapes tends to\nreduce cravings for processed sweet\nsnacks that carry far more problematic\nadditive loads for kidney health. The\npractical serving detail. Half a cup of\nfresh red grapes eaten whole rather than\nas juice, which concentrates the sugar\nand removes the fiber that slows absor\nmistake. most people with CKD make with\nred grapes is treating them as\nunrestricted because they're lower\npotassium when half a cup, not a full\nbowl, is the appropriate portion size.\nAnd checking your individual potassium\ntarget with your dietitian remains\nessential. Now, cooked egg whites work\nthrough a completely different\nmechanism. And this one addresses a\nchallenge that's central to kidney\ndisease management. How to get enough\nprotein while keeping phosphorus low.\nFrank was 73, losing muscle mass despite\neating what he thought was enough\nprotein, and had been told to limit\nprotein for his kidneys without being\ntold which proteins to prioritize. Most\npeople with CKD here limit protein and\neither reduce all protein uniformly or\navoid protein richch foods generally\nwithout understanding that protein\nquality matters enormously in the kidney\ncontext. Your kidneys must filter and\nexcrete the byproducts of protein\nbreakdown, which creates a genuine\nworkload concern. But eliminating\nprotein too aggressively leads to muscle\nwasting, which carries its own\nconsequences for overall health and\nrecovery from illness. Egg whites\nspecifically offer an unusually\nfavorable profile. They provide what\nnutritionists classify as complete high\nbiological value protein, meaning they\ncontain all essential amino acids in\nproportions your body can use\nefficiently. While being extremely low\nin phosphorus compared to most other\nprotein sources, a single large egg\nwhite contains roughly 5 grams of\nprotein and only 5 milligs of\nphosphorus, whereas the egg yolk from\nthe same egg contains about 90 mg of\nphosphorus. Protein from high biological\nvalue sources like egg whites produces\nless uremic waste per gram of protein\nconsumed compared to lower quality plant\nproteins, which means you get more\nnutritional benefit for less kidney\nfiltering work. Research in renal\nnutrition consistently supports\nprioritizing high biological value\nproteins in CKD diets specifically for\nthis reason. The practical detail two to\nthree cooked egg whites as a snack plain\nscrambled without salt or incorporated\ninto a small portion of another dish\nprovides a meaningful protein\ncontribution without the phosphorous\nload of most other protein sources. The\nmistake most people make is consuming\nwhole eggs regularly while managing CKD,\nretaining the yolk for its flavor and\nrichness without recognizing that the\nyolk is exactly where the phosphorus is\nconcentrated. There's an additional\nnuance worth knowing about phosphorus\nand CKD that goes beyond just the egg\nyolk food additives. Many processed\nfoods use phosphate additives as\npreservatives or stabilizers. And\nphosphorus from these additives is\nabsorbed far more completely by the gut\nthan organic phosphorus found naturally\nin unprocessed foods. A processed food\nitem with 100 mg of phosphate additive\nmay deliver far more absorbed phosphorus\nto your bloodstream than a natural food\nwith the same listed phosphorus content\nsimply because the additive form\nbypasses some of the absorption barriers\nthat exist for natural phosphorus in\nwhole foods. This is a significant\nreason why eating minimally processed\nfoods like egg whites, fresh vegetables,\nand whole fruits generally performs\nbetter for phosphorus management than\nprocessed foods that might appear to\nhave comparable phosphorus content on a\nnutrition label. Quick pause here. Has\nyour nephologist or renal dietician\nspecifically discussed which protein\nsources are most appropriate for your\nstage of CKD? or has the guidance mainly\nbeen a general limit protein instruction\nwithout specific food guidance? Drop a\ncomment and let me know. This\ndistinction matters enormously in\npractice, and it's one of the most\ncommon gaps I hear about from people\nmanaging kidney disease. All right,\neverything up to this point has\nmattered, but what I'm about to share\nnow is where the real conversation\nbegins because these next three snacks\naddress some of the most practical\nday-to-day challenges in kidney friendly\neating. and one of them involves a\npreparation technique that contradicts\nwhat most people have been told. The\nthird snack is potatoes prepared\ncorrectly. And the reason this belongs\non a kidney supportive list requires\ncareful explanation because the standard\nadvice about potatoes and CKD is\npartially outdated and in some cases\nwrong in a way that causes people to\neither avoid potatoes entirely or\nprepare them in a way that doesn't\nactually reduce potassium as much as\nthey think. Dorothy was 66 with CKD and\nhad been told to soak her potatoes\nbefore cooking to leech out the\npotassium. She was doing this\nfaithfully, but her potassium remained\nhigher than her dietician expected. Most\npeople with CKD who've been told about\nleeching assumed that soaking raw\npotatoes in water before cooking\neffectively removes most of the\npotassium. Research published in the\nJournal of Renal Nutrition and in Food\nScience specifically found this is not\nreliable. Soaking raw potatoes before\ncooking produces insufficient potassium\nreduction. What does work and works\nsubstantially is the reverse. Cook first\nthen soak. When you boil potatoes first\nuntil cooked through, drain then soak\nthe cooked potato in fresh warm water\nfor several hours. You can achieve\npotassium reductions of up to 70% with\nfinal potassium levels reaching under\n130 mg per 100 g portion. well within\nwhat many stage 3 CKD patients can\ninclude with appropriate dietitionian\nguidance. Alternatively, double boiling,\nwhich means boiling the potato sliced\nthin in a large volume of water,\ndraining and boiling again in fresh\nwater, reduces potassium by 50 to 75%\ndepending on how thinly the potato is\nsliced. The practical preparation\nprotocol that the research actually\nsupports is this. Peel and slice the\npotato into thin pieces, roughly an\neighth of an inch. Boil in a large pot\nwith 10 times the water volume you'd\nnormally use. Drain completely and\noptionally soak the cooked pieces in\nwarm water for 2 hours before a final\ncooking step. This is more effort than\nmost snack preparation, but for someone\nwho genuinely misses potato-based foods\nand has been eliminating them entirely,\nit opens a realistic option. The mistake\nmost people make is believing soaking\nraw potatoes is equivalent to cooking\nand soaking when the research\nspecifically shows that raw soaking is\nunreliable for meaningful potassium\nreduction. Cauliflower comes next and it\nearns its place on this list through a\ngenuinely favorable combination of\nproperties that few other vegetables can\nmatch for kidney disease specifically.\nHelen was 70 and had been making\ncauliflower rice without fully\nunderstanding why her renal dietician\nwas so enthusiastic about it. She just\nknew it was on the okay list.\nUnderstanding why makes you a better\nadvocate for your own dietary decisions.\nMost people think cauliflower is simply\na lower carbohydrate substitute for\ngrain foods without independent kidney\nhealth benefits. That unersells it\nconsiderably. Cauliflower is low in both\npotassium and phosphorus relative to\nmost vegetables which is already\nmeaningful in CKD management. But it\nalso contains sulforophane and indole\ncompounds that have demonstrated\nanti-inflammatory activity in cellular\nresearch. And its high water content\nhelps with the hydration that kidney\nfunction depends on. It's also genuinely\nversatile as a base food, functioning as\na grain substitute for rice, as a mashed\npotato substitute, or as a simple\nroasted vegetable snack, which makes it\nsustainable as a dietary staple rather\nthan an occasional swap. A half cup\nserving of cauliflower contains roughly\n150 milligrams of potassium and 20\nmilligrams of phosphorus. Both very\nmanageable for most CKD patients even at\nstage three and four compared to a half\ncup of broccoli at 220 mg of potassium\nand 52 mg of phosphorus or a half cup of\ncooked kale at about 150 mg of potassium\nbut significantly higher phosphorus.\nCauliflower offers a consistently\nfavorable mineral profile while still\ndelivering genuine vegetable nutrition.\nThe practical usage detail raw\ncauliflower fuates as a snack with a\nsmall amount of plain Greek yogurt as a\ndip offers a combination of low\nphosphorus, low potassium produce with a\nmodest protein boost. The mistake most\npeople make is adding cheese sauces or\nhigh sodium seasonings to cauliflower,\nwhich negates the kidney friendly\nbenefit by introducing the sodium and\nphosphorus that were absent in the\nvegetable itself. Here it is, the snack\nthat changes the conversation entirely,\nmacadamia nuts. And here's why this\nsurprises almost everyone with CKD who\nhears it. Most people with kidney\ndisease have been told reasonably and\naccurately that nuts are high in\npotassium and phosphorus and should\ngenerally be limited. That's true for\nmost nuts. Almonds, cashews, peanuts,\nand Brazil nuts are all high enough in\nboth potassium and phosphorus that\nthey're genuinely problematic in CKD\ndiets. Macadamia nuts are meaningful\nexception. And here's why most people\nmiss this. They apply the general\nguidance about nuts uniformally without\nlooking at the specific mineral profile\nof macadamia nuts specifically which is\nsubstantially different from most of the\nnut category. An ounce of macadamia nuts\nroughly 10 to 12 nuts contains\napproximately 104 mg of potassium and 53\nmg of phosphorus. Compare that to an\nounce of almonds at 200 milligrams of\npotassium and 137 milligrams of\nphosphorus. Or an ounce of peanuts at\n187 milligrams of potassium and 106 mg\nof phosphorus. Macadamia nuts sit at\nroughly half the potassium and a third\nof the phosphorus of most commonly\nconsumed nuts, making them one of the\ngenuinely kidney friendly options in the\nnut category. They're also rich in\nmonounsaturated fatty acids, the same\nheart-healthy fat type found in olive\noil, which supports cardiovascular\nhealth at a stage where cardiovascular\nrisk in CKD patients is a genuine\nconcern. Research consistently finds\nthat CKD patients face substantially\nelevated cardiovascular risk alongside\ntheir kidney disease and the lipid\nprofile benefits of monounsaturated fats\nhave wellestablished cardiovascular\nevidence behind them. The connection\nbetween kidney health and heart health\ndeserves a moment of specific attention\nhere since it shapes how you should\nthink about any food choice in CKD\nmanagement. Adults with CKD are\nstatistically more likely to die of a\ncardiovascular event than to progress to\nkidney failure requiring dialysis. Which\nmeans that a food supporting heart\nhealth simultaneously benefits kidneys\nby the same mechanism. reducing vascular\ninflammation, supporting healthy blood\npressure, and maintaining healthier\nblood vessel walls. The monounsaturated\nfat profile of macadamia nuts, similar\nto olive oil and avocado, has been\nassociated in multiple studies with\nimproved LDL cholesterol profiles and\nreduced inflammatory markers, both of\nwhich matter to the cardiovascular risk\nthat shadow CKD at every stage. Choosing\nmacadamia nuts over processed snack\nalternatives like chips or crackers\nwhich carry both the sodium that\nstresses kidneys and the phosphate\nadditives that accumulate in CKD is a\nmeaningful trade in both directions\nsimultaneously. You don't need an exotic\nsupplement or a complicated preparation.\nHere's what the evidence supports. 1 oz\nof plain unsalted macadamia nuts as a\nsnack option confirmed with your renal\ndietician as appropriate for your\nspecific potassium and phosphorus\ntargets. Most people with stage 3 CKD\ncan incorporate this serving\ncomfortably, though individual blood\nwork remains the deciding factor. Before\nyour 30-day challenge, I want to leave\nyou with a tool for your next\nappointment with your nephrologist or\nrenal dietician. I call it the kidney\ndiet clarity checklist. Five questions\nand any good renal condition will\nwelcome every one of them. First, based\non my current potassium and phosphorus\nlevel specifically, which foods from\ntoday's list are appropriate at my\ncurrent stage of CKD? Second, is my\ncurrent protein intake sufficient to\nprevent muscle loss and which protein\nsources are best matched to my specific\nGFR and blood work? Third, have I been\npreparing high potassium vegetables\nusing methods that are actually\neffective, specifically cooking before\nsoaking rather than soaking before\ncooking? Fourth, should I be tracking\npotassium and phosphorus separately as\nmy numbers change over time, or is the\ncurrent guidance still appropriate given\nwhere my GFR sits today? Fifth, are\nthere any supplements or herbal products\nI'm currently taking that might be\naffecting my kidney function or my\nmineral balance in ways we haven't\nspecifically discussed? If your care\nteam isn't engaging with those five\nquestions in a specific individualized\nway, it's worth asking for a dedicated\nappointment with a renal dietician\nspecifically, not just general dietary\nadvice from a primary care visit. Here's\nyour challenge. For the next 30 days,\nincorporate one of the five snacks we\ndiscussed today, starting with the one\nmost accessible and most appropriate to\nyour current stage based on your most\nrecent blood work. Write down your\ncurrent creatinine level and GFR from\nyour most recent labs today. Keep a\nsimple log of when you're eating the\nsnack you've chosen, what you paired it\nwith, and how your overall diet is\nshifting. Revisit at 30 days and bring\nthe log to your next appointment. You\ndon't need a perfect kidney diet. You\nneed a consistent one built on\nunderstanding what you're eating and\nwhy. And the difference in how informed\nyour next clinical conversation feels\nwill be genuinely significant. A\npractical tracking tip that makes this\nmore useful than a general food diary.\nNote your energy levels and how you feel\nafter eating specifically, not just what\nyou ate. fatigue after meals, unusual\nthirst, and swelling in the hands or\nfeet can all be informally tracked\nalongside your dietary changes. And even\nthough these observations aren't a\nsubstitute for lab testing, they can\nhelp you bring something specific and\ntimelin to your next appointment rather\nthan a vague sense of I've been trying\nto eat better. The combination of a\ndietary log and a simple symptom note\nside by side gives your care team\nrealworld information that a lab result\nevery 3 months can't fully convey. If\nyou have a kidneyfriendly food or\npreparation technique that's worked well\nfor you at your stage of CKD, I\ngenuinely encourage you to share it in\nthe comments below. The community\nwatching this channel includes a lot of\npeople navigating exactly what you're\nnavigating. And the practical\nperson-toperson knowledge about what\nactually works in a real kitchen at a\nreal dinner table with a real household\nto cook for is often more valuable than\nanything a clinician can give you in a\n15-minute appointment. There is a real\ndifference between medical care that\nmonitors a number on a lab report and\ndietary knowledge that influences what\nthat number does over time. CKD is a\nprogressive condition and for most\npeople the pace of that progression is\nnot fixed. It's influenced month by\nmonth by what they eat, how they prepare\nit, and whether the choices they're\nmaking are actively supporting their\nkidneys or simply failing to make things\nworse. The best physicians I've known in\n21 years of practice understand that a\npatient who understands the why behind\ntheir dietary choices maintains those\nchoices. And a patient who's simply\nfollowing a list without understanding\nit usually doesn't. You've been given\nrestrictions. You may not have been\ngiven a reason to feel hopeful about\nwhat food can do proactively for your\nkidney health. And you may not have been\ngiven the specific detail about how to\nprepare the foods you were told to\nrestrict. That's not what the science\nshows is possible. And it's not what\nI've seen in 21 years of working with\npeople in exactly your situation. You're\nnot simply managing decline, you're\ninfluencing rate. And that distinction\nis worth every minute of understanding\nhow to use food as part of that effort.\nStart today with one snack prepared\ncorrectly and let that be the beginning\nof a different kind of dietary\nconversation. If this gave you something\nuseful, go ahead and subscribe. That's\nexactly what this channel is built for.\nCalm, honest, science-based guidance\nwithout the extremes you see everywhere\nelse online. And don't forget the\nlongevity guide linked below if you want\na structured daily plan to bring all of\nthis together."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@Dr.WilliamSeniorHealth/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@Dr.WilliamSeniorHealth",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

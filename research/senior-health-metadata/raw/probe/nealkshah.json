@@ -1,0 +1,318 @@
+{
+ "run": {
+  "id": "H6Fe1h0QzSOD7CBGh",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:01:19.108Z",
+  "finishedAt": "2026-11-11T08:02:18.021Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 364,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 58596,
+   "resurrectCount": 0,
+   "runTimeSecs": 58.596,
+   "metamorph": 0,
+   "computeUnits": 0.016276666666666665,
+   "memAvgBytes": 136764530.91656953,
+   "memMaxBytes": 167641088,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 4.406141615812701,
+   "cpuMaxUsage": 87.33433481302774,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 1119428,
+   "netTxBytes": 185436
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "Gxjf06ZpnN4TTzcEQ",
+  "defaultDatasetId": "es1Qgj6M63KTVNkkp",
+  "defaultRequestQueueId": "fgfssa1QjTHqWY63w",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "Gxjf06ZpnN4TTzcEQ"
+   },
+   "datasets": {
+    "default": "es1Qgj6M63KTVNkkp"
+   },
+   "requestQueues": {
+    "default": "fgfssa1QjTHqWY63w"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 0,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://fdlqbyidarpj.runs.apify.net",
+  "usageTotalUsd": 0,
+  "consoleUrl": "https://console.apify.com/view/runs/H6Fe1h0QzSOD7CBGh",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/es1Qgj6M63KTVNkkp/items?signature=MC4wLk5MeFdyUjVGclFvdURoMTN6R3BJ"
+  }
+ },
+ "records": [
+  {
+   "title": "Energy Drinks Cause Heart Attacks - The ONE Ingredient to Look Out for…",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "Ri2OR4Sfp1M",
+   "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M",
+   "thumbnailUrl": "https://i.ytimg.com/vi/Ri2OR4Sfp1M/maxresdefault.jpg",
+   "viewCount": 44970,
+   "date": "2026-11-10T03:25:34.000Z",
+   "likes": 951,
+   "location": "UNITED STATES",
+   "channelName": "Neal K. Shah",
+   "channelUrl": "https://www.youtube.com/channel/UChy5xzO6JM4v221lU4Z0hpw",
+   "channelUsername": "nealkshah",
+   "collaborators": null,
+   "channelId": "UChy5xzO6JM4v221lU4Z0hpw",
+   "channelDescription": "America's Chief Elder Officer. Over 3 million followers across social media. Neal K. Shah is a Johns Hopkins- and NIH-funded caregiving researcher, and CEO of CareYaya. He discusses topics relevant to older adults and caregivers, those caring for loved ones with dementia, cancer and serious illness. Subscribe and together let's build a better future for aging and caregiving! ❤️",
+   "channelJoinedDate": "Nov 30, 2022",
+   "channelDescriptionLinks": [
+    {
+     "text": "Neal K. Shah - Bio",
+     "url": "https://www.careyaya.org/neal-k-shah"
+    },
+    {
+     "text": "Instagram - Neal K. Shah",
+     "url": "https://www.instagram.com/nealkshah"
+    },
+    {
+     "text": "Facebook - Neal K. Shah",
+     "url": "https://www.facebook.com/nealkshahcareyaya"
+    },
+    {
+     "text": "LinkedIn - Neal K. Shah",
+     "url": "https://www.linkedin.com/in/neal-shah-careyaya/"
+    },
+    {
+     "text": "TikTok - Neal K. Shah",
+     "url": "https://www.tiktok.com/@nealkshah"
+    }
+   ],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/lQ_a5lXGrvOvAeIalAZWrWTYNi6vDWmn3lEXW-k0xypNRJxoWUmtkMzcUPsaE5buI4RKVtCbsj4=s68-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/5eAlCNeDY_Zg_eQoAI99FzEAdT57FG1hjr-OHXi3RBqYT7ViZPijFg-g2YHgyDOxrK_sFqu_=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 913,
+   "channelTotalViews": 118678166,
+   "numberOfSubscribers": 547000,
+   "isChannelVerified": true,
+   "inputChannelUrl": "https://www.youtube.com/@nealkshah",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "America's Chief Elder Officer. Over 3 million followers across social media. Neal K. Shah is a Johns Hopkins- and NIH-funded caregiving researcher, and CEO of CareYaya. He discusses topics relevant to older adults and caregivers, those caring for loved ones with dementia, cancer and serious illness. Subscribe and together let's build a better future for aging and caregiving! ❤️",
+    "channelJoinedDate": "Nov 30, 2022",
+    "channelDescriptionLinks": [
+     {
+      "text": "Neal K. Shah - Bio",
+      "url": "https://www.careyaya.org/neal-k-shah"
+     },
+     {
+      "text": "Instagram - Neal K. Shah",
+      "url": "https://www.instagram.com/nealkshah"
+     },
+     {
+      "text": "Facebook - Neal K. Shah",
+      "url": "https://www.facebook.com/nealkshahcareyaya"
+     },
+     {
+      "text": "LinkedIn - Neal K. Shah",
+      "url": "https://www.linkedin.com/in/neal-shah-careyaya/"
+     },
+     {
+      "text": "TikTok - Neal K. Shah",
+      "url": "https://www.tiktok.com/@nealkshah"
+     }
+    ],
+    "channelLocation": "United States",
+    "channelUsername": "nealkshah",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/lQ_a5lXGrvOvAeIalAZWrWTYNi6vDWmn3lEXW-k0xypNRJxoWUmtkMzcUPsaE5buI4RKVtCbsj4=s68-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/5eAlCNeDY_Zg_eQoAI99FzEAdT57FG1hjr-OHXi3RBqYT7ViZPijFg-g2YHgyDOxrK_sFqu_=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 913,
+    "channelTotalViews": 118678166,
+    "numberOfSubscribers": 547000,
+    "isChannelVerified": true,
+    "channelName": "Neal K. Shah",
+    "channelUrl": "https://www.youtube.com/channel/UChy5xzO6JM4v221lU4Z0hpw",
+    "channelId": "UChy5xzO6JM4v221lU4Z0hpw",
+    "inputChannelUrl": "https://www.youtube.com/@nealkshah",
+    "isAgeRestricted": false
+   },
+   "duration": "00:14:15",
+   "commentsCount": 133,
+   "text": "This popular drink causes heart attacks…\n\nAn everyday energy drink can increase reports of sudden cardiac arrest by 11 times, and an older heart cannot simply bounce back from the shock.\n\nIn an analysis of over 28,000 FDA emergency reports, energy drinks were linked to 11 times more sudden cardiac arrest reports and over four times more heart attacks. When massive stimulant doses hit stiffening blood vessels or mix with daily blood pressure prescriptions, the heart's electrical recharge can stall, turning a mid-afternoon energy boost into an immediate medical crisis.\n\nIn this deep dive, I explain the biological difference between a heart attack and cardiac arrest, why coffee doesn't trigger the same electrical storm as canned stimulants, the 1994 law that lets brands skip safety trials, and four immediate ground rules to protect your household.\n\nUnexplained fainting during exertion or resting heart fluttering can signal an electrical rhythm disorder and requires immediate medical evaluation from a doctor.\n\nWHAT YOU’LL LEARN:\nWhy FDA reports show an 11-fold spike in cardiac arrest from energy drinks\nThe critical difference between a plumbing heart attack and an electrical arrest\nHow hidden stimulants like guarana delay your heart's QT recharge interval\nWhy the 1994 DSHEA law allows high-stimulant drinks to bypass clinical safety tests\nFour household rules to prevent stimulant toxicity and protect developing hearts\n\nCHAPTERS:\n00:00 The hidden cardiac danger in energy drinks\n01:18 FDA reports: an 11-fold surge in cardiac arrest\n03:03 Heart attack vs. cardiac arrest: plumbing vs. power\n04:41 Why coffee is safe while energy drinks disrupt rhythm\n06:51 The QT interval: how stimulants trigger electrical storms\n08:03 From Vin Mariani to the 1994 DSHEA supplement loophole\n10:14 Dangerous mixes: alcohol, heavy workouts, and stimulants\n11:47 Red flags: fainting, palpitations, and warning signs\n12:47 Your 4-step action plan: ground rules and kitchen audit\n\nFREQUENTLY ASKED QUESTIONS\nWhy are energy drinks linked to sudden cardiac arrest?\nEnergy drinks deliver massive doses of caffeine and hidden herbal stimulants like guarana quickly. This sudden surge delays the heart's QT recharge interval, which can disrupt its electrical grid and trigger chaotic ventricular fibrillation.\n\nHow are energy drinks different from drinking a cup of coffee?\nA standard cup of coffee provides about 95 milligrams of caffeine sipped slowly alongside natural antioxidants. Energy drinks pack 200 to over 300 milligrams of caffeine slammed rapidly, often combined with amino acids and concentrated herbal stimulants.\n\nWhy doesn't the FDA require safety testing for energy drinks?\nUnder the 1994 Dietary Supplement Health and Education Act (DSHEA), energy drinks are classified as dietary supplements rather than drugs. Companies do not have to prove their safety in clinical trials before selling them in retail stores.\n\nWhat symptoms warrant emergency medical attention after drinking an energy drink?\nUnexplained fainting, especially during exercise, is a critical warning sign for an electrical rhythm disorder that requires immediate physician evaluation. Sudden chest tightness, shortness of breath, and resting heart palpitations should never be ignored.\n\nSOURCES & REFERENCES\n1) Energy drinks, stimulant products linked to cardiac arrest — American Heart Association Newsroom, 2026\n2) Energy Drink Consumption on Electrocardiographic Parameters — Journal of the American Heart Association, 2019\n3) Dietary Supplement Health and Education Act of 1994 — U.S. Government Publishing Office, 1994\n4) Sports Drinks and Energy Drinks for Children and Adolescents — Pediatrics, June 2011\n\nIf this helped you understand how energy drinks impact heart health, please like the video and share it with anyone managing high blood pressure, or families with teens. Tell me in the comments: do you or anyone in your household drink energy drinks or pre-workout powders?\n\nABOUT THIS CHANNEL\nI’m Neal K. Shah, a Johns Hopkins and NIH-funded caregiving researcher and CEO of CareYaya. I’ve helped thousands of families navigate aging, dementia, and serious illness. This channel breaks down the science and health news that affects families.\n\nDISCLAIMER\nEducational and commentary only; reflects my analysis and opinion as a researcher, not a clinician. Not medical advice. Please consult a qualified professional about any symptoms or health decisions.\n\n#HealthyAging #HeartHealth #EnergyDrinks #Cardiology",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M",
+     "text": "00:00"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=78s",
+     "text": "01:18"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=183s",
+     "text": "03:03"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=281s",
+     "text": "04:41"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=411s&pp=0gcJCWMAwfN6Pr3D",
+     "text": "06:51"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=483s",
+     "text": "08:03"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=614s",
+     "text": "10:14"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=707s",
+     "text": "11:47"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=Ri2OR4Sfp1M&t=767s",
+     "text": "12:47"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/hearthealth",
+     "text": "#HeartHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/energydrinks",
+     "text": "#EnergyDrinks"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/cardiology",
+     "text": "#Cardiology"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "user_generated",
+     "language": "en",
+     "plaintext": "Drinking an energy drink can increase\nyour risk of a heart attack by 11 times.\nNew research from the American Heart\nAssociation shows that everyday energy\ndrinks are sending people\nto the emergency room at record levels,\nand these drinks are especially dangerous\nfor older adults who are often also taking\nblood pressure medications or have other\nunderlying health conditions.\nIn this video,\nI'm gonna show you the exact way\nan energy drink causes a heart attack,\nthe legal loophole\nthat lets these companies sell\nthem without any safety testing,\nand the simple warning signs\nthat you need to know to protect yourself\nand the people you love.\nI'm Neal K. Shah, a Johns Hopkins\nand NIH-funded caregiving researcher\nand the CEO of CareYaya.\nI've helped thousands of families navigate\naging, dementia, and serious illness.\nI'm not a clinician, but a leading\nresearcher and innovator in caregiving,\nand I spent a couple of hours\ndigging through this latest research\nbecause I think older adults spend so\nmuch of their time worrying about health\nrisks like dementia or stroke or diabetes,\nbut often overlook the dangerous hidden\nhazards in their everyday lives.\nNow, before we start, please do me\none quick favor and share this video\nwith your friends or family, as that'll\nlet the algorithm show it to more people,\nand that helps us to produce these videos.\nNow, energy drinks\nare not just harmless sodas.\nThey're loaded with stimulants\nthat put brutal stress on your heart\nand your blood vessels.\nResearchers recently dug\ninto more than 28,000 emergency reports\nsent to the FDA between 2017 and 2025,\nand when they compared energy drinks\nand even workout supplements\nto normal foods and vitamins,\nthe numbers were really surprising.\nReports of sudden cardiac arrest\nwere 11 times higher.\nReports of heart attacks\nwere more than four times higher.\nBy the way,\nI'm gonna explain in a couple of minutes\nthe difference between cardiac arrest\nand heart attack.\nBeyond that,\nreports of dangerous fluttering heart\nrhythms were four times higher,\nand reports of chest tightness,\npassing out, and racing heartbeats\nwere also nearly three times higher.\nHere's why I think this matters so much,\nespecially the older you are and,\nand if you're over the age 50.\nA lot of us are reaching for canned\nenergy drinks or even quick little shots\nto fight off that mid-afternoon slump,\nsluggishness, or brain fog,\nand millions of older adults\ntake daily pills for high blood pressure\nor cholesterol.\nSo now when you dump a huge rush\nof these artificial stimulants into a body\nthat is already managing blood pressure,\nthat energy drink\ncan clash directly with the prescription.\nIt spikes your numbers into the red zone\nand can trigger sudden\nerratic fluttering in your chest.\nAs we age, our blood vessels naturally\nbecome stiffer. That means an older heart\nsimply can't bounce back\nfrom these violent chemical-induced spikes\nthat a younger heart might be able to,\nwhich can turn an everyday energy drink\ninto an immediate medical emergency\nfor yourself or your loved one.\nTo understand why these drinks are causing\nso many emergencies,\nI'll first clear up a common confusion,\nthe difference between a heart attack\nand a sudden cardiac arrest.\nMany people use those two phrases\ninterchangeably as if they mean\nthe exact same thing,\nbut inside of your body,\nthey're actually two\nquite different crises.\nThink of a heart attack\nas a plumbing problem.\nOver time,\nor because of a sudden blood clot,\nan artery feeding the heart muscle\ngets blocked. Blood can't get through,\nand a section of the heart muscle starts\nstarving for oxygen and begins to die.\nA person having a heart attack\nis usually awake and conscious.\nThey often feel heavy,\nalmost crushing chest pressure,\npain often traveling into their jaw\nor down their arm,\nshortness of breath, cold sweats.\nSudden cardiac arrest, on the other hand,\nis an electrical problem.\nYour heart has an internal electrical\npower grid that tells every muscle\nfiber exactly when and how to pump.\nDuring sudden cardiac arrest, that\nelectrical system suddenly short-circuits.\nInstead of beating in a smooth\nand steady rhythm,\nthe heart begins to quiver chaotically,\nor it just stops beating altogether.\nBlood instantly stops flowing\nto the brain and the vital organs.\nThe person collapses to the floor within\nseconds, loses consciousness,\nmight even stop breathing,\nand has no pulse.\nIf someone does not start immediate CPR\nor use an automated external\ndefibrillator within minutes,\nthe chances of survival drops by roughly\n10% for every 60 seconds that pass.\nThe FDA safety data shows\nthat energy drinks are directly sabotaging\nthe heart's electrical power grid.\nSo this brings up a natural question.\nMillions of us have enjoyed\na cup of coffee every morning,\nsometimes for 30, 40, or even 50 years.\nCoffee contains caffeine,\nand countless medical studies show\nthat drinking moderate amounts of black\ncoffee can actually help you live longer\nand even support your heart.\nSo why would an energy drink\ncause 11 times more cardiac arrest reports\nwhen a regular mug of coffee does not?\nThe answer here comes down\nto concentration, chemical mixtures,\nand how fast you drink it.\nWhen you brew a standard cup of coffee,\nyou're drinking a simple hot\nwater extract from a roasted bean.\nAn eight-ounce cup gives you\nabout 95 milligrams of caffeine.\nYou sip it slowly over 20 or 30 minutes\nwhile it cools down.\nCoffee also contains natural plant\nantioxidants that help your blood vessels\nhandle that caffeine smoothly.\nOn the other hand, energy drinks\nand even workout powders are manufactured\nfor a completely different purpose,\npure speed and shock value.\nA single tall can of an energy drink\nor even one scoop of a workout powder\noften packs 200,\n300, or even more milligrams of caffeine.\nThat's the same as slamming three\nor four cups of coffee\ninto your stomach in 30 seconds flat.\nEven worse, the caffeine number printed\non the label is rarely the whole story.\nCompanies are frequently adding herbal\nstimulants like guarana, yerba mate,\ngreen tea extract, or others.\nGuarana seeds naturally contain about four\ntimes the caffeine concentration\nof standard coffee beans.\nWhen a company adds guarana\non top of pure synthetic caffeine,\nthe actual stimulant dose\nentering your bloodstream is far higher\nthan what you see on the front of the can,\nand certainly multiples of what\nyou'd get in a cup of coffee.\nThen they mix in high doses\nof amino acids like taurine\nand glucuronolactone\nAlongside synthetic B vitamins in amounts\nthat exceed your daily requirements\nby several thousand percent.\nSo when that sudden wave\nof stimulants enters your bloodstream,\nyour adrenal glands dump fight\nor flight hormones into your circulation.\nYour blood vessels tighten,\nyour blood pressure spikes,\nyour heart rate accelerates.\nInside every heart muscle cell,\nthere are tiny electrical gates\nthat move minerals like potassium,\nsodium, and calcium back and forth\nto reset the muscle after every beat.\nDoctors measure that electrical recharge\nperiod on an EKG as the QT interval.\nClinical studies have shown\nthat energy drinks cause\na measurable delay in this recharge time.\nWhen that recharge time\ngets stretched too long,\nthe heart enters an extremely fragile\nelectrical state. If a random premature\nelectrical signal fires while\nthe heart is still trying to recharge,\nit can trigger a fatal electrical\nstorm called a ventricular fibrillation.\nThat's when the lower chambers\nof the heart flutter chaotically\ninstead of pumping blood.\nNow, what I think makes this so\ndangerous is that millions of people\nwalk around with hidden, quiet quirks\ninside their heart's electrical\nsystem without ever even knowing it.\nIn ordinary, relaxed life, they\nmight never even feel a single symptom,\nbut when you mix physical exhaustion,\na hard workout, and 300 milligrams\nof synthetic stimulants, that hidden\nflaw will get exposed really quickly,\nand the heart might suddenly shut down.\nBy the way,\nif you're finding this helpful,\nplease take a moment to share this video\nwith a friend or a family member\nwho is keeping these cans in their fridge.\nNow, how are beverage companies\nlegally allowed to sell these products\nwith this kind of biological power\nwithout proving first that they're safe?\nWell, in the late 19th century,\nduring the Gilded Age, our country went\nthrough a massive craze for medicines.\nTraveling salesmen rolled into towns\nall over the country selling colorful\nglass bottles of tonics, elixirs, and,\nyou know, energy syrups\nthat promised to cure fatigue,\nweakness, and even bad moods.\nBack in the 1880s,\none of the most famous drinks\nin the world was called Vin Mariani.\nIt was a French tonic wine\nmade by soaking coca leaves\nor coca leaves in red wine,\nwhich created a potent mixture of alcohol\nand pure cocaine.\nEven famous inventors like Thomas Edison\nor prime ministers of countries and even\nPope Leo XIII drank this regularly\nfor a quick surge of artificial energy.\nPeople loved how fast it gave them a lift,\nbut they had no idea that their hearts\nand their brains were being battered\nby unmeasured narcotics\nand heavy stimulants.\nIt took decades of tragic deaths\nand investigative reporting before\nCongress finally passed the Pure Food\nand Drug Act of 1906 to force\ncompanies to tell the truth on labels.\nYet in 1994, federal policy\ntook what seems like a step backwards,\nand it may be a massive one.\nCongress passed a law called\nthe Dietary Supplement Health\nand Education Act, known as DSHEA.\nUnder this law, energy drinks and workout\nsupplements are classified as food\nand dietary supplements,\nnot pharmaceutical drugs.\nSo if a pharmaceutical company invents\na new prescription heart medication,\nit must spend 10 to 15 years\nand hundreds of millions,\nsometimes billions of dollars,\ntesting it on thousands of people to prove\nthat it will not cause sudden death\nbefore it can ever reach a pharmacy shelf.\nBut under DSHEA,\nsupplement companies can mix together\nunstudied combination of potent stimulants\nand sell them directly at gas stations\nor grocery stores or gyms without\ndoing a single clinical safety test first.\nIn these cases, the FDA can only step\nin after hospital emergency room visits\nand death reports start\npiling up in public databases.\nThe danger multiplies even more\nwhen you look at how these products\nare used in everyday life.\nNow, I rarely see people drinking\nenergy drinks when they're well-rested.\nThey're often drinking them\nwhen somebody's exhausted,\nsleep-deprived, and their stress hormones\nare already really high.\nEven worse is the widespread habit\nof mixing energy,\nenergy drinks with alcohol.\nAlcohol is a depressant\nthat slows the brain down,\nwhile energy drinks\nare powerful stimulants.\nWhen you mix them together,\nit creates a state that doctors call\nwide awake drunkenness.\nThe caffeine masks\nthe naturally sleeping feeling,\nsleepy feeling of alcohol intoxication.\nBecause a person doesn't feel tired,\nthey then drink significantly more alcohol\nand push their physical limits far harder.\nMeanwhile, inside the body,\nalcohol widens blood vessels\nand causes severe dehydration,\nwhile the stimulants constrict arteries\nand spike blood pressure.\nThis violent tug-of-war\non the circulatory system\ncreates a prime recipe for cardiac arrest.\nThe same danger applies also,\nby the way, to workout supplements.\nMany people drink pre-workout\npowders right before lifting heavy weights\nor even running sprint intervals.\nSome of these workout powders\ncontain 12 times more caffeine per ounce\nthan regular coffee, alongside\nother stimulants like synephrine.\nWhen you take a supplement\nthat tightens your blood vessels\nand violently drives up your heart rate,\nthen you immediately strain under a heavy\nbarbell or run on a treadmill.\nYour heart is forced to pump\nagainst tremendous pressure\nwhile being starved\nof adequate rest between beats.\nI think it's an unnecessary gamble\nwith your cardiovascular health.\nNow, here are the red flags\nthat I think every parent, grandparent,\nor even caregiver should know.\nFirst, watch out for unexplained fainting,\nknown medically as syncope.\nIf somebody in your family suddenly\npasses out, especially during exercise,\nright after a workout, or even\nshortly after drinking an energy drink,\nnever write it off as simple dehydration\nor low blood sugar or mild fatigue.\nFainting during physical\nexertion is a major red flag\nfor an electrical heart rhythm disorder\nand demands an immediate visit\nto a doctor or a cardiologist.\nSecond, pay attention to complaints\nof heart fluttering or skipping beats.\nPeople often brush off heart palpitations\nas normal jitters or everyday stress,\nbut if someone mentions that their heart\nfeels like it's flopping in their chest,\nfluttering or racing\nwhile they're simply resting on the sofa,\nthat's an indicator of abnormal electrical\nirritability in the heart chambers.\nThird, look for sudden chest tightness\nand unexplained shortness of breath\nor clammy cold sweats. In younger bodies,\nheart emergencies rarely look like\nthe textbook signs you see in movies,\nso catching these subtle warnings\nearly can truly prevent a tragedy.\nIf anyone in your home drinks\nthese energy drinks,\nset these four ground rules immediately.\nFirst, respect\nthat 400 milligram daily ceiling.\nThe FDA and the American Heart Association\nstate that for healthy adults,\ncaffeine intake should not exceed 400\nmilligrams across an entire 24-hour day.\nThat typically equals about three to four\nsmall cups of standard home-brewed coffee.\nDrinking two modern energy drinks\nor taking a heavy scoop of workout powder\ncan easily blow past that safe limit,\nsometimes in a matter of minutes.\nSecond, keep energy drinks\ncompletely away from anyone under age 18.\nThe American Academy of Pediatrics\nstrongly warns that children and teenagers\nshould never consume energy drinks\nbecause their developing hearts\nand smaller body weights make them\nfar more sensitive to stimulant toxicity.\nThird, never combine stimulants\nwith alcohol or heavy exercise.\nMake sure the people\nin your family hydrate with plain water\nand balanced electrolytes,\nnot chemical stimulant drinks\nthat drive up body temperature.\nFourth, do a kitchen audit together.\nGo into the pantry and the refrigerator,\nlook at the cans and the tubs of powders,\nand turn them around\nto read the fine print.\nLook for hidden stimulants like\nguarana seed extract, yerba mate,\nbitter orange, synephrine, or even\nexcessive mega-doses of B vitamins.\nTeach your family how to spot\nthe difference between real nutrition\nand chemical stimulants.\nIf this video helps you\nbetter understand the topic,\nplease share it with your friends\nand follow along for more.\nI'm Neal K. Shah. Thank you for watching,\nand let's take better care of each other."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@nealkshah/videos",
+   "isMonetized": null,
+   "hashtags": [],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@nealkshah",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

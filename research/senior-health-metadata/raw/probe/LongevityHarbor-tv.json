@@ -1,0 +1,256 @@
+{
+ "run": {
+  "id": "edJIEG6VUvpjEPFOX",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:04:02.818Z",
+  "finishedAt": "2026-11-11T08:04:28.131Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 373,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 25140,
+   "resurrectCount": 0,
+   "runTimeSecs": 25.14,
+   "metamorph": 0,
+   "computeUnits": 0.006983333333333334,
+   "memAvgBytes": 156687620.496413,
+   "memMaxBytes": 166785024,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 7.710988064704355,
+   "cpuMaxUsage": 89.57711378960094,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 694402,
+   "netTxBytes": 134521
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "ewdiZDzfvy31tS70w",
+  "defaultDatasetId": "2y85EqgucBcz0eqT1",
+  "defaultRequestQueueId": "xbEsYKZua2oEGH4aU",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "ewdiZDzfvy31tS70w"
+   },
+   "datasets": {
+    "default": "2y85EqgucBcz0eqT1"
+   },
+   "requestQueues": {
+    "default": "xbEsYKZua2oEGH4aU"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://fwubue6dk7q5.runs.apify.net",
+  "usageTotalUsd": 0.004,
+  "consoleUrl": "https://console.apify.com/view/runs/edJIEG6VUvpjEPFOX",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0.004
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/2y85EqgucBcz0eqT1/items?signature=MC4wLlpmNkR1Nm1CamJTbmNxQzZzeUlG"
+  }
+ },
+ "records": [
+  {
+   "title": "THIS #1 Bedtime Habit That Boosts Blood Flow While You Sleep",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "Js-XRhLRhhY",
+   "url": "https://www.youtube.com/watch?v=Js-XRhLRhhY",
+   "thumbnailUrl": "https://i.ytimg.com/vi/Js-XRhLRhhY/maxresdefault.jpg",
+   "viewCount": 52,
+   "date": "2026-11-10T12:00:32.000Z",
+   "likes": 110,
+   "location": null,
+   "channelName": "Longevity Harbor",
+   "channelUrl": "https://www.youtube.com/channel/UCoiqs7nkHbtGXz3rr0LBxig",
+   "channelUsername": "LongevityHarbor-tv",
+   "collaborators": null,
+   "channelId": "UCoiqs7nkHbtGXz3rr0LBxig",
+   "channelDescription": null,
+   "channelJoinedDate": "Sep 26, 2026",
+   "channelDescriptionLinks": [],
+   "channelLocation": null,
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/TxvCLoWVm3pxhik2ElYrBUbMih-O-XqnxP97c3CHdqJv1nnX33d7315qPhz-fDGmFMvLgHvDzA=s160-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": null,
+   "channelTotalVideos": 28,
+   "channelTotalViews": 117655,
+   "numberOfSubscribers": 762,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@LongevityHarbor-tv",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": null,
+    "channelJoinedDate": "Sep 26, 2026",
+    "channelDescriptionLinks": [],
+    "channelLocation": null,
+    "channelUsername": "LongevityHarbor-tv",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/TxvCLoWVm3pxhik2ElYrBUbMih-O-XqnxP97c3CHdqJv1nnX33d7315qPhz-fDGmFMvLgHvDzA=s160-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": null,
+    "channelTotalVideos": 28,
+    "channelTotalViews": 117655,
+    "numberOfSubscribers": 762,
+    "isChannelVerified": false,
+    "channelName": "Longevity Harbor",
+    "channelUrl": "https://www.youtube.com/channel/UCoiqs7nkHbtGXz3rr0LBxig",
+    "channelId": "UCoiqs7nkHbtGXz3rr0LBxig",
+    "inputChannelUrl": "https://www.youtube.com/@LongevityHarbor-tv",
+    "isAgeRestricted": false
+   },
+   "duration": "00:23:10",
+   "commentsCount": 1,
+   "text": "Waking up with cold feet, night cramps or heavy, swollen legs after 60 is common, and it often points to how your circulation behaves while you sleep. This video looks at what the research says about blood flow at night and six simple bedtime habits that may help.\n\nCounting down from number six to number one, you'll see how sleeping position, bedroom temperature, warm foot soaks, light stretching, slow breathing and leg elevation connect to circulation, sleep and nighttime comfort.\n\nWhat you'll learn:\n\n－ Why the hours around sleep and waking carry their own cardiovascular risk\n\n－ How sleeping position and snoring can affect your nights\n\n－ How bedroom temperature and a warm shower or foot soak help your body release heat\n\n－ What a bedtime stretch may do for night leg cramps\n\n－ How slow nasal breathing supports blood vessel function\n\n－ Why raising your legs before bed helps blood return to the heart, and who should check with a doctor first\n\nStart with one or two habits tonight and see how your mornings feel. This content is educational, so bring your questions to your doctor.\n\n👍 If this video was helpful, give it a like.\n\n🔔 Subscribe to the channel so you don't miss the next video.\n\nKnow someone with cold feet or night cramps? Share this video with them.\n\nSources & references:\n\n－ Haghayegh S, et al. Before-bedtime passive body heating by warm shower or bath to improve sleep: a systematic review and meta-analysis. Sleep Medicine Reviews, 2019\n\n－ Baniassadi A, et al. Nighttime ambient temperature and sleep in community-dwelling older adults. Science of the Total Environment, 2023\n\n－ Hallegraeff JM, et al. Stretching before sleep reduces the frequency and severity of nocturnal leg cramps in older adults: a randomised trial. Journal of Physiotherapy, 2012\n\n－ Craighead DH, et al. Time-efficient inspiratory muscle strength training lowers blood pressure and improves endothelial function in midlife and older adults with above-normal blood pressure. Journal of the American Heart Association, 2021\n\n－ Abu-Own A, et al. Effect of leg elevation on the skin microcirculation in chronic venous insufficiency. Journal of Vascular Surgery, 1994\n\n⚠️ Educational note\nThis video is for general educational purposes and is not a substitute for personalized medical advice, diagnosis, or treatment. For medications, new or worsening symptoms, or urgent concerns, consult an appropriate licensed healthcare professional.\n\n#CirculationAfter60 #SeniorHealth #BedtimeHabits #HealthyAging #ColdFeet #LegCramps #SleepHealth",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://www.youtube.com/hashtag/circulationafter60",
+     "text": "#CirculationAfter60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/bedtimehabits",
+     "text": "#BedtimeHabits"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/coldfeet",
+     "text": "#ColdFeet"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/legcramps",
+     "text": "#LegCramps"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/sleephealth",
+     "text": "#SleepHealth"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Every night, while you sleep, your blood\npressure is supposed to drift down and\ngive your arteries a break. Then, in the\nhours around waking, your body shifts\ngears. Heart rate climbs, pressure\nrises.\nBlood becomes a little more ready to\nclot. And that early morning window is\nexactly when trouble tends to start.\nHeart attacks and sudden cardiac deaths\nhave long been known to cluster between\n6 a.m. and noon.\nWhen researchers pooled 31 studies\ncovering more than 11,000 strokes, they\nfound the same thing, a clearly higher\nrisk in the morning.\nSo what you do in the last hour before\nbed and how your body spends the night\nmatters more than most people realize.\nIn this video, we'll count down six\nbedtime habits from number six to number\none that research links to better blood\nflow, warmer feet, fewer night cramps,\nand calmer nights. None is expensive,\nand number one may change how you think\nabout your legs.\nBefore we start, drop a comment with\nyour age and where you're watching from.\nThe reason that matters is simple.\nCirculation at 62 looks very different\nfrom circulation at 82. And the\nconversation is far more useful when\npeople can compare notes with others\ntheir age.\nAnd if you often wake up with cold feet,\nnumb toes, or a calf cramp in the middle\nof the night, add the word feet to your\ncomment.\nThat way, the discussion stays tied to\nwhat people are actually living with.\nPicture a 70-year-old at a routine\ncheckup. Blood pressure in the office\nlooks fine. Cholesterol is under\ncontrol. They walk most days. On paper,\neverything is on track. And yet, at 3:00\nin the morning, the feet feel like ice.\nA calf cramp shows up twice a week. By\nevening, the ankles are a little puffy,\nand the socks leave deep marks. Mornings\nfeel stiff and heavy, as if the aged a\nlittle overnight.\nHere's the part a daytime visit can't\nshow.\nA reading taken in a bright clinic at 10\nin the morning tells you very little\nabout two in the morning. In healthy\ncirculation,\nblood pressure usually falls by roughly\n10 to 20% during sleep.\nResearchers call that dipping. When it\ndoesn't happen, the pattern is called\nnon-dipping.\nAnd it has been studied for decades. One\nfinished study followed middle-aged\nadults for about 22 years.\nPeople whose blood pressure failed to\ndip on two separate overnight checks\nwere about four times more likely to\nhave a non-fatal heart or blood vessel\nevent than people whose pressure dipped\nboth times.\nThat link held even after the\nresearchers accounted for office and\n24-hour readings.\nThat's an association, not proof of\ncause. The point isn't that standard\ncare is wrong.\nIt's that a single daytime number was\nnever designed to capture what happens\nin the dark.\nAnd the night is exactly where small,\nsimple habits have room to help.\nIf you like understanding the why behind\nthe numbers, this next piece changes the\npicture.\nFirst, endothelial function. The\nendothelium is the thin layer of cells\nlining every blood vessel. It makes\nnitric oxide, a gas that tells the\nvessel wall to relax and widen. With\nage, less of that signal is available.\nThink of an automatic door whose sensor\nhas grown slow. The door still opens,\njust not as quickly or as wide. Second,\narterial stiffness.\nYoung arteries stretch with each\nheartbeat and spring back.\nOver the years, they become less less\nelastic, more like a garden hose left\nout in the sun for too many summers.\nThird, venous insufficiency. Your leg\nveins have tiny one-way valves that keep\nblood moving up toward the heart. When\nthose valves weaken, blood tends to pool\nin the lower legs.\nThat's where evening swelling and\nheaviness often come from.\nFourth, thermoregulation.\nTo fall asleep, your body has to shed\nheat, and much of that heat leaves\nthrough the skin of your hands and feet.\nWith age, that release often slows.\nThat's one reason cold feet at night are\nso common after 60.\nNow put those four changes together with\nwhat happens at night. You're lying\nstill for seven or eight hours.\nWhen you walk, your calf muscles squeeze\nyour leg veins like a pump. In bed, that\npump is mostly switched off.\nNumber six is sleeping on your side\ninstead of flat on your back.\nIt sounds almost too simple, but it sets\nthe stage for everything that follows.\nYou lie down on your back because it\nfeels neutral.\nYour partner mentions that you snore.\nSome nights you wake at four with a dry\nmouth and a racing heart, and you blame\nit on getting older. Here's what may be\nhappening. On your back,\ngravity pulls the tongue and soft palate\ntoward the back of the throat.\nThe airway narrows, and in many people\nit briefly closes.\nThat's obstructive sleep apnea. Each\npause lowers oxygen. The brain responds\nwith a jolt of adrenaline, and blood\npressure spikes.\nPut simply, it's like someone stepping\non a garden hose and letting go over and\nover all night.\nThat repeated surge can work against the\nhealthy nighttime dip. In 2018,\nresearchers in Lausanne, Switzerland,\npublished findings in the journal Sleep\nMedicine from 1,719\nadults aged 40 to 85 who had full sleep\nstudies done at home.\nBreathing problems that were at least\ntwice as frequent on the back were\npresent in 53% of all participants\nand in 75% of those who had sleep apnea.\nIn other words, for many people,\nposition matters a lot.\nA 2020 Italian study of 434 people with\nhome sleep tests found that those 65 and\nolder showed the same position dependent\npattern as younger adults.\nThe authors said many older patients\ncould be candidates for positional\nstrategies, though more research is\nneeded. Be completely honest with\nyourself right now.\nHas anyone told you that you snore\nor that you seem to stop breathing for a\nmoment at night?\nThe fix, play a long body pillow behind\nyour back so you don't roll over without\nnoticing.\nPut a regular pillow between your knees\nto keep your hips and lower back\ncomfortable.\nLeft side or right side are both fine.\nPick the one you can sustain. Give it\nabout two weeks to feel natural.\nAnd if you snore loudly,\ngasp at night or feel drowsy during the\nday, ask your doctor about a sleep\nstudy.\nSide sleeping can help, but it doesn't\nreplace proper treatment. Now, the next\none. It's about the air in your bedroom\nand the most common mistake goes in the\nopposite direction from what you'd\nexpect.\nNumber five is keeping your bedroom\ncomfortably cool and warming your body\nbefore bed.\nYou set the thermostat higher because\nyou feel chilly.\nYou pile on a heavy comforter and\nflannel pajamas.\nThen you wake at 2:00 in the morning,\nsweaty and restless, kick the covers off\nand get cold all over again. The\nmechanism is about heat leaving the\nbody.\nAbout an hour and a half before your\nusual bedtime,\nyour core temperature naturally starts\nto fall.\nTo make that happen, blood vessels near\nthe skin, especially in the hands and\nfeet, widen and release heat. If the\nroom is too warm, that heat has nowhere\nto go. It's like trying to air out a\nstuffy room with the windows shut. In\n2019,\na team at the University of Texas at\nAustin published a review in Sleep\nMedicine Reviews that combined 17\nstudies on bathing before bed.\nA warm shower or bath with water around\n104 to 108 degrees Fahrenheit\ntaken 1 to 2 hours before bedtime, was\nlinked to falling asleep about 10\nminutes faster on average, along with\nbetter sleep quality. The warm water\ndraws blood to the skin. Afterward, the\nbody cools more efficiently, then\nthere's the room itself.\nIn 2023,\nresearchers at the Marcus Institute for\nAging Research and Harvard Medical\nSchool\nfollowed 50 adults aged 65 and older in\ntheir own Boston homes.\nEach wore a ring-like sleep tracker with\nsensors in the bedroom for nearly 11,000\nnights in total.\nSleep was most efficient and restful\nwhen the bedroom stayed between about 68\nand 77 degrees Fahrenheit.\nAs temperatures climbed from 77 toward\n86 degrees, sleep efficiency dropped by\n5 to 10% and people differed a lot from\none another.\nBe completely honest.\nWhat is your thermostat set to when you\ngo to bed tonight?\nThe fix, aim for roughly 68 to 77\ndegrees and adjust within that range\nuntil you find your own sweet spot. Use\nbreathable cotton sheets and lighter\nlayers you can add or remove.\nA quiet fan helps when the room feels\nstuffy and try a warm shower about 90\nminutes before bed.\n10 minutes is enough. Keep the water\ncomfortably warm, not scalding, and use\na grab bar or shower seat if you ever\nfeel lightheaded. Now, the next one.\nIt warms just one part of your body and\nthe research behind it goes back\ndecades. Number four is a warm foot soak\nbefore bed,\nfollowed by loose socks.\nYou climb into bed and your feet feel\nlike ice cubes.\nYou rub them together.\nYou lie there waiting for them to warm\nup and 20 minutes later you're still\nawake.\nThe scientific term is distal\nvasodilation, meaning the small vessels\nin your hands and feet opening up.\nIn 1999,\na study in the journal Nature reported\nthat this opening of vessels in the\nhands and feet was the best predictor of\nhow quickly people fell asleep.\nWarm feet are not just comfortable.\nThey're a signal the body uses to move\ninto sleep.\nThink of them as the release valves that\nlet the day's heat escape. In 2013,\na randomized trial in the Journal of\nCaring Sciences tested this in 46 older\nmen.\nHalf soaked their feet in warm water,\nabout 106 degrees Fahrenheit, for 20\nminutes before sleep every night for 6\nweeks.\nCompared with the group that didn't,\nthey reported longer sleep and better\noverall sleep quality. Socks matter,\ntoo.\nIn a 2018 study in the Journal of\nPhysiological Anthropology, adults\nsleeping in a cool room fell asleep\nabout 7 and 1/2 minutes faster when they\nwore bed socks. They also slept about 32\nminutes longer\nand woke up far less often.\nIt was a small study,\nbut it points the same way. Keep the\nfeet warm and the room cool.\nBe completely honest.\nHow many nights this week did you go to\nbed with cold feet?\nTo fix, fill a basin with water that\nfeels comfortably warm, around 100 to\n104 degrees.\nTest it with a thermometer or your elbow\nfirst, never your feet, especially if\nyou have diabetes or numbness because\nreduced feeling can hide a burn. Soak\nfor 15 to 20 minutes, about 30 to 60\nminutes before bed. Dry gently,\nincluding between the toes. Then put on\nloose, soft socks that don't leave\nmarks. Now, the next one. You can do it\nsitting on the edge of your bed, and it\nspeaks directly to those painful night\ncramps. Number three is light stretching\nbefore sleep. It's 3:00 in the morning.\nYour calf suddenly locks into a hard,\npainful knot.\nYou jump out of bed and stand on the\ncold floor, waiting for it to let go.\nThen you lie awake wondering when it'll\nhappen again. With age, muscles tend to\nbecome tighter and less flexible. Here's\nwhat stretching does inside the vessel.\nWhile a muscle is held in a stretch,\nblood flow through it is reduced.\nWhen you release, blood rushes back in.\nThat surge rubs along the vessel lining,\na force called shear stress, and the\nendothelium responds by making more\nnitric oxide.\nIt's a bit like squeezing a sponge and\nletting it refill. In 2020, researchers\nat the University of Milan published a\nstudy in the Journal of Physiology.\n39 healthy adults were randomly assigned\nto passive leg stretching five times a\nweek for 12 weeks or to no stretching.\nAfterward, the stretching group showed\nbetter artery dilation and less arterial\nstiffness, even in arm arteries that\nwere never stretched.\nSome of the benefit faded within six\nweeks of stopping.\nOne important limitation, the\nparticipants were young, so this shows a\nmechanism, not proof of the same effect\nafter 60.\nFor older adults, there's direct human\nevidence on cramps.\nIn 2012, a randomized trial in the\nNetherlands, published in the Journal of\nPhysiotherapy, enrolled 80 adults over\n55 who had nocturnal leg cramps. One\ngroup stretched their calves and\nhamstrings every night just before sleep\nfor six weeks. By the end, their cramps\nhad dropped by about 1.2 more per night\nthan in the group that didn't stretch.\nAnd the cramps they did have were less\npainful.\nAnother trial found no benefit, so the\nevidence is mixed.\nBe completely honest.\nDo you do anything at all for your legs\nbefore you lie down at night? The fix,\nstand facing a wall, one foot back, heel\nflat, and lean forward until you feel a\ngentle pull in the calf. Then sit on the\nedge of the bed, straighten one leg, and\nreach slowly toward your toes for the\nhamstring. Hold each stretch 20 to 30\nseconds, a few times per side. Breathe\nslowly. No bouncing and never push into\npain. If cramps are frequent or severe,\nmention it to your doctor because some\nmedications and conditions can\ncontribute.\nNow the next one. You do it about 20,000\ntimes a day without thinking. Tonight\nyou'll do it on purpose. Number two is\nslow.\nDeliberate breathing before sleep. You\nlie down and your mind starts running\nthrough tomorrow's appointments.\nYour breathing is quick and shallow,\nmostly in your chest.\nYour shoulders are tight. Sleep feels\nfar away. Fast.\nShallow breathing keeps the sympathetic\nnervous system, your fight or flight\nmode, partly switched on and that tends\nto narrow blood vessels.\nSlow breathing with a longer exhale does\nthe opposite. It engages the vagus nerve\nand the parasympathetic system, your\nrest and digest mode.\nThink of it as easing off the gas and\ngently pressing the brake.\nBreathing through the nose adds one more\npiece.\nThe sinuses produce nitric oxide and\nnasal breathing carries some of it into\nthe lungs. The strongest evidence here\ncomes from a specific technique.\nIn 2021\nresearchers at the University of\nColorado Boulder published a randomized\nsham-controlled trial in the journal of\nthe American Heart Association.\n36 adults aged 50 to 79, all with above\nnormal systolic blood pressure, used a\nhandheld device that makes breathing in\nharder.\n30 breaths a day, about 5 minutes, 6\ndays a week for 6 weeks. Systolic\npressure fell from about 135 to 126.\nArtery dilation improved by roughly 45%.\nThe sham group saw no such change\nand about three-quarters of the blood\npressure drop was still there 6 weeks\nafter training ended.\nWhat about nitric oxide in the nose?\nIn 2022\nresearchers at Sweden's Karolinska\nInstitute measured it in 10 healthy\npeople.\nHumming while breathing out raised nasal\nnitric oxide about 15 fold compared with\na quiet exhale.\nThat study measured the nose,\nnot blood flow in the legs. So it's an\ninteresting clue rather than a proven\ncirculation treatment. B. Completely.\nHonest. When you lie down tonight, will\nyou notice your breathing at all? The\nfix. Once you're in bed, breathe in\nthrough your nose for about 4 seconds,\nthen out slowly for 6 to 8 seconds. Keep\none hand on your belly and let rise more\nthan your chest. Do this for 5 minutes.\nIf you like, hum softly on a few of the\nexhales.\nAnd if the resistance device from the\nColorado study interests you, talk with\nyour doctor first, especially if you\nhave heart or lung conditions.\nNow, number one.\nIt uses the most reliable force on earth\nand it costs almost nothing.\nNumber one is elevating your legs before\nbed. You've been on your feet or sitting\nwith your legs down most of the day.\nIn the evening, you settle into a chair\nwith your feet on the floor.\nWhen you take off your socks, they've\nleft deep grooves.\nYour ankles look a little puffy.\nYour legs feel heavy like they're full\nof sand.\nThat's gravelling against weakened vein\nvalves. Blood and fluid settle in the\nlower legs.\nWhen you raise your feet above the level\nof your heart, gravity starts working\nfor you instead.\nBlood drains back toward the heart more\neasily. Pressure in the lower leg veins\nfalls and the tiny vessels in the skin\ncan move blood more freely.\nPicture tilting a gutter so the water\nfinally runs the right way.\nIn 1994,\na study in the Journal of Vascular\nSurgery from London measured this\ndirectly.\nResearchers studied 15 patients with\nchronic venous insufficiency where\nlong-standing vein problems had already\ndamaged the skin of the lower leg along\nwith 15 people without the condition.\nWhen the patients' feet were raised\nabout a foot above heart level.\nBlood flow in the skin rose by a median\nof 45%\nthe healthy group showed a similar\ntrend, but it wasn't statistically\nsignificant.\nSo the benefit appears strongest in\nexactly the people whose veins are\nstruggling.\nThat finding has shaped real-world care.\nA 2018 evidence summary on venous leg\nulcers recommends elevating the legs for\nat least 60 minutes a day, split into\ntwo or three sessions.\nIt also noted that people whose ulcers\ncame back were less likely to have\nelevated their legs for at least an hour\na day.\n23% compared with 47% among those whose\nulcers stayed healed.\nThat's an association, not proof of\ncause. Be completely honest.\nWhen did you last lie down with your\nfeet higher than your heart?\nThe fix before bed.\nLie on your back with your legs resting\non a stack of pillows or up against a\nwall, feet above heart level for 15 to\n20 minutes.\nThat's the perfect time to do your slow\nbreathing from number two.\nFor the night\na firm wedge under the foot of the\nmattress can give a gentle incline.\nAnd this matters. If you have peripheral\nartery disease or pain in your feet that\neases when you hang them over the bed,\nelevation may not suit you.\nThe same goes for heart failure or\nshortness of breath when lying flat.\nTalk with your doctor first. And if one\nleg suddenly becomes swollen, red, warm,\nor painful, that needs urgent medical\nattention, not a pillow.\nIf you've spent years going to bed in a\nwarm room, flat on your back with cold\nfeet and heavy legs, you didn't do\nanything wrong.\nMost of this simply isn't discussed in a\nshort daytime appointment.\nBut now you know a few things that\nchange the picture.\nYour circulation follows a daily rhythm,\nand the hours around sleep and waking\ncarry their own risk.\nYour feet are not just cold.\nThey're part of how your body releases\nheat and moves into sleep.\nGravity, position, and temperature are\nworking on your blood vessels every\nsingle night, whether you pay attention\nor not.\nAnd small repeated signals like a\nstretch, a slow breath, or raised legs\ngive your blood vessel lining a reason\nto respond.\nNone of this replaces medication or\nmedical care. It works alongside it. You\nare not just a passive recipient of\nnumbers and protocols.\nYou can notice your own patterns. Try\nchanges that are safe and simple and\nbring better questions to your doctor.\nThat's a far more active role in your\nown health than most people ever take.\nHere's how to put this into practice\nstarting tonight. First, check your\nthermostat.\nAim for somewhere between 68 and 77\ndegrees and adjust until you find what\nfeels best for you. Second, about 90\nminutes before bed, take a warm, not\nhot, 10-minute shower. On other nights,\ntry a 15-minute foot soak and test the\nwater with your elbow first. Third, put\non loose, soft socks before you get into\nbed. Fourth, spend 5 minutes on calf and\nhamstring stretches followed by 15\nminutes with your legs raised above your\nheart if that's safe for you. Fifth,\nwhile your legs are up, do slow nasal\nbreathing, in for four,\nout for six to eight. Sixth, settle in\non your side with a pillow behind your\nback and another between your knees. And\nfinally, have an informed conversation\nwith your doctor.\nAsk specifically,\nwould a sleep study or a 24-hour blood\npressure check tell us anything about\nwhat's happening at night\nand is leg elevation safe with my\ncirculation and my heart?\nIf this video gave you something useful,\ntype warm feet in the comments and tell\nus which of the six habits you're going\nto try first. Then think of one person\nwho would benefit from this.\nMaybe a parent who complains about cold\nfeet, a friend who gets night cramps, or\na spouse who snores.\nShare it with them tonight. If you\nhaven't already, subscribe to the\nchannel so you don't miss what's coming\nnext.\nIn an upcoming video, we'll look at what\nhappens to your blood pressure in the\nfirst hour after you wake up and the\nsimple morning routine that may make\nthat window safer.\nOne last thing.\nThis video is for general education\nonly. It is not personal medical advice.\nWhat's right for you depends on your own\nhealth history and conditions, and any\nchange to medication should only be made\nwith guidance from your doctor or\npharmacist. Thus, sleep well tonight and\ntake care of those legs."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@LongevityHarbor-tv/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#CirculationAfter60",
+    "#SeniorHealth",
+    "#BedtimeHabits"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@LongevityHarbor-tv",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}

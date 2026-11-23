@@ -1,0 +1,286 @@
+{
+ "run": {
+  "id": "8gfks87uCYFqIb2z0",
+  "actId": "h7sDV53CddomktSi5",
+  "userId": "ZV49f9CmRU53LBzxU",
+  "startedAt": "2026-11-11T08:02:43.523Z",
+  "finishedAt": "2026-11-11T08:03:10.145Z",
+  "status": "SUCCEEDED",
+  "statusMessage": "Finished! Total 4 requests: 4 succeeded, 0 failed.",
+  "isStatusMessageTerminal": true,
+  "meta": {
+   "origin": "API",
+   "userAgent": "Python-urllib/3.12"
+  },
+  "stats": {
+   "inputBodyLen": 372,
+   "migrationCount": 0,
+   "rebootCount": 0,
+   "restartCount": 0,
+   "durationMillis": 26422,
+   "resurrectCount": 0,
+   "runTimeSecs": 26.422,
+   "metamorph": 0,
+   "computeUnits": 0.0073394444444444444,
+   "memAvgBytes": 139629926.60224855,
+   "memMaxBytes": 168935424,
+   "memCurrentBytes": 0,
+   "cpuAvgUsage": 8.306724687963724,
+   "cpuMaxUsage": 91.04010223642173,
+   "cpuCurrentUsage": 0,
+   "netRxBytes": 918416,
+   "netTxBytes": 166795
+  },
+  "options": {
+   "build": "latest",
+   "timeoutSecs": 604800,
+   "memoryMbytes": 1024,
+   "maxTotalChargeUsd": 0.05,
+   "maxItems": null,
+   "isMaxTotalChargeUsdSetByUser": true,
+   "diskMbytes": 2048
+  },
+  "buildId": "I9MDqq7in32HuJQZc",
+  "exitCode": 0,
+  "defaultKeyValueStoreId": "yeBKXqctd5dPxsgYm",
+  "defaultDatasetId": "xcZMKHGsBiKs39YuY",
+  "defaultRequestQueueId": "fuSvbR7pfnZNmrRhr",
+  "storageIds": {
+   "keyValueStores": {
+    "default": "yeBKXqctd5dPxsgYm"
+   },
+   "datasets": {
+    "default": "xcZMKHGsBiKs39YuY"
+   },
+   "requestQueues": {
+    "default": "fuSvbR7pfnZNmrRhr"
+   }
+  },
+  "pricingInfo": {
+   "minimalMaxTotalChargeUsd": null,
+   "pricingModel": "PAY_PER_EVENT",
+   "isPriceChangeNotificationSuppressed": true,
+   "createdAt": "2026-09-02T13:52:04.236Z",
+   "startedAt": "2026-09-02T13:52:04.236Z",
+   "apifyMarginPercentage": 0.2,
+   "pricingPerEvent": {
+    "actorChargeEvents": {
+     "result": {
+      "eventTitle": "Video",
+      "eventDescription": "Each video written to the dataset.",
+      "isOneTimeEvent": false,
+      "isPrimaryEvent": true,
+      "eventPriceUsd": 0.004
+     },
+     "date-filter": {
+      "eventTitle": "Add-on: Date range for channels",
+      "eventDescription": "Extra cost when date filtering is used on channels.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.0013
+     },
+     "ai-video-description": {
+      "eventTitle": "Add-on: AI description",
+      "eventDescription": "Extra cost for timestamped AI description of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "ai-video-summary": {
+      "eventTitle": "Add-on: AI summary",
+      "eventDescription": "Extra cost for AI summary of a video per minute.",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.015
+     },
+     "transcribeMinute": {
+      "eventTitle": "Add-on: Transcript minute",
+      "eventDescription": "Extra cost charged per started minute per video",
+      "isOneTimeEvent": false,
+      "eventPriceUsd": 0.048
+     }
+    }
+   }
+  },
+  "chargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "platformUsageBillingModel": "DEVELOPER",
+  "accountedChargedEventCounts": {
+   "result": 1,
+   "date-filter": 0,
+   "ai-video-description": 0,
+   "ai-video-summary": 0,
+   "transcribeMinute": 0
+  },
+  "standby": null,
+  "generalAccess": "FOLLOW_USER_SETTING",
+  "buildNumber": "0.0.329",
+  "containerUrl": "https://wlpkojhfwi5c.runs.apify.net",
+  "usageTotalUsd": 0.004,
+  "consoleUrl": "https://console.apify.com/view/runs/8gfks87uCYFqIb2z0",
+  "eventUsage": {
+   "result": {
+    "eventTitle": "Video",
+    "eventTotalUsd": 0.004
+   },
+   "date-filter": {
+    "eventTitle": "Add-on: Date range for channels",
+    "eventTotalUsd": 0
+   },
+   "ai-video-description": {
+    "eventTitle": "Add-on: AI description",
+    "eventTotalUsd": 0
+   },
+   "ai-video-summary": {
+    "eventTitle": "Add-on: AI summary",
+    "eventTotalUsd": 0
+   },
+   "transcribeMinute": {
+    "eventTitle": "Add-on: Transcript minute",
+    "eventTotalUsd": 0
+   }
+  },
+  "output": {
+   "dataset": "https://api.apify.com/v2/datasets/xcZMKHGsBiKs39YuY/items?signature=MC4wLmVMNVByWnZtbThZbkRoWVFBcjZ3"
+  }
+ },
+ "records": [
+  {
+   "title": "NAIL FUNGUS DISAPPEARS BEFORE YOUR EYES! Soak Your Feet in This Homemade Solution for $2",
+   "translatedTitle": null,
+   "type": "video",
+   "id": "VFQ83cfPhus",
+   "url": "https://www.youtube.com/watch?v=VFQ83cfPhus",
+   "thumbnailUrl": "https://i.ytimg.com/vi/VFQ83cfPhus/maxresdefault.jpg",
+   "viewCount": 10179,
+   "date": "2026-07-09T13:00:08.000Z",
+   "likes": 400,
+   "location": null,
+   "channelName": "Doctor Laura",
+   "channelUrl": "https://www.youtube.com/channel/UCBLbqhYNAve3LmpThhB4OXA",
+   "channelUsername": "DoctorLaura-e1w1o",
+   "collaborators": null,
+   "channelId": "UCBLbqhYNAve3LmpThhB4OXA",
+   "channelDescription": "After 60, your body starts speaking a different language — and most of \nwhat you're told to just \"manage\" actually has a clear cause and a \nspecific fix.\n\nThis channel explains what's really happening inside your body when \nsomething changes, and gives one practical protocol you can start tonight. \nNo supplements to buy. No fear. Just the mechanism, the reason, and the \nsteps.\n\nTopics: heart, blood pressure, bladder, gut, joints, sleep, brain, skin, \nnails, hormones, and the lab numbers nobody orders until it's late.\n\nIf you're tired of being told it's just your age, you're in the right place.\n\nHelp this channel reach 100,000 subscribers — every subscriber helps the \nnext person who needs this find it.\n\n\n\n⚠️ Disclaimer: Dr.Laura is a health educator and this channel is for educational purposes only and does not provide medical advice.\nAlways consult a qualified healthcare professional before making changes to your health, diet, or lifestyle.",
+   "channelJoinedDate": "Mar 29, 2026",
+   "channelDescriptionLinks": [
+    {
+     "text": "30-Day The Drainage Protocol ",
+     "url": "https://laurachen.gumroad.com/l/drainage-protocol"
+    }
+   ],
+   "channelLocation": "United States",
+   "channelAvatarUrl": "https://yt3.googleusercontent.com/GESAZDgPfjvxLwWbjBBFw-EDoyTxokwRywvxd65-R85ENeliXgFr5wrakHZBUt1ddaNXNWTl=s68-c-k-c0x00ffffff-no-rj",
+   "channelBannerUrl": "https://yt3.googleusercontent.com/bpMz7dhcse3EvjC1c2kNctIJQQhOlP1QV_pb9RALoXOcKim6JTULCMTL5xvQKrdbehHSHUwm=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+   "channelTotalVideos": 67,
+   "channelTotalViews": 6068953,
+   "numberOfSubscribers": 92400,
+   "isChannelVerified": false,
+   "inputChannelUrl": "https://www.youtube.com/@DoctorLaura-e1w1o",
+   "isAgeRestricted": false,
+   "aboutChannelInfo": {
+    "channelDescription": "After 60, your body starts speaking a different language — and most of \nwhat you're told to just \"manage\" actually has a clear cause and a \nspecific fix.\n\nThis channel explains what's really happening inside your body when \nsomething changes, and gives one practical protocol you can start tonight. \nNo supplements to buy. No fear. Just the mechanism, the reason, and the \nsteps.\n\nTopics: heart, blood pressure, bladder, gut, joints, sleep, brain, skin, \nnails, hormones, and the lab numbers nobody orders until it's late.\n\nIf you're tired of being told it's just your age, you're in the right place.\n\nHelp this channel reach 100,000 subscribers — every subscriber helps the \nnext person who needs this find it.\n\n\n\n⚠️ Disclaimer: Dr.Laura is a health educator and this channel is for educational purposes only and does not provide medical advice.\nAlways consult a qualified healthcare professional before making changes to your health, diet, or lifestyle.",
+    "channelJoinedDate": "Mar 29, 2026",
+    "channelDescriptionLinks": [
+     {
+      "text": "30-Day The Drainage Protocol ",
+      "url": "https://laurachen.gumroad.com/l/drainage-protocol"
+     }
+    ],
+    "channelLocation": "United States",
+    "channelUsername": "DoctorLaura-e1w1o",
+    "channelAvatarUrl": "https://yt3.googleusercontent.com/GESAZDgPfjvxLwWbjBBFw-EDoyTxokwRywvxd65-R85ENeliXgFr5wrakHZBUt1ddaNXNWTl=s68-c-k-c0x00ffffff-no-rj",
+    "channelBannerUrl": "https://yt3.googleusercontent.com/bpMz7dhcse3EvjC1c2kNctIJQQhOlP1QV_pb9RALoXOcKim6JTULCMTL5xvQKrdbehHSHUwm=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+    "channelTotalVideos": 67,
+    "channelTotalViews": 6068953,
+    "numberOfSubscribers": 92400,
+    "isChannelVerified": false,
+    "channelName": "Doctor Laura",
+    "channelUrl": "https://www.youtube.com/channel/UCBLbqhYNAve3LmpThhB4OXA",
+    "channelId": "UCBLbqhYNAve3LmpThhB4OXA",
+    "inputChannelUrl": "https://www.youtube.com/@DoctorLaura-e1w1o",
+    "isAgeRestricted": false
+   },
+   "duration": "00:23:40",
+   "commentsCount": 40,
+   "text": "30-Day The Drainage Protocol; https://laurachen.gumroad.com/l/drain...\n\nEveryone says a cheap foot soak makes toenail fungus disappear. The truth is more useful than the promise. In this video, Dr. Laura Chen explains why soaks touch only the surface, where the fungus actually lives, and the one change that decides whether your nail clears — plus the single warning sign that means it was never fungus at all.\nThe soak isn't a scam. It's incomplete. Here's the honest version.\n\n⚠️ This video is for education only. It is not medical advice, diagnosis, or treatment. Talk to a licensed clinician before starting, stopping, or combining any treatment or medication.\n\n📚 SOURCES & FURTHER READING\n\nTreatment Options for Onychomycosis — JCAD: https://jcadonline.com/treatment-opti...\nTopical and device-based treatments for toenail fungus (Cochrane review) — PMC: https://pmc.ncbi.nlm.nih.gov/articles...\nComplementary and Alternative Therapies for Onychomycosis: A Systematic Review — PMC: https://pmc.ncbi.nlm.nih.gov/articles...\nOnychomycosis Treatment & Management (nail penetration; oral terbinafine) — Medscape: https://emedicine.medscape.com/articl...\nSubungual Melanoma — Cleveland Clinic: https://my.clevelandclinic.org/health...\nToenail Melanoma or Fungus: How to Tell the Difference — Healthline: https://www.healthline.com/health/toe...\n\n\n\n⚕️ DISCLAIMER\nThe information in this video is for educational and informational purposes \nonly. It is not intended as medical advice and should not replace consultation \nwith a qualified healthcare professional.\n\nAlways speak with your doctor before starting any new diet, supplement, or \nexercise routine, and never stop or change prescribed medications without \nmedical guidance. Individual results vary, and certain conditions require \ndirect clinical evaluation.\n\nIf you are experiencing a medical emergency, contact your local emergency \nservices immediately.\n\n #HealthAfter60  #SeniorHealth  #HealthyAging  #NaturalHealing  #DrLauraChen",
+   "translatedText": null,
+   "descriptionLinks": [
+    {
+     "url": "https://laurachen.gumroad.com/l/drainage-protocol",
+     "text": "https://laurachen.gumroad.com/l/drain..."
+    },
+    {
+     "url": "https://jcadonline.com/treatment-options-for-onychomycosis-efficacy/",
+     "text": "https://jcadonline.com/treatment-opti..."
+    },
+    {
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6984586/",
+     "text": "https://pmc.ncbi.nlm.nih.gov/articles..."
+    },
+    {
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9274952/",
+     "text": "https://pmc.ncbi.nlm.nih.gov/articles..."
+    },
+    {
+     "url": "https://emedicine.medscape.com/article/1105828-treatment",
+     "text": "https://emedicine.medscape.com/articl..."
+    },
+    {
+     "url": "https://my.clevelandclinic.org/health/diseases/subungual-melanoma",
+     "text": "https://my.clevelandclinic.org/health..."
+    },
+    {
+     "url": "https://www.healthline.com/health/toenail-melanoma-or-fungus",
+     "text": "https://www.healthline.com/health/toe..."
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthafter60",
+     "text": "#HealthAfter60"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/seniorhealth",
+     "text": "#SeniorHealth"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/healthyaging",
+     "text": "#HealthyAging"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/naturalhealing",
+     "text": "#NaturalHealing"
+    },
+    {
+     "url": "https://www.youtube.com/hashtag/drlaurachen",
+     "text": "#DrLauraChen"
+    }
+   ],
+   "subtitles": [
+    {
+     "srtUrl": null,
+     "type": "auto_generated",
+     "language": "en",
+     "plaintext": "Everyone is telling you the same thing\ntonight. Soak your feet in a cheap\nsolution and the fungus on your toenail\nwill disappear. Some videos promise it\nhappens fast. $2, one basin gone. I want\nto be honest with you from the very\nfirst minute. That promise is half true\nand half wrong. And the half that is\nwrong is the half that keeps your nail\nthick and yellow for another 2 years. I\nam not here to tell you the soak is a\nscam. It is not. There are real reasons\nit became popular and there is real\nscience behind some of the ingredients\npeople use. But there is one thing\nalmost no one explains to you. And once\nyou understand it, you will stop wasting\nmonth after month on the wrong version\nof a good idea. So stay with me because\nby the end of this, you will know\nexactly what a foot soak can do, what it\ncannot do, and the one single change\nthat decides whether your nail clears or\nnever does. I know what it is like to\nlook down at that nail. Thick, cloudy, a\nlittle yellow at the edge. You have\ntried a few things. Maybe nothing\nworked. Maybe it looked a little better\nand then went right back. You are not\nlazy and you are not doing it wrong. You\nhave just been given half of the story.\nTonight, I want to give you the whole\nthing. Let us start with what people are\nactually claiming because I do not want\nto be unfair to it. The claim goes like\nthis. You mix warm water with vinegar.\nMaybe you add a few drops of tea tree\noil. Maybe you rub in a mentholated\nchest ointment at night. You do this\nevery single day and the fungus lifts\naway. The nail goes clear and it costs\nyou almost nothing. Here is the part I\nwill defend for you. That idea is not\nstupid. It did not come out of nowhere.\nPeople try it and some of them do see\nreal change. Their nail looks a little\ncleaner. The debris under it loosens.\nThe smell fades. So they tell a friend.\nThe friend tells two more. And now it is\neverywhere you look. You may have tried\nit yourself. You may have felt that\nearly flicker of hope in the first two\nweeks. I do not want to take that away\nfrom you. I want to explain it to you so\nit makes sense. And I want to say one\nhonest thing before we go further. There\nis a whole industry built around your\nfungal nail creams, lacers, gadgets,\nsubscription boxes. Some of it works. A\nlot of it is selling you the surface of\nthe problem. The soak became popular\npartly because people were tired of\npaying for things that did not deliver.\nThat instinct was right. The execution\nwas just incomplete. Because there truly\nis evidence behind some of these\ningredients. Let me show you the real\nnumbers so you know I am not waving my\nhands. Take the mentholated chest\nointment so many people swear by. In the\nyear 2011, a small study published in\nthe Journal of the American Board of\nFamily Medicine put it to the test. 18\npeople applied it to a fungal toenail\nevery day for 48 weeks. By the end, just\nunder 28% of them had a full clinical\ncure, and a little over 55% saw partial\nimprovement. That is a real result. It\nis not magic, but it is not nothing\neither. Tea tree oil has a similar\nstory. It comes from an Australian tree\nand it carries genuine antifungal and\nantiseptic properties. Some small\nclinical studies suggest it may help\nagainst nail fungus when it is painted\ndirectly onto the nail. Not a cure, but\na real measurable effect in some people.\nAnd vinegar. Vinegar is acidic. Fungi\ntend to prefer a surface that is less\nacidic. Soaking a nail in diluted\nvinegar does change the environment on\nthat surface, at least for a little\nwhile. That is a real measurable thing.\nFor a short window after the soak, the\nsurface of the nail is a less friendly\nplace for the fungus to grow. There are\nothers, too. You have probably heard\npeople swear by an amber mouthwash, the\nkind with thymol and eucalyptus in it.\nThose same compounds show antifungal\nactivity in the lab. You have heard\nabout a plant extract called snake root\nfrom the sunflower family, which has\nshown real promise in reviews as an\nantifungal for the nail. None of these\nare fairy tales. They are folk versions\nof the same idea that the pharmaceutical\ncompanies chase with millions of\ndollars. Find a compound that kills the\nfungus. That part, the finding of a\ncompound that works is not where the\nhome remedy fails you. So here is the\npattern I want you to notice. Every one\nof these remedies has a kernel of truth.\nThymol works. Tea tree works. Acid\nworks. And yet, ask around and you will\nfind far more people who tried them and\nquit than people who cleared their nail.\nWhy? If the ingredients work, why do so\nmany people give up in disappointment\nafter 2 months in a basin? That question\nis the whole video. Hold it in your\nmind. So, here is where you and I stand\nright now. The ingredients are real. The\nantifungal activity is real. The people\nwho saw a little improvement were not\nimagining it. I want you to hold on to\nthat because I am about to turn the\nwhole thing over. Here is one myth I\nwant to clear away first. The myth is\nthat if a remedy is natural and cheap,\nit must be weak. And if it comes from a\npharmacy, it must be strong. The reality\nis stranger than that. As you will see\nin a moment, the expensive prescription\nversion runs into the exact same wall as\nthe $2 soak. The problem was never the\nstrength of the ingredient. The problem\nis somewhere else entirely. Here is the\nfact almost no one tells you. Read it\nslowly. The fungus is not sitting on top\nof your nail. It is living inside it and\nunderneath it. The medical name for this\nis oncomosis.\nThat is simply the term for a fungal\ninfection of the nail. And the fungus\ndigs down into the keratin which is the\nhard protein your nail is made of. It\nsets up home in the nail bed, the living\nskin under the plate, and it spreads up\nthrough the layers of the plate itself\nwhere nothing on the surface can easily\nreach it. Now, think with me about what\na soak actually does. It touches the\nsurface for a few minutes. Then you dry\nyour foot and the water evaporates.\nWhatever was in that basin never reached\nthe place where the fungus actually\nlives. It knocked on the door. It never\ngot inside. This is not my personal\nopinion. This is the central problem in\nthe entire field of treating nail\nfungus. Doctors have known for years\nthat topical treatments alone usually\ncannot cure it because they cannot get\nthrough the nail plate in high enough\namounts to reach the infection buried\nunderneath. And I do not want you to\nthink this only applies to home\nremedies. Listen to this next part\nclosely because it is the number that\nreframes everything you thought you\nknew. The prescription strength\nlacquers, the medical ones a doctor\npaints on, struggle against the exact\nsame wall. The leading prescription nail\nsolutions report complete cure rates of\nonly around 6 to 26% depending on which\nproduct you look at. One of the\nstrongest called efficaconazol clears\nthe fungus in the lab in about half of\npatients, but it produces a truly clean,\nnormallook nail in only about 17% of\nthem. And here is the part that should\nstop you cold. Even after a full 48\nweeks of daily use, more than half of\ntreated patients still had visible signs\nof infection in the nail. Sit with that\nfor a moment. A pharmaceutical designed\nby scientists, tested in trials, applied\nevery single day for almost one whole\nyear, and it still leaves most nails\nlooking infected. So, let me ask you the\nhonest question. If a purpose-built\nprescription can barely get through the\nnail plate, what do you really think a\nfew minutes in a basin of vinegar is\ndoing? It is cleaning the surface. That\nis the improvement people see. The nail\nlooks a little better because the debris\nsoftened and washed off. But the fungus\nbelow the surface in the bed, in the\ndeep layers of the plate, mostly\nuntouched, still there, still growing.\nThat is the inversion. The remedy was\nnever wrong because the ingredients were\nfake. The remedy was wrong because a\nsoap cannot deliver anything to the one\nplace that matters. And I want to press\non this one more time because it is that\nimportant. Your nail plate is one of the\ndensest, most stubborn barriers your\nbody makes. It is built to protect the\nsensitive tissue underneath from the\nworld. That is its job. It does that job\nwhether you want it to or not. So the\nvery thing that makes your nail useful,\nits hard, tight, layered structure is\nthe same thing that keeps your treatment\nout. You are trying to push medicine\nthrough a wall that evolution spent a\nvery long time making impossible to push\nthrough. That is also why this infection\ncomes back so often even after it looks\nbeaten. Recurrence is common. You clear\nthe visible part, you feel proud, you\nstop the routine, and a few months later\nthe yellow is creeping back at the edge\nbecause the fungus was never fully gone.\nIt was hiding in a layer you could not\nreach, waiting for you to relax. So when\nI talk about a routine tonight, I am not\ntalking about two weeks of effort. I am\ntalking about a habit you keep long\nenough to see a whole new nail replace\nthe old one and then a little longer so\nthe ground stays unfriendly and it does\nnot simply move back in. None of this\nmeans you are powerless. It means you\nhave been aiming at the wrong target\nwith the right weapon. Now let me show\nyou where to aim. If that one fact just\nchanged how you see your own nail, then\nyou already understand why this channel\nexists. Subscribe and I will keep giving\nyou the part your last appointment never\nhad the time to give you. Now, let me\nshow you the real mechanism because once\nyou can see it in your mind, the correct\napproach becomes obvious. It stops being\na mystery. Picture a hardwood floor,\nbeautiful sealed, finished on top. Now\nimagine someone spills dark red wine and\nit soaks down past the finish into the\ngrain of the wood itself. You can mop\nthat floor every single day for a month.\nYou can scrub the surface until your arm\naches. The surface will look clean and\nwet each time, but the stain, the stain\nis below the finish. It is in the wood.\nYour mop never touches it. Not once. You\ncould mop for a year and the color would\nstill be there deep in the grain\nwaiting. There are only two honest ways\nto deal with a stain that deep. You sand\nthe old wood away and let fresh, clean\nwood come up to take its place. Or you\naccept that it will only fade as the\nwood is slowly worn down and replaced\nover time. Your nail is the wood. The\nfungus is the stain in the grain. And\nhere is the part that matters most of\nall. So listen, your nail cannot be\nunstained. It has to be outgrown. A\ntoenail grows slowly, very slowly, from\nthe base near your cuticle all the way\nto the tip. A full toenail takes roughly\n12 to 18 months to completely replace\nitself. That is the real timeline, not 2\nweeks, not 1 month, a year, sometimes\nlonger than a year. So, the clear nail\nyou are hoping for is not the old nail\ngetting better. It is a brand new nail\ngrowing out from the base clean if the\nfungus has been held back long enough to\nlet the new growth come in without being\ninfected on its way up. This is why the\npeople who did clear it with a home\nremedy often say the same strange thing.\nThey say the fungus grew out, not\ndissolved, grew out. That word is the\nwhole secret. Even when a home remedy\nhelps, it helps by slowing the fungus\ndown while the new nail slowly pushes\nforward. The same way sanding does not\nerase a stain. It just reveals the fresh\nwood underneath. Nobody dissolves a nail\nstain in an evening. Your body replaces\nit one slow millimeter at a time. And\nyour job is not to attack the old nail.\nYour job is to protect the new one on\nits way up. Let me give you one more\npicture because I want this to stick.\nThink of a slowmoving river carrying the\nnail forward. The fungus is like weeds\ngrowing in the water. You cannot reach\nin and rip out every weed at once. But\nif you change the water, keep it moving,\nkeep it clean. The new stretch of river\nthat comes downstream comes clean. That\nis what a good routine does. It is not a\nrescue. It is a slow, patient handover\nfrom old to new. And here is something\nyou feel more with each passing decade.\nYour body's ability to do that slow\nreplacement work depends on good\ncirculation to the feet. And circulation\nto the feet tends to weaken over the\nyears. That is one real reason a nail at\n70 heals slower than a nail at 40. That\nwhole subject, helping your body move\nblood and fluid the way it used to on\nits own, is exactly what I walk you\nthrough in my guide, the drainage\nprotocol. The link is in the description\nif you want it. Now, let us get back to\nyour feet. So, let us fix the approach\ntogether. I am not going to throw the\nsoak away. I am going to show you how to\nuse it correctly as one small part of\nsomething that actually works. There are\nfour ideas here. I will take them one at\na time slowly. First, thin the nail\nbefore you treat it. This is the step\nalmost everyone skips and it is quietly\nthe most important one of all. If the\nnail is thick and cloudy, gently file\ndown the top surface with a simple emey\nboard once or twice a week. You are not\ntrying to hurt yourself. You are sanding\nthe floor. A thinner nail lets whatever\nyou apply get closer to the fungus\nunderneath. Without this one step, you\nare back to mopping a sealed floor. With\nit, you finally give the treatment a\nfighting chance to reach the grain. And\ndo this, too. Keep the nail cut short\nand straight across. And gently clear\nout the crumbly debris that collects\nunderneath the front edge. That debris\nis not just ugly. It is a little\nwarehouse of fungus packed in where\nnothing reaches it. A soak can actually\nhelp you here. And this is the one job a\nsoak is genuinely good at. 10 minutes in\nwarm water softens the nail and that\ndebris so you can trim and clean more\neasily right afterward. See what I did\nthere? The soak is not useless. It is\njust a preparation step, not the\ntreatment itself. Use it for what it is\ngood at and stop asking it to do the\nthing it cannot do. Second, choose one\ntreatment and apply it every single day.\nConsistency beats strength here. And I\nmean that. A modest antifungal used\nfaithfully every day for months will do\nfar more than a strong one used twice\nand then forgotten in a drawer. Whether\nthat is an over-the-counter antifungal,\ntea tree oil painted on with a cotton\nswab twice a day, or the mentholated\nointment rubbed in each night, pick one\nand commit to it. Remember the trials\nthat showed results ran for 48 weeks,\nnot four. You need the same patience the\nnail needs. If you switch products every\ntwo weeks looking for a faster one, you\nnever give any of them the time they\nneed. Third, keep the foot dry. This is\nthe one that quietly decides everything,\nand it is the one people ignore. Fungus\nneeds moisture to live and to spread.\nSo, the soak, ironically, becomes the\nweakest link if you do not dry\ncompletely afterward. After any soak,\nafter any shower, dry between every\nsingle toe. Change your socks every day.\nRotate your shoes so each pair gets a\nfull day to dry out between wearings.\nAnd here is a step people forget\nentirely. Treat the inside of your shoes\ntoo with an antifungal powder or spray\nbecause you can clear the nail and then\nreinfect it the very next morning from\nthe inside of your own shoe. You would\nbe fighting a battle and rearming the\nenemy each night. Think about where your\nfeet spend their day. Warm, closed in, a\nlittle damp. That is a greenhouse and\nthe fungus is the weed that loves it.\nChoose socks that pull moisture away\nrather than trap it. Give your feet open\nair in the evening when you can. If your\nfeet sweat a lot, an antifungal foot\npowder in the morning is a small habit\nthat pays you back. None of this is\ndramatic, but this is the ground the\nwhole battle is fought on. You can do\neverything else right and a damp shoe\nevery day will quietly undo it. Win the\ndryness and you have won the part that\nmost people lose without ever knowing\nthey lost it. And one more thing that\nsurprises people, the fungus on your\ntoenail very often lives on the skin of\nyour foot too. As athletes foot, that\nitchy scaling between the toes. If you\ntreat the nail but ignore the skin, the\nskin receds the nail. So treat both at\nthe same time. Clear the whole\nneighborhood, not just the one house.\nFourth, know when the home approach is\nworth it and know when it is not. Home\nmethods have their best chance on a mild\nearly infection. one nail, a small patch\nnear the tip, caught early. If the\nfungus covers most of the nail or\nseveral nails at once, or the nail is\nbadly thickened and crumbling, then\ntopical anything, even prescription, has\na very hard time reaching it. That is\nwhen an oral medication from a doctor\nbecomes worth a real conversation. Oral\nturbine, the leading pill for this,\nclears the infection in roughly 38 to\n76% of cases, which is far better than\nany surface treatment. But it needs a\ndoctor's supervision because it can\naffect the liver and that is not\nsomething to guess about on your own.\nHere is how I would think about it if it\nwere my own foot. If the infection is\nsmall and new and it has not reached the\nbase of the nail near the cuticle, the\nhome routine is a reasonable first try.\nGive it a fair chance, which means\nseveral months, not several days. But if\nthe fungus has already reached the base\nwhere the new nail is made, then a\nsurface treatment is trying to protect\nground the fungus already controls. That\nis the situation where a topical home or\nprescription tends to lose and where a\npill that reaches the nail through your\nbloodstream from the inside has a real\nadvantage. There is no shame in reaching\nfor the stronger tool. The goal is a\nclean nail, not a badge for doing it the\nhard way. And one thing I want to be\nhonest about, even the pill is not a\nguarantee. Even at its best, it does not\nclear everyone. So whatever you choose,\nthe same three habits underneath still\ndecide your outcome. Thin the nail. Stay\nconsistent. Keep the foot dry. Those do\nnot change no matter which treatment\nsits on top of them. Notice that I am\nnot promising you anything overnight. I\nam giving you a realistic path because a\nrealistic path that actually works will\nalways beat a magic path that does not.\nI would rather tell you the truth and\nhave you clear it in a year than sell\nyou a miracle and watch you still\nfighting it in three. Now, the most\nimportant part of this entire video.\nPlease do not skip these next two\nminutes. If you remember nothing else,\nremember this. Everything I have told\nyou so far assumes one thing. It assumes\nthat what you are looking at is actually\nfungus. Sometimes it is not. And in a\nfew cases, treating it like fungus is\ngenuinely dangerous because you are\nsoaking a problem that needs a doctor\nthis week, not a basin. Here is the sign\nthat means stop and go get seen. a\nsingle dark brown or black streak\nrunning the length of the nail from the\nbase toward the tip that does not grow\nout and does not fade, especially if it\nis slowly getting wider, especially if\nthat dark color bleeds out into the skin\naround the nail into the cuticle or the\nsidefold. Doctors call that spread into\nthe surrounding skin the Hutchinson sign\nand it is a strong warning that needs to\nbe evaluated right away. Why does this\nmatter so much? because that pattern can\nbe a subunual melanoma. That is a\nmelanoma, a serious skin cancer growing\nunderneath the nail. It is rare, fewer\nthan three in every 100 melanomas. But\nit is very often mistaken for a bruise\nor a fungus. And that mistake delays the\ndiagnosis, which is the one thing you\ncannot afford with a melanoma. And here\nis the critical detail. It does not\nrespond to antifungal treatment. So, a\nfungus that never ever improves no\nmatter what you throw at it is itself a\nreason to be checked. You cannot soak\naway a melanoma. No one can. If you see\nthat streak, you do not experiment on it\nat home. You see a clinician. Let me\nhelp you tell the difference gently\nbecause I do not want you to panic at\nevery mark. A bruise under the nail from\nstubbing your toe or a tight shoe is\nusually more of a rounded purple or\nblack patch and it slowly moves toward\nthe tip and grows out over a few weeks.\nFungus tends to be yellow or brown. It\nthickens the nail. It makes it crumbly\nand it often touches more than one nail.\nThe melanoma pattern is different again.\nIt is a dark band that runs the length\nof the nail. It tends to stay in place\nrather than grow out. It can widen over\ntime and above all it can spread into\nthe skin at the edge. If a mark is\ngrowing out with the nail, that is\nreassuring. If a dark band is sitting\nstill and getting wider, that is the one\nto have looked at. When in doubt, do not\nsoak it in hope. Ask. Let me give you\ntwo more situations where you skip the\nhome approach entirely and talk to a\ndoctor first. The first is if you have\ndiabetes. People with diabetes are about\ntwice as likely to develop toenail\nfungus. And reduced feeling in the feet,\nwhich is common with diabetes, means a\nsmall problem can quietly grow into a\nserious one before you even feel it.\nWith diabetes, foot infections are not\nsomething to manage in a basin at the\nkitchen table. Get your feet looked at\nby someone who can examine them\nproperly. The second is if you see\nspreading redness, swelling, warmth, or\nreal pain, or the skin around the nail\nstarts to weep or ooze, that is not a\nslow patient fungus. That can be a\nbacterial infection. And a bacterial\ninfection moves fast. That needs a\nclinician now, not a soak tonight and a\nwait and see tomorrow. And here is one\nsimple rule that covers all of it. If\nyou are already taking medication for\nanything at all, do not start, stop, or\ncombine treatments without asking first.\nTalk to the person who prescribes for\nyou, especially with the oral pills.\nYour liver, your other medications, your\nwhole picture matters, and only someone\nwho can see all of it should be making\nthat call with you. I am telling you all\nof this not to frighten you. Most fungal\nnails are exactly what they look like,\nand they are harmless, just stubborn. I\nam telling you because the whole point\nof tonight was to replace a half-truth\nwith the full one. And the full truth\nincludes knowing the few times when the\nrule flips. Before I close, I want to\nask you something. And I do read the\nanswers. What decade are you in right\nnow? Your 50s, your 60s, your 70s, your\n80s? Tell me in the comments below. It\ngenuinely changes which part of this\nmatters most for you. Because\ncirculation to the feet and how fast a\nnail grows out both shift with each\ndecade. Knowing who is actually watching\nhelps me write the next one for you and\nnot for some average person who does not\nexist. So, let me leave you with the\nhonest version of the promise that\nbrought you here. The $2 soak is not a\nlie, but it is not the whole truth\neither. On its own, it wets the surface\nof a problem that lives underneath it.\nThe improvement people see is real. It\nis just the surface, not the cure. The\nreal work is slower and simpler than any\nviral trick. Thin the nail, treat it\nevery day. Keep the foot dry and give it\na year to grow out clean, one slow\nmillimeter at a time. And all the while,\nwatch for that one dark streak. That\nwould mean this was never fungus at all.\nYou do not need to dissolve anything.\nYou need to outgrow it. And that is not\na disappointment. That is the part that\nactually works. The part that lasts. The\npart no one selling you a miracle wants\nto say out loud. Take care of your feet.\nBe patient with them. They have carried\nyou a long way."
+    }
+   ],
+   "aiVideoDescription": null,
+   "aiVideoSummary": null,
+   "transcriptionUrl": null,
+   "order": 0,
+   "commentsTurnedOff": false,
+   "fromYTUrl": "https://www.youtube.com/@DoctorLaura-e1w1o/videos",
+   "isMonetized": null,
+   "hashtags": [
+    "#HealthAfter60",
+    "#HealthyAging",
+    "#SeniorHealth"
+   ],
+   "isMembersOnly": false,
+   "input": "https://www.youtube.com/@DoctorLaura-e1w1o",
+   "fromChannelListPage": "videos",
+   "isPaidContent": false
+  }
+ ]
+}
