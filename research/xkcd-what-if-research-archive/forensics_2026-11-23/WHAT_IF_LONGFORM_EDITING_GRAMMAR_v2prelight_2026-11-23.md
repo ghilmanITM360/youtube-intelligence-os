@@ -1,0 +1,5 @@
+# Long-form editing grammar
+
+DRAFT knowledge-base document, prepared inside the audit folder (not a repository branch). Every rule below carries an ID in `RULE_EVIDENCE_LINKS`/`RULE_EVIDENCE_LEDGER.csv`; coverage and limits are in `WHAT_IF_RESEARCH_COVERAGE_AND_LIMITATIONS.md`. Review state: self-reviewed unless stated; no independent review exists. Rule classes: OBSERVED, MEASURED, INFERRED, HYPOTHESIS, OWNER.
+
+Measured on 44 long videos with media (24 campaign ledgers, 20 audit ledgers; disjoint). Narration from 0 s, first event by about 2 s (K06). Event gap about 2.1 s, 22 events per minute (K07). Shot median 8.4 s (campaign) or 6.7 s (audit detector); quote the detector (K08). About 93% of frames are holds (K09). Event mix (campaign labels): scene swap about 20%, label pop-on 13%, object pop-on 13%, type write-on 4%, line write-on 3%, pose swap 3% (K16). Typical close: a red end card of about 10 s with credits, four book covers and a URL (K02). One long video (`9VG0yqq_PHM`) was viewed frame by frame: changes are one-frame pops, typed text at about a character a frame, a few fades.

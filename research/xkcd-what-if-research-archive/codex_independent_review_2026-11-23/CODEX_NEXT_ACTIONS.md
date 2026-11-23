@@ -1,0 +1,9 @@
+# Prioritized continuation after owner review
+
+1. Obtain the complete original directive and WHAT_IF_INDEPENDENT_AUDIT.md; reconcile each requirement and finding before certifying any phase or exact remaining total.
+2. Complete this independent audit: inspect all requested source CSVs and scripts, verify campaign IDs from raw ledgers, full media/hash and alternate-encode crosswalk, public listing observation, and each of 23 rules against actual cited evidence.
+3. Independently inspect source-video sequences across prior and batch-4 samples, long/Short, topic families, cuts/false cuts, camera movement, color exception and pilot; verify source hash, timestamps and classification. This is audit, not continuation of production research.
+4. After owner authorizes continuation, repair KB operative wording (especially K06/K10/K20), H2 and design-aware presentation of intervals; retain provenance and version history.
+5. For original research, remaining recorded gaps include 563 unsampled audit-ledger shots and 2,160 unclassified audit events , deeper coverage of 10 high-value episodes, manual listening/sync and music/effects, book comparison, article mapping, outstanding source definitions and constants, Machine A evidence and required asset/workflow testing. Exact mandatory scope depends on original directive. Missing media and available reviewer expertise are constraints, not automatically reasons to mark work failed.
+6. Independently listen to SC03 and E09g; seek lightning original source/ground-energy definition; check science with appropriate primary sources, realistic extreme-scale caveats and qualified review if required. Do not infer author intent.
+7. Design genuinely preselected topic-family tests and use sampling-aware uncertainty analysis; validate ASR alignment through listening. Publish canonical material only under applicable ownership and explicit authorization.

@@ -1,0 +1,159 @@
+{
+ "vid": "V007", "youtube_id": "EsUBRd1O2dU", "title": "Would a Submarine Work as a Spaceship?", "format": "video", "parent_vid": null,
+ "caption_type": "user_generated",
+ "A_identity": {
+  "core_topic": "What kills a nuclear submarine (and its crew) if it is placed in Earth orbit, and whether it could get back down.",
+  "content_category": "Absurd-hypothetical science explainer (reader question answered with real physics).",
+  "audience_inferred": "Plausibly curious general viewers who enjoy physics thought experiments and dry humor; inferred from text only.",
+  "primary_question": "How long could a nuclear submarine last in orbit?",
+  "promise": "A short verdict ('not very long') plus an unexpected reason for it.",
+  "style": "Deadpan, first-person, methodical elimination of failure modes with a pedantry digression and one personal anecdote.",
+  "pov": "First-person narrator ('I') addressing 'you' in the survival/advice passages."
+ },
+ "B_hook": {
+  "opening_quote": "This question comes from Jason, who asks: How long could a nuclear submarine last in orbit?",
+  "hook_tags": ["READER_QUESTION_ATTRIBUTION", "IMMEDIATE_SHORT_ANSWER", "ANSWER_WITH_TWIST", "TEASE_LATER"],
+  "construction": "Reader attribution, the question verbatim, then a three-word answer immediately qualified by 'but not for the reason I expected'.",
+  "first_curiosity_trigger": "The narrator admits the reason surprised him, turning a settled answer into a new question: which reason?",
+  "conflict_or_contradiction": "The obvious expectation (it bursts or leaks) is rejected in the third sentence.",
+  "withheld": "The actual cause of failure (overheating / reactor meltdown) is held back while the expected causes are eliminated.",
+  "audience_expectation": "That vacuum or pressure will be the killer.",
+  "promise_strength": "Strong",
+  "promise_strength_reason": "The verdict is given at once, so the only open item is a specific, answerable 'why' that the script commits to.",
+  "opening_to_payoff": "The 'unexpected reason' is named after three eliminated candidates and then needs a long justification before the meltdown verdict.",
+  "why_may_hold": "Giving the answer early may build trust, while the 'not the reason I expected' clause plausibly keeps a gap open.",
+  "weaknesses": "The opening is spoken as plain question-and-answer with no stakes image; the hook depends on the listener caring about the 'why'."
+ },
+ "C_opening_beats": [
+  {"beat": 1, "quote": "This question comes from Jason, who asks: How long could a nuclear submarine last in orbit?", "info_introduced": "Asker and the full hypothetical.", "question_active": "How long would it last?", "unresolved": "Everything.", "curiosity": "up"},
+  {"beat": 2, "quote": "The answer is “not very long,” but not for the reason I expected.", "info_introduced": "Verdict given; reason flagged as surprising.", "question_active": "What is the unexpected reason?", "unresolved": "The cause of failure.", "curiosity": "up"},
+  {"beat": 3, "quote": "The submarine wouldn't burst.", "info_introduced": "First expected failure mode ruled out, with the 50 to 80 atmospheres hull figure following.", "question_active": "If not bursting, then what?", "unresolved": "The cause of failure.", "curiosity": "up"},
+  {"beat": 4, "quote": "And the hull would likely be reasonably airtight.", "info_introduced": "Second expected failure mode (leaking) ruled out.", "question_active": "What is left that could go wrong?", "unresolved": "The cause of failure.", "curiosity": "flat"}
+ ],
+ "D_spine": {
+  "stages": [
+   {"stage": "Hook", "quote": "The answer is “not very long,” but not for the reason I expected.", "summary": "Verdict first, reason withheld.", "link_to_next": "Starts eliminating the reasons a listener would guess."},
+   {"stage": "Setup", "quote": "Dangerous carbon dioxide buildup wouldn’t be an issue", "summary": "Bursting, leaking and CO2 are each dismissed with one mechanism.", "link_to_next": "BUT oxygen cannot be dismissed."},
+   {"stage": "Tension", "quote": "They carry enough oxygen in reserve to survive for a few days at least, but eventually they'd be in trouble.", "summary": "First real problem: oxygen supply is finite without seawater.", "link_to_next": "A bigger problem is announced."},
+   {"stage": "Reveal", "quote": "The really big problem, though, would be overheating, because space is much warmer than the ocean.", "summary": "The unexpected reason is named with a deliberately provocative claim.", "link_to_next": "The claim is immediately challenged and must be defended."},
+   {"stage": "Explanation", "quote": "The hot molecules in space are like the sparks in my dad's machine shop", "summary": "Two senses in which space is warm, carried by a childhood grinder anecdote.", "link_to_next": "THEREFORE spacecraft struggle to shed heat; apply to the reactor."},
+   {"stage": "Escalation", "quote": "And a nuclear submarine isn’t just carrying humans – it’s carrying a 200 megawatt nuclear reactor.", "summary": "Heat problem is scaled up to reactor waste heat, then to meltdown.", "link_to_next": "Verdict, then a new question: can it get down?"},
+   {"stage": "Payoff", "quote": "It appears a nuclear submarine in orbit is a bad idea.", "summary": "Understated verdict closing the main question.", "link_to_next": "Opens the de-orbit problem."},
+   {"stage": "Question", "quote": "Without rockets, it has no way to do this.", "summary": "Second act: escaping orbit seems impossible, then is solved with backward missiles.", "link_to_next": "BUT re-entry destroys the sub."},
+   {"stage": "Conclusion", "quote": "If you ever try this, I have one piece of advice that is absolutely critical", "summary": "Tiny survival chance, then mock safety advice as the last line.", "link_to_next": null}
+  ],
+  "inciting_question": "How long could a nuclear submarine last in orbit?",
+  "central_problem": "A vessel built to dump heat into seawater has nowhere to dump it in vacuum.",
+  "turning_points": ["Oxygen flagged as the first non-dismissable problem.", "Overheating named as the real problem via 'space is much warmer than the ocean'.", "Verdict delivered, then the script pivots to de-orbiting.", "'Technically, the submarine does have rockets' reverses the no-rockets dead end."],
+  "climax": "The reactor heats the sub by about half a degree Celsius per minute and melts down.",
+  "resolution": "The sub can just barely de-orbit on reversed missiles but breaks up; survival is a tiny chance."
+ },
+ "E_loops": {
+  "loops": [
+   {"id": "A", "opening_quote": "The answer is “not very long,” but not for the reason I expected.", "question": "What is the unexpected reason it fails?", "maintained_by": "Eliminating bursting, leaking and CO2 one at a time.", "escalates": true, "partial_answer": "Oxygen runs out in days.", "resolution_quote": "the submarine would become too hot for human survivability within an hour", "status": "closed", "replaced_by": "C"},
+   {"id": "B", "opening_quote": "The really big problem, though, would be overheating, because space is much warmer than the ocean.", "question": "How can space be warm?", "maintained_by": "A pedantic objection, then a counter-objection promising two different ways.", "escalates": true, "partial_answer": "Molecular kinetic energies are in the thousands of degrees but do not feel warm.", "resolution_quote": "For most human-carrying spacecraft, the big problem isn't staying warm, it's staying cool.", "status": "closed", "replaced_by": null},
+   {"id": "C", "opening_quote": "Without rockets, it has no way to do this.", "question": "Can the submarine get out of orbit, and would anyone survive?", "maintained_by": "A dead end, a technicality, then a calculation.", "escalates": true, "partial_answer": "Reversed Trident missiles give about 4 meters per second each.", "resolution_quote": "there's a tiny, tiny, tiny chance that you could survive the rapid deceleration in the atmosphere", "status": "closed", "replaced_by": null}
+  ],
+  "loop_map": "A opens (hook) -> B opens inside A (space is warm) -> B closes -> A closes (overheat/meltdown) -> C opens (de-orbit) -> C closes (tiny survival chance) -> punchline."
+ },
+ "F_mechanics": [
+  {"technique": "Answer first, reason withheld", "quote": "The answer is “not very long,” but not for the reason I expected.", "construction": "Short verdict + 'but not for the reason' clause.", "function": "Converts a how-long question into a why question that sustains the first half.", "possible_audience_response": "May want to hear which guess of theirs is wrong.", "reuse": "State the verdict, then promise the reason is not the obvious one."},
+  {"technique": "Elimination of expected answers", "quote": "The submarine wouldn't burst.", "construction": "Flat negative sentence followed by one supporting number.", "function": "Clears the obvious hypotheses so the real one lands as a surprise.", "possible_audience_response": "Plausibly a small correction of their own assumption.", "reuse": "Knock down each expected cause in one or two sentences before the real one."},
+  {"technique": "Provocative claim then double pedantry", "quote": "But if you're even more pedantic (and I am), it is true – in two different ways!", "construction": "Claim, self-objection, then a stronger counter-objection with a parenthetical self-jab.", "function": "Opens an inner loop and makes a physics digression feel like an argument being won.", "possible_audience_response": "May feel curiosity plus amusement at the narrator's self-awareness.", "reuse": "State a claim that sounds wrong, concede the objection, then out-pedant it."},
+  {"technique": "Personal anecdote as analogy", "quote": "When I was a kid, I remember watching my dad use a metal grinder.", "construction": "Childhood memory with a puzzle (why sparks did not burn), solved, then mapped onto space molecules.", "function": "Makes 'high temperature, little heat' concrete.", "possible_audience_response": "Plausibly easier comprehension and warmth toward the narrator.", "reuse": "Use a remembered everyday puzzle whose answer is the same physics as the abstract point."},
+  {"technique": "Escalating the stakes with one added fact", "quote": "And a nuclear submarine isn’t just carrying humans – it’s carrying a 200 megawatt nuclear reactor.", "construction": "'Isn't just X – it's Y' with a precise number.", "function": "Turns a general spacecraft problem into this vehicle's fatal problem.", "possible_audience_response": "May sense the situation getting much worse.", "reuse": "After a general principle, add the one feature that makes this case extreme."},
+  {"technique": "Self-correction on a technicality", "quote": "Okay—technically, the submarine does have rockets.", "construction": "Interjection reversing the previous sentence's dead end.", "function": "Reopens a closed door and launches the missile calculation.", "possible_audience_response": "Plausibly a laugh of recognition (it carries missiles).", "reuse": "Declare something impossible, then catch yourself with 'technically'."},
+  {"technique": "Mock practical advice ending", "quote": "remember to disable the detonators on the missiles", "construction": "Solemn build-up ('absolutely critical') to an obvious, darkly funny tip.", "function": "Ends on a joke that calls back to the missiles.", "possible_audience_response": "May leave on a laugh.", "reuse": "Close with one deadpan safety tip that follows from the scenario's own details."}
+ ],
+ "G_emotion": {
+  "mechanisms": [
+   {"emotion": "Curiosity", "trigger_quote": "The answer is “not very long,” but not for the reason I expected."},
+   {"emotion": "Surprise", "trigger_quote": "But space in earth orbit is actually warm."},
+   {"emotion": "Empathy", "trigger_quote": "I couldn't understand why they didn't hurt him"},
+   {"emotion": "Concern", "trigger_quote": "the submarine would become too hot for human survivability within an hour"},
+   {"emotion": "Humor", "trigger_quote": "It appears a nuclear submarine in orbit is a bad idea."}
+  ],
+  "progression": "Curiosity, then surprise at a counterintuitive claim, a warm anecdotal lull, rising concern through the reactor numbers, dry relief in the verdict, then comic peril to the end.",
+  "strongest_beat_quote": "The hot molecules in space are like the sparks in my dad's machine shop",
+  "emotion_information_relation": "Feeling is attached to explanation: the anecdote carries the hardest concept and jokes land only after a number or mechanism."
+ },
+ "H_pacing": {
+  "sentence_style": "Mostly medium declaratives, with short verdict sentences used as punctuation.",
+  "density": "High: several figures (atmospheres, megawatts, degrees per minute, m/s, missile count) in a short script.",
+  "sequencing": "Eliminate, reveal, defend the reveal, quantify, verdict, new problem, solution, catch, punchline.",
+  "transition_quotes": ["But oxygen is another story: nuclear submarines use electricity to extract oxygen from water.", "The really big problem, though, would be overheating, because space is much warmer than the ocean.", "Okay—technically, the submarine does have rockets."],
+  "setup_to_payoff": "Small setups pay off within a sentence or two; the main 'why' takes roughly the first two thirds.",
+  "slow_sections": "The temperature-definition passage before the anecdote is the most abstract stretch.",
+  "redundancy": "Low; 'no water in space' is repeated once on purpose.",
+  "weaknesses": "The warm-space digression is long relative to the script and delays the reactor payoff.",
+  "tempo": "Variable",
+  "tempo_evidence": "Quick eliminations at the start, a slower anecdote in the middle, then rapid calculation and consequence at the end."
+ },
+ "I_payoffs": [
+  {"level": "micro", "question_answered": "Would it burst?", "quote": "The submarine wouldn't burst.", "setup_amount": "One sentence.", "complete": true, "opens_new_question": "Then what does fail?", "fulfils_promise": "Partly (rules out the expected reason)."},
+  {"level": "mini", "question_answered": "How can space be warm?", "quote": "For most human-carrying spacecraft, the big problem isn't staying warm, it's staying cool.", "setup_amount": "The whole pedantry and grinder passage.", "complete": true, "opens_new_question": "How bad is that with a reactor on board?", "fulfils_promise": "Yes, it is the unexpected reason."},
+  {"level": "major", "question_answered": "How long does it last?", "quote": "the submarine would become too hot for human survivability within an hour", "setup_amount": "Reactor power and waste-heat estimate.", "complete": true, "opens_new_question": "Can it get down?", "fulfils_promise": "Yes."},
+  {"level": "reversal", "question_answered": "Does it have any way to de-orbit?", "quote": "But they don't need to be attached – they just need to be turned around!", "setup_amount": "Two sentences of dead end.", "complete": true, "opens_new_question": "Is that enough speed change?", "fulfils_promise": "Extends beyond the promise."},
+  {"level": "ultimate", "question_answered": "Could anyone survive?", "quote": "there's a tiny, tiny, tiny chance that you could survive the rapid deceleration in the atmosphere", "setup_amount": "De-orbit calculation and breakup description.", "complete": true, "opens_new_question": null, "fulfils_promise": "Yes, as a bonus ending."}
+ ],
+ "J_ending": {
+  "closing_quote": "remember to disable the detonators on the missiles",
+  "ending_tags": ["DEADPAN_PUNCHLINE", "MOCK_PRACTICAL_ADVICE"],
+  "final_insight": "Even the one workable escape plan needs a caveat that shows how absurd the plan is.",
+  "cta_present": false, "cta_quote": null, "cta_type": null,
+  "earned": "yes",
+  "earned_reason": "The punchline depends on the reversed-missile plan set up just before it."
+ },
+ "K_assessment": {
+  "strengths": ["Verdict in the second sentence with the reason withheld.", "A counterintuitive claim is defended through a concrete childhood anecdote.", "A second act (de-orbit) gives a new question after the main one closes."],
+  "improvements": ["The temperature-definition passage could be shortened so the reactor payoff arrives sooner.", "The final line does not return to Jason's 'how long' wording; a brief echo would tighten the frame."],
+  "distinctive_technique": "Stating something that sounds false, conceding the pedantic objection, then winning with a deeper pedantry.",
+  "biggest_risk": "The long warm-space digression may lose listeners who came for the submarine.",
+  "lesson": "Give the answer immediately and make the reason the mystery."
+ },
+ "L_formula": [
+  "Attribute the question to a named reader and read it verbatim.",
+  "Give the short verdict at once and flag that the reason is not the expected one.",
+  "Dismiss the expected failure modes one by one, each with a single mechanism or number.",
+  "Name the real problem with a claim that sounds wrong.",
+  "Defend the claim with a definition plus a personal, concrete analogy.",
+  "Scale the problem with the scenario's most extreme feature and put numbers on it.",
+  "State an understated verdict, then open a follow-up problem and solve it on a technicality.",
+  "End with deadpan practical advice drawn from the scenario's own details."
+ ],
+ "lenses": {
+  "architect": "Two acts: 'why it fails' (nested with a warm-space sub-argument) and 'how to get down', joined by a one-line verdict.",
+  "surgeon": "'But oxygen is another story' is the hinge where the list of non-problems flips into problems.",
+  "viral": "'space is much warmer than the ocean' is the most quotable line because it sounds wrong and is then justified.",
+  "critic": "The script's title topic (submarine as spaceship) is absent for the whole grinder passage.",
+  "curiosity": "The main loop is kept alive by negative answers; each 'not this' narrows the gap without closing it.",
+  "platform": "The opening contains the searchable phrase 'nuclear submarine' and 'in orbit'; the warm-space passage is a self-contained Shorts-able unit (and was excerpted as V032).",
+  "integrator": "Reader question, instant verdict, elimination, counterintuitive reveal, anecdote, numbers, second problem and joke ending all serve one causal chain about heat.",
+  "tradeoffs": "Answering first gives up suspense about the outcome in exchange for a sharper 'why' gap."
+ },
+ "framework_rules": [
+  {"rule_id": "FR-HOOK-01", "status": "MET", "evidence_quote": "The answer is “not very long,” but not for the reason I expected.", "note": "Lean context (asker + question), stop beat (instant verdict), snapback (not the expected reason)."},
+  {"rule_id": "FR-INTRO-03", "status": "MET", "evidence_quote": "The submarine wouldn't burst.", "note": "Intro neither over- nor under-explains; it moves to elimination in the third sentence."},
+  {"rule_id": "FR-SCR-01", "status": "MET", "evidence_quote": "It appears a nuclear submarine in orbit is a bad idea.", "note": "Setup (eliminations), tension (oxygen, heat), resolution (meltdown verdict), then a second mini-arc."},
+  {"rule_id": "FR-SCR-06", "status": "MET", "evidence_quote": "But if you're even more pedantic (and I am), it is true – in two different ways!", "note": "Gap planted in the hook, a second nested inside it, both delayed."},
+  {"rule_id": "FR-BT-01", "status": "MET", "evidence_quote": "But oxygen is another story: nuclear submarines use electricity to extract oxygen from water.", "note": "Most beat joins are 'but', 'though', 'instead', 'which means'."},
+  {"rule_id": "FR-16C-07", "status": "PARTLY", "evidence_quote": "The really big problem, though, would be overheating, because space is much warmer than the ocean.", "note": "The warm-space loop opens before the main loop closes, but the de-orbit loop opens only after the verdict."},
+  {"rule_id": "FR-16C-13", "status": "MET", "evidence_quote": "they're so small and there are so few of them they don't change your temperature much", "note": "Temperature versus heat is explained with sparks, not equations."},
+  {"rule_id": "FR-16C-16", "status": "PARTLY", "evidence_quote": "If you ever try this, I have one piece of advice that is absolutely critical", "note": "The ending stays in the scenario but echoes the missiles, not the opening 'how long' question."}
+ ],
+ "matrix_row": {
+  "topic": "Nuclear submarine placed in orbit",
+  "hook_type": "Reader question, instant verdict, unexpected-reason tease",
+  "narrative_structure": "Elimination of failure modes, then feasibility of de-orbit",
+  "curiosity_mechanism": "Withheld reason; counterintuitive 'space is warm' claim",
+  "emotional_arc": "Curiosity, surprise, warmth, concern, dark humor",
+  "key_payoff": "Reactor waste heat makes it unsurvivable within an hour",
+  "cta": "None",
+  "distinctive_technique": "Out-pedanting the pedantic objection, with a childhood anecdote",
+  "confidence": "High"
+ },
+ "tags": {"structure_tag": "ELIMINATION_SEARCH", "mechanics_tags": ["INFORMATION_GAP", "DELAYED_REVEAL", "ANALOGY", "CONCRETE_EXAMPLE", "SELF_CORRECTION", "REVERSAL", "PRECISE_NUMBER", "DEADPAN_HUMOR", "UNDERSTATEMENT", "SECOND_PERSON_IMMERSION"], "emotion_tags": ["CURIOSITY", "SURPRISE", "CONCERN", "HUMOR", "EMPATHY"], "answer_position": "FIRST_100_WORDS", "number_density": "High"},
+ "excerpt_delta": null,
+ "confidence": "High",
+ "caveats": "Transcript only, no timestamps; nothing is known about visuals, performance or audience behavior. Audience effects are hypotheses."
+}
