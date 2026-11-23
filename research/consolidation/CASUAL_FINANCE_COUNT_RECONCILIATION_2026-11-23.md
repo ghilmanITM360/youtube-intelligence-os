@@ -2,7 +2,7 @@
 
 Channel: `@CasuallyFinance`, `UCrNfRFWnLC3tCy1TnyhVQ7g`. Not Casual Economics (`UCo7FvfMJeTRhO-d7xT8IZlg`) and not Casually Explained (`UCr3cBLTYmIK9kY0F_OdFWFQ`, a separate identity-only registry row).
 
-Per-video detail: [CASUAL_FINANCE_COUNT_RECONCILIATION_2026-11-23.csv](CASUAL_FINANCE_COUNT_RECONCILIATION_2026-11-23.csv) (214 IDs).
+Per-video detail: [CASUAL_FINANCE_COUNT_RECONCILIATION_2026-11-23.csv](CASUAL_FINANCE_COUNT_RECONCILIATION_2026-11-23.csv) (223 IDs; see the update at the end).
 No source file, database or registry was edited. This note only explains the numbers.
 
 ## Verdict
@@ -32,3 +32,14 @@ There is no data error. The sources count different things at different dates. T
 - Registering the 210 videos in the canonical registry would need the registry's own ingestion workflow and an owner decision. It was not attempted.
 - The 14-video 220 gap and the 4 live-only IDs need a fresh public enumeration to close.
 - Recommended citation: "206 videos at the 2026-10-11 snapshot, 210 at 2026-10-19, at least 214 live on 2026-11-13".
+
+## Update: new-finance-channel branch (2026-11-23)
+
+`origin/research/new-finance-channel-2026-11-18` (Machine A, 7 commits ahead of `main`, unmerged) holds a fresher Casual Finance set. Source read: `research/new-finance-channel/03_PRIMARY_REFERENCE_CHANNELS/STAGE2_SIX_REPORTS/data/casual-finance_classified.csv` and `05_FRESH_COMPETITOR_DATA/STAGE1_DATA_GAPS_2026-11-19.md`. Its `finance_economics_complete.db` is a Git LFS pointer on this machine, so the DB itself was not opened.
+
+- **223 unique IDs** (38 long, 185 Shorts), latest published 2026-11-17. The branch's Stage 1 note reports 222 on the channel header on 2026-11-19, with 223 in its DB.
+- **Strict nesting:** 206 (Oct 11) is inside 210 (Oct 19), which is inside 214, which is inside 223. All four Nov-13 live-only IDs are present. Nine IDs appear only in this branch: `-8kPLdRGdpc`, `Q3Nb4ymp81w`, `_fDQWYITvsA`, `_mlnmY5_1oA`, `aAfGfEl5tqY`, `bJfRlh9pk6w`, `jYMY0ksSE00`, `mL5N99v220E`, `rfJsjUeswm0`.
+- **The 220 gap is explained.** Machine A's `reported_videos=220` was a channel-header count that the 206-video DB lagged behind. The channel kept uploading, so 206 + 17 = 223. 220 is not a data error. (That 220 came from a header read is an inference. No receipt for it exists.)
+- Updated citation: "206 (Oct 11), 210 (Oct 19), 223 (Nov 19, branch data not yet on main)".
+- Casual Finance transcripts in the branch: 223 of 223, same ASR caveat as above. Not rechecked here.
+- Still not done: the canonical registry still lists 0 videos, and none of the 17 new IDs is in `main`'s `finance_economics_complete.db`.
