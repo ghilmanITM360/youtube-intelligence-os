@@ -1,0 +1,163 @@
+{"sources": [{"id": "S_CFPB", "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-compound-interest-work-en-1683/", "publisher": "Consumer Financial Protection Bureau", "title": "How does compound interest work?", "published": "last reviewed Oct 19, 2023 (page last modified Nov 7, 2023)", "retrieved": "2026-11-22T05:38:47Z", "sha256": "f841bfb44691dba445e4e4d95c204813eee83ac9a3e3f9d190306a53e3a0e282", "rights": "US federal agency web page; capture used for commentary/education. CFPB logo is outside every crop. Rights basis recorded as provisional until the owner confirms (no clearance claimed)."}],
+ "claims": [
+  {"id": "C1", "status": "VERIFIED", "approved_wording": "The CFPB defines compound interest as earning interest on the money you've saved and on the interest you earn along the way.",
+   "definition": {"must_include": ["interest on the money you've saved", "on the interest you earn along the way"]},
+   "evidence": [{"source_id": "S_CFPB", "locator": "lead sentence under the page title", "excerpt": "Compound interest is when you earn interest on the money you’ve saved and on the interest you earn along the way."}],
+   "numbers": [], "checks": {"definition": {"result": "ok"}, "population": {"result": "na", "note": "general definition, no population"}, "geography": {"result": "na", "note": "US agency, concept is general"}, "denominator": {"result": "na", "note": "no rate or ratio claimed"}, "units": {"result": "na", "note": "no quantity claimed"}, "time_period": {"result": "na", "note": "no period claimed"}, "publication_date": {"result": "ok"}, "dataset_vintage": {"result": "na", "note": "not a dataset"}, "causal_vs_correlational": {"result": "na", "note": "no causal claim"}, "comparable_measures": {"result": "na", "note": "no comparison"}}},
+  {"id": "C2", "status": "VERIFIED WITH QUALIFICATION", "required_qualification": "once a year",
+   "approved_wording": "In the CFPB's example, $1,000 earns 5 percent, with interest calculated once a year.",
+   "evidence": [{"source_id": "S_CFPB", "locator": "example table, rows 1-3", "excerpt": "Amount you start with $1,000 Also called your principal How much you earn 5 percent Also called your interest rate, or rate of return How often you calculate interest Once a year Also called your compounding frequency"}],
+   "numbers": [{"value": 1000, "unit": "USD", "as_in_source": "$1,000"}, {"value": 5, "unit": "percent", "as_in_source": "5 percent"}],
+   "checks": {"definition": {"result": "ok"}, "population": {"result": "na", "note": "worked example, not a population"}, "geography": {"result": "na", "note": "not geographic"}, "denominator": {"result": "ok"}, "units": {"result": "ok"}, "time_period": {"result": "ok"}, "publication_date": {"result": "ok"}, "dataset_vintage": {"result": "na", "note": "illustrative example, not data"}, "causal_vs_correlational": {"result": "na", "note": "no causal claim"}, "comparable_measures": {"result": "na", "note": "no comparison"}}},
+  {"id": "C3", "status": "VERIFIED", "approved_wording": "In the CFPB's example, year-one interest is 0.05 x $1,000 = $50, giving $1,050.",
+   "evidence": [{"source_id": "S_CFPB", "locator": "example table, row 'Amount after the first year'", "excerpt": "Amount after the first year $1,050 Amount you started the year with, plus 5 percent 0.05 x $1,000 = $50 $1,000 + $50 = $1,050"}],
+   "numbers": [{"value": 0.05, "unit": "none", "as_in_source": "0.05"}, {"value": 1000, "unit": "USD", "as_in_source": "$1,000"}, {"value": 50, "unit": "USD", "as_in_source": "$50"}, {"value": 1050, "unit": "USD", "as_in_source": "$1,050"}],
+   "checks": {"definition": {"result": "ok"}, "population": {"result": "na", "note": "worked example"}, "geography": {"result": "na", "note": "not geographic"}, "denominator": {"result": "ok"}, "units": {"result": "ok"}, "time_period": {"result": "ok"}, "publication_date": {"result": "ok"}, "dataset_vintage": {"result": "na", "note": "illustrative example"}, "causal_vs_correlational": {"result": "na", "note": "arithmetic"}, "comparable_measures": {"result": "na", "note": "no comparison"}}},
+  {"id": "C4", "status": "VERIFIED", "approved_wording": "In the CFPB's example, year-two interest is 0.05 x $1,050 = $52.50, giving $1,102.50.",
+   "evidence": [{"source_id": "S_CFPB", "locator": "example table, row 'Amount after the second year'", "excerpt": "Amount after the second year $1,102.50 Amount you started the year with, plus 5 percent 0.05 x $1,050 = $52.50 $1,050 + $52.50 = $1,102.50"}],
+   "numbers": [{"value": 0.05, "unit": "none", "as_in_source": "0.05"}, {"value": 1050, "unit": "USD", "as_in_source": "$1,050"}, {"value": 52.5, "unit": "USD", "as_in_source": "$52.50"}, {"value": 1102.5, "unit": "USD", "as_in_source": "$1,102.50"}],
+   "checks": {"definition": {"result": "ok"}, "population": {"result": "na", "note": "worked example"}, "geography": {"result": "na", "note": "not geographic"}, "denominator": {"result": "ok"}, "units": {"result": "ok"}, "time_period": {"result": "ok"}, "publication_date": {"result": "ok"}, "dataset_vintage": {"result": "na", "note": "illustrative example"}, "causal_vs_correlational": {"result": "na", "note": "arithmetic"}, "comparable_measures": {"result": "na", "note": "no comparison"}}},
+  {"id": "H1", "status": "HYPOTHETICAL", "approved_wording": "Hypothetical: $1,000 at 5% a year, interest added once a year for 3 years, no deposits, fees or taxes; interest per year and balance.",
+   "hypothetical": {"label": "Hypothetical illustration, not a forecast",
+     "inputs": [{"value": 1000, "unit": "USD"}, {"value": 5, "unit": "percent"}],
+     "arithmetic": [{"expr": "1000*0.05", "expected": 50.00, "unit": "USD"}, {"expr": "1000*1.05*0.05", "expected": 52.50, "unit": "USD"}, {"expr": "1000*1.05**2*0.05", "expected": 55.13, "unit": "USD"}, {"expr": "1000*1.05**3", "expected": 1157.63, "unit": "USD"}]}},
+  {"id": "H2", "status": "HYPOTHETICAL", "approved_wording": "Same hypothetical: simple interest on the original $1,000 gives $150.00 over 3 years; compounding gives $157.63; the difference is $7.63 (same principal, rate, term).",
+   "hypothetical": {"label": "Hypothetical illustration, not a forecast",
+     "inputs": [{"value": 1000, "unit": "USD"}, {"value": 5, "unit": "percent"}],
+     "arithmetic": [{"expr": "1000*0.05*3", "expected": 150.00, "unit": "USD"}, {"expr": "1000*1.05**3-1000", "expected": 157.63, "unit": "USD"}, {"expr": "(1000*1.05**3-1000)-1000*0.05*3", "expected": 7.63, "unit": "USD"}]},
+   "comparison": {"a": "simple interest total", "b": "compound interest total", "compatible": true, "basis": "same principal, rate, term, no deposits"}}
+ ],
+ "render_approval": {
+ "document_source_id": "S_CFPB",
+ "qualification_marks": {"C2": "E3"},
+ "source_digest": "a5fa298d8b51057703d138d0722a25f7d166b74f2f209c7dc9bcf747767f2187",
+ "claim_digests": {
+  "C1": "fddd37404bcbec102fa2532fe27d2def380f08e4a325826c7d21c7c34e3aabb4",
+  "C2": "1f2d38dfa6d27b47b81cb58d590eecc3dbf57b34ea4ad17e93b61f3ae654a005",
+  "C3": "33411880301eda16dcdad9ed05322137213db7e3ae2b51e76d4c0628d381250d",
+  "C4": "cea0ff1ee132a943c535f750682d1f473faf6df42d947c95f7449f0db960122b",
+  "H1": "d45f014e612bea9d2ca7f4e23ccf95604a39ed476c9f8b68de7376f5883ad820",
+  "H2": "97fbec4cc77650df775a1918c71cbf800100ac92be7602cb9c12e69c0cec7636"
+ },
+ "annotations": {
+  "E_def1": {
+   "locator": "lead sentence under the page title",
+   "digest": "5c4b94d2f8c730491d67fbb2221a3d7a734c2a640972f078cd1bf15c7e72b37a"
+  },
+  "E_def2": {
+   "locator": "lead sentence under the page title",
+   "digest": "34632b49f6896a2317362a326a31f9479627b2ba6c2e8f1d25ff087ef7be05c6"
+  },
+  "E1": {
+   "locator": "example table, rows 1-3",
+   "digest": "6d35abac3bd2471b90b653f716150783052266056034892ea15605846df664ba"
+  },
+  "E2": {
+   "locator": "example table, rows 1-3",
+   "digest": "74f378e92ae5ee99673e00da9097a1eccf604ad5a7fe9e25a80c959b6d8fe22b"
+  },
+  "E3": {
+   "locator": "example table, rows 1-3",
+   "digest": "ce12d875c2ee30f691b544638c4c026bd34fc12f3a9de0aff676311c20e3f5b3"
+  },
+  "E4": {
+   "locator": "example table, row 'Amount after the first year'",
+   "digest": "c8433a1a4ed16029d405d7e5b26765f986781d4a1b79102fa3c6baaa9554049d"
+  },
+  "E5": {
+   "locator": "example table, row 'Amount after the second year'",
+   "digest": "2ba1a4b1a95cee45fe7f79d8caa8f523058050cb5efb8100e810edc41d1a0f37"
+  },
+  "E6": {
+   "locator": "example table, row 'Amount after the second year'",
+   "digest": "3f4789804061176e8a569d91e3ff1acc006b5240d5ae1e3f2037ccd64ea2c500"
+  }
+ },
+ "document_digest": "28063127b46fb75c065dd500d6a2e3ced544389d9ac46d53323e6ef2c097034e",
+ "scenes": [
+  {
+   "id": "P1",
+   "header": "01856154333efaadbdcba85a4f0d7ed04258dd5da48cb83e1399c54c72c86101",
+   "items": [
+    "5cf63c93e2aa50d494ee5b3963eab8840cfde55203b5709730e7db1130f94281",
+    "eb33c3863127f72d84f0e3d2aee1819fd5d618f95f13f749cda165387b4b79c8",
+    "4da8463b790e5d5952eaea63be016c89ef545c95008c3d7f3696f3cd06f5d12f",
+    "6414b6f946a76c3974f58a291aac7edc08d524c6767a62b61601413b2d13aef6"
+   ]
+  },
+  {
+   "id": "P2_doc",
+   "header": "a48666b6257c2994276bc12363c8a2741280ca01ecb27c285f74c368c65f26fc",
+   "items": [
+    "f7513f9dc6d95903bd9218565a0d34188dcadaf75b52801ccc0c642e87fb032f"
+   ]
+  },
+  {
+   "id": "P3_setup",
+   "header": "285f7ac56b3830fd12309a04bf4ce810b5446decac8c0fa8241c2457189aa269",
+   "items": [
+    "5c49d5729b12b50a812416f2851853e1a17f5d0577863d1a438344f10966f93e",
+    "f2b4b1aa316de767fd1bb92daec36033d58807327e64cf434d1b40da7ed372c6",
+    "41dc384e2d903ee82b5e2358f495ffaad2c2131d5a7ee41ed40ce825ad93d713",
+    "d632aaaeee859322f704d0ad9af692c2a37831028f8a4d8751f5652dd30045f1",
+    "58ce2b4c41d1044635d29d2d36f13e66b4702d92ca79f3bbbe50238c531abda6"
+   ]
+  },
+  {
+   "id": "P4_years",
+   "header": "2a8f2b941743c2aa30d093a4d78e05cee417062e8221bcc825af54c1bebe8b67",
+   "items": [
+    "af8a87d8646abb156d618dec1157f0a60e29f5adaec650bfa2561fbca04124ca",
+    "4a066d13013d66add554c8964c8594bd8e156ef7e47ace40122f2ddd642564c9",
+    "723aecc15955be95976b6647d78d8d9d0166df1f4bfae177f0946b086c2bcd93",
+    "d37916aeaa28b9acb783523ed141c2a48e3554248cfedc91661b9fed30764838",
+    "960039aa1f1da5e3d7cf4c168ddad3a8e7df613cfb6965e5929ec77fb98ba7c2",
+    "a87a3122608e3349cc26982a34453ec18e46ce15baf5d5febc7e31d247decebf",
+    "b78335a06eb19e1cc555e0729c5a8ae59e05b9a3f1880e588c76270591061f79",
+    "f0aa2125d0b06676fda12568f032b9b92520d1fd1220addbde6229592d298b50",
+    "4b3d6f4a743ed890ba16da81c32b1865bd3396df9e086306ac3ff70dadc88e07",
+    "13544611dab332d64ff578e732d4aea5c6c87e92e6d16243216e2e8e9b3dacce",
+    "99e3fa196e2a7e3c26f9bcb2bd0a236e30fc9bdd8e116d2c9cd83e2f945887ce",
+    "4fe29aea7bbf7d0a29df012e56a16f58bf10e15232c3ca5ed657f3361b0c25a1",
+    "05964ae5c797cd77edc06fb8873dd2e17de9c8a479e3743ac9916ad53d428569"
+   ]
+  },
+  {
+   "id": "P5_compare",
+   "header": "c4fc2b9068d440f22b3595892b8c7b0eb9895268ad3d2ddbe0e43d40db6a9549",
+   "items": [
+    "9fcec7503f6f9394ab4d2bdaac29c4b9844ea81648e9a2f5aa50560967ced098",
+    "b9bd6c24d3668dfb7542d68b09bfe4a9261f59b20dd0598832d49358c2664af1",
+    "78508dfdf6675c5c998d54572070e1e90ece7ed8e860bcb53cac5bd74fce3afe",
+    "9f3ed1e40b2efbee59ca551d99e3898f4f502c7619d60965eaac3e3074555774",
+    "2fdc6428c2a714bdf1e3da678dfc8df316f48dcff539892cc5a545a7a4cb9f44",
+    "3a494b832a028f43d5a1ad4bcdcb9d82918746190e5077d58b075e7baa2641ec",
+    "2d0fae62ff16b7e73cdd11d716cd8e17333c7c48cda27e8845288ce5514a284c",
+    "b14fe2a5de7ae6c9a6f98f30c6a37a1e675f9c889bc5022af416dc8f11aff019",
+    "d16c0891a995d93c917e17733bb8761a60cadce9a9b539dd96180f8def72e9d5",
+    "1bce3fb49f575c9b13a4f9944663a7d4fc394ef91b470d3633a6c82b63bea8df",
+    "b45d3a39f31ae29b37757f15afaf76bc1c9bb51f84b660d204717f6e6571cc39",
+    "19d0bcf3375ef541f4892e793898345eb07b71d44293280d0d681b6d8a487738",
+    "f98fc7980b671a54080741ca001948042e9b3f28fd64c88207cc9b83a6229ad9",
+    "7125169d159f6244d23c1d5df97006823790909e1c00892d243772067e975d23",
+    "d42f570238f2d04eaa985be7af33252b20557a2deedcdbf2192fdeaadfe50ca5",
+    "daefa8f028983263e810686a152992a9c2ca2f51ceb6b506a9899b7fc3e2c464",
+    "12fe6f80396964a5887a540fdb8a7748b00e8e7add21efa0739a69bb47da2808"
+   ]
+  },
+  {
+   "id": "P6_close",
+   "header": "7617d89f0acf1f2397faf8d9bc2c80b309febc00c6c649d4224cf010283018a0",
+   "items": [
+    "38b22ab8d2b9fc1adbcf43d87c3d78f0401bdd2eb42c25d140034ebe65eba05a",
+    "34642a5927d96d472d540eaf6a37b2622de11f02bb58dc57a91d2a0957e27d41",
+    "4b0a0b07aaa567a66a0ff0918e03961025bf4f402940daf53c724232e028d101",
+    "bdb3e0101aa1a52f98f6a2beb6c1c8e9aef9fbc77e6b69e5053f0bbc68409d24"
+   ]
+  }
+ ],
+ "planned_clauses": "5585e758a940c91775d19d109c0118233baf9a6fe5a3ba61a4cbd1001162c736",
+ "plan_digest": "8d0e8fca0ecf610302c9c24c8a1af725c156937a71d22d23a18ba064d6580f61",
+ "review_scope": "Existing independently inspected CFPB capture and marked passage geometry; proof storyboard and planned timing only. Known table header/crop and real-phone QA remain publication checks."
+}
+}

@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-20T18:04:23+00:00",
+  "script": "productions/cf-visual-system-tests/ES1_EMERGENCY_FUND_SCRIPT.md",
+  "sha256": "f62856cf4f979a6219100f79d98dc0fa7d83027eb6dc228c78dbd082527bf2f7",
+  "title": "ES1 Emergency fund (internal visual-system test, not for publication)",
+  "channel": "CasuallyFinance visual-system test (CH001 audit, internal)",
+  "project": "cf-visual-system-tests",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R1",
+      "level": "WARN",
+      "detail": "script too short for a reliable copy check (29 5-grams)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no images (header `images:` or --images); visual check skipped"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

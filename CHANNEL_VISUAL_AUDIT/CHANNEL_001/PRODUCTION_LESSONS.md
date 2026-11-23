@@ -1,0 +1,4 @@
+# PRODUCTION LESSONS (append after every production)
+Format: date | production | rule that held | rule that failed | new family seen | owner reaction (subjective) | evidence path.
+2026-11-22 | V1 Rent (R9/R9b) | white canvas + thin rig + red callouts + claim registers + independent QA held | no authentic imagery; persistent apartment background and detailed first character failed; scale/colour inconsistencies; ambiguous subtle wording | none | owner about 60-70% (subjective) | productions/new-original-video-v1-rent-01/R9_FIX_LEDGER.md
+2026-11-22 | Document-animation proof (doc-animation-proof-01) | claim gate + doc_scene registration + labelled hypothetical held in a silent 60 s render | (pending independent review result, see CLOSURE2/CLOSURE_REPORT.md) | instant ellipses, pre-marked cards, lead-in hold, yellow sweep paced to clause, clause-boundary replacement cut | no owner reaction yet; audio PENDING | productions/doc-animation-proof-01/

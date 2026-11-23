@@ -1,0 +1,3 @@
+# Final holdout contract after the B05 metric correction
+
+H02 and H03 used the earlier freeze. Reserve additional source windows outside prior targeted batches to check the final recipe. Use 2J2Fb1bBufA and DgbHW0IqHrI, seek to 110 seconds, sample 12 frames at three-second spacing without changing target after viewing. Expect source-facing, identity, editorial metaphor and explicitly hypothetical graphics to be distinguishable. For a quantified comparison, check whether operands carry the same unit and basis and any multiplier unambiguously binds to the correct operands. Log any unexercised condition. Asset rights, verbatim quotation and factual verification are separate per-production gates.

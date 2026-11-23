@@ -1,0 +1,19 @@
+{"scenes": [
+ {"id": "P1", "factual": false, "narration": "If your savings earn interest, does that interest earn interest too?", "on_screen_text": ["Does interest earn interest?"]},
+ {"id": "P2_doc", "factual": true, "claim_ids": ["C1", "C2", "C3", "C4"],
+  "narration": "Here is how the Consumer Financial Protection Bureau puts it. Compound interest is when you earn interest on the money you've saved, and on the interest you earn along the way. Their example starts with one thousand dollars, earning five percent, calculated once a year. After year one, that is fifty dollars of interest. In year two, you earn five percent of one thousand fifty, so fifty-two dollars and fifty cents.",
+  "on_screen_text": ["Compound interest is when you earn interest on the money you’ve saved and on the interest you earn along the way.", "$1,000", "5 percent", "Once a year", "0.05 x $1,000 = $50", "0.05 x $1,050 = $52.50", "$1,102.50"]},
+ {"id": "P3_setup", "factual": true, "claim_ids": ["H1"], "ignore_numbers": [3],
+  "narration": "Now our own numbers, a hypothetical: one thousand dollars at five percent, added once a year, for three years.",
+  "on_screen_text": ["Hypothetical illustration, not a forecast", "$1,000 at 5% a year", "Interest added once a year, for 3 years", "No deposits, fees or taxes. Rate stays 5%."]},
+ {"id": "P4_years", "factual": true, "claim_ids": ["H1"], "ignore_numbers": [1, 2, 3],
+  "narration": "Year one adds fifty dollars. Year two adds fifty-two fifty. Year three adds fifty-five thirteen.",
+  "on_screen_text": ["Hypothetical illustration, not a forecast", "Interest earned each year", "Year 1", "Year 2", "Year 3", "+$50.00", "+$52.50", "+$55.13", "Balance after year 3: $1,157.63"]},
+ {"id": "P5_compare", "factual": true, "claim_ids": ["H1", "H2"], "ignore_numbers": [3],
+  "narration": "Simple interest alone would add one hundred fifty dollars. Compounding adds seven dollars and sixty-three cents more.",
+  "on_screen_text": ["Hypothetical illustration, not a forecast", "Interest earned over 3 years", "Simple interest", "Compounding", "$150.00", "$157.63", "+$7.63", "interest earned on earlier interest"]},
+ {"id": "P6_close", "factual": true, "claim_ids": ["C1"],
+  "narration": "Small at first, but every year starts from a bigger base. Interest earns interest.",
+  "on_screen_text": ["Interest earns interest.", "So each year starts from a bigger base."],
+  "source_tag": ["Definition and example: CFPB, “How does compound interest work?”", "Last reviewed Oct 19, 2023. Retrieved Nov 22, 2026."]}
+]}

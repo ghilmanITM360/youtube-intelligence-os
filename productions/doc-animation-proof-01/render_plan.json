@@ -1,0 +1,993 @@
+{
+ "scenes": [
+  {
+   "start": 0.0,
+   "end": 5.2,
+   "description": "Host shrugs, surprised head at the question",
+   "narration": "If your savings earn interest, does that interest earn interest too?",
+   "items": [
+    {
+     "op": "host",
+     "args": [
+      [
+       [
+        0.0,
+        "shrug",
+        "neutral"
+       ],
+       [
+        2.8,
+        "shrug",
+        "surprised"
+       ]
+      ],
+      470,
+      1010,
+      0.46
+     ],
+     "kwargs": {},
+     "claim_ids": []
+    },
+    {
+     "op": "txt",
+     "args": [
+      "If your savings earn interest,",
+      1330,
+      330,
+      92,
+      [
+       31,
+       36,
+       48
+      ],
+      0.3
+     ],
+     "kwargs": {},
+     "claim_ids": []
+    },
+    {
+     "op": "txt",
+     "args": [
+      "does that interest",
+      1330,
+      470,
+      92,
+      [
+       31,
+       36,
+       48
+      ],
+      1.6
+     ],
+     "kwargs": {},
+     "claim_ids": []
+    },
+    {
+     "op": "txt",
+     "args": [
+      "earn interest too?",
+      1330,
+      650,
+      160,
+      [
+       216,
+       44,
+       44
+      ],
+      2.8,
+      "wide"
+     ],
+     "kwargs": {},
+     "claim_ids": []
+    }
+   ],
+   "id": "P1"
+  },
+  {
+   "start": 5.2,
+   "end": 32.5,
+   "description": "Authentic CFPB page, camera A->B->C, document-registered marks",
+   "narration": "CFPB definition and worked example",
+   "items": [
+    {
+     "op": "document",
+     "args": [],
+     "kwargs": {},
+     "claim_ids": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+     ]
+    }
+   ],
+   "id": "P2_doc"
+  },
+  {
+   "start": 32.5,
+   "end": 39.5,
+   "description": "Our own hypothetical: inputs",
+   "narration": "Now our own numbers, a hypothetical",
+   "items": [
+    {
+     "op": "txt",
+     "args": [
+      "Hypothetical illustration, not a forecast",
+      960,
+      70,
+      58,
+      [
+       216,
+       44,
+       44
+      ],
+      32.5,
+      "hand"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Our own numbers",
+      960,
+      250,
+      120,
+      [
+       31,
+       36,
+       48
+      ],
+      32.7,
+      "wide"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "$1,000 at 5% a year",
+      960,
+      470,
+      130,
+      [
+       31,
+       36,
+       48
+      ],
+      34.2,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Interest added once a year, for 3 years",
+      960,
+      650,
+      72,
+      [
+       31,
+       36,
+       48
+      ],
+      36.0
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "No deposits, fees or taxes. Rate stays 5%.",
+      960,
+      790,
+      62,
+      [
+       70,
+       74,
+       84
+      ],
+      37.6
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    }
+   ],
+   "id": "P3_setup"
+  },
+  {
+   "start": 39.5,
+   "end": 46.2,
+   "description": "Three interest blocks pop in at the spoken years; balance",
+   "narration": "Year one adds fifty, two adds fifty-two fifty, three adds fifty-five thirteen",
+   "items": [
+    {
+     "op": "txt",
+     "args": [
+      "Hypothetical illustration, not a forecast",
+      960,
+      70,
+      58,
+      [
+       216,
+       44,
+       44
+      ],
+      39.5,
+      "hand"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Interest earned each year",
+      960,
+      170,
+      80,
+      [
+       31,
+       36,
+       48
+      ],
+      39.6
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "stroke_item",
+     "args": [
+      [
+       [
+        300,
+        794
+       ],
+       [
+        1620,
+        794
+       ]
+      ],
+      39.7,
+      [
+       31,
+       36,
+       48
+      ],
+      9,
+      0.25,
+      4,
+      5,
+      2
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      450,
+      590,
+      220,
+      200,
+      [
+       176,
+       188,
+       140
+      ],
+      40.0,
+      8
+     ],
+     "kwargs": {
+      "seed": 21,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "+$50.00",
+      560,
+      520,
+      110,
+      [
+       31,
+       36,
+       48
+      ],
+      40.15,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Year 1",
+      560,
+      852,
+      66,
+      [
+       31,
+       36,
+       48
+      ],
+      40.1
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      850,
+      580,
+      220,
+      210,
+      [
+       176,
+       188,
+       140
+      ],
+      41.9,
+      8
+     ],
+     "kwargs": {
+      "seed": 22,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "+$52.50",
+      960,
+      510,
+      110,
+      [
+       216,
+       44,
+       44
+      ],
+      42.05,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Year 2",
+      960,
+      852,
+      66,
+      [
+       31,
+       36,
+       48
+      ],
+      42.0
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      1250,
+      570,
+      220,
+      220,
+      [
+       176,
+       188,
+       140
+      ],
+      43.8,
+      8
+     ],
+     "kwargs": {
+      "seed": 23,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "+$55.13",
+      1360,
+      500,
+      110,
+      [
+       216,
+       44,
+       44
+      ],
+      43.949999999999996,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Year 3",
+      1360,
+      852,
+      66,
+      [
+       31,
+       36,
+       48
+      ],
+      43.9
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Balance after year 3: $1,157.63",
+      960,
+      975,
+      84,
+      [
+       31,
+       36,
+       48
+      ],
+      45.3,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1"
+     ]
+    }
+   ],
+   "id": "P4_years"
+  },
+  {
+   "start": 46.2,
+   "end": 53.2,
+   "description": "Simple vs compounding interest stacks, bars from $0; extra slice marked",
+   "narration": "Simple interest would add 150; compounding adds 7.63 more",
+   "items": [
+    {
+     "op": "txt",
+     "args": [
+      "Hypothetical illustration, not a forecast",
+      960,
+      70,
+      58,
+      [
+       216,
+       44,
+       44
+      ],
+      46.2,
+      "hand"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H1",
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Interest earned over 3 years",
+      960,
+      170,
+      76,
+      [
+       31,
+       36,
+       48
+      ],
+      46.3
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "stroke_item",
+     "args": [
+      [
+       [
+        380,
+        804
+       ],
+       [
+        1460,
+        804
+       ]
+      ],
+      46.4,
+      [
+       31,
+       36,
+       48
+      ],
+      9,
+      0.25,
+      4,
+      5,
+      2
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      520,
+      670,
+      240,
+      130,
+      [
+       176,
+       188,
+       140
+      ],
+      46.8,
+      8
+     ],
+     "kwargs": {
+      "seed": 31,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      520,
+      540,
+      240,
+      130,
+      [
+       176,
+       188,
+       140
+      ],
+      47.099999999999994,
+      8
+     ],
+     "kwargs": {
+      "seed": 32,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      520,
+      410,
+      240,
+      130,
+      [
+       176,
+       188,
+       140
+      ],
+      47.4,
+      8
+     ],
+     "kwargs": {
+      "seed": 33,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      1060,
+      670,
+      240,
+      130,
+      [
+       176,
+       188,
+       140
+      ],
+      48.0,
+      8
+     ],
+     "kwargs": {
+      "seed": 41,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      1060,
+      534,
+      240,
+      136,
+      [
+       176,
+       188,
+       140
+      ],
+      48.3,
+      8
+     ],
+     "kwargs": {
+      "seed": 42,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "rect",
+     "args": [
+      1060,
+      391,
+      240,
+      143,
+      [
+       176,
+       188,
+       140
+      ],
+      48.6,
+      8
+     ],
+     "kwargs": {
+      "seed": 43,
+      "mode": "pop"
+     },
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Simple interest",
+      640,
+      875,
+      64,
+      [
+       31,
+       36,
+       48
+      ],
+      46.8
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Compounding",
+      1180,
+      875,
+      64,
+      [
+       31,
+       36,
+       48
+      ],
+      48.0
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "$150.00",
+      640,
+      350,
+      110,
+      [
+       31,
+       36,
+       48
+      ],
+      47.9,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "$157.63",
+      1180,
+      331,
+      110,
+      [
+       31,
+       36,
+       48
+      ],
+      49.1,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "stroke_item",
+     "args": [
+      [
+       [
+        760,
+        410
+       ],
+       [
+        1330,
+        410
+       ]
+      ],
+      50.0,
+      [
+       216,
+       44,
+       44
+      ],
+      7,
+      0.4,
+      4,
+      3,
+      1.5
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "arrow",
+     "args": [
+      1560,
+      470,
+      1310,
+      399,
+      50.6
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "+$7.63",
+      1620,
+      390,
+      120,
+      [
+       216,
+       44,
+       44
+      ],
+      50.4,
+      "num"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "interest earned on\nearlier interest",
+      1620,
+      560,
+      58,
+      [
+       31,
+       36,
+       48
+      ],
+      50.9
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "H2"
+     ]
+    }
+   ],
+   "id": "P5_compare"
+  },
+  {
+   "start": 53.2,
+   "end": 60.0,
+   "description": "Host smile; takeaway; source recap",
+   "narration": "Small at first, but every year starts from a bigger base. Interest earns interest.",
+   "items": [
+    {
+     "op": "host",
+     "args": [
+      [
+       [
+        53.2,
+        "down",
+        "smile"
+       ]
+      ],
+      470,
+      880,
+      0.4
+     ],
+     "kwargs": {},
+     "claim_ids": []
+    },
+    {
+     "op": "txt",
+     "args": [
+      "Interest earns\ninterest.",
+      1280,
+      330,
+      140,
+      [
+       216,
+       44,
+       44
+      ],
+      53.4,
+      "wide"
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "C1"
+     ]
+    },
+    {
+     "op": "txt",
+     "args": [
+      "So each year starts\nfrom a bigger base.",
+      1280,
+      650,
+      76,
+      [
+       31,
+       36,
+       48
+      ],
+      55.6
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "C1"
+     ]
+    },
+    {
+     "op": "source",
+     "args": [
+      [
+       "Definition and example: CFPB, \u201cHow does compound interest work?\u201d",
+       "Last reviewed Oct 19, 2023. Retrieved Nov 22, 2026."
+      ],
+      56.8
+     ],
+     "kwargs": {},
+     "claim_ids": [
+      "C1"
+     ]
+    }
+   ],
+   "id": "P6_close"
+  }
+ ],
+ "planned_clauses": [
+  {
+   "start_end_s": "0.0-4.8",
+   "text": "If your savings earn interest, does that interest earn interest too?"
+  },
+  {
+   "start_end_s": "5.2-8.0",
+   "text": "Here is how the Consumer Financial Protection Bureau puts it."
+  },
+  {
+   "start_end_s": "8.4-16.6",
+   "text": "Compound interest is when you earn interest on the money you've saved, and on the interest you earn along the way."
+  },
+  {
+   "start_end_s": "17.4-23.8",
+   "text": "Their example starts with one thousand dollars, earning five percent, calculated once a year."
+  },
+  {
+   "start_end_s": "24.2-31.6",
+   "text": "After year one, that is fifty dollars of interest. In year two, you earn five percent of one thousand fifty, so fifty-two dollars and fifty cents."
+  },
+  {
+   "start_end_s": "32.6-39.0",
+   "text": "Now our own numbers, a hypothetical: one thousand dollars at five percent, added once a year, for three years."
+  },
+  {
+   "start_end_s": "39.6-46.0",
+   "text": "Year one adds fifty dollars. Year two adds fifty-two fifty. Year three adds fifty-five thirteen."
+  },
+  {
+   "start_end_s": "46.2-53.0",
+   "text": "Simple interest alone would add one hundred fifty dollars. Compounding adds seven dollars and sixty-three cents more."
+  },
+  {
+   "start_end_s": "53.2-59.5",
+   "text": "Small at first, but every year starts from a bigger base. Interest earns interest."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+
+baseline
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+unverified referenced
+claim gate: BLOCKED
+  - P2_doc: claim C4 is UNVERIFIED: affected factual scene may not be produced
+  - P2_doc: on-screen number '$52.50': no cited claim supports it
+  - P2_doc: on-screen number '$1,102.50': no cited claim supports it
+exit: RENDER REFUSED by claim gate
+
+unknown scene id reference
+claim gate: BLOCKED
+  - P6_close: unknown claim id C140
+exit: RENDER REFUSED by claim gate
+
+qualification missing from JSON
+claim gate: BLOCKED
+  - P2_doc: claim C2 qualification 'once a year' missing from narration/on-screen text
+exit: RENDER REFUSED by claim gate
+
+rejected document annotation omitted from storyboard
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+hypothetical with same figures framed as historical fact
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+wrong time period admitted via ignored digits
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+unrelated claim licenses closing statement
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+misquotation in scene copy
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+incompatible comparison in scene copy
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+qualification substituted outside the actual render
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+unknown doc claim declared only in document spec
+claim gate: AUTHORIZED
+spec valid
+exit: 0
+
+wrong passage metadata in document spec
+claim gate: AUTHORIZED
+spec valid
+exit: 0

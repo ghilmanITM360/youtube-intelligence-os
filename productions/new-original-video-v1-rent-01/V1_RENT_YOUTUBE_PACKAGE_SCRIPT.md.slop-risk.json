@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-11-21T15:13:25+00:00",
+  "script": "productions/new-original-video-v1-rent-01/V1_RENT_YOUTUBE_PACKAGE_SCRIPT.md",
+  "sha256": "111e6945860d6b9d40c3c47906ce5062d077e241cd612ffe4792644af15049f0",
+  "title": "Why Is Rent So High? How the Official Rent Number Is Measured",
+  "channel": "BEENOMICS (owner-chosen name, unverified availability)",
+  "project": "new-original-video-v1-rent-01",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R4",
+      "level": "WARN",
+      "detail": "7% of script 5-grams match our other project productions/new-finance-channel-v1-rent-01/V1_RENT_SCRIPT.md"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0184.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0195.00.png similar to competitor image data/raw/competitors/DS-000017/thumbnail-snapshots/30/30bbadd05af353cf9a5c6b9aaa6931e76084bcd1ec7d3843dc9c35255219a65d.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0196.00.png similar to competitor image data/raw/competitors/DS-000017/thumbnail-snapshots/30/30bbadd05af353cf9a5c6b9aaa6931e76084bcd1ec7d3843dc9c35255219a65d.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0197.00.png similar to competitor image data/raw/competitors/DS-000017/thumbnail-snapshots/30/30bbadd05af353cf9a5c6b9aaa6931e76084bcd1ec7d3843dc9c35255219a65d.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0206.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0207.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0217.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0226.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0233.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0272.00.png similar to competitor image research/finance-economics-intelligence/thumbnail-evidence/8W4d28fJKfE.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0277.00.png similar to competitor image data/raw/competitors/DS-000017/thumbnail-snapshots/a3/a3ed0ea837734f800d2d345fd32b7f2e0c4a6b1bf2e0980ace21d85c5d00489a.jpg (distance 10)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "productions/new-original-video-v1-rent-01/qa_r9/frames/t_0278.00.png similar to competitor image data/raw/competitors/DS-000017/thumbnail-snapshots/a3/a3ed0ea837734f800d2d345fd32b7f2e0c4a6b1bf2e0980ace21d85c5d00489a.jpg (distance 10)"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

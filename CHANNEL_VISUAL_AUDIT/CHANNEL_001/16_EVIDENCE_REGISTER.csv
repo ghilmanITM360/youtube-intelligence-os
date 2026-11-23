@@ -1,0 +1,9 @@
+claim,evidence_path,frame_or_time,method,confidence
+"Canvas 1080x1920 30fps, bg #FDFDFD",RECONSTRUCTION_TESTS/same_video/qa_report.md,all frames; f525 corners,ffprobe + pixel read,HIGH
+"Content band y655-1265, caption band y1285-1440",05_VISUAL_DNA.md,22 ref frames,bbox of non-white pixels,HIGH
+"Caption rule: punctuation chunks, wrap 800, pitch 62, centre y1353",RECONSTRUCTION_TESTS/same_video/qa_report.md (v4),21 ref frames,fit_caption_blocks.py,MEDIUM
+"Question-mark row: d220, pitch 272, 2.3 px/frame scroll",RECONSTRUCTION_TESTS/same_video/render_10nEByVLya0_v6.py,f20-f98,connected-component measurement,HIGH
+"Brown man geometry (head, hair, arms)",09_CHARACTER_SYSTEM.md,"f270,f309,f345",measured crops,MEDIUM-HIGH
+Earth lands f312-319; sweat from f339,RECONSTRUCTION_TESTS/same_video/visual_error_log.csv (E13),f303-f365,frame diff,HIGH
+"Scene mix: 57% other illustration, 14% character, 12% text card, 11% chart",03_SCENE_TAXONOMY.csv,"2195 shots, keyword based",keyword classifier,LOW-MEDIUM
+"Entering classes: POP_IN 21, CUT 16, HOLD 6, SLIDE_IN 3 of 61 states",~/YIOS-local-audits/2026-11-08-10nEByVLya0-deep-ct-scan/visual_states.csv,one video,state ledger count,MEDIUM (one video)

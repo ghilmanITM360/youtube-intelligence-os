@@ -1,0 +1,444 @@
+{
+ "id": "ES1_emergency_fund",
+ "w": 1080,
+ "h": 1920,
+ "fps": 30,
+ "motion_fps": 24,
+ "bg": [
+  253,
+  253,
+  253
+ ],
+ "caption": {
+  "font": "comic",
+  "size": 57,
+  "y": 1353,
+  "wrap": 800,
+  "stroke": 1,
+  "events": [
+   {
+    "t": 0.3,
+    "text": "your",
+    "full": "your car breaks down."
+   },
+   {
+    "t": 0.6,
+    "text": "your car",
+    "full": "your car breaks down."
+   },
+   {
+    "t": 0.9,
+    "text": "your car breaks",
+    "full": "your car breaks down."
+   },
+   {
+    "t": 1.2,
+    "text": "your car breaks down.",
+    "full": "your car breaks down."
+   },
+   {
+    "t": 3.3,
+    "text": "and",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 3.6,
+    "text": "and the",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 3.9,
+    "text": "and the bill",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 4.2,
+    "text": "and the bill is",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 4.5,
+    "text": "and the bill is due",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 4.8,
+    "text": "and the bill is due today.",
+    "full": "and the bill is due today."
+   },
+   {
+    "t": 6.3,
+    "text": "so",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 6.6,
+    "text": "so save",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 6.9,
+    "text": "so save a",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 7.2,
+    "text": "so save a little",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 7.5,
+    "text": "so save a little every",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 7.8,
+    "text": "so save a little every month.",
+    "full": "so save a little every month."
+   },
+   {
+    "t": 9.8,
+    "text": "three",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 10.1,
+    "text": "three months",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 10.4,
+    "text": "three months of",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 10.7,
+    "text": "three months of costs",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 11.0,
+    "text": "three months of costs is",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 11.3,
+    "text": "three months of costs is a",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 11.6,
+    "text": "three months of costs is a start.",
+    "full": "three months of costs is a start."
+   },
+   {
+    "t": 12.7,
+    "text": "start",
+    "full": "start small. start today."
+   },
+   {
+    "t": 13.0,
+    "text": "start small.",
+    "full": "start small. start today."
+   },
+   {
+    "t": 13.3,
+    "text": "start small. start",
+    "full": "start small. start today."
+   },
+   {
+    "t": 13.6,
+    "text": "start small. start today.",
+    "full": "start small. start today."
+   }
+  ]
+ },
+ "shots": [
+  {
+   "id": "S1",
+   "start": 0,
+   "dur": 3.0,
+   "elements": [
+    {
+     "id": "man",
+     "asset": "assets/char_stick_worried_shrug.png",
+     "x": 420,
+     "y": 930,
+     "layer": 1,
+     "enter": {
+      "preset": "slide_left",
+      "t": 0,
+      "dur": 0.35,
+      "dist": 600
+     },
+     "poses": [
+      {
+       "t": 2.0,
+       "asset": "assets/char_stick_neutral_shrug.png"
+      }
+     ]
+    },
+    {
+     "id": "q",
+     "asset": "assets/prop_qcircle.png",
+     "x": 760,
+     "y": 780,
+     "scale": 0.8,
+     "layer": 2,
+     "enter": {
+      "preset": "pop",
+      "t": 0.9,
+      "dur": 0.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "start": 3.0,
+   "dur": 3.0,
+   "elements": [
+    {
+     "id": "cost",
+     "type": "counter",
+     "from": 0,
+     "to": 1200,
+     "prefix": "$",
+     "size": 170,
+     "font": "comic_bold",
+     "color": [
+      200,
+      40,
+      45
+     ],
+     "x": 540,
+     "y": 900,
+     "layer": 1,
+     "t0": 0.2,
+     "dur": 0.9,
+     "enter": {
+      "preset": "pop",
+      "t": 0.2,
+      "dur": 0.2
+     }
+    },
+    {
+     "id": "arr",
+     "type": "arrow",
+     "len": 220,
+     "x": 540,
+     "y": 1130,
+     "layer": 1,
+     "t0": 1.3,
+     "dur": 0.4,
+     "enter": {
+      "preset": "cut",
+      "t": 1.3
+     }
+    },
+    {
+     "id": "lbl",
+     "type": "text",
+     "text": "repair bill",
+     "font": "hand",
+     "size": 70,
+     "x": 540,
+     "y": 720,
+     "layer": 1,
+     "enter": {
+      "preset": "fade",
+      "t": 0.1,
+      "dur": 0.3
+     }
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "start": 6.0,
+   "dur": 3.5,
+   "elements": [
+    {
+     "id": "ttl",
+     "type": "text",
+     "text": "saving grows",
+     "font": "hand",
+     "size": 72,
+     "x": 540,
+     "y": 700,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 0
+     }
+    },
+    {
+     "id": "bars",
+     "type": "bars",
+     "values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "w": 800,
+     "h": 420,
+     "colors": [
+      [
+       235,
+       190,
+       50
+      ],
+      [
+       235,
+       190,
+       50
+      ],
+      [
+       235,
+       190,
+       50
+      ],
+      [
+       235,
+       190,
+       50
+      ],
+      [
+       235,
+       190,
+       50
+      ],
+      [
+       80,
+       170,
+       90
+      ]
+     ],
+     "x": 540,
+     "y": 1000,
+     "t0": 0.3,
+     "dur": 0.6,
+     "stagger": 0.3,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 0
+     }
+    },
+    {
+     "id": "m1",
+     "type": "text",
+     "text": "month 1",
+     "font": "hand",
+     "size": 40,
+     "x": 210,
+     "y": 1260,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 0.4
+     }
+    },
+    {
+     "id": "m6",
+     "type": "text",
+     "text": "month 6",
+     "font": "hand",
+     "size": 40,
+     "x": 870,
+     "y": 1260,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 2.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "start": 9.5,
+   "dur": 3.0,
+   "elements": [
+    {
+     "id": "man",
+     "asset": "assets/char_stick_happy_down.png",
+     "x": 380,
+     "y": 930,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 0
+     },
+     "poses": [
+      {
+       "t": 1.2,
+       "asset": "assets/char_stick_happy_up.png"
+      }
+     ]
+    },
+    {
+     "id": "bag",
+     "asset": "assets/prop_moneybag_pair.png",
+     "x": 730,
+     "y": 1060,
+     "scale": 1.6,
+     "layer": 2,
+     "enter": {
+      "preset": "pop",
+      "t": 0.5,
+      "dur": 0.25
+     },
+     "keys": [
+      {
+       "t": 0.5,
+       "y": 1060
+      },
+      {
+       "t": 1.4,
+       "y": 1030,
+       "ease": "out"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S5",
+   "start": 12.5,
+   "dur": 2.0,
+   "elements": [
+    {
+     "id": "txt",
+     "type": "text",
+     "text": "start small",
+     "font": "hand",
+     "size": 120,
+     "x": 540,
+     "y": 800,
+     "layer": 1,
+     "enter": {
+      "preset": "cut",
+      "t": 0
+     }
+    },
+    {
+     "id": "usd",
+     "asset": "assets/prop_dollar.png",
+     "x": 540,
+     "y": 1050,
+     "scale": 1.1,
+     "layer": 1,
+     "enter": {
+      "preset": "pop",
+      "t": 0.5,
+      "dur": 0.25
+     }
+    }
+   ]
+  }
+ ]
+}

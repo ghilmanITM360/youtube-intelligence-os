@@ -1,0 +1,2 @@
+# EVIDENCE_SEQUENCES.csv: how to read it (2026-11-22)
+724 evidence-labelled visual states from 13 long-forms with the nearest later callout-family label (within 5 states). The `callout lag` is a **label-proximity** value, not a delay between a document appearing and a mark being drawn (it can span cuts and different documents, counts repeated source states, and skips callouts present on entry). It is retained unchanged as measurement evidence. Do not use it as a timing rule. For document-instance timing use `CLOSURE2/forensics/EVIDENCE_EVENTS.csv`.
