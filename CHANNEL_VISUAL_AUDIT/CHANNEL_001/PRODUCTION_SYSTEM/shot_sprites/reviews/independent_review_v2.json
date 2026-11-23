@@ -1,0 +1,64 @@
+{
+  "reviewer": "independent visual reviewer, round 2 (Claude subagent), 2026-11-21",
+  "method": "Decoded both MP4s (1660 frames each, 30fps, 1080x1920) to raw RGB with ffmpeg -fps_mode passthrough, indexed frames by decode order into /tmp/rv_review2. Built source|render side-by-side crops (y650-1290; y860-1060 strips; y1280-1440 captions) and inspected them visually. Measured per-frame change events (270x480 gray diffs), ink bboxes, teal bubble extents (f154-245), red-arrow left-edge x per frame (SH005 f366-440, SH017 f1047-1104), caption ink onset (f1040-1104) and colour histograms. Project numbers were not used.",
+  "shots": {
+    "SH003": {"verdict": "PARTIAL", "timing_ok": false, "defects": [
+      "Bubble appears at f154 in render vs f159 in source (5 frames early); the hold-frame cadence is also out of phase (source holds at 160/165/170..., render at 157/162/167...), so the extent is off by about 4px on alternate frames",
+      "At f229 the render bubble is about 12px shorter vertically (y718-1191 vs y712-1197)",
+      "dollar_bare: the two vertical bars meet at the top (x~515-540, y~845); in the source the left bar is separate and shorter. The S has no inner gap at lower left. White anti-alias specks on the outline at about (488,918) and (598,978)",
+      "Bubble highlights: the upper-left highlight is straighter and more vertical with visible seam ticks at about (458,768),(490,820),(352,950); the lower-right highlight is thinner",
+      "Burst f230: particle positions match, but the streaks are straight capsules (source streaks are curved, and the lower-right one hooks at about (705,1110)). The large droplet's highlight differs",
+      "Burst at f230 and clear at f243 are frame-exact"]},
+    "SH004": {"verdict": "PARTIAL", "timing_ok": false, "defects": [
+      "Slide-left hold cadence wrong: source holds at 306-307/311-312/316-317, render at 304-305/309-310/314-315, giving horizontal errors up to 20-25px at f305, f310 and f315",
+      "Man is about 6px low at the head top (y871 vs 865) and the body ends 6px short (y1257 vs 1263)",
+      "man_brown hair: smoother band, missing the source's top spike (about x345,y865 at f310) and the fringe dipping over the forehead; white speck on the hair outline at about (120,948 at f319)",
+      "Earth continents still differ: the upper-right ice cap is smaller, the right green continent is a broader block, and the left rim has a notch at about (488,950)",
+      "Earth ocean is about 50% more mid-blue area; the darkest navy (#10102f) shading and the thick black continent outlines are thinner or missing (dark-ink pixels 74k vs 80k)",
+      "Earth entry at f319 and sweat drop at f339 are frame-exact; the drop is slightly smaller (about 40x55 vs 45x65)"]},
+    "SH005": {"verdict": "FAIL", "timing_ok": false, "defects": [
+      "Year/June font still wrong: render uses a heavy bold rounded face (stroke ~14px), source a thin handwritten monoline (~7px) with an open 4 and a crossed 8. Obvious at playback scale",
+      "Scroll motion profile wrong: source moves in uniform 80px steps with holds (arrow x 71,151,151,230,310...), render uses uneven steps (181,181,261,301...). Errors up to 110px at f366 and 40-90px at f370 (2010 at x100 vs 60, arrow at x400 vs 310)",
+      "Step changes 1 frame late at 367->368, 372->373, 377->378, 382->383, 387->388 and so on; the landing step at f399 is short (600 vs 640)",
+      "Digits sit about 5px lower and are taller",
+      "Final hold from f405 matches the source position (arrow x190, calendar x135-260)"]},
+    "SH008": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["hips hair is still a solid dark slab with a flat top (x~555-670, y~765-800); source is a loose scribble of separate spiky strokes", "Body, face, arms and the arm change at f525 match within 2px"]},
+    "SH010": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair slab defect", "Change events at f634 and f636 match"]},
+    "SH012": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair slab defect", "The source changes at f720/721 are compression noise, not content"]},
+    "SH015": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair slab defect", "The source changes at f840/841 are compression noise"]},
+    "SH017": {"verdict": "PARTIAL", "timing_ok": false, "defects": [
+      "Same wrong bold year/June font as SH005",
+      "Scroll is linear 24px/frame; the source eases with a wobble (arrow x 177,147,118,118,111,82,53,22,22,17,21 vs render 166,142,118,118,94,70,46,22,22,0,8). Errors up to 17-23px at f1069, f1074 and f1079",
+      "Caption 'then' appears at f1048 in render vs f1049 in source (1 frame early); later words are frame-exact (1061,1065,1072,1078,1082,1089). The caption font is about 16% heavier (dark pixels 11.3k vs 9.6k)",
+      "Cut in at 1047 and out at 1105 are exact"]},
+    "SH018": {"verdict": "PARTIAL", "timing_ok": true, "defects": [
+      "Flame swaps at 1107/1115/1120/1125/1135/1145/1155 are frame-exact. Flame silhouettes now match closely (tongues within ~5px)",
+      "earth_A/B: the eye ovals are narrower (about 80px vs 100px wide, e.g. left eye x440-520 vs 430-530) and the spirals smaller",
+      "Ocean lacks the darkest navy shading and has thinner black outlines (dark ink 95k vs 127k px); MAD 16 across the shot"]}
+  },
+  "sprites": {
+    "hips_A_happy": {"verdict": "PARTIAL", "note": "body and face exact within 2px; hair is still a solid slab instead of a spiky scribble"},
+    "hips_A_neutral": {"verdict": "PARTIAL", "note": "same hair defect; mouth OK"},
+    "hips_B_happy": {"verdict": "PARTIAL", "note": "same hair defect; arm pose OK"},
+    "earth_A": {"verdict": "PARTIAL", "note": "SH018 eyes narrower with smaller spirals; darkest navy and outline weight missing"},
+    "earth_B": {"verdict": "PARTIAL", "note": "same as earth_A"},
+    "earth_sh004_A": {"verdict": "PARTIAL", "note": "continents improved but the upper-right ice and right green mass still differ; left-rim notch; thin outlines"},
+    "earth_sh004_B": {"verdict": "PARTIAL", "note": "same as A; sweat drop slightly small"},
+    "man_brown": {"verdict": "PARTIAL", "note": "head size now correct; hair top too smooth and missing the fringe; white speck; about 6px low or short"},
+    "calendar": {"verdict": "PASS", "note": "matches within ~3px; the June label uses the wrong bold font (text layer)"},
+    "arrow_left": {"verdict": "PASS", "note": "shape and colour match"},
+    "dollar_bare": {"verdict": "PARTIAL", "note": "bars merge at the top, S lacks the inner gap, white edge specks"},
+    "bubble_disc": {"verdict": "PARTIAL", "note": "disc OK; highlight shapes differ and show seam ticks"},
+    "burst_particles": {"verdict": "PARTIAL", "note": "positions match; streaks are straight not curved, and the droplet highlight differs"}
+  },
+  "fixes_verified": {
+    "a": {"verified": false, "note": "partly fixed: man's head size now matches (diameter ~157px), but SH004 Earth continents and outline weight still differ"},
+    "b": {"verified": false, "note": "NOT fixed: year/June font is still bold rounded, not thin handwritten"},
+    "c": {"verified": true, "note": "SH018 flame silhouettes now match closely"},
+    "d": {"verified": false, "note": "NOT fixed: hips hair is still a solid slab"},
+    "e": {"verified": true, "note": "cuts at 154, 254, 366, 511, 631, 707, 825, 1047, 1105 and 1160 are all on the same frame in both"},
+    "f": {"verified": true, "note": "mostly fixed: words land frame-exact except 'then' 1 frame early (1048 vs 1049)"},
+    "g": {"verified": true, "note": "SH003 has no change 250-253 in either video; the burst clears at f243 in both"}
+  },
+  "overall": "PARTIAL - not GO. Cuts, flame swaps, burst and most event timing are correct. SH005 fails on font and scroll motion; the hips hair and font fixes were not achieved; the SH003 bubble onset is 5 frames early; and the SH004 and SH017 motion cadences deviate by up to 20-25px."
+}

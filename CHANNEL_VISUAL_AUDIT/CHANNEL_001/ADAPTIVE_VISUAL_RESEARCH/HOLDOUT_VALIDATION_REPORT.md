@@ -1,0 +1,21 @@
+# H01 segment holdout
+
+Rules and case selection were frozen before frame extraction in holdout_freeze.md. SHA-256 is recorded in holdout_freeze.sha256. Video SHA-256 3cc2f053a9680e26351de1c85471344bb29ebffe86070f1aa090836c94789. The 23 samples at five-second spacing cover only this opening segment. Contact sheet credit-holdout.jpg. Source is outside the historical 20. Prior exposure beyond indexed roster/identity references is unknown.
+
+1. Partial support. At 20 s the CNBC masthead and headline appear together with a pointing host. At 30 s WSJ masthead and headline are legible. The chart at the opening and again around 25 s has a visible headline but its attribution is hard to read at review scale. Later chart examples around 95–100 s carry Bloomberg marks. Source identity can be legible on one asset and weak on the next even inside one story.
+2. Support with exceptions. At 25 s highlighted chart succeeds CNBC headline. At 35 s the iceberg replaces a WSJ headline, exemplifying a distinct metaphorical beat. Chart returns around 80–85 s with an integrated pointer and yellow text. Around 110 s flags organize multiple charts on canvas. Distinct explainer layer and distinct next shot both appear. An iceberg conveys hidden scale but does not explain why rates changed.
+3. Unscored. No historical portrait-to-body attachment established by sampled frames.
+4. Partial. Maps with cups and facial expressions at 90 s convey humorous comparison. Around 95–110 s actual charts carry the visible cross-country rate comparison. At this sampling rate and without speech review a cause-and-effect explanation remains unverified.
+
+This is a preliminary grouped-out segment test and preserves the frozen rules. No success claim for publication, independent coding or unseen-source saturation. For a second sealed source choose a contrasting historical or technical explainer with verified identity and no reviewed frames, then inspect the critical evidence passage at native frame timing.
+
+## Unseen-source checks after B02
+
+H02 and H03 are scored in [B04–B07 development and holdouts](B04_B07_STORYTELLING_AND_HOLDOUT.md). HXlcMbxzz0U and IcxhABuHITM are source-level holdouts within the searched channel records. The YEhsWyY_WKQ overlap with H01 is excluded from the independent-source count.
+
+H04 was selected after B05 and inspected under [FINAL_RULE_FREEZE](FINAL_RULE_FREEZE.md). Both entered at 110 s with 12 structural samples three seconds apart. No prior inspection of these particular windows was found in the channel research artifacts consulted. No second blind coder.
+
+- **2J2Fb1bBufA.** Historical icon scale and the rounded $750 billion comparison threshold give way to four mini charts estimating separately titled AI spending of $725 billion for 2026. The infographic remains visible beside progressive editorial comparisons of $83 million an hour and $23,000 a second. Using 365 days, $725 billion / 8,760 hours is approximately $82.8 million per hour and $725 billion / 31,536,000 seconds is approximately $23,000 per second. The displayed rates are consistent with that estimate. The nearby $750 billion is not the basis. For an original, explicitly label the rates as an even-time equivalent of forecast annual spending. Keep the populated groups and source distinct from a realized spend claim. A separate quote card credits Twain. Image review cannot establish authorship. This check confirms arithmetic and role separation, with source-verification and qualifier limitations.
+- **DgbHW0IqHrI.** Thirty-year markers, icons and authored board terms lead into plotted series, then anthropomorphized maps and a CNBC headline. The headline reports a 30-year Treasury yield. The rate icon and bond prop enter beside the headline, confirming co-present explanation. The two plotted series use different scales, so their line heights should not be compared across panels. An explicit common-basis ratio and photographic composite were absent and untested here.
+
+Neither final window exposed a new unresolved production-rule gap. The explicit arrow/market-cap/return failure remains grounded in B05. H04 exercises conversion and juxtaposition, not an additional independent instance of that exact failure. H02–H04 validate editorial grammar in selected windows. They provide no statistical estimate of channel-wide adherence.

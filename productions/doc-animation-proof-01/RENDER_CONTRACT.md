@@ -1,0 +1,21 @@
+# Reviewed render input contract
+
+Long-form proof entry point: `build_proof.py`. Use the worktree root. The existing proof under `out/` is historical. New builds default to `out_verified/`. Use a separate output directory for each verification.
+
+```sh
+python3 productions/doc-animation-proof-01/build_proof.py --check
+python3 productions/doc-animation-proof-01/build_proof.py --still 2,8.6,21,30.5,35,45.8,51,58 --output-dir /path/to/new-proof-check
+python3 -m unittest discover -s CHANNEL_VISUAL_AUDIT/CHANNEL_001/CLOSURE2/tests -q
+```
+
+Restore the [hash-pinned external capture](../../CHANNEL_VISUAL_AUDIT/CHANNEL_001/CURRENT_STATUS_AND_MEDIA.md#external-inputs) before running these commands. Use a Python environment with Pillow and NumPy for the tests. The renderer uses the adjacent V1 tools, the rig with anchors, and the bundled licensed Caveat Brush and Atkinson Hyperlegible fonts. FFmpeg on PATH is required for MP4 output. The standalone gate CLI runs the earlier storyboard contract. Use the build's `--check` for the actual render contract.
+
+## Authoring and independent review
+
+1. Verify claims against exact primary passages. Record claim ID, status, source ID, locator, excerpt, time window, units, basis, required qualifiers and any calculated values. Record capture SHA-256, identity and actual reuse basis. The register's source and claim entries are the authority reviewed separately from the plan.
+2. Resolve on-screen text, graphics geometry, audio cue intent and scene timing to one `render_plan.json`. Each scene has `id`, `start`, `end`, `description`, `narration` and ordered `items`. Each item declares `op`, `args`, `kwargs` and `claim_ids`. Use an empty claim list for reviewed non-factual elements such as the presenter or introductory question. Keep the hypothetical label on screen starting at the scene boundary. Treat numerical geometry as part of a claim, including scales, bars and comparison marks. The `planned_clauses` array is proposed timing, with no audio certification.
+3. For the document operation, use `doc_spec.json` and the [document schema](../new-original-video-v1-rent-01/tools/doc_scene_schema.md). Check actual pixels for passage and context, compare the marked rectangle or arrow with the exact source locator and confirm version and attribution. Keep capture, crop plan and annotations together as one reviewed document. For a qualification authored in the source, bind its actual annotation in `qualification_marks`. In this proof C2 uses E3 and the original printed compounding-frequency row. Check contextual crop readability from entry through exit.
+4. Independently review the final resolved arguments, the specific evidence capture and its crop context, and the scene timing before updating `claims.json:render_approval`. Use `claim_gate.payload_digest(value)` for canonical JSON digests. The record includes the source ID and source digest, claim digests by ID, annotation digests with exact locators, full document digest, ordered scene header digests (scene without items), per-item digests, planned-clauses digest, and full plan digest. The proof build has no command to approve its own proposed changes. Approval records are trusted review artifacts. Mutating both instructions and their approvals is a new review, with the same obligation to verify source and meaning. Write who reviewed changes and the scope of the review.
+5. Run the normal build with `--check` and then a bounded still or short proof in a new directory. The backend consumes the authorized arguments and the exact capture bytes saved in a private staging directory. Review the real output at full resolution and on a phone. For a new episode, use the same validation pattern in its actual render path. Other V1 render entry points retain their legacy behavior.
+
+The current adapter accepts the proof's supported operations and one document spec/capture. An episode that requires a new backend operation, multiple independent documents, or a separate final voice asset needs its own enforced binding and tests. Qualification validation in this adapter covers reviewed printed document marks and exact planned copy. Loudness, legibility at all times, final spoken wording, eligibility to publish, and accuracy of claims made by an authentic source require independent review.

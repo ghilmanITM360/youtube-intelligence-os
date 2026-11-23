@@ -1,0 +1,68 @@
+{
+  "reviewer": "independent visual reviewer (Claude subagent), 2026-11-21; did not author assets",
+  "method": "ffmpeg -fps_mode passthrough extraction of frames 150-1160 from SOURCE and RENDER into /tmp/rv_review (frame index = filename number); side-by-side crops y650-1290 (y860-1060 for SH005/SH017) inspected visually with Read; per-frame change counts (pixels with max-channel delta >40) to locate change events in each video; column-profile cross-correlation for SH005/SH017 strip x-offset; pixel sampling of background.",
+  "global_defects": [
+    "Background colour mismatch on every frame: source RGB(253,253,253), render RGB(251,251,251)",
+    "Sprite PNGs are 137-290 px and upscaled in render: softer edges and visible hairline outline seams (e.g. dollar sign right bowl x~595,y~980; man_brown hair outline breaks)",
+    "Motion-cadence phase differs: in every moving span the source holds a duplicate frame at n mod 5 == 2 while the render holds at n mod 5 == 0 (e.g. src static 162/167/172, render static 160/165/170), so in-between positions differ frame-by-frame"
+  ],
+  "shots": {
+    "SH003": {"verdict": "PARTIAL", "timing_ok": false, "defects": [
+      "Burst cut-in 1 frame late: source shows particles at f230, render f230 shows bare dollar only, particles appear f231",
+      "Burst clears 1 frame late: source f243, render f244",
+      "Bubble is a perfect circle with uniform fill; source bubble edge is hand-wobbled/slightly oval (f229, ~490px wide centred x~540,y~955)",
+      "Bubble highlight strokes thinner/tapered differently; lower-right highlight shorter (f229 x~600-720,y~1000-1130)",
+      "Burst droplets are straight capsules; source droplets have curved hooked tails (f235 lower-right streak x~640-710,y~1050-1115) and twin-dot highlights on spheres vs single dot in render",
+      "Bubble growth cadence phase-shifted by 1 frame (see global)"
+    ]},
+    "SH004": {"verdict": "FAIL", "timing_ok": true, "defects": [
+      "Earth redraw does not match source: continent layout differs (source large white polar cap across top x~520-900,y~750-930 and big white Antarctica band; render has small caps, much more dark-blue ocean on right x~850-920)",
+      "Earth face: source eyes larger and higher (x~640-775,y~920-1010); mouth/white swoosh shapes differ",
+      "man_brown: head ~10% smaller with smooth cap hair; source hair is ragged with fringe hanging over left of face (x~120-330,y~870-1000); outline gaps at hair left edge",
+      "Man slide (f303-318) lags source by up to ~30px at f310 due to cadence/easing mismatch",
+      "Earth cut-in f319 and sweat-drop swap f339 match source (timing events OK)"
+    ]},
+    "SH005": {"verdict": "FAIL", "timing_ok": false, "defects": [
+      "Year text uses a typed comic-style font (heavier, rounder, serifed 1s); source digits are thin hand-lettered strokes (crooked 8, open 1s)",
+      "Scroll positions diverge during f366-398 by up to ~50-80px (f370: source '2010' starts x~60, render x~110)",
+      "Calendar cut-in 1 frame late: source f405, render f406",
+      "Calendar outline cleaner/thicker than source's wobbly hand line; 'June' label font differs",
+      "Rest position f406-439 aligned (0px)"
+    ]},
+    "SH008": {"verdict": "PARTIAL", "timing_ok": true, "defects": [
+      "Hair is a solid smooth black cap; source hair is a scribbled spiky tuft extending further left/up (x~460-595,y~765-820)",
+      "Otherwise body, face, arms, legs, placement match within ~3px"
+    ]},
+    "SH010": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair-block defect as SH008 (x~460-595,y~765-820)", "Body/arms match"]},
+    "SH012": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair-block defect", "Neutral mouth line matches"]},
+    "SH015": {"verdict": "PARTIAL", "timing_ok": true, "defects": ["Same hair-block defect", "Pose and placement match"]},
+    "SH017": {"verdict": "FAIL", "timing_ok": false, "defects": [
+      "Caption swap 13 frames late: source changes caption to 'then' at f1048, render still shows previous two-line caption until f1061 (y~1295-1410)",
+      "Same typed-font defect as SH005 for years",
+      "Scroll offset vs source oscillates -16..+7px during f1065-1086, and rest position f1089-1104 is ~7px off",
+      "Render has an extra strip change at f1087 (source static)"
+    ]},
+    "SH018": {"verdict": "PARTIAL", "timing_ok": true, "defects": [
+      "Top-right flame is a notched U/heart blob with a hole; source flame is a smooth curling teardrop (x~650-980,y~650-930)",
+      "Bottom-left flames: different tongue count/shape, yellow inner flame lower and narrower; dark seam lines between orange and yellow layers",
+      "Earth continents shifted/redrawn (more dark blue on right, green Africa narrower), spiral eyes tighter",
+      "A/B state swaps at f1115/1125/1135/1145/1155 match source exactly"
+    ]}
+  },
+  "sprites": {
+    "hips_A_happy": {"verdict": "PARTIAL", "note": "Body/face accurate; hair is a solid block instead of scribbled spiky tuft"},
+    "hips_A_neutral": {"verdict": "PARTIAL", "note": "Same hair defect; mouth OK"},
+    "hips_B_happy": {"verdict": "PARTIAL", "note": "Same hair defect; arm pose matches"},
+    "earth_A": {"verdict": "PARTIAL", "note": "Flame shapes wrong (notched top-right blob), layer seams, continents off"},
+    "earth_B": {"verdict": "PARTIAL", "note": "Same issues as earth_A; alternation correct"},
+    "earth_sh004_A": {"verdict": "FAIL", "note": "Continent layout and face proportions clearly differ from source"},
+    "earth_sh004_B": {"verdict": "FAIL", "note": "Same as A; sweat drop itself close in colour/position"},
+    "man_brown": {"verdict": "FAIL", "note": "Hair shape/texture wrong (smooth cap, no ragged fringe), head undersized, outline gaps"},
+    "calendar": {"verdict": "PARTIAL", "note": "Correct layout/colours; line too clean/even vs hand-drawn wobble"},
+    "arrow_left": {"verdict": "PASS", "note": "Shape and red colour match at playback scale"},
+    "dollar_bare": {"verdict": "PARTIAL", "note": "Close; minor stem spacing difference and hairline outline seams"},
+    "bubble_disc": {"verdict": "PARTIAL", "note": "Perfect circle and different highlight strokes vs wobbly source bubble"},
+    "burst_particles": {"verdict": "PARTIAL", "note": "Positions match; droplets straight capsules, highlights single-dot instead of twin"}
+  },
+  "overall": "Not a faithful playback-scale reproduction yet: 0 PASS, 6 PARTIAL (SH003, SH008, SH010, SH012, SH015, SH018), 3 FAIL (SH004, SH005, SH017). Placement is mostly right and SH004/SH018 event timing is exact, but there are 1-frame event slips (SH003 burst, SH005 calendar), a 13-frame caption slip in SH017, a typed font replacing hand-lettered years, wrong redraws of the SH004 Earth and man_brown, wrong flame shapes, a block-hair hips man, and a global background of 251 vs 253."
+}

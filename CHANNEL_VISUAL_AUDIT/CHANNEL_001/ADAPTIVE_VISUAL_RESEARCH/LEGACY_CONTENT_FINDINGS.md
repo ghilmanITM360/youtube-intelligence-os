@@ -1,0 +1,7 @@
+# Legacy content reconciliation checkpoint
+
+All 124 registered receipt hashes were rechecked. The content audit parsed manifests, paired visual-state tables, gate summaries and timed Shorts ASR segments. Nineteen source IDs have visual-state tables linked by source SHA-256 to the 216-file inventory. Seventeen overlap the inherited gated group. Uumnx2Fo6cE and o3FQcd91MIs extend the usable visual union with distinct legacy depth. The twentieth source, gG239LrksH4, has an identity manifest in this register but no corresponding state table. The two CSV spellings per source add no state rows. The 38 historical ASR receipts provide navigation cues only. Consult LEGACY_CONTENT_RECONCILIATION.csv for the gate fields and overlap checks.
+
+Uumnx2Fo6cE has 507 states, measured frame coverage and historical visual-only CT acceptance with stated blind spots. Small typography was often uncertain and audio was provisional. o3FQcd91MIs has 76 states and a verified native subset with gaps and provisional narration. Its historical motion and design analysis can seed purposeful queries while its current partial tier remains informative. Physical tiers remain 17 gated, 11 partial and 188 coarse under the inherited contract. Do not add receipts, mirrored tables or ASR to the gated count.
+
+Open work includes the archival Video006 semantic comparison, independent native replay across additional legacy cases and resolution of 37 physical files without a joined ID. An unmatched title alone cannot establish identity.

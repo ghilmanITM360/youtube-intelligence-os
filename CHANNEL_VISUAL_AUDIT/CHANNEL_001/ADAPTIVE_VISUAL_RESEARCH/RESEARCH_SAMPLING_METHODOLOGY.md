@@ -1,0 +1,27 @@
+# Adaptive visual production research
+
+The sampling frame is the established inventory of 216 physical MP4 files and 215 byte hashes. Keep physical rows for recovery and deduplicate by hash for sampling. Group separately by public video ID where it is verified, since distinct encodes and excerpted Shorts can otherwise leak across development and validation. Reserve both complete source groups and declared ranges in known videos. A prior contact sheet makes a source exposed even when exact later windows are available for an explicitly labeled segment test.
+
+## Units and case selection
+
+Use source as the selection and resampling unit, editorial sequence as the story unit and native PTS/frame as the boundary unit. A sequence begins at the editorial setup of a proposition and ends after the explanation or counterpoint. It may include multiple shots. Code format, verified publication time, duration and text-derived topic at source level. Stratify by era, format and topic, then seek variation in portrait treatments, documents, charts, mechanism, historical imagery, scene density and editing. Motion profiles assist triage and measure screen changes only. Keep missing visual labels unknown until observed. Rare but consequential cases such as quote interpretation get purposive priority before exploring another routine repeated case.
+
+Review incumbent evidence first, including source bytes, real manifests, state ledgers and native frame receipts. Select contrasting likely cases per unresolved question, then deliberately look for a negative case. Record whether a batch produces a new class, a new conditional rule within a known class, a counterexample only, a revised measured range, or simply an additional occurrence. Preserve first/latest case IDs. Each meaning-level code should tell an editor when to use a technique, what role it plays, when to choose a different treatment, what assets and timing it needs, and what makes the result misleading. A visual named without these fields is code coverage only.
+
+## Validation and stopping evidence
+
+Freeze rules before holdout viewing. Score held-out decisions for source and claim mapping, interpretation, composition, event separability and timing, originality, and QA. Record failures and missing opportunities separately. Reclassify a failed holdout as development evidence if used to revise the rules and draw replacement holdouts. Blind second coder where possible. Use pre-agreed frame tolerance and adjudicate disagreements. Report raw denominators and disagreements, agreement on common labels, and chance-adjusted agreement where there are enough positives. A one-coder visual review is reproducible inspection but does not establish inter-coder reliability.
+
+Track per-video distributions and grouped uncertainty for suitable measurements. Compare median/range and important tails between successive purposeful batches as a sensitivity check. Changes that would alter a production decision matter even if the pooled median holds. For channel-wide prevalence, use a separately designed probability sample or census with explicit denominators, weights and missingness. Purposive incidence supports existence and variation. It does not support prevalence.
+
+Close only when key design families have operational rules and negative cases, contrasting subsequent batches add no material change, sealed holdouts support the rules, and a fresh AI can select, explain and specify original scenes without previous conversations. Evaluate text planning, rendered behavior and publishability independently. Mandatory QA failures include unverified source meaning, missing denominator/date, unlabeled hypothetical or parody, unreadable source crop, wrong mark registration and claim checks that protect a sidecar instead of the rendered input.
+
+## Sources checked on 2026-11-22
+
+- Malterud et al. motivate adjusting effort to specificity and richness of the evidence. Interview dialogue quality does not provide a video sample-size formula. [Information power](https://pubmed.ncbi.nlm.nih.gov/26613970/)
+- Hennink et al. distinguish discovering new categories from understanding their meanings. Their interview counts have no direct application here. [Code and meaning saturation](https://journals.sagepub.com/doi/full/10.1177/1049732316665344)
+- Wutich et al. review different analytic designs and empirical sample-size evidence. Different designs justify different stopping evidence. [Integrative review](https://doi.org/10.1177/16094069241296206)
+- Palinkas et al. discuss maximum variation, purposeful case selection and disconfirming cases. Those methods inform technique discovery. [Purposeful sampling](https://pmc.ncbi.nlm.nih.gov/articles/PMC4012002/)
+- Mayring supplies a rule-guided coding and revision framework. For video, use explicit time units, separate visible events from interpretations and retain observed contradictions. [Qualitative content analysis](https://qualitative-content-analysis.org/wp-content/uploads/Mayring2014QualitativeContentAnalysis.pdf)
+- Krippendorff addresses structured disagreements between observers. Separate boundary disagreement from semantic disagreement. [Reliability in nominal data](https://doi.org/10.1080/19312450802467134)
+- GroupKFold documents group-separated evaluation. We apply the leakage principle to video/source families and are performing a qualitative test rather than training a classifier. [GroupKFold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GroupKFold.html)

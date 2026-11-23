@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-22T05:52:30+00:00",
+  "script": "productions/doc-animation-proof-01/PROOF_SCRIPT.md",
+  "sha256": "b2b1d4e3f7d05387d9bb4b6cff0a5f40860ef7ed8b6580dc7a0538967b4fb9cb",
+  "title": "Does interest earn interest? (document-animation proof, 60 s)",
+  "channel": "Casual Finance method proof (internal capability test, not a channel upload)",
+  "project": "doc-animation-proof-01",
+  "verdict": "PASS",
+  "delivery_blocked": false,
+  "findings": [],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

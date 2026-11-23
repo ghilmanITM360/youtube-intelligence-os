@@ -1,0 +1,11 @@
+# Casually Finance read-only discovery checkpoint
+
+The canonical checkout and channel worktree share the Git common directory `~/workprojects/youtube-intelligence-os/.git`. The main checkout is on `research/new-finance-channel-2026-11-18` at `72afd88f4f39af40df0fddfe17e323f57e716d17`. The existing channel worktree is on `visual-audit/casual-finance` at `b8b836e6ffa8b0a9fe385502beb592486d7666a5`. Both have existing workspace changes. The thread preservation rules make this chat read-only toward research sources and preserve the separately owned forensic branch. No branch or checkout was changed.
+
+The explicit original cohort is the first 15 milestone entries plus five named additions, in the historical handoff order. The historical ledger records 19 entries. The fifth addition, gG239LrksH4, is partial in the current matrix. The historical program and the current matrix have different completion criteria.
+
+Two direct mismatches matter for integration. o3FQcd91MIs appears in the historical ledger but is partial in the current matrix. Uumnx2Fo6cE matches the current idless coarse housing-crisis file by exact source SHA. The October 24 workspace preserves the 507-state ledger, boundary and motion records, design DNA and a quality gate. Reconcile the missing identity link and compare gate contracts before changing canonical counts. Neither mismatch changes the historical target cohort.
+
+Candidate legacy evidence includes the 19-video local asset-library manifest, the YIOS Archive comparison describing earlier separate checkpoints, the November 5 registry and navigation validation records, and the exact 38-folder Shorts evidence location `~/workprojects/yio-cf-editing-forensics-local-evidence`. The Shorts folder complements the historical handoff, which expressly excluded that batch from the 20-video campaign. Its correspondence with Machine B media remains unverified. These are leads and input checksums. The full eleven-location artifact register and visual event review remain pending.
+
+The prior final delta blockers remain open. The real proof preflight needs to bind actual rendered claim and annotation inputs. The live playbook needs the ellipse, unsupported framing and stale renderer guidance corrected. The existing proof and V1 Rent were untouched.

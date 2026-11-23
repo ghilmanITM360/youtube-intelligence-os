@@ -1,0 +1,291 @@
+{
+ "_doc": "Canonical asset families, variants, kinds and rig anchors. Staging filenames drop a trailing _draft; aliases map staging names to canonical IDs.",
+ "poses": [
+  "shrug",
+  "down",
+  "up",
+  "point",
+  "hips"
+ ],
+ "rig_canvas": [
+  2048,
+  2048
+ ],
+ "rig_anchors": {
+  "neck": [
+   1024,
+   0
+  ],
+  "shoulder": [
+   1024,
+   168
+  ],
+  "hip": [
+   1024,
+   1032
+  ]
+ },
+ "anchor_tol": 48,
+ "ignore_prefixes": [
+  "composite_",
+  "qcircle_playback"
+ ],
+ "families": {
+  "char_master_sheet": {
+   "kind": "illustration",
+   "inventory": "char_master_sheet"
+  },
+  "char_head": {
+   "kind": "head",
+   "variants": [
+    "neutral",
+    "worried",
+    "happy",
+    "shocked",
+    "sweat"
+   ],
+   "inventory": "char_stick_faces_5",
+   "canvas": [
+    1024,
+    1024
+   ],
+   "neck": [
+    521,
+    887
+   ]
+  },
+  "char_body": {
+   "kind": "illustration",
+   "variants": [
+    "shrug",
+    "down",
+    "up",
+    "point",
+    "hips"
+   ],
+   "inventory": "char_stick_arms_5",
+   "neck_band": 80,
+   "kind_v2": "rig_body"
+  },
+  "rig_torso": {
+   "kind": "rig_torso",
+   "inventory": "char_stick_arms_5",
+   "neck_band": 80
+  },
+  "rig_legs": {
+   "kind": "rig_legs",
+   "inventory": "char_stick_arms_5"
+  },
+  "rig_arm_left": {
+   "kind": "rig_arm",
+   "side": "left",
+   "variants": [
+    "shrug",
+    "down",
+    "up",
+    "point",
+    "hips"
+   ],
+   "inventory": "char_stick_arms_5"
+  },
+  "rig_arm_right": {
+   "kind": "rig_arm",
+   "side": "right",
+   "variants": [
+    "shrug",
+    "down",
+    "up",
+    "point",
+    "hips"
+   ],
+   "inventory": "char_stick_arms_5"
+  },
+  "prop_chart_screen": {
+   "kind": "illustration",
+   "inventory": "prop_chart_screen"
+  },
+  "prop_moneybag_pair": {
+   "kind": "illustration",
+   "inventory": "prop_moneybag_pair"
+  },
+  "prop_qcircle": {
+   "kind": "illustration",
+   "inventory": "prop_qcircle"
+  },
+  "prop_dollar_sign": {
+   "kind": "illustration",
+   "inventory": "prop_dollar_sign"
+  },
+  "prop_earth_body": {
+   "kind": "earth_body",
+   "inventory": "prop_earth_cartoon",
+   "canvas": [
+    2048,
+    2048
+   ]
+  },
+  "prop_earth_face": {
+   "kind": "earth_face",
+   "variants": [
+    "neutral",
+    "sweat"
+   ],
+   "inventory": "prop_earth_cartoon",
+   "canvas": [
+    2048,
+    2048
+   ]
+  },
+  "prop_earth_flames": {
+   "kind": "earth_flames",
+   "inventory": "prop_earth_cartoon",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "_doc": "v1: combined flames at globe lower edge. v2: union of left+right side flames (compat file)."
+  },
+  "prop_earth_flame_left": {
+   "kind": "earth_flame_side",
+   "side": "left",
+   "inventory": "prop_earth_cartoon",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "min_contract": "v2"
+  },
+  "prop_earth_flame_right": {
+   "kind": "earth_flame_side",
+   "side": "right",
+   "inventory": "prop_earth_cartoon",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "min_contract": "v2"
+  }
+ },
+ "aliases": {
+  "earth_body": "prop_earth_body",
+  "earth_face_neutral": "prop_earth_face_neutral",
+  "earth_face_sweat": "prop_earth_face_sweat",
+  "earth_flames": "prop_earth_flames"
+ },
+ "kinds": {
+  "illustration": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "head": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "rig_arm": {
+   "min_opaque_px": 800
+  },
+  "rig_torso": {
+   "min_opaque_px": 800
+  },
+  "rig_legs": {
+   "min_opaque_px": 800
+  },
+  "earth_body": {
+   "min_bbox_frac": 0.2,
+   "min_opaque_px": 2000
+  },
+  "earth_face": {
+   "min_opaque_px": 800
+  },
+  "earth_flames": {
+   "min_opaque_px": 800
+  },
+  "rig_body": {
+   "min_opaque_px": 2000,
+   "min_height_frac": 0.5
+  },
+  "earth_flame_side": {
+   "min_opaque_px": 800
+  }
+ },
+ "rig_versions": {
+  "v1": {
+   "_doc": "legacy draft rig (2026-11-20 staging): neck at canvas top",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     0
+    ],
+    "shoulder": [
+     1024,
+     168
+    ],
+    "hip": [
+     1024,
+     1032
+    ]
+   },
+   "anchor_tol": 48
+  },
+  "v2": {
+   "_doc": "correction rig (2026-11-21): body scaled 0.8, shifted down 320px; anchors measured from rig_torso top (y=320), arm roots (y~437-454), legs top (y=1145)",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     320
+    ],
+    "shoulder": [
+     1024,
+     454
+    ],
+    "hip": [
+     1024,
+     1146
+    ]
+   },
+   "anchor_tol": 48
+  },
+  "v3": {
+   "_doc": "measured contract (2026-11-21): same neck/hip anchors as v2 (v2 legs/heads stay usable) but shoulder moved to 29% of torso (measured on 12 frames of SH008/010/012/015 and cross-checked on SH004 at identical head height). Legs: source legs are short and splayed (54 src px = ~258 canvas) vs v2's 601. See rig_measurements/hips_landmarks.json",
+   "canvas": [
+    2048,
+    2048
+   ],
+   "anchors": {
+    "neck": [
+     1024,
+     320
+    ],
+    "shoulder": [
+     1024,
+     559
+    ],
+    "hip": [
+     1024,
+     1146
+    ]
+   },
+   "anchor_tol": 48,
+   "legs_min_h": 200,
+   "legs_max_h": 340,
+   "pose_rules": {
+    "hips": {
+     "hand_y_frac": [
+      0.47,
+      0.62
+     ]
+    }
+   },
+   "head_scale": 1.205
+  }
+ },
+ "default_contract": "v1"
+}

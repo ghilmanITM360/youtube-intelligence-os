@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-21T05:09:13+00:00",
+  "script": "productions/new-original-video-v1-rent-01/V1_RENT_TAKE2_RECORDED_SCRIPT.md",
+  "sha256": "7a7cadef1c2b981be916279753b7f15d309aaab0ce4957610e2263a8e0b52efa",
+  "title": "V1 Rent take 2 as recorded: Why Is Rent So High? (Prices Each Home Every Six Months, recorded narration)",
+  "channel": "BEENOMICS (owner-chosen name, unverified availability)",
+  "project": "new-original-video-v1-rent-01",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R1",
+      "level": "WARN",
+      "detail": "script too short for a reliable copy check (6 5-grams)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no image files found at ['/Users/ghilmankhan/workprojects/visual-audit-worktrees/casually-finance/none']"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}
