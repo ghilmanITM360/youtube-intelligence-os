@@ -2,7 +2,7 @@ V = dict(
 slot="01", day=1, fmt="Long", band="calendar band 3–5 min", folder="01_higher_fall_long",
 title="Falling From 100 km vs 1 km: Which One Hits the Ground Faster?",
 status="DRAFT_WITH_OPEN_SCIENCE",
-runtime_note="Both numbers sit inside the owner's 3–5 minute band; v1 gave two different runtimes (4:45 in the header, 3.5–4 min in the length note): V2 states one range.",
+runtime_note="The range 4:41–5:06 sits at the top edge of the owner's 3–5 minute band and is slightly over it at the calmer rate; v1 gave two different runtimes (4:45 and 3.5–4 min). Trimming the posture sentence in paragraph 14 or the recap in paragraph 12 would bring it inside the band.",
 checks=["Drag coefficient and its change from subsonic to Mach ~3 (aerodynamicist)", "Air density above 86 km (recalled table, not re-read from the standard)", "Heating omitted: confirm it does not change arrival speed", "Head-down posture treated only as a rough bound", "Compare with owner-approved Day 1 v3 before any release choice"],
 sources_note="Model: `work/models/fall_model.py` (copied from the v1 package; 1-D vertical fall, quadratic drag, constant drag area over mass, RK4). Baumgartner/Eustace figures: see ledger.",
 script=[

@@ -10,7 +10,7 @@ images: none (no images or media were created or stored)
 - **Calendar slot / day / format:** slot 01 · day 1 · Long (calendar band 3–5 min)
 - **Version:** V2 (2026-11-24). Replaces nothing silently: the v1 text is preserved in `../../v1_baseline/`.
 - **Word count (spoken text only, counted by script):** 706
-- **Estimated runtime:** 4:41–5:06 (planning rate 2.5–2.75 words/second plus 1.5 s per paragraph break). **An estimate only: it must be confirmed by recording and listening.** Both numbers sit inside the owner's 3–5 minute band; v1 gave two different runtimes (4:45 in the header, 3.5–4 min in the length note): V2 states one range.
+- **Estimated runtime:** 4:41–5:06 (planning rate 2.5–2.75 words/second plus 1.5 s per paragraph break). **An estimate only: it must be confirmed by recording and listening.** The range 4:41–5:06 sits at the top edge of the owner's 3–5 minute band and is slightly over it at the calmer rate; v1 gave two different runtimes (4:45 and 3.5–4 min). Trimming the posture sentence in paragraph 14 or the recap in paragraph 12 would bring it inside the band.
 - **Status:** DRAFT_WITH_OPEN_SCIENCE. Claude self-review only: no expert, human-listener or independent review has happened.
 - **Required science checks before any release:** Drag coefficient and its change from subsonic to Mach ~3 (aerodynamicist); Air density above 86 km (recalled table, not re-read from the standard); Heating omitted: confirm it does not change arrival speed; Head-down posture treated only as a rough bound; Compare with owner-approved Day 1 v3 before any release choice
 
