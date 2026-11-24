@@ -1,0 +1,18 @@
+{
+  "schema": "what_if_original_asset_contract_v0.1",
+  "status": "DRAFT, self-reviewed, never used in a production",
+  "rights_rule": "All assets are ORIGINAL. Reference frames are cited by video_id + timestamp for analysis only; no reference artwork, script or audio is copied, traced or re-skinned.",
+  "asset": {
+    "asset_id": "OA-<nnn> (stable across Codex and Claude)",
+    "category": "character | prop | environment | diagram | label | scientific_marker | effect | map",
+    "layers": [{"layer_id": "string", "role": "fill|line|shadow|occluder|label|marker", "z": "int", "editable": true}],
+    "anchors": [{"name": "string", "x": "0-1", "y": "0-1", "use": "pivot|attach|measure"}],
+    "canvas": {"aspect": "16:9 or 9:16", "safe_area": "share of frame kept free of essential content", "native_size": "px"},
+    "style_parameters": {"stroke_px_at_1080_short_side": "number (observed reference 4.5 to 8)", "palette": ["hex"], "accent": "single repeated accent colour"},
+    "science": {"quantity": "string", "units": "string", "equation": "string", "assumptions": ["string"], "to_scale": "yes | schematic | partly", "scale_note": "string", "source_ids": ["string"], "check_status": "VERIFIED | CONSISTENT_WITH_CAVEAT | NOT_VERIFIED"},
+    "motion": {"method": "static | 2d_vector | layered_2.5d | 3d | simulation | animated_equation | scale_comparison | character", "anchors_used": ["string"], "procedural": ["string"], "duration_s": "number", "easing": "string"},
+    "evidence": {"observed_reference": "video_id@t_s (analysis only)", "reference_is_copy": false, "original_recommendation": "string"},
+    "qa": {"asset_qa": "UNREVIEWED", "physics_qa": "UNREVIEWED", "reviewer_kind": "self | human | independent"}
+  },
+  "shared_between_tools": ["asset_id", "source_ids", "physics assumptions", "scene coordinates (0-1 normalised)", "timing in seconds and frames at 24 fps", "qa records"]
+}

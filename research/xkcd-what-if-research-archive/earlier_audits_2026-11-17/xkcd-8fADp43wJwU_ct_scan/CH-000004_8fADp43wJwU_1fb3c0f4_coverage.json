@@ -1,0 +1,41 @@
+{
+ "video_id": "8fADp43wJwU",
+ "source_sha256": "1fb3c0f4f510fe724749105425e31c8d7f5e9a6053d41e8b67e21f6a2c0a11d9",
+ "requested_mode": "DEEP",
+ "review_scope": {
+  "source_seconds_total": 303.856,
+  "overview_sampling_hz": 1,
+  "per_frame_detector": "all 7290 frame-to-frame differences (160px gray tblend), shot-boundary candidates >=40 reviewed against sheets",
+  "native_intervals_reviewed": [
+   {
+    "range_s": [
+     2.5,
+     6.0
+    ],
+    "step": "0.25s native frames (4 fps)",
+    "frames": 14
+   },
+   {
+    "single_frames_1280px": [
+     4.0,
+     117.0,
+     296.5
+    ]
+   }
+  ],
+  "unreviewed_or_unverified_intervals": [
+   "all intra-shot states outside 2.5-6.0 s are 1 fps samples (+/-1s), not frame-accurate",
+   "1fps sheet label k corresponds to source time ~k+0.46 s (verified against boundary 258.458); all ESTIMATED event times already add this offset",
+   "camera motion (push/zoom) not verified between samples; treated as locked-off by observation only",
+   "weak (white-to-white / dark-to-dark) boundaries at 78.875, 172.125, 191.208, 200.208 are detector candidates confirmed by sheet change only",
+   "audio: not listened, no ASR; transcript untimed"
+  ]
+ },
+ "counts": {
+  "shots": 31,
+  "measured_hard_cuts": 26,
+  "weaker_boundaries": 4,
+  "events_logged": 49,
+  "prior_run_shots_for_comparison": 29
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "video_id": "8fADp43wJwU",
+ "source_sha256": "1fb3c0f4f510fe724749105425e31c8d7f5e9a6053d41e8b67e21f6a2c0a11d9",
+ "requested_mode": "DEEP",
+ "gates": {
+  "source_identity": "PASS",
+  "full_temporal_overview": "PASS",
+  "candidate_shots_verified": "PARTIAL",
+  "meaningful_state_timing": "PARTIAL",
+  "motion_design_review": "PARTIAL",
+  "creative_design_review": "PASS",
+  "visual_script_mapping": "PASS",
+  "production_blueprint": "PASS",
+  "audio_human_listening": "BLOCKED",
+  "final_av_signoff": "BLOCKED"
+ },
+ "final_video_status": "VISUAL_ANALYSIS_PARTIAL",
+ "limitations": [
+  "intra-shot timing from 1fps samples",
+  "native dense review only 2.5-6.0 s",
+  "four weak shot boundaries unconfirmed at native frames",
+  "tool-based 1:1 mapping of transcript to shots is by content order, not timestamps",
+  "spoken '~six million times' vs on-screen '76,000,000' left unresolved",
+  "no human listening; ASR only (timed)",
+  "17 alignment anchors, not every event",
+  "music vs SFX not separable by this method; no human listening"
+ ],
+ "next_step": "Human listening pass (music/SFX/voice) + dense native windows at S02, S16, S23, S25 and 4 weak boundaries; then re-gate.",
+ "audio": {
+  "asr": "whisper.cpp medium.en word timestamps, ASR_UNCERTIFIED",
+  "human_listened": false,
+  "music_sfx_characterised": "PARTIAL (level/accents measured; identity, genre, instrumentation not determined)",
+  "alignment_rows": 17,
+  "stems": "htdemucs two-stem vocals/no_vocals; per-second RMS measured; separation imperfect"
+ }
+}

@@ -1,0 +1,5 @@
+# Completion report (knowledge-base readiness)
+
+DRAFT knowledge-base document, prepared inside the audit folder (not a repository branch). Every rule below carries an ID in `RULE_EVIDENCE_LINKS`/`RULE_EVIDENCE_LEDGER.csv`; coverage and limits are in `WHAT_IF_RESEARCH_COVERAGE_AND_LIMITATIONS.md`. Review state: self-reviewed unless stated; no independent review exists. Rule classes: OBSERVED, MEASURED, INFERRED, HYPOTHESIS, OWNER.
+
+Readiness: **DRAFT, usable as a research reference with stated limits; not a finished research system.** Open substantive items: listening and sync (blocked), independent review (unavailable), per-scene interpretation of the remaining shots and events, wider physics checks including the ten directive episodes, author-source check for the lightning claim, article correspondence, art comparison with the book, owner decision on the strategy pacing line and on registry IDs SRC01/SRC02, and a branch or worktree only if the owner approves publishing. See `13_FINAL_REPORT.md`.

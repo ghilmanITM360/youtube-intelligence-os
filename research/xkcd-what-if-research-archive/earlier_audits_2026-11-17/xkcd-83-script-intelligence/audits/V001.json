@@ -1,0 +1,158 @@
+{
+ "vid": "V001", "youtube_id": "2LSyizrk8-0", "title": "What if we aimed the Hubble Telescope at Earth?", "format": "video", "parent_vid": null,
+ "caption_type": "user_generated",
+ "A_identity": {
+  "core_topic": "What Hubble would actually see if pointed at Earth's surface, and why.",
+  "content_category": "Science hypothetical / engineering feasibility explainer",
+  "audience_inferred": "Curious general viewers with casual interest in space and physics; no maths needed (inferred from plain vocabulary).",
+  "primary_question": "How detailed would Hubble's images of Earth be?",
+  "promise": "A real answer to a commonly asked question, with the true limiting factor explained.",
+  "style": "Dry, conversational first-person explanation with running concrete example (a desk).",
+  "pov": "First-person narrator answering a named reader; 'we' for the thought experiment."
+ },
+ "B_hook": {
+  "opening_quote": "If the Hubble telescope were aimed at the Earth, how detailed would the images be?",
+  "hook_tags": ["READER_QUESTION_ATTRIBUTION", "IMMEDIATE_SHORT_ANSWER", "CONTRADICTION", "AUTHORITY", "TEASE_LATER"],
+  "construction": "Reader question, then social proof that it is commonly asked, then a popular wrong answer is dismissed, then the one-line true cause, then 'Let me explain'.",
+  "first_curiosity_trigger": "The claim that the cause is slowness, which is not the reason most people would guess.",
+  "conflict_or_contradiction": "The popular explanation (Earth too bright) is stated and rejected with a named source.",
+  "withheld": "What 'too slow' means, what the picture would look like, and whether the problem can be fixed.",
+  "audience_expectation": "Viewer expects a quick image-quality verdict; gets a diagnosis that needs unpacking.",
+  "promise_strength": "Strong",
+  "promise_strength_reason": "States the answer's cause in one sentence and explicitly commits to explaining it.",
+  "opening_to_payoff": "'Too slow' is restated near the end with the rotation numbers, then overturned by the spy-satellite reveal.",
+  "why_may_hold": "Correcting a common belief may plausibly create a need to hear the real reason.",
+  "weaknesses": "Several sentences of sourcing (FAQ, Bad Astronomy) come before any vivid image; 'too slow' is abstract until much later."
+ },
+ "C_opening_beats": [
+  {"beat": 1, "quote": "This is a question from Kyle, who asks", "info_introduced": "Named reader and the question.", "question_active": "How detailed would the images be?", "unresolved": "Everything.", "curiosity": "up"},
+  {"beat": 2, "quote": "This is a common question. The Hubble operators get it a lot", "info_introduced": "The question is common and officially answered.", "question_active": "What is the official answer?", "unresolved": "The answer itself.", "curiosity": "flat"},
+  {"beat": 3, "quote": "The problem isn’t—as some people say—that the Earth is too bright.", "info_introduced": "A common explanation is wrong; Hubble does point at Earth.", "question_active": "Then what is the problem?", "unresolved": "Real cause.", "curiosity": "up"},
+  {"beat": 4, "quote": "The fundamental problem is that Hubble is too slow. Let me explain.", "info_introduced": "The real cause, named but unexplained.", "question_active": "Slow at what?", "unresolved": "Mechanism and resulting image.", "curiosity": "up"},
+  {"beat": 5, "quote": "Let’s imagine we want to take a photo of this normal desk.", "info_introduced": "A concrete test object for the rest of the script.", "question_active": "What will the desk look like?", "unresolved": "Image quality.", "curiosity": "up"}
+ ],
+ "D_spine": {
+  "stages": [
+   {"stage": "Hook", "quote": "If the Hubble telescope were aimed at the Earth, how detailed would the images be?", "summary": "Reader question posed.", "link_to_next": "A wrong answer is cleared away."},
+   {"stage": "Setup", "quote": "The fundamental problem is that Hubble is too slow. Let me explain.", "summary": "True cause named; desk example set up.", "link_to_next": "But first a smaller problem."},
+   {"stage": "Explanation", "quote": "The first small problem we’ll run into is resolution.", "summary": "Resolution limit shown via Pluto.", "link_to_next": "But a bigger problem follows."},
+   {"stage": "Tension", "quote": "But the big problem is motion: Hubble is moving across Earth’s surface at over 7 kilometers per second.", "summary": "Motion blur ruins the image.", "link_to_next": "Therefore: can it be tracked out?"},
+   {"stage": "Question", "quote": "Could we rotate Hubble to track the surface, and eliminate the blur?", "summary": "Proposed fix tested against Hubble's tracking ability.", "link_to_next": "But Hubble cannot rotate fast enough."},
+   {"stage": "Escalation", "quote": "Clearly, we need our own targeting control system.", "summary": "Hypothetical upgrade removes the limit.", "link_to_next": "Therefore a final image verdict."},
+   {"stage": "Payoff", "quote": "it could watch you roll around on your desk chair", "summary": "Concrete answer to how detailed.", "link_to_next": "But it is not hypothetical."},
+   {"stage": "Reveal", "quote": "it’s what the US government actually does", "summary": "Spy satellites are effectively Earth-pointing Hubbles.", "link_to_next": null}
+  ],
+  "inciting_question": "How detailed would Hubble's images of Earth be?",
+  "central_problem": "Hubble cannot rotate fast enough to cancel its orbital motion over the ground.",
+  "turning_points": ["Brightness explanation rejected", "Motion named as the big problem", "Tracking fix fails on rotation speed", "Custom control system makes it work", "Real-world spy satellite reveal"],
+  "climax": "The custom-tracking Hubble could watch you on your desk chair.",
+  "resolution": "The hypothetical is already real in military satellites."
+ },
+ "E_loops": {
+  "loops": [
+   {"id": "A", "opening_quote": "If the Hubble telescope were aimed at the Earth, how detailed would the images be?", "question": "How detailed would the images be?", "maintained_by": "Successive degraded-desk results and the unresolved fix.", "escalates": true, "partial_answer": "Blurred by resolution and motion.", "resolution_quote": "it could watch you roll around on your desk chair", "status": "closed", "replaced_by": null},
+   {"id": "B", "opening_quote": "The fundamental problem is that Hubble is too slow. Let me explain.", "question": "What does 'too slow' mean?", "maintained_by": "Explanation is deferred behind resolution and motion sections.", "escalates": true, "partial_answer": "Motion blur at 7 km/s.", "resolution_quote": "The telescope’s top rotational speed is only a few degrees per minute", "status": "closed", "replaced_by": null},
+   {"id": "C", "opening_quote": "Could we rotate Hubble to track the surface, and eliminate the blur?", "question": "Can the blur be engineered away?", "maintained_by": "Moon-tracking comparison, then rotation numbers.", "escalates": true, "partial_answer": "Not with Hubble's own tracking.", "resolution_quote": "Hubble could be made to track the surface and get photos pretty close to its optimal quality", "status": "closed", "replaced_by": null}
+  ],
+  "loop_map": "A opens -> B opens (cause named, unexplained) -> partial A (blur) -> C opens -> B closes (rotation speed) -> C closes (custom system) -> A closes (desk chair) -> bonus reveal."
+ },
+ "F_mechanics": [
+  {"technique": "IMMEDIATE_SHORT_ANSWER with deferred explanation", "quote": "The fundamental problem is that Hubble is too slow. Let me explain.", "construction": "One-clause diagnosis plus an explicit explain promise.", "function": "Gives the answer label while withholding its meaning.", "possible_audience_response": "May keep watching to decode the label.", "reuse": "State the cause in five words, then say you will explain."},
+  {"technique": "CONCRETE_EXAMPLE (running prop)", "quote": "Let’s imagine we want to take a photo of this normal desk.", "construction": "One mundane object reused at every stage of degradation.", "function": "Makes each abstract limit a visible before/after.", "possible_audience_response": "Plausibly easier to follow and compare stages.", "reuse": "Pick one ordinary object and re-test it after each new factor."},
+  {"technique": "CONTRAST (small problem vs big problem)", "quote": "But the big problem is motion: Hubble is moving across Earth’s surface at over 7 kilometers per second.", "construction": "'First small problem' set up earlier, then 'But the big problem'.", "function": "Ranks obstacles so the script escalates.", "possible_audience_response": "May signal the main point is arriving.", "reuse": "Label obstacles small/big and order them ascending."},
+  {"technique": "ANALOGY", "quote": "trying to take a picture of the ground passing beneath your car", "construction": "Everyday equivalent placed right after the technical claim.", "function": "Translates orbital motion blur into familiar experience.", "possible_audience_response": "May produce an instant 'I get it'.", "reuse": "Follow each technical claim with a same-problem everyday case."},
+  {"technique": "AUDIENCE_QUESTION / MINI_HOOK", "quote": "Could we rotate Hubble to track the surface, and eliminate the blur?", "construction": "Voices the viewer's obvious objection as a question.", "function": "Resets curiosity at the midpoint.", "possible_audience_response": "May feel the script anticipated their thought.", "reuse": "After a negative result, ask the obvious fix out loud."},
+  {"technique": "SCALE_COMPARISON", "quote": "about the speed of a minute hand on a clock", "construction": "Parenthetical everyday yardstick for a rotation rate.", "function": "Makes 'degrees per minute' graspable.", "possible_audience_response": "May make the slowness feel absurd.", "reuse": "Attach a household-speed comparison to every rate."},
+  {"technique": "REVERSAL (hypothetical is real)", "quote": "But this isn’t just a hypothetical situation.", "construction": "After the payoff, a 'But' flips the frame from fantasy to fact.", "function": "Adds a second, larger payoff.", "possible_audience_response": "May cause surprise and mild unease.", "reuse": "End a hypothetical by showing where it already exists."}
+ ],
+ "G_emotion": {
+  "mechanisms": [
+   {"emotion": "CURIOSITY", "trigger_quote": "The problem isn’t—as some people say—that the Earth is too bright."},
+   {"emotion": "HUMOR", "trigger_quote": "I’m assuming the desk is beneath a skylight. Or outside."},
+   {"emotion": "SURPRISE", "trigger_quote": "The strange thing is, the desk still really isn’t moving all that fast"},
+   {"emotion": "CONCERN", "trigger_quote": "it’s what the US government actually does"}
+  ],
+  "progression": "Curiosity at a corrected belief, mild frustration through failed images, satisfaction at the fix, then a surprised, slightly uneasy ending.",
+  "strongest_beat_quote": "it’s what the US government actually does",
+  "emotion_information_relation": "Emotion is carried by information reversals rather than dramatic language."
+ },
+ "H_pacing": {
+  "sentence_style": "Mostly medium declaratives, punctuated by very short verdicts.",
+  "density": "Moderate; one idea per sentence, few numbers.",
+  "sequencing": "Problem, attempted fix, new problem, fix, verdict, twist.",
+  "transition_quotes": ["The first small problem we’ll run into is resolution.", "But the big problem is motion", "Clearly, we need our own targeting control system."],
+  "setup_to_payoff": "Each sub-problem pays off within a few sentences; the main answer arrives near the end.",
+  "slow_sections": "The atmosphere digression and the Moon-tracking detail.",
+  "redundancy": "'Too slow' is said twice by design; the 7 km/s figure is repeated back-to-back.",
+  "weaknesses": "Several payoffs depend on unseen images ('looks like this'), so the text alone is thin there.",
+  "tempo": "Moderate",
+  "tempo_evidence": "Short verdict lines such as 'That’s no good.' alternate with multi-clause explanations."
+ },
+ "I_payoffs": [
+  {"level": "micro", "question_answered": "Is brightness the problem?", "quote": "Hubble points at Earth pretty regularly to calibrate one of its instruments", "setup_amount": "One sentence.", "complete": true, "opens_new_question": "Then what is?", "fulfils_promise": "partly"},
+  {"level": "mini", "question_answered": "What would the raw image look like?", "quote": "Combining the two effects of resolution and motion gives us an end result that looks like this.", "setup_amount": "Two sections.", "complete": true, "opens_new_question": "Can the blur be removed?", "fulfils_promise": "partly"},
+  {"level": "mini", "question_answered": "Why is Hubble too slow?", "quote": "But Hubble is simply too slow – it wasn’t built for surface tracking.", "setup_amount": "Held from the opening.", "complete": true, "opens_new_question": "What if we fix that?", "fulfils_promise": "yes"},
+  {"level": "major", "question_answered": "How detailed could it get?", "quote": "it could watch you roll around on your desk chair", "setup_amount": "Whole script.", "complete": true, "opens_new_question": null, "fulfils_promise": "yes"},
+  {"level": "reversal", "question_answered": "Is this only hypothetical?", "quote": "pointing a Hubble-type telescope at the earth’s surface is not only possible", "setup_amount": "None; unannounced.", "complete": true, "opens_new_question": null, "fulfils_promise": "exceeds it"}
+ ],
+ "J_ending": {
+  "closing_quote": "it’s what the US government actually does",
+  "ending_tags": ["DEADPAN_PUNCHLINE", "CALLBACK_TO_OPENING", "OTHER:REAL_WORLD_REVEAL"],
+  "final_insight": "The absurd-sounding hypothetical describes existing spy satellites.",
+  "cta_present": false, "cta_quote": null, "cta_type": null,
+  "earned": "yes",
+  "earned_reason": "The custom-tracking section establishes exactly what a purpose-built version would do before the reveal names it."
+ },
+ "K_assessment": {
+  "strengths": ["The cause is named in the opening and paid off with numbers later.", "One desk example is carried through every stage.", "The ending reframes the whole hypothetical as real."],
+  "improvements": ["The opening could reach the 'too slow' line with less sourcing preamble.", "Text payoffs that rely on 'looks like this' could carry a verbal description."],
+  "distinctive_technique": "Naming the answer early as a cryptic label, then spending the script making the label mean something.",
+  "biggest_risk": "Sourcing-heavy opening sentences may plausibly lose viewers before the first vivid idea.",
+  "lesson": "An early answer does not kill curiosity if the answer itself needs explaining."
+ },
+ "L_formula": [
+  "Attribute the question to a named reader.",
+  "Dismiss the popular wrong answer with a source.",
+  "State the real cause in one cryptic line and promise to explain.",
+  "Introduce one mundane test object.",
+  "Rank obstacles small then big, re-testing the object each time.",
+  "Voice the obvious fix as a question and show why it fails.",
+  "Grant a hypothetical upgrade and give a concrete human-scale verdict.",
+  "Close by revealing the hypothetical already exists."
+ ],
+ "lenses": {
+  "architect": "Structure is a fix-and-fail ladder: each solution exposes the next constraint.",
+  "surgeon": "The parenthetical minute-hand comparison does more work than the rpm figure before it.",
+  "viral": "'it’s what the US government actually does' is the most quotable line because it turns trivia into a slightly ominous fact.",
+  "critic": "The atmosphere aside answers a question nobody in the script asked and delays the first real obstacle.",
+  "curiosity": "The 'too slow' label stays undefined for most of the script, which is the main retention device in the text.",
+  "platform": "The opening sentence is the search query nearly verbatim; the resolution-plus-motion block and the tracking-to-spy-satellite block each stand alone.",
+  "integrator": "Humor, analogy and the running desk all serve the same job of making limits visible.",
+  "tradeoffs": "Credibility sourcing up front costs hook speed; the late reveal gains surprise at the cost of not being promised."
+ },
+ "framework_rules": [
+  {"rule_id": "FR-HOOK-01", "status": "MET", "evidence_quote": "The problem isn’t—as some people say—that the Earth is too bright.", "note": "Lean context, then a contrarian correction, then the snap answer."},
+  {"rule_id": "FR-INTRO-03", "status": "PARTLY", "evidence_quote": "This is a common question. The Hubble operators get it a lot", "note": "Over-explains provenance; under-explains what 'too slow' refers to."},
+  {"rule_id": "FR-SCR-01", "status": "MET", "evidence_quote": "Could we rotate Hubble to track the surface, and eliminate the blur?", "note": "Setup, stacked obstacles, resolved verdict."},
+  {"rule_id": "FR-SCR-06", "status": "MET", "evidence_quote": "The fundamental problem is that Hubble is too slow. Let me explain.", "note": "Gap planted early and closed late, with a second gap layered on."},
+  {"rule_id": "FR-BT-01", "status": "MET", "evidence_quote": "But the big problem is motion", "note": "Beats turn on But / Which means / Clearly."},
+  {"rule_id": "FR-16C-07", "status": "MET", "evidence_quote": "Could we rotate Hubble to track the surface, and eliminate the blur?", "note": "Fix loop opens before the 'too slow' loop is closed."},
+  {"rule_id": "FR-16C-13", "status": "MET", "evidence_quote": "similar to that of a small carousel", "note": "Technical quantities are mapped to everyday objects."},
+  {"rule_id": "FR-16C-16", "status": "MET", "evidence_quote": "pointing a Hubble-type telescope at the earth’s surface is not only possible", "note": "Ending restates the opening premise as fact."}
+ ],
+ "matrix_row": {
+  "topic": "Pointing Hubble at Earth",
+  "hook_type": "Reader question, myth dismissed, cryptic short answer",
+  "narrative_structure": "Feasibility calculation with fix-and-fail obstacles",
+  "curiosity_mechanism": "Answer label given early, meaning withheld",
+  "emotional_arc": "Curiosity to satisfaction to uneasy surprise",
+  "key_payoff": "Could watch you on a desk chair; spy satellites already do",
+  "cta": "None",
+  "distinctive_technique": "Running mundane desk example plus real-world reveal ending",
+  "confidence": "High"
+ },
+ "tags": {"structure_tag": "FEASIBILITY_CALCULATION", "mechanics_tags": ["INFORMATION_GAP", "CONCRETE_EXAMPLE", "ANALOGY", "SCALE_COMPARISON", "AUDIENCE_QUESTION", "CONTRAST", "REVERSAL", "EXPERT_OR_SOURCE_CITATION", "DEADPAN_HUMOR"], "emotion_tags": ["CURIOSITY", "HUMOR", "SURPRISE", "CONCERN", "SATISFACTION"], "answer_position": "FIRST_100_WORDS", "number_density": "Low"},
+ "excerpt_delta": null,
+ "confidence": "High",
+ "caveats": "Transcript only; several lines point at unseen images ('looks like this'), so what those images show is unknown. Audience effects are hypotheses."
+}

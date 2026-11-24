@@ -1,0 +1,5 @@
+# START HERE (owner summary, 2026-11-23)
+Verdict: topics mixed, order not sensible as written. Keep: higher fall (first, if actually ready), tiny-planet orbit, neutron pellet (with assumptions), farthest-from-anyone Short. Replace: Moon vanished, slow light, last light, steak, raindrop. Cadence: ~1 long / 10 d + ~1 Short / week (fallback 1 long / 14 d). Day-29 winner slot → reserve.
+Open: competitor 30/90-day cadence now complete (resume crawl done); search-hit dates/views fetched (514/516), still no CTR or retention; no expert review; book text unavailable; no analytics.
+Files: [FINAL_REPORT](FINAL_REPORT.md) · [60-day workbook](PROPOSED_60_DAY_ORDER.xlsx) · [CSV](PROPOSED_60_DAY_ORDER.csv) · [candidates](TOPIC_RESEARCH_CANDIDATES.csv) · [cadence](CHANNEL_UPLOAD_CADENCE.csv) · [method](CADENCE_METHOD_AND_COVERAGE.md) · [audience signals](COMPETITOR_AUDIENCE_SIGNALS_AND_CADENCE.md) · [limitations](LIMITATIONS_AND_OPEN_ITEMS.md) · [checkpoint](02_PROGRESS_CHECKPOINT.md)
+Nothing committed, pushed, uploaded or published.

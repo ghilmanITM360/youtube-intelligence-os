@@ -1,0 +1,5 @@
+# Shorts editing grammar
+
+DRAFT knowledge-base document, prepared inside the audit folder (not a repository branch). Every rule below carries an ID in `RULE_EVIDENCE_LINKS`/`RULE_EVIDENCE_LEDGER.csv`; coverage and limits are in `WHAT_IF_RESEARCH_COVERAGE_AND_LIMITATIONS.md`. Review state: self-reviewed unless stated; no independent review exists. Rule classes: OBSERVED, MEASURED, INFERRED, HYPOTHESIS, OWNER.
+
+Portrait 1080 x 1920, 24 fps, 21 s to 2:12. 38 of 40 scripted Shorts re-cut a long parent (K05); the art is recomposed vertically (art in a band, centred or low in the frame) rather than re-drawn. Measured: shot median 6.5 s (campaign) and 7.2 s (audit), event gap about 2.0 s, 20 to 24 events per minute (K07, K08); stroke about 5.7 px, negative space 0.77 (K11, K12). Zoom and pan over a map background appear in `U4cONnQxgvo` (INFERRED from stills). No red end card in any of 24 checked Shorts. Spoken number on screen 46% of quantity moments (n=35).
