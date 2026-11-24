@@ -1,0 +1,18 @@
+id,resource,path_or_url,type,access_status,read_scope,notes
+S01,Original calendar CSV,/Users/ghilmankhan/Downloads/WHATIF_UNREASONABLY_EXACT_30_DAY_CALENDAR_2026-11-23.csv,file,OPENED,all 30 rows x 19 cols,matches xlsx Calendar sheet? see 05
+S02,Original calendar XLSX,/Users/ghilmankhan/Downloads/WHATIF_..._30_DAY_CALENDAR_2026-11-23.xlsx,file,OPENED,"sheets Calendar, Month grid, Longs (10), Charts, Notes; Longs+Notes read in full","Charts sheet = images, not inspected"
+S03,Original PDF,/Users/ghilmankhan/Downloads/WHATIF_TOP_VIDEOS_PLAN_2026-11-23.pdf,file,OPENED,all 7 pages (rendered images),
+S04,Prior audit 1 folder,~/Downloads/UNREASONABLY_EXACT_TOPIC_AUDIT_2026-11-23/,folder,OPENED partial,"START_HERE, TOPIC_SELECTION_AND_ORDER_REPORT (first 150 lines), EXISTING_CALENDAR_TOPIC_AUDIT.csv (structure+decision cols); other files not read yet","NEXT_60_DAYS xlsx, evidence register, crawler files pending"
+S05,Prior audit 2 folder (not named in prompt),~/Downloads/UNREASONABLY_EXACT_CADENCE_AND_TOPIC_ORDER_2026-11-23/,folder,OPENED partial,"START_HERE, FINAL_REPORT, RESEARCH_PASSES, CSV schemas",provenance unknown
+S06,Machine B repo path,/Users/ghilmanislam360/Documents/youtube-intelligence-os,path,NOT PRESENT on this Mac,ls failed,
+S07,Repo AGENTS.md,/Users/ghilmankhan/workprojects/youtube-intelligence-os/AGENTS.md,file,OPENED,full,
+S08,DS-000011/018 deep audit,repo root DS-000011-DS-000018-DEEP-KNOWLEDGE-AUDIT.md,file,OPENED partial,"headings, s17, s24",
+S09,Master Playbook PDF,~/Downloads/YouTube_Automation_Complete_Master_Playbook.pdf,file,OPENED partial,"ToC, outlier intro, Method 4",
+S10,DS-000011 PDFs / DS-000018 zip / DS-000031,data/raw/global-youtube-knowledge/,folder,OPENED partial (all 17 DS-000011 files opened; 5 read in detail in packaging note; 12 in remaining-files note with depth per file; algorithm guide only structure+greps; DS-000018 zip (63 tabs, hashes verified, keyword-searched not line-read) and DS-000031 (partly line-read) opened per DS000018_DS000031_REVIEW.md; supplement 2026-11-11 opened: checksums OK, md matches DS-000018 tabs 61/62, title-level overlap for txt/docx/xlsx, VIDEO EDITING.docx new, see DS000011_SUPPLEMENT_REVIEW.md),see DS000011_PACKAGING_AND_HOOK_APPLICATION.md; DS000011_REMAINING_FILES_REVIEW.md,PARTIAL
+S11,YouTube watch pages (public),https://www.youtube.com/watch?v=<id>,web,"ACCESSIBLE via urllib (no login, gl default)","ytInitialPlayerResponse parsed: publishDate, views, length",exact publish timestamps with offset
+S12,YouTube channel tabs /videos /shorts /streams,yt-dlp 2025.10.14 --flat-playlist (py3.9 venv),web,ACCESSIBLE; /streams missing for most channels,tab = YouTube format classification,
+S13,YouTube search (filters),"yt-dlp on results URL, hl=en gl=US, no cookies",web,ACCESSIBLE,top-N per filter,
+S14,Google Trends,trends.google.com,web,NOT ATTEMPTED YET,,will try; else UNAVAILABLE
+S15,YouTube Studio / first-party analytics,-,n/a,UNAVAILABLE (no export exists; channel not launched),,
+S16,Randall Munroe What If? books,-,n/a,NOT ACCESSIBLE locally (to confirm),,
+S17,What-if strategy branch,origin/research/what-if-channel-strategy-2026-11-18,git ref,EXISTS; not read yet,,"read via git show, no checkout"

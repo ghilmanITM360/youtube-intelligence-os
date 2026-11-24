@@ -1,0 +1,5 @@
+# Source evidence and rights
+
+DRAFT knowledge-base document, prepared inside the audit folder (not a repository branch). Every rule below carries an ID in `RULE_EVIDENCE_LINKS`/`RULE_EVIDENCE_LEDGER.csv`; coverage and limits are in `WHAT_IF_RESEARCH_COVERAGE_AND_LIMITATIONS.md`. Review state: self-reviewed unless stated; no independent review exists. Rule classes: OBSERVED, MEASURED, INFERRED, HYPOTHESIS, OWNER.
+
+Sources: 88 library MP4 (`~/Documents/YIOS-Media-Library/xkcd Channel/`, SHA-256 equal to the census hash for 88 of 88; list in `media_probe_88.csv`), catalog transcripts for 83 videos (repo `research/what-if-scripts`), local whisper ASR for 88, live channel listing 2026-11-23 (`live_channel_ids_2026-11-23.json`), article archive of 162 titles (`what_if_xkcd_archive_2026-11-23.json`). Rights: xkcd video, art, scripts and audio are third-party copyright, held locally for analysis only; frames kept in the audit folder are evidence, not assets; private media stays outside Git (`YIOS_MEDIA_ROOT`). Different encodes of one video (the 14-video Brain, 0 of 14 hash matches) are one logical video and are never pooled with the library files.

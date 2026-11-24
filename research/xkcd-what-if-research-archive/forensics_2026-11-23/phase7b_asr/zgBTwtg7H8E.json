@@ -1,0 +1,582 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | DOTPROD = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/ghilmanislam360/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:02,500"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 2500
+			},
+			"text": " This is a question from Zach, who asks,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:02,500",
+				"to": "00:00:05,300"
+			},
+			"offsets": {
+				"from": 2500,
+				"to": 5300
+			},
+			"text": " \"Stopping rain from falling on something with an umbrella is boring."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:05,300",
+				"to": "00:00:09,300"
+			},
+			"offsets": {
+				"from": 5300,
+				"to": 9300
+			},
+			"text": " What if you tried to stop rain with a laser that targeted and vaporized each incoming droplet"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:09,300",
+				"to": "00:00:11,300"
+			},
+			"offsets": {
+				"from": 9300,
+				"to": 11300
+			},
+			"text": " before it could come within 10 feet of the ground?\""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:13,300",
+				"to": "00:00:17,300"
+			},
+			"offsets": {
+				"from": 13300,
+				"to": 17300
+			},
+			"text": " So, stopping rain with a laser is one of those ideas that sounds totally reasonable, but…"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:17,300",
+				"to": "00:00:22,300"
+			},
+			"offsets": {
+				"from": 17300,
+				"to": 22300
+			},
+			"text": " Well, okay, while the idea of a laser umbrella might be appealing, it…"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:22,300",
+				"to": "00:00:27,300"
+			},
+			"offsets": {
+				"from": 22300,
+				"to": 27300
+			},
+			"text": " Okay, the idea of stopping rain with a laser is a thing we are currently talking about."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,300",
+				"to": "00:00:29,700"
+			},
+			"offsets": {
+				"from": 27300,
+				"to": 29700
+			},
+			"text": " Now, it's not a very practical idea."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:29,700",
+				"to": "00:00:32,200"
+			},
+			"offsets": {
+				"from": 29700,
+				"to": 32200
+			},
+			"text": " First, let's look at how much energy the laser would need."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,200",
+				"to": "00:00:35,200"
+			},
+			"offsets": {
+				"from": 32200,
+				"to": 35200
+			},
+			"text": " Vaporizing a liter of water takes about 2.6 megajoules of energy,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:35,200",
+				"to": "00:00:38,700"
+			},
+			"offsets": {
+				"from": 35200,
+				"to": 38700
+			},
+			"text": " and a big rainstorm might drop half an inch of rain per hour."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:38,700",
+				"to": "00:00:41,700"
+			},
+			"offsets": {
+				"from": 38700,
+				"to": 41700
+			},
+			"text": " Oddly enough, you can just multiply these two numbers together in a smart calculator"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,700",
+				"to": "00:00:46,700"
+			},
+			"offsets": {
+				"from": 41700,
+				"to": 46700
+			},
+			"text": " like Wolfram Alpha or Google, and the units work out to give you an answer in terms of power per surface area,"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:46,700",
+				"to": "00:00:48,200"
+			},
+			"offsets": {
+				"from": 46700,
+				"to": 48200
+			},
+			"text": " which is exactly what we're looking for."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:48,200",
+				"to": "00:00:53,200"
+			},
+			"offsets": {
+				"from": 48200,
+				"to": 53200
+			},
+			"text": " The calculator says that we need 9 kilowatts of power per square meter we want to protect with our laser."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:53,200",
+				"to": "00:00:58,200"
+			},
+			"offsets": {
+				"from": 53200,
+				"to": 58200
+			},
+			"text": " 9 kilowatts per square meter is nearly 10 times the amount of power Earth's surface receives from the sun."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:58,200",
+				"to": "00:01:00,200"
+			},
+			"offsets": {
+				"from": 58200,
+				"to": 60200
+			},
+			"text": " And while that sounds like a lot of energy,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:00,200",
+				"to": "00:01:03,700"
+			},
+			"offsets": {
+				"from": 60200,
+				"to": 63700
+			},
+			"text": " we need to remember that water's capacity to absorb energy is incredible."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:03,700",
+				"to": "00:01:06,700"
+			},
+			"offsets": {
+				"from": 63700,
+				"to": 66700
+			},
+			"text": " Heating water up to boiling only takes about 10% of the energy."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:06,700",
+				"to": "00:01:09,700"
+			},
+			"offsets": {
+				"from": 66700,
+				"to": 69700
+			},
+			"text": " Getting it from liquid to gas takes the other 90%."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:09,700",
+				"to": "00:01:12,700"
+			},
+			"offsets": {
+				"from": 69700,
+				"to": 72700
+			},
+			"text": " Ultimately, we're talking about filling the air with tons of hot steam,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:12,700",
+				"to": "00:01:15,700"
+			},
+			"offsets": {
+				"from": 72700,
+				"to": 75700
+			},
+			"text": " so basically we'd be building a human-sized autoclave."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:15,700",
+				"to": "00:01:19,700"
+			},
+			"offsets": {
+				"from": 75700,
+				"to": 79700
+			},
+			"text": " Uh, needless to say, autoclaves are not really a popular place to live."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:19,700",
+				"to": "00:01:20,700"
+			},
+			"offsets": {
+				"from": 79700,
+				"to": 80700
+			},
+			"text": " But it gets worse."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:20,700",
+				"to": "00:01:24,200"
+			},
+			"offsets": {
+				"from": 80700,
+				"to": 84200
+			},
+			"text": " Vaporizing a droplet of water with a laser is more complicated than it sounds."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,200",
+				"to": "00:01:26,700"
+			},
+			"offsets": {
+				"from": 84200,
+				"to": 86700
+			},
+			"text": " There are many, many, many papers on this subject,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:26,700",
+				"to": "00:01:30,200"
+			},
+			"offsets": {
+				"from": 86700,
+				"to": 90200
+			},
+			"text": " and the general gist is that it takes a lot of energy, delivered fast,"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:30,200",
+				"to": "00:01:34,200"
+			},
+			"offsets": {
+				"from": 90200,
+				"to": 94200
+			},
+			"text": " to vaporize the droplet without just splattering it apart into little droplets."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:34,200",
+				"to": "00:01:37,200"
+			},
+			"offsets": {
+				"from": 94200,
+				"to": 97200
+			},
+			"text": " Here's what it looks like when a droplet gets zapped by a laser pulse."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:37,200",
+				"to": "00:01:41,700"
+			},
+			"offsets": {
+				"from": 97200,
+				"to": 101700
+			},
+			"text": " You can see that I'm jealous of anyone whose job it is to literally zap water with lasers."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:41,700",
+				"to": "00:01:45,700"
+			},
+			"offsets": {
+				"from": 101700,
+				"to": 105700
+			},
+			"text": " You can also see that the laser mostly splatters the droplet rather than vaporizing it."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:45,700",
+				"to": "00:01:49,700"
+			},
+			"offsets": {
+				"from": 105700,
+				"to": 109700
+			},
+			"text": " The implication is that completely vaporizing a droplet would probably take even more"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:49,700",
+				"to": "00:01:52,700"
+			},
+			"offsets": {
+				"from": 109700,
+				"to": 112700
+			},
+			"text": " than the already unreasonable amount of power we were considering."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:52,700",
+				"to": "00:01:55,200"
+			},
+			"offsets": {
+				"from": 112700,
+				"to": 115200
+			},
+			"text": " Then there's the problem of targeting and aiming."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:55,200",
+				"to": "00:01:58,700"
+			},
+			"offsets": {
+				"from": 115200,
+				"to": 118700
+			},
+			"text": " In theory, this is probably solvable, perhaps even without military-grade equipment."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:58,700",
+				"to": "00:02:02,200"
+			},
+			"offsets": {
+				"from": 118700,
+				"to": 122200
+			},
+			"text": " High-speed cameras can triangulate the 3D position of a baseball or football"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:02,200",
+				"to": "00:02:04,700"
+			},
+			"offsets": {
+				"from": 122200,
+				"to": 124700
+			},
+			"text": " hundreds of times per second to help referees make calls."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:04,700",
+				"to": "00:02:08,700"
+			},
+			"offsets": {
+				"from": 124700,
+				"to": 128700
+			},
+			"text": " A similar but more sophisticated system could help track the incoming raindrops."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:08,700",
+				"to": "00:02:13,700"
+			},
+			"offsets": {
+				"from": 128700,
+				"to": 133700
+			},
+			"text": " As for targeting, adaptive optics allows for extremely fast and precise control of beams of light."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:13,700",
+				"to": "00:02:18,700"
+			},
+			"offsets": {
+				"from": 133700,
+				"to": 138700
+			},
+			"text": " Covering an area of a square meter would require something like 500 direct pulses of light per second."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:18,700",
+				"to": "00:02:22,200"
+			},
+			"offsets": {
+				"from": 138700,
+				"to": 142200
+			},
+			"text": " This is slow enough that you wouldn't run into any direct problems with relativity,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:22,200",
+				"to": "00:02:27,200"
+			},
+			"offsets": {
+				"from": 142200,
+				"to": 147200
+			},
+			"text": " but the device would, at minimum, need to be a lot more complicated than just a laser pointer on a swiveling base."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:27,200",
+				"to": "00:02:31,700"
+			},
+			"offsets": {
+				"from": 147200,
+				"to": 151700
+			},
+			"text": " It might seem easier to forget about targeting completely and just fire lasers in random directions."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:31,700",
+				"to": "00:02:35,700"
+			},
+			"offsets": {
+				"from": 151700,
+				"to": 155700
+			},
+			"text": " If you aim a laser beam in a random direction, how far will it go before it hits a drop?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:35,700",
+				"to": "00:02:40,200"
+			},
+			"offsets": {
+				"from": 155700,
+				"to": 160200
+			},
+			"text": " This is a pretty easy question to answer, it's the same as asking how far you can see in the rain,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:40,200",
+				"to": "00:02:42,700"
+			},
+			"offsets": {
+				"from": 160200,
+				"to": 162700
+			},
+			"text": " and the answer is at least several hundred meters."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:42,700",
+				"to": "00:02:44,700"
+			},
+			"offsets": {
+				"from": 162700,
+				"to": 164700
+			},
+			"text": " So unless you're trying to protect your whole neighborhood,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:44,700",
+				"to": "00:02:47,700"
+			},
+			"offsets": {
+				"from": 164700,
+				"to": 167700
+			},
+			"text": " firing powerful lasers in random directions probably won't help."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:47,700",
+				"to": "00:02:50,700"
+			},
+			"offsets": {
+				"from": 167700,
+				"to": 170700
+			},
+			"text": " And, honestly, if you are trying to protect your whole neighborhood,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:50,700",
+				"to": "00:02:54,700"
+			},
+			"offsets": {
+				"from": 170700,
+				"to": 174700
+			},
+			"text": " firing powerful lasers in random directions definitely won't help."
+		}
+	]
+}

@@ -1,0 +1,8 @@
+# Next steps by impact
+
+1. Confirm first video status and actual production envelope. If Day 1 is unpublished, lock the measurable speed question and title scope, validate assumptions with a qualified reviewer, check the revised package at mobile scale and set a start date only once delivery is feasible. If published, preserve it and collect its exact upload time.
+2. Build a claim table for the first three proposed longs. Secure an independent check of the drag model inputs, tiny-planet geometry and Voyager signal timing. Separate examples, estimates and verified measurements.
+3. Run current originality clearance for the exact proposed premises, focusing on higher fall, orbit jump, Moon/tides and alien detectability. Retrieve authorized print chapters and reconcile the current catalog by video ID when accessible.
+4. Refresh topic-level YouTube Search and Trends with exact query, geography, collection time, low-volume treatment and one comparison group at a time. Capture release dates and matched-age observations for relevant Shorts and longs separately.
+5. Before any future production approval, resolve media rights, first-30-seconds expectation, artifact readiness and claim linkage. For scripts when authorized, rerun the project gate and complete the human checklist. Parent excerpts start after their approved scientific setup is locked. Leave any unsupported reserve unused.
+6. Log upload clocks, exports and production hours. At Days 14 and 30 make topic-level decisions using mature 72h and 7d cohorts. Revisit format-level performance after repeated comparable episodes and adequate data. Treat weak or immature samples as open.
