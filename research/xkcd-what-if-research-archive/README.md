@@ -94,3 +94,7 @@ The GitHub repository is **public**. The archive includes transcripts and ASR te
 
 ## Verify
 `python3 -I research/xkcd-what-if-research-archive/verify_manifest.py` recomputes SHA-256 and size for every file listed in `MANIFEST.csv` and reports unlisted files.
+
+
+## Addendum 2026-11-24 (Machine A): later What If research added
+Start at `LATEST_RESEARCH_INDEX_2026-11-24.md` (folders, Claude vs Codex, calendar differences, open science issues, exclusions) and `LATEST_MANIFEST_2026-11-24.csv` (source path, destination, size, SHA-256, status). New folders: `topic_cadence_deep_audit_2026-11-23/`, `claude_calendar_review_2026-11-24/`, `codex_calendar_review_2026-11-24/`, `codex_topic_order_audit_2026-11-23/`, `codex_cadence_topic_order_2026-11-23/`, `forensics_logs_supplement_2026-11-23/`. All DRAFT / self- or Codex-reviewed; no expert review, no listening, no owner approval of any proposed calendar. The counts above (1071 files, etc.) describe the original 2026-11-23 archive only; `MANIFEST.csv` now also lists the added files, `MANIFEST.json` carries an `addendum_2026-11-24` key.
