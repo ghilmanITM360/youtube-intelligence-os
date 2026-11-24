@@ -1,0 +1,42 @@
+Rv (volume-equivalent radius) = 11.05 km   mu_Phobos = 7.075e+05 m3/s2 (alt mass 1.072e16 -> 7.155e+05)
+mean surface g = mu/Rv^2 = 5.80 mm/s2   NASA 2012 slide text is garbled ('86Q-190 ~g') and its gravity range is inconsistent with its own mass and size -> NOT used
+  point-mass sphere R= 9.10 km (polar semi-axis 9.1 km): v_circ= 8.82 m/s  v_esc=12.47 m/s = 44.9 km/h
+  point-mass sphere R=11.05 km (volume-equivalent): v_circ= 8.00 m/s  v_esc=11.32 m/s = 40.7 km/h
+  point-mass sphere R=13.00 km (sub-Mars semi-axis 13.0 km): v_circ= 7.38 m/s  v_esc=10.43 m/s = 37.6 km/h
+  mass 1.072e16 variant at Rv: v_esc=11.38 m/s (NASA slides: 11.3 m/s)
+
+Mars side:
+  mean motion n = 2.2803e-04 rad/s; Mars GM from NSSDC mass = 4.2828e+13 m3/s2 ; consistency n^2 a^3 = 4.2887e+13 m3/s2 (ratio 1.0014)
+  Phobos orbital speed about Mars = 2.138 km/s ; Mars escape speed at that radius = 3.022 km/s ; extra needed to leave Mars from Phobos's orbit = 884 m/s
+  Hill radius of Phobos w.r.t. Mars = 16.56 km = 1.50 x Rv ; = 1.27 x the 13.0 km sub-Mars semi-axis (L1/L2 distance)
+
+Energy test (Hill potential Phi=-mu/r-1.5 n^2 x^2+0.5 n^2 z^2; L1/L2 at |x|=rH, Phi=-1.5 mu/rH). Minimum speed relative to Phobos's surface to REACH the pass:
+  sphere 9.1 km   Mars-ward/anti-Mars (x)   : min speed to reach pass = 6.344 m/s
+  sphere 9.1 km   along orbit (y)           : min speed to reach pass = 5.227 m/s
+  sphere 9.1 km   pole (z)                  : min speed to reach pass = 4.798 m/s
+  sphere Rv       Mars-ward/anti-Mars (x)   : min speed to reach pass = 4.353 m/s
+  sphere Rv       along orbit (y)           : surface is already beyond the pass energy (dE=-0.0479) -> loose material escapes at rest in this model
+  sphere Rv       pole (z)                  : surface is already beyond the pass energy (dE=-3.22) -> loose material escapes at rest in this model
+  sphere 13.0 km  Mars-ward/anti-Mars (x)   : min speed to reach pass = 2.653 m/s
+  sphere 13.0 km  along orbit (y)           : surface is already beyond the pass energy (dE=-9.66) -> loose material escapes at rest in this model
+  sphere 13.0 km  pole (z)                  : surface is already beyond the pass energy (dE=-14.1) -> loose material escapes at rest in this model
+
+Numerical test (radial launches from a surface point at rest in Phobos's rotating frame; 30 Phobos orbits ~ 9.6 days):
+  sphere 9.1 km  toward Mars (-x)             0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere 9.1 km  away from Mars (+x)          0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere 9.1 km  forward along orbit (+y)     0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:impac  11.4:far(>
+  sphere 9.1 km  backward (-y)                0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:impac  11.4:far(>
+  sphere 9.1 km  up out of orbit plane (+z)   0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:impac  11.4:impac
+  sphere Rv      toward Mars (-x)             0.5:impac  1:impac  2:impac  3:impac  4:impac  5:far(>  6:far(>  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere Rv      away from Mars (+x)          0.5:impac  1:impac  2:impac  3:impac  4:impac  5:far(>  6:far(>  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere Rv      forward along orbit (+y)     0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:far(>  11.4:far(>
+  sphere Rv      backward (-y)                0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:far(>  11.4:far(>
+  sphere Rv      up out of orbit plane (+z)   0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:impac  11.4:impac
+  sphere 13.0 km toward Mars (-x)             0.5:impac  1:impac  2:impac  3:impac  4:far(>  5:far(>  6:far(>  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere 13.0 km away from Mars (+x)          0.5:impac  1:impac  2:impac  3:impac  4:far(>  5:far(>  6:far(>  7:far(>  8:far(>  9:far(>  10:far(>  11.4:far(>
+  sphere 13.0 km forward along orbit (+y)     0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:far(>  10:far(>  11.4:far(>
+  sphere 13.0 km backward (-y)                0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:far(>  10:far(>  11.4:far(>
+  sphere 13.0 km up out of orbit plane (+z)   0.5:impac  1:impac  2:impac  3:impac  4:impac  5:impac  6:impac  7:impac  8:impac  9:impac  10:impac  11.4:impac
+
+Jump speed ASSUMPTIONS: a ~0.45 m jump on Earth is v=sqrt(2*9.80665*0.45)=2.97 m/s (assumption, unsourced); suited/loaded jumps lower.
+Uniform-gravity hang time for 3 m/s vertical on mean g=0.00580 m/s2: 17.3 min (NOT reliable here; see Hill sim)
