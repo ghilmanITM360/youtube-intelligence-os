@@ -3,7 +3,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'scripts'))
-from check_slop_risk import ROOT, evaluate, front_matter, is_script, project_of, split_sources  # noqa: E402
+import check_slop_risk as gate  # noqa: E402
+from check_slop_risk import ROOT, apply_waivers, evaluate, front_matter, is_script, load_exceptions, project_of, split_sources  # noqa: E402
 
 ORIGINAL = ("We measured our own grip strength every morning for thirty days and logged each reading in a notebook. "
             "The numbers drifted upward after the second week once we added a simple towel squeeze before breakfast. ") * 6
@@ -71,3 +72,69 @@ def test_claude_hook_session_and_prompt_events():
         assert o['hookSpecificOutput']['hookEventName'] == name and 'productions/' in o['hookSpecificOutput']['additionalContext']
         assert ('systemMessage' in o) == (name == 'SessionStart')
     sys.stdin = sys.__stdin__
+
+
+# --- reviewed exception register (productions/.slop-gate-exceptions.txt) ---
+REVISED = ("A skydiver reaches terminal speed when drag equals weight so the net force is zero and the speed stops changing. "
+           "Opening a canopy raises drag sharply and the net force points upward until a slower speed is reached again. ") * 6
+CP = 'productions/draft/SCRIPT_DRAFT.md'
+
+
+def waive(text, title, rule, titles=(), own=(), cp=CP, reason='documented revision'):
+    f = evaluate(text, title, [], list(titles), [], list(own))
+    apply_waivers(f, [('s', rule, cp, reason)], text, title, list(titles), list(own))
+    return f
+
+
+def test_revision_of_same_video_may_share_title_but_not_a_competitor_title():
+    own = [(CP, 'Same Video', ORIGINAL + SRC)]
+    f = waive(REVISED + SRC, 'Same Video', 'R2', own=own)
+    assert 'R2' not in rules(f, 'FAIL') and 'R2' in rules(f, 'EXCEPTION'), f
+    assert [x for x in f if x['rule'] == 'R2'][0]['exception_reason'].startswith('documented revision')
+    f = waive(REVISED + SRC, 'Same Video', 'R2', titles=[('C/v1', 'same video!')], own=own)
+    assert 'R2' in rules(f, 'FAIL'), f  # a competitor video with that title still blocks
+    f = waive(REVISED + SRC, 'Same Video', 'R2', own=own + [('productions/other/SCRIPT.md', 'Same Video', ORIGINAL + SRC)])
+    assert 'R2' in rules(f, 'FAIL'), f  # another of our projects with that title still blocks
+
+
+def test_preserved_reference_waives_copy_of_its_counterpart_only():
+    own = [(CP, 'T', ORIGINAL + SRC)]
+    assert 'R4' in rules(evaluate(ORIGINAL + SRC, 'T', [], [], [], own), 'FAIL')
+    f = waive(ORIGINAL + SRC, 'T', 'R4', own=own)
+    assert 'R4' not in rules(f, 'FAIL') and 'R4' in rules(f, 'EXCEPTION'), f
+    f = waive(ORIGINAL + SRC, 'T', 'R4', own=own + [('productions/other/SCRIPT.md', 'U', ORIGINAL + SRC)])
+    assert 'R4' in rules(f, 'FAIL'), f
+
+
+def test_index_without_sources_waived_only_for_r5_and_competitor_copy_stays_blocked():
+    f = waive("| Slot | Title |\n| 01 | A |\n" * 20, 'Index', 'R5', cp='-')
+    assert 'R5' in rules(f, 'EXCEPTION') and 'R5' not in rules(f, 'FAIL'), f
+    f = evaluate(COMPETITOR, 'Index', [('C/v1', COMPETITOR)], [], [], [])
+    apply_waivers(f, [('s', 'R5', '-', 'index')], COMPETITOR, 'Index', [], [])
+    assert 'R1' in rules(f, 'FAIL') and 'R5' in rules(f, 'EXCEPTION'), f
+
+
+def test_register_only_accepts_waivable_rules_with_reason_and_counterpart(tmp_path, monkeypatch):
+    reg = tmp_path / 'reg.txt'
+    reg.write_text("# comment\n"
+                   "a.md | R2 | b.md | revision\n"
+                   "a.md | R4 | b.md | \n"          # no reason
+                   "a.md | R1 | b.md | competitor\n"  # never waivable
+                   "a.md | R5 | b.md | wrong counterpart\n"
+                   "a.md | R2 | - | missing counterpart\n"
+                   "a.md | R5 | - | index\n"
+                   "other.md | R2 | b.md | other file\n")
+    monkeypatch.setattr(gate, 'EXCEPTIONS', reg)
+    ok, bad = load_exceptions('a.md')
+    assert [x[1] for x in ok] == ['R2', 'R5'] and len(bad) == 4
+
+
+def test_repo_register_is_well_formed_and_its_files_exist():
+    for line in gate.EXCEPTIONS.read_text().splitlines():
+        if line.lstrip().startswith('#') or not line.strip(): continue
+        script = line.split('|')[0].strip()
+        ok, bad = load_exceptions(script)
+        assert ok and not bad, line
+        assert (ROOT / script).is_file(), script
+        for _, rule, cp, _ in ok:
+            assert cp == '-' or (ROOT / cp).is_file(), cp

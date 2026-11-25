@@ -1,0 +1,13 @@
+# Reasoned per-file waivers for the AI-slop gate (scripts/check_slop_risk.py). Read by the gate itself, so the
+# Claude hook, .githooks/pre-commit, CI and production_pipeline.py all apply them the same way.
+# Every waiver is shown in the gate output and report as EXCEPTION with its reason; it is never silent.
+#
+# Format, one per line:   script path | RULE | counterpart | reason
+#   RULE        R2 (identical title), R4 (copy of our own other project) or R5 (no Sources section) only.
+#               R1 (competitor copy), R3, R6 and R7 can never be waived here.
+#   counterpart R2/R4: the ONE of our own scripts this file revises or preserves. The waiver holds only while no other
+#               match fails the rule (a competitor title or another project's copy still blocks). R5: use "-".
+# Add a line only for a documented revision, preserved reference or non-narration index, and only with the owner's
+# written approval. Do not use it to hide a new script. Pre-gate files stay in .slop-gate-legacy.txt (closed list).
+#
+# (no waivers recorded in this commit; the V3 package commit adds its own.)

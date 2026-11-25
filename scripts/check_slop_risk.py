@@ -22,6 +22,8 @@ JSONL_GLOB = 'data/extracted/channel-data/**/TRANSCRIPTS*.jsonl'
 TITLE_CSVS = ['docs/research/senior-health-2026-11-11/01-unified-video-table.csv']
 IMAGE_ROOTS = ['data/raw/competitors', 'research/finance-economics-intelligence/thumbnail-evidence']
 PRODUCTIONS = ROOT / 'productions'
+EXCEPTIONS = PRODUCTIONS / '.slop-gate-exceptions.txt'  # reviewed per-file waivers: `script | RULE | counterpart or - | reason`
+WAIVABLE = {'R2', 'R4', 'R5'}  # own-project title/copy and sources only; R1 (competitor copy), R3, R6, R7 are never waivable here
 IMG_EXT = {'.jpg', '.jpeg', '.png', '.webp'}
 COPY_FAIL, COPY_WARN = 0.15, 0.05      # share of our 5-gram shingles found in ONE other text
 TITLE_WARN = 0.8                       # word-set Jaccard
@@ -176,6 +178,29 @@ def load_own(project):
     return out
 
 
+def load_exceptions(script):
+    """(valid, ignored) register lines for one script (repo-relative path). A line is valid only for a waivable rule
+    with a reason; R2/R4 must name the one of our own scripts it revises or preserves, R5 must give '-'."""
+    ok, bad = [], []
+    for line in EXCEPTIONS.read_text().splitlines() if EXCEPTIONS.exists() else []:
+        parts = [x.strip() for x in line.split('|', 3)]
+        if line.lstrip().startswith('#') or len(parts) != 4 or parts[0] != script: continue
+        valid = parts[1] in WAIVABLE and parts[3] and (parts[2] == '-') == (parts[1] == 'R5')
+        (ok if valid else bad).append(parts)
+    return ok, bad
+
+
+def apply_waivers(findings, waivers, text, title, titles, own):
+    """FAIL -> EXCEPTION (reason kept) for register waivers. R2/R4 are waived only when nothing else still fails the
+    rule once the named counterpart is removed, so a competitor title or another project's copy still blocks."""
+    for _, rule, counterpart, reason in waivers:
+        residual = rule in ('R2', 'R4') and any(g['rule'] == rule and g['level'] == 'FAIL' for g in
+                                                evaluate(text, title, [], titles, [], [o for o in own if o[0] != counterpart]))
+        for f in findings:
+            if f['rule'] == rule and f['level'] == 'FAIL' and not residual:
+                f['level'] = 'EXCEPTION'; f['exception_reason'] = f'{reason} (register, counterpart {counterpart})'
+
+
 def run(script, title=None, channel=None, project=None, images=(), verified_presenter=False, exceptions=None):
     script = Path(script); raw = script.read_text(errors='ignore'); meta, text = front_matter(raw)
     title = title or meta.get('title'); channel = channel or meta.get('channel'); project = project or project_of(script)
@@ -184,8 +209,11 @@ def run(script, title=None, channel=None, project=None, images=(), verified_pres
     for p in image_files(images):
         try: imgs.append((rel(p), dhash(p)))
         except Exception: bad_imgs.append(rel(p))
-    findings = evaluate(text, title, load_corpus(), load_titles(), load_ref_hashes() if imgs else [], load_own(project),
-                        imgs, verified_presenter)
+    titles, own = list(load_titles()), load_own(project)
+    findings = evaluate(text, title, load_corpus(), titles, load_ref_hashes() if imgs else [], own, imgs, verified_presenter)
+    waivers, ignored = load_exceptions(rel(script))
+    apply_waivers(findings, waivers, text, title, titles, own)
+    for p in ignored: findings.append({'rule': p[1], 'level': 'WARN', 'detail': f'exception register line ignored (not waivable, no reason, or wrong counterpart): {p}'})
     if bad_imgs: findings.append({'rule': 'R7', 'level': 'WARN', 'detail': f'unreadable images not checked: {bad_imgs}'})
     if not images: findings.append({'rule': 'R7', 'level': 'WARN', 'detail': 'no images (header `images:` or --images); visual check skipped'})
     elif not imgs and not bad_imgs: findings.append({'rule': 'R7', 'level': 'WARN', 'detail': f'no image files found at {[str(i) for i in images]}'})
@@ -203,7 +231,9 @@ def run(script, title=None, channel=None, project=None, images=(), verified_pres
 
 
 def summary(r):
-    lines = [f"AI-slop gate {r['verdict']}  {r['script']}"] + [f"  {f['level']:9} {f['rule']}  {f['detail']}" for f in r['findings']]
+    lines = [f"AI-slop gate {r['verdict']}  {r['script']}"] + [
+        f"  {f['level']:9} {f['rule']}  {f['detail']}" + (f" | reason: {f['exception_reason']}" if f.get('exception_reason') else '')
+        for f in r['findings']]
     return '\n'.join(lines + ['  manual checklist (human confirms):'] + [f'   - {c}' for c in CHECKLIST] +
                      [f"  report: {r['script']}.slop-risk.json  rules: {r['rules']}"])
 
