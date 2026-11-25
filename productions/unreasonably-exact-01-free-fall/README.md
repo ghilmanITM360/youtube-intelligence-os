@@ -1,5 +1,8 @@
 # Unreasonably Exact — Day 1 (Mon 2026-11-23): "Does a Higher Fall Always Hit Harder? 1 Metre to the Edge of Space"
 
+**Latest lineup:** [V3 Top 10 master](../unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md). This approved production script remains preserved; the V3 rewrite is a separate alternative for review.
+
+
 **Status:** script **v3 APPROVED by the owner, 2026-11-19** (length cut of v2; the earlier 18 Nov approval was for v1.1). The v1.1 text (title "What If You Fell From Every Height — …") was approved on 2026-11-18, then critically reviewed. v2 replaces it and is not approved yet. Next: voice-over and animation.
 
 | File | What |

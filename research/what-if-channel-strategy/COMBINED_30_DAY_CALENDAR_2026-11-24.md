@@ -1,5 +1,8 @@
 # Unreasonably Exact — combined 30-day calendar (24 November 2026)
 
+**Historical planning baseline:** The owner-selected [official V3 Top 10 lineup](../../productions/unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md) supersedes the titles and sequence below for upcoming production planning. This dated calendar is preserved as history; its dates are not reconfirmed.
+
+
 Status: proposed planning baseline, not owner approval, science sign-off or publication approval. Day 1 is the actual launch day; dates move if videos are not ready. Titles are working titles. This combines the Claude and Codex reviews with the assistant's editorial recommendation.
 
 | # | Day | Format | Working title | Audience question |

@@ -1,11 +1,14 @@
 # What-If-style science channel — research, calendar and brand (2026-11-18)
 
+**Latest owner-selected Top 10:** [V3 master lineup and script package](../../productions/unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md). This supersedes earlier planning selections, while individual script approvals and historical records remain unchanged. [Research and production status](../../productions/unreasonably-exact-script-rewrite-v3/V3_RESEARCH_AND_PRODUCTION_STATUS.md).
+
+
 **Status:**
 - Calendar **APPROVED** by the owner on 2026-11-18. Day 1 = **Monday 2026-11-23**.
 - Channel name **decided 2026-11-18: Unreasonably Exact** (07). The handle must still be claimed in Studio.
 - Day 1 script **APPROVED** (v1.1): `productions/unreasonably-exact-01-free-fall/`.
 - Day 3 script drafted (v1.1, slop gate PASS): `productions/unreasonably-exact-03-neutron-bullet/`.
-- Scripts are not written yet. Each one goes in `productions/<project>/**/*SCRIPT*.md` and must pass `scripts/check_slop_risk.py`.
+- The historical calendar originally had unwritten scripts; later drafts and approved narrations are indexed in the V3 master. Each one goes in `productions/<project>/**/*SCRIPT*.md` and must pass `scripts/check_slop_risk.py`.
 
 ## Read in this order
 

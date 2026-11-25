@@ -1,5 +1,8 @@
 # script-research-2026-11-24 — Unreasonably Exact: transcript/Playbook reading, V2 scripts and audit
 
+**Latest owner-selected lineup and working scripts:** [V3 Top 10 master](../../../productions/unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md). This package is preserved as historical research.
+
+
 Everything here is text/data (no images, audio or video). Created 2026-11-24 on branch `research/what-if-channel-strategy-2026-11-18`.
 
 | Path | What it contains |

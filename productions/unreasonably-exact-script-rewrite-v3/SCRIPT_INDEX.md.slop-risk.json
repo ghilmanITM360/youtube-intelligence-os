@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-25T12:03:53+00:00",
+  "script": "productions/unreasonably-exact-script-rewrite-v3/SCRIPT_INDEX.md",
+  "sha256": "ca51a44f413dfe9e3c6bd2a2f8bfe24cc31240b77b92ddcf3f8c41ad01191a98",
+  "title": null,
+  "channel": null,
+  "project": "unreasonably-exact-script-rewrite-v3",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R2",
+      "level": "WARN",
+      "detail": "no title (header `title:` or --title); title duplicate check skipped"
+    },
+    {
+      "rule": "R5",
+      "level": "EXCEPTION",
+      "detail": "no \"Sources\" section/line with at least one item (own data, study, document, URL)",
+      "exception_reason": "Navigation index (titles, word counts, links); it contains no narration. Sources are in each script file and in SCIENTIFIC_CLAIMS_AND_SOURCES.md. Matched by the gate only because its file name contains \"script\". (register, counterpart -)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no images (header `images:` or --images); visual check skipped"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

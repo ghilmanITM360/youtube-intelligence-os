@@ -1,5 +1,8 @@
 # 05 — 30-day experimental calendar (v1, 2026-11-18)
 
+**Historical calendar:** For the latest owner-selected lineup, see the [official V3 Top 10 master](../../productions/unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md). Earlier calendar selections remain historical.
+
+
 **Status:** owner-approved inputs, as of 2026-11-18:
 - scoring weights and top-25 (03 §6)
 - remake rule: none from the last 12 months, at most one older

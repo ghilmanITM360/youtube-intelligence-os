@@ -1,6 +1,9 @@
 # Unreasonably Exact — research and script navigation
 
-This index preserves versions; it does not change approvals. The current calendar is [the combined 30-day calendar](COMBINED_30_DAY_CALENDAR_2026-11-24.md). Research and scripts remain subject to their individual qualifications.
+**Latest official lineup:** [owner-selected V3 Top 10](../../productions/unreasonably-exact-script-rewrite-v3/UNREASONABLY_EXACT_NEW_TOP_10_VIDEOS_V3.md); [package start](../../productions/unreasonably-exact-script-rewrite-v3/START_HERE.md); [research and production status](../../productions/unreasonably-exact-script-rewrite-v3/V3_RESEARCH_AND_PRODUCTION_STATUS.md). Slot 01 V3 is an alternative, Slot 02 is the approved expanded narration, and Slots 03–10 are working drafts.
+
+
+This index preserves versions; it does not change approvals. The [combined 30-day calendar](COMBINED_30_DAY_CALENDAR_2026-11-24.md) is a preserved historical planning baseline, superseded for lineup selection by V3. Research and scripts remain subject to their individual qualifications.
 
 - [Claude's ten story blueprints and source register](script-research-2026-11-24/blueprints_v1_2026-11-24/START_HERE.md); [blueprint files](script-research-2026-11-24/blueprints_v1_2026-11-24/blueprints/).
 - [Claude V1 scripts, fact checks and reviews](script-research-2026-11-24/v1_baseline/); [Claude V2 scripts and per-video packages](script-research-2026-11-24/videos/). These are distinct drafts. See [V2 package overview](script-research-2026-11-24/README.md), [claim ledger](script-research-2026-11-24/MASTER_SCIENCE_CLAIM_LEDGER_V2.csv), [audit reconciliation](script-research-2026-11-24/INDEPENDENT_AUDIT_RECONCILIATION_V2.md) and [sentence-level corrections](script-research-2026-11-24/SCRIPT_SENTENCE_LEVEL_CORRECTIONS.csv).
