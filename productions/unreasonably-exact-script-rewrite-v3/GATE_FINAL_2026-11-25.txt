@@ -1,0 +1,50 @@
+# Final AI-slop gate run, 2026-11-25 (pre-commit gate on the staged V3 scripts, after the register fix)
+# Verdicts: PASS=none, WARN=expected, FAIL must be 0. EXCEPTION lines are the six register waivers.
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/SCRIPT_INDEX.md
+  WARN      R2  no title (header `title:` or --title); title duplicate check skipped
+  EXCEPTION R5  no "Sources" section/line with at least one item (own data, study, document, URL) | reason: Navigation index (titles, word counts, links); it contains no narration. Sources are in each script file and in SCIENTIFIC_CLAIMS_AND_SOURCES.md. Matched by the gate only because its file name contains "script". (register, counterpart -)
+  WARN      R7  no images (header `images:` or --images); visual check skipped
+  report: productions/unreasonably-exact-script-rewrite-v3/SCRIPT_INDEX.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/reference/SLOT_01_APPROVED_SCRIPT.md
+  EXCEPTION R4  100% of script 5-grams match our other project productions/unreasonably-exact-01-free-fall/SCRIPT.md | reason: Byte-identical preserved copy (cmp checked 2026-11-25) of the owner-approved Day 1 v3 production script (approved 2026-11-19), kept as the authoritative Slot 01 reference beside the V3 alternative. Not a new script. (register, counterpart productions/unreasonably-exact-01-free-fall/SCRIPT.md)
+  EXCEPTION R2  title identical to existing video/project ['productions/unreasonably-exact-01-free-fall/SCRIPT.md'] | reason: Same video: the preserved reference carries the approved script's own title. (register, counterpart productions/unreasonably-exact-01-free-fall/SCRIPT.md)
+  report: productions/unreasonably-exact-script-rewrite-v3/reference/SLOT_01_APPROVED_SCRIPT.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_01_HIGHER_FALL_ALTERNATIVE.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_01_HIGHER_FALL_ALTERNATIVE.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_02_APPROVED.md
+  WARN      R4  6% of script 5-grams match our other project productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md
+  EXCEPTION R2  title identical to existing video/project ['productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md'] | reason: Same video as the earlier Codex draft; V3 holds the owner-approved 78.2 s recorded narration (authorship unconfirmed). Wording differs (R4 overlap 6%). (register, counterpart productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md)
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_02_APPROVED.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_03_VOYAGER_SIGNAL.md
+  WARN      R4  5% of script 5-grams match our other project productions/unreasonably-exact-codex-drafts-2026-11-24/03_voyager_signal/SCRIPT_CODEX_DRAFT.md
+  WARN      R2  title near-identical to [(0.83, 'productions/unreasonably-exact-codex-drafts-2026-11-24/03_voyager_signal/SCRIPT_CODEX_DRAFT.md')]
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_03_VOYAGER_SIGNAL.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_04_TINY_WORLD_ORBIT.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_04_TINY_WORLD_ORBIT.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_05_PHOBOS.md
+  WARN      R4  7% of script 5-grams match our other project productions/unreasonably-exact-codex-drafts-2026-11-24/05_phobos_escape/SCRIPT_CODEX_DRAFT.md
+  EXCEPTION R2  title identical to existing video/project ['productions/unreasonably-exact-codex-drafts-2026-11-24/05_phobos_escape/SCRIPT_CODEX_DRAFT.md'] | reason: V3 revision of the Codex draft of the same video; same title by design. Wording differs (R4 overlap 7%). (register, counterpart productions/unreasonably-exact-codex-drafts-2026-11-24/05_phobos_escape/SCRIPT_CODEX_DRAFT.md)
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_05_PHOBOS.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_06_VOYAGER_REPAIR.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_06_VOYAGER_REPAIR.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_07_LUNAR_LASER.md
+  WARN      R4  5% of script 5-grams match our other project productions/unreasonably-exact-codex-drafts-2026-11-24/07_lunar_laser/SCRIPT_CODEX_DRAFT.md
+  EXCEPTION R2  title identical to existing video/project ['productions/unreasonably-exact-codex-drafts-2026-11-24/07_lunar_laser/SCRIPT_CODEX_DRAFT.md'] | reason: V3 revision of the Codex draft of the same video; same title by design. Wording differs (R4 overlap 5%). (register, counterpart productions/unreasonably-exact-codex-drafts-2026-11-24/07_lunar_laser/SCRIPT_CODEX_DRAFT.md)
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_07_LUNAR_LASER.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_08_MOONLESS_OCEAN.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_08_MOONLESS_OCEAN.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_09_SOLAR_TIDES.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_09_SOLAR_TIDES.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+AI-slop gate WARN  productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_10_HUMAN_ISOLATION.md
+  WARN      R7  no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']
+  report: productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_10_HUMAN_ISOLATION.md.slop-risk.json  rules: docs/policies/AI-SLOP-RISK-RULES.md
+exit_code_of_hook=0

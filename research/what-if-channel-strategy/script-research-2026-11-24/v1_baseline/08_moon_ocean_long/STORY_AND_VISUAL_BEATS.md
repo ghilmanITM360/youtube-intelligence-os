@@ -1,0 +1,13 @@
+# Slot 08 · Long · Story and visual beats
+*Approximate times are computed from the script's word count (2.7 words/s + 1.5 s per paragraph) for a script of about 3:45; they are planning estimates, not measured video timings. Visual ideas are descriptions only; no asset, animation or render is requested or created.*
+
+| # | approx. time | viewer question | what the narration explains | cause and effect | visual idea (words) | claim ID | transition / payoff |
+|---|---|---|---|---|---|---|---|
+| 1 | 0:00-0:31 | What happens to the sea if the Moon is gone? | Premise; the sea does not drain or flood; tides need an explanation. | Premise -> therefore focus on tides | Moon fading from the night sky above a calm sea. | V08-C01, V08-C02 | Premise -> how tides work |
+| 2 | 0:31-0:56 | How do tides work? | Difference in pull; two bulges; Earth spins through them. | Pull difference -> therefore bulges -> therefore two highs | Earth with two ocean bulges and a rotating coast. | V08-C03 | Mechanism -> remove the Moon |
+| 3 | 0:56-1:18 | What happens right away? | The stretching goes; moving water keeps moving; the old rhythm fades; no number given. | Forcing removed -> BUT motion persists | Wave pattern slowly flattening; label "decay time: unknown". | V08-C04, V08-C05 | Fade -> what remains |
+| 4 | 1:18-2:15 | What is left? | Sun pulls ~180x harder but is ~400x farther, so stretching is ~46% of the Moon's; tides shrink; no single number. | Sun's smaller difference -> therefore smaller tide | Two bars: Moon stretching 100, Sun 46, labelled "ideal ocean". | V08-C06, V08-C07, V08-C08 | Size -> timing |
+| 5 | 2:15-2:50 | What changes in timing? | Today ~50 min later each day; without the Moon the main rhythm follows the Sun (12 h), at about the same times daily at a beach, with local offsets. | Solar clock -> therefore no daily drift | A beach clock with highs at fixed times; offsets marked per coast. | V08-C09, V08-C10 | Timing -> monthly cycle |
+| 6 | 2:50-3:03 | What about spring and neap tides? | The fortnightly swing needs two tide-raisers and disappears. | Two forces -> therefore alignment cycle; one force -> none | Spring/neap curve flattening. | V08-C11 | Cycle gone -> what we do not know |
+| 7 | 3:03-3:21 | What is not answered? | Tilt, seasons and day length: separate and partly debated. | Limit stated | Card: "Not answered here". | V08-C12, V08-C13 | Limits -> answer |
+| 8 | 3:21-3:45 | So what is the answer? | Oceans do not drain, tides do not vanish; they lose the Moon's rhythm and most size; details need models and gauges. | Answer | Final frame: one small solar bulge. | V08-C07, V08-C10 | End |

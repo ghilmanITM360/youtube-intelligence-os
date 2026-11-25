@@ -1,0 +1,967 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | DOTPROD = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "small",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"text": {
+			"ctx": 448,
+			"state": 768,
+			"head": 12,
+			"layer": 12
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/Users/ghilmanislam360/.cache/hyperframes/whisper/models/ggml-small.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:03,880"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 3880
+			},
+			"text": " This question comes from Vittorio, who asks, \"What if a glass of water was, all of a"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:03,880",
+				"to": "00:00:06,360"
+			},
+			"offsets": {
+				"from": 3880,
+				"to": 6360
+			},
+			"text": " sudden, literally half empty?\""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,360",
+				"to": "00:00:11,520"
+			},
+			"offsets": {
+				"from": 6360,
+				"to": 11520
+			},
+			"text": " The pessimist is probably more right about how it would turn out than the optimist."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:11,520",
+				"to": "00:00:14,880"
+			},
+			"offsets": {
+				"from": 11520,
+				"to": 14880
+			},
+			"text": " When people say \"glass half empty,\" they usually mean a glass containing equal parts"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:14,880",
+				"to": "00:00:16,080"
+			},
+			"offsets": {
+				"from": 14880,
+				"to": 16080
+			},
+			"text": " water and air."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:16,080",
+				"to": "00:00:19,200"
+			},
+			"offsets": {
+				"from": 16080,
+				"to": 19200
+			},
+			"text": " Traditionally, the optimist sees the glass as half full while the pessimist sees it as"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:19,200",
+				"to": "00:00:20,200"
+			},
+			"offsets": {
+				"from": 19200,
+				"to": 20200
+			},
+			"text": " half empty."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:20,200",
+				"to": "00:00:23,480"
+			},
+			"offsets": {
+				"from": 20200,
+				"to": 23480
+			},
+			"text": " Linguist Gretchen McCulloch points out that \"we choose which reference state dimension"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:23,480",
+				"to": "00:00:27,640"
+			},
+			"offsets": {
+				"from": 23480,
+				"to": 27640
+			},
+			"text": " as a way to efficiently indicate whether the glass is currently being filled or emptied.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:00:27,640",
+				"to": "00:00:28,960"
+			},
+			"offsets": {
+				"from": 27640,
+				"to": 28960
+			},
+			"text": " Language is cool."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,960",
+				"to": "00:00:31,940"
+			},
+			"offsets": {
+				"from": 28960,
+				"to": 31940
+			},
+			"text": " But what if the empty half of the glass were actually empty?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:31,940",
+				"to": "00:00:32,940"
+			},
+			"offsets": {
+				"from": 31940,
+				"to": 32940
+			},
+			"text": " A vacuum."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:32,940",
+				"to": "00:00:35,140"
+			},
+			"offsets": {
+				"from": 32940,
+				"to": 35140
+			},
+			"text": " The vacuum would definitely not last long."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:35,140",
+				"to": "00:00:39,920"
+			},
+			"offsets": {
+				"from": 35140,
+				"to": 39920
+			},
+			"text": " But exactly what happens depends on a key question that nobody usually bothers to ask."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:39,920",
+				"to": "00:00:41,440"
+			},
+			"offsets": {
+				"from": 39920,
+				"to": 41440
+			},
+			"text": " Which half is empty?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,440",
+				"to": "00:00:44,440"
+			},
+			"offsets": {
+				"from": 41440,
+				"to": 44440
+			},
+			"text": " For our scenario, we'll imagine three different half-empty glasses."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:44,440",
+				"to": "00:00:49,000"
+			},
+			"offsets": {
+				"from": 44440,
+				"to": 49000
+			},
+			"text": " The traditional air/water glass, a vacuum on top glass, and a vacuum on bottom glass."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:49,000",
+				"to": "00:00:52,340"
+			},
+			"offsets": {
+				"from": 49000,
+				"to": 52340
+			},
+			"text": " We'll imagine the vacuums appear at time t=0."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:52,340",
+				"to": "00:00:55,060"
+			},
+			"offsets": {
+				"from": 52340,
+				"to": 55060
+			},
+			"text": " For the first handful of microseconds, nothing happens."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:55,060",
+				"to": "00:00:58,020"
+			},
+			"offsets": {
+				"from": 55060,
+				"to": 58020
+			},
+			"text": " On this time scale, even the air molecules are nearly stationary."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:58,020",
+				"to": "00:01:01,780"
+			},
+			"offsets": {
+				"from": 58020,
+				"to": 61780
+			},
+			"text": " For the most part, air molecules jiggle around at speeds of a few hundred meters per second."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:01,780",
+				"to": "00:01:04,600"
+			},
+			"offsets": {
+				"from": 61780,
+				"to": 64600
+			},
+			"text": " But at any given time, some of them happen to be moving faster than others."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:04,600",
+				"to": "00:01:07,320"
+			},
+			"offsets": {
+				"from": 64600,
+				"to": 67320
+			},
+			"text": " The fastest few are moving at over a thousand meters per second."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:07,320",
+				"to": "00:01:10,420"
+			},
+			"offsets": {
+				"from": 67320,
+				"to": 70420
+			},
+			"text": " These are the first few to drift into the vacuum in the glass on the left."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:10,420",
+				"to": "00:01:13,880"
+			},
+			"offsets": {
+				"from": 70420,
+				"to": 73880
+			},
+			"text": " The vacuum on the right is surrounded by barriers, so the air molecules can't easily get in."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:13,880",
+				"to": "00:01:17,120"
+			},
+			"offsets": {
+				"from": 73880,
+				"to": 77120
+			},
+			"text": " The water, being liquid, doesn't expand to fill the vacuum in the same way that air"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:17,120",
+				"to": "00:01:18,120"
+			},
+			"offsets": {
+				"from": 77120,
+				"to": 78120
+			},
+			"text": " does."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:18,120",
+				"to": "00:01:21,880"
+			},
+			"offsets": {
+				"from": 78120,
+				"to": 81880
+			},
+			"text": " However, in a vacuum, it does start to boil, slowly shedding water vapor into the empty"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:21,880",
+				"to": "00:01:22,880"
+			},
+			"offsets": {
+				"from": 81880,
+				"to": 82880
+			},
+			"text": " space."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:22,880",
+				"to": "00:01:26,040"
+			},
+			"offsets": {
+				"from": 82880,
+				"to": 86040
+			},
+			"text": " The water on the surface of the left glass also starts to boil, but the incoming air will"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:26,040",
+				"to": "00:01:28,380"
+			},
+			"offsets": {
+				"from": 86040,
+				"to": 88380
+			},
+			"text": " stop it before it really gets going."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,380",
+				"to": "00:01:31,680"
+			},
+			"offsets": {
+				"from": 88380,
+				"to": 91680
+			},
+			"text": " After a few hundred microseconds, the air rushing into the glass on the left fills the vacuum"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:31,680",
+				"to": "00:01:35,120"
+			},
+			"offsets": {
+				"from": 91680,
+				"to": 95120
+			},
+			"text": " completely and rams into the surface of the water, sending a pressure wave through the"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:35,120",
+				"to": "00:01:36,120"
+			},
+			"offsets": {
+				"from": 95120,
+				"to": 96120
+			},
+			"text": " liquid."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:36,120",
+				"to": "00:01:39,600"
+			},
+			"offsets": {
+				"from": 96120,
+				"to": 99600
+			},
+			"text": " The sides of the glass bulge slightly, but they contain the pressure and don't break."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:39,600",
+				"to": "00:01:42,640"
+			},
+			"offsets": {
+				"from": 99600,
+				"to": 102640
+			},
+			"text": " Shockwave reverberates through the water and back into the air, joining the turbulence"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:42,640",
+				"to": "00:01:43,840"
+			},
+			"offsets": {
+				"from": 102640,
+				"to": 103840
+			},
+			"text": " already there."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:43,840",
+				"to": "00:01:47,040"
+			},
+			"offsets": {
+				"from": 103840,
+				"to": 107040
+			},
+			"text": " The shockwave from the vacuum collapse takes around a millisecond to spread out through"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:47,040",
+				"to": "00:01:50,600"
+			},
+			"offsets": {
+				"from": 107040,
+				"to": 110600
+			},
+			"text": " the other two glasses, which both flex slightly as the wave passes through them."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:50,600",
+				"to": "00:01:54,800"
+			},
+			"offsets": {
+				"from": 110600,
+				"to": 114800
+			},
+			"text": " In a few more milliseconds, the shockwave reaches the human's ears as a loud bang."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:54,800",
+				"to": "00:01:57,800"
+			},
+			"offsets": {
+				"from": 114800,
+				"to": 117800
+			},
+			"text": " And this time, the glass on the right starts to visibly lift into the air."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:57,800",
+				"to": "00:02:01,640"
+			},
+			"offsets": {
+				"from": 117800,
+				"to": 121640
+			},
+			"text": " The air pressure around the glass is trying to squeeze the glass and water together."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:01,640",
+				"to": "00:02:04,000"
+			},
+			"offsets": {
+				"from": 121640,
+				"to": 124000
+			},
+			"text": " This effect is easy to imagine with a wine glass."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:04,000",
+				"to": "00:02:07,840"
+			},
+			"offsets": {
+				"from": 124000,
+				"to": 127840
+			},
+			"text": " Air pressure at sea level is around 15 pounds per square inch, so in a typical glass, the"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:07,840",
+				"to": "00:02:11,480"
+			},
+			"offsets": {
+				"from": 127840,
+				"to": 131480
+			},
+			"text": " water's surface and the glass below it are being pushed down with a force of almost exactly"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:11,480",
+				"to": "00:02:12,480"
+			},
+			"offsets": {
+				"from": 131480,
+				"to": 132480
+			},
+			"text": " a hundred pounds."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:12,480",
+				"to": "00:02:16,600"
+			},
+			"offsets": {
+				"from": 132480,
+				"to": 136600
+			},
+			"text": " Normally, this force is opposed by the air pushing up on the bottom of the glass."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:16,600",
+				"to": "00:02:21,040"
+			},
+			"offsets": {
+				"from": 136600,
+				"to": 141040
+			},
+			"text": " But in the glass on the right, air pressure pushes the glass up from below on opposed,"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:21,040",
+				"to": "00:02:25,480"
+			},
+			"offsets": {
+				"from": 141040,
+				"to": 145480
+			},
+			"text": " with a hundred pounds of force, while simultaneously pushing the water down from above."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:25,480",
+				"to": "00:02:27,720"
+			},
+			"offsets": {
+				"from": 145480,
+				"to": 147720
+			},
+			"text": " This is the force we think of as suction."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:27,720",
+				"to": "00:02:31,600"
+			},
+			"offsets": {
+				"from": 147720,
+				"to": 151600
+			},
+			"text": " The vacuum on the left didn't last long enough for the suction to noticeably lift the glass."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:31,600",
+				"to": "00:02:34,840"
+			},
+			"offsets": {
+				"from": 151600,
+				"to": 154840
+			},
+			"text": " But since air can't get into the vacuum on the right, the glass and the water begin to"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:34,840",
+				"to": "00:02:36,480"
+			},
+			"offsets": {
+				"from": 154840,
+				"to": 156480
+			},
+			"text": " slide toward each other."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:36,480",
+				"to": "00:02:39,720"
+			},
+			"offsets": {
+				"from": 156480,
+				"to": 159720
+			},
+			"text": " By now, the boiling water has filled the vacuum with a very small amount of water vapor."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:39,720",
+				"to": "00:02:43,840"
+			},
+			"offsets": {
+				"from": 159720,
+				"to": 163840
+			},
+			"text": " However, the glass and the water are moving too fast for the vapor buildup to matter."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:43,840",
+				"to": "00:02:47,360"
+			},
+			"offsets": {
+				"from": 163840,
+				"to": 167360
+			},
+			"text": " Less than 10 milliseconds after the clock started, they're flying toward each other at several"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:47,360",
+				"to": "00:02:48,720"
+			},
+			"offsets": {
+				"from": 167360,
+				"to": 168720
+			},
+			"text": " meters per second."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:48,720",
+				"to": "00:02:52,440"
+			},
+			"offsets": {
+				"from": 168720,
+				"to": 172440
+			},
+			"text": " Without a cushion of air between them, just a few wisps of water vapor, the water smacks"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:52,440",
+				"to": "00:02:54,640"
+			},
+			"offsets": {
+				"from": 172440,
+				"to": 174640
+			},
+			"text": " into the bottom of the glass like a hammer."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:54,640",
+				"to": "00:02:58,440"
+			},
+			"offsets": {
+				"from": 174640,
+				"to": 178440
+			},
+			"text": " Water is very nearly incompressible, so the impact isn't spread out over time."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:58,440",
+				"to": "00:03:00,200"
+			},
+			"offsets": {
+				"from": 178440,
+				"to": 180200
+			},
+			"text": " It comes as a single sharp shock."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:00,200",
+				"to": "00:03:03,400"
+			},
+			"offsets": {
+				"from": 180200,
+				"to": 183400
+			},
+			"text": " The momentary force on the glass is immense, and it breaks."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:03,400",
+				"to": "00:03:07,240"
+			},
+			"offsets": {
+				"from": 183400,
+				"to": 187240
+			},
+			"text": " This water hammer effect, which is responsible for the clunk you sometimes hear in old plumbing"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:07,240",
+				"to": "00:03:10,520"
+			},
+			"offsets": {
+				"from": 187240,
+				"to": 190520
+			},
+			"text": " when you turn off the faucet, can also be seen in the well-known party trick of smacking"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:10,520",
+				"to": "00:03:13,000"
+			},
+			"offsets": {
+				"from": 190520,
+				"to": 193000
+			},
+			"text": " the top of a glass bottle to blow out the bottom."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:13,000",
+				"to": "00:03:16,400"
+			},
+			"offsets": {
+				"from": 193000,
+				"to": 196400
+			},
+			"text": " In our situation, the forces would be more than enough to destroy even the heaviest drinking"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:16,400",
+				"to": "00:03:17,400"
+			},
+			"offsets": {
+				"from": 196400,
+				"to": 197400
+			},
+			"text": " glasses."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:17,400",
+				"to": "00:03:20,600"
+			},
+			"offsets": {
+				"from": 197400,
+				"to": 200600
+			},
+			"text": " In fact, when I was trying to calculate this, I bought a bunch of cheap glasses from the"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:20,600",
+				"to": "00:03:24,040"
+			},
+			"offsets": {
+				"from": 200600,
+				"to": 204040
+			},
+			"text": " dollar store and then tested, you know, applying different amounts of force to the base of"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:24,040",
+				"to": "00:03:25,560"
+			},
+			"offsets": {
+				"from": 204040,
+				"to": 205560
+			},
+			"text": " them to see how easy they were to blow out."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:25,560",
+				"to": "00:03:29,520"
+			},
+			"offsets": {
+				"from": 205560,
+				"to": 209520
+			},
+			"text": " And one of the glasses just didn't break no matter what I did, so I kept it, it sits"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:29,520",
+				"to": "00:03:33,760"
+			},
+			"offsets": {
+				"from": 209520,
+				"to": 213760
+			},
+			"text": " on my shelf, it doesn't match any of my other glasses, which kind of annoys me, and every"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:33,760",
+				"to": "00:03:36,640"
+			},
+			"offsets": {
+				"from": 213760,
+				"to": 216640
+			},
+			"text": " time I look at it, I think like, \"Thanks, science.\""
+		},
+		{
+			"timestamps": {
+				"from": "00:03:36,640",
+				"to": "00:03:38,400"
+			},
+			"offsets": {
+				"from": 216640,
+				"to": 218400
+			},
+			"text": " So this is why I stick to theory."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:38,400",
+				"to": "00:03:41,240"
+			},
+			"offsets": {
+				"from": 218400,
+				"to": 221240
+			},
+			"text": " The bottom is carried downward by the water and thunks against the table."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:41,240",
+				"to": "00:03:44,760"
+			},
+			"offsets": {
+				"from": 221240,
+				"to": 224760
+			},
+			"text": " The water splashes around it, spraying droplets and glass shards in all directions."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:44,760",
+				"to": "00:03:48,880"
+			},
+			"offsets": {
+				"from": 224760,
+				"to": 228880
+			},
+			"text": " Meanwhile, the detached upper portion of the glass continues to rise."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:48,880",
+				"to": "00:03:52,200"
+			},
+			"offsets": {
+				"from": 228880,
+				"to": 232200
+			},
+			"text": " After half a second, the observer's hearing of hop have begun to flinch."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:52,200",
+				"to": "00:03:55,840"
+			},
+			"offsets": {
+				"from": 232200,
+				"to": 235840
+			},
+			"text": " Their heads might lift involuntarily to follow the rising movement of the glass."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:55,840",
+				"to": "00:03:59,600"
+			},
+			"offsets": {
+				"from": 235840,
+				"to": 239600
+			},
+			"text": " The glass has just enough speed to bang into the ceiling, breaking into fragments, which"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:59,600",
+				"to": "00:04:01,760"
+			},
+			"offsets": {
+				"from": 239600,
+				"to": 241760
+			},
+			"text": " then return to the table."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:01,760",
+				"to": "00:04:02,760"
+			},
+			"offsets": {
+				"from": 241760,
+				"to": 242760
+			},
+			"text": " The lesson?"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:02,760",
+				"to": "00:04:06,840"
+			},
+			"offsets": {
+				"from": 242760,
+				"to": 246840
+			},
+			"text": " If the optimist says the glass is half full, and the pessimist says the glass is half empty,"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:06,840",
+				"to": "00:04:08,240"
+			},
+			"offsets": {
+				"from": 246840,
+				"to": 248240
+			},
+			"text": " the physicist shucks."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:14,760",
+				"to": "00:04:19,200"
+			},
+			"offsets": {
+				"from": 254760,
+				"to": 259200
+			},
+			"text": " [music]"
+		}
+	]
+}

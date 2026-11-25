@@ -1,0 +1,12 @@
+# Fact check and sources
+
+Reviewed by Codex, 2026-11-24. Sources distinguish reported facts from model conclusions; no expert sign-off. The detailed V2 fact-check remains a research lead, not authority for unverified conclusions.
+
+| ID | Script claim | Source and section; calculation | Assumptions / uncertainty | Status |
+|---|---|---|---|---|
+| 08-01 | Moon removed instantaneously without explosion and other initial conditions unchanged | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: Thought experiment; not a physical removal mechanism | Idealized and locally instantaneous influence removal | ASSUMPTION |
+| 08-02 | Earth gravity holds ocean; differential lunar gravity helps drive tides | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: NOAA https://www.nesdis.noaa.gov/about/k-12-education/oceans-coasts/what-causes-tides | Two-bulge picture is a simplified equilibrium model | DIRECTLY_SOURCED |
+| 08-03 | Real tides depend on basins, depth, rotation and geography; cycles differ | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: NOAA https://oceanservice.noaa.gov/facts/moon-tide.html | Actual local amplitudes and timing not estimated | DIRECTLY_SOURCED |
+| 08-04 | Existing motion continues and dissipates after forcing change | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: Momentum and dissipative ocean dynamics; no numerical simulation | Timescales and transient pattern UNRESOLVED | MODEL_RESULT + EXPERT_REVIEW_NEEDED |
+| 08-05 | Solar tide forcing remains; spring-neap cycle from Sun-Moon alignment disappears | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: NOAA https://oceanservice.noaa.gov/education/tutorial_tides/tides06_variations.html | No precise local tide-height fraction; ocean model needed | MODEL_RESULT |
+| 08-06 | Winds/storms move water; long-term tilt/climate excluded | [NOAA explanation of tides as waves and geography](https://oceanservice.noaa.gov/facts/moon-tide.html); additional source or calculation: NOAA tides/water levels; stipulated scope | No long-term climate prediction | DIRECTLY_SOURCED + ASSUMPTION |

@@ -1,0 +1,5 @@
+# Research coverage and limitations
+
+DRAFT knowledge-base document, prepared inside the audit folder (not a repository branch). Every rule below carries an ID in `RULE_EVIDENCE_LINKS`/`RULE_EVIDENCE_LEDGER.csv`; coverage and limits are in `WHAT_IF_RESEARCH_COVERAGE_AND_LIMITATIONS.md`. Review state: self-reviewed unless stated; no independent review exists. Rule classes: OBSERVED, MEASURED, INFERRED, HYPOTHESIS, OWNER.
+
+See `03_CORPUS_COMPLETENESS_REPORT.md` for counts (92 listed; 88 with media; 83 catalog transcripts; ASR 88; tiers DEEP 1, TARGETED 43, STRUCTURAL 44, UNAVAILABLE 4). Limits: no listening; one partial independent review by a different tool (Codex, 2026-11-23; no expert, no listening, sample checks only) and no independent validation of the rules or the visual coding; 1 video deep-viewed; 156 of 719 measured shots and 0 of 2,160 events interpreted; style measured on 125 non-random frames; physics checked for 10 claims; no book-illustration comparison; article correspondence unverified (22 title candidates, 22 weak, 48 unknown); Machine A data not checked; faint-layer and sub-15 px changes not examined. No retention or performance data.
