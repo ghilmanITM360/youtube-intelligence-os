@@ -1,0 +1,21 @@
+# Built-in imagegen prompt set — normalized production record
+
+Mode: built-in image_gen, transparent_background=true for every call. No API/CLI fallback. These are normalized prompt summaries; exact request wording remains in the Codex tool-call history. Generation IDs map to the preserved source sheets in package_codex_assets.py and manifest.json.
+
+Shared specification: original hand-drawn scientific educational illustration; thin slightly irregular charcoal #272822 outlines; flat muted fills; suit/helmet #F2EFE5; trousers #D6D7CB, far side #ACAEA3; straps #535852; skin #F4E5CC; closed tan container #BC9A77 with pale stitched flap. Minimal dot eyes behind goggles, small mouth, no gloss/gradients/shadows, no canopy or deployment handles, no labels/grid lines, isolated transparent parts, generous gutters. Do not copy xkcd characters.
+
+1. CH-01 / 7fd22fe9:5×3 side-facing-right sheet. Row1 torso,pack,head,near upper_arm,near forearm;row2 near hand,thigh,shin,foot,far upper_arm;row3 far forearm,hand,thigh,shin,foot. Belly-to-earth arch, heels raised, elbows soft. Rounded overlapping joint ends. Replaced baked-pack torso, grey head and bent upper-arm pieces with generated replacements listed below.
+2. CH-03 first attempt / 5fd60a0c:5×3 rear/above sheet, torso without pack,closed pack,rear helmet,12 limb segments. Rejected because unwanted background/shading and over-detail; not used in exports.
+3. CH-05 / 5afc81fd:4 columns, sleeve/forearm from lower-right to upper-left,dark cuff,relaxed right dorsal glove,dark instrument strap. No dial painted on sleeve. Flat grey-green glove, no bare skin.
+4. AC-01 / cee86617:high-wing single-engine jump aircraft flying right, exact side profile, open side door, simple windows, wheels; no propeller on body; separate narrow vertical propeller blur disc lower left; no logos or registration text.
+5. CH-02 / 673a11c0:5×3 three-quarter front-left cutout kit, same part ordering asCH-01, single straight limb segments with round overlap ends; torso without head or pack; looking viewer/right. Its separate upper-arm pieces also supply the registered CH-01 upper arms.
+6. CH-04 / d051a312:4×2 facial kit. Row1 torso without head,head with empty goggles/no eyes/brows/mouth,pair dot eyes,closed lid pair with skin patches;row2 brows,neutral mouth,slightly open mouth,spare skin patch. Final head replaced to fill empty lenses opaquely.
+7. CH-06 / ca0d37e7:two dorsal gloves, left and right, palms down, relaxed fingers toward top/inward, thumbs inward, grey-green gloves/dark cuff and warm-paper sleeve, cuff-edge pivot, no sky/body/instrument.
+8. IN-01 / b32c30e4:2×2 kit:semicircular empty housing,matching unlabelled tick dial,no numerals,straight upward needle,separate pivot cap. Illustrative speed-change indicator, not an altimeter.
+9. EN-01 / fdb56666:3×3 sheet:first six cells distinct flat-bottomed cumulus, last three thin horizontal wisps. Offwhite and pale grey-blue fills with thin charcoal outlines, no sky background.
+10. Torso correction / 726ffb49:two separate torso-only cutouts:horizontal side torso hips-left shoulders-right; rear upright torso shoulders-top hips-bottom. Both have dark harness but no limbs/head/pack, warm-paper fills, transparent silhouettes.
+11. CH-03 replacement / 14b5f0c6:5×3 rear-view sheet; torso,closed tan pack,rear cream helmet,left upper_arm,left forearm;left hand,thigh,shin,sole boot,right upper_arm;right forearm,hand,thigh,shin,sole boot. Pure transparent background, no background wash, no handles. Selected final rear artwork.
+12. Side-head correction / 433d564c:single exact side-facing-right adult head, warm-paper rounded helmet one broken highlight,broad grey-green goggle band,dot eye,small neutral mouth,skin face,neck attachment,transparent outside.
+13. Closeup-head correction / a5ea6565:single front helmet head,no eyes/brows/mouth; both goggle lenses opaque pale skin rather than transparent holes; small nose,warm-paper helmet and broad dark band,transparent only outside silhouette.
+
+13 total generated outputs,12 selected source files. Source sheets are real generated artwork. Splitting/registration uses their painted pixels; existing procedural SVGs provide only attachment locations and reference bounds.

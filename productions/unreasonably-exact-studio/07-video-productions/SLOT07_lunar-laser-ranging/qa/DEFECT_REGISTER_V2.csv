@@ -1,0 +1,20 @@
+id,area,defect,evidence,status,correction,owner
+D01,P13,push strobe on the cube grid,frame diff 35.2 at 45.2 s; in_out_cubic peak slope 3,FIXED (re-test pending in cut),earlier start + smoothstep + rack focus,Claude
+D02,P05,473 px gap at near shoulder,P05 check FAIL v1,FIXED,shoulder skinning (rig v2),Claude
+D03,B4L,dome closed in building layer,B4L contact composite,FIXED,Codex B4L2 one-defect edit,Codex
+D04,B5PR,reflector panel plain (no cube grid),AS11-40-5952 comparison,FIXED (composite),array composite; Codex edit B5PR2 rejected (IoU 0.327),Claude/Codex
+D05,RETRO side view R2a,base/handle differ from the 3/4 master,overlay,RESOLVED BY DECISION,no shot uses the side view; all shots use the 3/4 master or the B5P family,Claude (director)
+D06,OPEN A,3.5-7.0 s quiet mid-section,filmstrip diff curve flat,FIXED IN V2 (sound),"V2 opening cues: curiosity pad, two-note ""not this"", glass rise on ""question""; bed 3.5-7 s -49.9 -> -37.7 dBFS RMS; visual drift not added (no explanatory purpose). Listening not done.",Claude
+D07,OPEN/G22,faint seam between closed and open building while shutter opens,P04 frame 1.07 s,FIXED IN V2,blend restricted to the slit region of the dome (obs_rig.compose); 4-state still check,Codex
+D08,"G12 B15, G37 B38",scatter / measurement dots small at phone size,rough-cut stills at 1/4 scale,FIXED IN V2 (needs phone viewing),"dots enlarged 1.5-1.7x, glow on G37 points",Claude
+D09,B29,atmosphere effect not visualised,shot audit,FIXED IN V2,"new G29 scene (delay + correction tick, C09 rule)",Claude
+D10,style,Codex art near-photoreal; brief asks premium cinematic illustration,consistency sheet,PARTIAL (grade) / OWNER DECISION,"V2 keeps the realism and unifies with one global grade, vignette, grain (brief section 9); painterly repaint not done",Owner
+D11,audio,sound design is procedural V1; not human-listened,mix_report.json,OPEN,"V2 mix is original synthesised library, measured -17.4 LUFS / -2.0 dBTP; still not human-listened",Owner
+D12,P13 push,pixel stair-steps on cube rims 45.2-45.9 s; over-soft 44.8 s,V1 stills 45.2/45.6 s,FIXED IN V2,offscreen resolution follows zoom (cap 4x); rack focus 3.2->2.4; dissolve earlier,Claude
+D13,cut 43.55 s,astronaut vanishes mid-action at P06->P13 cut,V1 stills 43.6/44.0,FIXED IN V2,P06 to 44.30 s + 0.35 s dissolve,Claude
+D14,B28 65.9 s,"""A few photons"" showed the histogram",V1 still 66.0,FIXED IN V2,P09 three-dot segment 65.55-67.45,Claude
+D15,captions,generic card + per-word highlight,V1 frames,FIXED IN V2,"Comic Neue phrase captions, SRT",Claude
+D16,badges,top badges at 5 % height (phone UI zone); jargon slow-motion badge,V1 frames,FIXED IN V2,"BADGE_Y 150; ""SLIGHTLY SLOWED DOWN""",Claude
+D17,38.2-39.1 s,imagined-mirror dashed box is generic,V1 still 39.0,OPEN (V3),redesign with art,Claude/Codex
+D18,88-96 s,final orbit composition small/empty,V1 still 91.0,OPEN (V3),larger Earth-Moon layout,Claude
+D19,60-67 s,data-plot fields mostly empty at phone size,V1 stills 62/66,OPEN (V3),tighter layout,Claude

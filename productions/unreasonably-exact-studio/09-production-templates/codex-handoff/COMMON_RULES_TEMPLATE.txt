@@ -1,0 +1,8 @@
+RULES FOR THIS RUN (Claude = art director; you = illustrator). One deliverable only.
+1. FIRST call view_image on every attached/listed reference and look at it at full size. Say in NOTES.md what you saw in each (1 line each).
+2. Use the built-in image_gen. When a master or guide image is listed, load it with view_image and use image_gen in EDIT mode on it (do not generate from text alone).
+3. One single view of one subject. No inset, no second drawing, no turnaround, no reference sheet, no text, no labels, no watermark.
+4. Native size only: state it (1024x1024, 1536x1024 or 1024x1536). Do not resample.
+5. Style: painterly-clean realistic illustration (soft-edged painted forms, true silhouettes, restrained detail), one sun from the upper left, cast shadows to the right. Not a photo, not cartoon, no outline strokes.
+6. Validate: <python> tools/validate_asset.py <file> --canvas <WxH>. If a check fails, make at most ONE edit call that names only that defect.
+7. Write only inside your run folder: the PNG(s), NOTES.md (<= 12 lines: references viewed, native size, assumptions, validator result). Nothing else. Do not judge final acceptance; Claude does.

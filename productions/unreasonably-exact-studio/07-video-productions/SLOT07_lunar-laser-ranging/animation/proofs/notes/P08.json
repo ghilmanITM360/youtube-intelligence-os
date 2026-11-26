@@ -1,0 +1,13 @@
+{
+ "defects": [
+  "v1: two-line captions broke as 'Not two and a half seconds each / way.' (a lone word on line 2) and the white text sat on bright cloud, low contrast.",
+  "Found while viewing P11 (same stopwatch): the digital readout box covered the dial numerals 1 and 2. Fixed in the shared stopwatch, so it also applies here.",
+  "Open: captions take three lines in other proofs; the 1.28 s labels are dimmed to 30% while counting and may read as disabled on a phone; the arc bracket around the dial sits close to the Moon when the dial is at top-left; the badge 'SLOW-MOTION x1.2 ILLUSTRATIVE' is wordy against the design doc's zero-sentence budget (kept because the brief asks for an illustrative-time badge); the return pulse reaches Earth at the END of 'return.' (25.62 s), not at the word start, and only the stills of this proof were viewed."
+ ],
+ "corrections": [
+  "Caption renderer now balances two-line breaks and draws a dark scrim; stopwatch readout moved into its own pill under the dial; both legs forced to the same slow factor (1.2) so the badge number is true for the whole journey (asserted within 0.02)."
+ ],
+ "retest": [
+  "Re-rendered, stills at 1.2, 2.9, 3.2-3.9, 5.3, 7.0, 8.4 s re-viewed: captions balanced, numerals clear, colour grammar correct. Checks PASS. The strike-through on the ghost 2.56 label was not captured in a still (it lasts ~0.3 s); its geometry is code-checked only by construction."
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "defects": [
+  "v1: the digital readout box sat on top of the dial numerals 1 and 2 (visible in the 2.30 s frame).",
+  "v1: the Earth looked smeared (1024x512 procedural texture magnified ~5x) and drew attention away from the stopwatch.",
+  "v1: the stopwatch crown touched the 'NOT TO SCALE' mark after the punch-in.",
+  "v1 test bug: the final-reading assertion started one frame before the stop (found because the assert fired: model_t was 2.5549 on frame 160).",
+  "Open: the slow-motion factor (1.30) differs from the design doc's ~1.8 (documented departure); the punch-in is toward the stopwatch with the whole diagram, so the Earth limb rises into the caption band; the arrival ring on Earth is small and partly hidden behind the caption scrim; only stills viewed."
+ ],
+ "corrections": [
+  "Readout moved into a pill under the dial; Earth textures raised to 4096x2048 and pre-built before forking workers; stopwatch moved down 42 units; assertion range fixed (ceil)."
+ ],
+ "retest": [
+  "Re-rendered: frames at 1.0, 2.5, 3.9, 5.0, 5.5, 5.6 s viewed. ASSERT final reading '2.56' and model_t == 2.56 on every frame after the stop: PASS (file ASSERT_RESULT_final_reading.txt). Pixel check: bead centroid vs displayed reading within 6.9 design units over 40 frames."
+ ]
+}

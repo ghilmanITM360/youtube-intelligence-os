@@ -1,0 +1,6 @@
+- Interaction master: astronaut grips the reflector handle; legs overlap its left side.
+- Reflector reference: tilted dark panel in a silver frame with an arched handle and braced base.
+- Native size: 1024x1536; no resampling.
+- Assumption: reconstruct covered handle and frame to match the reflector reference.
+- Validator: pass; RGBA, 1024x1536; one large component, three components total.
+- Validator warning: non-zero RGB under zero alpha.

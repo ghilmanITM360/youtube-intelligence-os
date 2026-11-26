@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>V15 Review</title>
+<style>
+  :root { --bg: #f4f2ec; --ink: #22231f; --muted: #6a6f72; --line: #d9d5ca; --accent: #2f5d8c; --card: #fffdf8; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #1b1c1a; --ink: #ecebe6; --muted: #a2a6a8; --line: #3a3b37; --accent: #8fb6e0; --card: #252623; } }
+  :root[data-theme="dark"] { --bg: #1b1c1a; --ink: #ecebe6; --muted: #a2a6a8; --line: #3a3b37; --accent: #8fb6e0; --card: #252623; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 -apple-system, "Helvetica Neue", sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 20px 16px 48px; display: grid; gap: 24px; grid-template-columns: minmax(0, 380px) 1fr; }
+  @media (max-width: 760px) { main { grid-template-columns: 1fr; } }
+  h1 { font-size: 20px; margin: 0 0 4px; } p { margin: 6px 0; color: var(--muted); }
+  .phone { width: 100%; max-width: 380px; aspect-ratio: 9 / 16; background: #000; border-radius: 22px; overflow: hidden; border: 6px solid #111; }
+  video { width: 100%; height: 100%; display: block; background: #000; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+  button { font: inherit; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  ol { padding-left: 20px; margin: 8px 0; } li { margin: 3px 0; } li button { padding: 2px 8px; font-size: 13px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  code { font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div class="phone"><video id="v" controls playsinline preload="auto" src="../../SKYDIVER_SLOWDOWN_FINAL_V15_CAPTIONS.mp4"></video></div>
+    <div class="row" role="group" aria-label="Version">
+      <button data-src="../../SKYDIVER_SLOWDOWN_FINAL_V15_CAPTIONS.mp4" aria-pressed="true">Captions</button>
+      <button data-src="../../SKYDIVER_SLOWDOWN_FINAL_V15.mp4" aria-pressed="false">Clean</button>
+      <button data-src="review_library_mix.mp4" aria-pressed="false">Library-SFX mix (review only)</button>
+    </div>
+    <div class="row"><button id="lo">Low volume (20%)</button><button id="mute">Muted viewing</button><button id="rate">0.5× speed</button></div>
+  </section>
+  <section>
+    <h1>Skydiver slowdown · V15 review</h1>
+    <p>Watch once with headphones and once on the phone speaker at low volume. Then once muted: can you follow the idea from the picture alone?</p>
+    <div class="card">
+      <strong>Jump to</strong>
+      <ol id="ch"></ol>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <strong>Listen for</strong>
+      <p>Every word of Hamza's narration is clear over the wind, word endings included. The wind should rise in the pauses and sit low under speech.</p>
+    </div>
+  </section>
+</main>
+<script>
+const v = document.getElementById('v');
+const chapters = [[0,'Opening: aircraft and faller'],[4.72,'Closed parachute'],[7.08,'Gravity arrow'],[12.0,'Wrist speed dial'],[13.47,'"Wait, what?"'],[22.29,'Air pushes back (drag)'],[28.02,'Model: start from rest'],[32.22,'Thin air'],[35.12,'Gravity wins, speed grows'],[41.51,'Thin vs denser air'],[49.42,'Speed x2, drag x4'],[56.26,'Force bars, balance, x8 lens'],[66.8,'Still moving down'],[68.14,'Equal-time marks'],[74.09,'Slowing'],[79.01,'Speedometer drops'],[84.82,'Pack still closed'],[87.24,'Speed-time graph'],[92.97,'Recap: drag above weight'],[99.53,'This is a model'],[104.35,'Ending']];
+const ol = document.getElementById('ch');
+for (const [t, name] of chapters) {
+  const li = document.createElement('li'); const b = document.createElement('button');
+  b.textContent = `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}  ${name}`;
+  b.onclick = () => { v.currentTime = t; v.play(); }; li.append(b); ol.append(li);
+}
+document.querySelectorAll('[data-src]').forEach(b => b.onclick = () => {
+  const t = v.currentTime; v.src = b.dataset.src; v.currentTime = t; v.play();
+  document.querySelectorAll('[data-src]').forEach(x => x.setAttribute('aria-pressed', x === b));
+});
+document.getElementById('lo').onclick = () => { v.volume = v.volume < 1 ? 1 : .2; };
+document.getElementById('mute').onclick = () => { v.muted = !v.muted; };
+document.getElementById('rate').onclick = () => { v.playbackRate = v.playbackRate === 1 ? .5 : 1; };
+</script>
+</body>
+</html>

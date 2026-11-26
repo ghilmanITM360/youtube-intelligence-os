@@ -1,0 +1,4 @@
+# Image generation prompts
+Built-in image generation, edits using the V11 master as reference. Requests: (1) replace grey gloves with bare peach hands and neutral mouth in three-quarter pose, keeping all else fixed; (2) replace rear gloves with bare hands, keeping all else fixed; (3) edit side head to look toward wrist; (4) raise side near forearm 35 degrees and turn blank dial toward viewer. Generated full drawings were locally masked against the source to limit changes; separated variants are unregistered candidates. Additional underlay and cloth overlap experiments, if present, are referenced separately in QA.
+
+Additional experiments: remove the near arm and reconstruct jacket and harness below it; create an isolated bent cream-cloth sleeve with extra overlap and no disc. Generated using the built-in image generation tool; neither experiment passes integration QA.

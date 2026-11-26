@@ -1,0 +1,7 @@
+RUN B5L. Deliverables (all 1024x1536, transparent, SAME canvas and SAME position as the master, so they stack back exactly):
+  runs/B5L/astro_torso_noarms.png  - the master figure with BOTH arms removed; repaint the suit torso, chest pack and PLSS edge that the arms hid. Keep a rounded shoulder cap at each shoulder.
+  runs/B5L/astro_arm_near.png      - ONLY the screen-left (red) arm incl. glove, pixel-identical to the master where visible, plus ~40 px of extra sleeve painted past the shoulder INTO the torso (overlap so the arm can rotate without a gap).
+  runs/B5L/astro_arm_far.png       - ONLY the screen-right (blue) arm incl. glove, same rules.
+Inputs: ASTRO_MASTER_34_candidate.png (the master; load it with view_image and use EDIT mode for every output) and ASTRO_master_layer_guide.png (red/blue regions = which arm; circles = shoulder/elbow pivots; the overlay is a guide only, never draw it).
+Do not redraw the character: no change to pose, scale, colours, helmet, legs. One edit call per deliverable; if an output shifts or rescales the figure, redo that one edit once.
+Acceptance (Claude measures): stacking torso + far arm + near arm reproduces the master (mean abs diff < 6/255 inside the master silhouette); each arm layer is a single component; corner alpha 0.

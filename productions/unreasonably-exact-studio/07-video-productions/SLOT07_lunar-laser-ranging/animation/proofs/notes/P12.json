@@ -1,0 +1,19 @@
+{
+ "defects": [
+  "v1: the flying '2.56 s' token and the 't' token overlapped at low alpha for ~0.25 s (a muddy double text), and the numeric token was small (56) compared to the 116-unit symbol.",
+  "v1: the bar 'grew' with expo-out, so 95% of its length appeared within 0.15 s of 'light,' and read as a pop, not a build.",
+  "v1: the 384,400 km panel overlapped the one-way bar after the slide, with the bar visible through the panel.",
+  "v1 test bugs: fold-bar 'visible length' returned 0 at theta = pi (metric was wrong); the readout pixel test counted stars.",
+  "Open: displayed arithmetic is rounded (see issue below); the leader line from the formula to the bar is faint; the folded bar sits on top of the return lane rather than replacing it; ruler ticks have no labels (no sourced scale numbers); 'mean distance' is two words of text on screen (design doc allows numbers/symbols only); only stills viewed.",
+  "Lead review (2026-11-26): the folded bar sat on top of the return lane after the slide, and the rounded 384,400 km vs displayed 2.56 s arithmetic was inconsistent.",
+  "First re-render after the lead's change: the longer text '\\u2248 384,000 km' at size 56 overflowed its panel and the panel touched the bar. Fixed by text size 44 and bar lane at cx+90."
+ ],
+ "corrections": [
+  "Token cross-fade shortened to the last 0.12 s before landing and the token scales 1 -> 2 in flight; bar growth now cubic in-out over 0.75 s from 'light,'; readout panel narrowed, opaque, moved right (+312); fold metric fixed (extent from Earth to the highest point); readout test now compares frames before and after the anchor.",
+  "Readout changed to '\\u2248 384,000 km' + 'mean distance' (lead decision): code asserts round(c*2.56/2/1000)*1000 == 384000 and that the sourced mean 384,400 km rounds to the same value. The folded one-way bar now slides to its own lane (x = cx+90, >= 50 units from both light lanes, clear of the Moon disc) instead of the return lane; readout panel re-centred (cx+300, half-width 182, text 44) to clear it."
+ ],
+ "retest": [
+  "Re-rendered; MP4 frames at 1.0, 2.6, 3.2, 3.9, 4.4, 5.9 s viewed: t arrives clean, bar builds, fold lands on 'two.', readout on 'distance.'. All checks PASS including 'readout region unchanged until the anchor, changed after'.",
+  "Re-rendered; assertion and 'own lane' check PASS; end frame viewed again."
+ ]
+}
