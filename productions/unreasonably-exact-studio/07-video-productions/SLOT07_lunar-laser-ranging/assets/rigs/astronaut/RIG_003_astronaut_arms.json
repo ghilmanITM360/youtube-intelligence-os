@@ -1,0 +1,51 @@
+{
+ "source": "codex_handoff/runs/B5L (Codex, CANDIDATE), master codex_handoff/runs/B5M/astronaut_master_34.png",
+ "canvas": [
+  1024,
+  1536
+ ],
+ "layers": {
+  "arm_near": {
+   "file": "astro_arm_near.png",
+   "overlap_px": 22826,
+   "pivot_shoulder_overlap_centroid": [
+    402.0,
+    417.6
+   ],
+   "pivot_shoulder": [
+    322,
+    425
+   ]
+  },
+  "arm_far": {
+   "file": "astro_arm_far.png",
+   "overlap_px": 34508,
+   "pivot_shoulder_overlap_centroid": [
+    614.9,
+    414.1
+   ],
+   "pivot_shoulder": [
+    660,
+    440
+   ]
+  },
+  "torso": {
+   "file": "astro_torso_noarms.png",
+   "pivot_feet": [
+    498.3,
+    1482.0
+   ]
+  }
+ },
+ "draw_order": [
+  "arm_far",
+  "torso",
+  "arm_near"
+ ],
+ "sha256": {
+  "astro_torso_noarms.png": "f2911528d653bf925fb20e03beb38cb22666eec70b727e240447d3f4069a301e",
+  "astro_arm_near.png": "70352512f4759a24378cd6d298c928005f298e478a207296286b91ec125de321",
+  "astro_arm_far.png": "54384d3eebde0a151fe6d8da1133d9b2262dc11574646009fa47f9a12efb31ac"
+ },
+ "pivot_method": "shoulder = joint centre marked by Claude on the master layer guide (guides_construction/ASTRO_master_layer_guide.json); automatic centroids kept for reference; validated by the P05 gap test"
+}

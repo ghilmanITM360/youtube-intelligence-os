@@ -1,0 +1,15 @@
+{
+ "rig": "RIG_002_TELESCOPE_DOME",
+ "note": "All layers share one 1024x1536 canvas (Codex runs B4M master, B4L layers, B4L2 slit-open building, B4P plate). Pivots measured by Claude 2026-11-26.",
+ "layers": {
+  "plate": {"file": "obs_sky_mountains_plate.png", "source": "Codex B4P", "z": 0},
+  "building_closed": {"file": "obs_building_closed.png", "source": "Codex B4L", "z": 30},
+  "building_open": {"file": "obs_building_slit_open.png", "source": "Codex B4L2", "z": 30},
+  "telescope": {"file": "obs_telescope.png", "source": "Codex B4L", "z": 35, "pivot_altitude": [490, 920], "aperture": [590, 700], "tube_lean_deg_in_file": 24.4,
+                "placed_at": [492, 1005], "scale": 0.85, "clip": "slit mask (dark interior of building_open)"},
+  "leaf_left": {"file": "obs_slit_leaf_left.png", "source": "Codex B4L", "z": 41, "closed_dx": 40},
+  "leaf_right": {"file": "obs_slit_leaf_right.png", "source": "Codex B4L", "z": 41, "closed_dx": -25},
+  "ridge": {"file": "obs_ground_ridge.png", "source": "Codex B4L", "z": 50}
+ },
+ "slit": {"centre_x": 492, "rows": [633, 1000], "half_width_at_960": 103}
+}

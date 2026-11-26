@@ -1,0 +1,43 @@
+codex_file,v12_use,how,shots,tool,status,sha256_16
+ARTWORK_QA.md,documentation/diagnostic,read,-,-,candidate,fa4d7c03d931bcd3
+ASSET_MANIFEST.csv,documentation/diagnostic,read,-,-,candidate,f7da737644b5549e
+IMAGE_GENERATION_PROMPTS.md,documentation/diagnostic,read,-,-,candidate,d883c1a2ee65e004
+PIVOTS.json,documentation/diagnostic,read,-,-,candidate,15eae5e61fbe2c40
+README.md,documentation/diagnostic,read,-,-,candidate,d39aafe5c25aa284
+WRIST_FACES.json,documentation/diagnostic,read,-,-,candidate,9dc4b754ff2e69d1
+character/back/bare_hands_candidate.png,not used,"resampled 1585->1586, unverified; V11 back kept",-,-,candidate,62ebcfbf087502dc
+character/side/side_body.png,used (via rig),side_lift_00..09 base layer,"B1-D1, B2, C1, F1-M1, J1, L1, R1",tools/build_rig.py,candidate,fe67d9ce65f45a94
+character/side/side_head.png,used,"rest head, nod <=1 deg over neck underlay; blink drawn in code",all side shots,tools/build_rig.py,candidate,72c00b596fd90780
+character/side/side_head_glance.png,mask only,its alpha (dilated) cuts the glance head from sources/glance_generation.png,"B2, C1, M1",tools/build_rig.py,candidate,7fcf7f4f4ae880b2
+character/side/side_near_forearm.png,used,"rotated 0-22 deg about elbow underside (1335,668)","B2, C1, M1",tools/build_rig.py,candidate,c0530a3add74b964
+character/side/side_near_forearm_raised.png,reference only,"IoU target for choosing the lift angle; hard cut edges, not drawn",-,tools/build_rig.py,candidate,e31a32308d09b0eb
+character/side/side_near_hand.png,used,rides with forearm,"B2, C1, M1",tools/build_rig.py,candidate,cef47dfcae075729
+character/side/side_near_hand_raised.png,not used,rough cut with fragments,-,-,candidate,0d0f1a541b6ccdc1
+character/side/side_near_upper_arm.png,used,drawn above the rotating forearm (covers the elbow top),all side shots,tools/build_rig.py,candidate,b7470ef0b0e8f2a9
+character/side/side_torso_underlay_candidate.png,not used,unregistered partial extraction,-,-,candidate,26cdf1d7b3453885
+character/three_quarter/bare_hands_neutral_candidate.png,not used,unverified hand/cuff seams; V11 recoloured three-quarter kept (grey gloves remain),-,-,candidate,e394b916cbad4d03
+previews/mounted_rest_on_blue.png,documentation/diagnostic,read,-,-,candidate,6b2dbf1f73225e8f
+previews/pov_rest_on_blue.png,documentation/diagnostic,read,-,-,candidate,8d8a8b3adfbc9a75
+previews/side_diagnostic_extremes.png,documentation/diagnostic,read,-,-,candidate,9fa2ffa91b1e37e5
+previews/side_rest_on_blue.png,documentation/diagnostic,read,-,-,candidate,771932d25e7d7209
+qa/forearm_minus20.png,documentation/diagnostic,read,-,-,candidate,22add3f556b93bef
+qa/forearm_plus20.png,documentation/diagnostic,read,-,-,candidate,ada9dad2d9600728
+qa/hand_minus15.png,documentation/diagnostic,read,-,-,candidate,63b760cee50d995b
+qa/hand_plus15.png,documentation/diagnostic,read,-,-,candidate,9e47dfeeea3e4ce5
+qa/head_minus8.png,documentation/diagnostic,read,-,-,candidate,5b953a5a2bf13383
+qa/head_plus8.png,documentation/diagnostic,read,-,-,candidate,3c81751937eb9724
+qa/rest_pixel_comparison.txt,documentation/diagnostic,read,-,-,candidate,1a3fcb23d100538e
+qa/upper_minus15.png,documentation/diagnostic,read,-,-,candidate,81ba7bc434603a1d
+qa/upper_plus20.png,documentation/diagnostic,read,-,-,candidate,a9f59be2670cb966
+sources/glance_generation.png,used,glance head cut (registered: legs IoU 0.985),"B2, C1, M1",tools/build_rig.py,candidate,8de4cf4f71f8c60c
+sources/raised_generation.png,used,"end pose of the lift (2-frame dissolve), registered: legs alpha IoU 0.985","B2, C1, M1",tools/build_rig.py,candidate,4c724a219bdd8852
+sources/sleeve_overlap_generation.png,not used,"large haze, unregistered (Codex QA)",-,-,candidate,5d804247c7f9dca3
+sources/torso_underlay_generation.png,not used,not needed: elbow-underside pivot keeps the fold closed,-,-,candidate,c306929b42cf50c3
+wrist/mounted_arm.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,0bca340c68db9059
+wrist/mounted_face.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,5d3f51bf251df120
+wrist/mounted_housing.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,5e6c2d00351088c3
+wrist/mounted_strap.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,a290d49978693917
+wrist/pov_arm.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,362ca91608496046
+wrist/pov_face.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,4beb0700e1856f98
+wrist/pov_housing.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,0f2f308708812eac
+wrist/pov_strap.png,not used,"hard internal cuts (Codex QA); the composite V11 wrist art is used, face scale drawn in code",-,-,candidate,52f70a19b02b8f3e

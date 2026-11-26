@@ -1,0 +1,48 @@
+== VOYAGER 1 (SHORT 2 / LONG 3)
+1 light-day = c x 86,400 s = 25,902,068,371 km = 173.14 AU   (NASA: 'about 25.9 billion km')
+one-way time at NASA's rounded 25.9e9 km: 86,393 s = 23 h 59 min 53.1 s  -> rounding of 25.9 changes it by up to +-167 s
+If Voyager recedes at ~16.9 km/s (RECALLED, unsourced), one-way time grows 4.87 s per day -> 29 s after 6 days (24 Nov vs 18 Nov)
+Earth's own orbit changes the Earth-Voyager distance by up to +-1 AU over a year = +-499 s = +-8.3 min of one-way light time (geometry; approximate)
+round trip ~ 2 x one-way = 48.00 h (NASA: 'about 48 hours'); doesn't include onboard processing, antenna scheduling, or analysis time
+Light-travel times for comparison: Moon 384,400 km: 1.28 s | Sun 1 AU: 499 s (8.3 min) | Neptune ~30.07 AU (recalled): 4.17 h | Voyager 1: 24 h | Proxima 4.2465 ly (recalled): 4.25 yr
+Conversation arithmetic: 1 question+answer = 48 h; 5 exchanges = 10 days; 10 exchanges = 20 days (if every step were a one-sentence command and reply, no delays)
+Real precedent (NASA/JPL via news, snippet-level): April 2024 fix: ~22.5 h each way = ~45 h round trip; command 18 Apr, confirmation 20 Apr. Source quality: SECONDARY (news citing JPL); primary page not opened.
+
+== LUNAR LASER (SHORT 4)
+  mean (semi-major axis)             d=  384,400 km  one-way 1.2822 s  round trip 2.5644 s
+  NSSDC mean perigee                 d=  363,300 km  one-way 1.2118 s  round trip 2.4237 s
+  NSSDC mean apogee                  d=  405,500 km  one-way 1.3526 s  round trip 2.7052 s
+  recalled extreme perigee 356,400   d=  356,400 km  one-way 1.1888 s  round trip 2.3776 s
+  recalled extreme apogee 406,700    d=  406,700 km  one-way 1.3566 s  round trip 2.7132 s
+  station-to-reflector (surface-to-surface, sub-Earth/sub-Moon geometry only) at mean: d-RE-RM = 376,284 km -> round trip 2.5103 s  (center-to-center is a MODEL; station geometry matters)
+  Moon moves ~1 km/s relative to Earth: in 2.56 s that is ~2.6 km = 9 us of light time (small, but ranging uses it)
+  photon energy at 532 nm = 3.734e-19 J ; 100 mJ pulse holds 2.68e+17 photons (Murphy review: ~3e17 -> consistent; his divergence loss factor ~1e16 [snippet level])
+  If ~1 photon returns per pulse (APOLLO-type best case: up to 0.6/pulse in short periods, snippet level), fraction returned ~ 3.7e-18
+
+== TIDES (LONG 4 / SHORT 5)
+  Sun/Moon mass = 2.707e+07 ; (d_moon/d_sun)^3 = 1.697e-08 ; tide-generating ratio Sun/Moon = 0.459 (NOAA page: about 1:2; Sun's direct pull on Earth 179x the Moon's)
+  with lunar mean perigee: ratio = 0.388
+  with lunar mean apogee: ratio = 0.539
+  equilibrium-theory crude bookkeeping: springs ~ (1+0.46) = 1.46, neaps ~ (1-0.46) = 0.54, Sun alone = 0.46  -> Sun-alone / spring = 0.31; Sun-alone / neap = 0.85  [forcing ratios, NOT local heights]
+  Earth-Moon barycentre from Earth's centre = 4,671 km (Earth radius 6,371 km => inside Earth)
+  lunar day 24 h 50.5 min -> tide ~ 12 h 25.2 min (M2 period ~12.42 h) vs solar tide 12.00 h: lunar high tide slips ~50 min/day; without the Moon only the 12.00 h solar rhythm of S2 stays
+  gravity-change and light delay from the Moon's distance: 1.28 s (if gravity changes propagate at c: constraint from GW170817 is RECALLED, not read)
+  NOAA CO-OPS harmonic constituents (fetched 2026-11-24), S2/M2 amplitude ratio at 8 US stations:
+     The Battery, NY                    M2=  2.201 ft  S2=  0.42 ft  S2/M2=0.191  S2/(M2+S2)=0.16
+     San Francisco, CA                  M2=   1.89 ft  S2= 0.449 ft  S2/M2=0.238  S2/(M2+S2)=0.19
+     Seattle, WA                        M2=  3.487 ft  S2= 0.879 ft  S2/M2=0.252  S2/(M2+S2)=0.20
+     Anchorage, AK                      M2= 11.499 ft  S2= 3.205 ft  S2/M2=0.279  S2/(M2+S2)=0.22
+     Honolulu, HI                       M2=  0.561 ft  S2= 0.184 ft  S2/M2=0.328  S2/(M2+S2)=0.25
+     Boston, MA                         M2=    4.5 ft  S2=  0.68 ft  S2/M2=0.151  S2/(M2+S2)=0.13
+     Grand Isle, LA (Gulf of Mexico)    M2=  0.056 ft  S2=  0.03 ft  S2/M2=0.536  S2/(M2+S2)=0.35
+     Charlotte Amalie, USVI             M2=  0.135 ft  S2=  0.03 ft  S2/M2=0.222  S2/(M2+S2)=0.18
+     range 0.151-0.536, median 0.245  vs equilibrium 0.46 -> NO single percentage; S2 alone is a LOWER bound for solar tide (P1, K1 part, T2, R2, K2 part also solar)
+
+== ISOLATION GEOMETRY (SHORT 6)
+  CM at altitude  110.2 km directly opposite a lander on the surface: distance = 2R+h =  3585.0 km  (Munroe book-implied ~110 km)
+  CM at altitude  120.8 km directly opposite a lander on the surface: distance = 2R+h =  3595.6 km  (Apollo 15 aposelene Wikipedia 120.8 km)
+  CM at altitude  123.5 km directly opposite a lander on the surface: distance = 2R+h =  3598.3 km  (Apollo Flight Journal apocynthion 66.7 nmi)
+  CM at altitude  121.6 km directly opposite a lander on the surface: distance = 2R+h =  3596.4 km  (altitude implied by Guinness 3,596.4 km)
+  Munroe footnote (surface arc on Earth case): 3,585 km straight line ~ 3,619 km along surface (R_E=6371: chord->arc 3634 km)
+  Artemis II: 252,756 mi x 1.609344 = 406,771 km from Earth (NASA release / Guinness text); Guinness 'farthest separation between humans' 419,656 km (pair of crews) - a DIFFERENT quantity
+  Isolation definition test: Artemis II crew of 4 stayed together -> nearest other human is 0 m away -> isolation record unchanged by distance-from-Earth records

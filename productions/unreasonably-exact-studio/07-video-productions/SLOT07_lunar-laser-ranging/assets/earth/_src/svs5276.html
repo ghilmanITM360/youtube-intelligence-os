@@ -1,0 +1,1807 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Meta info -->
+		<meta charset="UTF-8">
+		<meta name="language" content="english">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<meta name="author" content="
+	
+		Kel Elkins
+	
+">
+		<meta
+			name="description"
+			content="This global, flat map view of night lights data begins with a time series depicting annual averages from 2012 to 2023.  The lights then fade away to reveal night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange.  The sequence then repeats with two pop-out, zoomed-in views of India and Ukraine."
+		>
+		<meta
+			name="keywords"
+			content="NASA, SVS, Scientific Visualization Studio, Scientific Visualization, Black Marble, Earth, Hyperwall, Night, Night lights, VIIRS"
+		>
+
+		<!-- Open graph protocol properties --> 
+		<meta property="og:title" content="NASA Scientific Visualization Studio | Change in Night Lights between 2012 and 2023">
+		<meta property="og:type" content="article">
+		<meta property="og:image" content="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_print.jpg">
+		<meta property="og:description" content="This global, flat map view of night lights data begins with a time series depicting annual averages from 2012 to 2023.  The lights then fade away to reveal night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange.  The sequence then repeats with two pop-out, zoomed-in views of India and Ukraine.">
+		
+	<meta property="article:published_time" content="2024-05-27T00:00:00-04:00">
+	<meta property="article:modified_time" content="2025-06-23T13:11:46.115566-04:00">
+	
+	
+	
+	
+		<meta property="article:author" content="Kel Elkins">
+	
+	
+	
+		<meta property="article:tag" content="Black Marble">
+	
+		<meta property="article:tag" content="Earth">
+	
+		<meta property="article:tag" content="Hyperwall">
+	
+		<meta property="article:tag" content="Night">
+	
+		<meta property="article:tag" content="Night lights">
+	
+		<meta property="article:tag" content="VIIRS">
+	
+
+		
+		<meta property="og:url" content="http://svs.gsfc.nasa.gov/5276/">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="NASA Scientific Visualization Studio">
+
+		<!-- json-ld properties -->
+		<script type="application/ld+json">
+			{"@context": "http://schema.org", "@type": "Article", "headline": "Change in Night Lights between 2012 and 2023", "url": "http://svs.gsfc.nasa.gov/5276/", "thumbnailUrl": "/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_print.jpg", "datePublished": "2024-05-27T00:00:00-04:00", "articleSection": "Visualization", "creator": ["Kel Elkins"], "keywords": ["Black Marble","Earth","Hyperwall","Night","Night lights","VIIRS"]}
+		</script>
+
+		<!-- Icons -->
+		<link rel="icon" sizes="16x16" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-16x16.png">
+		<link rel="icon" sizes="32x32" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-32x32.png">
+		<link rel="icon" sizes="57x57" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-57x57.png">
+		<link rel="icon" sizes="76x76" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-76x76.png">
+		<link rel="icon" sizes="96x96" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-96x96.png">
+		<link rel="icon" sizes="128x128" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-128x128.png">
+		<link rel="icon" sizes="192x192" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-192x192.png">
+		<link rel="icon" sizes="196x196" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-196x196.png">
+		<link rel="icon" sizes="228x228" type="image/png" href="https://nasa.gov/wp-content/plugins/nasa-hds-core-setup/assets/favicons/favicon-228x228.png">
+
+		<!-- Tab title -->
+		<title>NASA SVS | Change in Night Lights between 2012 and 2023</title>
+
+		<!-- Resources -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+			onerror="document.write(`<script src='/static/svs/js/jquery-3.6.0.min.js'>\x3C/script>`)"
+		>
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-min.min.js"
+			onerror="document.write(`<script src='/static/svs/js/underscore-umd-min.js'>\x3C/script>`)"
+		>
+		</script>
+		
+	
+
+
+		<!-- Stylesheets -->
+		<link href="/static/svs/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/static/svs/css/bootstrap-icons.min.css" rel="stylesheet">
+		<link href="/static/svs/css/style.css" rel="stylesheet">
+		
+	<link href="/static/detailspage/css/detailspage.css" rel="stylesheet">
+
+	</head>
+	<body>
+		<header>
+			<!-- Top navigation bar -->
+			<nav id="top-navbar" class="navbar navbar-expand-md navbar-dark position-fixed">
+				<div class="container-fluid">
+					<!-- NASA brand -->
+					<a class="navbar-brand p-0 m-0" href="https://www.nasa.gov/">
+						<img
+							src="/static/svs/images/nasa-meatball.svg"
+							alt="NASA Logo"
+							height="40px"
+						>
+					</a>
+
+					<span class="d-flex flex-nowrap overflow-hidden">
+						
+							<!-- SVS brand -->
+							<a class="navbar-brand py-0 px-2 m-0 svs-brand svs-brand-svs" href="/">Scientific Visualization Studio</a>
+						
+
+						
+							
+						
+					</span>
+
+					<!-- Toggle button for collapsed navbar links -->
+					<button
+						class="navbar-toggler ms-auto"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#navbar-offcanvas"
+						aria-controls="navbar-offcanvas"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<!-- Nav links + search box -->
+					<div class="offcanvas offcanvas-end text-bg-dark flex-shrink-0 flex-grow-1" id="navbar-offcanvas">
+						<div class="offcanvas-header position-absolute top-0 end-0">
+							<button type="button" class="btn-close btn-close-white p-3" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav ms-auto justify-content-end">
+								<!-- Nav links -->
+								
+									
+										
+									
+									<li class="nav-item">
+										<a class="nav-link" href="/gallery/the-galleries/"><span class="bi bi-images" aria-hidden="true"></span> Galleries</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="/help/"><span class="bi bi-question-circle" aria-hidden="true"></span> Help</a>
+									</li>
+								
+								
+								
+								
+									<!-- Search box -->
+									<form id="navbar_search_form" class="ps-0 ps-md-2" role="search" action="/search" method="get">
+										<div class="input-group flex-nowrap w-100">
+	
+		
+		<input
+			type="text"
+			id="navbar_search_box"
+			class="form-control ckempty border border-end-0  text-light bg-dark border-light"
+			name="search"
+			value=""
+			placeholder="Search..."
+			aria-label="Search..."
+		>
+		<label
+			for="navbar_search_box"
+			class="visually-hidden"
+		>
+			Search
+		</label>
+		<button
+			id="navbar_search_box_clear"
+			type="reset"
+			class="btn btn-primary border-start-0 border border-end-0 pe-1 bg-dark border-light"
+			title="Clear search text"
+			aria-label="Clear search text"
+			
+			onclick="$('#navbar_search_box').val('')"
+			
+		>
+			<span
+				class="bi bi-backspace text-light"
+				aria-hidden="true"
+			> </span>
+		</button>
+		<button
+			id="navbar_search_box_submit"
+			type="submit"
+			title="Search!"
+			aria-label="Search!"
+			class="btn btn-primary border border-start-0 pe-3 bg-dark border-light"
+		>
+			<span
+				class="bi bi-search text-light"
+				aria-hidden="true"
+			> </span>
+		</button>
+	
+</div>
+
+									</form>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="flex-fill">
+			<div id="alerts" class="position-fixed w-100 p-2" style="z-index: 999">
+				
+					
+
+
+				
+				
+					
+				
+			</div>
+			<div id="main-container" class="position-relative vstack container-md py-2">
+				
+	<article class="mt-2">
+		<!-- Header (Title, release date, etc.) -->
+		<section class="position-relative">
+			<!-- Navigation line -->
+			<nav class="row mb-2">
+				<div class="w-100 d-flex">
+					
+						
+							<span class="bi bi-chevron-left text-muted opacity-50" aria-hidden="true"></span>
+						
+						<a
+							href="/14581"
+							class="me-auto link text-muted opacity-50 text-truncate"
+							style="max-width: 30vw"
+							aria-label="Previous page"
+						>
+							14581: Gliese 12 b: An Intriguing World Sized Betw...
+						</a>
+					
+					
+						<a
+							href="/31284"
+							class="ms-auto link text-muted opacity-50 text-truncate"
+							style="max-width: 30vw"
+							aria-label="Next page"
+						>
+							31284: The Webb Space Telescope Studies the Southe...
+						</a>
+						
+						
+							<span class="bi bi-chevron-right text-muted opacity-50" aria-hidden="true"></span>
+						
+					
+					
+						<a
+							href="/5692"
+							class="link text-muted opacity-50 ms-3"
+							aria-label="Newest page"
+						><span class="bi bi-chevron-bar-right" aria-hidden="true"></span></a>
+					
+				</div>
+			</nav>
+
+			<!-- Alerts -->
+			
+			
+			
+
+			<!-- Title -->
+			<div class="row">
+				<h1 id="title" class="mb-0">Change in Night Lights between 2012 and 2023</h1>
+			</div>
+
+			<!-- Release date + ID + social media icons -->
+			<div class="row">
+				<div class="hstack flex-wrap align-items-center">
+					<ul class="list-unstyled vstack gap-1 mb-1 justify-content-center">
+						
+						
+							<li class="mb-0 fs-5"><b>Released</b> Monday, May 27, 2024</li>
+						
+						
+					</ul>
+					<div>
+						<ul class="list-unstyled hstack gap-2 mb-1">
+							<li>
+								<span class="btn btn-secondary disabled">ID: 5276</span>
+							</li>
+							<li class="vr"></li>
+							
+
+							<li>
+								<a
+									href="/api/5276"
+									target="_blank"
+									class="btn btn-light btn-sm px-1"
+									title="View this page in our API"
+								> <span class="bi bi-file-earmark-code fs-4" aria-hidden="true"></span> </a>
+							</li>
+							<li class="vr"></li>
+							
+
+<li>
+	
+
+
+	<button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4"
+		title="Copy a link to this page"
+		tabindex="0"
+		aria-label="Copy a link to this page"
+		data-copy-url="http://svs.gsfc.nasa.gov/5276/"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button>
+
+
+</li>
+<li>
+	<a
+		href="https://twitter.com/intent/tweet"
+		target="_blank"
+		class="btn btn-light btn-sm px-1"
+		title="Share this page on Twitter"
+	> <span class="bi bi-twitter fs-4" aria-hidden="true"></span> </a>
+</li>
+<li>
+	 <a
+	href="https://www.facebook.com/share.php?u=http%3A//svs.gsfc.nasa.gov/5276/%3F"
+	target="_blank"
+	class="btn btn-light btn-sm px-1"
+	title="Share this page on Facebook"
+> <span class="bi bi-facebook fs-4" aria-hidden="true"></span> </a>
+</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main credits -->
+			<div class="row">
+				<div class="hstack flex-wrap gap-3">
+					
+
+
+	<ul class="hstack list-unstyled gap-1 mb-0 hide-last-vr flex-wrap">
+		
+			
+				<li>
+					<ul class="hstack list-unstyled gap-1 mb-0 flex-wrap">
+						
+							<li class="fw-bold">
+								Visualizations by:
+							</li>
+						
+						
+							
+								<li>
+									<a href="/search?people=Kel%20Elkins" class="link fw-bold">Kel Elkins</a>
+								</li>
+							
+						
+					</ul>
+				</li>
+				<li class="vr" aria-hidden="true">
+				</li>
+			
+		
+	</ul>
+
+ <a href="#section_credits" class="link" onclick="$('#section_credits')[0].scrollTo({behavior: 'smooth'})"><span class="bi bi-arrow-bar-down me-1" aria-hidden="true"></span>View full credits</a>
+				</div>
+			</div>
+			<hr>
+		</section>
+
+		
+		
+			<!-- Media groups -->
+			<div class="vstack gap-3">
+				
+					
+						
+
+<section id="media_group_377144" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_print.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat_2160p30.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					This global, flat map view of night lights data begins with a time series depicting annual averages from 2012 to 2023.  The lights then fade away to reveal night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange.  The sequence then repeats with two pop-out, zoomed-in views of India and Ukraine. 
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377144"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377144_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377144_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377144_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat_2160p30.mp4" target="_blank">
+									nightlights_2012-2023_change_flat_2160p30.mp4 (3840x2160) [32.7 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377144_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377144_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/3840x2160_16x9_30p/nightlights_2012-2023_change_flat/" target="_blank">
+									nightlights_2012-2023_change_flat (3840x2160) [1300 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377144_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377144_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_print.jpg" target="_blank">
+									nightlights_2012-2023_change_flat.02599_print.jpg (1024x576) [88.0 KB]
+								</a></li><li><a id="media_group_377144_download_images_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_searchweb.png" target="_blank">
+									nightlights_2012-2023_change_flat.02599_searchweb.png (320x180) [51.1 KB]
+								</a></li><li><a id="media_group_377144_download_images_2" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat.02599_thm.png" target="_blank">
+									nightlights_2012-2023_change_flat.02599_thm.png (80x40) [4.6 KB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377144_hyperwall shows_download" class="dropdown-header"><h6 class="mb-0">Hyperwall shows</h6></li><li><a id="media_group_377144_download_hyperwall shows_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2012-2023_change_flat_2160p30.mp4.hwshow" target="_blank">
+									nightlights_2012-2023_change_flat_2160p30.mp4.hwshow [560 bytes]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>This global, flat map view of night lights data begins with a time series depicting annual averages from 2012 to 2023.  The lights then fade away to reveal night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange.  The sequence then repeats with two pop-out, zoomed-in views of India and Ukraine. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374359" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br><br>Discover the pivotal role of NASA's Black Marble in bridging scientific discovery and actionable environmental stewardship. By capturing Earth's night lights, Black Marble reveals both the planet's beauty and the profound impact of human activities. This webpage showcases newly developed nighttime light maps comparing changes observed from 2012 to 2023, offering a decade-long perspective on urban growth, infrastructure development, and the socioeconomic dynamics of communities worldwide. This data empowers users to foster informed, sustainable practices that enhance community resilience and mitigate the adverse effects of climate change. By illuminating the intricate interplay between human activity and the environment, Black Marble underpins a human-centered approach to environmental change, promoting a future where scientific innovation leads to tangible, positive impacts on global sustainability.<br><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377145" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_2023_globe.04450_print.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_2023_globe_2160p60.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					2023 annual average night lights data presented on a 3D, spinning Earth.  This video can be looped.
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377145"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377145_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377145_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377145_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2023_globe_2160p60.mp4" target="_blank">
+									nightlights_2023_globe_2160p60.mp4 (3840x2160) [65.5 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377145_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377145_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/3840x2160_16x9_60p/nightlights_2023_globe/" target="_blank">
+									nightlights_2023_globe (3840x2160) [6000 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377145_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377145_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_2023_globe.04450_print.jpg" target="_blank">
+									nightlights_2023_globe.04450_print.jpg (1024x576) [56.3 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>2023 annual average night lights data presented on a 3D, spinning Earth.  This video can be looped.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_378411" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02.04450.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02.mp4"
+						type="video/mp4"
+					><source
+						src="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02_prores.mov"
+						type="video/quicktime"
+					><p class="text-white">
+					Night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange. Presented on a 3D, spinning Earth. This video can be looped.
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_378411"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_378411_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_378411_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_378411_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02.mp4" target="_blank">
+									nightlights_change_2012-2023_globe_02.mp4 (3840x2160) [61.7 MB]
+								</a></li><li><a id="media_group_378411_download_movies_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02_prores.mov" target="_blank">
+									nightlights_change_2012-2023_globe_02_prores.mov (3840x2160) [8.4 GB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_378411_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_378411_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/3840x2160_16x9_60p/nightlights_change_2012-2023_globe/" target="_blank">
+									nightlights_change_2012-2023_globe (3840x2160) [6000 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_378411_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_378411_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_change_2012-2023_globe_02.04450.jpg" target="_blank">
+									nightlights_change_2012-2023_globe_02.04450.jpg (1920x1080) [263.6 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange. Presented on a 3D, spinning Earth. This video can be looped.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374394" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377146" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_flat_series_stills.02023_web.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_2160p3_h265.mp4"
+						type="video/mp4"
+					><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_4320p3_h265.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					Time series view (2012-2023) of night lights on a flat map. 
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377146"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377146_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377146_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377146_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_2160p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_2160p3_h265.mp4 (3840x2160) [1.6 MB]
+								</a></li><li><a id="media_group_377146_download_movies_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_4320p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_8k_4320p3_h265.mp4 (7680x4320) [4.9 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377146_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377146_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/7680x4320_16x9_3p/nightlights_flat_2012-2023/" target="_blank">
+									nightlights_flat_2012-2023 (7680x4320) [12 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377146_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377146_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills.02023_web.jpg" target="_blank">
+									nightlights_flat_series_stills.02023_web.jpg (2045x1150) [260.3 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Time series view (2012-2023) of night lights on a flat map. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374395" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br><!-- widget image_slide_transition {"group_list": [374367, 374370]} --></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377147" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image slider --><img-comparison-slider class="colored-slider"><picture
+						slot="first"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_compare.02012.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36458 - Left Image"
+							type="image/png"
+						></picture><picture
+						slot="second"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_compare.02023.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36458 - Right Image"
+							type="image/png"
+						></picture></img-comparison-slider><script
+		src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.0/dist/index.min.js"
+		onerror="document.write(`<script src='/static/detailspage/js/img-comparison-slider-8.0.0.js'>\x3C/script>`)"
+	></script></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377147"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377147_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377147_download_slide_1" class="dropdown-header"><h6 class="mb-0">Slide 1</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_compare.02012.jpg" target="_blank">
+							nightlights_flat_series_stills_8k_compare.02012.jpg (7680x4320) [2.4 MB]
+						</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377147_download_slide_2" class="dropdown-header"><h6 class="mb-0">Slide 2</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_compare.02023.jpg" target="_blank">
+							nightlights_flat_series_stills_8k_compare.02023.jpg (7680x4320) [2.5 MB]
+						</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Image comparison showing 2012 and 2023 night lights on a flat map.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374396" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377148" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_change_cb_still_8k.00700.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. Color bar included in image. "
+					alt="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. Color bar included in image. "
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377148"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377148_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377148_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377148_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_change_cb_still_8k.00700.jpg" target="_blank">
+									nightlights_flat_change_cb_still_8k.00700.jpg (7680x4320) [2.6 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. Color bar included in image. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374397" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377149" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_change_still_8k.00700.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange."
+					alt="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange."
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377149"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377149_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377149_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377149_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_change_still_8k.00700.jpg" target="_blank">
+									nightlights_flat_change_still_8k.00700.jpg (7680x4320) [2.5 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374398" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377150" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_popout.change_cb.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This view includes two pop-out views of Ukraine and India. Color bar included in image."
+					alt="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This view includes two pop-out views of Ukraine and India. Color bar included in image."
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377150"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377150_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377150_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377150_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_popout.change_cb.jpg" target="_blank">
+									nightlights_flat_series_stills_8k_popout.change_cb.jpg (7680x4320) [3.6 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This view includes two pop-out views of Ukraine and India. Color bar included in image.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374399" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377151" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_change_colorbar_print.jpg"
+						type="image/jpeg"
+					><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_change_colorbar.png"
+						type="image/png"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="Color bar legend for night lights change.  Purples represent more light. Oranges represent less light. White represents no change in lights. "
+					alt="Color bar legend for night lights change.  Purples represent more light. Oranges represent less light. White represents no change in lights. "
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377151"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377151_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377151_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377151_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_change_colorbar_print.jpg" target="_blank">
+									nightlights_change_colorbar_print.jpg (1024x576) [21.7 KB]
+								</a></li><li><a id="media_group_377151_download_images_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_change_colorbar.png" target="_blank">
+									nightlights_change_colorbar.png (3840x2160) [668.7 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Color bar legend for night lights change.  Purples represent more light. Oranges represent less light. White represents no change in lights. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374400" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377152" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_only_lights.2023_web.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_only_lights_4320p3_h265.mp4"
+						type="video/mp4"
+					><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_only_lights_2160p3_h265.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					Time series view (2012-2023) of night lights on a black background.
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377152"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377152_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377152_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377152_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_only_lights_4320p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_8k_only_lights_4320p3_h265.mp4 (7680x4320) [3.1 MB]
+								</a></li><li><a id="media_group_377152_download_movies_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_only_lights_2160p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_only_lights_2160p3_h265.mp4 (3840x2160) [1.0 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377152_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377152_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/7680x4320_16x9_3p/nightlights_flat_2012-2023_only_lights/" target="_blank">
+									nightlights_flat_2012-2023_only_lights (7680x4320) [12 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377152_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377152_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_only_lights.2023_web.jpg" target="_blank">
+									nightlights_flat_series_stills_only_lights.2023_web.jpg (2048x1152) [168.5 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Time series view (2012-2023) of night lights on a black background.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374401" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377153" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_only_lights.change.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This version on a black background. "
+					alt="8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This version on a black background. "
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377153"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377153_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377153_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377153_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_8k_only_lights.change.jpg" target="_blank">
+									nightlights_flat_series_stills_8k_only_lights.change.jpg (7680x4320) [1.9 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - Global flat map view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. This version on a black background. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374402" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377154" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india.02023_web.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_2160p3_h265.mp4"
+						type="video/mp4"
+					><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_4320p3_h265.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					Time series view (2012-2023) of night lights on a flat map. View is centered on India.
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377154"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377154_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377154_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377154_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_2160p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_india_2160p3_h265.mp4 (3840x2160) [2.8 MB]
+								</a></li><li><a id="media_group_377154_download_movies_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_4320p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_india_8k_4320p3_h265.mp4 (7680x4320) [8.4 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377154_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377154_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/7680x4320_16x9_3p/nightlights_flat_2012-2023_india/" target="_blank">
+									nightlights_flat_2012-2023_india (7680x4320) [12 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377154_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377154_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india.02023_web.jpg" target="_blank">
+									nightlights_flat_series_stills_india.02023_web.jpg (2045x1150) [494.5 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Time series view (2012-2023) of night lights on a flat map. View is centered on India.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374403" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br><!-- widget image_slide_transition {"group_list": [374373, 374374]} --></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377155" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image slider --><img-comparison-slider class="colored-slider"><picture
+						slot="first"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_compare.02012.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36462 - Left Image"
+							type="image/png"
+						></picture><picture
+						slot="second"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_compare.02023.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36462 - Right Image"
+							type="image/png"
+						></picture></img-comparison-slider><script
+		src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.0/dist/index.min.js"
+		onerror="document.write(`<script src='/static/detailspage/js/img-comparison-slider-8.0.0.js'>\x3C/script>`)"
+	></script></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377155"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377155_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377155_download_slide_1" class="dropdown-header"><h6 class="mb-0">Slide 1</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_compare.02012.jpg" target="_blank">
+							nightlights_flat_series_stills_india_8k_compare.02012.jpg (7680x4320) [3.6 MB]
+						</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377155_download_slide_2" class="dropdown-header"><h6 class="mb-0">Slide 2</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k_compare.02023.jpg" target="_blank">
+							nightlights_flat_series_stills_india_8k_compare.02023.jpg (7680x4320) [4.4 MB]
+						</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Image comparison showing 2012 and 2023 night lights on a flat map. View is centered on India. </p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374404" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377156" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k.change.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on India."
+					alt="8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on India."
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377156"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377156_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377156_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377156_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_india_8k.change.jpg" target="_blank">
+									nightlights_flat_series_stills_india_8k.change.jpg (7680x4320) [4.5 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on India.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374405" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377157" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Video player --><video
+				controls
+				poster="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine.02023_web.jpg"
+				preload="metadata"
+				class="img-fluid w-100"
+				style="min-height: 20vh; max-height: 65vh;"
+			><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_4320p3_h265.mp4"
+						type="video/mp4"
+					><source
+						src="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_2160p3_h265.mp4"
+						type="video/mp4"
+					><p class="text-white">
+					Time series view (2012-2023) of night lights on a flat map. View is centered on Ukraine.
+				</p></video></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377157"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377157_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377157_movies_download" class="dropdown-header"><h6 class="mb-0">Movies</h6></li><li><a id="media_group_377157_download_movies_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_4320p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_ukraine_8k_4320p3_h265.mp4 (7680x4320) [8.5 MB]
+								</a></li><li><a id="media_group_377157_download_movies_1" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_2160p3_h265.mp4" target="_blank">
+									nightlights_flat_series_stills_ukraine_2160p3_h265.mp4 (3840x2160) [3.4 MB]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377157_frame sets_download" class="dropdown-header"><h6 class="mb-0">Frame sets</h6></li><li><a id="media_group_377157_download_frame sets_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/frames/7680x4320_16x9_3p/nightlights_flat_2012-2023_ukraine/" target="_blank">
+									nightlights_flat_2012-2023_ukraine (7680x4320) [12 Item(s)]
+								</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377157_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_377157_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine.02023_web.jpg" target="_blank">
+									nightlights_flat_series_stills_ukraine.02023_web.jpg (2045x1150) [625.4 KB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Time series view (2012-2023) of night lights on a flat map. View is centered on Ukraine.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374406" ><div class="px-0 px-md-3 px-lg-4 mb-0-last-p"><!-- Description --><p><br><!-- widget image_slide_transition {"group_list": [374376, 374377]} --></p></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_377158" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image slider --><img-comparison-slider class="colored-slider"><picture
+						slot="first"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_compare.02012.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36465 - Left Image"
+							type="image/png"
+						></picture><picture
+						slot="second"
+						draggable="false"
+						style="pointer-events: none;"
+					><source
+								srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_compare.02023.jpg"
+								type="image/jpeg"
+							><img
+							class="img-fluid w-100"
+							style="min-height: 20vh; max-height: 65vh;"
+							src="/static/svs/images/no_preview_web_black.png"
+							alt="#36465 - Right Image"
+							type="image/png"
+						></picture></img-comparison-slider><script
+		src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.0/dist/index.min.js"
+		onerror="document.write(`<script src='/static/detailspage/js/img-comparison-slider-8.0.0.js'>\x3C/script>`)"
+	></script></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_377158"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_377158_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_377158_download_slide_1" class="dropdown-header"><h6 class="mb-0">Slide 1</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_compare.02012.jpg" target="_blank">
+							nightlights_flat_series_stills_ukraine_8k_compare.02012.jpg (7680x4320) [4.5 MB]
+						</a></li><li><hr class="dropdown-divider"></li><li id="media_group_377158_download_slide_2" class="dropdown-header"><h6 class="mb-0">Slide 2</h6></li><li><a class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k_compare.02023.jpg" target="_blank">
+							nightlights_flat_series_stills_ukraine_8k_compare.02023.jpg (7680x4320) [4.6 MB]
+						</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>Image comparison showing 2012 and 2023 night lights on a flat map. View is centered on Ukraine.</p></div></div></div></section>
+
+					
+				
+					
+						
+
+<section id="media_group_374358" ><div class="card bg-gray-300 position-relative rounded overflow-hidden p-0"><!-- Content --><div class="card-body p-0"><div class="d-flex justify-content-center position-relative bg-dark"><!-- Image --><picture><source
+						srcset="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k.change.jpg"
+						type="image/jpeg"
+					><img
+					class="img-fluid w-100"
+					style="min-height: 20vh; max-height: 65vh;"
+					src="/static/svs/images/no_preview_web_black.png"
+					title="8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on Ukraine."
+					alt="8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on Ukraine."
+					loading="lazy"
+					type="image/png"
+				></picture></div><div class="p-2 p-md-3 mb-0-last-p clearfix"><div class="hstack gap-2 flex-wrap flex-lg-nowrap float-end"><ul class="hstack list-unstyled ms-auto gap-2 flex-shrink-0 mb-0"><li><button
+		type="button"
+		class="svs-copy-link-to-this-page-button btn btn-light px-1 py-0 fs-4 bg-transparent border-0"
+		title="Copy a link to this media item"
+		tabindex="0"
+		aria-label="Copy a link to this media item"
+		data-copy-url="{ current_url }#media_group_374358"
+		data-bs-title="Copied!"
+		data-bs-trigger="manual"
+	><span class="bi bi-link-45deg" aria-hidden="true"></span></button></li></ul><div class="vr"></div><!-- Download Options --><div class="dropdown flex-shrink-0"><button
+		class="btn btn-sm btn-secondary dropdown-toggle text-wrap"
+		data-bs-toggle="dropdown"
+		aria-expanded="false"
+		data-bs-popper-config='{"strategy":"fixed"}'
+	><span class="bi bi-download me-1" aria-hidden="true"></span> Download
+	</button><ul id="media_group_374358_download" class="dropdown-menu dropdown-menu-dark"><li id="media_group_374358_images_download" class="dropdown-header"><h6 class="mb-0">Images</h6></li><li><a id="media_group_374358_download_images_0" class="dropdown-item" href="/vis/a000000/a005200/a005276/nightlights_flat_series_stills_ukraine_8k.change.jpg" target="_blank">
+									nightlights_flat_series_stills_ukraine_8k.change.jpg (7680x4320) [5.2 MB]
+								</a></li><li><hr class="dropdown-divider"></li></ul></div></div><!-- Description --><p>8k resolution (7680 × 4320) still image - A view of night light changes between 2012 and 2023.  Areas with more light are purple and areas with less light are orange. View is centered on Ukraine.</p></div></div></div></section>
+
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+			</div>
+			<hr>
+		
+
+		
+		
+			<section id="section_keywords" class="vstack gap-2">
+				
+					<!-- NASA science categories -->
+					<ul id="nasa_science_categories" class="list-unstyled hstack flex-wrap gap-2 mb-0">
+						
+							<li>
+								<a
+									href="/search?nasa_science_categories=Earth"
+									class="btn btn-primary hover-grow fw-bold"
+								>
+									<span class="bi bi-globe-americas me-1" aria-hidden="true"></span> Earth
+								</a>
+							</li>
+						
+					</ul>
+				
+
+				
+					<!-- Keywords -->
+					<ul id="keywords" class="list-unstyled hstack flex-wrap gap-2 mb-0">
+						
+							<li>
+								<a
+									href="/search?keywords=Black Marble"
+									class="btn btn-sm btn-secondary hover-grow"
+								>Black Marble</a>
+							</li>
+						
+							<li>
+								<a
+									href="/search?keywords=Earth"
+									class="btn btn-sm btn-secondary hover-grow"
+								>Earth</a>
+							</li>
+						
+							<li>
+								<a
+									href="/search?keywords=Hyperwall"
+									class="btn btn-sm btn-secondary hover-grow"
+								>Hyperwall</a>
+							</li>
+						
+							<li>
+								<a
+									href="/search?keywords=Night"
+									class="btn btn-sm btn-secondary hover-grow"
+								>Night</a>
+							</li>
+						
+							<li>
+								<a
+									href="/search?keywords=Night lights"
+									class="btn btn-sm btn-secondary hover-grow"
+								>Night lights</a>
+							</li>
+						
+							<li>
+								<a
+									href="/search?keywords=VIIRS"
+									class="btn btn-sm btn-secondary hover-grow"
+								>VIIRS</a>
+							</li>
+						
+					</ul>
+				
+			</section>
+			<hr>
+		
+
+		
+		
+			<section id="section_credits">
+				<h2 class="fs-3">Credits</h2>
+				
+					<!-- Credit header box -->
+					<div class="card p-3 mb-2 mb-0-last-p">
+						<p><b>Please give credit for this item to:</b><br /> NASA's Scientific Visualization Studio</p>
+					</div>
+				
+				
+					<!-- Credit list -->
+					<ul class="list-unstyled vstack gap-2">
+						
+							<li class="row">
+								<div class="col-6 col-md-4 col-lg-3 text-end">
+									<h3 class="fs-6 mb-0 lh-base">
+										
+											Visualizer
+										
+									</h3>
+								</div>
+								<div class="col-6 col-md-8 col-lg-9 text-start border-start">
+									<ul class="list-unstyled">
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Kel%20Elkins" class="link">
+		Kel Elkins
+	</a>
+	
+		(USRA)
+	
+	
+		<a href="https://orcid.org/0000-0002-0585-1619"><img
+				src="/static/detailspage/images/ORCID-iD_icon_vector.svg"
+				alt="ORCID logo. It consists of the text 'id' in lowercase inside of a green circle."
+				title="See this person's other publications"
+				class="bg-transparent"
+				style="height: 1.5rem; width: 1.5rem;"
+			></a>
+
+											</li>
+										
+									</ul>
+								</div>
+							</li>
+						
+							<li class="row">
+								<div class="col-6 col-md-4 col-lg-3 text-end">
+									<h3 class="fs-6 mb-0 lh-base">
+										
+											Scientists
+										
+									</h3>
+								</div>
+								<div class="col-6 col-md-8 col-lg-9 text-start border-start">
+									<ul class="list-unstyled">
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Zhuosen%20Wang" class="link">
+		Zhuosen Wang
+	</a>
+	
+		(University of Maryland)
+
+											</li>
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Miguel%20Rom%C3%A1n" class="link">
+		Miguel Román
+	</a>
+	
+		(Leidos)
+
+											</li>
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Ranjay%20Shrestha" class="link">
+		Ranjay Shrestha
+	</a>
+	
+		(SSAI)
+
+											</li>
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Srija%20Chakraborty" class="link">
+		Srija Chakraborty
+	</a>
+	
+		(USRA)
+
+											</li>
+										
+											<li>
+												
+
+
+
+<a href="/search/?people=Virginia%20Kalb" class="link">
+		Virginia Kalb
+	</a>
+	
+		(NASA)
+
+											</li>
+										
+									</ul>
+								</div>
+							</li>
+						
+					</ul>
+				
+			</section>
+			<hr>
+		
+
+
+
+		
+
+		
+		
+
+		
+		
+			<!-- Datasets -->
+			<section id="section_datasets" class="row">
+				<h2 class="fs-3">Datasets used</h2>
+				<ul class="list-unstyled  mx-0">
+					
+						
+							
+
+	<li class="dataset card p-3 mb-2">
+		<div class="card-title hstack flex-wrap">
+			<h2 class="fs-5 fw-normal search-text me-auto search-text mb-0">
+				Black Marble (Black Marble: Next Generation) [Suomi NPP: VIIRS]
+			</h2>
+			<span class="btn btn-sm btn-secondary disabled">ID: 1176</span>
+		</div>
+
+		<div class="card-subtitle hstack flex-wrap hide-last-vr gap-2 search-text">
+			
+			
+				<span>Sensor: VIIRS</span> <span class="vr"></span>
+			
+			
+				<span>Collected by: NASA/NOAA</span>
+				<span class="vr"></span>
+			
+			
+		</div>
+
+		<div class="card-body vstack p-2 gap-2">
+			
+				<p class="mb-0 search-text">
+					Earth at night imagery
+				</p>
+			
+			
+				<p class="mb-0">
+					<span class="text-muted search-text">Credit: NASA Earth Observatory images by Joshua Stevens, using Suomi NPP VIIRS data from Miguel Román, NASA GSFC.</span>
+				</p>
+			
+			
+				<p class="mb-0">
+					This dataset can be found at: <a href="https://visibleearth.nasa.gov/images/144898/earth-at-night-black-marble-2016-color-maps/144947l" class="link">https://visibleearth.nasa.gov/images/144898/earth-at-night-black-marble-2016-color-maps/144947l</a>
+				</p>
+			
+			
+			<a href="/search/?datasets=1176" class="link">See all pages that use this dataset<span class="bi bi-chevron-right mx-2" aria-hidden="true"></span></a>
+		</div>
+	</li>
+
+
+						
+					
+				</ul>
+				<p class="text-muted mb-0">
+					Note: While we identify the data sets used on this page, we do not store any further details, nor the data sets themselves on our site.
+				</p>
+			</section>
+			<hr>
+		
+
+		
+		
+			<!-- Citing this page -->
+			<section id="section_citing" class="row">
+				<h2 class="fs-3">Citing this page</h2>
+				<p class="mb-0 text-muted">
+					DOI: <a href="https://zenodo.org/records/17177652" target="_blank" class="link">10.5281/zenodo.17177652</a>
+				</p>
+			</section>
+			<hr>
+		
+
+		
+		
+			<!-- Related pages -->
+			<section id="section_related_pages">
+				
+
+<div class="row">
+	
+		<!-- Related pages -->
+		<div class="col-auto">
+			
+
+
+
+
+
+
+	
+		
+			<!-- Title -->
+			<h2 class="fs-3">Related</h2>
+		
+		
+		
+		<div class="position-relative">
+			<ul id="accordion_related_pages_related_card_gallery" class="list-unstyled hstack flex-wrap">
+				<!-- Pages -->
+				
+					
+
+
+
+
+<!-- Tile tile_details_page_5634 --><li
+			id="tile_details_page_5634"
+			class="tile-gallery-tile card flex-shrink-0 rounded overflow-hidden position-relative p-0 m-0"
+			style="width: 320px; max-width: 80vw; flex: none;"
+		><!-- Card header --><div
+					id="tile_details_page_5634_header"
+					class="position-relative"
+				><!-- Image topper --><a
+							href="/5634/"
+							title="Go to this page"
+							class="card-img-top bg-dark"
+						><div class="ratio ratio-16x9"><img
+									src="/vis/a000000/a005600/a005634/nightlights_cumulative_change.04589_preview.jpg"
+									alt="Global animation of cumulative nighttime light change since 2014 from satellite data. Gold areas brighten, purple areas dim, and white regions show mixed change, highlighting patterns of human activity."
+									style="object-fit: cover"
+									loading="lazy"
+								></div></a><!-- ID Badge --><span class="position-absolute top-0 start-0 badge bg-dark bg-opacity-75 fs-6 fw-normal rounded-0" style="border-bottom-right-radius: var(--bs-border-radius) !important;"> ID: 5634 </span></div><div
+					id="tile_details_page_5634_body"
+					class="position-absolute bottom-0 w-100"
+				><!-- Type badge --><span class="start-0 badge bg-dark bg-opacity-75 fs-6 fw-normal rounded-0" style="border-top-right-radius: var(--bs-border-radius) !important;"><span class="bi bi-pie-chart-fill me-1" aria-hidden="true"></span> Visualization
+							</span><!-- Card body --><div class="bg-dark bg-opacity-75 w-100 fs-6 text-white py-1 px-2"><div
+								style="max-height: 225px;"
+							><h3
+										id="tile_details_page_5634_body_title"
+										class="flex-shrink-0 mb-0 fs-6"
+									><a
+											href="/5634/"
+											title="Go to this page"
+											class="link link-light card-title overflow-hidden mb-0"
+											tabindex="-1"
+											style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;"
+										>
+											Global Nighttime Lights Change (2014–2022)
+										</a></h3></div></div></div></li>
+
+				
+			</ul>
+		</div>
+	
+
+
+		</div>
+	
+	
+	
+	
+		<!-- Alternate versions -->
+		<div class="col-auto">
+			
+
+
+
+
+
+
+	
+		
+			<!-- Title -->
+			<h2 class="fs-3">Alternate Versions</h2>
+		
+		
+		
+		<div class="position-relative">
+			<ul id="accordion_related_pages_alternate_versions_card_gallery" class="list-unstyled hstack flex-wrap">
+				<!-- Pages -->
+				
+					
+
+
+
+
+<!-- Tile tile_details_page_5313 --><li
+			id="tile_details_page_5313"
+			class="tile-gallery-tile card flex-shrink-0 rounded overflow-hidden position-relative p-0 m-0"
+			style="width: 320px; max-width: 80vw; flex: none;"
+		><!-- Card header --><div
+					id="tile_details_page_5313_header"
+					class="position-relative"
+				><!-- Image topper --><a
+							href="/5313/"
+							title="Go to this page"
+							class="card-img-top bg-dark"
+						><div class="ratio ratio-16x9"><img
+									src="/vis/a000000/a005300/a005313/nightlights_flat_series_and_change_wZooms_13_EIC.02599_print.jpg"
+									alt="This global, flat map view of night lights data begins with a time series depicting annual averages from 2012 to 2023. The lights then fade away to reveal night lights change between 2012 and 2023, with regions of more light depicted in purple and regions with less light depicted in orange. The sequence then repeats with pop-out, zoomed-in views of India, Ukraine, Western Europe, and the Eastern Mediterranean region."
+									style="object-fit: cover"
+									loading="lazy"
+								></div></a><!-- ID Badge --><span class="position-absolute top-0 start-0 badge bg-dark bg-opacity-75 fs-6 fw-normal rounded-0" style="border-bottom-right-radius: var(--bs-border-radius) !important;"> ID: 5313 </span></div><div
+					id="tile_details_page_5313_body"
+					class="position-absolute bottom-0 w-100"
+				><!-- Type badge --><span class="start-0 badge bg-dark bg-opacity-75 fs-6 fw-normal rounded-0" style="border-top-right-radius: var(--bs-border-radius) !important;"><span class="bi bi-pie-chart-fill me-1" aria-hidden="true"></span> Visualization
+							</span><!-- Card body --><div class="bg-dark bg-opacity-75 w-100 fs-6 text-white py-1 px-2"><div
+								style="max-height: 225px;"
+							><h3
+										id="tile_details_page_5313_body_title"
+										class="flex-shrink-0 mb-0 fs-6"
+									><a
+											href="/5313/"
+											title="Go to this page"
+											class="link link-light card-title overflow-hidden mb-0"
+											tabindex="-1"
+											style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;"
+										>
+											Change in Night Lights between 2012 and 2023 - EIC Version
+										</a></h3></div></div></div></li>
+
+				
+			</ul>
+		</div>
+	
+
+
+		</div>
+	
+	
+	
+</div>
+<hr>
+
+			</section>
+		
+
+		
+		<section id="release_time">
+			<h2 class="visually-hidden">Release date</h2>
+			<p class="text-muted mb-0">
+				
+					This page was originally published on Monday, May 27, 2024.
+					<br>
+				
+				This page was last updated on Monday, June 23, 2025 at 1:11 PM EDT.
+			</p>
+		</section>
+		<hr>
+
+		
+		<section id="section_recommended_pages">
+			 
+
+
+
+<div id="recommended_pages" class="card-gallery-ajax-wrapper">
+	<input type="hidden" id="recommended_pages_var_can_load" value="true">
+	<input type="hidden" id="recommended_pages_var_is_loading" value="false" class="card-gallery-ajax-trigger">
+	<input type="hidden" id="recommended_pages_var_url" value="/api/detailspage/5276/recommended/display">
+	<input type="hidden" id="recommended_pages_var_params" value="">
+	
+		<!-- Title -->
+		<h2 class="fs-3">You may also like...</h2>
+	
+	
+	<div class="position-relative" style="height: 480px; width: 100%">
+		<div id="recommended_pages_results">
+			<!-- This gets filled in dynamically via. AJAX -->
+		</div>
+		<div id="recommended_pages_loader" class="w-100 h-100 position-relative rounded">
+			<div class="position-absolute w-100 h-100">
+				<div class="d-flex justify-content-center align-items-center h-100">
+					<div class="loader"></div>
+				</div>
+			</div>
+			<div class="placeholder-wave w-100 h-100">
+				<div class="card bg-gray-300 placeholder w-100 h-100"></div>
+			</div>
+		</div>
+		<div id="recommended_pages_no_results_warning" class="w-100 h-100 position-relative" style="display: none;">
+			<div class="d-flex justify-content-center align-items-center h-100">
+				<h4 class="fs-3 my-auto">No results.</h4>
+			</div>
+		</div>
+		<div id="recommended_pages_error_warning" class="w-100 h-100 position-relative" style="display: none;">
+			<div class="d-flex justify-content-center align-items-center h-100">
+				<h4 class="fs-3 my-auto">An error occurred. Please reload this page and try again.</h4>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</section>
+	</article>
+
+			</div>
+		</main>
+		<footer>
+			<!-- Footer Javascript -->
+			
+				
+				<script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=NASA&subagency=GSFC&yt=true&dclink=true"></script>
+				<script id="parsely-cfg" src="https://cdn.parsely.com/keys/svs.gsfc.nasa.gov/p.js" async="" defer=""></script>
+			
+			<script
+				src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+				onerror="document.write(`<script src='/static/svs/js/bootstrap.bundle.min.js'>\x3C/script>`)"
+			></script>
+
+			<script src="/static/svs/js/script.js"></script>
+			
+	<script src="/static/svs/js/card-galleries.js"></script>
+
+
+			<!-- Bottom navigation bar -->
+			<nav id="bottom-navbar" class="navbar navbar-dark text-light">
+				<div class="container">
+					<div class="row w-100">
+						<!-- Brands -->
+						<div class="col-12 col-lg d-flex justify-content-center align-items-center">
+							<!-- NASA brand -->
+							<a href="https://www.nasa.gov/" class="link">
+								<img src="/static/svs/images/nasa-meatball.svg" height="60" alt="NASA Home Page">
+							</a>
+							<!-- USA.gov brand -->
+							<a
+								href="https://www.usa.gov/" class="link"
+							>
+								<img src="/static/svs/images/USAgov_logo.svg" height="60" alt="USA.gov Home Page">
+							</a>
+						</div>
+						<hr class="d-block d-lg-none my-2">
+						<div class="col-12 col-sm d-flex align-items-center">
+							<!-- Privacy and guidelines links -->
+							<div class="text-sm-end w-100">
+								
+									<div class="navbar-text">
+										<a href="https://www.nasa.gov/about/highlights/HP_Privacy.html" class="link link-light">Privacy Policy and Important Notices</a>
+										<br>
+										<a href="https://www.nasa.gov/multimedia/guidelines/index.html" class="link link-light">Reproduction Guidelines</a>
+									</div>
+								
+							</div>
+						</div>
+						<div class="col-auto d-none d-sm-flex align-items-center justify-content-center">
+							<div class="vr h-100 start-50"></div>
+						</div>
+						<div class="col-12 col-sm d-flex align-items-center">
+							<!-- Contact links -->
+							<div class="text-sm-start w-100">
+								
+									<div id="site-contacts" class="navbar-text">
+										<div>
+	NASA Official: <span class="email-link flex-nowrap" data-user="mark.u.subbarao" data-linktext="Mark SubbaRao"></span>
+</div>
+ <div>
+	Site Curator: <span class="email-link flex-nowrap" data-user="ella.kaplan" data-linktext="Ella Kaplan"></span>
+</div>
+
+									</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</footer>
+	</body>
+</html>

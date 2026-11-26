@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-25T12:04:11+00:00",
+  "script": "productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_02_APPROVED.md",
+  "sha256": "05a82b8c7ed24b2df58b6bbfab06cad05ac0ae3d1d787c32a05ac51ea72c0a6d",
+  "title": "Why Can a Skydiver Slow Down Without a Parachute?",
+  "channel": "UNREGISTERED",
+  "project": "unreasonably-exact-script-rewrite-v3",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R4",
+      "level": "WARN",
+      "detail": "6% of script 5-grams match our other project productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md"
+    },
+    {
+      "rule": "R2",
+      "level": "EXCEPTION",
+      "detail": "title identical to existing video/project ['productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md']",
+      "exception_reason": "Same video as the earlier Codex draft; V3 holds the owner-approved 78.2 s recorded narration (authorship unconfirmed). Wording differs (R4 overlap 6%). (register, counterpart productions/unreasonably-exact-codex-drafts-2026-11-24/02_skydiver_slowdown/SCRIPT_CODEX_DRAFT.md)"
+    },
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

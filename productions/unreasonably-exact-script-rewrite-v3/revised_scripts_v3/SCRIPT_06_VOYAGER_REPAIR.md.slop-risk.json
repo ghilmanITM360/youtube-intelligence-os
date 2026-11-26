@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-25T12:04:22+00:00",
+  "script": "productions/unreasonably-exact-script-rewrite-v3/revised_scripts_v3/SCRIPT_06_VOYAGER_REPAIR.md",
+  "sha256": "8b7142551276e31b92b44d506c0597e830c47bfaaa09d989d35d2f44475fc861",
+  "title": "How Do You Repair Voyager 1 When Every Reply Takes Two Days?",
+  "channel": "UNREGISTERED",
+  "project": "unreasonably-exact-script-rewrite-v3",
+  "verdict": "WARN",
+  "delivery_blocked": false,
+  "findings": [
+    {
+      "rule": "R7",
+      "level": "WARN",
+      "detail": "no image files found at ['/Users/ghilmanislam360/Documents/youtube-intelligence-os/none']"
+    }
+  ],
+  "manual_checklist": [
+    "C1 Upload pacing is a human cadence (paper feature: avg upload pace, time to first upload); no bulk-scheduled bursts.",
+    "C2 Our channels do not share accounts, devices, API keys, templates or upload scripts in a way that makes them one cluster.",
+    "C3 Realistic synthetic/altered visuals or voice are disclosed with YouTube's altered/synthetic content setting.",
+    "C4 No realistic AI depiction or voice clone of a real person; no invented expert persona.",
+    "C5 Health/finance claims were checked against the listed sources by a human."
+  ],
+  "rules": "docs/policies/AI-SLOP-RISK-RULES.md",
+  "note": "PROXY ONLY: account/infrastructure/upload-timing signals are not visible here; PASS is not a guarantee."
+}

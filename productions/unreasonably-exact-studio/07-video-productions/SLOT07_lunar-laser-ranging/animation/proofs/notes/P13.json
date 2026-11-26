@@ -1,0 +1,16 @@
+{
+ "defects": [
+  "v1: the three ray origins at y=1520 sat under the caption scrim and were hidden.",
+  "v1: the thin ring ping on 'yes' crossed the array's own faces and looked like a glossy circle over the object.",
+  "v1: at the fastest part of the push-in (43.3-43.4 s) the cube grid strobed: frame-to-frame luma difference 63.6 (all other proofs <6) and the screen flashed to light grey metal.",
+  "v1: the A/B mirror inset was too small to read and the final hold showed three equally bright ray pairs crossing.",
+  "v1: ridge/ground layer extents failed the overscan assertion (the first overscan test I ran) because their extents were band-shaped.",
+  "Open: ALL lunar art is procedural placeholder (array looks like a waffle iron, ground is flat, no astronaut); B18's astronaut sequence is not in this clip; the cube-to-cutaway change is a dissolve, not a true shape morph; the cutaway rays still cross in the middle during B20; the dissolve drops mean luma 62 -> 20 within 0.35 s (a single dip of 8.9/255 per frame, no flashing, but abrupt); only stills and decoded MP4 frames viewed."
+ ],
+ "corrections": [
+  "Cutaway lifted (apex 480, ray origins at y=1370, above the caption band) via p07.build(); ring ping starts outside the array (r 262-440); 7-sample temporal motion blur (0.9 frame shutter) added to the renderer and used on this clip, macro metal darkened: max frame diff 63.6 -> 39.5; mirror inset radius 120 with larger strokes; at 'from.' only the key pair stays lit (others 30%); layer extents may be open on a side (sky above ridge) and the overscan assertion now passes with real margins."
+ ],
+ "retest": [
+  "Re-rendered; decoded MP4 frames at 5.5-7.3 s (push + dissolve) and stills at 8.5-11.7 s viewed: blur reads as a camera push, registration of face circle and aperture is within 0.05 px (check), key ray exits on 'light' (check). All checks PASS. Max frame diff still 39.5 because the push is a near-full-frame change; judged acceptable only as a candidate."
+ ]
+}

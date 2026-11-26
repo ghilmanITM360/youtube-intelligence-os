@@ -1,0 +1,5 @@
+RUN B5L2 (one-defect correction). Deliverable: runs/B5L2/astro_shoulder_cap_near.png, transparent, 1024x1536, SAME canvas/position as runs/B5L/*.
+Evidence: ASTRO_P05_shoulder_defect_evidence.png (Claude's rig test; left = rest, right = arm swung forward). Defect: the near arm's overlap sleeve shows as a crumpled lump on the chest, because nothing covers it.
+Fix: paint ONLY the near (screen-left) SHOULDER as it appears in the master ASTRO_MASTER_34_candidate.png: the smooth rounded suit shoulder and the top ~60 px of the upper sleeve, about 150 x 150 px around (322, 425), soft-edged on its lower side so it blends into the arm. It will be drawn ON TOP of the arm and torso at every angle, so the sleeve overlap tucks under it.
+Use EDIT mode on the master (load it with view_image); keep its colours and lighting. Nothing else in the image.
+Acceptance (Claude measures): one component; centroid within 40 px of (322, 425); over the master at rest the shoulder looks unchanged; in the rig the lump is hidden at -12..+32 deg.

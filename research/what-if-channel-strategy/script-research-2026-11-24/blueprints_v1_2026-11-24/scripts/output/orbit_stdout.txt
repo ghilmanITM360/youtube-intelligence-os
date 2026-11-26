@@ -1,0 +1,54 @@
+Period of a surface-skimming circular orbit T=sqrt(3*pi/(G*rho)) - independent of radius:
+  rho= 1000 kg/m3  T= 198.1 min
+  rho= 1900 kg/m3  T= 143.7 min
+  rho= 2000 kg/m3  T= 140.0 min
+  rho= 2700 kg/m3  T= 120.5 min
+  rho= 5514 kg/m3  T=  84.3 min
+
+Radius at which circular speed equals a chosen human speed (rho=2000):
+  v_c= 1.0 m/s -> R=  1.34 km  g=  0.75 mm/s2 (=0.008% of Earth)  v_esc= 1.41 m/s  T=140.0 min
+  v_c= 2.0 m/s -> R=  2.67 km  g=  1.50 mm/s2 (=0.015% of Earth)  v_esc= 2.83 m/s  T=140.0 min
+  v_c= 3.0 m/s -> R=  4.01 km  g=  2.24 mm/s2 (=0.023% of Earth)  v_esc= 4.24 m/s  T=140.0 min
+  v_c= 5.0 m/s -> R=  6.69 km  g=  3.74 mm/s2 (=0.038% of Earth)  v_esc= 7.07 m/s  T=140.0 min
+  v_c= 8.0 m/s -> R= 10.70 km  g=  5.98 mm/s2 (=0.061% of Earth)  v_esc=11.31 m/s  T=140.0 min
+  v_c=10.0 m/s -> R= 13.37 km  g=  7.48 mm/s2 (=0.076% of Earth)  v_esc=14.14 m/s  T=140.0 min
+
+Worked world: rho=2000, R=3000 m
+  g=1.68 mm/s2  v_c=2.243 m/s  v_esc=3.172 m/s  T=140.0 min  (jump of 3 m/s vertical: height v^2/2g=2683 m (flat-g approx; exceeds R? False); true: v>v_esc? False)
+  launch 1.122 m/s (0.500 v_c): suborbital_hits_ground; periapsis would be   428.6 m from centre = 2571.4 m BELOW the surface
+  launch 2.019 m/s (0.900 v_c): suborbital_hits_ground; periapsis would be  2042.0 m from centre =  958.0 m BELOW the surface
+  launch 2.221 m/s (0.990 v_c): suborbital_hits_ground; periapsis would be  2882.9 m from centre =  117.1 m BELOW the surface
+  launch 2.243 m/s (1.000 v_c): orbit_bound; periapsis 3000 m (launch point), apoapsis 3000 m =    0.0 m above surface, period 140.0 min
+  launch 2.266 m/s (1.010 v_c): orbit_bound; periapsis 3000 m (launch point), apoapsis 3123 m =  123.1 m above surface, period 144.4 min
+  launch 2.468 m/s (1.100 v_c): orbit_bound; periapsis 3000 m (launch point), apoapsis 4595 m = 1594.9 m above surface, period 199.4 min
+  launch 2.916 m/s (1.300 v_c): orbit_bound; periapsis 3000 m (launch point), apoapsis 16355 m = 13354.8 m above surface, period 811.4 min
+  launch 3.141 m/s (1.400 v_c): orbit_bound; periapsis 3000 m (launch point), apoapsis 147754 m = 144753.8 m above surface, period 17637.7 min
+  launch 3.173 m/s (1.414 v_c): escape
+
+Where is the periapsis (closest approach) of the conic through the launch point if the launch has an upward angle gamma? (R=3000 m world, rho=2000)
+  Periapsis below the surface = the orbit would plough through the ground on the way round. Only a (near-)horizontal launch keeps periapsis >= R.
+    speed 2.468 m/s (1.1 v_c), elevation  0.0 deg: periapsis   3000.0 m from centre (    +0.0 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation  0.5 deg: periapsis   2999.3 m from centre (    -0.7 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation  1.0 deg: periapsis   2997.4 m from centre (    -2.6 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation  2.0 deg: periapsis   2989.5 m from centre (   -10.5 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation  5.0 deg: periapsis   2936.8 m from centre (   -63.2 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation 10.0 deg: periapsis   2772.0 m from centre (  -228.0 m vs surface)
+    speed 2.468 m/s (1.1 v_c), elevation 45.0 deg: periapsis   1053.7 m from centre ( -1946.3 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation  0.0 deg: periapsis   3000.0 m from centre (    +0.0 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation  0.5 deg: periapsis   2999.7 m from centre (    -0.3 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation  1.0 deg: periapsis   2998.9 m from centre (    -1.1 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation  2.0 deg: periapsis   2995.5 m from centre (    -4.5 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation  5.0 deg: periapsis   2972.2 m from centre (   -27.8 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation 10.0 deg: periapsis   2890.1 m from centre (  -109.9 m vs surface)
+    speed 2.916 m/s (1.3 v_c), elevation 45.0 deg: periapsis   1363.6 m from centre ( -1636.4 m vs surface)
+  Clearance: a jumper's centre of mass starts ~1 m above the ground; a horizontal launch there at the local circular speed keeps periapsis at ~R+1 m: any rock/bump taller than ~1 m on the path blocks it.
+
+Ballistic hop (RK4) for sub-orbital launches, R=3000 m, rho=2000, launch at 45 deg elevation:
+    0.449 m/s (0.2 v_c): lands after    6.5 min,  0.123 km along the surface
+    1.122 m/s (0.5 v_c): lands after   19.8 min,  0.852 km along the surface
+    2.019 m/s (0.9 v_c): lands after   68.6 min,  3.586 km along the surface
+
+RK4 cross-check, 1.1 v_c launch, R=3000 m, rho=2000:
+  analytic period 11966.8 s, apo 4594.9 m ; RK4: min r 3000.0 m (>=R means no ground contact), return-through-launch-axis time 11967.0
+
+Rotation: equatorial speed that equals v_c means period T_spin = T_orbit (loose-surface limit): rho=2000 -> 2.33 h

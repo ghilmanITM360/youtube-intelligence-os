@@ -1,0 +1,85 @@
+{
+  "status": "candidate; no production approval",
+  "front_canvas_px": [
+    1024,
+    1536
+  ],
+  "export_scale": "1x; no 4x exports provided",
+  "needle_pivot_px": [
+    512,
+    743
+  ],
+  "instrument_center_px": [
+    512,
+    743
+  ],
+  "needle_zero_orientation": "up",
+  "front_layer_order_back_to_front": [
+    "strap_buckle_registered.png",
+    "dial_registered.png",
+    "housing_registered.png",
+    "needle_candidate_registered.png"
+  ],
+  "registered_alpha_bounds_xywh_at_10_percent": {
+    "strap_buckle_registered.png": [
+      402,
+      30,
+      220,
+      1450
+    ],
+    "dial_registered.png": [
+      304,
+      535,
+      416,
+      416
+    ],
+    "housing_registered.png": [
+      257,
+      488,
+      510,
+      510
+    ],
+    "needle_candidate_registered.png": [
+      504,
+      548,
+      16,
+      203
+    ]
+  },
+  "parent_child": {
+    "needle_candidate_registered.png": "dial_registered.png",
+    "dial_registered.png": "housing_registered.png",
+    "housing_registered.png": "strap_buckle_registered.png"
+  },
+  "wrist_attachment": "not established",
+  "perspective_transforms": "not established; do not apply front pivot to oblique views",
+  "warning": "Needle pivot visually estimated for candidate composite; test rotation and verify before production.",
+  "front_split_components": {
+    "upper_strap": "instrument/front/strap_upper_registered.png",
+    "lower_strap": "instrument/front/strap_lower_registered.png",
+    "needle": "instrument/front/needle_without_cap_registered.png",
+    "cap": "instrument/front/pivot_cap_registered.png",
+    "buckle": "baked into upper strap"
+  },
+  "front_rotation_tests": {
+    "angles_degrees": [
+      -70,
+      0,
+      70
+    ],
+    "status": "visually inspected candidate; small cap artifact remains"
+  },
+  "mounted_candidate": {
+    "image": "wrist/mounted_blank_new_candidate.png",
+    "canvas_px": [
+      1586,
+      992
+    ],
+    "estimated_dial_center_px": [
+      777,
+      532
+    ],
+    "needle_scale_relative_to_front": 0.34,
+    "status": "approximate; housing baked into arm; not rig approved"
+  }
+}

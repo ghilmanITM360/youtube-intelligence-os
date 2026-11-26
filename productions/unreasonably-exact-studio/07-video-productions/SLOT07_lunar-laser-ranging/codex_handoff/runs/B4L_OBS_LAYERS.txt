@@ -1,0 +1,7 @@
+RUN B4L. Layers from the observatory master for the dome-opening and telescope rig (P03/P04). All 1024x1536, transparent, SAME canvas/position as OBS_MASTER_candidate.png (load it with view_image; EDIT mode for every output):
+  runs/B4L/obs_ground_ridge.png   - the rocky ridge, base platform, railing; nothing above the platform except what the building hides (paint the ridge behind the building).
+  runs/B4L/obs_building.png       - the cylindrical base wall + door + the dome SHELL, with the slit opening shown as an EMPTY dark opening (no leaves, no telescope visible).
+  runs/B4L/obs_slit_leaf_left.png and runs/B4L/obs_slit_leaf_right.png - each bi-parting leaf alone, in its OPEN position as in the master, with ~30 px of extra leaf painted past where it meets the shell (overlap so it can slide).
+  runs/B4L/obs_telescope.png      - only the telescope tube + visible mount seen through the slit, painted complete (the parts the slit edges hid painted in), dark/unlit as in the master.
+Do not redraw the scene; no sky in any layer (sky is Claude's code). Five edit calls, one per layer.
+Acceptance (Claude measures): ridge + building + telescope + leaves stacked over Claude's sky matches the master silhouette (IoU >= 0.97) and reads as one coherent image; each leaf is one component; corner alpha 0.

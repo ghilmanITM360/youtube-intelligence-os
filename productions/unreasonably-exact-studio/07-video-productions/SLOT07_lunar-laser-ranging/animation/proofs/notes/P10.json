@@ -1,0 +1,13 @@
+{
+ "defects": [
+  "v1: the pulse counter and the data-derived peak marker shared the same screen band (counter at y 560-610, marker at ~625), so a tall peak crowded the number.",
+  "v1 check bug: the purity test compared n=900 and n=901, which are equal when pulse 900 happens to detect nothing.",
+  "Open: top 25% and bottom 20% of the frame are empty; captions are off (because B28/B29 are intercut in the film); the counter shows only ~1,850 pulses while real APOLLO runs are 5,000 shots (illustrative); peak is only about 3x the background at the end, honest for the chosen rates but less dramatic than a hand-drawn peak; only stills viewed."
+ ],
+ "corrections": [
+  "Plot moved down 60 units, counter moved up to y 490/545; purity test compares n=900 vs 1100; counter profile made a single in-quad ramp (rate rises until 'returns') followed by an out-quad settle so the rate is continuous at the anchor."
+ ],
+ "retest": [
+  "Re-rendered, stills at 1.5, 5.0, 8.9, 10.2 s re-viewed (dots -> bars -> peak marker). Checks PASS incl. 'peak not already significant 1.5 s before the anchor' (z 6.0 vs threshold 8.0) and peak bin equals the true bin."
+ ]
+}

@@ -1,0 +1,5 @@
+# Codex self-review — slot 02
+
+Claude V2 begins with the ten-kilometre setup and an explicit model result. Its strongest contribution is the clean sequence from thin air to denser air to drag exceeding weight; that causal idea is retained. The new opening puts the apparent contradiction in the listener's view first, and a speedometer makes the distinction between downward motion and upward acceleration visible. Wording is newly written. The 1 km comparison, model peak and impact numbers, and elapsed time were removed to keep the Short on one question; they are not corrections to the model. The qualifying model statement remains in the spoken explanation.
+
+Seven lenses, Codex self-review only: hook poses the physical puzzle; promise is answered; spoken language uses short sentences; causality links density and force; visuals distinguish direction and speed; science is conditional on the model; originality retains general physics but no copied artwork or sequence. A listener and an aerodynamicist have not reviewed it. No performance claim.
