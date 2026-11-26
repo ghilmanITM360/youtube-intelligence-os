@@ -26,4 +26,4 @@
 | Engine | `uemotion` snapshot 2026-11-26; smoke test PASS; `narration.py` must be replaced per film (`05-animation-engine/ENGINE_GUIDE.md`) |
 | Playbooks | UE playbook 1.1 (§21 added); HumanCraft 4.1 (Part VI); Claude–Codex protocol 1.0; production standards 1.0 |
 | Known documentation debts | Slot 07 `MASTER_ASSET_MANIFEST.csv` was never updated (use the tracker and index); Slot 07 `scientific_model/` is empty (the models are in code); the Slot 07 Codex verdicts are split over three files |
-| GitHub | branch `production/unreasonably-exact-studio`; see `../UNREASONABLY_EXACT_PROJECT_GUIDE.md` §15 |
+| GitHub | branch `production/unreasonably-exact-studio`; first commit `26cd9bd322475714b0777bb4087d8c40b1a421cc` (2026-11-26, 728 files under `productions/unreasonably-exact-studio/`); see `../UNREASONABLY_EXACT_PROJECT_GUIDE.md` §15 |

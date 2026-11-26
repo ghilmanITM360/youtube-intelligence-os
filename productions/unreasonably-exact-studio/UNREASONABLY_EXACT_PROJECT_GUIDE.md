@@ -6,7 +6,7 @@
 - **Version-controlled copy:** GitHub `ghilmanITM360/youtube-intelligence-os`, branch `production/unreasonably-exact-studio`, folder `productions/unreasonably-exact-studio/` (§15).
 
 **Recommended reading order (§20):**
-1. `START_HERE.md`
+1. `START_HERE.md` (final report of the 2026-11-26 consolidation: `FINAL_CONSOLIDATION_REPORT_ROMAN_URDU.md`)
 2. this guide
 3. the production playbooks
 4. the Claude–Codex protocol
