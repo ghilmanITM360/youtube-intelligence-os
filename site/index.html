@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YIOS Data Browser</title>
+<style>
+:root{--bg:#f6f7f9;--panel:#fff;--ink:#16191d;--mut:#5d6672;--line:#e1e5ea;--acc:#1f5eff;--acc-bg:#e8eeff;--ok:#17803d;--warn:#a15c00;--bad:#b42318;--bar:#9db7ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101316;--panel:#171b20;--ink:#e8ebef;--mut:#98a2ae;--line:#272d34;--acc:#7da2ff;--acc-bg:#1c2a4d;--ok:#4ac17a;--warn:#e0a13a;--bad:#f1796c;--bar:#35538f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:5;background:var(--panel);border-bottom:1px solid var(--line);display:flex;gap:4px;align-items:center;padding:0 16px;overflow-x:auto}
+header b{margin-right:14px;white-space:nowrap}
+header a{padding:14px 12px;color:var(--mut);white-space:nowrap;border-bottom:2px solid transparent}
+header a.on{color:var(--ink);border-bottom-color:var(--acc)}
+main{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:26px 0 8px}
+.sub{color:var(--mut);margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.card .n{font-size:24px;font-weight:600}.card .l{color:var(--mut);font-size:13px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px;overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);white-space:nowrap}
+th.s{cursor:pointer}td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}
+.bar{display:flex;align-items:center;gap:8px;margin:4px 0}.bar i{display:block;height:10px;background:var(--bar);border-radius:3px}
+.bar span{min-width:130px}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;background:var(--acc-bg);color:var(--acc);white-space:nowrap}
+.tag.ok{background:transparent;border:1px solid var(--ok);color:var(--ok)}.tag.warn{background:transparent;border:1px solid var(--warn);color:var(--warn)}
+.tag.bad{background:transparent;border:1px solid var(--bad);color:var(--bad)}.tag.grey{background:var(--line);color:var(--mut)}
+.bar-f{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+input,select{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);min-width:0}
+input[type=search]{flex:1;min-width:180px}
+button{font:inherit;padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--ink);cursor:pointer}
+button:disabled{opacity:.4;cursor:default}
+.kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px}.kv dt{color:var(--mut)}.kv dd{margin:0;word-break:break-word}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;max-height:560px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}
+.pg{display:flex;gap:10px;align-items:center;margin-top:12px;color:var(--mut)}
+.mut{color:var(--mut)}.empty{color:var(--mut);padding:18px;text-align:center}
+.crumbs{margin:0 0 10px;color:var(--mut);font-size:13px}
+img.pv{max-width:100%;border-radius:6px;border:1px solid var(--line)}
+.thumb{width:120px;border-radius:4px;display:block}
+.ch{width:100%;height:auto;display:block}.ch rect{fill:var(--acc)}.ch rect.b2{fill:var(--bar)}.ch text{fill:var(--mut);font:10px sans-serif}.ch line{stroke:var(--line)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px}.grid2 h2{margin-top:14px}
+.md h2,.md h3,.md h4{margin:18px 0 6px}.md p{margin:8px 0}.md code{background:var(--bg);padding:1px 5px;border-radius:4px;font:13px ui-monospace,Menlo,monospace}.md blockquote{margin:8px 0;padding:2px 14px;border-left:3px solid var(--line);color:var(--mut)}.md li{margin:2px 0}.md hr{border:0;border-top:1px solid var(--line)}
+.tbl{max-height:640px;overflow:auto}.tbl th{position:sticky;top:0;background:var(--panel)}.tbl td{max-width:420px;min-width:70px;overflow-wrap:break-word}.tbl.w td:first-child{min-width:300px}.tbl.w table{min-width:900px}
+.jt details{margin-left:16px}.jt summary{cursor:pointer;list-style-position:outside}.jt .k{color:var(--acc)}.jt .v{margin-left:16px;word-break:break-word}.jt{font:13px/1.6 ui-monospace,Menlo,monospace}
+.ch circle{fill:var(--acc);fill-opacity:.55;stroke:var(--acc);stroke-width:.5}.ch circle.c1{fill:var(--warn);stroke:var(--warn)}.ch circle.c2{fill:var(--ok);stroke:var(--ok)}.ch circle.c3{fill:var(--mut);stroke:var(--mut)}.ch circle:hover{fill-opacity:1;stroke-width:2}.ch .med{stroke:var(--warn);stroke-dasharray:4 3}.ch .heat{fill:var(--acc)}.ch .heat0{fill:var(--line)}
+.spark{display:block;width:90px;height:22px}.spark rect{fill:var(--bar)}.spark rect.l{fill:var(--acc)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}.gal a{display:block;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}.gal a:hover{text-decoration:none;border-color:var(--acc)}.gal img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--line)}.gal div{padding:6px 9px;font-size:13px}.gal b{display:block;line-height:1.3;max-height:2.6em;overflow:hidden}.gal span{color:var(--mut)}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--mut);margin:0 0 6px}.leg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:var(--acc)}.leg i.c1{background:var(--warn)}.leg i.c2{background:var(--ok)}.leg i.c3{background:var(--mut)}
+.pbar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:120px}.pbar i{display:block;height:100%;background:var(--ok)}
+.tabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:6px 0 18px}.tabs a{padding:9px 14px;color:var(--mut);border-bottom:2px solid transparent;margin-bottom:-1px}.tabs a.on{color:var(--ink);border-bottom-color:var(--acc);font-weight:600}.tabs a:hover{text-decoration:none;color:var(--ink)}
+details.tx{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin:0 0 8px;padding:9px 12px}details.tx>summary{cursor:pointer}details.tx[open]>summary{margin-bottom:8px}.snip{color:var(--mut);font-size:13.5px;margin-top:3px}mark{background:#ffd54a;color:#111;border-radius:2px;padding:0 1px}
+.chat{display:flex;flex-direction:column;gap:12px;margin:10px 0 14px}.msg{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px}.msg.user{background:var(--acc-bg);border-color:transparent;align-self:flex-end;max-width:85%}.msg .who{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}.msg .steps{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px}.msg .md p:first-child{margin-top:0}
+.composer{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:0;background:var(--bg);padding:8px 0}.composer textarea{flex:1;font:inherit;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);resize:vertical}
+.pdf{width:100%;height:80vh;border:1px solid var(--line);border-radius:6px;background:#fff}
+.seg{display:inline-flex;gap:0}.seg button{border-radius:0}.seg button.on{background:var(--acc-bg);color:var(--acc);border-color:var(--acc)}
+@media (max-width:640px){main{padding:14px 12px 50px}.hide-s{display:none}}
+</style>
+</head>
+<body>
+<header id="nav"><b>YIOS</b></header>
+<main id="app"></main>
+<script>
+const $ = s => document.querySelector(s);
+const NAV = [["#/", "Overview"], ["#/channels", "Channels"], ["#/videos", "Videos"], ["#/research", "Research"], ["#/ask", "Ask AI"], ["#/artifacts", "Analyses & files"], ["#/quality", "Data quality"]];
+const num = n => n == null ? "–" : Number(n).toLocaleString();
+const dur = s => { if (s == null) return "–"; const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); };
+// h() builds DOM nodes; text is always set as text, never as HTML (descriptions and transcripts are untrusted).
+function h(tag, attrs, ...kids) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) { if (v == null || v === false) continue; k === "class" ? e.className = v : k.startsWith("on") ? e.addEventListener(k.slice(2), v) : e.setAttribute(k, v === true ? "" : v); }
+  for (const k of kids.flat(Infinity)) if (k != null && k !== false) e.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return e;
+}
+const A = (href, ...k) => h("a", { href }, ...k);
+const tag = (t, c) => h("span", { class: "tag " + (c || "") }, t);
+async function api(p) { const r = await fetch(p); const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; }
+function route() {
+  const raw = location.hash.slice(1) || "/"; const [path, qs] = raw.split("?"); const q = Object.fromEntries(new URLSearchParams(qs || ""));
+  return { path, q, parts: path.split("/").filter(Boolean) };
+}
+function qs(o) { const u = new URLSearchParams(); for (const [k, v] of Object.entries(o)) if (v) u.set(k, v); const s = u.toString(); return s ? "?" + s : ""; }
+function bars(rows, label, val, link) {
+  const max = Math.max(...rows.map(r => r[val]), 1);
+  return h("div", {}, rows.map(r => h("div", { class: "bar" }, h("span", {}, link ? A(link(r), r[label] ?? "(none)") : r[label] ?? "(none)"), h("i", { style: `width:${Math.max(2, r[val] / max * 260)}px` }), num(r[val]))));
+}
+function table(cols, data, empty) {
+  if (!data.length) return h("div", { class: "empty" }, empty || "Nothing here.");
+  return h("table", {}, h("thead", {}, h("tr", {}, cols.map(c => h("th", { class: c.r ? "r" : "" }, c.h)))), h("tbody", {}, data.map(d => h("tr", {}, cols.map(c => h("td", { class: (c.r ? "r " : "") + (c.cls || "") }, c.f(d)))))));
+}
+
+
+// ---- charts (inline SVG, no libraries) ----
+const NS = "http://www.w3.org/2000/svg";
+function sv(tag, attrs, ...kids) { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v); for (const k of kids.flat()) if (k != null) e.append(k.nodeType ? k : document.createTextNode(String(k))); return e; }
+const short = n => n == null ? "" : n >= 1e9 ? (n / 1e9).toFixed(1) + "B" : n >= 1e6 ? (n / 1e6).toFixed(1) + "M" : n >= 1e3 ? (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "K" : String(Math.round(n));
+// column chart: pts = [{l: label, v: value}]; thin = show every n-th x label
+function columns(pts, { w = 560, hgt = 170, thin = 1, name = "" } = {}) {
+  if (!pts.length) return h("div", { class: "empty" }, "No data.");
+  const L = 38, B = 22, T = 8, max = Math.max(...pts.map(p => p.v), 1), bw = (w - L) / pts.length, ph = hgt - B - T;
+  const svg = sv("svg", { viewBox: `0 0 ${w} ${hgt}`, class: "ch", role: "img", "aria-label": name });
+  for (const f of [0, .5, 1]) { const y = T + ph * (1 - f); svg.append(sv("line", { x1: L, x2: w, y1: y, y2: y }), sv("text", { x: L - 4, y: y + 3, "text-anchor": "end" }, short(max * f))); }
+  pts.forEach((p, i) => { const bh = p.v / max * ph, x = L + i * bw; const bwd = Math.min(Math.max(1, bw * .76), 44); svg.append(sv("rect", { x: x + (bw - bwd) / 2, y: T + ph - bh, width: bwd, height: bh }, sv("title", {}, `${p.l}: ${num(p.v)}`)));
+    if (i % thin === 0) svg.append(sv("text", { x: x + bw / 2, y: hgt - 7, "text-anchor": "middle" }, p.l)); });
+  return svg;
+}
+// scatter plot: pts = [{x, y, c: colour class 0-3, t: tooltip, href}]; log axes optional; xt/yt = [{v, l}] tick marks
+function plot(pts, { w = 720, hgt = 300, xlog, ylog, xt = [], yt = [], hline, name = "" } = {}) {
+  pts = pts.filter(p => p.x != null && p.y != null && (!xlog || p.x > 0) && (!ylog || p.y > 0));
+  if (!pts.length) return h("div", { class: "empty" }, "No data.");
+  const fx = xlog ? Math.log10 : x => x, fy = ylog ? Math.log10 : x => x, L = 46, B = 24, T = 10, R = 10;
+  const xs = pts.map(p => fx(p.x)), ys = pts.map(p => fy(p.y)); let x0 = Math.min(...xs, ...xt.map(t => fx(t.v))), x1 = Math.max(...xs, ...xt.map(t => fx(t.v))), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  if (x1 === x0) { x0 -= 1; x1 += 1; } if (y1 === y0) { y0 -= 1; y1 += 1; } const px = v => L + (fx(v) - x0) / (x1 - x0) * (w - L - R), py = v => T + (1 - (fy(v) - y0) / (y1 - y0)) * (hgt - T - B);
+  const svg = sv("svg", { viewBox: `0 0 ${w} ${hgt}`, class: "ch", role: "img", "aria-label": name });
+  for (const t of yt) if (fy(t.v) >= y0 && fy(t.v) <= y1) svg.append(sv("line", { x1: L, x2: w - R, y1: py(t.v), y2: py(t.v) }), sv("text", { x: L - 5, y: py(t.v) + 3, "text-anchor": "end" }, t.l));
+  for (const t of xt) if (fx(t.v) >= x0 && fx(t.v) <= x1) svg.append(sv("text", { x: px(t.v), y: hgt - 8, "text-anchor": "middle" }, t.l));
+  if (hline != null && hline > 0 && fy(hline) >= y0 && fy(hline) <= y1) svg.append(sv("line", { class: "med", x1: L, x2: w - R, y1: py(hline), y2: py(hline) }), sv("text", { x: w - R, y: py(hline) - 4, "text-anchor": "end" }, "median"));
+  for (const p of pts) { const c = sv("circle", { cx: px(p.x), cy: py(p.y), r: p.r || 3.2, class: "c" + (p.c || 0) }, sv("title", {}, p.t || "")); svg.append(p.href ? sv("a", { href: p.href }, c) : c); }
+  return svg;
+}
+const logTicks = (lo, hi) => { const o = []; for (let e = Math.floor(Math.log10(Math.max(lo, 1))); e <= Math.ceil(Math.log10(Math.max(hi, 10))); e++) o.push({ v: 10 ** e, l: short(10 ** e) }); return o; };
+const TYPEC = { LONG: 0, SHORT: 1, STREAM: 2 };
+// year x month heat map of upload counts; months = [{l: "2024-05", v: n}]
+function heat(months, { w = 560 } = {}) {
+  if (!months.length) return h("div", { class: "empty" }, "No dated uploads.");
+  const m = Object.fromEntries(months.map(x => [x.l, x.v])), ys = months.map(x => +x.l.slice(0, 4)), y0 = Math.min(...ys), y1 = Math.max(...ys), mx = Math.max(...months.map(x => x.v)), L = 36, cw = (w - L) / 12, ch = 18;
+  const svg = sv("svg", { viewBox: `0 0 ${w} ${(y1 - y0 + 1) * ch + 22}`, class: "ch", role: "img", "aria-label": "uploads heat map" });
+  "JFMAMJJASOND".split("").forEach((x, i) => svg.append(sv("text", { x: L + i * cw + cw / 2, y: 10, "text-anchor": "middle" }, x)));
+  for (let y = y0; y <= y1; y++) { svg.append(sv("text", { x: L - 5, y: 22 + (y - y0) * ch + 12, "text-anchor": "end" }, y));
+    for (let i = 0; i < 12; i++) { const k = y + "-" + String(i + 1).padStart(2, "0"), n = m[k] || 0;
+      svg.append(sv("rect", { x: L + i * cw + 1, y: 22 + (y - y0) * ch, width: cw - 2, height: ch - 2, rx: 2, class: n ? "heat" : "heat0", "fill-opacity": n ? (.2 + .8 * n / mx).toFixed(2) : 1 }, sv("title", {}, `${k}: ${n} upload(s)`))); } }
+  return svg;
+}
+// tiny bar chart for one table cell: counts keyed by year
+function spark(o, y0, y1) {
+  const ys = []; for (let y = y0; y <= y1; y++) ys.push(o[y] || 0); const mx = Math.max(...ys, 1), n = ys.length, bw = 90 / n;
+  const svg = sv("svg", { viewBox: "0 0 90 22", class: "spark", role: "img", "aria-label": "uploads per year" });
+  ys.forEach((v, i) => { if (v) svg.append(sv("rect", { x: i * bw + .3, y: 22 - Math.max(1.5, v / mx * 22), width: Math.max(1, bw - .8), height: Math.max(1.5, v / mx * 22), class: i === n - 1 ? "l" : "" }, sv("title", {}, `${y0 + i}: ${v}`))); });
+  return svg;
+}
+const pct = (a, b) => b ? Math.round(a / b * 1000) / 10 : 0;
+const thumb = id => "https://i.ytimg.com/vi/" + id + "/mqdefault.jpg";
+const panel = (...k) => h("div", { class: "panel" }, ...k);
+const kcard = (n, l) => h("div", { class: "card" }, h("div", { class: "n" }, n), h("div", { class: "l" }, l));
+
+// ---- file viewers ----
+function inline(s) {
+  const out = [], re = /(`[^`]+`)|(\*\*[^*]+\*\*)|(\*[^*\n]+\*)|(\[[^\]]+\]\([^)\s]+\))/g; let i = 0, m;
+  while ((m = re.exec(s))) { if (m.index > i) out.push(s.slice(i, m.index)); const t = m[0];
+    if (m[1]) out.push(h("code", {}, t.slice(1, -1))); else if (m[2]) out.push(h("b", {}, inline(t.slice(2, -2)))); else if (m[3]) out.push(h("i", {}, inline(t.slice(1, -1))));
+    else { const [, l, u] = t.match(/\[([^\]]+)\]\(([^)\s]+)\)/); out.push(/^https?:\/\//.test(u) ? h("a", { href: u, target: "_blank", rel: "noopener noreferrer" }, l) : /^#\//.test(u) ? h("a", { href: u }, l) : l); }
+    i = re.lastIndex; }
+  if (i < s.length) out.push(s.slice(i)); return out;
+}
+const cells = l => l.trim().replace(/^\||\|$/g, "").split("|").map(x => x.trim());
+const isBlock = l => /^(#{1,6}\s|```|\s*>|\s*([-*+]|\d+\.)\s+)/.test(l) || /^\s*([-*_])\s*(\1\s*){2,}$/.test(l);
+function md(src) {  // small markdown renderer; builds DOM nodes only, so file content can never inject HTML
+  const L = src.replace(/\r/g, "").split("\n"), out = []; let i = 0;
+  if (L[0] === "---") { const e = L.indexOf("---", 1); if (e > 0) { out.push(h("pre", {}, L.slice(1, e).join("\n"))); i = e + 1; } }
+  while (i < L.length) {
+    const l = L[i]; let m;
+    if (/^```/.test(l)) { const b = []; i++; while (i < L.length && !/^```/.test(L[i])) b.push(L[i++]); i++; out.push(h("pre", {}, b.join("\n"))); }
+    else if ((m = l.match(/^(#{1,6})\s+(.*)/))) { out.push(h("h" + Math.min(m[1].length + 1, 6), {}, inline(m[2]))); i++; }
+    else if (/^\s*([-*_])\s*(\1\s*){2,}$/.test(l)) { out.push(h("hr")); i++; }
+    else if (/^\s*>/.test(l)) { const b = []; while (i < L.length && /^\s*>/.test(L[i])) b.push(L[i++].replace(/^\s*>\s?/, "")); out.push(h("blockquote", {}, md(b.join("\n")))); }
+    else if (l.includes("|") && /^\s*\|?\s*:?-{2,}/.test(L[i + 1] || "")) { const head = cells(l), body = []; i += 2; while (i < L.length && L[i].includes("|")) body.push(cells(L[i++]));
+      out.push(h("div", { class: "tbl" }, h("table", {}, h("thead", {}, h("tr", {}, head.map(x => h("th", {}, inline(x))))), h("tbody", {}, body.map(r => h("tr", {}, r.map(x => h("td", {}, inline(x))))))))); }
+    else if (/^\s*([-*+]|\d+\.)\s+/.test(l)) { const ord = /^\s*\d+\./.test(l), items = [];
+      while (i < L.length && (/^\s*([-*+]|\d+\.)\s+/.test(L[i]) || (/^\s+\S/.test(L[i]) && items.length))) { const x = L[i++], mm = x.match(/^(\s*)([-*+]|\d+\.)\s+(.*)/);
+        if (mm) items.push(h("li", { style: `margin-left:${Math.min(mm[1].length, 12) * 8}px` }, inline(mm[3]))); else items[items.length - 1].append(" ", ...inline(x.trim())); }
+      out.push(h(ord ? "ol" : "ul", {}, items)); }
+    else if (!l.trim()) i++;
+    else { const b = [l]; i++; while (i < L.length && L[i].trim() && !isBlock(L[i]) && !(L[i].includes("|") && /^\s*\|?\s*:?-{2,}/.test(L[i + 1] || ""))) b.push(L[i++]); out.push(h("p", {}, inline(b.join(" ")))); }
+  }
+  return h("div", { class: "md" }, out);
+}
+function csvParse(t, max) {
+  const d = (t.slice(0, t.indexOf("\n") + 1).split("\t").length > t.slice(0, t.indexOf("\n") + 1).split(",").length) ? "\t" : ",", rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < t.length; i++) { const c = t[i];
+    if (q) { if (c === '"') { if (t[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true; else if (c === d) { row.push(f); f = ""; }
+    else if (c === "\n") { row.push(f.replace(/\r$/, "")); rows.push(row); row = []; f = ""; if (rows.length >= max) return { rows, more: true }; } else f += c; }
+  if (f || row.length) { row.push(f); rows.push(row); } return { rows, more: false };
+}
+// sortable, filterable grid (shows at most 500 matching rows)
+// one table cell: DOM nodes as given, long text cut to 220 characters (full text on hover)
+const cell = v => { if (v == null) return h("td", {}); if (v.nodeType) return h("td", {}, v); const t = typeof v === "object" ? JSON.stringify(v) : String(v); return h("td", { title: t.length > 220 ? t.slice(0, 3000) : null }, t.length > 220 ? t.slice(0, 220) + "…" : t); };
+function grid(head, data, note, wide) {
+  let sort = null, dir = 1, qf = ""; const wrap = h("div", {}), body = h("div", { class: "tbl" + (wide ? " w" : "") }), cnt = h("span", { class: "mut" });
+  const draw = () => {
+    const T = c => c && c.nodeType ? c.textContent : c; let r = data; if (qf) r = r.filter(x => x.some(c => String(T(c) ?? "").toLowerCase().includes(qf)));
+    if (sort != null) r = [...r].sort((a, b) => { const x = T(a[sort]), y = T(b[sort]), nx = parseFloat(x), ny = parseFloat(y); return (isNaN(nx) || isNaN(ny) ? String(x ?? "").localeCompare(String(y ?? "")) : nx - ny) * dir; });
+    cnt.textContent = num(r.length) + " of " + num(data.length) + " rows" + (r.length > 1000 ? " (first 1,000 shown)" : "") + (note ? " · " + note : "");
+    const t = h("table", {}, h("thead", {}, h("tr", {}, head.map((c, i) => h("th", { class: "s", onclick: () => { dir = sort === i ? -dir : 1; sort = i; draw(); } }, c + (sort === i ? (dir > 0 ? " ▲" : " ▼") : ""))))),
+      h("tbody", {}, r.slice(0, 1000).map(x => h("tr", {}, head.map((_, i) => cell(x[i]))))));
+    body.replaceChildren(t);
+  };
+  wrap.append(h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter rows", oninput: e => { qf = e.target.value.toLowerCase(); draw(); } }), cnt), body); draw(); return wrap;
+}
+function jtree(v, key, open) {
+  const label = key == null ? [] : [h("span", { class: "k" }, key + ": ")];
+  if (v === null || typeof v !== "object") return h("div", { class: "v" }, label, typeof v === "string" ? JSON.stringify(v) : String(v));
+  const arr = Array.isArray(v), ents = arr ? v.map((x, i) => [i, x]) : Object.entries(v), d = h("details", {}, h("summary", {}, label, arr ? `[${ents.length}]` : `{${ents.length}}`));
+  const fill = () => { for (const [k, x] of ents.slice(0, 200)) d.append(jtree(x, k, false)); if (ents.length > 200) d.append(h("div", { class: "v mut" }, "… " + (ents.length - 200) + " more"));  };
+  if (open) { d.open = true; fill(); } else d.addEventListener("toggle", () => { if (d.open && d.children.length === 1) fill(); });
+  return d;
+}
+const looksTabular = a => Array.isArray(a) && a.length > 0 && a.slice(0, 20).every(x => x && typeof x === "object" && !Array.isArray(x));
+function jsonView(j) {
+  const mk = () => { if (!looksTabular(j)) return h("div", { class: "jt" }, jtree(j, null, true));
+    const keys = [...new Set(j.slice(0, 200).flatMap(Object.keys))].slice(0, 40); return grid(keys, j.map(r => keys.map(k => r[k])));
+  };
+  if (!looksTabular(j)) return mk();
+  let mode = "table"; const box = h("div", {}), btn = (m, t) => h("button", { class: mode === m ? "on" : "", onclick: () => { mode = m; show(); } }, t);
+  const show = () => { box.replaceChildren(h("div", { class: "seg bar-f" }, btn("table", "Table"), btn("tree", "Tree")), mode === "table" ? mk() : h("div", { class: "jt" }, jtree(j, null, true))); }; show(); return box;
+}
+function renderFile(a, text) {
+  const ext = a.path.replace(/\.gz$/, "").split(".").pop().toLowerCase(), cut = text.length > 3e6;
+  if (ext === "md" || ext === "markdown") return md(text);
+  if (ext === "csv" || ext === "tsv") { const r = csvParse(text, 20000); if (r.rows.length) return grid(r.rows[0], r.rows.slice(1), r.more ? "first 20,000 rows" : ""); }
+  if (ext === "json" && !cut) try { return jsonView(JSON.parse(text)); } catch (e) { /* fall through to raw */ }
+  if (ext === "jsonl") try { return jsonView(text.split("\n").filter(Boolean).slice(0, 5000).map(x => JSON.parse(x))); } catch (e) { /* fall through */ }
+  return null;
+}
+
+// ---- pages ----
+// file preview box: images/video/audio, or text rendered by its format (md, csv, json...); lazy, returns an element
+// structured preview (/api/peek): xlsx sheets, docx text, sqlite tables, zip listing
+function peekView(d) {
+  const tabs = (items, mk, label) => { let cur = 0; const box = h("div", {}), body = h("div", {});
+    const show = () => { box.replaceChildren(...[items.length > 1 ? h("div", { class: "seg bar-f" }, items.map((x, i) => h("button", { class: i === cur ? "on" : "", onclick: () => { cur = i; show(); } }, label(x)))) : null, mk(items[cur])].filter(Boolean)); }; show(); return box; };
+  const pad = (rows, w) => rows.map(r => Array.from({ length: w }, (_, i) => r[i] ?? ""));
+  if (d.kind === "sheets") return d.sheets.length ? tabs(d.sheets, sh => { if (!sh.rows.length) return h("div", { class: "empty" }, "Empty sheet."); const w = Math.max(...sh.rows.map(r => r.length)), head = Array.from({ length: w }, (_, i) => sh.rows[0][i] || "col " + (i + 1));
+      return grid(head, pad(sh.rows.slice(1), w), sh.total_rows > sh.rows.length ? "first " + num(sh.rows.length) + " of " + num(sh.total_rows) + " rows" : ""); }, sh => sh.name + " (" + num(sh.total_rows) + ")") : h("div", { class: "empty" }, "No sheets.");
+  if (d.kind === "text") return h("div", { class: "md" }, d.paragraphs.map(x => h("p", {}, x)));
+  if (d.kind === "db") return d.tables.length ? tabs(d.tables, t => grid(t.cols, t.rows, "first " + num(t.rows.length) + " of " + num(t.total_rows) + " rows"), t => t.name + " (" + num(t.total_rows) + ")") : h("div", { class: "empty" }, "No tables.");
+  if (d.kind === "zip") return table([{ h: "File inside", f: r => r[0] }, { h: "Size (bytes)", r: 1, f: r => num(r[1]) }], d.entries);
+  return h("div", { class: "empty" }, "No preview.");
+}
+function fileBox(a) {
+  const base = a.path.replace(/\.gz$/, "").split("/").pop(), ext = base.includes(".") ? base.split(".").pop().toLowerCase() : "", view = h("div", { class: "panel empty" }, "Loading…"), url = "/raw" + qs({ path: a.path });
+  const textual = ["json", "jsonl", "markdown", "text", "table", "transcript", "html", "code", "config", "json+gz", "jsonl+gz", "table+gz"].includes(a.format) || ["md", "txt", "csv", "tsv", "json", "jsonl", "svg"].includes(ext) || (a.format === "other" && !["npz", "zip", "avif", "bin", "m4a"].includes(ext) && (a.bytes == null || a.bytes < 2e6));
+  if (["xlsx", "docx", "db", "zip"].includes(ext)) fetch("/api/peek" + qs({ path: a.path })).then(async r => { const j = await r.json(); if (!r.ok) throw new Error(j.error); view.className = ""; view.replaceChildren(h("div", { class: "panel" }, peekView(j))); }).catch(e => view.replaceChildren(h("span", {}, "No preview: " + e.message)));
+  else if (ext === "pdf") { view.className = ""; view.replaceChildren(h("iframe", { class: "pdf", src: url, title: a.path })); }
+  else if (a.format === "image") view.replaceChildren(h("img", { class: "pv", src: url, alt: a.path }));
+  else if (a.format === "video") view.replaceChildren(h("video", { src: url, controls: true, style: "max-width:100%" }));
+  else if (a.format === "audio" || ext === "m4a") view.replaceChildren(h("audio", { src: url, controls: true }));
+  else if (textual) fetch(url).then(async r => { if (!r.ok) throw new Error((await r.json()).error); const t = await r.text();
+      const rawEl = h("pre", {}, t.length > 400000 ? t.slice(0, 400000) + "\n… (truncated, " + num(t.length) + " chars)" : t); let rich = null; try { rich = renderFile(a, t); } catch (e) { rich = null; }
+      if (!rich) return view.replaceChildren(rawEl);
+      let mode = "rich"; const box = h("div", {}), show = () => { box.replaceChildren(h("div", { class: "seg bar-f" }, h("button", { class: mode === "rich" ? "on" : "", onclick: () => { mode = "rich"; show(); } }, "Formatted"), h("button", { class: mode === "raw" ? "on" : "", onclick: () => { mode = "raw"; show(); } }, "Raw text")), mode === "rich" ? h("div", { class: "panel" }, rich) : rawEl); };
+      show(); view.className = ""; view.replaceChildren(box); }).catch(e => view.replaceChildren(h("span", {}, "No preview: " + e.message)));
+  else view.replaceChildren(h("span", {}, "No preview for ." + ext + " files."));
+  return view;
+}
+// ---- research + assistant ----
+const snip = s => String(s || "").split(/[«»]/).map((x, i) => i % 2 ? h("mark", {}, x) : x);  // server marks hits with « »
+const roleTag = r => tag(r, ["research", "intelligence report", "playbook", "what-if study", "reanalysis", "report"].includes(r) ? "ok" : "grey");
+const askLink = (text, o) => A("#/ask" + qs({ channel: o && o.channel, ask: text }), "Ask AI about this →");
+function chanChips(ties) { return ties.slice(0, 5).map(t => h("a", { href: "#/channel/" + t.channel_id + "?tab=research", class: "tag " + (t.via === "id" ? "" : "grey"), title: t.via === "id" ? "the file contains this channel's or its videos' ids" : "only the channel's name appears in the text (a lead, not proof)" }, (t.name || t.channel_id) + (t.via === "id" ? "" : " · name"))); }
+function docItem(d, extra) {  // expandable research document: summary + inline viewer loaded on open
+  const dt = h("details", { class: "tx" }), body = h("div", {}); const f = { path: d.ref, format: d.format || (d.ref.split(".").pop() === "md" ? "markdown" : "text"), bytes: d.bytes };
+  dt.append(h("summary", {}, h("b", {}, d.title || d.ref.split("/").pop()), " ", roleTag(d.role), " ", h("span", { class: "mut" }, d.ref), d.snippet ? h("div", { class: "snip" }, snip(d.snippet)) : d.preview ? h("div", { class: "snip" }, d.preview) : null, extra ? h("div", {}, extra) : null), body);
+  dt.addEventListener("toggle", () => { if (dt.open && !body.childNodes.length) body.append(h("p", {}, A("#/artifact" + qs({ path: d.ref }), "Open as its own page →"), "  ·  ", askLink("Summarise and critique the document " + d.ref)), fileBox(f)); });
+  return dt;
+}
+async function pResearch(q) {
+  const d = await api("/api/research" + qs({ q: q.q, kind: q.kind || "doc", role: q.role, collection: q.collection, channel: q.channel, page: q.page })), s = d.search;
+  const go = o => { location.hash = "#/research" + qs({ ...q, page: "", ...o }); };
+  const sel = (k, opts, ph) => h("select", { onchange: e => go({ [k]: e.target.value }) }, h("option", { value: "" }, ph), opts.map(([v, l]) => h("option", { value: v, selected: q[k] === v }, l)));
+  const last = s ? Math.max(1, Math.ceil(s.total / s.size)) : 1;
+  return [h("h1", {}, "Research"), h("p", { class: "sub" }, "Search every research document, report, audit and analysis in the repository, and every transcript. Open any result right here. Hits are ranked by relevance; a name mention is not an analysis."),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search research (press Enter), e.g. hook retention, blood pressure, thumbnail text", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }),
+      sel("kind", [["doc", "Research documents"], ["transcript", "Transcripts"], ["any", "Both"]], "Research documents"), sel("role", d.roles.map(r => [r, r]), "Any kind of document"), sel("collection", d.collections.map(c => [c.collection, c.collection + " (" + num(c.docs) + ")"]), "Any collection")),
+    s ? [h("p", { class: "mut" }, num(s.total) + " hits" + (s.mode === "or" ? " (no exact match for all words; showing documents with any of them)" : "") + (q.channel ? " in one channel" : "")),
+      s.items.length ? s.items.map(it => it.kind === "transcript" ? h("div", { class: "panel", style: "margin:0 0 8px" }, h("b", {}, A("#/video/" + it.ref, it.title || it.ref)), " ", tag("transcript", "grey"), " ", chanChips(it.channels), h("div", { class: "snip" }, snip(it.snippet))) : docItem(it, h("span", {}, chanChips(it.channels)))) : h("div", { class: "empty" }, "No match."),
+      h("div", { class: "pg" }, h("button", { disabled: s.page <= 1, onclick: () => go({ page: s.page - 1 }) }, "← Prev"), "Page " + s.page + " of " + last, h("button", { disabled: s.page >= last, onclick: () => go({ page: s.page + 1 }) }, "Next →"))]
+    : [h("h2", {}, "Collections"), h("p", { class: "mut" }, "Folders of the repository that hold research documents. Click one to search inside it."),
+      h("div", { class: "cards" }, d.collections.slice(0, 24).map(c => h("a", { class: "card", href: "#/research" + qs({ collection: c.collection, q: "the" }), style: "color:inherit" }, h("div", { class: "n" }, num(c.docs)), h("div", { class: "l" }, c.collection), h("div", { class: "l" }, Object.entries(c.roles).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([r, n]) => r + " " + n).join(" · "))))),
+      h("p", {}, askLink("What research exists in this repository, and which channels does it cover best?"))]];
+}
+async function chResearch(id) {
+  const d = await api("/api/channel/" + id + "/research"), broad = d.docs.filter(x => x.nch > 8), own = d.docs.filter(x => x.nch <= 8), strong = own.filter(x => x.via === "id"), weak = own.filter(x => x.via !== "id");
+  const find = h("input", { type: "search", placeholder: "Search inside this channel's research and transcripts (press Enter)", onkeydown: e => { if (e.key === "Enter" && e.target.value.trim()) location.hash = "#/research" + qs({ q: e.target.value.trim(), channel: id, kind: "any" }); } });
+  return [h("div", { class: "bar-f" }, find, askLink("Give me a research briefing on this channel: what is known, what the evidence is, and what is missing.", { channel: id })),
+    !own.length ? h("div", { class: "empty" }, "No research document is specifically about this channel yet. Transcripts and video data are on the other tabs; the assistant can still search them.") : null,
+    strong.length ? [h("h2", {}, "Research that contains this channel's ids (" + strong.length + ")"), h("p", { class: "mut" }, "Documents whose text includes the channel id or one of its video ids."), strong.map(x => docItem(x))] : null,
+    broad.length ? h("details", { class: "tx" }, h("summary", {}, h("b", {}, num(broad.length) + " broad documents that cover many channels"), h("span", { class: "mut" }, " (inventories, registries, cross-channel studies): open to list")), broad.map(x => docItem(x))) : null,
+    weak.length ? [h("h2", {}, "Documents that only mention the name (" + weak.length + ")"), h("p", { class: "mut" }, "A name match is a lead: read the document before treating it as research about this channel."), weak.map(x => docItem(x))] : null];
+}
+
+// ---- Ask AI ----
+const store = { get: k => { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } } };
+const cite = t => t.replace(/\[(file|video|channel):\s*([^\]]+?)\]/g, (_, k, v) => { v = v.trim(); return k === "file" ? "[" + v.split("/").pop() + "](#/artifact?path=" + encodeURIComponent(v).replace(/\(/g, "%28").replace(/\)/g, "%29") + ")" : k === "video" ? "[video " + v + "](#/video/" + v + ")" : "[channel " + v + "](#/channel/" + v + ")"; });
+const TOOLNAME = { find_channels: "looked for channels", channel_overview: "read a channel overview", list_videos: "listed videos", get_video: "read a video", search_research: "searched research", read_document: "read a document", sql_query: "ran a query" };
+async function pAsk(q) {
+  const st = await api("/api/chat/status"), list = CH || (CH = await api("/api/channels")); let chan = q.channel || "", msgs = store.get("yios.chat") || [], busy = false;
+  const log = h("div", { class: "chat" }), input = h("textarea", { rows: 3, placeholder: "Ask about any channel or any research… (Enter to send, Shift+Enter for a new line)" }), send = h("button", { class: "on" }, "Send");
+  if (q.ask) input.value = q.ask;
+  const bubble = (m, steps) => h("div", { class: "msg " + m.role }, h("div", { class: "who" }, m.role === "user" ? "You" : "Assistant"), steps || null, m.role === "user" ? h("div", {}, m.content) : md(cite(m.content)));
+  const draw = () => { log.replaceChildren(...msgs.map(m => bubble(m)), ...(msgs.length ? [] : [h("div", { class: "empty" }, "Ask anything about the channels, their videos, transcripts and research. Every answer cites the files and videos it used.")])); window.scrollTo(0, document.body.scrollHeight); };
+  const exportMd = () => { const t = msgs.map(m => (m.role === "user" ? "## You\n" : "## Assistant\n") + m.content).join("\n\n"), a = h("a", { href: URL.createObjectURL(new Blob([t], { type: "text/markdown" })), download: "yios-research-chat.md" }); a.click(); };
+  async function ask(text) {
+    if (busy || !text.trim()) return; busy = true; send.disabled = true; msgs.push({ role: "user", content: text.trim() }); input.value = ""; draw();
+    const m = { role: "assistant", content: "" }, steps = h("div", { class: "steps" }), live = h("div", { class: "msg assistant" }, h("div", { class: "who" }, "Assistant"), steps, h("div", { class: "empty" }, "Working…")); log.append(live);
+    try {
+      const r = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json", "X-YIOS": "1" }, body: JSON.stringify({ messages: msgs.map(x => ({ role: x.role, content: x.content })), channel_id: chan || undefined }) });
+      if (!r.ok || !r.body) throw new Error((await r.json().catch(() => ({}))).error || r.status);
+      const rd = r.body.getReader(), dec = new TextDecoder(); let buf = "";
+      for (;;) { const { done, value } = await rd.read(); if (done) break; buf += dec.decode(value, { stream: true }); let i;
+        while ((i = buf.indexOf("\n\n")) >= 0) { const line = buf.slice(0, i).replace(/^data: /, ""); buf = buf.slice(i + 2); let e; try { e = JSON.parse(line); } catch (x) { continue; }
+          if (e.type === "tool") steps.append(h("span", { class: "tag grey", title: JSON.stringify(e.input) }, TOOLNAME[e.name] || e.name, e.input && (e.input.query || e.input.channel_id || e.input.path || e.input.video_id) ? ": " + String(e.input.query || e.input.channel_id || e.input.path || e.input.video_id).slice(0, 40) : ""));
+          else if (e.type === "text") { m.content += e.text; live.replaceChildren(h("div", { class: "who" }, "Assistant"), steps, md(cite(m.content))); }
+          else if (e.type === "error") m.content += "\n\n**Error:** " + e.error;
+          else if (e.type === "done" && e.usage && e.usage.output_tokens) steps.append(h("span", { class: "mut" }, " " + num(e.usage.input_tokens) + " in / " + num(e.usage.output_tokens) + " out tokens")); } }
+    } catch (e) { m.content += "\n\n**Error:** " + e.message; }
+    msgs.push(m.content ? m : { role: "assistant", content: "(no answer)" }); store.set("yios.chat", msgs.slice(-40)); busy = false; send.disabled = false; draw();
+  }
+  send.onclick = () => ask(input.value); input.onkeydown = e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask(input.value); } };
+  const ex = ["Which channels have the most research written about them?", "Compare the top two channels by median views and say what the evidence can and cannot show.", "What do the research documents say about hooks and retention?", "Find videos about blood pressure and summarise how they open."];
+  draw();
+  return [h("h1", {}, "Ask AI"), h("p", { class: "sub" }, st.provider ? "Model: " + st.model + " (" + st.provider + "). Your question and the excerpts the tools fetch are sent to that provider; nothing is changed in the repository." : "No AI model is configured: you get ranked search results only. To enable written answers, set ANTHROPIC_API_KEY (or YIOS_LLM_BASE_URL for Ollama / any OpenAI-compatible server) and restart the site."),
+    st.search_index ? null : h("div", { class: "panel" }, "The search index is missing. Run scripts/build_yios_search_index.py and reload."),
+    h("div", { class: "bar-f" }, h("select", { "aria-label": "Focus on a channel", onchange: e => { chan = e.target.value; } }, h("option", { value: "" }, "All channels"), [...list].sort((a, b) => (a.name || "").localeCompare(b.name || "")).map(c => h("option", { value: c.channel_id, selected: c.channel_id === chan }, c.name || c.channel_id))),
+      h("button", { onclick: () => { msgs = []; store.set("yios.chat", []); draw(); } }, "New chat"), h("button", { onclick: exportMd }, "Export as Markdown")),
+    h("div", { class: "bar-f" }, ex.map(t => h("button", { onclick: () => { input.value = t; input.focus(); } }, t))), log, h("div", { class: "composer" }, input, send)];
+}
+async function pOverview() {
+  const s = await api("/api/summary");
+  const card = (n, l) => h("div", { class: "card" }, h("div", { class: "n" }, num(n)), h("div", { class: "l" }, l));
+  return [h("h1", {}, "YIOS data browser"), h("p", { class: "sub" }, "One de-duplicated catalogue built from five source databases. Nothing here edits the raw evidence."),
+    h("div", { class: "cards" }, card(s.channels, "channels"), card(s.videos, "unique videos"), card(s.source_rows, "source rows merged"), card(s.transcripts, "transcripts"), card(s.artifacts, "files inventoried"), card(s.conflicts + s.quality_issues, "conflicts + quality flags")),
+    h("h2", {}, "Uploads per year (all channels)"), h("div", { class: "panel" }, columns(s.by_year.map(y => ({ l: y.y, v: y.n })), { name: "uploads per year" })),
+    h("h2", {}, "Biggest channels by total views"), h("div", { class: "panel" }, bars(s.top_channels.map(c => ({ l: c.name || c.channel_id, v: c.views || 0, id: c.channel_id })), "l", "v", r => "#/channel/" + r.id)),
+    h("h2", {}, "How complete is each field?"), h("div", { class: "panel" }, table([{ h: "Field", f: r => r[0] }, { h: "Videos that have it", r: 1, f: r => num(r[1]) }, { h: "Coverage", f: r => h("div", { class: "pbar", title: pct(r[1], s.videos) + "%" }, h("i", { style: `width:${pct(r[1], s.videos)}%` })) }, { h: "%", r: 1, f: r => pct(r[1], s.videos) + "%" }],
+      [["views", s.completeness.views], ["publish date", s.completeness.date], ["duration", s.completeness.duration], ["likes", s.completeness.likes], ["comments", s.completeness.comments], ["description", s.completeness.description], ["thumbnail url", s.completeness.thumbnail], ["transcript", s.completeness.transcript]])),
+    h("h2", {}, "Video types"), h("div", { class: "panel" }, bars(s.video_types, "video_type", "n", r => "#/videos" + qs({ type: r.video_type }))),
+    h("h2", {}, "Transcripts by caption kind"), h("div", { class: "panel" }, bars(s.caption_kinds, "caption_kind", "n")),
+    h("h2", {}, "Files by role"), h("div", { class: "panel" }, bars(s.roles, "role", "n", r => "#/artifacts" + qs({ role: r.role }))),
+    h("h2", {}, "How complete is the analysis coverage?"), h("div", { class: "panel" },
+      h("p", {}, h("b", {}, num(s.videos_with_specific_artifact)), " of ", num(s.videos), " videos are named in at least one file that covers 25 videos or fewer (a specific analysis, transcript or report). The rest appear only in bulk exports or nowhere. ",
+        A("#/videos?art=1", "Browse the covered videos"), "."),
+      h("p", { class: "mut" }, "A link means a file contains the video id. It does not mean the file analyses it; read the file to judge.")),
+    h("h2", {}, "Source databases"), h("div", { class: "panel" }, table([{ h: "Source", f: r => r.source_id }, { h: "Video rows", r: 1, f: r => num(r.video_rows) }, { h: "Channel rows", r: 1, f: r => num(r.channel_rows) }, { h: "SHA256", cls: "hide-s", f: r => h("code", {}, r.sha256.slice(0, 16)) }], s.sources))];
+}
+let CH = null, chSort = ["videos", -1], chQ = "", chF = "";
+async function pChannels() {
+  CH = CH || await api("/api/channels");
+  const out = h("div", {}); const body = h("div", { class: "panel" }), yrs = CH.flatMap(c => Object.keys(c.spark).map(Number)), Y0 = Math.min(...yrs, 2100), Y1 = Math.max(...yrs, 0);
+  const draw = () => {
+    const rowsF = CH.filter(c => (!chF || (chF === "none") === !c.videos) && (!chQ || ((c.name || "") + (c.handle || "") + c.channel_id).toLowerCase().includes(chQ.toLowerCase()))).sort((a, b) => ((a[chSort[0]] ?? -1) > (b[chSort[0]] ?? -1) ? 1 : -1) * chSort[1]);
+    const th = (t, k, r) => ({ h: t, r, k });
+    const cols = [{ h: "Channel", k: "name", f: c => A("#/channel/" + c.channel_id, c.name || c.channel_id) }, { h: "Handle", k: "handle", cls: "hide-s", f: c => c.handle || "–" },
+      { h: "Subs", k: "subscribers", r: 1, f: c => num(c.subscribers) }, { h: "Videos", k: "videos", r: 1, f: c => num(c.videos) }, { h: "Collected", k: "videos", cls: "hide-s", f: c => !c.videos ? tag("none yet", "warn") : c.total ? tag(Math.min(100, Math.round(c.videos / c.total * 100)) + "% of " + num(c.total), c.videos / c.total >= .95 ? "ok" : "grey") : tag("total unknown", "grey") }, { h: "Views", k: "views", r: 1, f: c => num(c.views) }, { h: "Median", k: "median", r: 1, cls: "hide-s", f: c => num(c.median) }, { h: "Best", k: "best", r: 1, cls: "hide-s", f: c => num(c.best) }, { h: "Uploads/year", k: "videos", cls: "hide-s", f: c => spark(c.spark, Y0, Y1) },
+      { h: "Transcripts", k: "transcripts", r: 1, cls: "hide-s", f: c => num(c.transcripts) }, { h: "Latest", k: "last_date", cls: "hide-s", f: c => c.last_date || "–" }];
+    const t = table(cols, rowsF, "No channel matches."); if (t.tagName === "TABLE") t.querySelectorAll("th").forEach((el, i) => { el.className += " s"; el.onclick = () => { chSort = [cols[i].k, chSort[0] === cols[i].k ? -chSort[1] : -1]; draw(); }; });
+    body.replaceChildren(t); cnt.textContent = rowsF.length + " of " + CH.length + " channels";
+  };
+  const cnt = h("span", { class: "mut" });
+  out.append(h("h1", {}, "Channels"), h("p", { class: "sub" }, "Keyed by the YouTube channel id (UC…). Click a column to sort."),
+    h("h2", {}, "Every channel: how many videos vs the typical video's views"), panel(plot(CH.map(c => ({ x: c.videos, y: c.median, t: `${c.name}: ${num(c.videos)} videos, median ${num(c.median)} views`, href: "#/channel/" + c.channel_id })), { xlog: 1, ylog: 1, xt: logTicks(1, 1000), yt: logTicks(10, 1e7), name: "channels" }), h("p", { class: "mut" }, "Each dot is a channel (click to open). Right = more videos, higher = a typical video gets more views. Both axes are logarithmic.")),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Filter by name, handle or id", value: chQ, oninput: e => { chQ = e.target.value; draw(); } }),
+      h("select", { onchange: e => { chF = e.target.value; draw(); } }, [["", "All channels"], ["with", "With videos collected"], ["none", "No videos collected yet"]].map(([v, l]) => h("option", { value: v, selected: chF === v }, l))), cnt), body);
+  draw(); return out;
+}
+const med = a => { a = a.filter(x => x != null).sort((x, y) => x - y); const n = a.length; return n ? (n % 2 ? a[(n - 1) / 2] : (a[n / 2 - 1] + a[n / 2]) / 2) : null; };
+const STOPW = new Set("the and for that this with you your are was were have has not but from they what when how why who will can about into out than then just like more most some any all one our its his her get got make does did too only here where after before again now new".split(" "));
+function mark(text, term) { if (!term) return [text]; const out = [], lo = text.toLowerCase(), t = term.toLowerCase(); let i = 0, j; while ((j = lo.indexOf(t, i)) >= 0) { out.push(text.slice(i, j), h("mark", {}, text.slice(j, j + t.length))); i = j + t.length; } out.push(text.slice(i)); return out; }
+const tidy = t => t.replace(/^\[(\d+)\.\d+\]/gm, (_, x) => Math.floor(x / 60) + ":" + String(x % 60).padStart(2, "0"));  // [00123.440] -> 2:03
+const TABS = [["overview", "Overview"], ["videos", "Videos"], ["titles", "Titles"], ["transcripts", "Transcripts"], ["research", "Research"], ["files", "Analyses & files"], ["quality", "Data & sources"]];
+const vrow = v => ({ video_id: v[0], title: v[1], published_date: v[2], d: v[3], video_type: v[4], views: v[5], likes: v[6] });
+const VCOLS = [{ h: "Title", f: v => A("#/video/" + v.video_id, v.title || v.video_id) }, { h: "Published", f: v => v.published_date || "–" }, { h: "Length", r: 1, f: v => dur(v.d) }, { h: "Type", f: v => tag(v.video_type, "grey") }, { h: "Views", r: 1, f: v => num(v.views) }, { h: "Likes", r: 1, cls: "hide-s", f: v => num(v.likes) }];
+
+async function pChannel(id, q) {
+  const c = await api("/api/channel/" + id), st = c.stats, tab = TABS.some(t => t[0] === q.tab) ? q.tab : "overview", list = CH || (CH = await api("/api/channels"));
+  const sec = { overview: () => chOverview(c, st, id), videos: () => chVideos(st), titles: () => chTitles(st, id), transcripts: () => chTranscripts(id, q.tq || ""), research: () => chResearch(id), files: () => chFiles(id), quality: () => chQuality(c, st, id) };
+  const sw = h("select", { "aria-label": "Jump to another channel", onchange: e => { location.hash = "#/channel/" + e.target.value + qs({ tab }); } }, [...list].sort((a, b) => (a.name || "").localeCompare(b.name || "")).map(x => h("option", { value: x.channel_id, selected: x.channel_id === id }, x.name || x.channel_id)));
+  return [h("div", { class: "crumbs" }, A("#/channels", "Channels"), " / ", c.name || id), h("h1", {}, c.name || id), h("p", { class: "sub" }, [c.handle, st.first && st.first + " → " + st.last, num(st.n) + " videos"].filter(Boolean).join(" · ")),
+    h("div", { class: "bar-f" }, sw), h("nav", { class: "tabs" }, TABS.map(([k, l]) => h("a", { href: "#/channel/" + id + qs({ tab: k === "overview" ? "" : k }), class: k === tab ? "on" : "" }, l))), await sec[tab]()];
+}
+function chOverview(c, st, id) {
+  if (!st.n) return [h("div", { class: "panel" }, h("p", {}, h("b", {}, "No videos have been collected for this channel yet.")), h("p", { class: "mut" }, "The catalogue knows the channel itself (from " + c.source_count + " source database" + (c.source_count === 1 ? "" : "s") + ") but none of its videos, so there is nothing to chart. Charts, titles and transcripts appear once its videos are added."),
+      h("p", {}, A("#/channel/" + id + "?tab=files", "Files about this channel →"), "  ·  ", A("#/channel/" + id + "?tab=quality", "Where this channel record came from →"))),
+    h("div", { class: "cards" }, kcard(num(c.subscribers), "subscribers (reported)"), kcard(num(c.channel_total_videos), "videos on YouTube (reported)"), kcard(num(c.channel_total_views), "views on YouTube (reported)"), kcard(c.source_count, "source databases"))];
+  const D = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], years = st.by_year, months = st.by_month, topV = [...st.all].filter(v => v[5] != null).sort((a, b) => b[5] - a[5]);
+  return [h("div", { class: "cards" }, kcard(num(st.n), "videos in catalogue"), c.channel_total_videos ? kcard(Math.round(st.n / c.channel_total_videos * 100) + "%", "of the " + num(c.channel_total_videos) + " videos YouTube reports") : null, kcard(short(st.views_total), "total views"), kcard(short(st.views_median), "median views / video"), kcard(short(st.views_max), "best video"), kcard(st.avg_minutes + " min", "average length"),
+      kcard(num((st.caption_kinds.reduce((x, y) => x + y.v, 0))), "transcripts"), kcard(num(st.videos_with_specific_file), "videos with a specific file"),
+      kcard(st.engagement == null ? "–" : st.engagement + "%", "likes per view"), kcard(num(st.comments_total), "comments in total"), kcard(st.gap_days_median == null ? "–" : st.gap_days_median + " d", "median gap between uploads"), kcard(num(st.span_days), "days from first to last upload")),
+    h("p", {}, c.types.map(t => tag(t.video_type + " " + t.n, "grey"))),
+    h("h2", {}, "Every video: when it was published and how many views it got"),
+    panel(h("div", { class: "leg" }, ["LONG", "SHORT", "STREAM", "other"].map((t, i) => h("span", {}, h("i", { class: "c" + i }), t)), h("span", {}, "dashed line = channel median · click a dot to open the video")),
+      plot(st.all.filter(v => v[2]).map(v => ({ x: Date.parse(v[2]), y: v[5], c: TYPEC[v[4]] ?? 3, href: "#/video/" + v[0], t: `${v[1]}\n${v[2]} · ${num(v[5])} views · ${v[4]}` })), { w: 900, hgt: 320, ylog: 1, hline: st.views_median, yt: logTicks(10, st.views_max || 1e6),
+        xt: years.map(y => ({ v: Date.parse(y.l + "-01-01"), l: y.l })).filter((_, i, a) => i % Math.ceil(a.length / 12) === 0), name: "views over time" }),
+      h("p", { class: "mut" }, "Videos without a date or view count are left out of this chart (all of them are in the Videos tab).")),
+    h("div", { class: "grid2" },
+      h("div", {}, h("h2", {}, "Uploads by month (heat map)"), panel(heat(months))),
+      h("div", {}, h("h2", {}, "Video types: how many, how many views"), panel(table([{ h: "Type", f: t => tag(t.l, "grey") }, { h: "Videos", r: 1, f: t => num(t.v) }, { h: "Total views", r: 1, f: t => num(t.views) }, { h: "Median views", r: 1, f: t => num(t.median) }], st.by_type))),
+      h("div", {}, h("h2", {}, "Uploads per year"), panel(columns(years.map(y => ({ l: y.l, v: y.v })), { name: "uploads per year" }))),
+      h("div", {}, h("h2", {}, "Views of those uploads, by publish year"), panel(columns(years.map(y => ({ l: y.l, v: y.views || 0 })), { name: "views per year" }))),
+      h("div", {}, h("h2", {}, "Uploads per month"), panel(columns(months.map(m => ({ l: m.l, v: m.v })), { w: Math.max(560, months.length * 7), thin: Math.ceil(months.length / 14) || 1, name: "uploads per month" }))),
+      h("div", {}, h("h2", {}, "How views are spread"), panel(columns(st.view_buckets, { name: "views distribution" }), h("p", { class: "mut" }, "Number of videos in each view range."))),
+      h("div", {}, h("h2", {}, "Video length"), panel(columns(st.durations, { name: "length distribution" }))),
+      h("div", {}, h("h2", {}, "Publishing weekday"), panel(columns(st.weekday.map(w => ({ l: D[w.l], v: w.v })), { name: "weekday" })))),
+    h("h2", {}, "Top videos (thumbnails)"), h("div", { class: "gal" }, topV.slice(0, 12).map(v => h("a", { href: "#/video/" + v[0] }, h("img", { src: thumb(v[0]), loading: "lazy", alt: "", referrerpolicy: "no-referrer", onerror: e => e.target.style.visibility = "hidden" }), h("div", {}, h("b", {}, v[1] || v[0]), h("span", {}, num(v[5]) + " views" + (st.views_median ? " · " + (v[5] / st.views_median).toFixed(1) + "× median" : "")))))),
+    h("h2", {}, "Top 10 videos by views"), panel(table(VCOLS, topV.slice(0, 10).map(vrow))),
+    h("h2", {}, "Latest 10 uploads"), panel(table(VCOLS, [...st.all].filter(v => v[2]).sort((a, b) => a[2] < b[2] ? 1 : -1).slice(0, 10).map(vrow)))];
+}
+function chVideos(st) {
+  if (!st.n) return h("div", { class: "empty" }, "No videos have been collected for this channel yet.");
+  return [h("h2", {}, "All " + num(st.n) + " videos (click a column to sort, type to filter)"), panel(grid(["Title", "Published", "Length", "Type", "Views", "× median", "Likes", "Comments", "Transcript"],
+    st.all.map(v => [A("#/video/" + v[0], v[1] || v[0]), v[2] || "", v[3] == null ? "" : dur(v[3]), v[4], v[5] ?? "", v[5] != null && st.views_median ? +(v[5] / st.views_median).toFixed(2) : "", v[6] ?? "", v[7] ?? "", v[8] ? "yes" : ""]), "", 1))];
+}
+function chTitles(st, id) {
+  const all = st.all.filter(v => v[1] && v[5] != null), longs = all.filter(v => v[4] === "LONG"), wv = longs.length >= 20 ? longs : all, m0 = med(wv.map(v => v[5]));
+  if (wv.length < 5) return h("div", { class: "empty" }, "Fewer than 5 titles with view counts: not enough to compare.");
+  const feats = [["Has a number", t => /\d/.test(t)], ["Is a question", t => /\?/.test(t)], ["Has an ALL-CAPS word", t => /\b[A-Z]{3,}\b/.test(t)], ["Has brackets or parentheses", t => /[(\[]/.test(t)], ["Has a colon or dash", t => /[:–—]|\s-\s/.test(t)], ["Longer than 60 characters", t => t.length > 60], ["Shorter than 40 characters", t => t.length < 40]];
+  const fr = feats.map(([n, f]) => { const a = wv.filter(v => f(v[1])).map(v => v[5]), b = wv.filter(v => !f(v[1])).map(v => v[5]); return { n, na: a.length, ma: med(a), nb: b.length, mb: med(b) }; });
+  const W = {}; for (const v of wv) for (const w of new Set((v[1].toLowerCase().match(/[a-z][a-z']{2,}/g) || []).filter(x => !STOPW.has(x)))) (W[w] ||= []).push(v[5]);
+  const wl = Object.entries(W).filter(([, a]) => a.length >= 4).map(([w, a]) => ({ w, n: a.length, m: med(a) }));
+  const wcols = [{ h: "Word", f: r => A("#/videos" + qs({ channel: id, q: r.w }), r.w) }, { h: "Titles", r: 1, f: r => num(r.n) }, { h: "Median views", r: 1, f: r => num(r.m) }, { h: "× channel median", r: 1, f: r => m0 ? (r.m / m0).toFixed(1) + "×" : "–" }];
+  const hist = {}; for (const v of wv) { const b = Math.floor(v[1].length / 10) * 10; hist[b] = (hist[b] || 0) + 1; }
+  const sorted = [...wv].sort((a, b) => b[5] - a[5]), tcols = [{ h: "Title", f: v => A("#/video/" + v[0], v[1]) }, { h: "Characters", r: 1, f: v => v[1].length }, { h: "Views", r: 1, f: v => num(v[5]) }];
+  return [h("p", { class: "sub" }, "Patterns inside this channel's own " + num(wv.length) + (wv === longs && longs.length < all.length ? " long-form titles (Shorts left out because their titles and views behave differently)" : " titles") + ". These are correlations only: views also depend on topic, thumbnail, how old the video is and promotion, so a pattern here is a lead to check, not a reason."),
+    h("h2", {}, "Title features vs views"), panel(table([{ h: "Title feature", f: r => r.n }, { h: "With it: median views (videos)", r: 1, f: r => num(r.ma) + " (" + r.na + ")" }, { h: "Without: median views (videos)", r: 1, f: r => num(r.mb) + " (" + r.nb + ")" },
+      { h: "With ÷ without", r: 1, f: r => r.ma != null && r.mb ? (r.ma / r.mb).toFixed(2) + "×" : "–" }], fr)),
+    h("div", { class: "grid2" },
+      h("div", {}, h("h2", {}, "Title length vs views"), panel(plot(wv.map(v => ({ x: v[1].length, y: v[5], c: TYPEC[v[4]] ?? 3, href: "#/video/" + v[0], t: `${v[1]}\n${v[1].length} characters · ${num(v[5])} views` })), { ylog: 1, hline: m0, yt: logTicks(10, st.views_max || 1e6), xt: [20, 40, 60, 80, 100].map(v => ({ v, l: v + "" })), name: "title length vs views" }))),
+      h("div", {}, h("h2", {}, "How long the titles are (characters)"), panel(columns(Object.keys(hist).map(Number).sort((a, b) => a - b).map(b => ({ l: b + "+", v: hist[b] })), { name: "title length distribution" })))),
+    h("div", { class: "grid2" },
+      h("div", {}, h("h2", {}, "Words that appear most (in 4+ titles)"), panel(table(wcols, [...wl].sort((a, b) => b.n - a.n).slice(0, 25)))),
+      h("div", {}, h("h2", {}, "Words with the highest median views (in 4+ titles)"), panel(table(wcols, [...wl].sort((a, b) => b.m - a.m).slice(0, 25))))),
+    h("div", { class: "grid2" }, h("div", {}, h("h2", {}, "10 best-viewed titles"), panel(table(tcols, sorted.slice(0, 10)))), h("div", {}, h("h2", {}, "10 least-viewed titles"), panel(table(tcols, sorted.slice(-10).reverse()))))];
+}
+async function chTranscripts(id, term = "") {
+  const d = await api("/api/channel/" + id + "/transcripts" + qs({ q: term }));
+  if (!d.count) return h("div", { class: "empty" }, "No transcripts are stored for this channel.");
+  const box = h("div", {}), redo = async t => { const n = await chTranscripts(id, t); box.replaceWith(n); };
+  const input = h("input", { type: "search", placeholder: "Search inside this channel's transcripts (press Enter)", value: term, onkeydown: e => { if (e.key === "Enter") redo(e.target.value.trim()); } });
+  const item = v => { const dt = h("details", { class: "tx" }), body = h("div", {});
+    dt.append(h("summary", {}, h("b", {}, v.title || v.video_id), " ", h("span", { class: "mut" }, [v.date, num(v.views) + " views", num(v.words) + " words", v.kind].filter(Boolean).join(" · ")), v.snip ? h("div", { class: "snip" }, "…", mark(v.snip, term), "… ", v.hits > 1 ? tag(v.hits + " matches", "grey") : null) : null), body);
+    dt.addEventListener("toggle", async () => { if (!dt.open || body.childNodes.length) return; body.append(h("div", { class: "empty" }, "Loading…")); try { const x = await api("/api/video/" + v.video_id); body.replaceChildren(h("p", {}, A("#/video/" + v.video_id, "Open the full video page →")), h("pre", {}, mark(x.transcript ? tidy(x.transcript.text) : "(no text)", term))); } catch (e) { body.replaceChildren("Error: " + e.message); } });
+    return dt; };
+  const nodes = [h("div", { class: "bar-f" }, input, h("span", { class: "mut" }, term ? num(d.items.length) + " transcripts contain “" + term + "”" : num(d.count) + " transcripts · " + num(d.words_total) + " words"))];
+  if (!term) nodes.push(h("div", { class: "grid2" }, h("div", {}, h("h2", {}, "What these transcripts talk about"), panel(bars(d.words.slice(0, 20).map(w => ({ l: w[0], v: w[1] })), "l", "v", r => "#/channel/" + id + qs({ tab: "transcripts", tq: r.l })))),
+    h("div", {}, h("h2", {}, "Phrases that repeat"), panel(d.phrases.length ? bars(d.phrases.slice(0, 20).map(w => ({ l: w[0], v: w[1] })), "l", "v", r => "#/channel/" + id + qs({ tab: "transcripts", tq: r.l })) : h("div", { class: "empty" }, "No phrase repeats more than twice.")))));
+  nodes.push(h("h2", {}, term ? "Matches" : "Transcripts, most-viewed first (click one to read it here)"), d.items.length ? d.items.map(item) : h("div", { class: "empty" }, "No transcript contains that text."));
+  box.append(...nodes.flat(Infinity)); return box;
+}
+async function chFiles(id) {
+  const d = await api("/api/channel/" + id + "/files"), by = {}; for (const f of d.files) (by[f.role] ||= []).push(f);
+  if (!d.files.length) return [h("div", { class: "empty" }, "No analysis, report or media file is specifically about this channel."), h("p", { class: "mut" }, num(d.bulk_files) + " bulk files (naming more than 25 videos) also mention its videos; find them through the Analyses & files page.")];
+  const fmtB = n => n == null ? "" : n > 1e6 ? (n / 1e6).toFixed(1) + " MB" : n > 1e3 ? Math.round(n / 1e3) + " KB" : n + " B";
+  const one = f => { const dt = h("details", { class: "tx" }), body = h("div", {});
+    dt.append(h("summary", {}, h("b", {}, f.path.split("/").pop()), " ", tag(f.format, "grey"), " ", h("span", { class: "mut" }, [fmtB(f.bytes), f.kind === "channel" ? "about the channel" : f.n + " of its videos", f.path.split("/").slice(0, -1).join("/")].filter(Boolean).join(" · "))), body);
+    dt.addEventListener("toggle", () => { if (dt.open && !body.childNodes.length) body.append(h("p", {}, A("#/artifact" + qs({ path: f.path }), "Open as its own page →")), fileBox(f)); }); return dt; };
+  const sections = Object.entries(by).sort((a, b) => b[1].length - a[1].length).map(([role, fs]) => {
+    const imgs = fs.filter(f => f.format === "image"), rest = fs.filter(f => f.format !== "image"); let more = 48;
+    const gal = h("div", { class: "gal" }), draw = () => { gal.replaceChildren(...imgs.slice(0, more).map(f => h("a", { href: "#/artifact" + qs({ path: f.path }), title: f.path }, h("img", { src: "/raw" + qs({ path: f.path }), loading: "lazy", alt: "" }), h("div", {}, h("span", {}, f.path.split("/").pop()))))); };
+    draw();
+    return [h("h2", {}, role + " (" + fs.length + ")"), rest.length ? h("div", { class: "txlist" }, rest.map(one)) : null, imgs.length ? [h("p", { class: "mut" }, num(imgs.length) + " images"), gal, imgs.length > 48 ? h("p", {}, h("button", { onclick: e => { more += 96; draw(); if (more >= imgs.length) e.target.remove(); } }, "Show more images")) : null] : null];
+  });
+  return [h("p", { class: "sub" }, num(d.files.length) + " files are specifically about this channel (about the channel itself, or naming 25 videos or fewer), grouped by kind. Open any of them here without leaving the page. " + num(d.bulk_files) + " bulk files that also mention its videos are left out."),
+    h("div", { class: "cards" }, Object.entries(by).sort((a, b) => b[1].length - a[1].length).map(([r, fs]) => kcard(num(fs.length), r))), sections];
+}
+async function chQuality(c, st, id) {
+  const d = await api("/api/channel/" + id + "/quality"), A_ = st.all, cov = [["views", 5], ["publish date", 2], ["duration", 3], ["likes", 6], ["comments", 7], ["transcript", 8]].map(([l, i]) => [l, A_.filter(v => v[i] != null && v[i] !== 0 && v[i] !== "").length]);
+  const kv = [["Channel id", c.channel_id], ["Handle", c.handle], ["Subscribers", num(c.subscribers)], ["Videos on YouTube (reported)", num(c.channel_total_videos)], ["Views on YouTube (reported)", num(c.channel_total_views)], ["Inventory id", c.inventory_id], ["Source databases", c.source_count]];
+  return [h("h2", {}, "How complete is this channel's data?"), panel(table([{ h: "Field", f: r => r[0] }, { h: "Videos that have it", r: 1, f: r => num(r[1]) + " of " + num(st.n) }, { h: "Coverage", f: r => h("div", { class: "pbar" }, h("i", { style: `width:${pct(r[1], st.n)}%` })) }, { h: "%", r: 1, f: r => pct(r[1], st.n) + "%" }], cov)),
+    c.video_artifact_count != null ? h("p", { class: "mut" }, num(c.video_artifact_count) + " files in total mention at least one of its videos.") : null,
+    h("div", { class: "grid2" }, h("div", {}, h("h2", {}, "Channel facts"), panel(h("dl", { class: "kv" }, kv.map(([k, v]) => [h("dt", {}, k), h("dd", {}, v ?? "–")])))),
+      h("div", {}, h("h2", {}, "In how many source databases each video appears"), panel(columns(d.sources_per_video, { name: "sources per video" }), h("p", { class: "mut" }, "1 = seen in one source only; more = cross-checked by several.")))),
+    h("h2", {}, "How each source database names it"), panel(table([{ h: "Source", f: r => r.source_id }, { h: "Name", f: r => r.raw_name || "–" }, { h: "Handle", f: r => r.raw_handle || "–" }, { h: "Subscribers", f: r => r.raw_subscribers || "–" }], c.sources)),
+    h("h2", {}, "Disagreeing values (" + d.conflicts.length + ")"), panel(table([{ h: "Video", f: r => A("#/video/" + r.video_id, r.title || r.video_id) }, { h: "Field", f: r => r.field }, { h: "Kept", f: r => r.chosen_source + ": " + r.chosen_value }, { h: "Other", f: r => r.other_source + ": " + r.other_value }], d.conflicts, "None.")),
+    h("h2", {}, "Unusable values (" + d.issues.length + ")"), panel(table([{ h: "Video", f: r => A("#/video/" + r.video_id, r.title || r.video_id) }, { h: "Source", f: r => r.source_id }, { h: "Field", f: r => r.field }, { h: "Raw value", f: r => r.raw_value }, { h: "Issue", f: r => r.issue }], d.issues, "None.")),
+    d.mismatch ? h("p", { class: "mut" }, num(d.mismatch) + " of this channel's transcript candidates have a text hash that does not match the hash recorded at the source (cause not yet investigated; the text is still shown).") : null];
+}
+let VQ = {};
+async function pVideos(q) {
+  VQ = q; const d = await api("/api/videos" + qs(q)); const ch = CH || (CH = await api("/api/channels"));
+  const go = o => { location.hash = "#/videos" + qs({ ...q, page: "", ...o }); };
+  const sel = (k, opts, ph) => h("select", { onchange: e => go({ [k]: e.target.value }) }, h("option", { value: "" }, ph), opts.map(([v, l]) => h("option", { value: v, selected: q[k] === v }, l)));
+  const last = Math.max(1, Math.ceil(d.total / d.size)), pg = (n) => { location.hash = "#/videos" + qs({ ...q, page: n }); };
+  const cols = [{ h: "Title", f: v => A("#/video/" + v.video_id, v.title || v.video_id) }, { h: "Channel", cls: "hide-s", f: v => A("#/channel/" + v.channel_id, v.channel) }, { h: "Published", f: v => v.published_date || "–" },
+    { h: "Length", r: 1, f: v => dur(v.duration_seconds) }, { h: "Type", f: v => tag(v.video_type, "grey") }, { h: "Views", r: 1, f: v => num(v.views) }, { h: "Tx", f: v => v.has_transcript ? tag("yes", "ok") : "" }];
+  return [h("h1", {}, "Videos"), h("p", { class: "sub" }, num(d.total) + " videos match"),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search titles (press Enter)", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }), h("input", { type: "search", placeholder: "Search inside transcripts (press Enter)", value: q.tq || "", onkeydown: e => { if (e.key === "Enter") go({ tq: e.target.value }); } }),
+      sel("channel", ch.map(c => [c.channel_id, c.name || c.channel_id]), "All channels"), sel("type", ["LONG", "SHORT", "STREAM", "UNKNOWN"].map(x => [x, x]), "All types"),
+      sel("sort", [["views", "Most views"], ["likes", "Most likes"], ["duration", "Longest"], ["title", "Title A–Z"]], "Newest first"),
+      sel("year", Array.from({ length: 22 }, (_, i) => String(2026 - i)).map(y => [y, y]), "Any year"), sel("dir", [["asc", "Reverse order"]], "Normal order"),
+      sel("tx", [["1", "Has transcript"]], "Any transcript"), sel("art", [["1", "Has a specific file"]], "Any files")),
+    h("div", { class: "panel" }, table(cols, d.items, "No video matches.")),
+    h("div", { class: "pg" }, h("button", { disabled: d.page <= 1, onclick: () => pg(d.page - 1) }, "← Prev"), "Page " + d.page + " of " + last, h("button", { disabled: d.page >= last, onclick: () => pg(d.page + 1) }, "Next →"))];
+}
+async function pVideo(id) {
+  const v = await api("/api/video/" + id), t = v.transcript;
+  const kv = [["Video id", v.video_id], ["Channel", A("#/channel/" + v.channel_id, v.channel)], ["Published", [v.published_date, v.published_at_utc && " (" + v.published_at_utc + ")", " ", tag(v.published_precision || "no date", "grey")]],
+    ["Rank in channel", v.rank.pos ? ["#" + v.rank.pos + " of " + v.rank.of + " by views", v.rank.median && v.views != null ? " · " + (v.views / v.rank.median).toFixed(1) + "× the channel median (" + num(v.rank.median) + ")" : ""] : "–"], ["Length", dur(v.duration_seconds)], ["Type", [v.video_type, " ", tag(v.video_type_basis, "grey")]], ["Views / likes / comments", [num(v.views), " / ", num(v.likes), " / ", num(v.comments)]], ["Seen in", v.source_count + " source database(s)"], ["YouTube", h("a", { href: v.url || "https://www.youtube.com/watch?v=" + v.video_id, target: "_blank", rel: "noopener" }, "open ↗")]];
+  const art = v.artifacts, spec = art.filter(a => a.videos_mentioned <= 25), bulk = art.filter(a => a.videos_mentioned > 25);
+  const artT = rows => table([{ h: "File", f: a => A("#/artifact" + qs({ path: a.path }), a.path) }, { h: "Role", f: a => tag(a.role) }, { h: "Found in", f: a => a.via }, { h: "Videos in file", r: 1, f: a => num(a.videos_mentioned) }], rows, "None.");
+  return [h("div", { class: "crumbs" }, A("#/videos", "Videos"), " / ", v.title || id), h("h1", {}, v.title || id),
+    h("div", { class: "panel" }, h("dl", { class: "kv" }, kv.map(([k, x]) => [h("dt", {}, k), h("dd", {}, x)]))),
+    h("p", {}, h("img", { class: "thumb", style: "width:240px", src: v.thumbnail_url || thumb(v.video_id), alt: "thumbnail", referrerpolicy: "no-referrer", loading: "lazy" })),
+    v.description ? [h("h2", {}, "Description"), h("pre", {}, v.description)] : null,
+    h("h2", {}, "Transcript"), t ? [h("p", {}, tag(t.caption_kind, t.caption_kind === "CREATOR" ? "ok" : "warn"), " ", tag(t.language || "language unknown", "grey"), " ", num(t.word_count) + " words · from " + t.source_id + " · " + (t.candidates > 1 ? t.candidates + " candidates, " + t.distinct_texts + " distinct" : "single source"),
+      v.transcript_candidates.some(c => c.sha_matches_source === 0) ? [" ", tag("source hash did not verify", "warn")] : null), h("pre", {}, tidy(t.text))] : h("div", { class: "panel empty" }, "No transcript stored for this video."),
+    h("h2", {}, "Specific analyses and files (" + spec.length + ")"), h("div", { class: "panel" }, artT(spec)),
+    h("h2", {}, "Also listed in bulk files (" + bulk.length + ")"), h("div", { class: "panel" }, artT(bulk)),
+    v.conflicts.length || v.quality_issues.length ? [h("h2", {}, "Disagreements between sources"), h("div", { class: "panel" }, table([{ h: "Field", f: r => r.field }, { h: "Kept", f: r => r.chosen_source + ": " + r.chosen_value }, { h: "Other", f: r => r.other_source + ": " + r.other_value }], v.conflicts, "None."),
+      v.quality_issues.length ? table([{ h: "Source", f: r => r.source_id }, { h: "Field", f: r => r.field }, { h: "Raw value", f: r => r.raw_value }, { h: "Issue", f: r => r.issue }], v.quality_issues) : null)] : null,
+    h("h2", {}, "Raw rows from each source"), h("div", { class: "panel" }, table([{ h: "Source", f: r => r.source_id }, { h: "Channel id", f: r => r.raw_channel_id }, { h: "Title", f: r => r.raw_title }, { h: "Published", f: r => r.raw_published }, { h: "Type", f: r => r.raw_video_type }, { h: "Views", f: r => r.raw_views }], v.sources))];
+}
+async function pArtifacts(q) {
+  const d = await api("/api/artifacts" + qs(q));
+  const go = o => { location.hash = "#/artifacts" + qs({ ...q, page: "", ...o }); }, last = Math.max(1, Math.ceil(d.total / d.size));
+  const sel = (k, opts, ph) => h("select", { onchange: e => go({ [k]: e.target.value }) }, h("option", { value: "" }, ph), opts.map(v => h("option", { value: v, selected: q[k] === v }, v)));
+  return [h("h1", {}, "Analyses & files"), h("p", { class: "sub" }, num(d.total) + " tracked files. Role is guessed from the path; it is a lead, not a verdict."),
+    h("div", { class: "bar-f" }, h("input", { type: "search", placeholder: "Search path (press Enter)", value: q.q || "", onkeydown: e => { if (e.key === "Enter") go({ q: e.target.value }); } }), sel("role", d.roles, "All roles"), sel("area", d.areas, "All areas"),
+      h("select", { onchange: e => go({ specific: e.target.value }) }, h("option", { value: "" }, "All files"), h("option", { value: "1", selected: q.specific === "1" }, "Only specific (1–25 videos)"))),
+    h("div", { class: "panel" }, table([{ h: "File", f: a => A("#/artifact" + qs({ path: a.path }), a.path) }, { h: "Role", f: a => tag(a.role) }, { h: "Format", cls: "hide-s", f: a => a.format }, { h: "Videos", r: 1, f: a => num(a.videos_mentioned) }, { h: "Size", r: 1, cls: "hide-s", f: a => num(a.bytes) }], d.items, "No file matches.")),
+    h("div", { class: "pg" }, h("button", { disabled: d.page <= 1, onclick: () => location.hash = "#/artifacts" + qs({ ...q, page: d.page - 1 }) }, "← Prev"), "Page " + d.page + " of " + last, h("button", { disabled: d.page >= last, onclick: () => location.hash = "#/artifacts" + qs({ ...q, page: d.page + 1 }) }, "Next →"))];
+}
+async function pArtifact(q) {
+  const a = await api("/api/artifact" + qs({ path: q.path }));
+  const url = "/raw" + qs({ path: a.path }), view = fileBox(a), tools = h("span", {});
+  tools.append(A(url, "Open raw ↗"), " · ", h("a", { href: url, download: a.path.split("/").pop() }, "Download"));
+  const vids = a.links.filter(l => l.target_kind === "video"), chs = a.links.filter(l => l.target_kind === "channel");
+  return [h("div", { class: "crumbs" }, A("#/artifacts", "Files"), " / ", a.path), h("h1", {}, a.path.split("/").pop()), h("p", { class: "sub" }, a.path),
+    h("p", {}, tag(a.role), " ", tag(a.format, "grey"), " ", tag(a.area, "grey"), " ", num(a.bytes) + " bytes · mentions " + num(a.videos_mentioned) + " videos, " + num(a.channels_mentioned) + " channels", a.videos_mentioned > 25 ? [" ", tag("bulk file", "warn")] : null, " · ", tools),
+    h("h2", {}, "Content"), view,
+    h("h2", {}, "Videos and channels named in it" + (a.links.length >= 300 ? " (first 300)" : "")), h("div", { class: "panel" }, table([{ h: "Kind", f: l => l.target_kind }, { h: "Item", f: l => A((l.target_kind === "video" ? "#/video/" : "#/channel/") + l.target_id, l.label || l.target_id) }, { h: "Found in", f: l => l.via }, { h: "Times", r: 1, f: l => num(l.mentions) }], [...vids, ...chs], "No video or channel id found in it."))];
+}
+async function pQuality() {
+  const d = await api("/api/quality");
+  return [h("h1", {}, "Data quality"), h("p", { class: "sub" }, "Where the source databases disagreed or held unusable values. Nothing was dropped silently."),
+    h("h2", {}, "Disagreeing values (" + d.conflicts.length + ")"), h("div", { class: "panel" }, table([{ h: "Video", f: r => A("#/video/" + r.video_id, r.title || r.video_id) }, { h: "Field", f: r => r.field }, { h: "Kept", f: r => r.chosen_source + ": " + r.chosen_value }, { h: "Other", f: r => r.other_source + ": " + r.other_value }], d.conflicts, "None.")),
+    h("h2", {}, "Unusable values (" + d.issues.length + ")"), h("div", { class: "panel" }, table([{ h: "Video", f: r => r.title ? A("#/video/" + r.video_id, r.title) : r.video_id }, { h: "Source", f: r => r.source_id }, { h: "Field", f: r => r.field }, { h: "Raw value", f: r => r.raw_value }, { h: "Issue", f: r => r.issue }], d.issues, "None.")),
+    h("h2", {}, "Channels that could not be matched (" + d.unresolved_channels.length + ")"), h("div", { class: "panel" }, table([{ h: "Source", f: r => r.source_id }, { h: "Name", f: r => r.name }, { h: "Handle", f: r => r.handle }, { h: "Reason", f: r => r.reason }], d.unresolved_channels, "None.")),
+    h("h2", {}, "Transcripts"), h("div", { class: "panel" }, h("p", {}, num(d.sha_mismatch), " transcript candidates have a text hash that does not match the hash recorded at the source. Cause not yet investigated; the text is shown but flagged.")) ];
+}
+
+async function render() {
+  const { parts, q } = route(); const app = $("#app");
+  $("#nav").replaceChildren(h("b", {}, "YIOS"), ...NAV.map(([href, l]) => h("a", { href, class: ({ channel: "channels", video: "videos", artifact: "artifacts" }[parts[0]] || parts[0] || "") === href.slice(2) ? "on" : "" }, l)));
+  app.replaceChildren(h("div", { class: "empty" }, "Loading…"));
+  try {
+    const [a, b] = parts; let out;
+    if (!a) out = await pOverview(); else if (a === "channels") out = await pChannels(); else if (a === "channel") out = await pChannel(b, q);
+    else if (a === "videos") out = await pVideos(q); else if (a === "video") out = await pVideo(b); else if (a === "research") out = await pResearch(q); else if (a === "ask") out = await pAsk(q); else if (a === "artifacts") out = await pArtifacts(q);
+    else if (a === "artifact") out = await pArtifact(q); else if (a === "quality") out = await pQuality(); else out = h("div", { class: "empty" }, "Page not found.");
+    app.replaceChildren(...[out].flat(Infinity).filter(Boolean)); document.title = (app.querySelector("h1")?.textContent || "Data browser") + " · YIOS"; window.scrollTo(0, 0);
+  } catch (e) { app.replaceChildren(h("div", { class: "empty" }, "Error: " + e.message)); }
+}
+addEventListener("hashchange", render); render();
+</script>
+</body>
+</html>
